@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package com.tiwari.studence.proto.requestcontext;
+
+option java_multiple_files = true;
+option java_generate_equals_and_hash = true;
+
+
+enum ReqPriorityUiEnum {
+  UNKNOWN_REQ_PRIORITY = 0;
+  INSTANT = 1;
+  BULK = 2;
+}
+
+message RequestContextPb {
+   string reqClass = 1;
+   string reqMethod = 2;
+   ReqPriorityUiEnum priority = 3;
+   string reqId = 4;
+}

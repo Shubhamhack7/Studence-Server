@@ -1,0 +1,15 @@
+com/tiwari/studence/organisation/proto/OrganisationPb.class
+com/tiwari/studence/organisation/proto/OrganisationPbOuterClass.class
+com/tiwari/studence/database/AwsCredentials.class
+com/tiwari/studence/database/table/GetItemFromDynamodbTable.class
+com/tiwari/studence/organisation/proto/OrganisationPb$Builder.class
+com/tiwari/studence/database/table/PutItemInDynamoDbTable.class
+com/tiwari/studence/organisation/proto/OrganisationPb$1.class
+com/tiwari/studence/organisation/proto/OrganisationPbOrBuilder.class
+com/tiwari/studence/database/table/ICreateTable.class
+com/tiwari/studence/App.class
+com/tiwari/studence/database/table/IPutItemTable.class
+com/tiwari/studence/database/DynamoDbConnector.class
+com/tiwari/studence/database/module/CreateDynamoDbTableModule.class
+com/tiwari/studence/database/table/IDynamoGetItemTable.class
+com/tiwari/studence/database/table/CreateDynamoDbTable.class

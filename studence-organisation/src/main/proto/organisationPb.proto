@@ -1,0 +1,17 @@
+// Copyright (c) 2022, All Right Reserved, Shubham Tiwari
+
+syntax = "proto3";
+
+package com.tiwari.studence.organisation.proto;
+
+import "../../../studence-util/src/main/proto/entityPb.proto";
+
+option java_multiple_files = true;
+option java_generate_equals_and_hash = true;
+
+//The following protos are reserved 12,13,14,15,16.You shd not use them
+
+message OrganisationPb{
+    EntityPb dbInfo =1;
+	string name = 2;
+}
