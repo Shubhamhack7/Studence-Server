@@ -39,7 +39,7 @@ public class EntityCreate<P extends GeneratedMessageV3, BU extends GeneratedMess
   }
 
   public IFuture<P, ErrorException> createEntity(P request) {
-    EntityCreateCF<P, BU, BP, U, C, T> cf = new EntityCreateCF<P, BU, BP, U, C, T>(request,
+    EntityCreateCF cf = new EntityCreateCF (request,
             m_updater, m_convertor, m_builderProvider, m_tableNameProvider, m_getNewId,
             m_dynamoPutTable, new EntityPbBuilderProvider(),m_getEntity);
     cf.addLogObjects(request);

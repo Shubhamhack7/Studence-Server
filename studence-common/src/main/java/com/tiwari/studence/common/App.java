@@ -7,7 +7,7 @@ import java.util.Set;
 import com.google.inject.Injector;
 import com.tiwari.studence.common.entity.GetAndUpdateEntity;
 import com.tiwari.studence.common.injector.InjectorProvider;
-import com.tiwari.studence.database.DynamoDbConnector;
+import com.tiwari.studence.dynamodb.database.DynamoDbConnector;
 import com.tiwari.studence.util.exception.ErrorException;
 
 import software.amazon.awssdk.services.dynamodb.DynamoDbClient;
@@ -16,7 +16,11 @@ import software.amazon.awssdk.services.dynamodb.model.AttributeValue;
 import software.amazon.awssdk.services.dynamodb.model.AttributeValueUpdate;
 import software.amazon.awssdk.services.dynamodb.model.DynamoDbException;
 import software.amazon.awssdk.services.dynamodb.model.GetItemRequest;
+import software.amazon.awssdk.services.dynamodb.model.QueryRequest;
+import software.amazon.awssdk.services.dynamodb.model.QueryResponse;
 import software.amazon.awssdk.services.dynamodb.model.ResourceNotFoundException;
+import software.amazon.awssdk.services.dynamodb.model.ScanRequest;
+import software.amazon.awssdk.services.dynamodb.model.ScanResponse;
 import software.amazon.awssdk.services.dynamodb.model.UpdateItemRequest;
 import software.amazon.awssdk.services.dynamodb.model.UpdateItemResponse;
 
@@ -33,7 +37,80 @@ public class App {
     // System.out.println(service.getNewEntityId().get());
 
     DynamoDbConnector connector = new DynamoDbConnector();
-    updateTableItem(connector.getDynamoDbClient());
+    //updateTableItem(connector.getDynamoDbClient());
+   // System.out.println(queryTable(connector.getDynamoDbClient()));
+    scanItems(connector.getDynamoDbClient());
+  }
+  
+  public static void scanItems( DynamoDbClient ddb ) {
+	  HashMap<String,String> attrNameAlias = new HashMap<String,String>();
+      attrNameAlias.put("#lifetime", "LIFETIME");
+
+      HashMap<String, AttributeValue> attrValues = new HashMap<>();
+
+      attrValues.put(":"+"lifetime", AttributeValue.builder()
+          .s("UNKNOWN_LIFETIME")
+          .build());
+
+      try {
+          ScanRequest scanRequest = ScanRequest.builder()
+              .tableName("100_ORGANISATION_DEVEL")
+              //.attributesToGet("RAW_DATA,LIFETIME")
+              .filterExpression("LIFETIME=:lifetime")
+             // .expressionAttributeNames(attrNameAlias)
+              .expressionAttributeValues(attrValues)
+              .build();
+
+          ScanResponse response = ddb.scan(scanRequest);
+          System.out.println(response.count());
+          for (Map<String, AttributeValue> item : response.items()) {
+              Set<String> keys = item.keySet();
+              for (String key : keys) {
+                  System.out.println ("The key name is "+key +"\n" );
+                  System.out.println("The value is "+item.get(key).s());
+              }
+          }
+
+      } catch (DynamoDbException e) {
+          e.printStackTrace();
+          System.exit(1);
+      }
+  }
+  
+  public static int queryTable(DynamoDbClient ddb) {
+
+      // Set up an alias for the partition key name in case it's a reserved word.
+      HashMap<String,String> attrNameAlias = new HashMap<String,String>();
+      attrNameAlias.put("#range", "RANGE");
+      attrNameAlias.put("#id", "ID");
+
+      // Set up mapping of the partition name with the value.
+      HashMap<String, AttributeValue> attrValues = new HashMap<>();
+
+      attrValues.put(":"+"range", AttributeValue.builder()
+          .s("46")
+          .build());
+      attrValues.put(":"+"id", AttributeValue.builder()
+              .s("u")
+              .build());
+
+      QueryRequest queryReq = QueryRequest.builder()
+          .tableName("100_ORGANISATION_DEVEL")
+          .keyConditionExpression("#id=:id and #range=:range")
+          .expressionAttributeNames(attrNameAlias)
+          .expressionAttributeValues(attrValues)
+          .build();
+      System.out.println(queryReq);
+
+      try {
+          QueryResponse response = ddb.query(queryReq);
+          return response.count();
+
+      } catch (DynamoDbException e) {
+          System.err.println(e.getMessage());
+          System.exit(1);
+      }
+      return -1;
   }
 
   public static void updateTableItem(DynamoDbClient ddb) {

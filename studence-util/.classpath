@@ -368,9 +368,11 @@
   <classpathentry kind="var" path="M2_REPO/io/netty/netty-codec-http2/4.1.77.Final/netty-codec-http2-4.1.77.Final.jar" sourcepath="M2_REPO/io/netty/netty-codec-http2/4.1.77.Final/netty-codec-http2-4.1.77.Final-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/io/netty/netty-transport-classes-epoll/4.1.77.Final/netty-transport-classes-epoll-4.1.77.Final.jar" sourcepath="M2_REPO/io/netty/netty-transport-classes-epoll/4.1.77.Final/netty-transport-classes-epoll-4.1.77.Final-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/io/netty/netty-transport-native-unix-common/4.1.77.Final/netty-transport-native-unix-common-4.1.77.Final.jar" sourcepath="M2_REPO/io/netty/netty-transport-native-unix-common/4.1.77.Final/netty-transport-native-unix-common-4.1.77.Final-sources.jar"/>
-  <classpathentry kind="var" path="M2_REPO/com/google/protobuf/protobuf-java/3.10.0/protobuf-java-3.10.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/google/protobuf/protobuf-java/3.10.0/protobuf-java-3.10.0.jar" sourcepath="M2_REPO/com/google/protobuf/protobuf-java/3.10.0/protobuf-java-3.10.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/googlecode/protobuf-java-format/protobuf-java-format/1.4/protobuf-java-format-1.4.jar" sourcepath="M2_REPO/com/googlecode/protobuf-java-format/protobuf-java-format/1.4/protobuf-java-format-1.4-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/com/google/protobuf/protobuf-java-util/3.21.9/protobuf-java-util-3.21.9.jar" sourcepath="M2_REPO/com/google/protobuf/protobuf-java-util/3.21.9/protobuf-java-util-3.21.9-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/com/google/code/gson/gson/2.10/gson-2.10.jar" sourcepath="M2_REPO/com/google/code/gson/gson/2.10/gson-2.10-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/json/json/20210307/json-20210307.jar" sourcepath="M2_REPO/org/json/json/20210307/json-20210307-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/jasypt/jasypt/1.9.3/jasypt-1.9.3.jar" sourcepath="M2_REPO/org/jasypt/jasypt/1.9.3/jasypt-1.9.3-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-simple/2.0.3/slf4j-simple-2.0.3.jar" sourcepath="M2_REPO/org/slf4j/slf4j-simple/2.0.3/slf4j-simple-2.0.3-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/com/google/collections/google-collections/1.0/google-collections-1.0.jar" sourcepath="M2_REPO/com/google/collections/google-collections/1.0/google-collections-1.0-sources.jar"/>

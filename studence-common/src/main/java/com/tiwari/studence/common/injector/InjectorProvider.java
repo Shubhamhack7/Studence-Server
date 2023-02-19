@@ -8,7 +8,7 @@ import com.google.inject.Injector;
 import com.tiwari.studence.common.module.GetAndUpdateEntityIdModule;
 import com.tiwari.studence.common.module.GetItemFroomDynamoTableModule;
 import com.tiwari.studence.common.module.PutItemDynamoTableModule;
-import com.tiwari.studence.database.module.CreateDynamoDbTableModule;
+import com.tiwari.studence.dynamodb.database.module.CreateDynamoDbTableModule;
 import com.tiwari.studence.util.collect.Lists;
 import com.tiwari.studence.util.module.ServerListnerModule;
 import com.tiwari.studence.util.serverConfig.ServerEnvironmentType;

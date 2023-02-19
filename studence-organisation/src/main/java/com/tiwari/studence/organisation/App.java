@@ -2,7 +2,7 @@ package com.tiwari.studence.organisation;
 
 import com.google.inject.Injector;
 import com.google.protobuf.InvalidProtocolBufferException;
-import com.google.protobuf.util.JsonFormat;
+import com.tiwari.studence.organisation.bquery.OrganisationBigQueryService;
 import com.tiwari.studence.organisation.injector.InjectorProvider;
 import com.tiwari.studence.organisation.service.IOrganisationService;
 import com.tiwari.studence.proto.entity.LifeTimeEnum;
@@ -19,11 +19,18 @@ public class App
     public static void main( String[] args ) throws ErrorException, InvalidProtocolBufferException
     {
       Injector inj = InjectorProvider.createInjector();
-      IOrganisationService a  = inj.getInstance(IOrganisationService.class);
-      OrganisationPb.Builder builder = OrganisationPb.newBuilder();
-      builder.getDbInfoBuilder().setLifetime(LifeTimeEnum.ACTIVE);
-      builder.setName("Demo School");
+//      IOrganisationService a  = inj.getInstance(IOrganisationService.class);
+//      OrganisationPb.Builder builder = OrganisationPb.newBuilder();
+//      builder.getDbInfoBuilder().setLifetime(LifeTimeEnum.ACTIVE);
+//      builder.setName("Demo School");
      // System.out.println(JsonFormat.printer().print(builder.build()));
-      System.out.println(a.get("4!56").get());
+      //System.out.println(a.get("4!56").get());
+      OrganisationBigQueryService ser  = inj.getInstance(OrganisationBigQueryService.class);
+      OrganisationPb.Builder pb =  OrganisationPb.newBuilder();
+      pb.getDbInfoBuilder().setHashId("123");
+      pb.getDbInfoBuilder().setRangeId("abc");
+      pb.getDbInfoBuilder().setLifetime(LifeTimeEnum.ACTIVE);
+      pb.setName("demo");
+      System.out.println(ser.insertTable("studence_dev_devel","100_ORGANISATION",pb.build()).get());
     }
 }
