@@ -23,7 +23,13 @@ public class OrganisationIndexer extends AEntityIndexer<OrganisationPb> {
   @Override
   public HashMap<String, AttributeValue> indexer(OrganisationPb builder) {
     HashMap<String, AttributeValue> items = super.indexer(builder);
-    addItemToAttritibeMap(items, OrganisationIndexerEnum.NAME.name(), builder.getName().toLowerCase(), false,
+    addItemToAttritibeMap(items, OrganisationIndexerEnum.NAME.name(), builder.getName().getCanonicalName().toLowerCase(), false,
+            Type.S);
+    addItemToAttritibeMap(items, OrganisationIndexerEnum.EMAIL.name(), builder.getContactDetails().getEmails().getPrimary().getCanonicalEmail().toLowerCase(), false,
+            Type.S);
+    addItemToAttritibeMap(items, OrganisationIndexerEnum.MOBILE_NUMBER.name(), builder.getContactDetails().getMobileNumbers().getPrimary().getCanonicalNumber().toLowerCase(), false,
+            Type.S);
+    addItemToAttritibeMap(items, OrganisationIndexerEnum.ADDRESS.name(), builder.getContactDetails().getAddress().getPrimary().getCanonicalAddress().toLowerCase(), false,
             Type.S);
     return items;
   }

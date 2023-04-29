@@ -31,69 +31,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private AccumulatedTimeStatsPb(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 18: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              timeStats_ = new java.util.ArrayList<com.tiwari.studence.proto.time.TimeStatsPb>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            timeStats_.add(
-                input.readMessage(com.tiwari.studence.proto.time.TimeStatsPb.parser(), extensionRegistry));
-            break;
-          }
-          case 26: {
-            com.tiwari.studence.proto.time.AccumulatedTimeStatsIdPb.Builder subBuilder = null;
-            if (name_ != null) {
-              subBuilder = name_.toBuilder();
-            }
-            name_ = input.readMessage(com.tiwari.studence.proto.time.AccumulatedTimeStatsIdPb.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(name_);
-              name_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        timeStats_ = java.util.Collections.unmodifiableList(timeStats_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tiwari.studence.proto.time.Time.internal_static_com_tiwari_studence_proto_time_AccumulatedTimeStatsPb_descriptor;
@@ -108,6 +45,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TIMESTATS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<com.tiwari.studence.proto.time.TimeStatsPb> timeStats_;
   /**
    * <code>repeated .com.tiwari.studence.proto.time.TimeStatsPb timeStats = 2;</code>
@@ -170,7 +108,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tiwari.studence.proto.time.AccumulatedTimeStatsIdPbOrBuilder getNameOrBuilder() {
-    return getName();
+    return name_ == null ? com.tiwari.studence.proto.time.AccumulatedTimeStatsIdPb.getDefaultInstance() : name_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -193,7 +131,7 @@ private static final long serialVersionUID = 0L;
     if (name_ != null) {
       output.writeMessage(3, getName());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -210,7 +148,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getName());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -232,7 +170,7 @@ private static final long serialVersionUID = 0L;
       if (!getName()
           .equals(other.getName())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -251,7 +189,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -368,33 +306,28 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tiwari.studence.proto.time.AccumulatedTimeStatsPb.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getTimeStatsFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (timeStatsBuilder_ == null) {
         timeStats_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        timeStats_ = null;
         timeStatsBuilder_.clear();
       }
-      if (nameBuilder_ == null) {
-        name_ = null;
-      } else {
-        name_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      name_ = null;
+      if (nameBuilder_ != null) {
+        nameBuilder_.dispose();
         nameBuilder_ = null;
       }
       return this;
@@ -423,7 +356,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tiwari.studence.proto.time.AccumulatedTimeStatsPb buildPartial() {
       com.tiwari.studence.proto.time.AccumulatedTimeStatsPb result = new com.tiwari.studence.proto.time.AccumulatedTimeStatsPb(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tiwari.studence.proto.time.AccumulatedTimeStatsPb result) {
       if (timeStatsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           timeStats_ = java.util.Collections.unmodifiableList(timeStats_);
@@ -433,13 +372,15 @@ private static final long serialVersionUID = 0L;
       } else {
         result.timeStats_ = timeStatsBuilder_.build();
       }
-      if (nameBuilder_ == null) {
-        result.name_ = name_;
-      } else {
-        result.name_ = nameBuilder_.build();
+    }
+
+    private void buildPartial0(com.tiwari.studence.proto.time.AccumulatedTimeStatsPb result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.name_ = nameBuilder_ == null
+            ? name_
+            : nameBuilder_.build();
       }
-      onBuilt();
-      return result;
     }
 
     @java.lang.Override
@@ -515,7 +456,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasName()) {
         mergeName(other.getName());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -530,17 +471,50 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tiwari.studence.proto.time.AccumulatedTimeStatsPb parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 18: {
+              com.tiwari.studence.proto.time.TimeStatsPb m =
+                  input.readMessage(
+                      com.tiwari.studence.proto.time.TimeStatsPb.parser(),
+                      extensionRegistry);
+              if (timeStatsBuilder_ == null) {
+                ensureTimeStatsIsMutable();
+                timeStats_.add(m);
+              } else {
+                timeStatsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 18
+            case 26: {
+              input.readMessage(
+                  getNameFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 26
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tiwari.studence.proto.time.AccumulatedTimeStatsPb) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -793,7 +767,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the name field is set.
      */
     public boolean hasName() {
-      return nameBuilder_ != null || name_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.com.tiwari.studence.proto.time.AccumulatedTimeStatsIdPb name = 3;</code>
@@ -815,11 +789,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         name_ = value;
-        onChanged();
       } else {
         nameBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -829,11 +803,11 @@ private static final long serialVersionUID = 0L;
         com.tiwari.studence.proto.time.AccumulatedTimeStatsIdPb.Builder builderForValue) {
       if (nameBuilder_ == null) {
         name_ = builderForValue.build();
-        onChanged();
       } else {
         nameBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -841,38 +815,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeName(com.tiwari.studence.proto.time.AccumulatedTimeStatsIdPb value) {
       if (nameBuilder_ == null) {
-        if (name_ != null) {
-          name_ =
-            com.tiwari.studence.proto.time.AccumulatedTimeStatsIdPb.newBuilder(name_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          name_ != null &&
+          name_ != com.tiwari.studence.proto.time.AccumulatedTimeStatsIdPb.getDefaultInstance()) {
+          getNameBuilder().mergeFrom(value);
         } else {
           name_ = value;
         }
-        onChanged();
       } else {
         nameBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
      * <code>.com.tiwari.studence.proto.time.AccumulatedTimeStatsIdPb name = 3;</code>
      */
     public Builder clearName() {
-      if (nameBuilder_ == null) {
-        name_ = null;
-        onChanged();
-      } else {
-        name_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      name_ = null;
+      if (nameBuilder_ != null) {
+        nameBuilder_.dispose();
         nameBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.com.tiwari.studence.proto.time.AccumulatedTimeStatsIdPb name = 3;</code>
      */
     public com.tiwari.studence.proto.time.AccumulatedTimeStatsIdPb.Builder getNameBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getNameFieldBuilder().getBuilder();
     }
@@ -936,7 +910,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new AccumulatedTimeStatsPb(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

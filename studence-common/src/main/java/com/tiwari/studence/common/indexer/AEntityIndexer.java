@@ -33,10 +33,9 @@ public abstract class AEntityIndexer<P extends GeneratedMessageV3> implements II
   @Override
   public HashMap<String, AttributeValue> indexer(P builder) {
     HashMap<String, AttributeValue> itemValues = new HashMap<>();
-    itemValues.put(GenericIndexerEnum.RAW_DATA.name(),
-            AttributeValue.builder().s(
-                    m_jsonBaseEncoderDecoder.convert(ProtobufToJson.protobufToJsonString(builder)))
-                    .build());
+    itemValues.put(GenericIndexerEnum.RAW_DATA.name(), AttributeValue.builder()
+            .s(m_jsonBaseEncoderDecoder.convert(ProtobufToJson.protobufToJsonString(builder)))
+            .build());
     return itemValues;
   }
 

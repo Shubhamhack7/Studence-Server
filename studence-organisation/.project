@@ -3,6 +3,7 @@
   <name>studence-organisation</name>
   <comment>NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
   <projects>
+    <project>studence-common-http</project>
     <project>studence-common</project>
     <project>studence-dynamodb-database</project>
     <project>studence-util</project>

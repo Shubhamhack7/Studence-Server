@@ -36,7 +36,10 @@ public enum StudenceSpecialCharecterEnum {
   LEFT_BRACE("{", StringEscapeUtils.escapeJava("{")),
   PIPE("|", StringEscapeUtils.escapeJava("|")),
   RIGHT_BRACE("}", StringEscapeUtils.escapeJava("}")),
-  TiLDE("~", StringEscapeUtils.escapeJava("~"));
+  TiLDE("~", StringEscapeUtils.escapeJava("~")),
+
+  SPACE(" ", StringEscapeUtils.escapeJava(" "));
+
 
   private final String m_signVal;
   private final String m_uniVal;

@@ -20,7 +20,7 @@ public class InjectorProvider {
     Injector injector = Guice.createInjector(getModules());
     // injector.getInstance(ServiceModule.class);
     ServerListener env = injector.getInstance(ServerListener.class);
-    env.setEnvironmentType(ServerEnvironmentType.DEVELOPEMENT);
+    env.setEnvironmentType(ServerEnvironmentType.DEVELOPMENT);
     return injector;
   }
 

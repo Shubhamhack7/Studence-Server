@@ -39,27 +39,33 @@ public final class OrganisationPbOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\024organisationPb.proto\022&com.tiwari.stude" +
-      "nce.proto.organisation\032\016entityPb.proto\"Z" +
-      "\n\016OrganisationPb\022:\n\006dbInfo\030\001 \001(\0132*.com.t" +
-      "iwari.studence.proto.entity.EntityPb\022\014\n\004" +
-      "name\030\002 \001(\t\"c\n\027OrganisationSearchReqPb\022:\n" +
-      "\006dbInfo\030\001 \001(\0132*.com.tiwari.studence.prot" +
-      "o.entity.EntityPb\022\014\n\004name\030\002 \001(\t\"d\n\030Organ" +
-      "isationSearchRespPb\022:\n\006dbInfo\030\001 \001(\0132*.co" +
-      "m.tiwari.studence.proto.entity.EntityPb\022" +
-      "\014\n\004name\030\002 \001(\tB\005P\001\240\001\001b\006proto3"
+      "nce.proto.organisation\032\016entityPb.proto\032\014" +
+      "namePb.proto\032\026contactDetailsPb.proto\"\326\001\n" +
+      "\016OrganisationPb\022:\n\006dbInfo\030\001 \001(\0132*.com.ti" +
+      "wari.studence.proto.entity.EntityPb\0224\n\004n" +
+      "ame\030\002 \001(\0132&.com.tiwari.studence.proto.na" +
+      "me.NamePb\022R\n\016contactDetails\030\003 \001(\0132:.com." +
+      "tiwari.studence.proto.contactDetails.Con" +
+      "tactDetailsPb\"c\n\027OrganisationSearchReqPb" +
+      "\022:\n\006dbInfo\030\001 \001(\0132*.com.tiwari.studence.p" +
+      "roto.entity.EntityPb\022\014\n\004name\030\002 \001(\t\"d\n\030Or" +
+      "ganisationSearchRespPb\022:\n\006dbInfo\030\001 \001(\0132*" +
+      ".com.tiwari.studence.proto.entity.Entity" +
+      "Pb\022\014\n\004name\030\002 \001(\tB\005P\001\240\001\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.tiwari.studence.proto.entity.EntityPbOuterClass.getDescriptor(),
+          com.tiwari.studence.proto.name.NamePbOuterClass.getDescriptor(),
+          com.tiwari.studence.proto.contactDetails.ContactDetailsPbOuterClass.getDescriptor(),
         });
     internal_static_com_tiwari_studence_proto_organisation_OrganisationPb_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_com_tiwari_studence_proto_organisation_OrganisationPb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tiwari_studence_proto_organisation_OrganisationPb_descriptor,
-        new java.lang.String[] { "DbInfo", "Name", });
+        new java.lang.String[] { "DbInfo", "Name", "ContactDetails", });
     internal_static_com_tiwari_studence_proto_organisation_OrganisationSearchReqPb_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_com_tiwari_studence_proto_organisation_OrganisationSearchReqPb_fieldAccessorTable = new
@@ -73,6 +79,8 @@ public final class OrganisationPbOuterClass {
         internal_static_com_tiwari_studence_proto_organisation_OrganisationSearchRespPb_descriptor,
         new java.lang.String[] { "DbInfo", "Name", });
     com.tiwari.studence.proto.entity.EntityPbOuterClass.getDescriptor();
+    com.tiwari.studence.proto.name.NamePbOuterClass.getDescriptor();
+    com.tiwari.studence.proto.contactDetails.ContactDetailsPbOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

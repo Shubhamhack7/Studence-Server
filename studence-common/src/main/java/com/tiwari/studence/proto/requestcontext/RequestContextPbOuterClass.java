@@ -33,9 +33,20 @@ public final class RequestContextPbOuterClass {
       "ntextPb\022\020\n\010reqClass\030\001 \001(\t\022\021\n\treqMethod\030\002" +
       " \001(\t\022M\n\010priority\030\003 \001(\0162;.com.tiwari.stud" +
       "ence.proto.requestcontext.ReqPriorityUiE" +
-      "num\022\r\n\005reqId\030\004 \001(\t*D\n\021ReqPriorityUiEnum\022" +
-      "\030\n\024UNKNOWN_REQ_PRIORITY\020\000\022\013\n\007INSTANT\020\001\022\010" +
-      "\n\004BULK\020\002B\005P\001\240\001\001b\006proto3"
+      "num\022\r\n\005reqId\030\004 \001(\t*\247\003\n\rReqTypeUiEnum\022\024\n\020" +
+      "UNKNOWN_REQ_TYPE\020\000\022\n\n\006GET_ID\020\001\022\026\n\022GET_BY" +
+      "_EXTERNAL_ID\020\002\022\014\n\010GET_LIST\020\003\022\n\n\006CREATE\020\004" +
+      "\022\032\n\026CREATE_WITH_REQUEST_ID\020\005\022\n\n\006DELETE\020\006" +
+      "\022\032\n\026DELETE_WITH_REQUEST_ID\020\007\022\n\n\006UPDATE\020\010" +
+      "\022\032\n\026UPDATE_WITH_REQUEST_ID\020\t\022\031\n\025UPDATE_B" +
+      "Y_EXTERNAL_ID\020\n\022\037\n\033GET_OR_CREATE_BY_EXTE" +
+      "RNALID\020\013\022!\n\035GET_OR_CREATE_BY_EXTERNALIDP" +
+      "B\020\014\022+\n\'GET_OR_CREATE_LIST_BY_EXTERNALIDP" +
+      "B_LIST\020\r\022\027\n\023GET_BY_EXTERNALIDPB\020\016\022%\n!SAF" +
+      "E_CREATE_OR_GET_BY_EXTERNAL_ID\020\020\022\n\n\006IMPO" +
+      "RT\020\021*D\n\021ReqPriorityUiEnum\022\030\n\024UNKNOWN_REQ" +
+      "_PRIORITY\020\000\022\013\n\007INSTANT\020\001\022\010\n\004BULK\020\002B\005P\001\240\001" +
+      "\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

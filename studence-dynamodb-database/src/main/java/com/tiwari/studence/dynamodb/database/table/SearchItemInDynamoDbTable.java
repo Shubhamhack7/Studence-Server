@@ -4,28 +4,29 @@ import java.util.HashMap;
 
 import javax.inject.Inject;
 
+import com.amazonaws.services.dynamodbv2.document.*;
+import com.amazonaws.services.dynamodbv2.document.spec.ScanSpec;
+import com.amazonaws.services.dynamodbv2.document.utils.NameMap;
+import com.amazonaws.services.dynamodbv2.document.utils.ValueMap;
 import com.tiwari.studence.dynamodb.database.DynamoDbConnector;
 import com.tiwari.studence.util.exception.ErrorException;
 
-import software.amazon.awssdk.services.dynamodb.model.AttributeValue;
-import software.amazon.awssdk.services.dynamodb.model.DynamoDbException;
-import software.amazon.awssdk.services.dynamodb.model.ScanRequest;
-import software.amazon.awssdk.services.dynamodb.model.ScanResponse;
+import software.amazon.awssdk.services.dynamodb.model.*;
 
 public class SearchItemInDynamoDbTable implements ISearchItemTable {
 
-	private DynamoDbConnector m_dynamoDbConnector;
+    private DynamoDbConnector m_dynamoDbConnector;
 
-	@Inject
-	public SearchItemInDynamoDbTable(DynamoDbConnector dynamoDbConnector) {
-		m_dynamoDbConnector = dynamoDbConnector;
-	}
+    @Inject
+    public SearchItemInDynamoDbTable(DynamoDbConnector dynamoDbConnector) {
+        m_dynamoDbConnector = dynamoDbConnector;
+    }
 
-	@Override
-	public ScanResponse putItem(String tableName, HashMap<String, AttributeValue> attrValues, String filterExpression)
-			throws Exception {
-		HashMap<String, String> attrNameAlias = new HashMap<String, String>();
-		attrNameAlias.put("#lifetime", "LIFETIME");
+    @Override
+    public ScanResponse searchItemsScanSpec(String tableName, ScanSpec request)
+            throws Exception {
+        HashMap<String, String> attrNameAlias = new HashMap<String, String>();
+        attrNameAlias.put("#lifetime", "LIFETIME");
 
 //	      HashMap<String, AttributeValue> attrValues = new HashMap<>();
 //
@@ -33,7 +34,7 @@ public class SearchItemInDynamoDbTable implements ISearchItemTable {
 //	          .s("UNKNOWN_LIFETIME")
 //	          .build());
 
-		try {
+		/*try {
 			ScanRequest scanRequest = ScanRequest.builder().tableName(tableName)
 					// .attributesToGet("RAW_DATA,LIFETIME")
 					.filterExpression(filterExpression)
@@ -44,7 +45,14 @@ public class SearchItemInDynamoDbTable implements ISearchItemTable {
 
 		} catch (DynamoDbException e) {
 			throw new ErrorException(e);
-		}
-	}
-
+		}*/
+        DynamoDB dynamoDB = new DynamoDB(m_dynamoDbConnector.getAmazonDynamoDB());
+        Table table = dynamoDB.getTable(tableName);
+        ItemCollection<ScanOutcome> outcome = table.scan(request);
+        for (Item item : outcome) {
+            System.out.println(item.toJSONPretty());
+        }
+        return null;
+    }
 }
+

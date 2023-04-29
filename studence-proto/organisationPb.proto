@@ -5,6 +5,8 @@ syntax = "proto3";
 package com.tiwari.studence.proto.organisation;
 
 import "entityPb.proto";
+import "namePb.proto";
+import "contactDetailsPb.proto";
 
 option java_multiple_files = true;
 option java_generate_equals_and_hash = true;
@@ -13,7 +15,8 @@ option java_generate_equals_and_hash = true;
 
 message OrganisationPb{
     com.tiwari.studence.proto.entity.EntityPb dbInfo =1;
-	string name = 2;
+    com.tiwari.studence.proto.name.NamePb name= 2;
+    com.tiwari.studence.proto.contactDetails.ContactDetailsPb contactDetails= 3;
 }
 
 

@@ -39,9 +39,11 @@ public class GetItemFromDynamodbTable implements IDynamoGetItemTable {
 
     try {
       return m_dynamoDbConnector.getDynamoDbClient().getItem(request);
-    } catch (DynamoDbException e) {
+    } catch (Exception e){
       throw new ErrorException(e);
-    }
+    }/*catch (DynamoDbException e) {
+      throw new ErrorException(e);
+    }*/
   }
 
 }

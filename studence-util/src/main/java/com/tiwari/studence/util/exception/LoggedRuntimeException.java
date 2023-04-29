@@ -9,6 +9,8 @@ import java.util.logging.Logger;
 import com.google.protobuf.GeneratedMessage;
 import com.google.protobuf.GeneratedMessageV3;
 import com.googlecode.protobuf.format.JsonFormat;
+import com.googlecode.protobuf.format.JsonFormat.ParseException;
+import com.tiwari.studence.proto.error.ErrorCategoryUiEnum;
 import com.tiwari.studence.util.Strings;
 import com.tiwari.studence.util.collect.Lists;
 
@@ -81,7 +83,7 @@ public class LoggedRuntimeException extends RuntimeException {
 	}
 
 	public LoggedRuntimeException(Throwable t, Object[] objects) {
-		this.m_errorProto = new ParsedErrorProto();
+		this.m_errorProto = null;
 		this.m_args = Lists.newArrayList();
 		this.m_args.add(objects);
 		this.m_stackTrace = createStackTraceString(t);
@@ -89,7 +91,7 @@ public class LoggedRuntimeException extends RuntimeException {
 	}
 
 	public LoggedRuntimeException(String string, Object[] args) {
-		this.m_errorProto = new ParsedErrorProto();
+		this.m_errorProto =null;
 		this.m_args = null;
 		this.m_stackTrace = createStackTraceString();
 		printError();
@@ -102,6 +104,33 @@ public class LoggedRuntimeException extends RuntimeException {
 		this.m_args.add(string2);
 		this.m_args.add(new JsonFormat().printToString(pb));
 		this.m_stackTrace = createStackTraceString();
+		printError();
+	}
+
+	public LoggedRuntimeException(ErrorCategoryUiEnum serverMisconfiguredError) {
+		this.m_errorProto = new ParsedErrorProto(serverMisconfiguredError);
+		this.m_args = null;
+		this.m_stackTrace = createStackTraceString();
+		printError();
+	}
+
+	public LoggedRuntimeException(ErrorCategoryUiEnum inputValidationError, ParseException e, String value) {
+		this.m_errorProto = new ParsedErrorProto(inputValidationError);
+		this.m_args = Lists.newArrayList();
+		this.m_args.add(value);
+		this.m_args.add(e.getMessage());
+		this.m_args.add(e.getStackTrace());
+		this.m_stackTrace = createStackTraceString();
+		printError();
+	}
+
+	public LoggedRuntimeException(String errorCode, String uiErrorString, ErrorCategoryUiEnum errorCategory,
+			Object[] args) {
+		m_errorProto = new ParsedErrorProto(errorCategory);
+		m_args = Lists.newArrayList(args);
+		m_errorCode = errorCode ;
+		m_uiErrorString = uiErrorString;
+		m_stackTrace = createStackTraceString();
 		printError();
 	}
 

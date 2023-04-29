@@ -79,7 +79,7 @@ public class ProtobufToJson {
 		}
 	}
 
-	public final String convert(GeneratedMessageV3 value) {
+	public final static String convert(GeneratedMessageV3 value) {
 		return new com.googlecode.protobuf.format.JsonFormat().printToString(value);
 	}
 }

@@ -2,7 +2,8 @@
 
 package com.tiwari.studence.util.exception;
 
-import com.tiwari.studence.util.exception.LoggedRuntimeException;
+import com.tiwari.studence.proto.error.ErrorCategoryUiEnum;
+import com.tiwari.studence.util.Strings;
 
 
 public class Preconditions {
@@ -11,18 +12,18 @@ public class Preconditions {
 			throw new LoggedRuntimeException(new Throwable(), args);
 		}
 	}
-//
-//	public static void validateWithUiErrorString(boolean acceptableCond, String uiErrorString, String errorCode,
-//			Object... args) {
-//		ErrorCategoryUiEnum errorCategory = ErrorCategoryUiEnum.INPUT_VALIDATION_ERROR;
-//		if (Strings.areEqual("VERSION_MISMATCHED", errorCode)) {
-//			errorCategory = ErrorCategoryUiEnum.VERSION_MISMATCH;
-//		}
-//		if (!acceptableCond) {
-//			throw new LoggedRuntimeException(errorCode, uiErrorString, errorCategory, args);
-//		}
-//	}
-//
+
+	public static void validateWithUiErrorString(boolean acceptableCond, String uiErrorString, String errorCode,
+			Object... args) {
+		ErrorCategoryUiEnum errorCategory = ErrorCategoryUiEnum.INPUT_VALIDATION_ERROR;
+		if (Strings.areEqual("VERSION_MISMATCHED", errorCode)) {
+			errorCategory = ErrorCategoryUiEnum.VERSION_MISMATCH;
+		}
+		if (!acceptableCond) {
+			throw new LoggedRuntimeException(errorCode, uiErrorString, errorCategory, args);
+		}
+	}
+
 	public static void validate(boolean acceptableCond, Object... args) {
 		if (!acceptableCond) {
 			throw new LoggedRuntimeException("", args);

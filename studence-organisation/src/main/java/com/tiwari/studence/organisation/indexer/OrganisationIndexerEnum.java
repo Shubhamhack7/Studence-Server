@@ -1,5 +1,8 @@
 package com.tiwari.studence.organisation.indexer;
 
 public enum OrganisationIndexerEnum {
-  NAME
+  NAME,
+  EMAIL,
+  MOBILE_NUMBER,
+  ADDRESS;
 }

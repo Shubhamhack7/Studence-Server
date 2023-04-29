@@ -20,21 +20,10 @@ import com.tiwari.studence.common.updater.AEntityUpdater;
 import com.tiwari.studence.proto.entity.EntityPb;
 import com.tiwari.studence.util.exception.ErrorException;
 
-public abstract class AEntityService<P extends GeneratedMessageV3, LReq extends GeneratedMessageV3, LResp extends GeneratedMessageV3, BU extends GeneratedMessageV3.Builder, BP extends IPbBuilderProvider<P, BU>, RBU extends GeneratedMessageV3.Builder, RBUP extends IPbBuilderProvider<LResp, RBU>, I extends AEntityIndexer<P>, U extends AEntityUpdater<P, BU, BP, I>, C extends AEntityConvertor<P, BU, BP>, /*
-                                                                                                                                                                                                                                                                                                                                                                                                                     * S
-                                                                                                                                                                                                                                                                                                                                                                                                                     * extends
-                                                                                                                                                                                                                                                                                                                                                                                                                     * AEntitySearcher
-                                                                                                                                                                                                                                                                                                                                                                                                                     * <
-                                                                                                                                                                                                                                                                                                                                                                                                                     * P,
-                                                                                                                                                                                                                                                                                                                                                                                                                     * LReq,
-                                                                                                                                                                                                                                                                                                                                                                                                                     * LResp,
-                                                                                                                                                                                                                                                                                                                                                                                                                     * RBU,
-                                                                                                                                                                                                                                                                                                                                                                                                                     * RBUP,
-                                                                                                                                                                                                                                                                                                                                                                                                                     * I>
-                                                                                                                                                                                                                                                                                                                                                                                                                     */ T extends ITableNameProvider>
+public abstract class AEntityService<P extends GeneratedMessageV3, LReq extends GeneratedMessageV3, LResp extends GeneratedMessageV3, BU extends GeneratedMessageV3.Builder, BP extends IPbBuilderProvider<P, BU>, RBU extends GeneratedMessageV3.Builder, RBUP extends IPbBuilderProvider<LResp, RBU>, I extends AEntityIndexer<P>, U extends AEntityUpdater<P, BU, BP, I>, C extends AEntityConvertor<P, BU, BP>, S extends AEntitySearcher<P, LReq, LResp, RBU, RBUP, I>, T extends ITableNameProvider>
         implements IService<P, LReq, LResp> {
 
-  // private S m_searcher;
+  private S m_searcher;
   private U m_updator;
   private C m_convertor;
   private BP m_builderProvder;
@@ -44,10 +33,10 @@ public abstract class AEntityService<P extends GeneratedMessageV3, LReq extends 
   private EntityGet m_get;
 
   @Inject
-  public AEntityService(/* S searcher, */ U updator, C convertor, BP builderProvder,
+  public AEntityService(S searcher, U updator, C convertor, BP builderProvder,
           RBUP requestBuilderprovider, T tableNameProvider, IGetEntityId getNewId,
           IDynamoPutTable dynamoPutTable, IDynamoGetEntityTable dynamoGetTable) {
-    // m_searcher = searcher;
+     m_searcher = searcher;
     m_updator = updator;
     m_convertor = convertor;
     m_builderProvder = builderProvder;
@@ -75,8 +64,7 @@ public abstract class AEntityService<P extends GeneratedMessageV3, LReq extends 
 
   @Override
   public IFuture<LResp, ErrorException> searchEntity(LReq reqBuilder) {
-    // TODO Auto-generated method stub
-    return null;
+    return m_searcher.searcher(reqBuilder);
   }
 
   @Override
