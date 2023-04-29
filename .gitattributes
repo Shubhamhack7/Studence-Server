@@ -1,0 +1,2 @@
+/home/tiwaritiwari/Studence/Studence-Server/studence-management-app/target/studence-management-app-0.0.1-SNAPSHOT.war filter=lfs diff=lfs merge=lfs -text
+/home/tiwaritiwari/Studence/Studence-Server/studence-management-app/target/studence-management-app-0.0.1-SNAPSHOT/WEB-INF/lib/aws-java-sdk-models-1.12.429.jar filter=lfs diff=lfs merge=lfs -text
