@@ -8,29 +8,41 @@ public interface OrganisationSearchRespPbOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
-   * @return Whether the dbInfo field is set.
+   * <code>.com.tiwari.studence.proto.summary.SummaryPb summary = 1;</code>
+   * @return Whether the summary field is set.
    */
-  boolean hasDbInfo();
+  boolean hasSummary();
   /**
-   * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
-   * @return The dbInfo.
+   * <code>.com.tiwari.studence.proto.summary.SummaryPb summary = 1;</code>
+   * @return The summary.
    */
-  com.tiwari.studence.proto.entity.EntityPb getDbInfo();
+  com.tiwari.studence.proto.summary.SummaryPb getSummary();
   /**
-   * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
+   * <code>.com.tiwari.studence.proto.summary.SummaryPb summary = 1;</code>
    */
-  com.tiwari.studence.proto.entity.EntityPbOrBuilder getDbInfoOrBuilder();
+  com.tiwari.studence.proto.summary.SummaryPbOrBuilder getSummaryOrBuilder();
 
   /**
-   * <code>string name = 2;</code>
-   * @return The name.
+   * <code>repeated .com.tiwari.studence.proto.organisation.OrganisationPb results = 2;</code>
    */
-  java.lang.String getName();
+  java.util.List<com.tiwari.studence.proto.organisation.OrganisationPb> 
+      getResultsList();
   /**
-   * <code>string name = 2;</code>
-   * @return The bytes for name.
+   * <code>repeated .com.tiwari.studence.proto.organisation.OrganisationPb results = 2;</code>
    */
-  com.google.protobuf.ByteString
-      getNameBytes();
+  com.tiwari.studence.proto.organisation.OrganisationPb getResults(int index);
+  /**
+   * <code>repeated .com.tiwari.studence.proto.organisation.OrganisationPb results = 2;</code>
+   */
+  int getResultsCount();
+  /**
+   * <code>repeated .com.tiwari.studence.proto.organisation.OrganisationPb results = 2;</code>
+   */
+  java.util.List<? extends com.tiwari.studence.proto.organisation.OrganisationPbOrBuilder> 
+      getResultsOrBuilderList();
+  /**
+   * <code>repeated .com.tiwari.studence.proto.organisation.OrganisationPb results = 2;</code>
+   */
+  com.tiwari.studence.proto.organisation.OrganisationPbOrBuilder getResultsOrBuilder(
+      int index);
 }

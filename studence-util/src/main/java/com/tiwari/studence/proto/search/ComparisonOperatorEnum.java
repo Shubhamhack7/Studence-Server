@@ -193,7 +193,7 @@ public enum ComparisonOperatorEnum
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tiwari.studence.proto.search.Searchdynamodb.getDescriptor().getEnumTypes().get(0);
+    return com.tiwari.studence.proto.search.Searchdynamodb.getDescriptor().getEnumTypes().get(2);
   }
 
   private static final ComparisonOperatorEnum[] VALUES = values();

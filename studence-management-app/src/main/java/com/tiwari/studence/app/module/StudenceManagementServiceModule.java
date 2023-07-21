@@ -14,6 +14,7 @@ import com.tiwari.studence.app.servlet.MyServlet;
 import com.tiwari.studence.common.module.GetAndUpdateEntityIdModule;
 import com.tiwari.studence.common.module.GetItemFroomDynamoTableModule;
 import com.tiwari.studence.common.module.PutItemDynamoTableModule;
+import com.tiwari.studence.common.module.SearchItemDynamoTableModule;
 import com.tiwari.studence.dynamodb.database.module.CreateDynamoDbTableModule;
 import com.tiwari.studence.organisation.module.OrganisationModule;
 import com.tiwari.studence.util.collect.Maps;
@@ -25,7 +26,7 @@ public class StudenceManagementServiceModule extends ServletModule {
 
     @Inject
     public StudenceManagementServiceModule(@Named("ModulesSet") Set<AbstractModule> moduleSet, ServerExceptionModule serverExceptionModule ,ServerListnerModule serverListnerModule, GetItemFroomDynamoTableModule getItemFroomDynamoTableModule, GetAndUpdateEntityIdModule getAndUpdateEntityIdModule, CreateDynamoDbTableModule createDynamoDbTableModule,
-                                           PutItemDynamoTableModule putItemDynamoTableModule, OrganisationModule orgnisationModule) {
+                                           PutItemDynamoTableModule putItemDynamoTableModule, SearchItemDynamoTableModule searchItemDynamoTableModule, OrganisationModule orgnisationModule) {
         moduleSet.add(this);
         moduleSet.add(serverExceptionModule);
         moduleSet.add(serverListnerModule);
@@ -33,6 +34,7 @@ public class StudenceManagementServiceModule extends ServletModule {
         moduleSet.add(getAndUpdateEntityIdModule);
         moduleSet.add(putItemDynamoTableModule);
         moduleSet.add(createDynamoDbTableModule);
+        moduleSet.add(searchItemDynamoTableModule);
         moduleSet.add(orgnisationModule);
     }
 

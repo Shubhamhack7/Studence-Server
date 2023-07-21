@@ -6,6 +6,7 @@ import com.google.inject.Injector;
 import com.tiwari.studence.common.injector.StaticInjectorProvider;
 import jakarta.servlet.*;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import javax.inject.Inject;
 import java.io.IOException;
@@ -33,6 +34,12 @@ public class  StudenceManagementFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain filterChain) throws IOException, ServletException {
+        HttpServletResponse httpResponse = (HttpServletResponse) response;
+
+        // Set CORS headers
+        httpResponse.setHeader("Access-Control-Allow-Origin", "*");
+        httpResponse.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, OPTIONS, DELETE");
+        httpResponse.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
         String servletPath = ((HttpServletRequest) request).getServletPath();
         servletPath = servletPath.substring(0, servletPath.lastIndexOf("/"));
         // Get the servlet registration from the servlet context
@@ -60,7 +67,7 @@ public class  StudenceManagementFilter implements Filter {
                 servlet.init(new StandardServletConfig(servletContext, registration.getName(), new HashMap<>()));
 
                 // Invoke the servlet
-                servlet.service(request, response);
+                servlet.service(request, httpResponse);
 
                 // Destroy the servlet
                 servlet.destroy();
@@ -69,7 +76,7 @@ public class  StudenceManagementFilter implements Filter {
             }
         } else {
             // The requested URL does not map to a servlet
-            filterChain.doFilter(request, response);
+            filterChain.doFilter(request, httpResponse);
         }
     }
 

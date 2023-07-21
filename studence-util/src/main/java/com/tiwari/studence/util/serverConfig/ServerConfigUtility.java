@@ -7,9 +7,15 @@ import javax.inject.Singleton;
 public class ServerConfigUtility {
   private final ServerEnvironmentType m_ServerEnvironmentType;
 
-  @Inject
+
   public ServerConfigUtility(ServerEnvironmentType ServerEnvironmentType) {
     m_ServerEnvironmentType = ServerEnvironmentType;
+  }
+
+
+  @Inject
+  public ServerConfigUtility() {
+    m_ServerEnvironmentType = ServerEnvironmentType.DEVELOPMENT;
   }
 
   public boolean validateServerConfig() {

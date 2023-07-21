@@ -1,58 +1,87 @@
 package com.tiwari.studence.dynamodb.database.table;
 
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import javax.inject.Inject;
 
-import com.amazonaws.services.dynamodbv2.document.*;
-import com.amazonaws.services.dynamodbv2.document.spec.ScanSpec;
-import com.amazonaws.services.dynamodbv2.document.utils.NameMap;
-import com.amazonaws.services.dynamodbv2.document.utils.ValueMap;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.google.protobuf.InvalidProtocolBufferException;
+import com.google.protobuf.util.JsonFormat;
 import com.tiwari.studence.dynamodb.database.DynamoDbConnector;
-import com.tiwari.studence.util.exception.ErrorException;
+import com.tiwari.studence.proto.search.DynamoDbSearchPb;
 
 import software.amazon.awssdk.services.dynamodb.model.*;
 
 public class SearchItemInDynamoDbTable implements ISearchItemTable {
 
-    private DynamoDbConnector m_dynamoDbConnector;
+  private DynamoDbConnector m_dynamoDbConnector;
 
-    @Inject
-    public SearchItemInDynamoDbTable(DynamoDbConnector dynamoDbConnector) {
-        m_dynamoDbConnector = dynamoDbConnector;
+  @Inject
+  public SearchItemInDynamoDbTable(DynamoDbConnector dynamoDbConnector) {
+    m_dynamoDbConnector = dynamoDbConnector;
+  }
+
+  @Override
+  public List<Map<String, AttributeValue>> searchItemsScanSpec(DynamoDbSearchPb request)
+          throws InvalidProtocolBufferException {
+    System.out.println(JsonFormat.printer().print(request));
+    switch (request.getMode()){
+
+    case UNKNOWN_MODE:
+      break;
+    case QUERY_MODE:
+      break;
+    case SCAN_FILTER_MODE:
+      return scanandFilterResponse(request);
+    case GLOBAL_SECONDARY_INDEX:
+      break;
+    case LOCAL_SECONDARY_INDEX:
+      break;
+    case UNRECOGNIZED:
+      break;
     }
+    return null;
+  }
 
-    @Override
-    public ScanResponse searchItemsScanSpec(String tableName, ScanSpec request)
-            throws Exception {
-        HashMap<String, String> attrNameAlias = new HashMap<String, String>();
-        attrNameAlias.put("#lifetime", "LIFETIME");
+  public void queryOpreationResponse(String tableName) throws JsonProcessingException {
+  //100_ORGANISATION_DEVEL
+    Map<String, AttributeValue> expressionAttributeValues = new HashMap<>();
+    expressionAttributeValues.put(":id_", AttributeValue.builder().s("I").build());
+    expressionAttributeValues.put(":name_", AttributeValue.builder().s("ram shyam").build());
 
-//	      HashMap<String, AttributeValue> attrValues = new HashMap<>();
-//
-//	      attrValues.put(":"+"lifetime", AttributeValue.builder()
-//	          .s("UNKNOWN_LIFETIME")
-//	          .build());
-
-		/*try {
-			ScanRequest scanRequest = ScanRequest.builder().tableName(tableName)
-					// .attributesToGet("RAW_DATA,LIFETIME")
-					.filterExpression(filterExpression)
-					// .expressionAttributeNames(attrNameAlias)
-					.expressionAttributeValues(attrValues).build();
-
-			return m_dynamoDbConnector.getDynamoDbClient().scan(scanRequest);
-
-		} catch (DynamoDbException e) {
-			throw new ErrorException(e);
-		}*/
-        DynamoDB dynamoDB = new DynamoDB(m_dynamoDbConnector.getAmazonDynamoDB());
-        Table table = dynamoDB.getTable(tableName);
-        ItemCollection<ScanOutcome> outcome = table.scan(request);
-        for (Item item : outcome) {
-            System.out.println(item.toJSONPretty());
-        }
-        return null;
+    QueryRequest queryRequest = QueryRequest.builder()
+            .tableName(tableName)
+            .keyConditionExpression("ID = :id_")
+            .filterExpression("ORGANISATION_NAME = :name_")
+            .expressionAttributeValues(expressionAttributeValues)
+            .build();
+    System.out.println(queryRequest);
+    QueryResponse queryResponse = m_dynamoDbConnector.getDynamoDbClient().query(queryRequest);
+    List<Map<String, AttributeValue>> items = queryResponse.items();
+    for (Map<String, AttributeValue> item : items) {
+      System.out.println(item);
     }
+  }
+
+  public List<Map<String, AttributeValue>> scanandFilterResponse(DynamoDbSearchPb req) {
+    Map<String, AttributeValue> expressionAttributeValues = new HashMap<>();
+    req.getExpressionAttributeList().forEach(request -> {
+      expressionAttributeValues.put(request.getAttributeNameAlias(), AttributeValue.builder().s(request.getStringValue()).build());
+    });
+    ScanRequest scanRequest = ScanRequest.builder()
+            .tableName(req.getTableName())
+            .filterExpression(req.getFilterExpression())
+            .expressionAttributeValues(expressionAttributeValues)
+            .build();
+    System.out.println(scanRequest);
+    ScanResponse scanResponse = m_dynamoDbConnector.getDynamoDbClient().scan(scanRequest);
+    List<Map<String, AttributeValue>> items = scanResponse.items();
+    for (Map<String, AttributeValue> item : items) {
+      System.out.println(item);
+    }
+    return scanResponse.items();
+  }
 }
 

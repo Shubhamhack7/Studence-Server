@@ -61,24 +61,36 @@ public interface AttributeNameValuePairOrBuilder extends
   com.google.protobuf.ByteString getBinaryValue();
 
   /**
-   * <code>string attributeNameAlias = 7;</code>
+   * <code>string expression = 7;</code>
+   * @return The expression.
+   */
+  java.lang.String getExpression();
+  /**
+   * <code>string expression = 7;</code>
+   * @return The bytes for expression.
+   */
+  com.google.protobuf.ByteString
+      getExpressionBytes();
+
+  /**
+   * <code>string attributeNameAlias = 8;</code>
    * @return The attributeNameAlias.
    */
   java.lang.String getAttributeNameAlias();
   /**
-   * <code>string attributeNameAlias = 7;</code>
+   * <code>string attributeNameAlias = 8;</code>
    * @return The bytes for attributeNameAlias.
    */
   com.google.protobuf.ByteString
       getAttributeNameAliasBytes();
 
   /**
-   * <code>string attributeValueAlias = 8;</code>
+   * <code>string attributeValueAlias = 9;</code>
    * @return The attributeValueAlias.
    */
   java.lang.String getAttributeValueAlias();
   /**
-   * <code>string attributeValueAlias = 8;</code>
+   * <code>string attributeValueAlias = 9;</code>
    * @return The bytes for attributeValueAlias.
    */
   com.google.protobuf.ByteString

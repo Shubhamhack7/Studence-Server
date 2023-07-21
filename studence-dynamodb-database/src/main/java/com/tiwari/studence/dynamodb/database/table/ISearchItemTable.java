@@ -1,12 +1,12 @@
 package com.tiwari.studence.dynamodb.database.table;
 
-import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-import com.amazonaws.services.dynamodbv2.document.spec.ScanSpec;
+import com.tiwari.studence.proto.search.DynamoDbSearchPb;
 import software.amazon.awssdk.services.dynamodb.model.AttributeValue;
-import software.amazon.awssdk.services.dynamodb.model.ScanResponse;
 
 public interface ISearchItemTable {
-	public ScanResponse searchItemsScanSpec(String tableName, ScanSpec request)
+	public List<Map<String, AttributeValue>> searchItemsScanSpec(DynamoDbSearchPb request)
 			throws Exception;
 }

@@ -1,31 +1,24 @@
 package com.tiwari.studence.common.entity;
 
 import java.util.HashMap;
-import java.util.Map;
 
-import com.google.protobuf.AbstractMessage.Builder;
 import com.google.protobuf.GeneratedMessageV3;
 import com.tiwari.studence.common.async.AControlFlow;
 import com.tiwari.studence.common.async.IFuture;
 import com.tiwari.studence.common.convertor.IConvertor;
 import com.tiwari.studence.common.indexer.AEntityIndexer;
-import com.tiwari.studence.common.indexer.IIndexer;
 import com.tiwari.studence.common.interfaces.IDynamoPutTable;
-import com.tiwari.studence.common.prtovider.IPbBuilderProvider;
+import com.tiwari.studence.common.provider.IPbBuilderProvider;
 import com.tiwari.studence.common.services.interfaces.ITableNameProvider;
 import com.tiwari.studence.common.updater.AEntityUpdater;
-import com.tiwari.studence.common.updater.IUpdater;
-import com.tiwari.studence.proto.entity.EntityPb;
 import com.tiwari.studence.proto.entity.LifeTimeEnum;
-import com.tiwari.studence.util.StudenceSpecialCharecterEnum;
 import com.tiwari.studence.util.collect.Pair;
 import com.tiwari.studence.util.exception.ErrorException;
 import com.tiwari.studence.util.exception.LoggedRuntimeException;
 
 import software.amazon.awssdk.services.dynamodb.model.AttributeValue;
-import software.amazon.awssdk.services.dynamodb.model.GetItemResponse;
 
-public class EntityCreateCF<P extends GeneratedMessageV3, BU extends GeneratedMessageV3.Builder<?>, BP extends IPbBuilderProvider<P, BU>, U extends AEntityUpdater<P, BU, IPbBuilderProvider<P, BU>, AEntityIndexer<P>>, C extends IConvertor<P>, T extends ITableNameProvider>
+public class EntityCreateCF<P extends GeneratedMessageV3,Lresp extends GeneratedMessageV3, BU extends GeneratedMessageV3.Builder<?>, BP extends IPbBuilderProvider<P, BU>, U extends AEntityUpdater<P, BU, IPbBuilderProvider<P, BU>, AEntityIndexer<P>>, C extends IConvertor<P,Lresp>, T extends ITableNameProvider>
         extends AControlFlow<EntityCreateCF.State, P, ErrorException> {
   private U m_updater;
   private C m_convertor;
@@ -34,7 +27,7 @@ public class EntityCreateCF<P extends GeneratedMessageV3, BU extends GeneratedMe
   private P m_request;
   private BP m_builderProvider;
   private T m_tableNameProvider;
-  private EntityGet<P, BU, BP, C, T> m_getEntity;
+  private EntityGet<P,Lresp, BU, BP, C, T> m_getEntity;
   private EntityPbBuilderProvider m_entityProvider;
   com.tiwari.studence.proto.entity.EntityPb.Builder entity;
   private Pair<Integer, String> new_id;
@@ -42,7 +35,7 @@ public class EntityCreateCF<P extends GeneratedMessageV3, BU extends GeneratedMe
 
   protected EntityCreateCF(P request, U updater, C convertor, BP builderProvider,
           T tableNameProvider, IGetEntityId getNewId, IDynamoPutTable dynamoPutTable,
-          EntityPbBuilderProvider entityProvider, EntityGet<P, BU, BP, C, T> getEntity) {
+          EntityPbBuilderProvider entityProvider, EntityGet<P, Lresp,BU, BP, C, T> getEntity) {
     super(State.GET_AND_SET_ENTITY_ID, State.DONE);
     m_updater = updater;
     m_convertor = convertor;

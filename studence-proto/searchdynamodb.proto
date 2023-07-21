@@ -9,6 +9,21 @@ option java_generate_equals_and_hash = true;
 
 //The following protos are reserved 12,13,14,15,16.You shd not use them
 
+enum DynamoDBSearchMode{
+  UNKNOWN_MODE =0;
+  QUERY_MODE =1;
+  SCAN_FILTER_MODE =2;
+  GLOBAL_SECONDARY_INDEX =3;
+  LOCAL_SECONDARY_INDEX =4;
+}
+
+enum DynamoDBLogicalOperators{
+  UNKNOWN_OPERATORS =0;
+  AND=1;
+  OR=2;
+  NOT=3;
+}
+
 enum ComparisonOperatorEnum{
   UNKNOWN = 0;
   EQUAL_TO = 1;
@@ -42,14 +57,28 @@ message AttributeNameValuePair {
   float floatValue = 4;
   string stringValue =5;
   bytes binaryValue = 6;
-  string attributeNameAlias  = 7;
-  string attributeValueAlias = 8;
+  string expression =7;
+  string attributeNameAlias  = 8;
+  string attributeValueAlias = 9;
 }
 
 
 message SearchPb{
   ComparisonOperatorEnum type = 1;
-  AttributeNameValuePair attributeFirst =2 ;
-  AttributeNameValuePair attributeSecond =3 ;
-  repeated AttributeNameValuePair attributes =4 ;
+  repeated AttributeNameValuePair attributes =2 ;
+}
+
+message SearchRequestsPb{
+  DynamoDBSearchMode mode = 1;
+  repeated DynamoDBLogicalOperators Operators = 2;
+  repeated SearchPb requests = 3;
+}
+
+message DynamoDbSearchPb{
+  DynamoDBSearchMode mode = 1;
+  string tableName = 2;
+  string indexName =3;
+  string keyConditionExpression =4;
+  string filterExpression = 6;
+  repeated AttributeNameValuePair expressionAttribute =7;
 }

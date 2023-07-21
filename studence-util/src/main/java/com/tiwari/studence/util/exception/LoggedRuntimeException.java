@@ -2,6 +2,7 @@
 
 package com.tiwari.studence.util.exception;
 
+import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Logger;
@@ -115,6 +116,16 @@ public class LoggedRuntimeException extends RuntimeException {
 	}
 
 	public LoggedRuntimeException(ErrorCategoryUiEnum inputValidationError, ParseException e, String value) {
+		this.m_errorProto = new ParsedErrorProto(inputValidationError);
+		this.m_args = Lists.newArrayList();
+		this.m_args.add(value);
+		this.m_args.add(e.getMessage());
+		this.m_args.add(e.getStackTrace());
+		this.m_stackTrace = createStackTraceString();
+		printError();
+	}
+
+	public LoggedRuntimeException(ErrorCategoryUiEnum inputValidationError, UnsupportedEncodingException e, String value) {
 		this.m_errorProto = new ParsedErrorProto(inputValidationError);
 		this.m_args = Lists.newArrayList();
 		this.m_args.add(value);

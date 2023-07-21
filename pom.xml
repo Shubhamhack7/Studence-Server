@@ -265,7 +265,7 @@
 	
   
   <modules>
-        		
+
     
     <module>studence-util</module>
         		
@@ -295,9 +295,9 @@
         		
     
     <module>studence-management-app</module>
-        	  
 
-      
+    <module>studence-login</module>
+
   </modules>
     
 

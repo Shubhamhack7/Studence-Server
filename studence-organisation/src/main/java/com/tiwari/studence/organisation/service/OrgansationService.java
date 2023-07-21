@@ -23,18 +23,17 @@ import com.tiwari.studence.util.exception.ErrorException;
 
 @Singleton
 public class OrgansationService extends
-        AEntityService<OrganisationPb, OrganisationSearchRespPb, OrganisationSearchRespPb, OrganisationPb.Builder, OrganisationPbProvider, OrganisationSearchRespPb.Builder, OrganisationSearchPbProvider, OrganisationIndexer, OrganisationUpdater, OrganisationConvertor, OraganisationTableNameProvider>
+        AEntityService<OrganisationPb, OrganisationSearchReqPb,OrganisationSearchReqPb.Builder, OrganisationSearchRespPb, OrganisationPb.Builder, OrganisationPbProvider, OrganisationSearchRespPb.Builder, OrganisationSearchPbProvider, OrganisationIndexer, OrganisationUpdater, OrganisationConvertor, OrganisationSearcher, OraganisationTableNameProvider>
         implements IOrganisationService {
 
   @Inject
-  public OrgansationService(OrganisationUpdater updator, OrganisationConvertor convertor,
-          OrganisationPbProvider builderProvder,
+  public OrgansationService(OrganisationSearcher searcher, OrganisationUpdater updator,
+          OrganisationConvertor convertor, OrganisationPbProvider builderProvder,
           OrganisationSearchPbProvider requestBuilderprovider,
           OraganisationTableNameProvider tableNameProvider, IGetEntityId getNewId,
           IDynamoPutTable dynamoPutTable, IDynamoGetEntityTable dynamoGetTable) {
-    super(updator, convertor, builderProvder, requestBuilderprovider, tableNameProvider, getNewId,
-            dynamoPutTable, dynamoGetTable);
-    // TODO Auto-generated constructor stub
+    super(searcher, updator, convertor, builderProvder, requestBuilderprovider, tableNameProvider,
+            getNewId, dynamoPutTable, dynamoGetTable);
   }
 
   @Override
@@ -66,8 +65,7 @@ public class OrgansationService extends
 
   @Override
   public IFuture<OrganisationSearchRespPb, ErrorException> search(OrganisationSearchReqPb entity) {
-    // TODO Auto-generated method stub
-    return null;
+    return super.searchEntity(entity);
   }
 
 }

@@ -16,7 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private OrganisationSearchRespPb() {
-    name_ = "";
+    results_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -44,69 +44,71 @@ private static final long serialVersionUID = 0L;
             com.tiwari.studence.proto.organisation.OrganisationSearchRespPb.class, com.tiwari.studence.proto.organisation.OrganisationSearchRespPb.Builder.class);
   }
 
-  public static final int DBINFO_FIELD_NUMBER = 1;
-  private com.tiwari.studence.proto.entity.EntityPb dbInfo_;
+  public static final int SUMMARY_FIELD_NUMBER = 1;
+  private com.tiwari.studence.proto.summary.SummaryPb summary_;
   /**
-   * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
-   * @return Whether the dbInfo field is set.
+   * <code>.com.tiwari.studence.proto.summary.SummaryPb summary = 1;</code>
+   * @return Whether the summary field is set.
    */
   @java.lang.Override
-  public boolean hasDbInfo() {
-    return dbInfo_ != null;
+  public boolean hasSummary() {
+    return summary_ != null;
   }
   /**
-   * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
-   * @return The dbInfo.
+   * <code>.com.tiwari.studence.proto.summary.SummaryPb summary = 1;</code>
+   * @return The summary.
    */
   @java.lang.Override
-  public com.tiwari.studence.proto.entity.EntityPb getDbInfo() {
-    return dbInfo_ == null ? com.tiwari.studence.proto.entity.EntityPb.getDefaultInstance() : dbInfo_;
+  public com.tiwari.studence.proto.summary.SummaryPb getSummary() {
+    return summary_ == null ? com.tiwari.studence.proto.summary.SummaryPb.getDefaultInstance() : summary_;
   }
   /**
-   * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
+   * <code>.com.tiwari.studence.proto.summary.SummaryPb summary = 1;</code>
    */
   @java.lang.Override
-  public com.tiwari.studence.proto.entity.EntityPbOrBuilder getDbInfoOrBuilder() {
-    return dbInfo_ == null ? com.tiwari.studence.proto.entity.EntityPb.getDefaultInstance() : dbInfo_;
+  public com.tiwari.studence.proto.summary.SummaryPbOrBuilder getSummaryOrBuilder() {
+    return summary_ == null ? com.tiwari.studence.proto.summary.SummaryPb.getDefaultInstance() : summary_;
   }
 
-  public static final int NAME_FIELD_NUMBER = 2;
+  public static final int RESULTS_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object name_ = "";
+  private java.util.List<com.tiwari.studence.proto.organisation.OrganisationPb> results_;
   /**
-   * <code>string name = 2;</code>
-   * @return The name.
+   * <code>repeated .com.tiwari.studence.proto.organisation.OrganisationPb results = 2;</code>
    */
   @java.lang.Override
-  public java.lang.String getName() {
-    java.lang.Object ref = name_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      name_ = s;
-      return s;
-    }
+  public java.util.List<com.tiwari.studence.proto.organisation.OrganisationPb> getResultsList() {
+    return results_;
   }
   /**
-   * <code>string name = 2;</code>
-   * @return The bytes for name.
+   * <code>repeated .com.tiwari.studence.proto.organisation.OrganisationPb results = 2;</code>
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getNameBytes() {
-    java.lang.Object ref = name_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      name_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  public java.util.List<? extends com.tiwari.studence.proto.organisation.OrganisationPbOrBuilder> 
+      getResultsOrBuilderList() {
+    return results_;
+  }
+  /**
+   * <code>repeated .com.tiwari.studence.proto.organisation.OrganisationPb results = 2;</code>
+   */
+  @java.lang.Override
+  public int getResultsCount() {
+    return results_.size();
+  }
+  /**
+   * <code>repeated .com.tiwari.studence.proto.organisation.OrganisationPb results = 2;</code>
+   */
+  @java.lang.Override
+  public com.tiwari.studence.proto.organisation.OrganisationPb getResults(int index) {
+    return results_.get(index);
+  }
+  /**
+   * <code>repeated .com.tiwari.studence.proto.organisation.OrganisationPb results = 2;</code>
+   */
+  @java.lang.Override
+  public com.tiwari.studence.proto.organisation.OrganisationPbOrBuilder getResultsOrBuilder(
+      int index) {
+    return results_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -123,11 +125,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (dbInfo_ != null) {
-      output.writeMessage(1, getDbInfo());
+    if (summary_ != null) {
+      output.writeMessage(1, getSummary());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+    for (int i = 0; i < results_.size(); i++) {
+      output.writeMessage(2, results_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -138,12 +140,13 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (dbInfo_ != null) {
+    if (summary_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getDbInfo());
+        .computeMessageSize(1, getSummary());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+    for (int i = 0; i < results_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, results_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -160,13 +163,13 @@ private static final long serialVersionUID = 0L;
     }
     com.tiwari.studence.proto.organisation.OrganisationSearchRespPb other = (com.tiwari.studence.proto.organisation.OrganisationSearchRespPb) obj;
 
-    if (hasDbInfo() != other.hasDbInfo()) return false;
-    if (hasDbInfo()) {
-      if (!getDbInfo()
-          .equals(other.getDbInfo())) return false;
+    if (hasSummary() != other.hasSummary()) return false;
+    if (hasSummary()) {
+      if (!getSummary()
+          .equals(other.getSummary())) return false;
     }
-    if (!getName()
-        .equals(other.getName())) return false;
+    if (!getResultsList()
+        .equals(other.getResultsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -178,12 +181,14 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasDbInfo()) {
-      hash = (37 * hash) + DBINFO_FIELD_NUMBER;
-      hash = (53 * hash) + getDbInfo().hashCode();
+    if (hasSummary()) {
+      hash = (37 * hash) + SUMMARY_FIELD_NUMBER;
+      hash = (53 * hash) + getSummary().hashCode();
     }
-    hash = (37 * hash) + NAME_FIELD_NUMBER;
-    hash = (53 * hash) + getName().hashCode();
+    if (getResultsCount() > 0) {
+      hash = (37 * hash) + RESULTS_FIELD_NUMBER;
+      hash = (53 * hash) + getResultsList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -313,12 +318,18 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      dbInfo_ = null;
-      if (dbInfoBuilder_ != null) {
-        dbInfoBuilder_.dispose();
-        dbInfoBuilder_ = null;
+      summary_ = null;
+      if (summaryBuilder_ != null) {
+        summaryBuilder_.dispose();
+        summaryBuilder_ = null;
       }
-      name_ = "";
+      if (resultsBuilder_ == null) {
+        results_ = java.util.Collections.emptyList();
+      } else {
+        results_ = null;
+        resultsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -345,20 +356,30 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tiwari.studence.proto.organisation.OrganisationSearchRespPb buildPartial() {
       com.tiwari.studence.proto.organisation.OrganisationSearchRespPb result = new com.tiwari.studence.proto.organisation.OrganisationSearchRespPb(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
+    private void buildPartialRepeatedFields(com.tiwari.studence.proto.organisation.OrganisationSearchRespPb result) {
+      if (resultsBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          results_ = java.util.Collections.unmodifiableList(results_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.results_ = results_;
+      } else {
+        result.results_ = resultsBuilder_.build();
+      }
+    }
+
     private void buildPartial0(com.tiwari.studence.proto.organisation.OrganisationSearchRespPb result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.dbInfo_ = dbInfoBuilder_ == null
-            ? dbInfo_
-            : dbInfoBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.name_ = name_;
+        result.summary_ = summaryBuilder_ == null
+            ? summary_
+            : summaryBuilder_.build();
       }
     }
 
@@ -406,13 +427,34 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tiwari.studence.proto.organisation.OrganisationSearchRespPb other) {
       if (other == com.tiwari.studence.proto.organisation.OrganisationSearchRespPb.getDefaultInstance()) return this;
-      if (other.hasDbInfo()) {
-        mergeDbInfo(other.getDbInfo());
+      if (other.hasSummary()) {
+        mergeSummary(other.getSummary());
       }
-      if (!other.getName().isEmpty()) {
-        name_ = other.name_;
-        bitField0_ |= 0x00000002;
-        onChanged();
+      if (resultsBuilder_ == null) {
+        if (!other.results_.isEmpty()) {
+          if (results_.isEmpty()) {
+            results_ = other.results_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureResultsIsMutable();
+            results_.addAll(other.results_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.results_.isEmpty()) {
+          if (resultsBuilder_.isEmpty()) {
+            resultsBuilder_.dispose();
+            resultsBuilder_ = null;
+            results_ = other.results_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+            resultsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getResultsFieldBuilder() : null;
+          } else {
+            resultsBuilder_.addAllMessages(other.results_);
+          }
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -442,14 +484,22 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               input.readMessage(
-                  getDbInfoFieldBuilder().getBuilder(),
+                  getSummaryFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
-              name_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+              com.tiwari.studence.proto.organisation.OrganisationPb m =
+                  input.readMessage(
+                      com.tiwari.studence.proto.organisation.OrganisationPb.parser(),
+                      extensionRegistry);
+              if (resultsBuilder_ == null) {
+                ensureResultsIsMutable();
+                results_.add(m);
+              } else {
+                resultsBuilder_.addMessage(m);
+              }
               break;
             } // case 18
             default: {
@@ -469,195 +519,363 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.tiwari.studence.proto.entity.EntityPb dbInfo_;
+    private com.tiwari.studence.proto.summary.SummaryPb summary_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tiwari.studence.proto.entity.EntityPb, com.tiwari.studence.proto.entity.EntityPb.Builder, com.tiwari.studence.proto.entity.EntityPbOrBuilder> dbInfoBuilder_;
+        com.tiwari.studence.proto.summary.SummaryPb, com.tiwari.studence.proto.summary.SummaryPb.Builder, com.tiwari.studence.proto.summary.SummaryPbOrBuilder> summaryBuilder_;
     /**
-     * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
-     * @return Whether the dbInfo field is set.
+     * <code>.com.tiwari.studence.proto.summary.SummaryPb summary = 1;</code>
+     * @return Whether the summary field is set.
      */
-    public boolean hasDbInfo() {
+    public boolean hasSummary() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
-     * @return The dbInfo.
+     * <code>.com.tiwari.studence.proto.summary.SummaryPb summary = 1;</code>
+     * @return The summary.
      */
-    public com.tiwari.studence.proto.entity.EntityPb getDbInfo() {
-      if (dbInfoBuilder_ == null) {
-        return dbInfo_ == null ? com.tiwari.studence.proto.entity.EntityPb.getDefaultInstance() : dbInfo_;
+    public com.tiwari.studence.proto.summary.SummaryPb getSummary() {
+      if (summaryBuilder_ == null) {
+        return summary_ == null ? com.tiwari.studence.proto.summary.SummaryPb.getDefaultInstance() : summary_;
       } else {
-        return dbInfoBuilder_.getMessage();
+        return summaryBuilder_.getMessage();
       }
     }
     /**
-     * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
+     * <code>.com.tiwari.studence.proto.summary.SummaryPb summary = 1;</code>
      */
-    public Builder setDbInfo(com.tiwari.studence.proto.entity.EntityPb value) {
-      if (dbInfoBuilder_ == null) {
+    public Builder setSummary(com.tiwari.studence.proto.summary.SummaryPb value) {
+      if (summaryBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        dbInfo_ = value;
+        summary_ = value;
       } else {
-        dbInfoBuilder_.setMessage(value);
+        summaryBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
+     * <code>.com.tiwari.studence.proto.summary.SummaryPb summary = 1;</code>
      */
-    public Builder setDbInfo(
-        com.tiwari.studence.proto.entity.EntityPb.Builder builderForValue) {
-      if (dbInfoBuilder_ == null) {
-        dbInfo_ = builderForValue.build();
+    public Builder setSummary(
+        com.tiwari.studence.proto.summary.SummaryPb.Builder builderForValue) {
+      if (summaryBuilder_ == null) {
+        summary_ = builderForValue.build();
       } else {
-        dbInfoBuilder_.setMessage(builderForValue.build());
+        summaryBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
+     * <code>.com.tiwari.studence.proto.summary.SummaryPb summary = 1;</code>
      */
-    public Builder mergeDbInfo(com.tiwari.studence.proto.entity.EntityPb value) {
-      if (dbInfoBuilder_ == null) {
+    public Builder mergeSummary(com.tiwari.studence.proto.summary.SummaryPb value) {
+      if (summaryBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
-          dbInfo_ != null &&
-          dbInfo_ != com.tiwari.studence.proto.entity.EntityPb.getDefaultInstance()) {
-          getDbInfoBuilder().mergeFrom(value);
+          summary_ != null &&
+          summary_ != com.tiwari.studence.proto.summary.SummaryPb.getDefaultInstance()) {
+          getSummaryBuilder().mergeFrom(value);
         } else {
-          dbInfo_ = value;
+          summary_ = value;
         }
       } else {
-        dbInfoBuilder_.mergeFrom(value);
+        summaryBuilder_.mergeFrom(value);
       }
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
+     * <code>.com.tiwari.studence.proto.summary.SummaryPb summary = 1;</code>
      */
-    public Builder clearDbInfo() {
+    public Builder clearSummary() {
       bitField0_ = (bitField0_ & ~0x00000001);
-      dbInfo_ = null;
-      if (dbInfoBuilder_ != null) {
-        dbInfoBuilder_.dispose();
-        dbInfoBuilder_ = null;
+      summary_ = null;
+      if (summaryBuilder_ != null) {
+        summaryBuilder_.dispose();
+        summaryBuilder_ = null;
       }
       onChanged();
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
+     * <code>.com.tiwari.studence.proto.summary.SummaryPb summary = 1;</code>
      */
-    public com.tiwari.studence.proto.entity.EntityPb.Builder getDbInfoBuilder() {
+    public com.tiwari.studence.proto.summary.SummaryPb.Builder getSummaryBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
-      return getDbInfoFieldBuilder().getBuilder();
+      return getSummaryFieldBuilder().getBuilder();
     }
     /**
-     * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
+     * <code>.com.tiwari.studence.proto.summary.SummaryPb summary = 1;</code>
      */
-    public com.tiwari.studence.proto.entity.EntityPbOrBuilder getDbInfoOrBuilder() {
-      if (dbInfoBuilder_ != null) {
-        return dbInfoBuilder_.getMessageOrBuilder();
+    public com.tiwari.studence.proto.summary.SummaryPbOrBuilder getSummaryOrBuilder() {
+      if (summaryBuilder_ != null) {
+        return summaryBuilder_.getMessageOrBuilder();
       } else {
-        return dbInfo_ == null ?
-            com.tiwari.studence.proto.entity.EntityPb.getDefaultInstance() : dbInfo_;
+        return summary_ == null ?
+            com.tiwari.studence.proto.summary.SummaryPb.getDefaultInstance() : summary_;
       }
     }
     /**
-     * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
+     * <code>.com.tiwari.studence.proto.summary.SummaryPb summary = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tiwari.studence.proto.entity.EntityPb, com.tiwari.studence.proto.entity.EntityPb.Builder, com.tiwari.studence.proto.entity.EntityPbOrBuilder> 
-        getDbInfoFieldBuilder() {
-      if (dbInfoBuilder_ == null) {
-        dbInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tiwari.studence.proto.entity.EntityPb, com.tiwari.studence.proto.entity.EntityPb.Builder, com.tiwari.studence.proto.entity.EntityPbOrBuilder>(
-                getDbInfo(),
+        com.tiwari.studence.proto.summary.SummaryPb, com.tiwari.studence.proto.summary.SummaryPb.Builder, com.tiwari.studence.proto.summary.SummaryPbOrBuilder> 
+        getSummaryFieldBuilder() {
+      if (summaryBuilder_ == null) {
+        summaryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tiwari.studence.proto.summary.SummaryPb, com.tiwari.studence.proto.summary.SummaryPb.Builder, com.tiwari.studence.proto.summary.SummaryPbOrBuilder>(
+                getSummary(),
                 getParentForChildren(),
                 isClean());
-        dbInfo_ = null;
+        summary_ = null;
       }
-      return dbInfoBuilder_;
+      return summaryBuilder_;
     }
 
-    private java.lang.Object name_ = "";
+    private java.util.List<com.tiwari.studence.proto.organisation.OrganisationPb> results_ =
+      java.util.Collections.emptyList();
+    private void ensureResultsIsMutable() {
+      if (!((bitField0_ & 0x00000002) != 0)) {
+        results_ = new java.util.ArrayList<com.tiwari.studence.proto.organisation.OrganisationPb>(results_);
+        bitField0_ |= 0x00000002;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tiwari.studence.proto.organisation.OrganisationPb, com.tiwari.studence.proto.organisation.OrganisationPb.Builder, com.tiwari.studence.proto.organisation.OrganisationPbOrBuilder> resultsBuilder_;
+
     /**
-     * <code>string name = 2;</code>
-     * @return The name.
+     * <code>repeated .com.tiwari.studence.proto.organisation.OrganisationPb results = 2;</code>
      */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
+    public java.util.List<com.tiwari.studence.proto.organisation.OrganisationPb> getResultsList() {
+      if (resultsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(results_);
       } else {
-        return (java.lang.String) ref;
+        return resultsBuilder_.getMessageList();
       }
     }
     /**
-     * <code>string name = 2;</code>
-     * @return The bytes for name.
+     * <code>repeated .com.tiwari.studence.proto.organisation.OrganisationPb results = 2;</code>
      */
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
+    public int getResultsCount() {
+      if (resultsBuilder_ == null) {
+        return results_.size();
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return resultsBuilder_.getCount();
       }
     }
     /**
-     * <code>string name = 2;</code>
-     * @param value The name to set.
-     * @return This builder for chaining.
+     * <code>repeated .com.tiwari.studence.proto.organisation.OrganisationPb results = 2;</code>
      */
-    public Builder setName(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      name_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
+    public com.tiwari.studence.proto.organisation.OrganisationPb getResults(int index) {
+      if (resultsBuilder_ == null) {
+        return results_.get(index);
+      } else {
+        return resultsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .com.tiwari.studence.proto.organisation.OrganisationPb results = 2;</code>
+     */
+    public Builder setResults(
+        int index, com.tiwari.studence.proto.organisation.OrganisationPb value) {
+      if (resultsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureResultsIsMutable();
+        results_.set(index, value);
+        onChanged();
+      } else {
+        resultsBuilder_.setMessage(index, value);
+      }
       return this;
     }
     /**
-     * <code>string name = 2;</code>
-     * @return This builder for chaining.
+     * <code>repeated .com.tiwari.studence.proto.organisation.OrganisationPb results = 2;</code>
      */
-    public Builder clearName() {
-      name_ = getDefaultInstance().getName();
-      bitField0_ = (bitField0_ & ~0x00000002);
-      onChanged();
+    public Builder setResults(
+        int index, com.tiwari.studence.proto.organisation.OrganisationPb.Builder builderForValue) {
+      if (resultsBuilder_ == null) {
+        ensureResultsIsMutable();
+        results_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        resultsBuilder_.setMessage(index, builderForValue.build());
+      }
       return this;
     }
     /**
-     * <code>string name = 2;</code>
-     * @param value The bytes for name to set.
-     * @return This builder for chaining.
+     * <code>repeated .com.tiwari.studence.proto.organisation.OrganisationPb results = 2;</code>
      */
-    public Builder setNameBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      name_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
+    public Builder addResults(com.tiwari.studence.proto.organisation.OrganisationPb value) {
+      if (resultsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureResultsIsMutable();
+        results_.add(value);
+        onChanged();
+      } else {
+        resultsBuilder_.addMessage(value);
+      }
       return this;
+    }
+    /**
+     * <code>repeated .com.tiwari.studence.proto.organisation.OrganisationPb results = 2;</code>
+     */
+    public Builder addResults(
+        int index, com.tiwari.studence.proto.organisation.OrganisationPb value) {
+      if (resultsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureResultsIsMutable();
+        results_.add(index, value);
+        onChanged();
+      } else {
+        resultsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .com.tiwari.studence.proto.organisation.OrganisationPb results = 2;</code>
+     */
+    public Builder addResults(
+        com.tiwari.studence.proto.organisation.OrganisationPb.Builder builderForValue) {
+      if (resultsBuilder_ == null) {
+        ensureResultsIsMutable();
+        results_.add(builderForValue.build());
+        onChanged();
+      } else {
+        resultsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .com.tiwari.studence.proto.organisation.OrganisationPb results = 2;</code>
+     */
+    public Builder addResults(
+        int index, com.tiwari.studence.proto.organisation.OrganisationPb.Builder builderForValue) {
+      if (resultsBuilder_ == null) {
+        ensureResultsIsMutable();
+        results_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        resultsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .com.tiwari.studence.proto.organisation.OrganisationPb results = 2;</code>
+     */
+    public Builder addAllResults(
+        java.lang.Iterable<? extends com.tiwari.studence.proto.organisation.OrganisationPb> values) {
+      if (resultsBuilder_ == null) {
+        ensureResultsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, results_);
+        onChanged();
+      } else {
+        resultsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .com.tiwari.studence.proto.organisation.OrganisationPb results = 2;</code>
+     */
+    public Builder clearResults() {
+      if (resultsBuilder_ == null) {
+        results_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+      } else {
+        resultsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .com.tiwari.studence.proto.organisation.OrganisationPb results = 2;</code>
+     */
+    public Builder removeResults(int index) {
+      if (resultsBuilder_ == null) {
+        ensureResultsIsMutable();
+        results_.remove(index);
+        onChanged();
+      } else {
+        resultsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .com.tiwari.studence.proto.organisation.OrganisationPb results = 2;</code>
+     */
+    public com.tiwari.studence.proto.organisation.OrganisationPb.Builder getResultsBuilder(
+        int index) {
+      return getResultsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .com.tiwari.studence.proto.organisation.OrganisationPb results = 2;</code>
+     */
+    public com.tiwari.studence.proto.organisation.OrganisationPbOrBuilder getResultsOrBuilder(
+        int index) {
+      if (resultsBuilder_ == null) {
+        return results_.get(index);  } else {
+        return resultsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .com.tiwari.studence.proto.organisation.OrganisationPb results = 2;</code>
+     */
+    public java.util.List<? extends com.tiwari.studence.proto.organisation.OrganisationPbOrBuilder> 
+         getResultsOrBuilderList() {
+      if (resultsBuilder_ != null) {
+        return resultsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(results_);
+      }
+    }
+    /**
+     * <code>repeated .com.tiwari.studence.proto.organisation.OrganisationPb results = 2;</code>
+     */
+    public com.tiwari.studence.proto.organisation.OrganisationPb.Builder addResultsBuilder() {
+      return getResultsFieldBuilder().addBuilder(
+          com.tiwari.studence.proto.organisation.OrganisationPb.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .com.tiwari.studence.proto.organisation.OrganisationPb results = 2;</code>
+     */
+    public com.tiwari.studence.proto.organisation.OrganisationPb.Builder addResultsBuilder(
+        int index) {
+      return getResultsFieldBuilder().addBuilder(
+          index, com.tiwari.studence.proto.organisation.OrganisationPb.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .com.tiwari.studence.proto.organisation.OrganisationPb results = 2;</code>
+     */
+    public java.util.List<com.tiwari.studence.proto.organisation.OrganisationPb.Builder> 
+         getResultsBuilderList() {
+      return getResultsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tiwari.studence.proto.organisation.OrganisationPb, com.tiwari.studence.proto.organisation.OrganisationPb.Builder, com.tiwari.studence.proto.organisation.OrganisationPbOrBuilder> 
+        getResultsFieldBuilder() {
+      if (resultsBuilder_ == null) {
+        resultsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tiwari.studence.proto.organisation.OrganisationPb, com.tiwari.studence.proto.organisation.OrganisationPb.Builder, com.tiwari.studence.proto.organisation.OrganisationPbOrBuilder>(
+                results_,
+                ((bitField0_ & 0x00000002) != 0),
+                getParentForChildren(),
+                isClean());
+        results_ = null;
+      }
+      return resultsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

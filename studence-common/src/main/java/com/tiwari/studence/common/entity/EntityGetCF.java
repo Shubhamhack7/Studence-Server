@@ -7,16 +7,15 @@ import com.google.protobuf.GeneratedMessageV3;
 import com.tiwari.studence.common.async.AControlFlow;
 import com.tiwari.studence.common.async.IFuture;
 import com.tiwari.studence.common.convertor.IConvertor;
-import com.tiwari.studence.common.indexer.AEntityIndexer;
 import com.tiwari.studence.common.interfaces.IDynamoGetEntityTable;
-import com.tiwari.studence.common.prtovider.IPbBuilderProvider;
+import com.tiwari.studence.common.provider.IPbBuilderProvider;
 import com.tiwari.studence.common.services.interfaces.ITableNameProvider;
 import com.tiwari.studence.util.exception.ErrorException;
 import com.tiwari.studence.util.exception.LoggedRuntimeException;
 
 import software.amazon.awssdk.services.dynamodb.model.AttributeValue;
 
-public class EntityGetCF<P extends GeneratedMessageV3, BU extends GeneratedMessageV3.Builder, BP extends IPbBuilderProvider<P, BU>, C extends IConvertor<P>, T extends ITableNameProvider>
+public class EntityGetCF<P extends GeneratedMessageV3,Lresp extends GeneratedMessageV3, BU extends GeneratedMessageV3.Builder, BP extends IPbBuilderProvider<P, BU>, C extends IConvertor<P,Lresp>, T extends ITableNameProvider>
         extends AControlFlow<EntityGetCF.State, P, ErrorException> {
 
   private C m_convertor;

@@ -111,8 +111,8 @@ interface IReqTypeHelper {
 	    public boolean isReqOfType(HttpServletRequest req) {
 	      String pathInfo = req.getServletPath();
 	      String methodName = req.getMethod();
-	      return pathInfo != null && pathInfo.length() > 0 && pathInfo.charAt(0) == '/'
-	               /*!GET_LIST.isReqOfType(req)&& !GET_BY_EXTERNAL_ID.isReqOfType(req)
+	      return pathInfo != null && pathInfo.length() > 0 && pathInfo.charAt(0) == '/' &&
+	               !GET_LIST.isReqOfType(req)/*&& !GET_BY_EXTERNAL_ID.isReqOfType(req)
 	              && !GET_OR_CREATE_BY_EXTERNALID.isReqOfType(req)*/ && HttpRequestMethodEnum
 	                      .getHttpRequestMethodEnum(methodName) == HttpRequestMethodEnum.GET;
 	    }
@@ -154,7 +154,7 @@ interface IReqTypeHelper {
 
 	    @Override
 	    public String getReqData(HttpServletRequest req) {
-	      String query = req.getParameter("query");
+	      String query = req.getRequestURI().split("=")[1];
 	      if (query == null || query.equals("")) {
 	        query = "{}";
 	      }
@@ -163,9 +163,9 @@ interface IReqTypeHelper {
 
 	    @Override
 	    public boolean isReqOfType(HttpServletRequest req) {
-	      String pathInfo = req.getPathInfo();
+	      String pathInfo = req.getServletPath();
 	      String methodName = req.getMethod();
-	      return (pathInfo == null || pathInfo.equals("/") || pathInfo.contains("/cache"))
+	      return (pathInfo == null || pathInfo.equals("/") || pathInfo.contains("/cache") || pathInfo.contains("/query"))
 	              && !GET_OR_CREATE_BY_EXTERNALID.isReqOfType(req) && HttpRequestMethodEnum
 	                      .getHttpRequestMethodEnum(methodName) == HttpRequestMethodEnum.GET;
 	    }

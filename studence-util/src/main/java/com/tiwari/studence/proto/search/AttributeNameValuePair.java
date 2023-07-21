@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     name_ = "";
     stringValue_ = "";
     binaryValue_ = com.google.protobuf.ByteString.EMPTY;
+    expression_ = "";
     attributeNameAlias_ = "";
     attributeValueAlias_ = "";
   }
@@ -178,11 +179,50 @@ private static final long serialVersionUID = 0L;
     return binaryValue_;
   }
 
-  public static final int ATTRIBUTENAMEALIAS_FIELD_NUMBER = 7;
+  public static final int EXPRESSION_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object expression_ = "";
+  /**
+   * <code>string expression = 7;</code>
+   * @return The expression.
+   */
+  @java.lang.Override
+  public java.lang.String getExpression() {
+    java.lang.Object ref = expression_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      expression_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string expression = 7;</code>
+   * @return The bytes for expression.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getExpressionBytes() {
+    java.lang.Object ref = expression_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      expression_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int ATTRIBUTENAMEALIAS_FIELD_NUMBER = 8;
   @SuppressWarnings("serial")
   private volatile java.lang.Object attributeNameAlias_ = "";
   /**
-   * <code>string attributeNameAlias = 7;</code>
+   * <code>string attributeNameAlias = 8;</code>
    * @return The attributeNameAlias.
    */
   @java.lang.Override
@@ -199,7 +239,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string attributeNameAlias = 7;</code>
+   * <code>string attributeNameAlias = 8;</code>
    * @return The bytes for attributeNameAlias.
    */
   @java.lang.Override
@@ -217,11 +257,11 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int ATTRIBUTEVALUEALIAS_FIELD_NUMBER = 8;
+  public static final int ATTRIBUTEVALUEALIAS_FIELD_NUMBER = 9;
   @SuppressWarnings("serial")
   private volatile java.lang.Object attributeValueAlias_ = "";
   /**
-   * <code>string attributeValueAlias = 8;</code>
+   * <code>string attributeValueAlias = 9;</code>
    * @return The attributeValueAlias.
    */
   @java.lang.Override
@@ -238,7 +278,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string attributeValueAlias = 8;</code>
+   * <code>string attributeValueAlias = 9;</code>
    * @return The bytes for attributeValueAlias.
    */
   @java.lang.Override
@@ -288,11 +328,14 @@ private static final long serialVersionUID = 0L;
     if (!binaryValue_.isEmpty()) {
       output.writeBytes(6, binaryValue_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(expression_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, expression_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(attributeNameAlias_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, attributeNameAlias_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, attributeNameAlias_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(attributeValueAlias_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, attributeValueAlias_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 9, attributeValueAlias_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -325,11 +368,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBytesSize(6, binaryValue_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(expression_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, expression_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(attributeNameAlias_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, attributeNameAlias_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, attributeNameAlias_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(attributeValueAlias_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, attributeValueAlias_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, attributeValueAlias_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -358,6 +404,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getStringValue())) return false;
     if (!getBinaryValue()
         .equals(other.getBinaryValue())) return false;
+    if (!getExpression()
+        .equals(other.getExpression())) return false;
     if (!getAttributeNameAlias()
         .equals(other.getAttributeNameAlias())) return false;
     if (!getAttributeValueAlias()
@@ -386,6 +434,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getStringValue().hashCode();
     hash = (37 * hash) + BINARYVALUE_FIELD_NUMBER;
     hash = (53 * hash) + getBinaryValue().hashCode();
+    hash = (37 * hash) + EXPRESSION_FIELD_NUMBER;
+    hash = (53 * hash) + getExpression().hashCode();
     hash = (37 * hash) + ATTRIBUTENAMEALIAS_FIELD_NUMBER;
     hash = (53 * hash) + getAttributeNameAlias().hashCode();
     hash = (37 * hash) + ATTRIBUTEVALUEALIAS_FIELD_NUMBER;
@@ -525,6 +575,7 @@ private static final long serialVersionUID = 0L;
       floatValue_ = 0F;
       stringValue_ = "";
       binaryValue_ = com.google.protobuf.ByteString.EMPTY;
+      expression_ = "";
       attributeNameAlias_ = "";
       attributeValueAlias_ = "";
       return this;
@@ -579,9 +630,12 @@ private static final long serialVersionUID = 0L;
         result.binaryValue_ = binaryValue_;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.attributeNameAlias_ = attributeNameAlias_;
+        result.expression_ = expression_;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.attributeNameAlias_ = attributeNameAlias_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
         result.attributeValueAlias_ = attributeValueAlias_;
       }
     }
@@ -652,14 +706,19 @@ private static final long serialVersionUID = 0L;
       if (other.getBinaryValue() != com.google.protobuf.ByteString.EMPTY) {
         setBinaryValue(other.getBinaryValue());
       }
+      if (!other.getExpression().isEmpty()) {
+        expression_ = other.expression_;
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
       if (!other.getAttributeNameAlias().isEmpty()) {
         attributeNameAlias_ = other.attributeNameAlias_;
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       if (!other.getAttributeValueAlias().isEmpty()) {
         attributeValueAlias_ = other.attributeValueAlias_;
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000100;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -719,15 +778,20 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 50
             case 58: {
-              attributeNameAlias_ = input.readStringRequireUtf8();
+              expression_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000040;
               break;
             } // case 58
             case 66: {
-              attributeValueAlias_ = input.readStringRequireUtf8();
+              attributeNameAlias_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000080;
               break;
             } // case 66
+            case 74: {
+              attributeValueAlias_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 74
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1038,9 +1102,81 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private java.lang.Object expression_ = "";
+    /**
+     * <code>string expression = 7;</code>
+     * @return The expression.
+     */
+    public java.lang.String getExpression() {
+      java.lang.Object ref = expression_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        expression_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string expression = 7;</code>
+     * @return The bytes for expression.
+     */
+    public com.google.protobuf.ByteString
+        getExpressionBytes() {
+      java.lang.Object ref = expression_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        expression_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string expression = 7;</code>
+     * @param value The expression to set.
+     * @return This builder for chaining.
+     */
+    public Builder setExpression(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      expression_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string expression = 7;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearExpression() {
+      expression_ = getDefaultInstance().getExpression();
+      bitField0_ = (bitField0_ & ~0x00000040);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string expression = 7;</code>
+     * @param value The bytes for expression to set.
+     * @return This builder for chaining.
+     */
+    public Builder setExpressionBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      expression_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+
     private java.lang.Object attributeNameAlias_ = "";
     /**
-     * <code>string attributeNameAlias = 7;</code>
+     * <code>string attributeNameAlias = 8;</code>
      * @return The attributeNameAlias.
      */
     public java.lang.String getAttributeNameAlias() {
@@ -1056,7 +1192,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string attributeNameAlias = 7;</code>
+     * <code>string attributeNameAlias = 8;</code>
      * @return The bytes for attributeNameAlias.
      */
     public com.google.protobuf.ByteString
@@ -1073,7 +1209,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string attributeNameAlias = 7;</code>
+     * <code>string attributeNameAlias = 8;</code>
      * @param value The attributeNameAlias to set.
      * @return This builder for chaining.
      */
@@ -1081,22 +1217,22 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       attributeNameAlias_ = value;
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
     /**
-     * <code>string attributeNameAlias = 7;</code>
+     * <code>string attributeNameAlias = 8;</code>
      * @return This builder for chaining.
      */
     public Builder clearAttributeNameAlias() {
       attributeNameAlias_ = getDefaultInstance().getAttributeNameAlias();
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
     /**
-     * <code>string attributeNameAlias = 7;</code>
+     * <code>string attributeNameAlias = 8;</code>
      * @param value The bytes for attributeNameAlias to set.
      * @return This builder for chaining.
      */
@@ -1105,14 +1241,14 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       attributeNameAlias_ = value;
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
 
     private java.lang.Object attributeValueAlias_ = "";
     /**
-     * <code>string attributeValueAlias = 8;</code>
+     * <code>string attributeValueAlias = 9;</code>
      * @return The attributeValueAlias.
      */
     public java.lang.String getAttributeValueAlias() {
@@ -1128,7 +1264,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string attributeValueAlias = 8;</code>
+     * <code>string attributeValueAlias = 9;</code>
      * @return The bytes for attributeValueAlias.
      */
     public com.google.protobuf.ByteString
@@ -1145,7 +1281,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string attributeValueAlias = 8;</code>
+     * <code>string attributeValueAlias = 9;</code>
      * @param value The attributeValueAlias to set.
      * @return This builder for chaining.
      */
@@ -1153,22 +1289,22 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       attributeValueAlias_ = value;
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
     /**
-     * <code>string attributeValueAlias = 8;</code>
+     * <code>string attributeValueAlias = 9;</code>
      * @return This builder for chaining.
      */
     public Builder clearAttributeValueAlias() {
       attributeValueAlias_ = getDefaultInstance().getAttributeValueAlias();
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000100);
       onChanged();
       return this;
     }
     /**
-     * <code>string attributeValueAlias = 8;</code>
+     * <code>string attributeValueAlias = 9;</code>
      * @param value The bytes for attributeValueAlias to set.
      * @return This builder for chaining.
      */
@@ -1177,7 +1313,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       attributeValueAlias_ = value;
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }

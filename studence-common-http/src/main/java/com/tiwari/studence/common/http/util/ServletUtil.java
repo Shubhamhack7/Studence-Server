@@ -5,10 +5,9 @@ import java.net.URL;
 import java.net.URLDecoder;
 import java.util.logging.Logger;
 
+import com.tiwari.studence.common.http.servlet.BaseHttpServlet;
 import com.tiwari.studence.util.exception.Exceptions;
-
-import javax.servlet.http.HttpServletRequest;
-
+import jakarta.servlet.http.HttpServletRequest;
 
 public class ServletUtil {
 	  private static final Logger LOGGER = Logger.getLogger(ServletUtil.class.getCanonicalName());
@@ -26,6 +25,7 @@ public class ServletUtil {
 	    LOGGER.info("The Request QueryString " + req.getQueryString());
 	    LOGGER.info("The Request RemoteAddr " + req.getRemoteAddr());
 	    LOGGER.info("The RequestURL " + req.getRequestURL());
+			LOGGER.info("The Request URI " + req.getRequestURI());
 
 	  }
 
@@ -53,4 +53,9 @@ public class ServletUtil {
 	    LOGGER.info("Url Authority " + url.getRef());
 	    LOGGER.info("Url Authority " + url.getUserInfo());
 	  }
+
+	public static void logRequest(HttpServletRequest req, BaseHttpServlet.ReqMethod reqType) {
+		RequestLogger.logRequest(req);
+		LOGGER.info("The Request Method " + reqType.name());
 	}
+}

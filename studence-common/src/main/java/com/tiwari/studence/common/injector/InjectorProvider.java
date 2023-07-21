@@ -8,6 +8,7 @@ import com.google.inject.Injector;
 import com.tiwari.studence.common.module.GetAndUpdateEntityIdModule;
 import com.tiwari.studence.common.module.GetItemFroomDynamoTableModule;
 import com.tiwari.studence.common.module.PutItemDynamoTableModule;
+import com.tiwari.studence.common.module.SearchItemDynamoTableModule;
 import com.tiwari.studence.dynamodb.database.module.CreateDynamoDbTableModule;
 import com.tiwari.studence.util.collect.Lists;
 import com.tiwari.studence.util.module.ServerListnerModule;
@@ -31,6 +32,7 @@ public class InjectorProvider {
     modulesList.add(new PutItemDynamoTableModule());
     modulesList.add(new GetAndUpdateEntityIdModule());
     modulesList.add(new GetItemFroomDynamoTableModule());
+    modulesList.add(new SearchItemDynamoTableModule());
     return modulesList;
   }
 

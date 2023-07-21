@@ -8,27 +8,12 @@ public interface OrganisationSearchReqPbOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
-   * @return Whether the dbInfo field is set.
-   */
-  boolean hasDbInfo();
-  /**
-   * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
-   * @return The dbInfo.
-   */
-  com.tiwari.studence.proto.entity.EntityPb getDbInfo();
-  /**
-   * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
-   */
-  com.tiwari.studence.proto.entity.EntityPbOrBuilder getDbInfoOrBuilder();
-
-  /**
-   * <code>string name = 2;</code>
+   * <code>string name = 1;</code>
    * @return The name.
    */
   java.lang.String getName();
   /**
-   * <code>string name = 2;</code>
+   * <code>string name = 1;</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString

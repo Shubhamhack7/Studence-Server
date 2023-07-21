@@ -19,55 +19,25 @@ public interface SearchPbOrBuilder extends
   com.tiwari.studence.proto.search.ComparisonOperatorEnum getType();
 
   /**
-   * <code>.com.tiwari.studence.proto.search.AttributeNameValuePair attributeFirst = 2;</code>
-   * @return Whether the attributeFirst field is set.
-   */
-  boolean hasAttributeFirst();
-  /**
-   * <code>.com.tiwari.studence.proto.search.AttributeNameValuePair attributeFirst = 2;</code>
-   * @return The attributeFirst.
-   */
-  com.tiwari.studence.proto.search.AttributeNameValuePair getAttributeFirst();
-  /**
-   * <code>.com.tiwari.studence.proto.search.AttributeNameValuePair attributeFirst = 2;</code>
-   */
-  com.tiwari.studence.proto.search.AttributeNameValuePairOrBuilder getAttributeFirstOrBuilder();
-
-  /**
-   * <code>.com.tiwari.studence.proto.search.AttributeNameValuePair attributeSecond = 3;</code>
-   * @return Whether the attributeSecond field is set.
-   */
-  boolean hasAttributeSecond();
-  /**
-   * <code>.com.tiwari.studence.proto.search.AttributeNameValuePair attributeSecond = 3;</code>
-   * @return The attributeSecond.
-   */
-  com.tiwari.studence.proto.search.AttributeNameValuePair getAttributeSecond();
-  /**
-   * <code>.com.tiwari.studence.proto.search.AttributeNameValuePair attributeSecond = 3;</code>
-   */
-  com.tiwari.studence.proto.search.AttributeNameValuePairOrBuilder getAttributeSecondOrBuilder();
-
-  /**
-   * <code>repeated .com.tiwari.studence.proto.search.AttributeNameValuePair attributes = 4;</code>
+   * <code>repeated .com.tiwari.studence.proto.search.AttributeNameValuePair attributes = 2;</code>
    */
   java.util.List<com.tiwari.studence.proto.search.AttributeNameValuePair> 
       getAttributesList();
   /**
-   * <code>repeated .com.tiwari.studence.proto.search.AttributeNameValuePair attributes = 4;</code>
+   * <code>repeated .com.tiwari.studence.proto.search.AttributeNameValuePair attributes = 2;</code>
    */
   com.tiwari.studence.proto.search.AttributeNameValuePair getAttributes(int index);
   /**
-   * <code>repeated .com.tiwari.studence.proto.search.AttributeNameValuePair attributes = 4;</code>
+   * <code>repeated .com.tiwari.studence.proto.search.AttributeNameValuePair attributes = 2;</code>
    */
   int getAttributesCount();
   /**
-   * <code>repeated .com.tiwari.studence.proto.search.AttributeNameValuePair attributes = 4;</code>
+   * <code>repeated .com.tiwari.studence.proto.search.AttributeNameValuePair attributes = 2;</code>
    */
   java.util.List<? extends com.tiwari.studence.proto.search.AttributeNameValuePairOrBuilder> 
       getAttributesOrBuilderList();
   /**
-   * <code>repeated .com.tiwari.studence.proto.search.AttributeNameValuePair attributes = 4;</code>
+   * <code>repeated .com.tiwari.studence.proto.search.AttributeNameValuePair attributes = 2;</code>
    */
   com.tiwari.studence.proto.search.AttributeNameValuePairOrBuilder getAttributesOrBuilder(
       int index);
