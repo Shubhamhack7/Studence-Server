@@ -94,7 +94,7 @@ public enum TimeProfileDimensionEnum
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tiwari.studence.proto.time.Time.getDescriptor().getEnumTypes().get(0);
+    return com.tiwari.studence.proto.time.Time.getDescriptor().getEnumTypes().get(1);
   }
 
   private static final TimeProfileDimensionEnum[] VALUES = values();

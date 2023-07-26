@@ -4,6 +4,7 @@ syntax = "proto3";
 
 package com.tiwari.studence.proto.genericRef;
 
+import "dataTypesPb.proto";
 
 option java_multiple_files = true;
 option java_generate_equals_and_hash = true;
@@ -15,4 +16,9 @@ message GenericRefPb{
   string name =2;
 }
 
+message GenericRefPbWithBoolean{
+  string dbInfoId = 1;
+  string name =2;
+  com.tiwari.studence.proto.datatypes.BooleanPb isActive =3;
+}
 

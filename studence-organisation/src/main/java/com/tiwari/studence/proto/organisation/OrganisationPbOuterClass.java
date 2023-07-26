@@ -20,6 +20,11 @@ public final class OrganisationPbOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_tiwari_studence_proto_organisation_OrganisationPb_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tiwari_studence_proto_organisation_OrganisationRefPb_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tiwari_studence_proto_organisation_OrganisationRefPb_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_tiwari_studence_proto_organisation_OrganisationSearchReqPb_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -46,13 +51,14 @@ public final class OrganisationPbOuterClass {
       "ity.EntityPb\0224\n\004name\030\002 \001(\0132&.com.tiwari." +
       "studence.proto.name.NamePb\022R\n\016contactDet" +
       "ails\030\003 \001(\0132:.com.tiwari.studence.proto.c" +
-      "ontactDetails.ContactDetailsPb\"\'\n\027Organi" +
-      "sationSearchReqPb\022\014\n\004name\030\001 \001(\t\"\242\001\n\030Orga" +
-      "nisationSearchRespPb\022=\n\007summary\030\001 \001(\0132,." +
-      "com.tiwari.studence.proto.summary.Summar" +
-      "yPb\022G\n\007results\030\002 \003(\01326.com.tiwari.studen" +
-      "ce.proto.organisation.OrganisationPbB\005P\001" +
-      "\240\001\001b\006proto3"
+      "ontactDetails.ContactDetailsPb\"3\n\021Organi" +
+      "sationRefPb\022\020\n\010dbInfoId\030\001 \001(\t\022\014\n\004name\030\002 " +
+      "\001(\t\"\'\n\027OrganisationSearchReqPb\022\014\n\004name\030\001" +
+      " \001(\t\"\242\001\n\030OrganisationSearchRespPb\022=\n\007sum" +
+      "mary\030\001 \001(\0132,.com.tiwari.studence.proto.s" +
+      "ummary.SummaryPb\022G\n\007results\030\002 \003(\01326.com." +
+      "tiwari.studence.proto.organisation.Organ" +
+      "isationPbB\005P\001\240\001\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -68,14 +74,20 @@ public final class OrganisationPbOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tiwari_studence_proto_organisation_OrganisationPb_descriptor,
         new java.lang.String[] { "DbInfo", "Name", "ContactDetails", });
-    internal_static_com_tiwari_studence_proto_organisation_OrganisationSearchReqPb_descriptor =
+    internal_static_com_tiwari_studence_proto_organisation_OrganisationRefPb_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_com_tiwari_studence_proto_organisation_OrganisationRefPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_organisation_OrganisationRefPb_descriptor,
+        new java.lang.String[] { "DbInfoId", "Name", });
+    internal_static_com_tiwari_studence_proto_organisation_OrganisationSearchReqPb_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_com_tiwari_studence_proto_organisation_OrganisationSearchReqPb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tiwari_studence_proto_organisation_OrganisationSearchReqPb_descriptor,
         new java.lang.String[] { "Name", });
     internal_static_com_tiwari_studence_proto_organisation_OrganisationSearchRespPb_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_com_tiwari_studence_proto_organisation_OrganisationSearchRespPb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tiwari_studence_proto_organisation_OrganisationSearchRespPb_descriptor,

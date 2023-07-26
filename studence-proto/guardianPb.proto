@@ -1,0 +1,40 @@
+// Copyright (c) 2022, All Right Reserved, Shubham Tiwari
+
+syntax = "proto3";
+
+package com.tiwari.studence.proto.guardian;
+
+import "entityPb.proto";
+import "namePb.proto";
+import "contactDetailsPb.proto";
+import "summaryPb.proto";
+
+option java_multiple_files = true;
+option java_generate_equals_and_hash = true;
+
+//The following protos are reserved 12,13,14,15,16.You shd not use them
+
+message GuardianPb{
+  com.tiwari.studence.proto.entity.EntityPb dbInfo =1;
+  com.tiwari.studence.proto.name.NamePb fatherName= 2;
+  com.tiwari.studence.proto.name.NamePb motherName= 3;
+  int32 noOfChildern = 4;
+  com.tiwari.studence.proto.contactDetails.ContactDetailsPb contactDetails= 5;
+}
+
+message GuardianRefPb{
+  string dbInfoId =1;
+  string fatherName= 2;
+  string motherName= 3;
+}
+
+message GuardianSearchReqPb{
+  string name = 1;
+}
+
+
+message GuardianSearchRespPb{
+  com.tiwari.studence.proto.summary.SummaryPb summary =1;
+  repeated GuardianPb results = 2;
+}
+

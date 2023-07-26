@@ -19,6 +19,11 @@ public final class GenericRefPbOuterClass {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_tiwari_studence_proto_genericRef_GenericRefPb_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tiwari_studence_proto_genericRef_GenericRefPbWithBoolean_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tiwari_studence_proto_genericRef_GenericRefPbWithBoolean_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -29,13 +34,17 @@ public final class GenericRefPbOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\022genericRefPb.proto\022$com.tiwari.studenc" +
-      "e.proto.genericRef\".\n\014GenericRefPb\022\020\n\010db" +
-      "InfoId\030\001 \001(\t\022\014\n\004name\030\002 \001(\tB\005P\001\240\001\001b\006proto" +
-      "3"
+      "e.proto.genericRef\032\021dataTypesPb.proto\".\n" +
+      "\014GenericRefPb\022\020\n\010dbInfoId\030\001 \001(\t\022\014\n\004name\030" +
+      "\002 \001(\t\"{\n\027GenericRefPbWithBoolean\022\020\n\010dbIn" +
+      "foId\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022@\n\010isActive\030\003 \001" +
+      "(\0132..com.tiwari.studence.proto.datatypes" +
+      ".BooleanPbB\005P\001\240\001\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.tiwari.studence.proto.datatypes.DataTypesPb.getDescriptor(),
         });
     internal_static_com_tiwari_studence_proto_genericRef_GenericRefPb_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -43,6 +52,13 @@ public final class GenericRefPbOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tiwari_studence_proto_genericRef_GenericRefPb_descriptor,
         new java.lang.String[] { "DbInfoId", "Name", });
+    internal_static_com_tiwari_studence_proto_genericRef_GenericRefPbWithBoolean_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_com_tiwari_studence_proto_genericRef_GenericRefPbWithBoolean_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_genericRef_GenericRefPbWithBoolean_descriptor,
+        new java.lang.String[] { "DbInfoId", "Name", "IsActive", });
+    com.tiwari.studence.proto.datatypes.DataTypesPb.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

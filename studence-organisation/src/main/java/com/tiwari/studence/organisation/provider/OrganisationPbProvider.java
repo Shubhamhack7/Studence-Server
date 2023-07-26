@@ -8,7 +8,7 @@ import com.tiwari.studence.proto.organisation.OrganisationPb.Builder;
 
 @Singleton
 public class OrganisationPbProvider
-        implements IPbBuilderProvider<OrganisationPb, OrganisationPb.Builder> {
+        implements IPbBuilderProvider<OrganisationPb, Builder> {
 
   @Override
   public Builder getBuilder() {

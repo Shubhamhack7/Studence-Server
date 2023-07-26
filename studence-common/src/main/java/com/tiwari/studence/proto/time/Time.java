@@ -63,9 +63,18 @@ public final class Time {
       "studence.proto.time.TimeProfileDimension" +
       "Id\"o\n\026TimeProfileDimensionId\022F\n\004name\030\001 \001" +
       "(\01628.com.tiwari.studence.proto.time.Time" +
-      "ProfileDimensionEnum\022\r\n\005value\030\002 \001(\t*>\n\030T" +
-      "imeProfileDimensionEnum\022\013\n\007CONTEXT\020\000\022\t\n\005" +
-      "CLASS\020\001\022\n\n\006METHOD\020\003B\005P\001\240\001\001b\006proto3"
+      "ProfileDimensionEnum\022\r\n\005value\030\002 \001(\t*\317\002\n\014" +
+      "TimezoneEnum\022\024\n\020UNKNOWN_TIMEZONE\020\000\022\024\n\020AM" +
+      "ERICA_NEW_YORK\020\001\022\027\n\023AMERICA_LOS_ANGELES\020" +
+      "\002\022\023\n\017AMERICA_CHICAGO\020\003\022\022\n\016AMERICA_DENVER" +
+      "\020\004\022\021\n\rEUROPE_LONDON\020\005\022\020\n\014EUROPE_PARIS\020\006\022" +
+      "\021\n\rEUROPE_BERLIN\020\007\022\017\n\013EUROPE_ROME\020\010\022\016\n\nA" +
+      "SIA_TOKYO\020\t\022\021\n\rASIA_SHANGHAI\020\n\022\016\n\nASIA_D" +
+      "UBAI\020\013\022\020\n\014ASIA_KOLKATA\020\014\022\024\n\020AUSTRALIA_SY" +
+      "DNEY\020\r\022\027\n\023AUSTRALIA_MELBOURNE\020\016\022\024\n\020PACIF" +
+      "IC_AUCKLAND\020\017*>\n\030TimeProfileDimensionEnu" +
+      "m\022\013\n\007CONTEXT\020\000\022\t\n\005CLASS\020\001\022\n\n\006METHOD\020\003B\005P" +
+      "\001\240\001\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

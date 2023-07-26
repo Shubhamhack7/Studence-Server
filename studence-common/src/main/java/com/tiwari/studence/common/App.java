@@ -13,12 +13,15 @@ import com.amazonaws.services.dynamodbv2.model.ComparisonOperator;
 import com.amazonaws.services.dynamodbv2.xspec.ExpressionSpecBuilder;
 import com.google.inject.Injector;
 import com.google.protobuf.GeneratedMessageV3;
+import com.tiwari.studence.common.controlflow.CreateDynamoTable;
 import com.tiwari.studence.common.entity.GetAndUpdateEntity;
 import com.tiwari.studence.common.indexer.AEntityIndexer;
 import com.tiwari.studence.common.injector.InjectorProvider;
 import com.tiwari.studence.common.interfaces.IDynamoSearchTable;
 import com.tiwari.studence.common.searcher.AEntitySearcher;
 import com.tiwari.studence.dynamodb.database.DynamoDbConnector;
+import com.tiwari.studence.dynamodb.database.table.CreateDynamoDbTable;
+import com.tiwari.studence.dynamodb.database.table.TableNameEnum;
 import com.tiwari.studence.proto.entity.LifeTimeEnum;
 import com.tiwari.studence.proto.search.*;
 import com.tiwari.studence.util.collect.Lists;
@@ -37,8 +40,8 @@ public class App {
   public static void main(String[] args) throws ErrorException {
 
     Injector inj = InjectorProvider.createInjector();
-    // CreateDynamoTable service = inj.getInstance(CreateDynamoTable.class);
-    GetAndUpdateEntity service = inj.getInstance(GetAndUpdateEntity.class);
+    CreateDynamoTable service = inj.getInstance(CreateDynamoTable.class);
+    //GetAndUpdateEntity service = inj.getInstance(GetAndUpdateEntity.class);
     // System.out.println(service.getNewEntityId().get());
 
     DynamoDbConnector connector = new DynamoDbConnector();
@@ -46,8 +49,15 @@ public class App {
    // System.out.println(queryTable(connector.getDynamoDbClient()));
     //scanItems(connector.getDynamoDbClient());
    /// searchData(inj);
+    for (TableNameEnum tableName :TableNameEnum.values()) {
+      try {
+        service.createDbTable(tableName.getValue());
+      }catch(Exception e) {
+        continue;
+      }
+    }
 
-    searchData(inj);
+    //searchData(inj);
   }
 
   private static void scanandFilter(Injector inj, DynamoDbConnector connector) {

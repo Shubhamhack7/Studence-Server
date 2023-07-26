@@ -1,10 +1,8 @@
 package com.tiwari.studence.organisation.provider;
 
-import com.tiwari.studence.common.provider.IPbBuilderProvider;
 import com.tiwari.studence.common.provider.IReqRespPbBuilderProvider;
 import com.tiwari.studence.proto.organisation.OrganisationSearchReqPb;
 import com.tiwari.studence.proto.organisation.OrganisationSearchRespPb;
-import com.tiwari.studence.proto.organisation.OrganisationSearchRespPb.Builder;
 
 import javax.inject.Inject;
 

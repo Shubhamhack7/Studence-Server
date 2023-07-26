@@ -20,6 +20,10 @@ message OrganisationPb{
     com.tiwari.studence.proto.contactDetails.ContactDetailsPb contactDetails= 3;
 }
 
+message OrganisationRefPb{
+  string dbInfoId =1;
+  string name= 2;
+}
 
 message OrganisationSearchReqPb{
 	  string name = 1;

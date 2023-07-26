@@ -9,7 +9,9 @@ import com.amazonaws.services.dynamodbv2.document.utils.ValueMap;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.tiwari.studence.dynamodb.database.DynamoDbConnector;
 
+import com.tiwari.studence.dynamodb.database.table.CreateDynamoDbTable;
 import com.tiwari.studence.dynamodb.database.table.SearchItemInDynamoDbTable;
+import com.tiwari.studence.dynamodb.database.table.TableNameEnum;
 import software.amazon.awssdk.core.waiters.WaiterResponse;
 import software.amazon.awssdk.services.dynamodb.DynamoDbClient;
 import software.amazon.awssdk.services.dynamodb.model.AttributeDefinition;
@@ -41,6 +43,8 @@ public class App {
     SearchItemInDynamoDbTable searchItem = new SearchItemInDynamoDbTable(connector);
     //searchItem.queryOpreationResponse("100_ORGANISATION_DEVEL");
     //searchItem.scanandFilterResponse("100_ORGANISATION_DEVEL");
+
+
   }
 
   private static void searchItem(DynamoDbConnector dynamoDbClient) {
