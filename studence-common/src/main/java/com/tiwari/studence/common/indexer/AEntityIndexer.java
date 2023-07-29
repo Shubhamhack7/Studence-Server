@@ -49,10 +49,12 @@ public abstract class AEntityIndexer<P extends GeneratedMessageV3> implements II
   }
 
   public void addItemToAttritibeMap(HashMap<String, AttributeValue> item, String key, String value,
-          boolean bool_val, Type type) {
-    if (type == Type.S) {
+          boolean bool_val, Type type, boolean lowerCase) {
+    if (type == Type.S && lowerCase) {
       item.put(key, AttributeValue.builder().s(Strings.getLowerCaseList(value)).build());
-    } else if (type == Type.N) {
+    } else if (type == Type.S) {
+      item.put(key, AttributeValue.builder().s(value).build());
+    }  else if (type == Type.N) {
       item.put(key, AttributeValue.builder().n(value).build());
     } else if (type == Type.B) {
       item.put(key, AttributeValue.builder().bool(bool_val).build());
