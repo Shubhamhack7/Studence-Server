@@ -21,14 +21,17 @@ public class LoginIndexer extends AEntityIndexer<LoginPb> {
     addItemToAttritibeMap(items, LoginIndexerEnum.LOGIN_REF_ID.getLabel(),
             builder.getRef().getDbInfoId(), false, AttributeValue.Type.S,
             LoginIndexerEnum.LOGIN_REF_ID.isLowerCase());
+    addItemToAttritibeMap(items, LoginIndexerEnum.LOGIN_TYPE.getLabel(),
+            builder.getType().name(), false, AttributeValue.Type.S,
+            LoginIndexerEnum.LOGIN_TYPE.isLowerCase());
     addItemToAttritibeMap(items, LoginIndexerEnum.LOGIN_REF_NAME.name(),
-            builder.getRef().getName().toLowerCase(), false, AttributeValue.Type.S,
+            builder.getRef().getName(), false, AttributeValue.Type.S,
             LoginIndexerEnum.LOGIN_REF_NAME.isLowerCase());
     addItemToAttritibeMap(items, LoginIndexerEnum.LOGIN_MOBILE_NO.name(),
             builder.getMobileNo().getCanonicalNumber(), false, AttributeValue.Type.S,
             LoginIndexerEnum.LOGIN_MOBILE_NO.isLowerCase());
     addItemToAttritibeMap(items, LoginIndexerEnum.LOGIN_EMAIL_ID.name(),
-            builder.getEmailId().getCanonicalEmail().toLowerCase(), false, AttributeValue.Type.S,
+            builder.getEmailId().getCanonicalEmail(), false, AttributeValue.Type.S,
             LoginIndexerEnum.LOGIN_EMAIL_ID.isLowerCase());
     return items;
   }

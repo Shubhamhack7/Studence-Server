@@ -11,8 +11,10 @@ import com.tiwari.studence.common.interfaces.IDynamoPutTable;
 import com.tiwari.studence.common.provider.IPbBuilderProvider;
 import com.tiwari.studence.common.services.interfaces.ITableNameProvider;
 import com.tiwari.studence.common.updater.AEntityUpdater;
+import com.tiwari.studence.proto.entity.EntityPb;
 import com.tiwari.studence.proto.entity.LifeTimeEnum;
 import com.tiwari.studence.util.collect.Pair;
+import com.tiwari.studence.util.entity.EntityUtilHelper;
 import com.tiwari.studence.util.exception.ErrorException;
 import com.tiwari.studence.util.exception.LoggedRuntimeException;
 
@@ -73,12 +75,9 @@ public class EntityCreateCF<P extends GeneratedMessageV3,Lresp extends Generated
       try {
         Pair<Integer, String> new_id = m_future.get();
         BU builder = m_builderProvider.getBuilder(m_request);
-        entity = m_entityProvider.getBuilder();
-        entity.clear();
-        entity.setHashId(new_id.getSecond());
-        entity.setRangeId(String.valueOf(new_id.getFirst()));
-        entity.setLifetime(LifeTimeEnum.ACTIVE);
         // builder.getDbInfo().mergeFrom(entity.build());
+        EntityPb.Builder entity = m_entityProvider.getBuilder();
+        EntityUtilHelper.getCreateEntity(entity,m_future.get());
         attrMap = m_updater.updater((P) builder.build(), entity.build());
         m_updater.getIndexer().getGenricEntityIndexer(attrMap, entity.build());
         // getAsyncCallback().set(0, m_future.item());

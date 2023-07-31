@@ -19,6 +19,7 @@ private static final long serialVersionUID = 0L;
     hashId_ = "";
     rangeId_ = "";
     lifetime_ = 0;
+    timezone_ = 0;
   }
 
   @java.lang.Override
@@ -142,6 +143,50 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tiwari.studence.proto.entity.LifeTimeEnum.UNRECOGNIZED : result;
   }
 
+  public static final int CONFIG_FIELD_NUMBER = 4;
+  private com.tiwari.studence.proto.entity.PbConfig config_;
+  /**
+   * <code>.com.tiwari.studence.proto.entity.PbConfig config = 4;</code>
+   * @return Whether the config field is set.
+   */
+  @java.lang.Override
+  public boolean hasConfig() {
+    return config_ != null;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.entity.PbConfig config = 4;</code>
+   * @return The config.
+   */
+  @java.lang.Override
+  public com.tiwari.studence.proto.entity.PbConfig getConfig() {
+    return config_ == null ? com.tiwari.studence.proto.entity.PbConfig.getDefaultInstance() : config_;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.entity.PbConfig config = 4;</code>
+   */
+  @java.lang.Override
+  public com.tiwari.studence.proto.entity.PbConfigOrBuilder getConfigOrBuilder() {
+    return config_ == null ? com.tiwari.studence.proto.entity.PbConfig.getDefaultInstance() : config_;
+  }
+
+  public static final int TIMEZONE_FIELD_NUMBER = 5;
+  private int timezone_ = 0;
+  /**
+   * <code>.com.tiwari.studence.proto.time.TimezoneEnum timezone = 5;</code>
+   * @return The enum numeric value on the wire for timezone.
+   */
+  @java.lang.Override public int getTimezoneValue() {
+    return timezone_;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.time.TimezoneEnum timezone = 5;</code>
+   * @return The timezone.
+   */
+  @java.lang.Override public com.tiwari.studence.proto.time.TimezoneEnum getTimezone() {
+    com.tiwari.studence.proto.time.TimezoneEnum result = com.tiwari.studence.proto.time.TimezoneEnum.forNumber(timezone_);
+    return result == null ? com.tiwari.studence.proto.time.TimezoneEnum.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -165,6 +210,12 @@ private static final long serialVersionUID = 0L;
     if (lifetime_ != com.tiwari.studence.proto.entity.LifeTimeEnum.UNKNOWN_LIFETIME.getNumber()) {
       output.writeEnum(3, lifetime_);
     }
+    if (config_ != null) {
+      output.writeMessage(4, getConfig());
+    }
+    if (timezone_ != com.tiwari.studence.proto.time.TimezoneEnum.UNKNOWN_TIMEZONE.getNumber()) {
+      output.writeEnum(5, timezone_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -183,6 +234,14 @@ private static final long serialVersionUID = 0L;
     if (lifetime_ != com.tiwari.studence.proto.entity.LifeTimeEnum.UNKNOWN_LIFETIME.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, lifetime_);
+    }
+    if (config_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, getConfig());
+    }
+    if (timezone_ != com.tiwari.studence.proto.time.TimezoneEnum.UNKNOWN_TIMEZONE.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(5, timezone_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -204,6 +263,12 @@ private static final long serialVersionUID = 0L;
     if (!getRangeId()
         .equals(other.getRangeId())) return false;
     if (lifetime_ != other.lifetime_) return false;
+    if (hasConfig() != other.hasConfig()) return false;
+    if (hasConfig()) {
+      if (!getConfig()
+          .equals(other.getConfig())) return false;
+    }
+    if (timezone_ != other.timezone_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -221,6 +286,12 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getRangeId().hashCode();
     hash = (37 * hash) + LIFETIME_FIELD_NUMBER;
     hash = (53 * hash) + lifetime_;
+    if (hasConfig()) {
+      hash = (37 * hash) + CONFIG_FIELD_NUMBER;
+      hash = (53 * hash) + getConfig().hashCode();
+    }
+    hash = (37 * hash) + TIMEZONE_FIELD_NUMBER;
+    hash = (53 * hash) + timezone_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -353,6 +424,12 @@ private static final long serialVersionUID = 0L;
       hashId_ = "";
       rangeId_ = "";
       lifetime_ = 0;
+      config_ = null;
+      if (configBuilder_ != null) {
+        configBuilder_.dispose();
+        configBuilder_ = null;
+      }
+      timezone_ = 0;
       return this;
     }
 
@@ -394,6 +471,14 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.lifetime_ = lifetime_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.config_ = configBuilder_ == null
+            ? config_
+            : configBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.timezone_ = timezone_;
       }
     }
 
@@ -454,6 +539,12 @@ private static final long serialVersionUID = 0L;
       if (other.lifetime_ != 0) {
         setLifetimeValue(other.getLifetimeValue());
       }
+      if (other.hasConfig()) {
+        mergeConfig(other.getConfig());
+      }
+      if (other.timezone_ != 0) {
+        setTimezoneValue(other.getTimezoneValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -495,6 +586,18 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 24
+            case 34: {
+              input.readMessage(
+                  getConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 40: {
+              timezone_ = input.readEnum();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -705,6 +808,178 @@ private static final long serialVersionUID = 0L;
     public Builder clearLifetime() {
       bitField0_ = (bitField0_ & ~0x00000004);
       lifetime_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private com.tiwari.studence.proto.entity.PbConfig config_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tiwari.studence.proto.entity.PbConfig, com.tiwari.studence.proto.entity.PbConfig.Builder, com.tiwari.studence.proto.entity.PbConfigOrBuilder> configBuilder_;
+    /**
+     * <code>.com.tiwari.studence.proto.entity.PbConfig config = 4;</code>
+     * @return Whether the config field is set.
+     */
+    public boolean hasConfig() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.entity.PbConfig config = 4;</code>
+     * @return The config.
+     */
+    public com.tiwari.studence.proto.entity.PbConfig getConfig() {
+      if (configBuilder_ == null) {
+        return config_ == null ? com.tiwari.studence.proto.entity.PbConfig.getDefaultInstance() : config_;
+      } else {
+        return configBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.entity.PbConfig config = 4;</code>
+     */
+    public Builder setConfig(com.tiwari.studence.proto.entity.PbConfig value) {
+      if (configBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        config_ = value;
+      } else {
+        configBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.entity.PbConfig config = 4;</code>
+     */
+    public Builder setConfig(
+        com.tiwari.studence.proto.entity.PbConfig.Builder builderForValue) {
+      if (configBuilder_ == null) {
+        config_ = builderForValue.build();
+      } else {
+        configBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.entity.PbConfig config = 4;</code>
+     */
+    public Builder mergeConfig(com.tiwari.studence.proto.entity.PbConfig value) {
+      if (configBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) != 0) &&
+          config_ != null &&
+          config_ != com.tiwari.studence.proto.entity.PbConfig.getDefaultInstance()) {
+          getConfigBuilder().mergeFrom(value);
+        } else {
+          config_ = value;
+        }
+      } else {
+        configBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.entity.PbConfig config = 4;</code>
+     */
+    public Builder clearConfig() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      config_ = null;
+      if (configBuilder_ != null) {
+        configBuilder_.dispose();
+        configBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.entity.PbConfig config = 4;</code>
+     */
+    public com.tiwari.studence.proto.entity.PbConfig.Builder getConfigBuilder() {
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return getConfigFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.entity.PbConfig config = 4;</code>
+     */
+    public com.tiwari.studence.proto.entity.PbConfigOrBuilder getConfigOrBuilder() {
+      if (configBuilder_ != null) {
+        return configBuilder_.getMessageOrBuilder();
+      } else {
+        return config_ == null ?
+            com.tiwari.studence.proto.entity.PbConfig.getDefaultInstance() : config_;
+      }
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.entity.PbConfig config = 4;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tiwari.studence.proto.entity.PbConfig, com.tiwari.studence.proto.entity.PbConfig.Builder, com.tiwari.studence.proto.entity.PbConfigOrBuilder> 
+        getConfigFieldBuilder() {
+      if (configBuilder_ == null) {
+        configBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tiwari.studence.proto.entity.PbConfig, com.tiwari.studence.proto.entity.PbConfig.Builder, com.tiwari.studence.proto.entity.PbConfigOrBuilder>(
+                getConfig(),
+                getParentForChildren(),
+                isClean());
+        config_ = null;
+      }
+      return configBuilder_;
+    }
+
+    private int timezone_ = 0;
+    /**
+     * <code>.com.tiwari.studence.proto.time.TimezoneEnum timezone = 5;</code>
+     * @return The enum numeric value on the wire for timezone.
+     */
+    @java.lang.Override public int getTimezoneValue() {
+      return timezone_;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.time.TimezoneEnum timezone = 5;</code>
+     * @param value The enum numeric value on the wire for timezone to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTimezoneValue(int value) {
+      timezone_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.time.TimezoneEnum timezone = 5;</code>
+     * @return The timezone.
+     */
+    @java.lang.Override
+    public com.tiwari.studence.proto.time.TimezoneEnum getTimezone() {
+      com.tiwari.studence.proto.time.TimezoneEnum result = com.tiwari.studence.proto.time.TimezoneEnum.forNumber(timezone_);
+      return result == null ? com.tiwari.studence.proto.time.TimezoneEnum.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.time.TimezoneEnum timezone = 5;</code>
+     * @param value The timezone to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTimezone(com.tiwari.studence.proto.time.TimezoneEnum value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000010;
+      timezone_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.time.TimezoneEnum timezone = 5;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTimezone() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      timezone_ = 0;
       onChanged();
       return this;
     }

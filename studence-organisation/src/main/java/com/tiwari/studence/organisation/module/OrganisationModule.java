@@ -1,7 +1,6 @@
 package com.tiwari.studence.organisation.module;
 
 import com.google.inject.AbstractModule;
-import com.google.inject.PrivateModule;
 import com.tiwari.studence.organisation.bquery.IOrganisationBigQueryService;
 import com.tiwari.studence.organisation.bquery.OrganisationBigQueryService;
 import com.tiwari.studence.organisation.service.IOrganisationService;

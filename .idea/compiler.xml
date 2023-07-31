@@ -15,6 +15,7 @@
         <module name="studence-teacher" />
         <module name="studence-login" />
         <module name="studence-common" />
+        <module name="studence-typeAhead" />
         <module name="studence-attendence" />
         <module name="studence-student" />
         <module name="studence-guardian" />

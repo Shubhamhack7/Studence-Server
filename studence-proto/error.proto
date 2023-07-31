@@ -47,6 +47,7 @@ enum ErrorCategoryUiEnum {
   DOWNSTREAM_REQUEST_TIMEOUT_ERROR = 16; //504, if received 504 from downstream.
   VERSION_MISMATCH = 17; //if entity version mismatched
   UN_AUTHORIZED = 18; //if entity version mismatched
+  CONVERSION_ERROR =19;
 }
 
 enum ResultStatusUiEnum {

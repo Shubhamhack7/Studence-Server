@@ -27,7 +27,7 @@ public class UpdateItemInDynamoDbTable implements IUpdateItemTable {
 
   @Override
   public UpdateItemResponse updateItem(String tableName, HashMap<String, AttributeValue> itemKey,
-          HashMap<String, AttributeValue> itemValues) throws Exception {
+          HashMap<String, AttributeValue> itemValues) throws ErrorException {
     HashMap<String, AttributeValueUpdate> updatedValues = new HashMap<>();
     for (Entry<String, AttributeValue> iterable_element : itemValues.entrySet()) {
 

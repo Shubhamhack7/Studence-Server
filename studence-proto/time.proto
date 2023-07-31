@@ -5,24 +5,6 @@ package com.tiwari.studence.proto.time;
 option java_multiple_files = true;
 option java_generate_equals_and_hash = true;
 
-enum TimezoneEnum {
-  UNKNOWN_TIMEZONE = 0;
-  AMERICA_NEW_YORK = 1;
-  AMERICA_LOS_ANGELES = 2;
-  AMERICA_CHICAGO = 3;
-  AMERICA_DENVER = 4;
-  EUROPE_LONDON = 5;
-  EUROPE_PARIS = 6;
-  EUROPE_BERLIN = 7;
-  EUROPE_ROME = 8;
-  ASIA_TOKYO = 9;
-  ASIA_SHANGHAI = 10;
-  ASIA_DUBAI = 11;
-  ASIA_KOLKATA = 12;
-  AUSTRALIA_SYDNEY = 13;
-  AUSTRALIA_MELBOURNE = 14;
-  PACIFIC_AUCKLAND = 15;
-}
 
 message TimeStatsPb {
    string id = 1;

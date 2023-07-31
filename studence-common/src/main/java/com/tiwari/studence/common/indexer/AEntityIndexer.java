@@ -19,6 +19,7 @@ public abstract class AEntityIndexer<P extends GeneratedMessageV3> implements II
     ID,
     RANGE,
     LIFETIME,
+    VERSION,
     RAW_DATA
 
   }
@@ -45,6 +46,8 @@ public abstract class AEntityIndexer<P extends GeneratedMessageV3> implements II
     item.put(GenericIndexerEnum.RANGE.name(), AttributeValue.builder().s(pb.getRangeId()).build());
     item.put(GenericIndexerEnum.LIFETIME.name(),
             AttributeValue.builder().s(pb.getLifetime().name()).build());
+    item.put(GenericIndexerEnum.VERSION.name(),
+            AttributeValue.builder().s(String.valueOf(pb.getConfig().getVersion())).build());
     return item;
   }
 
