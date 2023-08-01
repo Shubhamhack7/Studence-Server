@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package com.tiwari.studence.proto.typeAhead;
+
+import "entityPb.proto";
+import "summaryPb.proto";
+import "genericRefPb.proto";
+import "loginPb.proto";
+
+
+option java_multiple_files = true;
+option java_generate_equals_and_hash = true;
+
+
+message TypeAheadPb {
+  com.tiwari.studence.proto.entity.EntityPb dbInfo =1;
+  com.tiwari.studence.proto.genericRef.GenericRefPb context =2;
+  com.tiwari.studence.proto.login.ProfileTypeEnum typeAheadType =3;
+}
+
+message TypeAheadSearchReqPb{
+  string context = 1;
+  com.tiwari.studence.proto.login.ProfileTypeEnum typeAheadType =2;
+}
+
+
+message TypeAheadSearchRespPb{
+  com.tiwari.studence.proto.summary.SummaryPb summary =1;
+  repeated TypeAheadPb results = 2;
+}
+

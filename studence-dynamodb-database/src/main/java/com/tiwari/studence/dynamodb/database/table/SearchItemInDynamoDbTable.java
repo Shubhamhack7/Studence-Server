@@ -78,9 +78,6 @@ public class SearchItemInDynamoDbTable implements ISearchItemTable {
     System.out.println(scanRequest);
     ScanResponse scanResponse = m_dynamoDbConnector.getDynamoDbClient().scan(scanRequest);
     List<Map<String, AttributeValue>> items = scanResponse.items();
-    for (Map<String, AttributeValue> item : items) {
-      System.out.println(item);
-    }
     return scanResponse.items();
   }
 }

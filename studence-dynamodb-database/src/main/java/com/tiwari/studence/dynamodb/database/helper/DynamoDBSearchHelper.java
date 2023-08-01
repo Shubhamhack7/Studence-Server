@@ -70,8 +70,32 @@ public class DynamoDBSearchHelper {
     case NOT_CONTAINS:
       break;
     case BEGINS_WITH:
-      break;
+      begins_with(dynamoDbSearchPb, request);
     }
+  }
+
+  private void begins_with(DynamoDbSearchPb.Builder dynamoDbSearchPb, SearchPb request) {
+    request.getAttributesList().forEach(attribute -> {
+      if (attribute.getType() != DynamoDBValue.DYNAMODB_VALUE_UNSPECIFIED) {
+        StringBuilder stringBuilder = new StringBuilder();
+        AttributeNameValuePair.Builder attrPair = AttributeNameValuePair.newBuilder(
+                createRequestOnDynamoDbValueType(attribute));
+        stringBuilder.append(StudenceSpecialCharecterEnum.SPACE.getSign());
+        stringBuilder.append(StudenceSpecialCharecterEnum.LEFT_PARENTHESIS.getSign());
+        stringBuilder.append(StudenceSpecialCharecterEnum.SPACE.getSign());
+        stringBuilder.append(attrPair.getName());
+        stringBuilder.append(StudenceSpecialCharecterEnum.SPACE.getSign());
+        stringBuilder.append("begins_with");
+        stringBuilder.append(StudenceSpecialCharecterEnum.SPACE.getSign());
+        stringBuilder.append(attrPair.getAttributeNameAlias());
+        stringBuilder.append(StudenceSpecialCharecterEnum.SPACE.getSign());
+        stringBuilder.append(StudenceSpecialCharecterEnum.RIGHT_PARENTHESIS.getSign());
+        stringBuilder.append(StudenceSpecialCharecterEnum.SPACE.getSign());
+        attrPair.setExpression(stringBuilder.toString());
+        dynamoDbSearchPb.addExpressionAttribute(attrPair);
+      }
+    });
+
   }
 
   private void equal_to(DynamoDbSearchPb.Builder dynamoDbSearchPb, SearchPb request) {

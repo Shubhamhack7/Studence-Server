@@ -4,7 +4,11 @@
 	<contentEntry url="file://$MODULE_DIR$">
 		<excludeFolder url="file://$MODULE_DIR$/target"/>
 	</contentEntry>
-	<contentEntry url="file://$MODULE_DIR$"/>
+	<contentEntry url="file://$MODULE_DIR$">
+		<excludeFolder url="file://$MODULE_DIR$/target"/>
+		<excludeFolder url="file://$MODULE_DIR$/target"/>
+		<excludeFolder url="file://$MODULE_DIR$/target"/>
+	</contentEntry>
 	<lib name="javax.inject-1.jar" scope="COMPILE">
 		<srcroot url="file://$M2_REPO$/javax/inject/javax.inject/1/javax.inject-1-sources.jar"/>
 	</lib>
@@ -1681,7 +1685,7 @@
 		<level name="Maven: io.netty:netty-buffer:4.1.86.Final" value="project"/>
 		<level name="Maven: io.netty:netty-transport-classes-epoll:4.1.86.Final" value="project"/>
 		<level name="Maven: joda-time:joda-time:2.12.2" value="project"/>
-		<level name="Maven: com.google.protobuf:protobuf-java:3.21.12" value="project"/>
+		<level name="Maven: com.google.protobuf:protobuf-java:3.22.2" value="project"/>
 		<level name="Maven: com.googlecode.protobuf-java-format:protobuf-java-format:1.4" value="project"/>
 		<level name="Maven: com.google.protobuf:protobuf-java-util:3.22.2" value="project"/>
 		<level name="Maven: org.mindrot:jbcrypt:0.4" value="project"/>

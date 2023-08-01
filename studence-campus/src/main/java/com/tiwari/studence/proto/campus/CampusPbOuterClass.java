@@ -46,23 +46,23 @@ public final class CampusPbOuterClass {
       "\n\016campusPb.proto\022 com.tiwari.studence.pr" +
       "oto.campus\032\016entityPb.proto\032\014namePb.proto" +
       "\032\026contactDetailsPb.proto\032\017summaryPb.prot" +
-      "o\032\024organisationPb.proto\"\244\002\n\010CampusPb\022:\n\006" +
+      "o\032\024organisationPb.proto\"\270\002\n\010CampusPb\022:\n\006" +
       "dbInfo\030\001 \001(\0132*.com.tiwari.studence.proto" +
       ".entity.EntityPb\0224\n\004name\030\002 \001(\0132&.com.tiw" +
       "ari.studence.proto.name.NamePb\022R\n\016contac" +
       "tDetails\030\003 \001(\0132:.com.tiwari.studence.pro" +
       "to.contactDetails.ContactDetailsPb\022R\n\017or" +
       "ganisationRef\030\004 \001(\01329.com.tiwari.studenc" +
-      "e.proto.organisation.OrganisationRefPb\"\201" +
-      "\001\n\013CampusRefPb\022\020\n\010dbInfoId\030\001 \001(\t\022\014\n\004name" +
-      "\030\002 \001(\t\022R\n\017organisationRef\030\003 \001(\01329.com.ti" +
-      "wari.studence.proto.organisation.Organis" +
-      "ationRefPb\"!\n\021CampusSearchReqPb\022\014\n\004name\030" +
-      "\001 \001(\t\"\220\001\n\022CampusSearchRespPb\022=\n\007summary\030" +
-      "\001 \001(\0132,.com.tiwari.studence.proto.summar" +
-      "y.SummaryPb\022;\n\007results\030\002 \003(\0132*.com.tiwar" +
-      "i.studence.proto.campus.CampusPbB\005P\001\240\001\001b" +
-      "\006proto3"
+      "e.proto.organisation.OrganisationRefPb\022\022" +
+      "\n\ncampusCode\030\005 \001(\t\"\201\001\n\013CampusRefPb\022\020\n\010db" +
+      "InfoId\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022R\n\017organisati" +
+      "onRef\030\003 \001(\01329.com.tiwari.studence.proto." +
+      "organisation.OrganisationRefPb\"!\n\021Campus" +
+      "SearchReqPb\022\014\n\004name\030\001 \001(\t\"\220\001\n\022CampusSear" +
+      "chRespPb\022=\n\007summary\030\001 \001(\0132,.com.tiwari.s" +
+      "tudence.proto.summary.SummaryPb\022;\n\007resul" +
+      "ts\030\002 \003(\0132*.com.tiwari.studence.proto.cam" +
+      "pus.CampusPbB\005P\001\240\001\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -78,7 +78,7 @@ public final class CampusPbOuterClass {
     internal_static_com_tiwari_studence_proto_campus_CampusPb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tiwari_studence_proto_campus_CampusPb_descriptor,
-        new java.lang.String[] { "DbInfo", "Name", "ContactDetails", "OrganisationRef", });
+        new java.lang.String[] { "DbInfo", "Name", "ContactDetails", "OrganisationRef", "CampusCode", });
     internal_static_com_tiwari_studence_proto_campus_CampusRefPb_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_com_tiwari_studence_proto_campus_CampusRefPb_fieldAccessorTable = new

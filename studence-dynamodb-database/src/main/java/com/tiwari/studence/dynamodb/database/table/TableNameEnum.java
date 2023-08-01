@@ -9,7 +9,8 @@ public enum TableNameEnum {
   ATTENDANCE("105_ATTENDANCE"),
   GUARDIAN("106_GUARDIAN"),
   CLASS("103_CLASS"),
-  LOGIN("107_LOGIN");
+  LOGIN("107_LOGIN"),
+  TYPE_AHEAD("108_TYPE_AHEAD");
 
   private final String value;
 

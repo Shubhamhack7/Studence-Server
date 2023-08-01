@@ -132,6 +132,10 @@ public enum ErrorCategoryUiEnum
    * <code>UN_AUTHORIZED = 18;</code>
    */
   UN_AUTHORIZED(18),
+  /**
+   * <code>CONVERSION_ERROR = 19;</code>
+   */
+  CONVERSION_ERROR(19),
   UNRECOGNIZED(-1),
   ;
 
@@ -259,6 +263,10 @@ public enum ErrorCategoryUiEnum
    * <code>UN_AUTHORIZED = 18;</code>
    */
   public static final int UN_AUTHORIZED_VALUE = 18;
+  /**
+   * <code>CONVERSION_ERROR = 19;</code>
+   */
+  public static final int CONVERSION_ERROR_VALUE = 19;
 
 
   public final int getNumber() {
@@ -304,6 +312,7 @@ public enum ErrorCategoryUiEnum
       case 16: return DOWNSTREAM_REQUEST_TIMEOUT_ERROR;
       case 17: return VERSION_MISMATCH;
       case 18: return UN_AUTHORIZED;
+      case 19: return CONVERSION_ERROR;
       default: return null;
     }
   }

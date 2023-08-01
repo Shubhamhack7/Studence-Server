@@ -66,4 +66,16 @@ public interface CampusPbOrBuilder extends
    * <code>.com.tiwari.studence.proto.organisation.OrganisationRefPb organisationRef = 4;</code>
    */
   com.tiwari.studence.proto.organisation.OrganisationRefPbOrBuilder getOrganisationRefOrBuilder();
+
+  /**
+   * <code>string campusCode = 5;</code>
+   * @return The campusCode.
+   */
+  java.lang.String getCampusCode();
+  /**
+   * <code>string campusCode = 5;</code>
+   * @return The bytes for campusCode.
+   */
+  com.google.protobuf.ByteString
+      getCampusCodeBytes();
 }

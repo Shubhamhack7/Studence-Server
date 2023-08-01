@@ -7,6 +7,7 @@ import com.tiwari.studence.common.async.IFuture;
 import com.tiwari.studence.common.entity.IGetEntityId;
 import com.tiwari.studence.common.interfaces.IDynamoGetEntityTable;
 import com.tiwari.studence.common.interfaces.IDynamoPutTable;
+import com.tiwari.studence.common.interfaces.IDynamoUpdateTable;
 import com.tiwari.studence.common.services.AEntityService;
 import com.tiwari.studence.organisation.convertor.OrganisationConvertor;
 import com.tiwari.studence.organisation.indexer.OrganisationIndexer;
@@ -31,9 +32,10 @@ public class OrgansationService extends
           OrganisationConvertor convertor, OrganisationPbProvider builderProvder,
           OrganisationSearchPbProvider requestBuilderprovider,
           OraganisationTableNameProvider tableNameProvider, IGetEntityId getNewId,
-          IDynamoPutTable dynamoPutTable, IDynamoGetEntityTable dynamoGetTable) {
+          IDynamoPutTable dynamoPutTable, IDynamoGetEntityTable dynamoGetTable,
+          IDynamoUpdateTable dynamoUpdateTable) {
     super(searcher, updator, convertor, builderProvder, requestBuilderprovider, tableNameProvider,
-            getNewId, dynamoPutTable, dynamoGetTable);
+            getNewId, dynamoPutTable, dynamoGetTable, dynamoUpdateTable);
   }
 
   @Override
@@ -52,13 +54,13 @@ public class OrgansationService extends
   }
 
   @Override
-  public IFuture<OrganisationPb, ErrorException> delete(OrganisationPb entity) {
+  public IFuture<OrganisationPb, ErrorException> delete(String entity) {
     // TODO Auto-generated method stub
     return null;
   }
 
   @Override
-  public IFuture<OrganisationPb, ErrorException> update(OrganisationPb entity) {
+  public IFuture<OrganisationPb, ErrorException> update(String id,OrganisationPb entity) {
     // TODO Auto-generated method stub
     return null;
   }
