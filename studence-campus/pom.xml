@@ -21,7 +21,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.13.2</version>
+			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -43,12 +43,12 @@
 		</dependency>
 		<dependency>
 			<groupId>com.tiwari.studence</groupId>
-			<artifactId>studence-common</artifactId>
+			<artifactId>studence-organisation</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>com.tiwari.studence</groupId>
-			<artifactId>studence-organisation</artifactId>
+			<artifactId>studence-common</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
