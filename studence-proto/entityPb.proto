@@ -1,8 +1,9 @@
 // Copyright (c) 2022, All Right Reserved, Shubham Tiwari
-
 syntax = "proto3";
 
 package com.tiwari.studence.proto.entity;
+
+import "timePb.proto";
 
 option java_multiple_files = true;
 option java_generate_equals_and_hash = true;
@@ -21,4 +22,14 @@ message EntityPb{
 	string hash_id =1 ;
   string range_id =2 ;
 	LifeTimeEnum lifetime =3;
+  PbConfig config = 4;
+  com.tiwari.studence.proto.time.TimezoneEnum timezone = 5;
+}
+
+message PbConfig {
+  int32 version =1;
+  com.tiwari.studence.proto.time.TimePb createdAt =  2;
+  com.tiwari.studence.proto.time.TimePb updatedAt =  3;
+  string updatedBy = 4;
+
 }

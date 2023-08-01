@@ -19,6 +19,7 @@ public abstract class AEntityIndexer<P extends GeneratedMessageV3> implements II
     ID,
     RANGE,
     LIFETIME,
+    VERSION,
     RAW_DATA
 
   }
@@ -33,10 +34,9 @@ public abstract class AEntityIndexer<P extends GeneratedMessageV3> implements II
   @Override
   public HashMap<String, AttributeValue> indexer(P builder) {
     HashMap<String, AttributeValue> itemValues = new HashMap<>();
-    itemValues.put(GenericIndexerEnum.RAW_DATA.name(),
-            AttributeValue.builder().s(
-                    m_jsonBaseEncoderDecoder.convert(ProtobufToJson.protobufToJsonString(builder)))
-                    .build());
+    itemValues.put(GenericIndexerEnum.RAW_DATA.name(), AttributeValue.builder()
+            .s(m_jsonBaseEncoderDecoder.convert(ProtobufToJson.protobufToJsonString(builder)))
+            .build());
     return itemValues;
   }
 
@@ -46,14 +46,18 @@ public abstract class AEntityIndexer<P extends GeneratedMessageV3> implements II
     item.put(GenericIndexerEnum.RANGE.name(), AttributeValue.builder().s(pb.getRangeId()).build());
     item.put(GenericIndexerEnum.LIFETIME.name(),
             AttributeValue.builder().s(pb.getLifetime().name()).build());
+    item.put(GenericIndexerEnum.VERSION.name(),
+            AttributeValue.builder().s(String.valueOf(pb.getConfig().getVersion())).build());
     return item;
   }
 
   public void addItemToAttritibeMap(HashMap<String, AttributeValue> item, String key, String value,
-          boolean bool_val, Type type) {
-    if (type == Type.S) {
+          boolean bool_val, Type type, boolean lowerCase) {
+    if (type == Type.S && lowerCase) {
       item.put(key, AttributeValue.builder().s(Strings.getLowerCaseList(value)).build());
-    } else if (type == Type.N) {
+    } else if (type == Type.S) {
+      item.put(key, AttributeValue.builder().s(value).build());
+    }  else if (type == Type.N) {
       item.put(key, AttributeValue.builder().n(value).build());
     } else if (type == Type.B) {
       item.put(key, AttributeValue.builder().bool(bool_val).build());

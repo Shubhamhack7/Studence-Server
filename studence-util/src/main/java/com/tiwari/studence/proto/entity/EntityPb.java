@@ -19,6 +19,7 @@ private static final long serialVersionUID = 0L;
     hashId_ = "";
     rangeId_ = "";
     lifetime_ = 0;
+    timezone_ = 0;
   }
 
   @java.lang.Override
@@ -32,61 +33,6 @@ private static final long serialVersionUID = 0L;
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
-  }
-  private EntityPb(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            hashId_ = s;
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            rangeId_ = s;
-            break;
-          }
-          case 24: {
-            int rawValue = input.readEnum();
-
-            lifetime_ = rawValue;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
@@ -102,7 +48,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HASH_ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object hashId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object hashId_ = "";
   /**
    * <code>string hash_id = 1;</code>
    * @return The hashId.
@@ -140,7 +87,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RANGE_ID_FIELD_NUMBER = 2;
-  private volatile java.lang.Object rangeId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object rangeId_ = "";
   /**
    * <code>string range_id = 2;</code>
    * @return The rangeId.
@@ -178,7 +126,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LIFETIME_FIELD_NUMBER = 3;
-  private int lifetime_;
+  private int lifetime_ = 0;
   /**
    * <code>.com.tiwari.studence.proto.entity.LifeTimeEnum lifetime = 3;</code>
    * @return The enum numeric value on the wire for lifetime.
@@ -191,9 +139,52 @@ private static final long serialVersionUID = 0L;
    * @return The lifetime.
    */
   @java.lang.Override public com.tiwari.studence.proto.entity.LifeTimeEnum getLifetime() {
-    @SuppressWarnings("deprecation")
-    com.tiwari.studence.proto.entity.LifeTimeEnum result = com.tiwari.studence.proto.entity.LifeTimeEnum.valueOf(lifetime_);
+    com.tiwari.studence.proto.entity.LifeTimeEnum result = com.tiwari.studence.proto.entity.LifeTimeEnum.forNumber(lifetime_);
     return result == null ? com.tiwari.studence.proto.entity.LifeTimeEnum.UNRECOGNIZED : result;
+  }
+
+  public static final int CONFIG_FIELD_NUMBER = 4;
+  private com.tiwari.studence.proto.entity.PbConfig config_;
+  /**
+   * <code>.com.tiwari.studence.proto.entity.PbConfig config = 4;</code>
+   * @return Whether the config field is set.
+   */
+  @java.lang.Override
+  public boolean hasConfig() {
+    return config_ != null;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.entity.PbConfig config = 4;</code>
+   * @return The config.
+   */
+  @java.lang.Override
+  public com.tiwari.studence.proto.entity.PbConfig getConfig() {
+    return config_ == null ? com.tiwari.studence.proto.entity.PbConfig.getDefaultInstance() : config_;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.entity.PbConfig config = 4;</code>
+   */
+  @java.lang.Override
+  public com.tiwari.studence.proto.entity.PbConfigOrBuilder getConfigOrBuilder() {
+    return config_ == null ? com.tiwari.studence.proto.entity.PbConfig.getDefaultInstance() : config_;
+  }
+
+  public static final int TIMEZONE_FIELD_NUMBER = 5;
+  private int timezone_ = 0;
+  /**
+   * <code>.com.tiwari.studence.proto.time.TimezoneEnum timezone = 5;</code>
+   * @return The enum numeric value on the wire for timezone.
+   */
+  @java.lang.Override public int getTimezoneValue() {
+    return timezone_;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.time.TimezoneEnum timezone = 5;</code>
+   * @return The timezone.
+   */
+  @java.lang.Override public com.tiwari.studence.proto.time.TimezoneEnum getTimezone() {
+    com.tiwari.studence.proto.time.TimezoneEnum result = com.tiwari.studence.proto.time.TimezoneEnum.forNumber(timezone_);
+    return result == null ? com.tiwari.studence.proto.time.TimezoneEnum.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -210,16 +201,22 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getHashIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hashId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, hashId_);
     }
-    if (!getRangeIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rangeId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, rangeId_);
     }
     if (lifetime_ != com.tiwari.studence.proto.entity.LifeTimeEnum.UNKNOWN_LIFETIME.getNumber()) {
       output.writeEnum(3, lifetime_);
     }
-    unknownFields.writeTo(output);
+    if (config_ != null) {
+      output.writeMessage(4, getConfig());
+    }
+    if (timezone_ != com.tiwari.studence.proto.time.TimezoneEnum.UNKNOWN_TIMEZONE.getNumber()) {
+      output.writeEnum(5, timezone_);
+    }
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -228,17 +225,25 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getHashIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hashId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, hashId_);
     }
-    if (!getRangeIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rangeId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, rangeId_);
     }
     if (lifetime_ != com.tiwari.studence.proto.entity.LifeTimeEnum.UNKNOWN_LIFETIME.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, lifetime_);
     }
-    size += unknownFields.getSerializedSize();
+    if (config_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, getConfig());
+    }
+    if (timezone_ != com.tiwari.studence.proto.time.TimezoneEnum.UNKNOWN_TIMEZONE.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(5, timezone_);
+    }
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -258,7 +263,13 @@ private static final long serialVersionUID = 0L;
     if (!getRangeId()
         .equals(other.getRangeId())) return false;
     if (lifetime_ != other.lifetime_) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (hasConfig() != other.hasConfig()) return false;
+    if (hasConfig()) {
+      if (!getConfig()
+          .equals(other.getConfig())) return false;
+    }
+    if (timezone_ != other.timezone_) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -275,7 +286,13 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getRangeId().hashCode();
     hash = (37 * hash) + LIFETIME_FIELD_NUMBER;
     hash = (53 * hash) + lifetime_;
-    hash = (29 * hash) + unknownFields.hashCode();
+    if (hasConfig()) {
+      hash = (37 * hash) + CONFIG_FIELD_NUMBER;
+      hash = (53 * hash) + getConfig().hashCode();
+    }
+    hash = (37 * hash) + TIMEZONE_FIELD_NUMBER;
+    hash = (53 * hash) + timezone_;
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -392,28 +409,27 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tiwari.studence.proto.entity.EntityPb.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       hashId_ = "";
-
       rangeId_ = "";
-
       lifetime_ = 0;
-
+      config_ = null;
+      if (configBuilder_ != null) {
+        configBuilder_.dispose();
+        configBuilder_ = null;
+      }
+      timezone_ = 0;
       return this;
     }
 
@@ -440,11 +456,30 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tiwari.studence.proto.entity.EntityPb buildPartial() {
       com.tiwari.studence.proto.entity.EntityPb result = new com.tiwari.studence.proto.entity.EntityPb(this);
-      result.hashId_ = hashId_;
-      result.rangeId_ = rangeId_;
-      result.lifetime_ = lifetime_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tiwari.studence.proto.entity.EntityPb result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.hashId_ = hashId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.rangeId_ = rangeId_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.lifetime_ = lifetime_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.config_ = configBuilder_ == null
+            ? config_
+            : configBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.timezone_ = timezone_;
+      }
     }
 
     @java.lang.Override
@@ -493,16 +528,24 @@ private static final long serialVersionUID = 0L;
       if (other == com.tiwari.studence.proto.entity.EntityPb.getDefaultInstance()) return this;
       if (!other.getHashId().isEmpty()) {
         hashId_ = other.hashId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getRangeId().isEmpty()) {
         rangeId_ = other.rangeId_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.lifetime_ != 0) {
         setLifetimeValue(other.getLifetimeValue());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      if (other.hasConfig()) {
+        mergeConfig(other.getConfig());
+      }
+      if (other.timezone_ != 0) {
+        setTimezoneValue(other.getTimezoneValue());
+      }
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -517,19 +560,60 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tiwari.studence.proto.entity.EntityPb parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              hashId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              rangeId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 24: {
+              lifetime_ = input.readEnum();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 34: {
+              input.readMessage(
+                  getConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 40: {
+              timezone_ = input.readEnum();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tiwari.studence.proto.entity.EntityPb) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object hashId_ = "";
     /**
@@ -572,11 +656,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHashId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       hashId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -585,8 +667,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHashId() {
-      
       hashId_ = getDefaultInstance().getHashId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -597,12 +679,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHashIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       hashId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -648,11 +728,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRangeId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       rangeId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -661,8 +739,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRangeId() {
-      
       rangeId_ = getDefaultInstance().getRangeId();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -673,12 +751,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRangeIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       rangeId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -697,8 +773,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLifetimeValue(int value) {
-      
       lifetime_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -708,8 +784,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tiwari.studence.proto.entity.LifeTimeEnum getLifetime() {
-      @SuppressWarnings("deprecation")
-      com.tiwari.studence.proto.entity.LifeTimeEnum result = com.tiwari.studence.proto.entity.LifeTimeEnum.valueOf(lifetime_);
+      com.tiwari.studence.proto.entity.LifeTimeEnum result = com.tiwari.studence.proto.entity.LifeTimeEnum.forNumber(lifetime_);
       return result == null ? com.tiwari.studence.proto.entity.LifeTimeEnum.UNRECOGNIZED : result;
     }
     /**
@@ -721,7 +796,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       lifetime_ = value.getNumber();
       onChanged();
       return this;
@@ -731,8 +806,180 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLifetime() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       lifetime_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private com.tiwari.studence.proto.entity.PbConfig config_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tiwari.studence.proto.entity.PbConfig, com.tiwari.studence.proto.entity.PbConfig.Builder, com.tiwari.studence.proto.entity.PbConfigOrBuilder> configBuilder_;
+    /**
+     * <code>.com.tiwari.studence.proto.entity.PbConfig config = 4;</code>
+     * @return Whether the config field is set.
+     */
+    public boolean hasConfig() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.entity.PbConfig config = 4;</code>
+     * @return The config.
+     */
+    public com.tiwari.studence.proto.entity.PbConfig getConfig() {
+      if (configBuilder_ == null) {
+        return config_ == null ? com.tiwari.studence.proto.entity.PbConfig.getDefaultInstance() : config_;
+      } else {
+        return configBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.entity.PbConfig config = 4;</code>
+     */
+    public Builder setConfig(com.tiwari.studence.proto.entity.PbConfig value) {
+      if (configBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        config_ = value;
+      } else {
+        configBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.entity.PbConfig config = 4;</code>
+     */
+    public Builder setConfig(
+        com.tiwari.studence.proto.entity.PbConfig.Builder builderForValue) {
+      if (configBuilder_ == null) {
+        config_ = builderForValue.build();
+      } else {
+        configBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.entity.PbConfig config = 4;</code>
+     */
+    public Builder mergeConfig(com.tiwari.studence.proto.entity.PbConfig value) {
+      if (configBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) != 0) &&
+          config_ != null &&
+          config_ != com.tiwari.studence.proto.entity.PbConfig.getDefaultInstance()) {
+          getConfigBuilder().mergeFrom(value);
+        } else {
+          config_ = value;
+        }
+      } else {
+        configBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.entity.PbConfig config = 4;</code>
+     */
+    public Builder clearConfig() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      config_ = null;
+      if (configBuilder_ != null) {
+        configBuilder_.dispose();
+        configBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.entity.PbConfig config = 4;</code>
+     */
+    public com.tiwari.studence.proto.entity.PbConfig.Builder getConfigBuilder() {
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return getConfigFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.entity.PbConfig config = 4;</code>
+     */
+    public com.tiwari.studence.proto.entity.PbConfigOrBuilder getConfigOrBuilder() {
+      if (configBuilder_ != null) {
+        return configBuilder_.getMessageOrBuilder();
+      } else {
+        return config_ == null ?
+            com.tiwari.studence.proto.entity.PbConfig.getDefaultInstance() : config_;
+      }
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.entity.PbConfig config = 4;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tiwari.studence.proto.entity.PbConfig, com.tiwari.studence.proto.entity.PbConfig.Builder, com.tiwari.studence.proto.entity.PbConfigOrBuilder> 
+        getConfigFieldBuilder() {
+      if (configBuilder_ == null) {
+        configBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tiwari.studence.proto.entity.PbConfig, com.tiwari.studence.proto.entity.PbConfig.Builder, com.tiwari.studence.proto.entity.PbConfigOrBuilder>(
+                getConfig(),
+                getParentForChildren(),
+                isClean());
+        config_ = null;
+      }
+      return configBuilder_;
+    }
+
+    private int timezone_ = 0;
+    /**
+     * <code>.com.tiwari.studence.proto.time.TimezoneEnum timezone = 5;</code>
+     * @return The enum numeric value on the wire for timezone.
+     */
+    @java.lang.Override public int getTimezoneValue() {
+      return timezone_;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.time.TimezoneEnum timezone = 5;</code>
+     * @param value The enum numeric value on the wire for timezone to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTimezoneValue(int value) {
+      timezone_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.time.TimezoneEnum timezone = 5;</code>
+     * @return The timezone.
+     */
+    @java.lang.Override
+    public com.tiwari.studence.proto.time.TimezoneEnum getTimezone() {
+      com.tiwari.studence.proto.time.TimezoneEnum result = com.tiwari.studence.proto.time.TimezoneEnum.forNumber(timezone_);
+      return result == null ? com.tiwari.studence.proto.time.TimezoneEnum.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.time.TimezoneEnum timezone = 5;</code>
+     * @param value The timezone to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTimezone(com.tiwari.studence.proto.time.TimezoneEnum value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000010;
+      timezone_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.time.TimezoneEnum timezone = 5;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTimezone() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      timezone_ = 0;
       onChanged();
       return this;
     }
@@ -769,7 +1016,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new EntityPb(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

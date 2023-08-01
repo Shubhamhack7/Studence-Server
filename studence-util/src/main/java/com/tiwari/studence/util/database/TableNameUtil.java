@@ -22,7 +22,7 @@ public class TableNameUtil {
   public String getTableOverServerEnvironmentType(ServerEnvironmentType type, String name) {
     if (type == ServerEnvironmentType.PRODUCTION) {
       return getDynamoProd(name);
-    } else if (type == ServerEnvironmentType.DEVELOPEMENT) {
+    } else if (type == ServerEnvironmentType.DEVELOPMENT) {
       return getDynamoDevel(name);
     } else {
       return "";

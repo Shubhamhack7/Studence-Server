@@ -1,0 +1,105 @@
+syntax = "proto3";
+
+package com.tiwari.studence.proto.error;
+
+option java_multiple_files = true;
+option java_generate_equals_and_hash = true;
+
+
+enum ErrorTypePbEnum {
+  ERORTYPE_UNKNOWN_ERROR = 0;
+  PARSE_FAILED = 1; // For top requests from client
+  AUTHENTICATION_FAILED = 2;
+  AUTHORIZATION_FAILED = 3;
+  INVALID_VALUE = 4; // For single value in a request
+  VALIDATION_FAILED = 5; // For complex request data validations.
+  SERVICE_CALL_FAILED = 6;
+  NOT_FOUND = 7; // For read, updates, deletes;
+  FOUND = 8; // For inserts;
+  CODE_INVARIANCE_FAILED = 9; // for code invariability
+  UNCATCHED_EXCEPTION = 10;
+  WRAPPED_LOGGED_RUNTIME = 11;
+  UPDATE_CONFLICT = 12;
+  DUPLICATE_FOUND=13;
+  ERRORTYPE_NO_ERROR = 14;
+  SERVER_CALL_TIMEOUT = 15;
+  NO_INTERNET = 16;
+  UNRESOLVED = 17;
+}
+
+enum ErrorCategoryUiEnum {
+  UNKNOWN_ERROR_CATEGORY = 0;
+  INPUT_VALIDATION_ERROR = 1;
+  DATA_MISMATCH_ERROR = 2;//deprecated
+  SELF_CODE_ERROR = 3;
+  NO_SLOW_OR_BLOCKED_DOWNSTREAM_CONNECTION_ERROR = 4;
+  DOWNSTREAM_SERVER_ERROR = 5;  //500 if received 500 from downstream.
+  CONCURRENT_CALL_ERROR = 6;  //409 For diff-update this should be handled by server by retrying.
+  BLOCKED_DOWNSTREAM_CONNECTION_ERROR = 7;//deprecated
+  NO_OR_SLOW_DOWNSTREAM_CONNECTION_ERROR = 8;//deprecated
+  DEVICE_NOT_REACHABLE = 9;//deprecated
+  ITEM_NOT_FOUND = 10;  // 404
+  DUPLICATE_ITEM_FOUND = 11;
+  SERVER_MISCONFIGURED_ERROR = 12;
+  REQUEST_TIMEOUT = 13;
+  PROVISIONED_THROUGHPUT_EXCEPTION=14; // 503 (if received 429 / provisioned throughput/throttling exception from downstream)
+  DOWNSTREAM_SERVER_UNAVAILABLE_ERROR = 15;  //503 if received 503 from downstream.
+  DOWNSTREAM_REQUEST_TIMEOUT_ERROR = 16; //504, if received 504 from downstream.
+  VERSION_MISMATCH = 17; //if entity version mismatched
+  UN_AUTHORIZED = 18; //if entity version mismatched
+  CONVERSION_ERROR =19;
+}
+
+enum ResultStatusUiEnum {
+	UNKNOWN_STATUS =0;
+	FAILED =1;
+	SUCCESS =2;
+}
+
+enum ServiceCallErrorCode {
+  SERVICE_UNREACHABLE = 0;
+  CALL_TIMEOUT = 1;
+}
+
+message ErrorProtoPb {
+   ErrorTypePbEnum ErrorTypePbEnum = 1;
+   string errorEnumClass = 2; // id less useful for logs
+   string errorEnumValue = 3; // id less useful for logs
+   string errorData = 4; // protobinary/json/prototext string. prototext is default.
+  repeated string serviceId = 5;
+   string errorDataClass = 6; // Full class name of error data
+   ErrorCategoryUiEnum errorCategory = 7;
+}
+
+enum BasicErrorCode {
+  NO_ERROR = 0;
+  UNKNOWN_ERROR = 1;
+}
+
+message ErrorResponsePb {
+	 string uiErrorString = 1;
+  	 string errorCode = 2;
+  	 ErrorCategoryUiEnum errorCategory = 3;
+     string exceptionId = 4;
+     string serviceCode = 5; //dynamodb or simpldb or any third party service
+     string operationId = 6; //from client request 
+     repeated ErrorProtoPb errors = 7;
+     string debugStackTrace = 8;
+}
+
+message ResultPb {
+	 ResultStatusUiEnum status = 1;
+	 ErrorResponsePb  error = 2;
+}
+
+
+enum RedirectTypeEnum {
+	UNKNOWN_REDIRECT = 0;
+	TEMPORARY_REDIRECT = 1;
+	PERMANENT_REDIRECT = 2;
+}
+
+message RedirectPb {
+	optional RedirectTypeEnum redirectType = 1;
+	optional string location = 2;
+}

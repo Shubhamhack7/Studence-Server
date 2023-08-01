@@ -94,7 +94,7 @@ public enum ReqPriorityUiEnum
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tiwari.studence.proto.requestcontext.RequestContextPbOuterClass.getDescriptor().getEnumTypes().get(0);
+    return com.tiwari.studence.proto.requestcontext.RequestContextPbOuterClass.getDescriptor().getEnumTypes().get(1);
   }
 
   private static final ReqPriorityUiEnum[] VALUES = values();

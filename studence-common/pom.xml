@@ -26,7 +26,7 @@
 		</dependency>	
 		<dependency>
 			<groupId>com.tiwari.studence</groupId>
-			<artifactId>studence-database</artifactId>
+			<artifactId>studence-dynamodb-database</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/com.google.inject/guice -->

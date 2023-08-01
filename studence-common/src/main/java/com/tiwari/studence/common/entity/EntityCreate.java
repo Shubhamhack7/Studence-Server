@@ -5,18 +5,16 @@ import javax.inject.Singleton;
 
 import com.google.protobuf.GeneratedMessageV3;
 import com.tiwari.studence.common.async.IFuture;
-import com.tiwari.studence.common.controlflow.GetItemEntityTableCF;
 import com.tiwari.studence.common.convertor.IConvertor;
 import com.tiwari.studence.common.indexer.AEntityIndexer;
 import com.tiwari.studence.common.interfaces.IDynamoPutTable;
-import com.tiwari.studence.common.prtovider.IPbBuilderProvider;
+import com.tiwari.studence.common.provider.IPbBuilderProvider;
 import com.tiwari.studence.common.services.interfaces.ITableNameProvider;
 import com.tiwari.studence.common.updater.AEntityUpdater;
-import com.tiwari.studence.common.updater.IUpdater;
 import com.tiwari.studence.util.exception.ErrorException;
 
 @Singleton
-public class EntityCreate<P extends GeneratedMessageV3, BU extends GeneratedMessageV3.Builder, BP extends IPbBuilderProvider<P, BU>, U extends AEntityUpdater<P, BU, IPbBuilderProvider<P, BU>, AEntityIndexer<P>>, C extends IConvertor<P>, T extends ITableNameProvider> {
+public class EntityCreate<P extends GeneratedMessageV3, BU extends GeneratedMessageV3.Builder,Lresp extends GeneratedMessageV3, BP extends IPbBuilderProvider<P, BU>, U extends AEntityUpdater<P, BU, IPbBuilderProvider<P, BU>, AEntityIndexer<P>>, C extends IConvertor<P,Lresp>, T extends ITableNameProvider> {
 
   private U m_updater;
   private C m_convertor;
@@ -24,11 +22,11 @@ public class EntityCreate<P extends GeneratedMessageV3, BU extends GeneratedMess
   private IDynamoPutTable m_dynamoPutTable;
   private BP m_builderProvider;
   private T m_tableNameProvider;
-  private EntityGet<P, BU, BP, C, T> m_getEntity;
+  private EntityGet<P,Lresp, BU, BP, C, T> m_getEntity;
 
   @Inject
   public EntityCreate(U updater, C convertor, BP builderProvider, T tableNameProvider,
-          IGetEntityId getNewId, IDynamoPutTable dynamoPutTable,EntityGet<P, BU, BP, C, T> getEntity) {
+          IGetEntityId getNewId, IDynamoPutTable dynamoPutTable,EntityGet<P, Lresp,BU, BP, C, T> getEntity) {
     m_updater = updater;
     m_convertor = convertor;
     m_getNewId = getNewId;
@@ -39,7 +37,7 @@ public class EntityCreate<P extends GeneratedMessageV3, BU extends GeneratedMess
   }
 
   public IFuture<P, ErrorException> createEntity(P request) {
-    EntityCreateCF<P, BU, BP, U, C, T> cf = new EntityCreateCF<P, BU, BP, U, C, T>(request,
+    EntityCreateCF cf = new EntityCreateCF (request,
             m_updater, m_convertor, m_builderProvider, m_tableNameProvider, m_getNewId,
             m_dynamoPutTable, new EntityPbBuilderProvider(),m_getEntity);
     cf.addLogObjects(request);

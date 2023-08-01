@@ -19,6 +19,11 @@ public final class EntityPbOuterClass {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_tiwari_studence_proto_entity_EntityPb_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tiwari_studence_proto_entity_PbConfig_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tiwari_studence_proto_entity_PbConfig_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -29,23 +34,39 @@ public final class EntityPbOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\016entityPb.proto\022 com.tiwari.studence.pr" +
-      "oto.entity\"o\n\010EntityPb\022\017\n\007hash_id\030\001 \001(\t\022" +
-      "\020\n\010range_id\030\002 \001(\t\022@\n\010lifetime\030\003 \001(\0162..co" +
-      "m.tiwari.studence.proto.entity.LifeTimeE" +
-      "num*X\n\014LifeTimeEnum\022\024\n\020UNKNOWN_LIFETIME\020" +
-      "\000\022\n\n\006ACTIVE\020\001\022\r\n\tSUSPENDED\020\002\022\013\n\007DELETED\020" +
-      "\003\022\n\n\006LOCKED\020\004B\005P\001\240\001\001b\006proto3"
+      "oto.entity\032\014timePb.proto\"\353\001\n\010EntityPb\022\017\n" +
+      "\007hash_id\030\001 \001(\t\022\020\n\010range_id\030\002 \001(\t\022@\n\010life" +
+      "time\030\003 \001(\0162..com.tiwari.studence.proto.e" +
+      "ntity.LifeTimeEnum\022:\n\006config\030\004 \001(\0132*.com" +
+      ".tiwari.studence.proto.entity.PbConfig\022>" +
+      "\n\010timezone\030\005 \001(\0162,.com.tiwari.studence.p" +
+      "roto.time.TimezoneEnum\"\244\001\n\010PbConfig\022\017\n\007v" +
+      "ersion\030\001 \001(\005\0229\n\tcreatedAt\030\002 \001(\0132&.com.ti" +
+      "wari.studence.proto.time.TimePb\0229\n\tupdat" +
+      "edAt\030\003 \001(\0132&.com.tiwari.studence.proto.t" +
+      "ime.TimePb\022\021\n\tupdatedBy\030\004 \001(\t*X\n\014LifeTim" +
+      "eEnum\022\024\n\020UNKNOWN_LIFETIME\020\000\022\n\n\006ACTIVE\020\001\022" +
+      "\r\n\tSUSPENDED\020\002\022\013\n\007DELETED\020\003\022\n\n\006LOCKED\020\004B" +
+      "\005P\001\240\001\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.tiwari.studence.proto.time.TimePbOuterClass.getDescriptor(),
         });
     internal_static_com_tiwari_studence_proto_entity_EntityPb_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_com_tiwari_studence_proto_entity_EntityPb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tiwari_studence_proto_entity_EntityPb_descriptor,
-        new java.lang.String[] { "HashId", "RangeId", "Lifetime", });
+        new java.lang.String[] { "HashId", "RangeId", "Lifetime", "Config", "Timezone", });
+    internal_static_com_tiwari_studence_proto_entity_PbConfig_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_com_tiwari_studence_proto_entity_PbConfig_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_entity_PbConfig_descriptor,
+        new java.lang.String[] { "Version", "CreatedAt", "UpdatedAt", "UpdatedBy", });
+    com.tiwari.studence.proto.time.TimePbOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

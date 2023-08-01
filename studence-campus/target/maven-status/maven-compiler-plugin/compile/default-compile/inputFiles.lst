@@ -1,1 +1,10 @@
-/home/tiwaritiwari/Studence/studence-campus/src/main/java/com/tiwari/studence/campus/App.java
+/home/tiwaritiwari/Studence/Studence-Server/studence-campus/src/main/java/com/tiwari/studence/proto/campus/CampusSearchRespPb.java
+/home/tiwaritiwari/Studence/Studence-Server/studence-campus/src/main/java/com/tiwari/studence/proto/campus/CampusPb.java
+/home/tiwaritiwari/Studence/Studence-Server/studence-campus/src/main/java/com/tiwari/studence/proto/campus/CampusSearchRespPbOrBuilder.java
+/home/tiwaritiwari/Studence/Studence-Server/studence-campus/src/main/java/com/tiwari/studence/campus/App.java
+/home/tiwaritiwari/Studence/Studence-Server/studence-campus/src/main/java/com/tiwari/studence/proto/campus/CampusRefPbOrBuilder.java
+/home/tiwaritiwari/Studence/Studence-Server/studence-campus/src/main/java/com/tiwari/studence/proto/campus/CampusPbOuterClass.java
+/home/tiwaritiwari/Studence/Studence-Server/studence-campus/src/main/java/com/tiwari/studence/proto/campus/CampusSearchReqPbOrBuilder.java
+/home/tiwaritiwari/Studence/Studence-Server/studence-campus/src/main/java/com/tiwari/studence/proto/campus/CampusSearchReqPb.java
+/home/tiwaritiwari/Studence/Studence-Server/studence-campus/src/main/java/com/tiwari/studence/proto/campus/CampusPbOrBuilder.java
+/home/tiwaritiwari/Studence/Studence-Server/studence-campus/src/main/java/com/tiwari/studence/proto/campus/CampusRefPb.java

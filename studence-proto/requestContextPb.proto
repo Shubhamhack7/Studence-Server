@@ -5,6 +5,25 @@ package com.tiwari.studence.proto.requestcontext;
 option java_multiple_files = true;
 option java_generate_equals_and_hash = true;
 
+enum ReqTypeUiEnum {
+  UNKNOWN_REQ_TYPE = 0;
+	GET_ID = 1;
+	GET_BY_EXTERNAL_ID = 2;
+	GET_LIST = 3;
+	CREATE = 4;
+	CREATE_WITH_REQUEST_ID = 5;
+	DELETE = 6;
+	DELETE_WITH_REQUEST_ID = 7;
+	UPDATE = 8;
+	UPDATE_WITH_REQUEST_ID = 9;
+	UPDATE_BY_EXTERNAL_ID = 10;
+	GET_OR_CREATE_BY_EXTERNALID = 11;
+	GET_OR_CREATE_BY_EXTERNALIDPB = 12;
+	GET_OR_CREATE_LIST_BY_EXTERNALIDPB_LIST = 13;
+	GET_BY_EXTERNALIDPB = 14;
+	SAFE_CREATE_OR_GET_BY_EXTERNAL_ID = 16;
+	IMPORT = 17;
+}
 
 enum ReqPriorityUiEnum {
   UNKNOWN_REQ_PRIORITY = 0;

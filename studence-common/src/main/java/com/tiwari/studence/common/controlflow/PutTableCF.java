@@ -8,7 +8,7 @@ import javax.inject.Singleton;
 
 import com.tiwari.studence.common.async.AControlFlow;
 import com.tiwari.studence.common.controlflow.CreateTableCF.State;
-import com.tiwari.studence.database.table.PutItemInDynamoDbTable;
+import com.tiwari.studence.dynamodb.database.table.PutItemInDynamoDbTable;
 import com.tiwari.studence.util.database.TableNameUtil;
 import com.tiwari.studence.util.exception.ErrorException;
 import com.tiwari.studence.util.exception.LoggedRuntimeException;

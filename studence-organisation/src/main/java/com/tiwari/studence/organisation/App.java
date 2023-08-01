@@ -2,13 +2,12 @@ package com.tiwari.studence.organisation;
 
 import com.google.inject.Injector;
 import com.google.protobuf.InvalidProtocolBufferException;
-import com.google.protobuf.util.JsonFormat;
+import com.googlecode.protobuf.format.JsonFormat;
 import com.tiwari.studence.organisation.injector.InjectorProvider;
 import com.tiwari.studence.organisation.service.IOrganisationService;
-import com.tiwari.studence.proto.entity.LifeTimeEnum;
-import com.tiwari.studence.proto.organisation.OrganisationPb;
+import com.tiwari.studence.proto.organisation.OrganisationSearchReqPb;
 import com.tiwari.studence.util.exception.ErrorException;
-
+import com.tiwari.studence.util.protobuf.ProtobufToJson;
 
 /**
  * Hello world!
@@ -20,10 +19,11 @@ public class App
     {
       Injector inj = InjectorProvider.createInjector();
       IOrganisationService a  = inj.getInstance(IOrganisationService.class);
-      OrganisationPb.Builder builder = OrganisationPb.newBuilder();
-      builder.getDbInfoBuilder().setLifetime(LifeTimeEnum.ACTIVE);
-      builder.setName("Demo School");
-     // System.out.println(JsonFormat.printer().print(builder.build()));
-      System.out.println(a.get("4!56").get());
+      OrganisationSearchReqPb.Builder builder = OrganisationSearchReqPb.newBuilder();
+      builder.setName("ram shyam");
+      System.out.print(ProtobufToJson.protobufToJsonString(builder.build()));
+        //System.out.println(a.search(builder.build()).get());
+
+
     }
 }

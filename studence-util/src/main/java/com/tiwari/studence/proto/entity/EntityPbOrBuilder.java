@@ -41,4 +41,30 @@ public interface EntityPbOrBuilder extends
    * @return The lifetime.
    */
   com.tiwari.studence.proto.entity.LifeTimeEnum getLifetime();
+
+  /**
+   * <code>.com.tiwari.studence.proto.entity.PbConfig config = 4;</code>
+   * @return Whether the config field is set.
+   */
+  boolean hasConfig();
+  /**
+   * <code>.com.tiwari.studence.proto.entity.PbConfig config = 4;</code>
+   * @return The config.
+   */
+  com.tiwari.studence.proto.entity.PbConfig getConfig();
+  /**
+   * <code>.com.tiwari.studence.proto.entity.PbConfig config = 4;</code>
+   */
+  com.tiwari.studence.proto.entity.PbConfigOrBuilder getConfigOrBuilder();
+
+  /**
+   * <code>.com.tiwari.studence.proto.time.TimezoneEnum timezone = 5;</code>
+   * @return The enum numeric value on the wire for timezone.
+   */
+  int getTimezoneValue();
+  /**
+   * <code>.com.tiwari.studence.proto.time.TimezoneEnum timezone = 5;</code>
+   * @return The timezone.
+   */
+  com.tiwari.studence.proto.time.TimezoneEnum getTimezone();
 }

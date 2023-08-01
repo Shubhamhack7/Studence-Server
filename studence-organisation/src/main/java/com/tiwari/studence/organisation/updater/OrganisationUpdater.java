@@ -13,23 +13,32 @@ import com.tiwari.studence.proto.organisation.OrganisationPb;
 import com.tiwari.studence.proto.organisation.OrganisationPb.Builder;
 import com.tiwari.studence.util.Strings;
 
+import com.tiwari.studence.util.helper.ContactDetailsHelper;
+import com.tiwari.studence.util.helper.NameHelper;
 import software.amazon.awssdk.services.dynamodb.model.AttributeValue;
 
 public class OrganisationUpdater extends
         AEntityUpdater<OrganisationPb, OrganisationPb.Builder, OrganisationPbProvider, OrganisationIndexer> {
+ private NameHelper m_nameHelper;
+ private ContactDetailsHelper m_contactDetailsHelper;
 
   @Inject
-  public OrganisationUpdater(OrganisationIndexer indexer, OrganisationPbProvider builderProvider) {
+  public OrganisationUpdater(OrganisationIndexer indexer, OrganisationPbProvider builderProvider,NameHelper nameHelper,ContactDetailsHelper contactDetailsHelper) {
     super(indexer, builderProvider);
     // TODO Auto-generated constructor stub
+    m_nameHelper=nameHelper;
+    m_contactDetailsHelper= contactDetailsHelper;
   }
 
   @Override
   public HashMap<String, AttributeValue> updater(OrganisationPb builder, EntityPb pb) {
     Builder orgBuilder = getBuilderProvider().getBuilder();
     updateEntityBuilder(orgBuilder.getDbInfoBuilder(), pb);
-    if (Strings.notEmpty(builder.getName())) {
-      orgBuilder.setName(builder.getName().toLowerCase());
+    if (Strings.notEmpty(builder.getName().getFirstName())) {
+      m_nameHelper.updateNamePb(builder.getName(),orgBuilder.getNameBuilder());
+    }
+    if (builder.getContactDetails().getSerializedSize() > 0){
+        m_contactDetailsHelper.updateContactDetails(builder.getContactDetails(),orgBuilder.getContactDetailsBuilder());
     }
     return super.updater(orgBuilder.build());
   }

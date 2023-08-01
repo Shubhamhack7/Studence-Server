@@ -7,6 +7,7 @@ import com.tiwari.studence.common.async.IFuture;
 import com.tiwari.studence.common.entity.IGetEntityId;
 import com.tiwari.studence.common.interfaces.IDynamoGetEntityTable;
 import com.tiwari.studence.common.interfaces.IDynamoPutTable;
+import com.tiwari.studence.common.interfaces.IDynamoUpdateTable;
 import com.tiwari.studence.common.services.AEntityService;
 import com.tiwari.studence.organisation.convertor.OrganisationConvertor;
 import com.tiwari.studence.organisation.indexer.OrganisationIndexer;
@@ -23,18 +24,18 @@ import com.tiwari.studence.util.exception.ErrorException;
 
 @Singleton
 public class OrgansationService extends
-        AEntityService<OrganisationPb, OrganisationSearchRespPb, OrganisationSearchRespPb, OrganisationPb.Builder, OrganisationPbProvider, OrganisationSearchRespPb.Builder, OrganisationSearchPbProvider, OrganisationIndexer, OrganisationUpdater, OrganisationConvertor, OraganisationTableNameProvider>
+        AEntityService<OrganisationPb, OrganisationSearchReqPb,OrganisationSearchReqPb.Builder, OrganisationSearchRespPb, OrganisationPb.Builder, OrganisationPbProvider, OrganisationSearchRespPb.Builder, OrganisationSearchPbProvider, OrganisationIndexer, OrganisationUpdater, OrganisationConvertor, OrganisationSearcher, OraganisationTableNameProvider>
         implements IOrganisationService {
 
   @Inject
-  public OrgansationService(OrganisationUpdater updator, OrganisationConvertor convertor,
-          OrganisationPbProvider builderProvder,
+  public OrgansationService(OrganisationSearcher searcher, OrganisationUpdater updator,
+          OrganisationConvertor convertor, OrganisationPbProvider builderProvder,
           OrganisationSearchPbProvider requestBuilderprovider,
           OraganisationTableNameProvider tableNameProvider, IGetEntityId getNewId,
-          IDynamoPutTable dynamoPutTable, IDynamoGetEntityTable dynamoGetTable) {
-    super(updator, convertor, builderProvder, requestBuilderprovider, tableNameProvider, getNewId,
-            dynamoPutTable, dynamoGetTable);
-    // TODO Auto-generated constructor stub
+          IDynamoPutTable dynamoPutTable, IDynamoGetEntityTable dynamoGetTable,
+          IDynamoUpdateTable dynamoUpdateTable) {
+    super(searcher, updator, convertor, builderProvder, requestBuilderprovider, tableNameProvider,
+            getNewId, dynamoPutTable, dynamoGetTable, dynamoUpdateTable);
   }
 
   @Override
@@ -53,21 +54,20 @@ public class OrgansationService extends
   }
 
   @Override
-  public IFuture<OrganisationPb, ErrorException> delete(OrganisationPb entity) {
+  public IFuture<OrganisationPb, ErrorException> delete(String entity) {
     // TODO Auto-generated method stub
     return null;
   }
 
   @Override
-  public IFuture<OrganisationPb, ErrorException> update(OrganisationPb entity) {
+  public IFuture<OrganisationPb, ErrorException> update(String id,OrganisationPb entity) {
     // TODO Auto-generated method stub
     return null;
   }
 
   @Override
   public IFuture<OrganisationSearchRespPb, ErrorException> search(OrganisationSearchReqPb entity) {
-    // TODO Auto-generated method stub
-    return null;
+    return super.searchEntity(entity);
   }
 
 }

@@ -23,14 +23,32 @@ public interface OrganisationPbOrBuilder extends
   com.tiwari.studence.proto.entity.EntityPbOrBuilder getDbInfoOrBuilder();
 
   /**
-   * <code>string name = 2;</code>
+   * <code>.com.tiwari.studence.proto.name.NamePb name = 2;</code>
+   * @return Whether the name field is set.
+   */
+  boolean hasName();
+  /**
+   * <code>.com.tiwari.studence.proto.name.NamePb name = 2;</code>
    * @return The name.
    */
-  java.lang.String getName();
+  com.tiwari.studence.proto.name.NamePb getName();
   /**
-   * <code>string name = 2;</code>
-   * @return The bytes for name.
+   * <code>.com.tiwari.studence.proto.name.NamePb name = 2;</code>
    */
-  com.google.protobuf.ByteString
-      getNameBytes();
+  com.tiwari.studence.proto.name.NamePbOrBuilder getNameOrBuilder();
+
+  /**
+   * <code>.com.tiwari.studence.proto.contactDetails.ContactDetailsPb contactDetails = 3;</code>
+   * @return Whether the contactDetails field is set.
+   */
+  boolean hasContactDetails();
+  /**
+   * <code>.com.tiwari.studence.proto.contactDetails.ContactDetailsPb contactDetails = 3;</code>
+   * @return The contactDetails.
+   */
+  com.tiwari.studence.proto.contactDetails.ContactDetailsPb getContactDetails();
+  /**
+   * <code>.com.tiwari.studence.proto.contactDetails.ContactDetailsPb contactDetails = 3;</code>
+   */
+  com.tiwari.studence.proto.contactDetails.ContactDetailsPbOrBuilder getContactDetailsOrBuilder();
 }

@@ -1,0 +1,84 @@
+// Copyright (c) 2022, All Right Reserved, Shubham Tiwari
+
+syntax = "proto3";
+
+package com.tiwari.studence.proto.search;
+
+option java_multiple_files = true;
+option java_generate_equals_and_hash = true;
+
+//The following protos are reserved 12,13,14,15,16.You shd not use them
+
+enum DynamoDBSearchMode{
+  UNKNOWN_MODE =0;
+  QUERY_MODE =1;
+  SCAN_FILTER_MODE =2;
+  GLOBAL_SECONDARY_INDEX =3;
+  LOCAL_SECONDARY_INDEX =4;
+}
+
+enum DynamoDBLogicalOperators{
+  UNKNOWN_OPERATORS =0;
+  AND=1;
+  OR=2;
+  NOT=3;
+}
+
+enum ComparisonOperatorEnum{
+  UNKNOWN = 0;
+  EQUAL_TO = 1;
+  NOT_EQUAL_TO = 2;
+  GREATER_THAN = 3;
+  LESS_THAN = 4;
+  GREATER_THAN_OR_EQUAL_TO = 5;
+  LESS_THAN_OR_EQUAL_TO = 6;
+  BETWEEN = 7;
+  IN = 8;
+  NOT_NULL = 9;
+  NULL = 10;
+  CONTAINS = 11;
+  NOT_CONTAINS = 12;
+  BEGINS_WITH = 13;
+
+}
+
+enum DynamoDBValue {
+  DYNAMODB_VALUE_UNSPECIFIED = 0;
+  DYNAMODB_VALUE_STRING = 1;
+  DYNAMODB_VALUE_INT = 2;
+  DYNAMODB_VALUE_BINARY = 3;
+  DYNAMODB_VALUE_FLOAT = 4;
+}
+
+message AttributeNameValuePair {
+  DynamoDBValue type =1;
+  string name = 2;
+  int32 intValue = 3;
+  float floatValue = 4;
+  string stringValue =5;
+  bytes binaryValue = 6;
+  string expression =7;
+  string attributeNameAlias  = 8;
+  string attributeValueAlias = 9;
+}
+
+
+message SearchPb{
+  ComparisonOperatorEnum type = 1;
+  repeated AttributeNameValuePair attributes =2 ;
+}
+
+message SearchRequestsPb{
+  DynamoDBSearchMode mode = 1;
+  repeated DynamoDBLogicalOperators Operators = 2;
+  repeated SearchPb requests = 3;
+}
+
+message DynamoDbSearchPb{
+  DynamoDBSearchMode mode = 1;
+  string tableName = 2;
+  string indexName =3;
+  string keyConditionExpression =4;
+  string filterExpression = 6;
+  repeated AttributeNameValuePair expressionAttribute =7;
+}

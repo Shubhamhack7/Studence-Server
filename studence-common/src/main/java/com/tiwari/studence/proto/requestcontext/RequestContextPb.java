@@ -34,67 +34,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private RequestContextPb(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            reqClass_ = s;
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            reqMethod_ = s;
-            break;
-          }
-          case 24: {
-            int rawValue = input.readEnum();
-
-            priority_ = rawValue;
-            break;
-          }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            reqId_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tiwari.studence.proto.requestcontext.RequestContextPbOuterClass.internal_static_com_tiwari_studence_proto_requestcontext_RequestContextPb_descriptor;
@@ -109,7 +48,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int REQCLASS_FIELD_NUMBER = 1;
-  private volatile java.lang.Object reqClass_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object reqClass_ = "";
   /**
    * <code>string reqClass = 1;</code>
    * @return The reqClass.
@@ -147,7 +87,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int REQMETHOD_FIELD_NUMBER = 2;
-  private volatile java.lang.Object reqMethod_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object reqMethod_ = "";
   /**
    * <code>string reqMethod = 2;</code>
    * @return The reqMethod.
@@ -185,7 +126,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PRIORITY_FIELD_NUMBER = 3;
-  private int priority_;
+  private int priority_ = 0;
   /**
    * <code>.com.tiwari.studence.proto.requestcontext.ReqPriorityUiEnum priority = 3;</code>
    * @return The enum numeric value on the wire for priority.
@@ -198,13 +139,13 @@ private static final long serialVersionUID = 0L;
    * @return The priority.
    */
   @java.lang.Override public com.tiwari.studence.proto.requestcontext.ReqPriorityUiEnum getPriority() {
-    @SuppressWarnings("deprecation")
-    com.tiwari.studence.proto.requestcontext.ReqPriorityUiEnum result = com.tiwari.studence.proto.requestcontext.ReqPriorityUiEnum.valueOf(priority_);
+    com.tiwari.studence.proto.requestcontext.ReqPriorityUiEnum result = com.tiwari.studence.proto.requestcontext.ReqPriorityUiEnum.forNumber(priority_);
     return result == null ? com.tiwari.studence.proto.requestcontext.ReqPriorityUiEnum.UNRECOGNIZED : result;
   }
 
   public static final int REQID_FIELD_NUMBER = 4;
-  private volatile java.lang.Object reqId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object reqId_ = "";
   /**
    * <code>string reqId = 4;</code>
    * @return The reqId.
@@ -255,19 +196,19 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getReqClassBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reqClass_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, reqClass_);
     }
-    if (!getReqMethodBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reqMethod_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, reqMethod_);
     }
     if (priority_ != com.tiwari.studence.proto.requestcontext.ReqPriorityUiEnum.UNKNOWN_REQ_PRIORITY.getNumber()) {
       output.writeEnum(3, priority_);
     }
-    if (!getReqIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reqId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, reqId_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -276,20 +217,20 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getReqClassBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reqClass_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, reqClass_);
     }
-    if (!getReqMethodBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reqMethod_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, reqMethod_);
     }
     if (priority_ != com.tiwari.studence.proto.requestcontext.ReqPriorityUiEnum.UNKNOWN_REQ_PRIORITY.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, priority_);
     }
-    if (!getReqIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reqId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, reqId_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -311,7 +252,7 @@ private static final long serialVersionUID = 0L;
     if (priority_ != other.priority_) return false;
     if (!getReqId()
         .equals(other.getReqId())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -330,7 +271,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + priority_;
     hash = (37 * hash) + REQID_FIELD_NUMBER;
     hash = (53 * hash) + getReqId().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -447,30 +388,22 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tiwari.studence.proto.requestcontext.RequestContextPb.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       reqClass_ = "";
-
       reqMethod_ = "";
-
       priority_ = 0;
-
       reqId_ = "";
-
       return this;
     }
 
@@ -497,12 +430,25 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tiwari.studence.proto.requestcontext.RequestContextPb buildPartial() {
       com.tiwari.studence.proto.requestcontext.RequestContextPb result = new com.tiwari.studence.proto.requestcontext.RequestContextPb(this);
-      result.reqClass_ = reqClass_;
-      result.reqMethod_ = reqMethod_;
-      result.priority_ = priority_;
-      result.reqId_ = reqId_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tiwari.studence.proto.requestcontext.RequestContextPb result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.reqClass_ = reqClass_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.reqMethod_ = reqMethod_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.priority_ = priority_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.reqId_ = reqId_;
+      }
     }
 
     @java.lang.Override
@@ -551,10 +497,12 @@ private static final long serialVersionUID = 0L;
       if (other == com.tiwari.studence.proto.requestcontext.RequestContextPb.getDefaultInstance()) return this;
       if (!other.getReqClass().isEmpty()) {
         reqClass_ = other.reqClass_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getReqMethod().isEmpty()) {
         reqMethod_ = other.reqMethod_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.priority_ != 0) {
@@ -562,9 +510,10 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getReqId().isEmpty()) {
         reqId_ = other.reqId_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -579,19 +528,53 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tiwari.studence.proto.requestcontext.RequestContextPb parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              reqClass_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              reqMethod_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 24: {
+              priority_ = input.readEnum();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 34: {
+              reqId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tiwari.studence.proto.requestcontext.RequestContextPb) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object reqClass_ = "";
     /**
@@ -634,11 +617,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setReqClass(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       reqClass_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -647,8 +628,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearReqClass() {
-      
       reqClass_ = getDefaultInstance().getReqClass();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -659,12 +640,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setReqClassBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       reqClass_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -710,11 +689,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setReqMethod(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       reqMethod_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -723,8 +700,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearReqMethod() {
-      
       reqMethod_ = getDefaultInstance().getReqMethod();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -735,12 +712,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setReqMethodBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       reqMethod_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -759,8 +734,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPriorityValue(int value) {
-      
       priority_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -770,8 +745,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tiwari.studence.proto.requestcontext.ReqPriorityUiEnum getPriority() {
-      @SuppressWarnings("deprecation")
-      com.tiwari.studence.proto.requestcontext.ReqPriorityUiEnum result = com.tiwari.studence.proto.requestcontext.ReqPriorityUiEnum.valueOf(priority_);
+      com.tiwari.studence.proto.requestcontext.ReqPriorityUiEnum result = com.tiwari.studence.proto.requestcontext.ReqPriorityUiEnum.forNumber(priority_);
       return result == null ? com.tiwari.studence.proto.requestcontext.ReqPriorityUiEnum.UNRECOGNIZED : result;
     }
     /**
@@ -783,7 +757,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       priority_ = value.getNumber();
       onChanged();
       return this;
@@ -793,7 +767,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPriority() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       priority_ = 0;
       onChanged();
       return this;
@@ -840,11 +814,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setReqId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       reqId_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -853,8 +825,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearReqId() {
-      
       reqId_ = getDefaultInstance().getReqId();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -865,12 +837,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setReqIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       reqId_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -907,7 +877,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new RequestContextPb(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

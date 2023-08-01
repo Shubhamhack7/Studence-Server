@@ -4,7 +4,7 @@ import javax.inject.Inject;
 
 import com.google.inject.Singleton;
 import com.tiwari.studence.common.async.AControlFlow;
-import com.tiwari.studence.database.table.CreateDynamoDbTable;
+import com.tiwari.studence.dynamodb.database.table.CreateDynamoDbTable;
 import com.tiwari.studence.util.database.TableNameUtil;
 import com.tiwari.studence.util.exception.ErrorException;
 import com.tiwari.studence.util.exception.LoggedRuntimeException;

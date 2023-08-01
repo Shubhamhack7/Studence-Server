@@ -7,7 +7,7 @@ import javax.inject.Singleton;
 
 import com.tiwari.studence.common.async.IFuture;
 import com.tiwari.studence.common.interfaces.IDynamoGetEntityTable;
-import com.tiwari.studence.database.table.GetItemFromDynamodbTable;
+import com.tiwari.studence.dynamodb.database.table.GetItemFromDynamodbTable;
 import com.tiwari.studence.util.StudenceSpecialCharecterEnum;
 import com.tiwari.studence.util.database.TableNameUtil;
 import com.tiwari.studence.util.exception.ErrorException;

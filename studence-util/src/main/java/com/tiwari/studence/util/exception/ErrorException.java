@@ -98,6 +98,9 @@ public class ErrorException extends Exception {
   private String createStackTraceString() {
     return ExceptionStackTrace.getExceptionTrace(this);
   }
+  private String createStackTraceString(Throwable t) {
+	    return ExceptionStackTrace.getExceptionTrace(t);
+	  }
 
   public List<Object> getArgs() {
     return m_args;

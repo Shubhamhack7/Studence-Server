@@ -7,10 +7,12 @@ import javax.inject.Singleton;
 public class ServerListener implements IServerListener {
 
   private ServerEnvironmentType m_environment;
+  private ServerConfigUtility m_serServerConfigUtility;
 
   @Inject
-  public ServerListener() {
-
+  public ServerListener(ServerConfigUtility serServerConfigUtility) {
+  m_serServerConfigUtility = serServerConfigUtility;
+  this.setEnvironmentType(m_serServerConfigUtility.getServerEnvironment());
   }
 
   @Override
