@@ -265,7 +265,8 @@
 	
   
   <modules>
-        <module>studence-typeAhead</module>
+    <module>studence-dump</module>
+    <module>studence-typeAhead</module>
     <module>studence-util</module>
     <module>studence-common</module>
     <module>studence-dynamodb-database</module>

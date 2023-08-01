@@ -11,6 +11,8 @@
     <file url="file://$PROJECT_DIR$/studence-common-http/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/studence-dump/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/studence-dump/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-dynamodb-database/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-dynamodb-database/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-guardian/src/main/java" charset="UTF-8" />
