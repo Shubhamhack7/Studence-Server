@@ -17,7 +17,7 @@ import software.amazon.awssdk.services.dynamodb.DynamoDbClient;
 public class DynamoDbConnector extends AwsCredentials {
 
 	public DynamoDbClient getDynamoDbClient() {
-		return DynamoDbClient.builder().endpointOverride(URI.create("http://localhost:8000"))
+		return DynamoDbClient.builder().endpointOverride(URI.create(getREMOTE_URL()))
 				// The region is meaningless for local DynamoDb but required for client builder
 				// validation
 				.region(Region.US_WEST_2).credentialsProvider(StaticCredentialsProvider
@@ -29,7 +29,7 @@ public class DynamoDbConnector extends AwsCredentials {
 		AWSCredentials credentials = new BasicAWSCredentials(getACCESS_KEY_ID(), getSECRET_ACCESS_KEY());
 		return AmazonDynamoDBClientBuilder.standard()
 				.withCredentials(new AWSStaticCredentialsProvider(credentials))
-				.withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration("http://localhost:8000", " us-west-2"))
+				.withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration(getREMOTE_URL(), " us-west-2"))
 				.build();
 	}
 

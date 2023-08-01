@@ -13,6 +13,7 @@ import com.tiwari.studence.common.services.interfaces.ITableNameProvider;
 import com.tiwari.studence.common.updater.AEntityUpdater;
 import com.tiwari.studence.proto.entity.EntityPb;
 import com.tiwari.studence.proto.entity.LifeTimeEnum;
+import com.tiwari.studence.proto.error.ErrorCategoryUiEnum;
 import com.tiwari.studence.util.collect.Pair;
 import com.tiwari.studence.util.entity.EntityUtilHelper;
 import com.tiwari.studence.util.exception.ErrorException;
@@ -31,7 +32,7 @@ public class EntityCreateCF<P extends GeneratedMessageV3,Lresp extends Generated
   private T m_tableNameProvider;
   private EntityGet<P,Lresp, BU, BP, C, T> m_getEntity;
   private EntityPbBuilderProvider m_entityProvider;
-  com.tiwari.studence.proto.entity.EntityPb.Builder entity;
+  com.tiwari.studence.proto.entity.EntityPb.Builder entity = EntityPb.newBuilder();
   private Pair<Integer, String> new_id;
   private HashMap<String, AttributeValue> attrMap = new HashMap<String, AttributeValue>();
 
@@ -76,13 +77,14 @@ public class EntityCreateCF<P extends GeneratedMessageV3,Lresp extends Generated
         Pair<Integer, String> new_id = m_future.get();
         BU builder = m_builderProvider.getBuilder(m_request);
         // builder.getDbInfo().mergeFrom(entity.build());
-        EntityPb.Builder entity = m_entityProvider.getBuilder();
+        entity = m_entityProvider.getBuilder();
+        entity.clear();
         EntityUtilHelper.getCreateEntity(entity,m_future.get());
         attrMap = m_updater.updater((P) builder.build(), entity.build());
         m_updater.getIndexer().getGenricEntityIndexer(attrMap, entity.build());
         // getAsyncCallback().set(0, m_future.item());
       } catch (ErrorException e) {
-        getAsyncCallback().handleUnexpectedException(new LoggedRuntimeException(e));
+        getAsyncCallback().handleUnexpectedException(new LoggedRuntimeException(ErrorCategoryUiEnum.INPUT_VALIDATION_ERROR,e));
         return State.DONE;
       }
       return State.CREATE_ENTITY;

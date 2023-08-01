@@ -56,6 +56,18 @@ public class LoggedRuntimeException extends RuntimeException {
 		printError();
 	}
 
+	public LoggedRuntimeException(ErrorCategoryUiEnum serverMisconfiguredError,ErrorException e) {
+		m_errorProto = e.getErrorProto();
+		m_args = e.getArgs();
+		m_errorCode = e.getErrorCode();
+		m_args.add(serverMisconfiguredError);
+		m_args.add("Converted From ErrorException@" + Integer.toHexString(System.identityHashCode(e)));
+		m_args.add("For LoggedRuntimeException@" + Integer.toHexString(System.identityHashCode(this)));
+		m_stackTrace = createStackTraceString();
+		printError();
+	}
+
+
 	public LoggedRuntimeException(String serviceCode, String errorCode, String uiErrorString, Throwable e,
 			Object... args) {
 		// m_errorProto = new ParsedErrorProto(errorCategory, errorType);

@@ -41,7 +41,7 @@ public class OrganisationSearcher extends
       SearchPb.Builder nameReq = requestBuilder.addRequestsBuilder();
       nameReq.setType(ComparisonOperatorEnum.EQUAL_TO);
       addEqualToValue(nameReq, DynamoDBValue.DYNAMODB_VALUE_STRING, builder.getName(),
-              OrganisationIndexerEnum.ORGANISATION_NAME.name());
+              OrganisationIndexerEnum.ORGANISATION_NAME.name(),OrganisationIndexerEnum.ORGANISATION_NAME.isLowerCase());
     }
     return super.performsearcher(requestBuilder.build());
   }

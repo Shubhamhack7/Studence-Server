@@ -16,6 +16,11 @@ public class EntityUtilHelper {
     return hash + StudenceSpecialCharecterEnum.EXCLAMATION.getSign() + range;
   }
 
+  public static String getDbInfoIdWithSpecialCharecterUsingEntityPb(EntityPb entity) {
+
+    return entity.getHashId() + StudenceSpecialCharecterEnum.EXCLAMATION.getSign() + entity.getRangeId();
+  }
+
   public static Pair<String, String> getHashandRangeKey(String dbInfoId) {
     Preconditions.check(dbInfoId.contains(StudenceSpecialCharecterEnum.EXCLAMATION.getSign()),
             "Id is not valid");

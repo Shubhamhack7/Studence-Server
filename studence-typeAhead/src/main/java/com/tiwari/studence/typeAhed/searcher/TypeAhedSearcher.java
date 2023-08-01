@@ -1,11 +1,8 @@
 package com.tiwari.studence.typeAhed.searcher;
 
 import com.tiwari.studence.common.async.IFuture;
-import com.tiwari.studence.common.convertor.AEntityConvertor;
 import com.tiwari.studence.common.interfaces.IDynamoSearchTable;
-import com.tiwari.studence.common.provider.IReqRespPbBuilderProvider;
 import com.tiwari.studence.common.searcher.AEntitySearcher;
-import com.tiwari.studence.common.services.interfaces.ITableNameProvider;
 import com.tiwari.studence.proto.login.ProfileTypeEnum;
 import com.tiwari.studence.proto.search.*;
 import com.tiwari.studence.proto.typeAhead.TypeAheadPb;
@@ -42,13 +39,15 @@ public class TypeAhedSearcher extends
       SearchPb.Builder nameReq = requestBuilder.addRequestsBuilder();
       nameReq.setType(ComparisonOperatorEnum.BEGINS_WITH);
       addEqualToValue(nameReq, DynamoDBValue.DYNAMODB_VALUE_STRING, builder.getContext(),
-              TypeAheadIndexerEnum.TYPE_AHEAD_CONTEXT_NAME.name());
+              TypeAheadIndexerEnum.TYPE_AHEAD_CONTEXT_NAME.name(),
+              TypeAheadIndexerEnum.TYPE_AHEAD_CONTEXT_NAME.isLowerCase());
     }
     if (builder.getTypeAheadType() != ProfileTypeEnum.UNKNOWN_LOGIN_TYPE) {
       SearchPb.Builder nameReq = requestBuilder.addRequestsBuilder();
       nameReq.setType(ComparisonOperatorEnum.EQUAL_TO);
       addEqualToValue(nameReq, DynamoDBValue.DYNAMODB_VALUE_STRING,
-              builder.getTypeAheadType().name(), TypeAheadIndexerEnum.TYPE_AHEAD_TYPE.name());
+              builder.getTypeAheadType().name(), TypeAheadIndexerEnum.TYPE_AHEAD_TYPE.name(),
+              TypeAheadIndexerEnum.TYPE_AHEAD_TYPE.isLowerCase());
     }
     return super.performsearcher(requestBuilder.build());
   }

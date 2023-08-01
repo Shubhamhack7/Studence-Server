@@ -23,7 +23,8 @@ import javax.inject.Inject;
 import javax.inject.Singleton;
 
 @Singleton
-public class LoginSearcher extends AEntitySearcher<LoginPb,LoginPb.Builder, LoginPbProvider, LoginSearchReqPb,LoginSearchReqPb.Builder, LoginSearchRespPb,LoginSearchRespPb.Builder, LoginSearchPbProvider, LoginConvertor, LoginIndexer, LoginTableNameProvider> {
+public class LoginSearcher extends
+        AEntitySearcher<LoginPb, LoginPb.Builder, LoginPbProvider, LoginSearchReqPb, LoginSearchReqPb.Builder, LoginSearchRespPb, LoginSearchRespPb.Builder, LoginSearchPbProvider, LoginConvertor, LoginIndexer, LoginTableNameProvider> {
 
   @Inject
   public LoginSearcher(LoginConvertor convertor, IDynamoSearchTable dyamodbSearchTable,
@@ -38,13 +39,15 @@ public class LoginSearcher extends AEntitySearcher<LoginPb,LoginPb.Builder, Logi
       SearchPb.Builder nameReq = requestBuilder.addRequestsBuilder();
       nameReq.setType(ComparisonOperatorEnum.EQUAL_TO);
       addEqualToValue(nameReq, DynamoDBValue.DYNAMODB_VALUE_STRING, builder.getEmailId(),
-              LoginIndexerEnum.LOGIN_EMAIL_ID.name());
+              LoginIndexerEnum.LOGIN_EMAIL_ID.name(),
+              LoginIndexerEnum.LOGIN_EMAIL_ID.isLowerCase());
     }
     if (Strings.notEmpty(builder.getMobileNo())) {
       SearchPb.Builder nameReq = requestBuilder.addRequestsBuilder();
       nameReq.setType(ComparisonOperatorEnum.EQUAL_TO);
       addEqualToValue(nameReq, DynamoDBValue.DYNAMODB_VALUE_STRING, builder.getMobileNo(),
-              LoginIndexerEnum.LOGIN_EMAIL_ID.name());
+              LoginIndexerEnum.LOGIN_MOBILE_NO.name(),
+              LoginIndexerEnum.LOGIN_MOBILE_NO.isLowerCase());
     }
     return super.performsearcher(requestBuilder.build());
   }

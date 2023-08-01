@@ -14,12 +14,9 @@ import com.tiwari.studence.common.services.interfaces.ITableNameProvider;
 import com.tiwari.studence.dynamodb.database.provider.SearchRequestPbProvider;
 import com.tiwari.studence.proto.entity.LifeTimeEnum;
 import com.tiwari.studence.proto.search.*;
-import com.tiwari.studence.proto.summary.SummaryPb;
 import com.tiwari.studence.util.exception.ErrorException;
 
-import java.util.List;
-
-public abstract class AEntitySearcher<P extends GeneratedMessageV3, BU extends GeneratedMessageV3.Builder, BP extends IPbBuilderProvider<P, BU>, Lreq extends GeneratedMessageV3,LreqBU extends GeneratedMessageV3.Builder, Lresp extends GeneratedMessageV3, RBU extends GeneratedMessageV3.Builder, RBUP extends IReqRespPbBuilderProvider<Lreq,LreqBU, Lresp, RBU>, C extends AEntityConvertor<P, BU, BP,Lreq,LreqBU, Lresp, RBU, RBUP>, I extends AEntityIndexer<P>, T extends ITableNameProvider>
+public abstract class AEntitySearcher<P extends GeneratedMessageV3, BU extends GeneratedMessageV3.Builder, BP extends IPbBuilderProvider<P, BU>, Lreq extends GeneratedMessageV3, LreqBU extends GeneratedMessageV3.Builder, Lresp extends GeneratedMessageV3, RBU extends GeneratedMessageV3.Builder, RBUP extends IReqRespPbBuilderProvider<Lreq, LreqBU, Lresp, RBU>, C extends AEntityConvertor<P, BU, BP, Lreq, LreqBU, Lresp, RBU, RBUP>, I extends AEntityIndexer<P>, T extends ITableNameProvider>
         implements ISearcher<Lreq, Lresp> {
 
   private SearchRequestPbProvider m_saerchRequest;
@@ -33,12 +30,14 @@ public abstract class AEntitySearcher<P extends GeneratedMessageV3, BU extends G
   }
 
   @Inject
-  public AEntitySearcher(C convertor, IDynamoSearchTable dyamodbSearchTable, T tableNameProvider,RBUP responseBuilderProvider) {
+  public AEntitySearcher(C convertor, IDynamoSearchTable dyamodbSearchTable, T tableNameProvider,
+          RBUP responseBuilderProvider) {
     m_convertor = convertor;
     m_dyamodbSearchTable = dyamodbSearchTable;
     m_responseBuilderProvider = responseBuilderProvider;
     m_saerchRequest = new SearchRequestPbProvider();
-    m_searchEntity = new SearchEntity(m_convertor, tableNameProvider, dyamodbSearchTable);
+    m_searchEntity = new SearchEntity(m_convertor, tableNameProvider, dyamodbSearchTable,
+            m_responseBuilderProvider);
   }
 
   @Override
@@ -54,7 +53,8 @@ public abstract class AEntitySearcher<P extends GeneratedMessageV3, BU extends G
     reqBu.getRequestsBuilderList().forEach(builder1 -> {
       if (builder1.getType() == ComparisonOperatorEnum.EQUAL_TO) {
         addEqualToValue(builder1, DynamoDBValue.DYNAMODB_VALUE_STRING, LifeTimeEnum.ACTIVE.name(),
-                GenericSearchEnum.LIFETIME.name());
+                GenericSearchEnum.LIFETIME.name(),
+                false);
       }
     });
     return m_searchEntity.searchEntity(reqBu.build());
@@ -65,11 +65,15 @@ public abstract class AEntitySearcher<P extends GeneratedMessageV3, BU extends G
   }
 
   protected void addEqualToValue(SearchPb.Builder addRequestsBuilder,
-          DynamoDBValue dynamodbValueString, String data, String key) {
+          DynamoDBValue dynamodbValueString, String data, String key, boolean lowerCase) {
     AttributeNameValuePair.Builder attr = addRequestsBuilder.addAttributesBuilder();
     attr.setType(dynamodbValueString);
     attr.setName(key);
-    attr.setStringValue(data);
+    if (lowerCase) {
+      attr.setStringValue(data.toLowerCase());
+    } else {
+      attr.setStringValue(data);
+    }
   }
 
 }

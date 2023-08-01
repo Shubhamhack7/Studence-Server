@@ -3,8 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Studence-Server.iml" filepath="$PROJECT_DIR$/Studence-Server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/studence-classes/studence-classes.iml" filepath="$PROJECT_DIR$/studence-classes/studence-classes.iml" />
       <module fileurl="file://$PROJECT_DIR$/studence-dump/studence-dump.iml" filepath="$PROJECT_DIR$/studence-dump/studence-dump.iml" />
-      <module fileurl="file://$PROJECT_DIR$/studence-management-app/studence-management-app.iml" filepath="$PROJECT_DIR$/studence-management-app/studence-management-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/studence-dynamodb-database/studence-dynamodb-database.iml" filepath="$PROJECT_DIR$/studence-dynamodb-database/studence-dynamodb-database.iml" />
+      <module fileurl="file://$PROJECT_DIR$/studence-typeAhead/studence-typeAhead.iml" filepath="$PROJECT_DIR$/studence-typeAhead/studence-typeAhead.iml" />
     </modules>
   </component>
 </project>
