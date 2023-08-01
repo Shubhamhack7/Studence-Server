@@ -17,6 +17,7 @@ private static final long serialVersionUID = 0L;
   }
   private TypeAheadSearchReqPb() {
     context_ = "";
+    typeAheadType_ = 0;
   }
 
   @java.lang.Override
@@ -83,6 +84,24 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int TYPEAHEADTYPE_FIELD_NUMBER = 2;
+  private int typeAheadType_ = 0;
+  /**
+   * <code>.com.tiwari.studence.proto.login.ProfileTypeEnum typeAheadType = 2;</code>
+   * @return The enum numeric value on the wire for typeAheadType.
+   */
+  @java.lang.Override public int getTypeAheadTypeValue() {
+    return typeAheadType_;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.login.ProfileTypeEnum typeAheadType = 2;</code>
+   * @return The typeAheadType.
+   */
+  @java.lang.Override public com.tiwari.studence.proto.login.ProfileTypeEnum getTypeAheadType() {
+    com.tiwari.studence.proto.login.ProfileTypeEnum result = com.tiwari.studence.proto.login.ProfileTypeEnum.forNumber(typeAheadType_);
+    return result == null ? com.tiwari.studence.proto.login.ProfileTypeEnum.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -100,6 +119,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(context_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, context_);
     }
+    if (typeAheadType_ != com.tiwari.studence.proto.login.ProfileTypeEnum.UNKNOWN_LOGIN_TYPE.getNumber()) {
+      output.writeEnum(2, typeAheadType_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -111,6 +133,10 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(context_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, context_);
+    }
+    if (typeAheadType_ != com.tiwari.studence.proto.login.ProfileTypeEnum.UNKNOWN_LOGIN_TYPE.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(2, typeAheadType_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -129,6 +155,7 @@ private static final long serialVersionUID = 0L;
 
     if (!getContext()
         .equals(other.getContext())) return false;
+    if (typeAheadType_ != other.typeAheadType_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -142,6 +169,8 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + CONTEXT_FIELD_NUMBER;
     hash = (53 * hash) + getContext().hashCode();
+    hash = (37 * hash) + TYPEAHEADTYPE_FIELD_NUMBER;
+    hash = (53 * hash) + typeAheadType_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -272,6 +301,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       context_ = "";
+      typeAheadType_ = 0;
       return this;
     }
 
@@ -307,6 +337,9 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.context_ = context_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.typeAheadType_ = typeAheadType_;
       }
     }
 
@@ -359,6 +392,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
+      if (other.typeAheadType_ != 0) {
+        setTypeAheadTypeValue(other.getTypeAheadTypeValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -390,6 +426,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 16: {
+              typeAheadType_ = input.readEnum();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -475,6 +516,59 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       context_ = value;
       bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private int typeAheadType_ = 0;
+    /**
+     * <code>.com.tiwari.studence.proto.login.ProfileTypeEnum typeAheadType = 2;</code>
+     * @return The enum numeric value on the wire for typeAheadType.
+     */
+    @java.lang.Override public int getTypeAheadTypeValue() {
+      return typeAheadType_;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.login.ProfileTypeEnum typeAheadType = 2;</code>
+     * @param value The enum numeric value on the wire for typeAheadType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTypeAheadTypeValue(int value) {
+      typeAheadType_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.login.ProfileTypeEnum typeAheadType = 2;</code>
+     * @return The typeAheadType.
+     */
+    @java.lang.Override
+    public com.tiwari.studence.proto.login.ProfileTypeEnum getTypeAheadType() {
+      com.tiwari.studence.proto.login.ProfileTypeEnum result = com.tiwari.studence.proto.login.ProfileTypeEnum.forNumber(typeAheadType_);
+      return result == null ? com.tiwari.studence.proto.login.ProfileTypeEnum.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.login.ProfileTypeEnum typeAheadType = 2;</code>
+     * @param value The typeAheadType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTypeAheadType(com.tiwari.studence.proto.login.ProfileTypeEnum value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000002;
+      typeAheadType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.login.ProfileTypeEnum typeAheadType = 2;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTypeAheadType() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      typeAheadType_ = 0;
       onChanged();
       return this;
     }

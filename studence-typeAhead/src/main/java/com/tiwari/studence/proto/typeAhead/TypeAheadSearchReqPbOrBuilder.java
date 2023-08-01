@@ -18,4 +18,15 @@ public interface TypeAheadSearchReqPbOrBuilder extends
    */
   com.google.protobuf.ByteString
       getContextBytes();
+
+  /**
+   * <code>.com.tiwari.studence.proto.login.ProfileTypeEnum typeAheadType = 2;</code>
+   * @return The enum numeric value on the wire for typeAheadType.
+   */
+  int getTypeAheadTypeValue();
+  /**
+   * <code>.com.tiwari.studence.proto.login.ProfileTypeEnum typeAheadType = 2;</code>
+   * @return The typeAheadType.
+   */
+  com.tiwari.studence.proto.login.ProfileTypeEnum getTypeAheadType();
 }

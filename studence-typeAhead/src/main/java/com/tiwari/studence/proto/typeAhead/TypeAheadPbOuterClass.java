@@ -46,12 +46,14 @@ public final class TypeAheadPbOuterClass {
       "\022C\n\007context\030\002 \001(\01322.com.tiwari.studence." +
       "proto.genericRef.GenericRefPb\022G\n\rtypeAhe" +
       "adType\030\003 \001(\01620.com.tiwari.studence.proto" +
-      ".login.ProfileTypeEnum\"\'\n\024TypeAheadSearc" +
-      "hReqPb\022\017\n\007context\030\001 \001(\t\"\231\001\n\025TypeAheadSea" +
-      "rchRespPb\022=\n\007summary\030\001 \001(\0132,.com.tiwari." +
-      "studence.proto.summary.SummaryPb\022A\n\007resu" +
-      "lts\030\002 \003(\01320.com.tiwari.studence.proto.ty" +
-      "peAhead.TypeAheadPbB\005P\001\240\001\001b\006proto3"
+      ".login.ProfileTypeEnum\"p\n\024TypeAheadSearc" +
+      "hReqPb\022\017\n\007context\030\001 \001(\t\022G\n\rtypeAheadType" +
+      "\030\002 \001(\01620.com.tiwari.studence.proto.login" +
+      ".ProfileTypeEnum\"\231\001\n\025TypeAheadSearchResp" +
+      "Pb\022=\n\007summary\030\001 \001(\0132,.com.tiwari.studenc" +
+      "e.proto.summary.SummaryPb\022A\n\007results\030\002 \003" +
+      "(\01320.com.tiwari.studence.proto.typeAhead" +
+      ".TypeAheadPbB\005P\001\240\001\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -72,7 +74,7 @@ public final class TypeAheadPbOuterClass {
     internal_static_com_tiwari_studence_proto_typeAhead_TypeAheadSearchReqPb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tiwari_studence_proto_typeAhead_TypeAheadSearchReqPb_descriptor,
-        new java.lang.String[] { "Context", });
+        new java.lang.String[] { "Context", "TypeAheadType", });
     internal_static_com_tiwari_studence_proto_typeAhead_TypeAheadSearchRespPb_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_com_tiwari_studence_proto_typeAhead_TypeAheadSearchRespPb_fieldAccessorTable = new

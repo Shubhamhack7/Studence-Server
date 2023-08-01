@@ -20,6 +20,7 @@ message TypeAheadPb {
 
 message TypeAheadSearchReqPb{
   string context = 1;
+  com.tiwari.studence.proto.login.ProfileTypeEnum typeAheadType =2;
 }
 
 
