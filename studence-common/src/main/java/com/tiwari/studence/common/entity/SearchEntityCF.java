@@ -6,6 +6,7 @@ import com.tiwari.studence.common.async.IFuture;
 import com.tiwari.studence.common.convertor.IConvertor;
 import com.tiwari.studence.common.interfaces.IDynamoSearchTable;
 import com.tiwari.studence.common.provider.IPbBuilderProvider;
+import com.tiwari.studence.common.provider.IReqRespPbBuilderProvider;
 import com.tiwari.studence.common.services.interfaces.ITableNameProvider;
 import com.tiwari.studence.proto.search.SearchRequestsPb;
 import com.tiwari.studence.util.collect.Lists;
@@ -16,23 +17,26 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class SearchEntityCF<P extends GeneratedMessageV3, BU extends GeneratedMessageV3.Builder, BP extends IPbBuilderProvider<P, BU>, Lresp extends GeneratedMessageV3, C extends IConvertor<P, Lresp>, T extends ITableNameProvider>
+public class SearchEntityCF<P extends GeneratedMessageV3, BU extends GeneratedMessageV3.Builder, BP extends IPbBuilderProvider<P, BU>, Lreq extends GeneratedMessageV3, Lresp extends GeneratedMessageV3,LreqBu extends GeneratedMessageV3.Builder, LrespBu extends GeneratedMessageV3.Builder, ReqRespBU extends IReqRespPbBuilderProvider<Lreq,LreqBu,Lresp,LrespBu>, C extends IConvertor<P, Lresp>, T extends ITableNameProvider>
         extends AControlFlow<SearchEntityCF.State, Lresp, ErrorException> {
   private C m_convertor;
   private T m_tableNameProvider;
 
   private BP m_builderProvider;
 
+  private ReqRespBU m_responseBuilderProvider;
+
   private IDynamoSearchTable m_searchDynamoDb;
   private SearchRequestsPb m_request;
 
   public SearchEntityCF(SearchRequestsPb request, C convertor, T tableNameProvider,
-          IDynamoSearchTable searchDynamoDb) {
+          IDynamoSearchTable searchDynamoDb,ReqRespBU responseBuilderProvider) {
     super(State.SEARCH, State.DONE);
     m_request = request;
     m_convertor = convertor;
     m_tableNameProvider = tableNameProvider;
     m_searchDynamoDb = searchDynamoDb;
+    m_responseBuilderProvider = responseBuilderProvider;
     addStateHandler(State.SEARCH, new SearchHandler());
   }
 
@@ -61,7 +65,7 @@ public class SearchEntityCF<P extends GeneratedMessageV3, BU extends GeneratedMe
           resp = m_convertor.searchRespConvert(m_resp);
           getAsyncCallback().set(0, (Lresp) resp);
         } else {
-          getAsyncCallback().set(0, (Lresp) resp);
+          getAsyncCallback().set(0, (Lresp) m_responseBuilderProvider.getRespBuilder().build());
         }
       } catch (Exception e) {
         throw new RuntimeException(e);

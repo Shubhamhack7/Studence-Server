@@ -4,7 +4,7 @@ abstract class AwsCredentials {
 
 	private String ACCESS_KEY_ID = "DUMMYIDEXAMPLE";
 	private String SECRET_ACCESS_KEY = "DUMMYEXAMPLEKEY";
-	private String REMOTE_URL = "http://192.168.1.208:8000";
+	private String REMOTE_URL = "http://192.168.29.191:8000";
 	private String LOCAL_URL = "http://localhost:8000";
 
 	public String getREMOTE_URL() {

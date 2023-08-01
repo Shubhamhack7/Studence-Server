@@ -44,6 +44,9 @@ public class CampusUpdater
     if (Strings.notEmpty(builder.getOrganisationRef().getDbInfoId())){
       campusBuilder.setOrganisationRef(builder.getOrganisationRef());
     }
+    if (Strings.notEmpty(builder.getCampusCode())){
+      campusBuilder.setCampusCode(builder.getCampusCode());
+    }
     return super.updater(campusBuilder.build());
   }
 }

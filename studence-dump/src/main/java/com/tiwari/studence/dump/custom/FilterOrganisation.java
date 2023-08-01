@@ -1,5 +1,13 @@
 package com.tiwari.studence.dump.custom;
 
+import com.google.inject.Injector;
+import com.google.protobuf.GeneratedMessageV3;
+import com.tiwari.studence.dump.Injector.InjectorProvider;
+import com.tiwari.studence.dump.organisation.CreateOrgAndCampusFromDump;
+import com.tiwari.studence.organisation.service.IOrganisationService;
+import com.tiwari.studence.proto.organisation.OrganisationSearchReqPb;
+import com.tiwari.studence.util.exception.ErrorException;
+import com.tiwari.studence.util.protobuf.ProtobufToJson;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVPrinter;
@@ -12,32 +20,31 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class FilterOrganisation {
-  public static void main(String[] args) {
+  public static void main(String[] args) throws ErrorException, IOException {
+    Injector inrjector = InjectorProvider.createInjector();
+    CreateOrgAndCampusFromDump service = inrjector.getInstance(CreateOrgAndCampusFromDump.class);
+    IOrganisationService orgService = inrjector.getInstance(IOrganisationService.class);
+    OrganisationSearchReqPb.Builder builder = OrganisationSearchReqPb.newBuilder();
+    builder.setName("515 army base wkshop high school".toLowerCase());
+   // System.out.println(ProtobufToJson.protobufToJsonString(orgService.search(builder.build()).get()));
     String inputCsvFilePath = "D:\\Studence\\Studence-Server\\studence-dump\\src\\main\\resources\\CBSEschoolslist.csv";
     String outputCsvFilePath = "D:\\Studence\\Studence-Server\\studence-dump\\src\\main\\resources\\CBSE schools list1.csv";
 
-    try {
-      Map<String, Map<String, String>> groupedRows = groupRowsByInstituteName(inputCsvFilePath);
-      addOrganisationNameColumnAndSave(outputCsvFilePath, groupedRows);
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
+
+      Map<String, Map<String, String>> groupedRows = groupRowsByInstituteName(inputCsvFilePath,service);
+      //addOrganisationNameColumnAndSave(outputCsvFilePath, groupedRows);
+
   }
 
-  public static Map<String, Map<String, String>> groupRowsByInstituteName(String csvFilePath)
+  public static Map<String, Map<String, String>> groupRowsByInstituteName(String csvFilePath,
+          CreateOrgAndCampusFromDump service)
           throws IOException {
     Map<String, Map<String, String>> groupedRows = new HashMap<>();
 
     CSVFormat csvFormat = CSVFormat.DEFAULT.withHeader().withIgnoreHeaderCase().withTrim();
     try (CSVParser csvParser = new CSVParser(new FileReader(csvFilePath), csvFormat)) {
       for (CSVRecord record : csvParser) {
-        System.out.println(record.get(0));
-        System.out.println(record.get(1));
-        System.out.println(record.get(3));
-        System.out.println(record.get(4));
-        System.out.println(record.get(5));
-        System.out.println(record.get(6));
-
+        service.createOrgAndCampusFromDump(record);
       }
     }
 

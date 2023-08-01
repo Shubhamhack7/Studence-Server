@@ -11,6 +11,7 @@ import com.tiwari.studence.common.async.IFuture;
 import com.tiwari.studence.common.entity.IGetEntityId;
 import com.tiwari.studence.common.interfaces.IDynamoGetEntityTable;
 import com.tiwari.studence.common.interfaces.IDynamoPutTable;
+import com.tiwari.studence.common.interfaces.IDynamoUpdateTable;
 import com.tiwari.studence.common.services.AEntityService;
 import com.tiwari.studence.proto.campus.*;
 import com.tiwari.studence.proto.entity.EntityPb;
@@ -22,13 +23,15 @@ import javax.inject.Singleton;
 @Singleton
 public class CampusService extends AEntityService<CampusPb, CampusSearchReqPb, CampusSearchReqPb.Builder, CampusSearchRespPb, CampusPb.Builder, CampusProvider, CampusSearchRespPb.Builder, CampusSearchReqRespProvider, CampusIndexer, CampusUpdater, CampusConverter, CampusSearcher, CampusTableNameProvider>
         implements ICampusService {
+
   @Inject
   public CampusService(CampusSearcher searcher, CampusUpdater updator, CampusConverter convertor,
           CampusProvider builderProvder, CampusSearchReqRespProvider requestBuilderprovider,
           CampusTableNameProvider tableNameProvider, IGetEntityId getNewId,
-          IDynamoPutTable dynamoPutTable, IDynamoGetEntityTable dynamoGetTable) {
+          IDynamoPutTable dynamoPutTable, IDynamoGetEntityTable dynamoGetTable,
+          IDynamoUpdateTable dynamoUpdateTable) {
     super(searcher, updator, convertor, builderProvder, requestBuilderprovider, tableNameProvider,
-            getNewId, dynamoPutTable, dynamoGetTable);
+            getNewId, dynamoPutTable, dynamoGetTable, dynamoUpdateTable);
   }
 
   @Override
@@ -47,12 +50,12 @@ public class CampusService extends AEntityService<CampusPb, CampusSearchReqPb, C
   }
 
   @Override
-  public IFuture<CampusPb, ErrorException> delete(CampusPb entity) {
+  public IFuture<CampusPb, ErrorException> delete(String entity) {
     return null;
   }
 
   @Override
-  public IFuture<CampusPb, ErrorException> update(CampusPb entity) {
+  public IFuture<CampusPb, ErrorException> update(String id, CampusPb entity) {
     return null;
   }
 

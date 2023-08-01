@@ -1,6 +1,7 @@
 package com.tiwari.studence;
 
 import java.util.HashMap;
+import java.util.Map;
 
 import com.amazonaws.services.dynamodbv2.document.*;
 import com.amazonaws.services.dynamodbv2.document.spec.ScanSpec;
@@ -14,20 +15,7 @@ import com.tiwari.studence.dynamodb.database.table.SearchItemInDynamoDbTable;
 import com.tiwari.studence.dynamodb.database.table.TableNameEnum;
 import software.amazon.awssdk.core.waiters.WaiterResponse;
 import software.amazon.awssdk.services.dynamodb.DynamoDbClient;
-import software.amazon.awssdk.services.dynamodb.model.AttributeDefinition;
-import software.amazon.awssdk.services.dynamodb.model.AttributeValue;
-import software.amazon.awssdk.services.dynamodb.model.CreateTableRequest;
-import software.amazon.awssdk.services.dynamodb.model.CreateTableResponse;
-import software.amazon.awssdk.services.dynamodb.model.DescribeTableRequest;
-import software.amazon.awssdk.services.dynamodb.model.DescribeTableResponse;
-import software.amazon.awssdk.services.dynamodb.model.DynamoDbException;
-import software.amazon.awssdk.services.dynamodb.model.KeySchemaElement;
-import software.amazon.awssdk.services.dynamodb.model.KeyType;
-import software.amazon.awssdk.services.dynamodb.model.ProvisionedThroughput;
-import software.amazon.awssdk.services.dynamodb.model.PutItemRequest;
-import software.amazon.awssdk.services.dynamodb.model.PutItemResponse;
-import software.amazon.awssdk.services.dynamodb.model.ResourceNotFoundException;
-import software.amazon.awssdk.services.dynamodb.model.ScalarAttributeType;
+import software.amazon.awssdk.services.dynamodb.model.*;
 import software.amazon.awssdk.services.dynamodb.waiters.DynamoDbWaiter;
 
 /**
@@ -40,11 +28,36 @@ public class App {
    // putItemInTable(connector.getDynamoDbClient(), "00_ENTITY_DEVEL");
     //putItemInTable(connector.getDynamoDbClient(), "00_ENTITY_PROD");
    // searchItem(connector);
-    SearchItemInDynamoDbTable searchItem = new SearchItemInDynamoDbTable(connector);
+    //SearchItemInDynamoDbTable searchItem = new SearchItemInDynamoDbTable(connector);
     //searchItem.queryOpreationResponse("100_ORGANISATION_DEVEL");
     //searchItem.scanandFilterResponse("100_ORGANISATION_DEVEL");
+    truncateTable(connector.getDynamoDbClient(),"100_ORGANISATION_DEVEL");
+   // truncateTable(connector.getDynamoDbClient(),"101_CAMPUS_DEVEL");
+  }
 
+  public static void truncateTable(DynamoDbClient dynamoDbClient, String tableName) {
+    ScanRequest scanRequest = ScanRequest.builder()
+            .tableName(tableName)
+            .build();
 
+    ScanResponse scanResponse;
+    do {
+      scanResponse = dynamoDbClient.scan(scanRequest);
+
+      for (Map<String, AttributeValue> item : scanResponse.items()) {
+        DeleteItemRequest deleteItemRequest = DeleteItemRequest.builder()
+                .tableName(tableName)
+                .key(item)
+                .build();
+
+        dynamoDbClient.deleteItem(deleteItemRequest);
+      }
+
+      scanRequest = ScanRequest.builder()
+              .tableName(tableName)
+              .exclusiveStartKey(scanResponse.lastEvaluatedKey())
+              .build();
+    } while (scanResponse.hasLastEvaluatedKey());
   }
 
   private static void searchItem(DynamoDbConnector dynamoDbClient) {
