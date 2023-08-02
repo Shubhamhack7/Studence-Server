@@ -37,10 +37,10 @@ import software.amazon.awssdk.services.dynamodb.waiters.DynamoDbWaiter;
 public class App {
   public static void main(String[] args) throws JsonProcessingException {
     DynamoDbConnector connector = new DynamoDbConnector();
-   // putItemInTable(connector.getDynamoDbClient(), "00_ENTITY_DEVEL");
-    //putItemInTable(connector.getDynamoDbClient(), "00_ENTITY_PROD");
+    putItemInTable(connector.getDynamoDbClient(), "00_ENTITY_DEVEL");
+    putItemInTable(connector.getDynamoDbClient(), "00_ENTITY_PROD");
    // searchItem(connector);
-    SearchItemInDynamoDbTable searchItem = new SearchItemInDynamoDbTable(connector);
+   // SearchItemInDynamoDbTable searchItem = new SearchItemInDynamoDbTable(connector);
     //searchItem.queryOpreationResponse("100_ORGANISATION_DEVEL");
     //searchItem.scanandFilterResponse("100_ORGANISATION_DEVEL");
 

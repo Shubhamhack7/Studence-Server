@@ -74,18 +74,22 @@
                         					
           
           </executions>
-                    					
-          
+
           <configuration>
-                        						
-            
-            <executable>bash</executable>
-                        						
-            
-            <commandlineArgs>complieproto.sh</commandlineArgs>
-                        					
-          
+            <executable>cmd.exe</executable>
+            <commandlineArgs>/c complieproto.bat</commandlineArgs>
           </configuration>
+
+          <!--<configuration>
+
+
+            <executable>bash</executable>
+
+
+            <commandlineArgs>complieproto.bat</commandlineArgs>
+
+
+          </configuration>-->
                     				
         
         </plugin>
