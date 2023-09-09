@@ -19,12 +19,59 @@
   </properties>
 
   <dependencies>
+<<<<<<< Updated upstream
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+=======
+      <dependency>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+          <version>4.13.2</version>
+          <scope>test</scope>
+      </dependency>
+      <dependency>
+          <groupId>com.tiwari.studence</groupId>
+          <artifactId>studence-common-http</artifactId>
+          <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+          <groupId>javax.servlet</groupId>
+          <artifactId>javax.servlet-api</artifactId>
+          <version>4.0.1</version>
+          <scope>provided</scope>
+      </dependency>
+      <dependency>
+          <groupId>jakarta.servlet</groupId>
+          <artifactId>jakarta.servlet-api</artifactId>
+          <version>6.0.0</version>
+          <scope>provided</scope>
+      </dependency>
+      <dependency>
+          <groupId>com.tiwari.studence</groupId>
+          <artifactId>studence-common</artifactId>
+          <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+          <groupId>com.tiwari.studence</groupId>
+          <artifactId>studence-campus</artifactId>
+          <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+          <groupId>com.tiwari.studence</groupId>
+          <artifactId>studence-classes</artifactId>
+          <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+          <groupId>javax.inject</groupId>
+          <artifactId>javax.inject</artifactId>
+          <version>1</version>
+          <scope>compile</scope>
+      </dependency>
+>>>>>>> Stashed changes
   </dependencies>
 
   <build>
