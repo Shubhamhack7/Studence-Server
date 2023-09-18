@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /home/tiwaritiwari/Studence/Studence-Server/studence-organisation/src/main/java/com/tiwari/studence/proto/organisation/OrganisationSearchReqPbOrBuilder.java
 /home/tiwaritiwari/Studence/Studence-Server/studence-organisation/src/main/java/com/tiwari/studence/proto/organisation/OrganisationPbOuterClass.java
 /home/tiwaritiwari/Studence/Studence-Server/studence-organisation/src/main/java/com/tiwari/studence/organisation/servlet/OrganisationServlet.java
@@ -27,3 +28,34 @@
 /home/tiwaritiwari/Studence/Studence-Server/studence-organisation/src/main/java/com/tiwari/studence/proto/organisation/OrganisationPb.java
 /home/tiwaritiwari/Studence/Studence-Server/studence-organisation/src/main/java/com/tiwari/studence/organisation/bquery/OrganisationBigQuerySchema.java
 /home/tiwaritiwari/Studence/Studence-Server/studence-organisation/src/main/java/com/tiwari/studence/proto/organisation/OrganisationSearchReqPb.java
+=======
+F:\Studence\Studence-Server\studence-organisation\src\main\java\com\tiwari\studence\organisation\indexer\OrganisationBigQueryIndexer.java
+F:\Studence\Studence-Server\studence-organisation\src\main\java\com\tiwari\studence\organisation\servlet\OrganisationServlet.java
+F:\Studence\Studence-Server\studence-organisation\src\main\java\com\tiwari\studence\organisation\servlet\OrganisationServletInitilizerHelper.java
+F:\Studence\Studence-Server\studence-organisation\src\main\java\com\tiwari\studence\proto\organisation\OrganisationSearchReqPb.java
+F:\Studence\Studence-Server\studence-organisation\src\main\java\com\tiwari\studence\proto\organisation\OrganisationPb.java
+F:\Studence\Studence-Server\studence-organisation\src\main\java\com\tiwari\studence\organisation\indexer\OrganisationIndexer.java
+F:\Studence\Studence-Server\studence-organisation\src\main\java\com\tiwari\studence\proto\organisation\OrganisationSearchRespPb.java
+F:\Studence\Studence-Server\studence-organisation\src\main\java\com\tiwari\studence\organisation\provider\OrganisationPbProvider.java
+F:\Studence\Studence-Server\studence-organisation\src\main\java\com\tiwari\studence\organisation\indexer\OrganisationBigQueryIndexerEnum.java
+F:\Studence\Studence-Server\studence-organisation\src\main\java\com\tiwari\studence\organisation\bquery\OrganisationBigQuerySchema.java
+F:\Studence\Studence-Server\studence-organisation\src\main\java\com\tiwari\studence\proto\organisation\OrganisationSearchRespPbOrBuilder.java
+F:\Studence\Studence-Server\studence-organisation\src\main\java\com\tiwari\studence\organisation\bquery\IOrganisationBigQueryService.java
+F:\Studence\Studence-Server\studence-organisation\src\main\java\com\tiwari\studence\organisation\provider\OraganisationTableNameProvider.java
+F:\Studence\Studence-Server\studence-organisation\src\main\java\com\tiwari\studence\organisation\indexer\OrganisationIndexerEnum.java
+F:\Studence\Studence-Server\studence-organisation\src\main\java\com\tiwari\studence\organisation\App.java
+F:\Studence\Studence-Server\studence-organisation\src\main\java\com\tiwari\studence\organisation\provider\OrganisationSearchPbProvider.java
+F:\Studence\Studence-Server\studence-organisation\src\main\java\com\tiwari\studence\organisation\bquery\OrganisationBigQueryService.java
+F:\Studence\Studence-Server\studence-organisation\src\main\java\com\tiwari\studence\organisation\service\IOrganisationService.java
+F:\Studence\Studence-Server\studence-organisation\src\main\java\com\tiwari\studence\proto\organisation\OrganisationSearchReqPbOrBuilder.java
+F:\Studence\Studence-Server\studence-organisation\src\main\java\com\tiwari\studence\proto\organisation\OrganisationRefPbOrBuilder.java
+F:\Studence\Studence-Server\studence-organisation\src\main\java\com\tiwari\studence\organisation\service\OrgansationService.java
+F:\Studence\Studence-Server\studence-organisation\src\main\java\com\tiwari\studence\organisation\module\OrganisationModule.java
+F:\Studence\Studence-Server\studence-organisation\src\main\java\com\tiwari\studence\organisation\convertor\OrganisationConvertor.java
+F:\Studence\Studence-Server\studence-organisation\src\main\java\com\tiwari\studence\organisation\updater\OrganisationUpdater.java
+F:\Studence\Studence-Server\studence-organisation\src\main\java\com\tiwari\studence\organisation\searcher\OrganisationSearcher.java
+F:\Studence\Studence-Server\studence-organisation\src\main\java\com\tiwari\studence\proto\organisation\OrganisationPbOrBuilder.java
+F:\Studence\Studence-Server\studence-organisation\src\main\java\com\tiwari\studence\proto\organisation\OrganisationPbOuterClass.java
+F:\Studence\Studence-Server\studence-organisation\src\main\java\com\tiwari\studence\organisation\injector\InjectorProvider.java
+F:\Studence\Studence-Server\studence-organisation\src\main\java\com\tiwari\studence\proto\organisation\OrganisationRefPb.java
+>>>>>>> kanika_dev

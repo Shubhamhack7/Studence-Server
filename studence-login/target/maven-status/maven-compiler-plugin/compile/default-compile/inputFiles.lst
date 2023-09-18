@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /home/tiwaritiwari/Studence/Studence-Server/studence-login/src/main/java/com/tiwari/studence/login/service/LoginService.java
 /home/tiwaritiwari/Studence/Studence-Server/studence-login/src/main/java/com/tiwari/studence/login/module/LoginModule.java
 /home/tiwaritiwari/Studence/Studence-Server/studence-login/src/main/java/com/tiwari/studence/login/updater/LoginUpdater.java
@@ -19,3 +20,26 @@
 /home/tiwaritiwari/Studence/Studence-Server/studence-login/src/main/java/com/tiwari/studence/login/provider/LoginSearchPbProvider.java
 /home/tiwaritiwari/Studence/Studence-Server/studence-login/src/main/java/com/tiwari/studence/login/searcher/LoginSearcher.java
 /home/tiwaritiwari/Studence/Studence-Server/studence-login/src/main/java/com/tiwari/studence/login/provider/LoginPbProvider.java
+=======
+F:\Studence\Studence-Server\studence-login\src\main\java\com\tiwari\studence\login\searcher\LoginSearcher.java
+F:\Studence\Studence-Server\studence-login\src\main\java\com\tiwari\studence\proto\login\ProfileTypeEnum.java
+F:\Studence\Studence-Server\studence-login\src\main\java\com\tiwari\studence\login\service\ILoginService.java
+F:\Studence\Studence-Server\studence-login\src\main\java\com\tiwari\studence\proto\login\LoginPbOuterClass.java
+F:\Studence\Studence-Server\studence-login\src\main\java\com\tiwari\studence\login\indexer\LoginIndexer.java
+F:\Studence\Studence-Server\studence-login\src\main\java\com\tiwari\studence\login\provider\LoginTableNameProvider.java
+F:\Studence\Studence-Server\studence-login\src\main\java\com\tiwari\studence\login\module\LoginModule.java
+F:\Studence\Studence-Server\studence-login\src\main\java\com\tiwari\studence\login\provider\LoginPbProvider.java
+F:\Studence\Studence-Server\studence-login\src\main\java\com\tiwari\studence\login\injector\LoginInjector.java
+F:\Studence\Studence-Server\studence-login\src\main\java\com\tiwari\studence\login\servlet\LoginServlet.java
+F:\Studence\Studence-Server\studence-login\src\main\java\com\tiwari\studence\login\provider\LoginSearchPbProvider.java
+F:\Studence\Studence-Server\studence-login\src\main\java\com\tiwari\studence\proto\login\LoginSearchReqPb.java
+F:\Studence\Studence-Server\studence-login\src\main\java\com\tiwari\studence\login\convertor\LoginConvertor.java
+F:\Studence\Studence-Server\studence-login\src\main\java\com\tiwari\studence\proto\login\LoginSearchReqPbOrBuilder.java
+F:\Studence\Studence-Server\studence-login\src\main\java\com\tiwari\studence\proto\login\LoginPb.java
+F:\Studence\Studence-Server\studence-login\src\main\java\com\tiwari\studence\proto\login\LoginPbOrBuilder.java
+F:\Studence\Studence-Server\studence-login\src\main\java\com\tiwari\studence\login\updater\LoginUpdater.java
+F:\Studence\Studence-Server\studence-login\src\main\java\com\tiwari\studence\proto\login\LoginSearchRespPbOrBuilder.java
+F:\Studence\Studence-Server\studence-login\src\main\java\com\tiwari\studence\login\indexer\LoginIndexerEnum.java
+F:\Studence\Studence-Server\studence-login\src\main\java\com\tiwari\studence\login\service\LoginService.java
+F:\Studence\Studence-Server\studence-login\src\main\java\com\tiwari\studence\proto\login\LoginSearchRespPb.java
+>>>>>>> kanika_dev
