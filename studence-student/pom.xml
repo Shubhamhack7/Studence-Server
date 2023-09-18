@@ -24,9 +24,6 @@
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
-<<<<<<< Updated upstream
-	</dependencies>
-=======
 		<dependency>
 			<groupId>com.tiwari.studence</groupId>
 			<artifactId>studence-common-http</artifactId>
@@ -71,7 +68,6 @@
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
     </dependencies>
->>>>>>> Stashed changes
 
 	<build>
 		<pluginManagement>
