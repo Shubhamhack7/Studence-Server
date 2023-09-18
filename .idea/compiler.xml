@@ -23,5 +23,10 @@
         <module name="studence-management-app" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="studence-firebase" target="1.8" />
+      <module name="studence-manageDevices" target="1.8" />
+      <module name="studence-pushNotification" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
