@@ -1,4 +1,4 @@
-package com.tiwari.studence.util.provider.interfaces;
+package com.tiwari.studence.common.prtovider;
 
 import com.google.protobuf.GeneratedMessageV3;
 

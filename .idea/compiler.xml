@@ -6,20 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="studence-organisation" />
-        <module name="studence-classes" />
-        <module name="studence-common-http" />
-        <module name="studence-campus" />
         <module name="studence-util" />
+        <module name="studence-organisation" />
         <module name="studence-dynamodb-database" />
         <module name="studence-teacher" />
-        <module name="studence-login" />
         <module name="studence-common" />
-        <module name="studence-typeAhead" />
         <module name="studence-attendence" />
         <module name="studence-student" />
-        <module name="studence-guardian" />
-        <module name="studence-dump" />
+        <module name="studence-common-http" />
+        <module name="studence-campus" />
         <module name="studence-management-app" />
       </profile>
     </annotationProcessing>

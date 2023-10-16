@@ -12,9 +12,9 @@ public interface IEntityService<T extends GeneratedMessageV3, Req extends Genera
 
   public IFuture<T, ErrorException> create(T entity);
 
-  public IFuture<T, ErrorException> delete(String entity);
+  public IFuture<T, ErrorException> delete(T entity);
 
-  public IFuture<T, ErrorException> update(String id,T entity);
+  public IFuture<T, ErrorException> update(T entity);
 
   public IFuture<Resp, ErrorException> search(Req entity);
 }

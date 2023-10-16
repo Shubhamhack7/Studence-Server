@@ -5,20 +5,12 @@
     <file url="file://$PROJECT_DIR$/studence-attendence/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-campus/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-campus/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/studence-classes/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/studence-classes/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-common-http/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-common-http/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-common/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/studence-dump/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/studence-dump/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-dynamodb-database/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-dynamodb-database/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/studence-guardian/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/studence-guardian/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/studence-login/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/studence-login/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-management-app/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-management-app/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-organisation/src/main/java" charset="UTF-8" />
@@ -27,11 +19,7 @@
     <file url="file://$PROJECT_DIR$/studence-student/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-teacher/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-teacher/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/studence-typeAhead/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/studence-typeAhead/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-util/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-util/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/studence-util/studence-login/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/studence-util/studence-login/src/main/resources" charset="UTF-8" />
   </component>
 </project>
