@@ -64,4 +64,8 @@ public class EntityUtilHelper {
     pb.getConfigBuilder().setUpdatedBy("system");
     return pb.build();
   }
+
+  public static boolean isDbEntityEmpty(EntityPb dbInfo) {
+    return true;
+  }
 }

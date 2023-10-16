@@ -1,0 +1,194 @@
+// Copyright (c) 2022, All Right Reserved, Shubham Tiwari
+
+syntax = "proto3";
+
+package com.tiwari.studence.proto.devices;
+
+import "entityPb.proto";
+import "pushNotificationPb.proto";
+
+option java_multiple_files = true;
+option java_generate_equals_and_hash = true;
+
+enum DeviceOSTypeEnum{
+  UNKNOWN_OS =0;
+  ANDROID =1;
+  IOS=2;
+  WINDOWS = 3;
+  MAC=4;
+  LINUX =5;
+}
+
+enum DeviceTypeEnum{
+  UNKNOWN_DEVICE_TYPE =0;
+  LAPTOP =1;
+  PC=2;
+  MOBILE = 3;
+  TABLET=4;
+}
+
+enum DeviceAppMode {
+  UKNOWN_MODE = 0;
+  WEB_APP =1;
+  MOBILE_APP =2;
+}
+
+message AndroidDisplayInfo{
+  float display_size_inches = 27;
+  int32 display_width_pixels = 28;
+  float display_width_inches = 29;
+  int32 display_height_pixels = 30;
+  float display_height_inches = 31;
+  float display_x_dpi = 32;
+  float display_y_dpi = 33;
+}
+
+message AndroidDeviceDetails {
+  string security_patch = 1;
+  int32 sdk_int = 2;
+  string release = 3;
+  int32 preview_sdk_int = 4;
+  string incremental = 5;
+  string codename = 6;
+  string base_os = 7;
+  string board = 8;
+  string bootloader = 9;
+  string brand = 10;
+  string device = 11;
+  string display = 12;
+  string fingerprint = 13;
+  string hardware = 14;
+  string host = 15;
+  string id = 16;
+  string manufacturer = 17;
+  string model = 18;
+  string product = 19;
+  repeated string supported_32_bit_abis = 20;
+  repeated string supported_64_bit_abis = 21;
+  repeated string supported_abis = 22;
+  string tags = 23;
+  string type = 24;
+  bool is_physical_device = 25;
+  repeated string system_features = 26;
+  AndroidDisplayInfo displayInfo = 27;
+  string serial_number = 28;
+}
+
+message IOSDeviceDetails {
+  string name = 1;
+  string systemName = 2;
+  string systemVersion = 3;
+  string model = 4;
+  string localizedModel = 5;
+  string identifierForVendor = 6;
+  bool isPhysicalDevice = 7;
+  Utsname utsname = 8;
+}
+
+message Utsname {
+  string sysname = 1;
+  string nodename = 2;
+  string release = 3;
+  string version = 4;
+  string machine = 5;
+}
+
+message WindowsDeviceDetails {
+  int32 numberOfCores = 1;
+  string computerName = 2;
+  int32 systemMemoryInMegabytes = 3;
+  string userName = 4;
+  int32 majorVersion = 5;
+  int32 minorVersion = 6;
+  int32 buildNumber = 7;
+  int32 platformId = 8;
+  string csdVersion = 9;
+  int32 servicePackMajor = 10;
+  int32 servicePackMinor = 11;
+  int32 suitMask = 12;
+  int32 productType = 13;
+  string reserved = 14;
+  string buildLab = 15;
+  string buildLabEx = 16;
+  string digitalProductId = 17;
+  string displayVersion = 18;
+  string editionId = 19;
+  string installDate = 20;
+  string productId = 21;
+  string productName = 22;
+  string registeredOwner = 23;
+  string releaseId = 24;
+  string deviceId = 25;
+}
+
+
+message MacOSDeviceDetails {
+  string computer_name = 1;
+  string host_name = 2;
+  string arch = 3;
+  string model = 4;
+  string kernel_version = 5;
+  int32 major_version = 6;
+  int32 minor_version = 7;
+  int32 patch_version = 8;
+  string os_release = 9;
+  int32 active_cpus = 10;
+  int64 memory_size = 11;
+  int64 cpu_frequency = 12;
+  string system_guid = 13;
+}
+
+message WebBrowserInfoDetails {
+  string browserName = 1;
+  string appCodeName = 2;
+  string appName = 3;
+  string appVersion = 4;
+  uint32 deviceMemory = 5;
+  string language = 6;
+  repeated string languages = 7;
+  string platform = 8;
+  string product = 9;
+  string productSub = 10;
+  string userAgent = 11;
+  string vendor = 12;
+  string vendorSub = 13;
+  uint32 hardwareConcurrency = 14;
+  uint32 maxTouchPoints = 15;
+}
+
+message LinuxDeviceInfoDetails {
+  string name = 1;
+  string version = 2;
+  string id = 3;
+  repeated string idLike = 4;
+  string versionCodename = 5;
+  string versionId = 6;
+  string prettyName = 7;
+  string buildId = 8;
+  string variant = 9;
+  string variantId = 10;
+  string machineId = 11;
+}
+
+message DeviceScreenSize {
+  int32 hieght=1;
+  int32 width=2;
+}
+
+message DeviceDetailsPb{
+  com.tiwari.studence.proto.entity.EntityPb dbInfo =1;
+  DeviceOSTypeEnum deviceOsType = 2;
+  AndroidDeviceDetails androidDevice =3 ;
+  IOSDeviceDetails iosDevice =4 ;
+  WindowsDeviceDetails windowsDevice = 5;
+  MacOSDeviceDetails macOsDevice =6;
+  WebBrowserInfoDetails webBrowserDevice =7;
+  LinuxDeviceInfoDetails linuxDevice =8;
+  DeviceScreenSize screeSize =9;
+  string deviceMacId = 10;
+  string deviceIpAddress =11;
+  string unique_id = 12;
+  DeviceAppMode mode = 13;
+  DeviceTypeEnum deviceType =14;
+  com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef = 15;
+}

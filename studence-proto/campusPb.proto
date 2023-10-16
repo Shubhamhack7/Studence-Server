@@ -33,7 +33,10 @@ message CampusSearchReqPb{
   string name = 1;
 }
 
-
+message OrganisationCreateAndCampusCreatePb {
+  com.tiwari.studence.proto.organisation.OrganisationPb organisation =1;
+    CampusPb campus =2;
+}
 message CampusSearchRespPb{
   com.tiwari.studence.proto.summary.SummaryPb summary =1;
   repeated CampusPb results = 2;

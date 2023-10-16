@@ -11,10 +11,14 @@
     <file url="file://$PROJECT_DIR$/studence-common-http/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/studence-devices/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/studence-devices/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-dump/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-dump/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-dynamodb-database/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-dynamodb-database/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/studence-firebase/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/studence-firebase/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-guardian/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-guardian/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-login/src/main/java" charset="UTF-8" />
@@ -23,6 +27,10 @@
     <file url="file://$PROJECT_DIR$/studence-management-app/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-organisation/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-organisation/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/studence-pushNotification/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/studence-pushNotification/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/studence-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/studence-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-student/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-student/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-teacher/src/main/java" charset="UTF-8" />

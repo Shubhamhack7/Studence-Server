@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.tiwari.studence.organisation.AppTest
 -------------------------------------------------------------------------------
-<<<<<<< HEAD
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.146 s - in com.tiwari.studence.organisation.AppTest
-=======
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.067 s - in com.tiwari.studence.organisation.AppTest
->>>>>>> kanika_dev
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.062 s - in com.tiwari.studence.organisation.AppTest

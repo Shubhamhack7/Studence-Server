@@ -39,7 +39,7 @@ public class ClassesUpdater
     if (Strings.notEmpty(builder.getCampusRef().getDbInfoId())){
       classBuilder.setCampusRef(builder.getCampusRef());
     }
-    if (Strings.notEmpty(builder.getClassType().)){
+    if (Strings.notEmpty("")){
       classBuilder.setCampusRef(builder.getCampusRef());
     }
     List<GenericRefPbWithBoolean> teachersFromBuilder = builder.getOthersTeacherList();

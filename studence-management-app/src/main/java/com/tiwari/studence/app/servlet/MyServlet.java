@@ -1,5 +1,6 @@
 package com.tiwari.studence.app.servlet;
 
+import com.tiwari.studence.util.serverConfig.SystemPropertyUtility;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -12,6 +13,6 @@ import java.io.IOException;
 public class MyServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.getWriter().println("Hello, world!");
+        response.getWriter().println("Server Environment => "+ SystemPropertyUtility.getSERVER_ENV());
     }
 }

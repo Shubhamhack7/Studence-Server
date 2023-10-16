@@ -1,11 +1,16 @@
 package com.tiwari.studence.util;
 
+import java.security.SecureRandom;
 import java.util.Arrays;
 import java.util.List;
 
 import com.tiwari.studence.util.collect.Lists;
 
 public class Strings {
+
+  private static final String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  private static final SecureRandom RANDOM = new SecureRandom();
+
   /**
    * This should be used only for ascii kind of strings. Not for short form of
    * PB
@@ -202,6 +207,18 @@ public class Strings {
       listLowerCase.add(s.toUpperCase());
     }
     return listLowerCase;
+  }
+
+  public static String generateRandomString(int length) {
+    StringBuilder stringBuilder = new StringBuilder(length);
+
+    for (int i = 0; i < length; i++) {
+      int randomIndex = RANDOM.nextInt(CHARACTERS.length());
+      char randomChar = CHARACTERS.charAt(randomIndex);
+      stringBuilder.append(randomChar);
+    }
+
+    return stringBuilder.toString();
   }
 
   public static String formatJsonForGcm(String appData) {

@@ -4,13 +4,13 @@ import com.google.inject.Injector;
 
 
 import com.tiwari.studence.common.injector.StaticInjectorProvider;
+import com.tiwari.studence.firebase.initializer.FirebaseInitializer;
 import jakarta.servlet.*;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import javax.inject.Inject;
 import java.io.IOException;
-import java.lang.reflect.Method;
 import java.util.*;
 
 public class  StudenceManagementFilter implements Filter {
@@ -26,6 +26,7 @@ public class  StudenceManagementFilter implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
         servletContext = filterConfig.getServletContext();
+        FirebaseInitializer.init();
         initializer = new StudenceServletInitializer();
         initializer.onStartup(null,servletContext);
         injector = (Injector) servletContext.getAttribute(Injector.class.getName());

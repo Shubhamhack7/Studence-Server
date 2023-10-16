@@ -19,7 +19,7 @@ public class StudenceServletInitializer implements ServletContainerInitializer {
     @Override
     public void onStartup(Set<Class<?>> classes, ServletContext servletContext) throws ServletException {
         servletRegistration = servletContext.addServlet("myServlet", MyServlet.class);
-        servletRegistration.addMapping("/myServlet");
+        servletRegistration.addMapping("/");
         servletRegistration = servletContext.addServlet("organisation", OrganisationServlet.class);
         servletRegistration.addMapping("/organisation");
 
