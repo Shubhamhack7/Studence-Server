@@ -156,6 +156,7 @@ com/tiwari/studence/common/entity/EntityCreateCF$State.class
 com/tiwari/studence/proto/time/AccumulatedTimeStatsIdPb$Builder.class
 com/tiwari/studence/proto/time/TimeProfilePb$1.class
 com/tiwari/studence/common/searcher/AEntitySearcher.class
+com/tiwari/studence/common/module/UpdateItemDynamoDbModule.class
 com/tiwari/studence/common/async/RequestScopes$1.class
 com/tiwari/studence/common/entity/GetAndUpdateEntityCF.class
 com/tiwari/studence/common/indexer/AEntityIndexer.class
