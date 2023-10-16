@@ -102,5 +102,6 @@
 /home/tiwaritiwari/Studence/Studence-Server/studence-common/src/main/java/com/tiwari/studence/proto/time/TimeStatsPb.java
 /home/tiwaritiwari/Studence/Studence-Server/studence-common/src/main/java/com/tiwari/studence/common/module/GetAndUpdateEntityIdModule.java
 /home/tiwaritiwari/Studence/Studence-Server/studence-common/src/main/java/com/tiwari/studence/common/entity/SearchEntity.java
+/home/tiwaritiwari/Studence/Studence-Server/studence-common/src/main/java/com/tiwari/studence/common/module/UpdateItemDynamoDbModule.java
 /home/tiwaritiwari/Studence/Studence-Server/studence-common/src/main/java/com/tiwari/studence/proto/time/AccumulatedTimeStatsIdPbOrBuilder.java
 /home/tiwaritiwari/Studence/Studence-Server/studence-common/src/main/java/com/tiwari/studence/common/searcher/ISearcher.java
