@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.tiwari.studence.database&apos; to &apos;com.tiwari.studence.dynamodb.database&apos;&#x0A;- Original project: &apos;studence-dynamodb-database&apos;&#x0A;- Original element: &apos;studence-dynamodb-database/src/main/java/com.tiwari.studence.database&apos;&#x0A;- Renamed element: &apos;studence-dynamodb-database/src/main/java/com.tiwari.studence.dynamodb.database&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings&#x0A;- Rename subpackages of the package" description="Rename package &apos;com.tiwari.studence.database&apos;" flags="589830" hierarchical="true" id="org.eclipse.jdt.ui.rename.package" input="/src\/main\/java&lt;com.tiwari.studence.database" name="com.tiwari.studence.dynamodb.database" qualified="false" references="true" stamp="1671271925983" textual="false" version="1.0"/>
+</session>
