@@ -2,14 +2,26 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Studence-Server.iml" filepath="$PROJECT_DIR$/Studence-Server.iml" />
-<<<<<<< HEAD
-=======
+      <module fileurl="file://$PROJECT_DIR$/studence-attendence/studence-attendence.iml" filepath="$PROJECT_DIR$/studence-attendence/studence-attendence.iml" />
+      <module fileurl="file://$PROJECT_DIR$/studence-campus/studence-campus.iml" filepath="$PROJECT_DIR$/studence-campus/studence-campus.iml" />
       <module fileurl="file://$PROJECT_DIR$/studence-classes/studence-classes.iml" filepath="$PROJECT_DIR$/studence-classes/studence-classes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/studence-common/studence-common.iml" filepath="$PROJECT_DIR$/studence-common/studence-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/studence-common-http/studence-common-http.iml" filepath="$PROJECT_DIR$/studence-common-http/studence-common-http.iml" />
+      <module fileurl="file://$PROJECT_DIR$/studence-devices/studence-devices.iml" filepath="$PROJECT_DIR$/studence-devices/studence-devices.iml" />
       <module fileurl="file://$PROJECT_DIR$/studence-dump/studence-dump.iml" filepath="$PROJECT_DIR$/studence-dump/studence-dump.iml" />
       <module fileurl="file://$PROJECT_DIR$/studence-dynamodb-database/studence-dynamodb-database.iml" filepath="$PROJECT_DIR$/studence-dynamodb-database/studence-dynamodb-database.iml" />
+      <module fileurl="file://$PROJECT_DIR$/studence-firebase/studence-firebase.iml" filepath="$PROJECT_DIR$/studence-firebase/studence-firebase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/studence-guardian/studence-guardian.iml" filepath="$PROJECT_DIR$/studence-guardian/studence-guardian.iml" />
+      <module fileurl="file://$PROJECT_DIR$/studence-login/studence-login.iml" filepath="$PROJECT_DIR$/studence-login/studence-login.iml" />
+      <module fileurl="file://$PROJECT_DIR$/studence-management-app/studence-management-app.iml" filepath="$PROJECT_DIR$/studence-management-app/studence-management-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/studence-organisation/studence-organisation.iml" filepath="$PROJECT_DIR$/studence-organisation/studence-organisation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/studence-pushNotification/studence-pushNotification.iml" filepath="$PROJECT_DIR$/studence-pushNotification/studence-pushNotification.iml" />
+      <module fileurl="file://$PROJECT_DIR$/studence-server/studence-server.iml" filepath="$PROJECT_DIR$/studence-server/studence-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/studence-student/studence-student.iml" filepath="$PROJECT_DIR$/studence-student/studence-student.iml" />
+      <module fileurl="file://$PROJECT_DIR$/studence-teacher/studence-teacher.iml" filepath="$PROJECT_DIR$/studence-teacher/studence-teacher.iml" />
       <module fileurl="file://$PROJECT_DIR$/studence-typeAhead/studence-typeAhead.iml" filepath="$PROJECT_DIR$/studence-typeAhead/studence-typeAhead.iml" />
->>>>>>> development
+      <module fileurl="file://$PROJECT_DIR$/studence-util/studence-util.iml" filepath="$PROJECT_DIR$/studence-util/studence-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/top.iml" filepath="$PROJECT_DIR$/top.iml" />
     </modules>
   </component>
 </project>

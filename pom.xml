@@ -50,31 +50,13 @@
             </execution>
             					
           </executions>
-<<<<<<< HEAD
-
-<!--          <configuration>
-            <executable>cmd.exe</executable>
-            <commandlineArgs>/c complieproto.bat</commandlineArgs>
-          </configuration>-->
-
-          <configuration>
-
-
-            <executable>bash</executable>
-
-
-            <commandlineArgs>complieproto.sh</commandlineArgs>
-
-
-=======
           					
           <configuration>
             						
             <executable>bash</executable>
             						
             <commandlineArgs>complieproto.sh</commandlineArgs>
-            					
->>>>>>> development
+
           </configuration>
           				
         </plugin>
@@ -198,21 +180,28 @@
   	
 	
   <modules>
+
     <module>studence-devices</module>
     <module>studence-dump</module>
     <module>studence-typeAhead</module>
     <module>studence-util</module>
     <module>studence-firebase</module>
 
+    
     <module>studence-util</module>
-
+        		
+    
     <module>studence-common</module>
-    		
+        		
+    
     <module>studence-dynamodb-database</module>
-    		
+        		
+    
     <module>studence-common-http</module>
-    		
+        		
+    
     <module>studence-organisation</module>
+
     <module>studence-pushNotification</module>
     <module>studence-campus</module>
     		

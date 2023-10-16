@@ -19,7 +19,6 @@ import com.tiwari.studence.util.serverConfig.ServerConfigUtility;
 import jakarta.servlet.AsyncContext;
 import jakarta.servlet.AsyncEvent;
 import jakarta.servlet.AsyncListener;
-import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -58,15 +57,8 @@ public abstract class BaseHttpServlet extends HttpServlet {
 		PUT, POST, GET, DELETE, HEAD, OPTIONS, TRACE
 	}
 
-	@Override
-	public void init() throws ServletException {
-		super.init();
-	}
 
 	protected void doPost(final HttpServletRequest req, final HttpServletResponse resp) {
-		resp.setHeader("Access-Control-Allow-Origin", "*"); // replace * with your desired domain or IP address
-		resp.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-		resp.setHeader("Access-Control-Allow-Headers", "Content-Type");
 		RequestExecutor.getInstance().runRequestInContext(this.getClass().getSimpleName(), ReqMethod.POST.name(),
 				new Callable<IFuture>() {
 					@Override
@@ -79,9 +71,6 @@ public abstract class BaseHttpServlet extends HttpServlet {
 
 
 	protected void doPut(final HttpServletRequest req, final HttpServletResponse resp) {
-		resp.setHeader("Access-Control-Allow-Origin", "*"); // replace * with your desired domain or IP address
-		resp.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-		resp.setHeader("Access-Control-Allow-Headers", "Content-Type");
 		RequestExecutor.getInstance().runRequestInContext(this.getClass().getSimpleName(), ReqMethod.PUT.name(),
 				new Callable<IFuture>() {
 					@Override
@@ -94,9 +83,6 @@ public abstract class BaseHttpServlet extends HttpServlet {
 
 
 	protected void doDelete(final HttpServletRequest req, final HttpServletResponse resp) {
-		resp.setHeader("Access-Control-Allow-Origin", "*"); // replace * with your desired domain or IP address
-		resp.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-		resp.setHeader("Access-Control-Allow-Headers", "Content-Type");
 		RequestExecutor.getInstance().runRequestInContext(this.getClass().getSimpleName(), ReqMethod.DELETE.name(),
 				new Callable<IFuture>() {
 					@Override
@@ -109,9 +95,6 @@ public abstract class BaseHttpServlet extends HttpServlet {
 
 
 	protected void doGet(final HttpServletRequest req, final HttpServletResponse resp) {
-		resp.setHeader("Access-Control-Allow-Origin", "*"); // replace * with your desired domain or IP address
-		resp.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-		resp.setHeader("Access-Control-Allow-Headers", "Content-Type");
 		RequestExecutor.getInstance().runRequestInContext(this.getClass().getSimpleName(), ReqMethod.GET.name(),
 				new Callable<IFuture>() {
 					@Override

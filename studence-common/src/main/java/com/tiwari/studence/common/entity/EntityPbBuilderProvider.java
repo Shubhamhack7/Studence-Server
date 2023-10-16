@@ -3,7 +3,7 @@ package com.tiwari.studence.common.entity;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
-import com.tiwari.studence.common.provider.IPbBuilderProvider;
+import com.tiwari.studence.common.prtovider.IPbBuilderProvider;
 import com.tiwari.studence.proto.entity.EntityPb;
 import com.tiwari.studence.proto.entity.EntityPb.Builder;
 
