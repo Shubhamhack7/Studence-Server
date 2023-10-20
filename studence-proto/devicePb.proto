@@ -6,6 +6,7 @@ package com.tiwari.studence.proto.devices;
 
 import "entityPb.proto";
 import "pushNotificationPb.proto";
+import "summaryPb.proto";
 
 option java_multiple_files = true;
 option java_generate_equals_and_hash = true;
@@ -34,13 +35,13 @@ enum DeviceAppMode {
 }
 
 message AndroidDisplayInfo{
-  float display_size_inches = 27;
-  int32 display_width_pixels = 28;
-  float display_width_inches = 29;
-  int32 display_height_pixels = 30;
-  float display_height_inches = 31;
-  float display_x_dpi = 32;
-  float display_y_dpi = 33;
+  float display_size_inches = 1;
+  int32 display_width_pixels = 2;
+  float display_width_inches = 3;
+  int32 display_height_pixels = 4;
+  float display_height_inches = 5;
+  float display_x_dpi = 6;
+  float display_y_dpi = 7;
 }
 
 message AndroidDeviceDetails {
@@ -191,4 +192,15 @@ message DeviceDetailsPb{
   DeviceAppMode mode = 13;
   DeviceTypeEnum deviceType =14;
   com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef = 15;
+  string device_id = 16;
+}
+
+message DeviceDetailsSearchReqPb{
+  DeviceOSTypeEnum deviceOsType = 1;
+}
+
+
+message DeviceDetailsSearchRespPb{
+  com.tiwari.studence.proto.summary.SummaryPb summary =1;
+  repeated DeviceDetailsPb results = 2;
 }

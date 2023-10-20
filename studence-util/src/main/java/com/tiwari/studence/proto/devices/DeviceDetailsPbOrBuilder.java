@@ -210,4 +210,16 @@ public interface DeviceDetailsPbOrBuilder extends
    * <code>.com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef = 15;</code>
    */
   com.tiwari.studence.proto.pushNotification.PushNotificationRefPbOrBuilder getPushNotificationRefOrBuilder();
+
+  /**
+   * <code>string device_id = 16;</code>
+   * @return The deviceId.
+   */
+  java.lang.String getDeviceId();
+  /**
+   * <code>string device_id = 16;</code>
+   * @return The bytes for deviceId.
+   */
+  com.google.protobuf.ByteString
+      getDeviceIdBytes();
 }

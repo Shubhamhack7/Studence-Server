@@ -1,9 +1,7 @@
-com/tiwari/studence/organisationCreateAndCampus/service/OrganisationCreateAndCampusCreateServiceCF$State.class
 com/tiwari/studence/proto/campus/CampusPb.class
 com/tiwari/studence/proto/campus/CampusSearchRespPb$1.class
 com/tiwari/studence/campus/module/CampusModule.class
 com/tiwari/studence/proto/campus/CampusRefPbOrBuilder.class
-com/tiwari/studence/organisationCreateAndCampus/service/OrganisationCreateAndCampusCreateService.class
 com/tiwari/studence/proto/campus/OrganisationCreateAndCampusCreatePb.class
 com/tiwari/studence/proto/campus/CampusSearchRespPbOrBuilder.class
 com/tiwari/studence/campus/converter/CampusConverter.class
@@ -18,9 +16,7 @@ com/tiwari/studence/proto/campus/OrganisationCreateAndCampusCreatePb$Builder.cla
 com/tiwari/studence/proto/campus/CampusSearchReqPb.class
 com/tiwari/studence/proto/campus/CampusRefPb.class
 com/tiwari/studence/campus/App.class
-com/tiwari/studence/organisationCreateAndCampus/service/OrganisationCreateAndCampusCreateServiceCF$CreateCampus.class
 com/tiwari/studence/campus/provider/CampusSearchReqRespProvider.class
-com/tiwari/studence/organisationCreateAndCampus/service/OrganisationCreateAndCampusCreateServiceCF$CreateOrganisation.class
 com/tiwari/studence/proto/campus/CampusRefPb$1.class
 com/tiwari/studence/proto/campus/CampusPbOrBuilder.class
 com/tiwari/studence/proto/campus/CampusSearchReqPbOrBuilder.class
@@ -36,5 +32,4 @@ com/tiwari/studence/proto/campus/CampusSearchReqPb$Builder.class
 com/tiwari/studence/campus/service/CampusService.class
 com/tiwari/studence/campus/service/ICampusService.class
 com/tiwari/studence/campus/helper/CampusHelper.class
-com/tiwari/studence/organisationCreateAndCampus/service/OrganisationCreateAndCampusCreateServiceCF.class
 com/tiwari/studence/campus/indexer/CampusIndexer.class

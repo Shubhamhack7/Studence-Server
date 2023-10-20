@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="studence-organisation" />
+        <module name="studence-classes" />
+        <module name="studence-devices" />
+        <module name="studence-common-http" />
+        <module name="studence-pushNotification" />
+        <module name="studence-openai" />
+        <module name="studence-campus" />
+        <module name="studence-firebase" />
+        <module name="studence-util" />
+        <module name="studence-dynamodb-database" />
+        <module name="studence-teacher" />
+        <module name="studence-login" />
+        <module name="studence-typeAhead" />
+        <module name="studence-common" />
+        <module name="studence-attendence" />
+        <module name="studence-student" />
+        <module name="studence-dump" />
+        <module name="studence-guardian" />
+        <module name="studence-server" />
+        <module name="studence-management-app" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="studence-manageDevices" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -5,6 +5,7 @@ syntax = "proto3";
 package com.tiwari.studence.proto.pushNotification;
 
 import "entityPb.proto";
+import "genericRefPb.proto";
 import "summaryPb.proto";
 
 option java_multiple_files = true;
@@ -15,6 +16,10 @@ option java_generate_equals_and_hash = true;
 message PushNotificationPb{
   com.tiwari.studence.proto.entity.EntityPb dbInfo =1;
   string token= 2;
+  com.tiwari.studence.proto.genericRef.GenericRefPb orgRef =3;
+  com.tiwari.studence.proto.genericRef.GenericRefPb campusRef =4;
+  com.tiwari.studence.proto.genericRef.GenericRefPb deviceRef =5;
+  com.tiwari.studence.proto.genericRef.GenericRefPb loginRef =6;
 }
 
 message PushNotificationRefPb{

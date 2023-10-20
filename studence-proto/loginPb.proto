@@ -15,6 +15,8 @@ option java_multiple_files = true;
 option java_generate_equals_and_hash = true;
 //The following protos are reserved 12,13,14,15,16.You shd not use them
 
+
+
 enum ProfileTypeEnum {
   UNKNOWN_LOGIN_TYPE = 0;
   ADMIN = 1;

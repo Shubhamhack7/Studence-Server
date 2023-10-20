@@ -45,22 +45,30 @@ public final class PushNotificationPbOuterClass {
     java.lang.String[] descriptorData = {
       "\n\030pushNotificationPb.proto\022*com.tiwari.s" +
       "tudence.proto.pushNotification\032\016entityPb" +
-      ".proto\032\017summaryPb.proto\"_\n\022PushNotificat" +
-      "ionPb\022:\n\006dbInfo\030\001 \001(\0132*.com.tiwari.stude" +
-      "nce.proto.entity.EntityPb\022\r\n\005token\030\002 \001(\t" +
-      "\"8\n\025PushNotificationRefPb\022\020\n\010dbInfoId\030\001 " +
-      "\001(\t\022\r\n\005token\030\002 \001(\t\",\n\033PushNotificationSe" +
-      "archReqPb\022\r\n\005token\030\001 \001(\t\"\256\001\n\034PushNotific" +
-      "ationSearchRespPb\022=\n\007summary\030\001 \001(\0132,.com" +
-      ".tiwari.studence.proto.summary.SummaryPb" +
-      "\022O\n\007results\030\002 \003(\0132>.com.tiwari.studence." +
-      "proto.pushNotification.PushNotificationP" +
-      "bB\005P\001\240\001\001b\006proto3"
+      ".proto\032\022genericRefPb.proto\032\017summaryPb.pr" +
+      "oto\"\367\002\n\022PushNotificationPb\022:\n\006dbInfo\030\001 \001" +
+      "(\0132*.com.tiwari.studence.proto.entity.En" +
+      "tityPb\022\r\n\005token\030\002 \001(\t\022B\n\006orgRef\030\003 \001(\01322." +
+      "com.tiwari.studence.proto.genericRef.Gen" +
+      "ericRefPb\022E\n\tcampusRef\030\004 \001(\01322.com.tiwar" +
+      "i.studence.proto.genericRef.GenericRefPb" +
+      "\022E\n\tdeviceRef\030\005 \001(\01322.com.tiwari.studenc" +
+      "e.proto.genericRef.GenericRefPb\022D\n\010login" +
+      "Ref\030\006 \001(\01322.com.tiwari.studence.proto.ge" +
+      "nericRef.GenericRefPb\"8\n\025PushNotificatio" +
+      "nRefPb\022\020\n\010dbInfoId\030\001 \001(\t\022\r\n\005token\030\002 \001(\t\"" +
+      ",\n\033PushNotificationSearchReqPb\022\r\n\005token\030" +
+      "\001 \001(\t\"\256\001\n\034PushNotificationSearchRespPb\022=" +
+      "\n\007summary\030\001 \001(\0132,.com.tiwari.studence.pr" +
+      "oto.summary.SummaryPb\022O\n\007results\030\002 \003(\0132>" +
+      ".com.tiwari.studence.proto.pushNotificat" +
+      "ion.PushNotificationPbB\005P\001\240\001\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.tiwari.studence.proto.entity.EntityPbOuterClass.getDescriptor(),
+          com.tiwari.studence.proto.genericRef.GenericRefPbOuterClass.getDescriptor(),
           com.tiwari.studence.proto.summary.SummaryPbOuterClass.getDescriptor(),
         });
     internal_static_com_tiwari_studence_proto_pushNotification_PushNotificationPb_descriptor =
@@ -68,7 +76,7 @@ public final class PushNotificationPbOuterClass {
     internal_static_com_tiwari_studence_proto_pushNotification_PushNotificationPb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tiwari_studence_proto_pushNotification_PushNotificationPb_descriptor,
-        new java.lang.String[] { "DbInfo", "Token", });
+        new java.lang.String[] { "DbInfo", "Token", "OrgRef", "CampusRef", "DeviceRef", "LoginRef", });
     internal_static_com_tiwari_studence_proto_pushNotification_PushNotificationRefPb_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_com_tiwari_studence_proto_pushNotification_PushNotificationRefPb_fieldAccessorTable = new
@@ -88,6 +96,7 @@ public final class PushNotificationPbOuterClass {
         internal_static_com_tiwari_studence_proto_pushNotification_PushNotificationSearchRespPb_descriptor,
         new java.lang.String[] { "Summary", "Results", });
     com.tiwari.studence.proto.entity.EntityPbOuterClass.getDescriptor();
+    com.tiwari.studence.proto.genericRef.GenericRefPbOuterClass.getDescriptor();
     com.tiwari.studence.proto.summary.SummaryPbOuterClass.getDescriptor();
   }
 

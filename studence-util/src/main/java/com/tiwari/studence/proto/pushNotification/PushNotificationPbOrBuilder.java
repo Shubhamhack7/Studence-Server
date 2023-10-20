@@ -33,4 +33,64 @@ public interface PushNotificationPbOrBuilder extends
    */
   com.google.protobuf.ByteString
       getTokenBytes();
+
+  /**
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb orgRef = 3;</code>
+   * @return Whether the orgRef field is set.
+   */
+  boolean hasOrgRef();
+  /**
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb orgRef = 3;</code>
+   * @return The orgRef.
+   */
+  com.tiwari.studence.proto.genericRef.GenericRefPb getOrgRef();
+  /**
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb orgRef = 3;</code>
+   */
+  com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder getOrgRefOrBuilder();
+
+  /**
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb campusRef = 4;</code>
+   * @return Whether the campusRef field is set.
+   */
+  boolean hasCampusRef();
+  /**
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb campusRef = 4;</code>
+   * @return The campusRef.
+   */
+  com.tiwari.studence.proto.genericRef.GenericRefPb getCampusRef();
+  /**
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb campusRef = 4;</code>
+   */
+  com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder getCampusRefOrBuilder();
+
+  /**
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb deviceRef = 5;</code>
+   * @return Whether the deviceRef field is set.
+   */
+  boolean hasDeviceRef();
+  /**
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb deviceRef = 5;</code>
+   * @return The deviceRef.
+   */
+  com.tiwari.studence.proto.genericRef.GenericRefPb getDeviceRef();
+  /**
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb deviceRef = 5;</code>
+   */
+  com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder getDeviceRefOrBuilder();
+
+  /**
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb loginRef = 6;</code>
+   * @return Whether the loginRef field is set.
+   */
+  boolean hasLoginRef();
+  /**
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb loginRef = 6;</code>
+   * @return The loginRef.
+   */
+  com.tiwari.studence.proto.genericRef.GenericRefPb getLoginRef();
+  /**
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb loginRef = 6;</code>
+   */
+  com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder getLoginRefOrBuilder();
 }

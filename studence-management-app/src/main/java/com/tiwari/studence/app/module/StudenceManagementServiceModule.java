@@ -13,6 +13,7 @@ import com.thetransactioncompany.cors.CORSFilter;
 import com.tiwari.studence.app.servlet.MyServlet;
 import com.tiwari.studence.campus.module.CampusModule;
 import com.tiwari.studence.common.module.*;
+import com.tiwari.studence.devices.module.DevicesModule;
 import com.tiwari.studence.dynamodb.database.module.CreateDynamoDbTableModule;
 import com.tiwari.studence.organisation.module.OrganisationModule;
 import com.tiwari.studence.util.collect.Maps;
@@ -31,7 +32,8 @@ public class StudenceManagementServiceModule extends ServletModule {
           CreateDynamoDbTableModule createDynamoDbTableModule,
           PutItemDynamoTableModule putItemDynamoTableModule,
           SearchItemDynamoTableModule searchItemDynamoTableModule,
-          OrganisationModule orgnisationModule, CampusModule campusModule) {
+          OrganisationModule orgnisationModule, CampusModule campusModule,
+          DevicesModule devicesModule) {
     moduleSet.add(this);
     moduleSet.add(serverExceptionModule);
     moduleSet.add(serverListnerModule);
@@ -41,6 +43,7 @@ public class StudenceManagementServiceModule extends ServletModule {
     moduleSet.add(putItemDynamoTableModule);
     moduleSet.add(createDynamoDbTableModule);
     moduleSet.add(searchItemDynamoTableModule);
+    moduleSet.add(devicesModule);
     moduleSet.add(orgnisationModule);
     moduleSet.add(campusModule);
   }

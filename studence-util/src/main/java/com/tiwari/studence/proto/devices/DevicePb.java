@@ -64,6 +64,16 @@ public final class DevicePb {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_tiwari_studence_proto_devices_DeviceDetailsPb_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tiwari_studence_proto_devices_DeviceDetailsSearchReqPb_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tiwari_studence_proto_devices_DeviceDetailsSearchReqPb_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tiwari_studence_proto_devices_DeviceDetailsSearchRespPb_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tiwari_studence_proto_devices_DeviceDetailsSearchRespPb_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -75,110 +85,119 @@ public final class DevicePb {
     java.lang.String[] descriptorData = {
       "\n\016devicePb.proto\022!com.tiwari.studence.pr" +
       "oto.devices\032\016entityPb.proto\032\030pushNotific" +
-      "ationPb.proto\"\331\001\n\022AndroidDisplayInfo\022\033\n\023" +
-      "display_size_inches\030\033 \001(\002\022\034\n\024display_wid" +
-      "th_pixels\030\034 \001(\005\022\034\n\024display_width_inches\030" +
-      "\035 \001(\002\022\035\n\025display_height_pixels\030\036 \001(\005\022\035\n\025" +
-      "display_height_inches\030\037 \001(\002\022\025\n\rdisplay_x" +
-      "_dpi\030  \001(\002\022\025\n\rdisplay_y_dpi\030! \001(\002\"\365\004\n\024An" +
-      "droidDeviceDetails\022\026\n\016security_patch\030\001 \001" +
-      "(\t\022\017\n\007sdk_int\030\002 \001(\005\022\017\n\007release\030\003 \001(\t\022\027\n\017" +
-      "preview_sdk_int\030\004 \001(\005\022\023\n\013incremental\030\005 \001" +
-      "(\t\022\020\n\010codename\030\006 \001(\t\022\017\n\007base_os\030\007 \001(\t\022\r\n" +
-      "\005board\030\010 \001(\t\022\022\n\nbootloader\030\t \001(\t\022\r\n\005bran" +
-      "d\030\n \001(\t\022\016\n\006device\030\013 \001(\t\022\017\n\007display\030\014 \001(\t" +
-      "\022\023\n\013fingerprint\030\r \001(\t\022\020\n\010hardware\030\016 \001(\t\022" +
-      "\014\n\004host\030\017 \001(\t\022\n\n\002id\030\020 \001(\t\022\024\n\014manufacture" +
-      "r\030\021 \001(\t\022\r\n\005model\030\022 \001(\t\022\017\n\007product\030\023 \001(\t\022" +
-      "\035\n\025supported_32_bit_abis\030\024 \003(\t\022\035\n\025suppor" +
-      "ted_64_bit_abis\030\025 \003(\t\022\026\n\016supported_abis\030" +
-      "\026 \003(\t\022\014\n\004tags\030\027 \001(\t\022\014\n\004type\030\030 \001(\t\022\032\n\022is_" +
-      "physical_device\030\031 \001(\010\022\027\n\017system_features" +
-      "\030\032 \003(\t\022J\n\013displayInfo\030\033 \001(\01325.com.tiwari" +
-      ".studence.proto.devices.AndroidDisplayIn" +
-      "fo\022\025\n\rserial_number\030\034 \001(\t\"\346\001\n\020IOSDeviceD" +
-      "etails\022\014\n\004name\030\001 \001(\t\022\022\n\nsystemName\030\002 \001(\t" +
-      "\022\025\n\rsystemVersion\030\003 \001(\t\022\r\n\005model\030\004 \001(\t\022\026" +
-      "\n\016localizedModel\030\005 \001(\t\022\033\n\023identifierForV" +
-      "endor\030\006 \001(\t\022\030\n\020isPhysicalDevice\030\007 \001(\010\022;\n" +
-      "\007utsname\030\010 \001(\0132*.com.tiwari.studence.pro" +
-      "to.devices.Utsname\"_\n\007Utsname\022\017\n\007sysname" +
-      "\030\001 \001(\t\022\020\n\010nodename\030\002 \001(\t\022\017\n\007release\030\003 \001(" +
-      "\t\022\017\n\007version\030\004 \001(\t\022\017\n\007machine\030\005 \001(\t\"\262\004\n\024" +
-      "WindowsDeviceDetails\022\025\n\rnumberOfCores\030\001 " +
-      "\001(\005\022\024\n\014computerName\030\002 \001(\t\022\037\n\027systemMemor" +
-      "yInMegabytes\030\003 \001(\005\022\020\n\010userName\030\004 \001(\t\022\024\n\014" +
-      "majorVersion\030\005 \001(\005\022\024\n\014minorVersion\030\006 \001(\005" +
-      "\022\023\n\013buildNumber\030\007 \001(\005\022\022\n\nplatformId\030\010 \001(" +
-      "\005\022\022\n\ncsdVersion\030\t \001(\t\022\030\n\020servicePackMajo" +
-      "r\030\n \001(\005\022\030\n\020servicePackMinor\030\013 \001(\005\022\020\n\010sui" +
-      "tMask\030\014 \001(\005\022\023\n\013productType\030\r \001(\005\022\020\n\010rese" +
-      "rved\030\016 \001(\t\022\020\n\010buildLab\030\017 \001(\t\022\022\n\nbuildLab" +
-      "Ex\030\020 \001(\t\022\030\n\020digitalProductId\030\021 \001(\t\022\026\n\016di" +
-      "splayVersion\030\022 \001(\t\022\021\n\teditionId\030\023 \001(\t\022\023\n" +
-      "\013installDate\030\024 \001(\t\022\021\n\tproductId\030\025 \001(\t\022\023\n" +
-      "\013productName\030\026 \001(\t\022\027\n\017registeredOwner\030\027 " +
-      "\001(\t\022\021\n\treleaseId\030\030 \001(\t\022\020\n\010deviceId\030\031 \001(\t" +
-      "\"\242\002\n\022MacOSDeviceDetails\022\025\n\rcomputer_name" +
-      "\030\001 \001(\t\022\021\n\thost_name\030\002 \001(\t\022\014\n\004arch\030\003 \001(\t\022" +
-      "\r\n\005model\030\004 \001(\t\022\026\n\016kernel_version\030\005 \001(\t\022\025" +
-      "\n\rmajor_version\030\006 \001(\005\022\025\n\rminor_version\030\007" +
-      " \001(\005\022\025\n\rpatch_version\030\010 \001(\005\022\022\n\nos_releas" +
-      "e\030\t \001(\t\022\023\n\013active_cpus\030\n \001(\005\022\023\n\013memory_s" +
-      "ize\030\013 \001(\003\022\025\n\rcpu_frequency\030\014 \001(\003\022\023\n\013syst" +
-      "em_guid\030\r \001(\t\"\303\002\n\025WebBrowserInfoDetails\022" +
-      "\023\n\013browserName\030\001 \001(\t\022\023\n\013appCodeName\030\002 \001(" +
-      "\t\022\017\n\007appName\030\003 \001(\t\022\022\n\nappVersion\030\004 \001(\t\022\024" +
-      "\n\014deviceMemory\030\005 \001(\r\022\020\n\010language\030\006 \001(\t\022\021" +
-      "\n\tlanguages\030\007 \003(\t\022\020\n\010platform\030\010 \001(\t\022\017\n\007p" +
-      "roduct\030\t \001(\t\022\022\n\nproductSub\030\n \001(\t\022\021\n\tuser" +
-      "Agent\030\013 \001(\t\022\016\n\006vendor\030\014 \001(\t\022\021\n\tvendorSub" +
-      "\030\r \001(\t\022\033\n\023hardwareConcurrency\030\016 \001(\r\022\026\n\016m" +
-      "axTouchPoints\030\017 \001(\r\"\333\001\n\026LinuxDeviceInfoD" +
-      "etails\022\014\n\004name\030\001 \001(\t\022\017\n\007version\030\002 \001(\t\022\n\n" +
-      "\002id\030\003 \001(\t\022\016\n\006idLike\030\004 \003(\t\022\027\n\017versionCode" +
-      "name\030\005 \001(\t\022\021\n\tversionId\030\006 \001(\t\022\022\n\nprettyN" +
-      "ame\030\007 \001(\t\022\017\n\007buildId\030\010 \001(\t\022\017\n\007variant\030\t " +
-      "\001(\t\022\021\n\tvariantId\030\n \001(\t\022\021\n\tmachineId\030\013 \001(" +
-      "\t\"1\n\020DeviceScreenSize\022\016\n\006hieght\030\001 \001(\005\022\r\n" +
-      "\005width\030\002 \001(\005\"\340\007\n\017DeviceDetailsPb\022:\n\006dbIn" +
-      "fo\030\001 \001(\0132*.com.tiwari.studence.proto.ent" +
-      "ity.EntityPb\022I\n\014deviceOsType\030\002 \001(\01623.com" +
-      ".tiwari.studence.proto.devices.DeviceOST" +
-      "ypeEnum\022N\n\randroidDevice\030\003 \001(\01327.com.tiw" +
-      "ari.studence.proto.devices.AndroidDevice" +
-      "Details\022F\n\tiosDevice\030\004 \001(\01323.com.tiwari." +
-      "studence.proto.devices.IOSDeviceDetails\022" +
-      "N\n\rwindowsDevice\030\005 \001(\01327.com.tiwari.stud" +
-      "ence.proto.devices.WindowsDeviceDetails\022" +
-      "J\n\013macOsDevice\030\006 \001(\01325.com.tiwari.studen" +
-      "ce.proto.devices.MacOSDeviceDetails\022R\n\020w" +
-      "ebBrowserDevice\030\007 \001(\01328.com.tiwari.stude" +
-      "nce.proto.devices.WebBrowserInfoDetails\022" +
-      "N\n\013linuxDevice\030\010 \001(\01329.com.tiwari.studen" +
-      "ce.proto.devices.LinuxDeviceInfoDetails\022" +
-      "F\n\tscreeSize\030\t \001(\01323.com.tiwari.studence" +
-      ".proto.devices.DeviceScreenSize\022\023\n\013devic" +
-      "eMacId\030\n \001(\t\022\027\n\017deviceIpAddress\030\013 \001(\t\022\021\n" +
-      "\tunique_id\030\014 \001(\t\022>\n\004mode\030\r \001(\01620.com.tiw" +
-      "ari.studence.proto.devices.DeviceAppMode" +
-      "\022E\n\ndeviceType\030\016 \001(\01621.com.tiwari.studen" +
-      "ce.proto.devices.DeviceTypeEnum\022^\n\023pushN" +
-      "otificationRef\030\017 \001(\0132A.com.tiwari.studen" +
-      "ce.proto.pushNotification.PushNotificati" +
-      "onRefPb*Y\n\020DeviceOSTypeEnum\022\016\n\nUNKNOWN_O" +
-      "S\020\000\022\013\n\007ANDROID\020\001\022\007\n\003IOS\020\002\022\013\n\007WINDOWS\020\003\022\007" +
-      "\n\003MAC\020\004\022\t\n\005LINUX\020\005*U\n\016DeviceTypeEnum\022\027\n\023" +
-      "UNKNOWN_DEVICE_TYPE\020\000\022\n\n\006LAPTOP\020\001\022\006\n\002PC\020" +
-      "\002\022\n\n\006MOBILE\020\003\022\n\n\006TABLET\020\004*=\n\rDeviceAppMo" +
-      "de\022\017\n\013UKNOWN_MODE\020\000\022\013\n\007WEB_APP\020\001\022\016\n\nMOBI" +
-      "LE_APP\020\002B\005P\001\240\001\001b\006proto3"
+      "ationPb.proto\032\017summaryPb.proto\"\331\001\n\022Andro" +
+      "idDisplayInfo\022\033\n\023display_size_inches\030\001 \001" +
+      "(\002\022\034\n\024display_width_pixels\030\002 \001(\005\022\034\n\024disp" +
+      "lay_width_inches\030\003 \001(\002\022\035\n\025display_height" +
+      "_pixels\030\004 \001(\005\022\035\n\025display_height_inches\030\005" +
+      " \001(\002\022\025\n\rdisplay_x_dpi\030\006 \001(\002\022\025\n\rdisplay_y" +
+      "_dpi\030\007 \001(\002\"\365\004\n\024AndroidDeviceDetails\022\026\n\016s" +
+      "ecurity_patch\030\001 \001(\t\022\017\n\007sdk_int\030\002 \001(\005\022\017\n\007" +
+      "release\030\003 \001(\t\022\027\n\017preview_sdk_int\030\004 \001(\005\022\023" +
+      "\n\013incremental\030\005 \001(\t\022\020\n\010codename\030\006 \001(\t\022\017\n" +
+      "\007base_os\030\007 \001(\t\022\r\n\005board\030\010 \001(\t\022\022\n\nbootloa" +
+      "der\030\t \001(\t\022\r\n\005brand\030\n \001(\t\022\016\n\006device\030\013 \001(\t" +
+      "\022\017\n\007display\030\014 \001(\t\022\023\n\013fingerprint\030\r \001(\t\022\020" +
+      "\n\010hardware\030\016 \001(\t\022\014\n\004host\030\017 \001(\t\022\n\n\002id\030\020 \001" +
+      "(\t\022\024\n\014manufacturer\030\021 \001(\t\022\r\n\005model\030\022 \001(\t\022" +
+      "\017\n\007product\030\023 \001(\t\022\035\n\025supported_32_bit_abi" +
+      "s\030\024 \003(\t\022\035\n\025supported_64_bit_abis\030\025 \003(\t\022\026" +
+      "\n\016supported_abis\030\026 \003(\t\022\014\n\004tags\030\027 \001(\t\022\014\n\004" +
+      "type\030\030 \001(\t\022\032\n\022is_physical_device\030\031 \001(\010\022\027" +
+      "\n\017system_features\030\032 \003(\t\022J\n\013displayInfo\030\033" +
+      " \001(\01325.com.tiwari.studence.proto.devices" +
+      ".AndroidDisplayInfo\022\025\n\rserial_number\030\034 \001" +
+      "(\t\"\346\001\n\020IOSDeviceDetails\022\014\n\004name\030\001 \001(\t\022\022\n" +
+      "\nsystemName\030\002 \001(\t\022\025\n\rsystemVersion\030\003 \001(\t" +
+      "\022\r\n\005model\030\004 \001(\t\022\026\n\016localizedModel\030\005 \001(\t\022" +
+      "\033\n\023identifierForVendor\030\006 \001(\t\022\030\n\020isPhysic" +
+      "alDevice\030\007 \001(\010\022;\n\007utsname\030\010 \001(\0132*.com.ti" +
+      "wari.studence.proto.devices.Utsname\"_\n\007U" +
+      "tsname\022\017\n\007sysname\030\001 \001(\t\022\020\n\010nodename\030\002 \001(" +
+      "\t\022\017\n\007release\030\003 \001(\t\022\017\n\007version\030\004 \001(\t\022\017\n\007m" +
+      "achine\030\005 \001(\t\"\262\004\n\024WindowsDeviceDetails\022\025\n" +
+      "\rnumberOfCores\030\001 \001(\005\022\024\n\014computerName\030\002 \001" +
+      "(\t\022\037\n\027systemMemoryInMegabytes\030\003 \001(\005\022\020\n\010u" +
+      "serName\030\004 \001(\t\022\024\n\014majorVersion\030\005 \001(\005\022\024\n\014m" +
+      "inorVersion\030\006 \001(\005\022\023\n\013buildNumber\030\007 \001(\005\022\022" +
+      "\n\nplatformId\030\010 \001(\005\022\022\n\ncsdVersion\030\t \001(\t\022\030" +
+      "\n\020servicePackMajor\030\n \001(\005\022\030\n\020servicePackM" +
+      "inor\030\013 \001(\005\022\020\n\010suitMask\030\014 \001(\005\022\023\n\013productT" +
+      "ype\030\r \001(\005\022\020\n\010reserved\030\016 \001(\t\022\020\n\010buildLab\030" +
+      "\017 \001(\t\022\022\n\nbuildLabEx\030\020 \001(\t\022\030\n\020digitalProd" +
+      "uctId\030\021 \001(\t\022\026\n\016displayVersion\030\022 \001(\t\022\021\n\te" +
+      "ditionId\030\023 \001(\t\022\023\n\013installDate\030\024 \001(\t\022\021\n\tp" +
+      "roductId\030\025 \001(\t\022\023\n\013productName\030\026 \001(\t\022\027\n\017r" +
+      "egisteredOwner\030\027 \001(\t\022\021\n\treleaseId\030\030 \001(\t\022" +
+      "\020\n\010deviceId\030\031 \001(\t\"\242\002\n\022MacOSDeviceDetails" +
+      "\022\025\n\rcomputer_name\030\001 \001(\t\022\021\n\thost_name\030\002 \001" +
+      "(\t\022\014\n\004arch\030\003 \001(\t\022\r\n\005model\030\004 \001(\t\022\026\n\016kerne" +
+      "l_version\030\005 \001(\t\022\025\n\rmajor_version\030\006 \001(\005\022\025" +
+      "\n\rminor_version\030\007 \001(\005\022\025\n\rpatch_version\030\010" +
+      " \001(\005\022\022\n\nos_release\030\t \001(\t\022\023\n\013active_cpus\030" +
+      "\n \001(\005\022\023\n\013memory_size\030\013 \001(\003\022\025\n\rcpu_freque" +
+      "ncy\030\014 \001(\003\022\023\n\013system_guid\030\r \001(\t\"\303\002\n\025WebBr" +
+      "owserInfoDetails\022\023\n\013browserName\030\001 \001(\t\022\023\n" +
+      "\013appCodeName\030\002 \001(\t\022\017\n\007appName\030\003 \001(\t\022\022\n\na" +
+      "ppVersion\030\004 \001(\t\022\024\n\014deviceMemory\030\005 \001(\r\022\020\n" +
+      "\010language\030\006 \001(\t\022\021\n\tlanguages\030\007 \003(\t\022\020\n\010pl" +
+      "atform\030\010 \001(\t\022\017\n\007product\030\t \001(\t\022\022\n\nproduct" +
+      "Sub\030\n \001(\t\022\021\n\tuserAgent\030\013 \001(\t\022\016\n\006vendor\030\014" +
+      " \001(\t\022\021\n\tvendorSub\030\r \001(\t\022\033\n\023hardwareConcu" +
+      "rrency\030\016 \001(\r\022\026\n\016maxTouchPoints\030\017 \001(\r\"\333\001\n" +
+      "\026LinuxDeviceInfoDetails\022\014\n\004name\030\001 \001(\t\022\017\n" +
+      "\007version\030\002 \001(\t\022\n\n\002id\030\003 \001(\t\022\016\n\006idLike\030\004 \003" +
+      "(\t\022\027\n\017versionCodename\030\005 \001(\t\022\021\n\tversionId" +
+      "\030\006 \001(\t\022\022\n\nprettyName\030\007 \001(\t\022\017\n\007buildId\030\010 " +
+      "\001(\t\022\017\n\007variant\030\t \001(\t\022\021\n\tvariantId\030\n \001(\t\022" +
+      "\021\n\tmachineId\030\013 \001(\t\"1\n\020DeviceScreenSize\022\016" +
+      "\n\006hieght\030\001 \001(\005\022\r\n\005width\030\002 \001(\005\"\363\007\n\017Device" +
+      "DetailsPb\022:\n\006dbInfo\030\001 \001(\0132*.com.tiwari.s" +
+      "tudence.proto.entity.EntityPb\022I\n\014deviceO" +
+      "sType\030\002 \001(\01623.com.tiwari.studence.proto." +
+      "devices.DeviceOSTypeEnum\022N\n\randroidDevic" +
+      "e\030\003 \001(\01327.com.tiwari.studence.proto.devi" +
+      "ces.AndroidDeviceDetails\022F\n\tiosDevice\030\004 " +
+      "\001(\01323.com.tiwari.studence.proto.devices." +
+      "IOSDeviceDetails\022N\n\rwindowsDevice\030\005 \001(\0132" +
+      "7.com.tiwari.studence.proto.devices.Wind" +
+      "owsDeviceDetails\022J\n\013macOsDevice\030\006 \001(\01325." +
+      "com.tiwari.studence.proto.devices.MacOSD" +
+      "eviceDetails\022R\n\020webBrowserDevice\030\007 \001(\01328" +
+      ".com.tiwari.studence.proto.devices.WebBr" +
+      "owserInfoDetails\022N\n\013linuxDevice\030\010 \001(\01329." +
+      "com.tiwari.studence.proto.devices.LinuxD" +
+      "eviceInfoDetails\022F\n\tscreeSize\030\t \001(\01323.co" +
+      "m.tiwari.studence.proto.devices.DeviceSc" +
+      "reenSize\022\023\n\013deviceMacId\030\n \001(\t\022\027\n\017deviceI" +
+      "pAddress\030\013 \001(\t\022\021\n\tunique_id\030\014 \001(\t\022>\n\004mod" +
+      "e\030\r \001(\01620.com.tiwari.studence.proto.devi" +
+      "ces.DeviceAppMode\022E\n\ndeviceType\030\016 \001(\01621." +
+      "com.tiwari.studence.proto.devices.Device" +
+      "TypeEnum\022^\n\023pushNotificationRef\030\017 \001(\0132A." +
+      "com.tiwari.studence.proto.pushNotificati" +
+      "on.PushNotificationRefPb\022\021\n\tdevice_id\030\020 " +
+      "\001(\t\"e\n\030DeviceDetailsSearchReqPb\022I\n\014devic" +
+      "eOsType\030\001 \001(\01623.com.tiwari.studence.prot" +
+      "o.devices.DeviceOSTypeEnum\"\237\001\n\031DeviceDet" +
+      "ailsSearchRespPb\022=\n\007summary\030\001 \001(\0132,.com." +
+      "tiwari.studence.proto.summary.SummaryPb\022" +
+      "C\n\007results\030\002 \003(\01322.com.tiwari.studence.p" +
+      "roto.devices.DeviceDetailsPb*Y\n\020DeviceOS" +
+      "TypeEnum\022\016\n\nUNKNOWN_OS\020\000\022\013\n\007ANDROID\020\001\022\007\n" +
+      "\003IOS\020\002\022\013\n\007WINDOWS\020\003\022\007\n\003MAC\020\004\022\t\n\005LINUX\020\005*" +
+      "U\n\016DeviceTypeEnum\022\027\n\023UNKNOWN_DEVICE_TYPE" +
+      "\020\000\022\n\n\006LAPTOP\020\001\022\006\n\002PC\020\002\022\n\n\006MOBILE\020\003\022\n\n\006TA" +
+      "BLET\020\004*=\n\rDeviceAppMode\022\017\n\013UKNOWN_MODE\020\000" +
+      "\022\013\n\007WEB_APP\020\001\022\016\n\nMOBILE_APP\020\002B\005P\001\240\001\001b\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.tiwari.studence.proto.entity.EntityPbOuterClass.getDescriptor(),
           com.tiwari.studence.proto.pushNotification.PushNotificationPbOuterClass.getDescriptor(),
+          com.tiwari.studence.proto.summary.SummaryPbOuterClass.getDescriptor(),
         });
     internal_static_com_tiwari_studence_proto_devices_AndroidDisplayInfo_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -239,9 +258,22 @@ public final class DevicePb {
     internal_static_com_tiwari_studence_proto_devices_DeviceDetailsPb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tiwari_studence_proto_devices_DeviceDetailsPb_descriptor,
-        new java.lang.String[] { "DbInfo", "DeviceOsType", "AndroidDevice", "IosDevice", "WindowsDevice", "MacOsDevice", "WebBrowserDevice", "LinuxDevice", "ScreeSize", "DeviceMacId", "DeviceIpAddress", "UniqueId", "Mode", "DeviceType", "PushNotificationRef", });
+        new java.lang.String[] { "DbInfo", "DeviceOsType", "AndroidDevice", "IosDevice", "WindowsDevice", "MacOsDevice", "WebBrowserDevice", "LinuxDevice", "ScreeSize", "DeviceMacId", "DeviceIpAddress", "UniqueId", "Mode", "DeviceType", "PushNotificationRef", "DeviceId", });
+    internal_static_com_tiwari_studence_proto_devices_DeviceDetailsSearchReqPb_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_com_tiwari_studence_proto_devices_DeviceDetailsSearchReqPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_devices_DeviceDetailsSearchReqPb_descriptor,
+        new java.lang.String[] { "DeviceOsType", });
+    internal_static_com_tiwari_studence_proto_devices_DeviceDetailsSearchRespPb_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_com_tiwari_studence_proto_devices_DeviceDetailsSearchRespPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_devices_DeviceDetailsSearchRespPb_descriptor,
+        new java.lang.String[] { "Summary", "Results", });
     com.tiwari.studence.proto.entity.EntityPbOuterClass.getDescriptor();
     com.tiwari.studence.proto.pushNotification.PushNotificationPbOuterClass.getDescriptor();
+    com.tiwari.studence.proto.summary.SummaryPbOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

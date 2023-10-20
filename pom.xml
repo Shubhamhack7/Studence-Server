@@ -269,6 +269,7 @@
 	
   
   <modules>
+        <module>studence-openai</module>
 
     <module>studence-devices</module>
     <module>studence-dump</module>

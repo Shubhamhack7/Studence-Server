@@ -31,6 +31,25 @@
             <version>6.0.0</version>
             <scope>provided</scope>
         </dependency>
+		<!-- https://mvnrepository.com/artifact/com.theokanning.openai-gpt3-java/service -->
+		<dependency>
+			<groupId>com.theokanning.openai-gpt3-java</groupId>
+			<artifactId>service</artifactId>
+			<version>0.16.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.theokanning.openai-gpt3-java/api -->
+		<dependency>
+			<groupId>com.theokanning.openai-gpt3-java</groupId>
+			<artifactId>api</artifactId>
+			<version>0.16.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.theokanning.openai-gpt3-java/client -->
+		<dependency>
+			<groupId>com.theokanning.openai-gpt3-java</groupId>
+			<artifactId>client</artifactId>
+			<version>0.16.0</version>
+		</dependency>
+
         <dependency>
             <groupId>com.tiwari.studence</groupId>
             <artifactId>studence-common</artifactId>
