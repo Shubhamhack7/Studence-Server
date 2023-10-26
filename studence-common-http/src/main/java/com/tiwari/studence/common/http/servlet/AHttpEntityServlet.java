@@ -52,6 +52,10 @@ public abstract class AHttpEntityServlet<Service, UiPb extends GeneratedMessageV
       String reqString = reqTypeEnum.getReqString(req);
       UiPb reqUiPb = m_reqParser.convert(reqString);
       return (IFuture) createResource(reqUiPb);
+    case GET_OR_CREATE_BY_EXTERNALIDPB:
+      String reqString2 = reqTypeEnum.getReqString(req);
+      Lreq reqUiPb2 = m_searchReqParser.convert(reqString2);
+      return (IFuture) getOrCreateResource(reqUiPb2);
     default:
       Preconditions.validateWithUiErrorString(false, "Unknown Operation on Resourse", "",
               req.getPathInfo(), req.getMethod());
@@ -111,6 +115,10 @@ public abstract class AHttpEntityServlet<Service, UiPb extends GeneratedMessageV
       String dataReq = reqTypeEnum.getReqString(req);
       return (IFuture) getResourceList(m_searchReqParser.convert(dataReq));
     }
+    case GET_OR_CREATE_BY_EXTERNALIDPB:
+      String reqString2 = reqTypeEnum.getReqString(req);
+      Lreq reqUiPb2 = m_searchReqParser.convert(reqString2);
+      return (IFuture) getOrCreateResource(reqUiPb2);
     default:
       Preconditions.validateWithUiErrorString(false, "Unknown Operation on Resourse", "",
               req.getPathInfo(), req.getMethod());
@@ -162,6 +170,22 @@ public abstract class AHttpEntityServlet<Service, UiPb extends GeneratedMessageV
     Preconditions.validate(false, "Create is not supported for this resource");
     return null;
   }
+
+  private IFuture<Lresp, ErrorException> getOrCreateResource(final Lreq request) {
+    if (m_service instanceof IHandleService) {
+      return (IFuture<Lresp, ErrorException>) RequestExecutor.getInstance()
+              .runRequestInContext(m_service.getClass().getSimpleName(),
+                      IHandleService.class.getSimpleName(), new Callable<IFuture>() {
+                        @Override
+                        public IFuture<UiPb, ErrorException> call() throws Exception {
+                          return ((IHandleService) m_service).executeService(request);
+                        }
+                      });
+    }
+    Preconditions.validate(false, "Create is not supported for this resource");
+    return null;
+  }
+
 
   //	private IFuture<UiPb, VoidException> safeCreateResource(final UiPb request) {
   //		if (m_service instanceof ISafeCreateByExternalId) {

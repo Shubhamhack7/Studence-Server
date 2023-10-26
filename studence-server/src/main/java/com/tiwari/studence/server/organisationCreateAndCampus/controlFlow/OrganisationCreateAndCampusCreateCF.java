@@ -5,23 +5,26 @@ import com.tiwari.studence.common.async.AControlFlow;
 import com.tiwari.studence.common.async.IFuture;
 import com.tiwari.studence.organisation.service.IOrganisationService;
 import com.tiwari.studence.proto.campus.CampusPb;
-import com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb;
+import com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb;
+import com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateRespPb;
 import com.tiwari.studence.proto.organisation.OrganisationPb;
 import com.tiwari.studence.util.entity.EntityUtilHelper;
 import com.tiwari.studence.util.exception.ErrorException;
 import com.tiwari.studence.util.exception.LoggedRuntimeException;
 
 public class OrganisationCreateAndCampusCreateCF extends
-        AControlFlow<OrganisationCreateAndCampusCreateCF.State, OrganisationCreateAndCampusCreatePb, ErrorException> {
+        AControlFlow<OrganisationCreateAndCampusCreateCF.State, OrganisationCreateAndCampusCreateRespPb, ErrorException> {
 
   private IOrganisationService m_organisationService;
   private ICampusService m_campusService;
-  private OrganisationCreateAndCampusCreatePb m_request;
-  private OrganisationCreateAndCampusCreatePb.Builder m_response;
-  public OrganisationCreateAndCampusCreateCF(OrganisationCreateAndCampusCreatePb request) {
+  private OrganisationCreateAndCampusCreateReqPb m_request;
+  private OrganisationCreateAndCampusCreateRespPb.Builder m_response;
+  public OrganisationCreateAndCampusCreateCF(OrganisationCreateAndCampusCreateReqPb request,IOrganisationService organisationService,ICampusService campusService) {
     super(State.CREATE_ORGANISATION, State.DONE);
     m_request = request;
-    m_response = OrganisationCreateAndCampusCreatePb.newBuilder();
+    m_response = OrganisationCreateAndCampusCreateRespPb.newBuilder();
+    m_organisationService=organisationService;
+    m_campusService=campusService;
     addStateHandler(State.CREATE_ORGANISATION, new CreateOrganisation());
     addStateHandler(State.CREATE_CAMPUS, new CreateCampus());
   }

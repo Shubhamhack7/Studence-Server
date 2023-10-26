@@ -29,6 +29,10 @@ message PushNotificationRefPb{
 
 message PushNotificationSearchReqPb{
   string token = 1;
+  string orgRefId =2;
+  string campusRefId = 3;
+  string deviceRefId = 4;
+  string loginRefId = 5;
 }
 
 

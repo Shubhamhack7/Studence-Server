@@ -16,6 +16,7 @@ com/tiwari/studence/common/http/servlet/AHttpEntityServlet$3.class
 com/tiwari/studence/common/http/enumm/ReqTypeEnum$GetOrCreateByExternalIdHelper.class
 com/tiwari/studence/common/http/enumm/ReqTypeEnum$GetByExternalIdHelper.class
 com/tiwari/studence/common/http/interfaces/IPbBuilderProvider.class
+com/tiwari/studence/common/http/servlet/AHttpEntityServlet$7.class
 com/tiwari/studence/common/http/enumm/IReqTypeHelper.class
 com/tiwari/studence/common/http/enumm/ReqTypeEnum$DeleteHelper.class
 com/tiwari/studence/common/http/servlet/AHttpEntityServlet$2.class

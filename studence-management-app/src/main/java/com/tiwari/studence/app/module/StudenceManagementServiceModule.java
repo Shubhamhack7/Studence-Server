@@ -16,6 +16,8 @@ import com.tiwari.studence.common.module.*;
 import com.tiwari.studence.devices.module.DevicesModule;
 import com.tiwari.studence.dynamodb.database.module.CreateDynamoDbTableModule;
 import com.tiwari.studence.organisation.module.OrganisationModule;
+import com.tiwari.studence.pushNotification.module.PushNotificationModule;
+import com.tiwari.studence.server.organisationCreateAndCampus.module.OrganisationCreateAndCampusModule;
 import com.tiwari.studence.util.collect.Maps;
 import com.tiwari.studence.util.module.ServerExceptionModule;
 import com.tiwari.studence.util.module.ServerListnerModule;
@@ -33,7 +35,8 @@ public class StudenceManagementServiceModule extends ServletModule {
           PutItemDynamoTableModule putItemDynamoTableModule,
           SearchItemDynamoTableModule searchItemDynamoTableModule,
           OrganisationModule orgnisationModule, CampusModule campusModule,
-          DevicesModule devicesModule) {
+          DevicesModule devicesModule, OrganisationCreateAndCampusModule organisationCreateAndCampusModule,
+          PushNotificationModule pushNotificationModule) {
     moduleSet.add(this);
     moduleSet.add(serverExceptionModule);
     moduleSet.add(serverListnerModule);
@@ -44,8 +47,10 @@ public class StudenceManagementServiceModule extends ServletModule {
     moduleSet.add(createDynamoDbTableModule);
     moduleSet.add(searchItemDynamoTableModule);
     moduleSet.add(devicesModule);
+    moduleSet.add(pushNotificationModule);
     moduleSet.add(orgnisationModule);
     moduleSet.add(campusModule);
+    moduleSet.add(organisationCreateAndCampusModule);
   }
 
   @Override

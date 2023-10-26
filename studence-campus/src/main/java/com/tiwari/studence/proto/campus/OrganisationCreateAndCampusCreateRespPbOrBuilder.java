@@ -3,8 +3,8 @@
 
 package com.tiwari.studence.proto.campus;
 
-public interface OrganisationCreateAndCampusCreatePbOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb)
+public interface OrganisationCreateAndCampusCreateRespPbOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateRespPb)
     com.google.protobuf.MessageOrBuilder {
 
   /**

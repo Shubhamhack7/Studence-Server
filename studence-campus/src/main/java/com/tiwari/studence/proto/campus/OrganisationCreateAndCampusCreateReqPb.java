@@ -4,25 +4,25 @@
 package com.tiwari.studence.proto.campus;
 
 /**
- * Protobuf type {@code com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb}
+ * Protobuf type {@code com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb}
  */
-public final class OrganisationCreateAndCampusCreatePb extends
+public final class OrganisationCreateAndCampusCreateReqPb extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb)
-    OrganisationCreateAndCampusCreatePbOrBuilder {
+    // @@protoc_insertion_point(message_implements:com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb)
+    OrganisationCreateAndCampusCreateReqPbOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use OrganisationCreateAndCampusCreatePb.newBuilder() to construct.
-  private OrganisationCreateAndCampusCreatePb(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use OrganisationCreateAndCampusCreateReqPb.newBuilder() to construct.
+  private OrganisationCreateAndCampusCreateReqPb(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private OrganisationCreateAndCampusCreatePb() {
+  private OrganisationCreateAndCampusCreateReqPb() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new OrganisationCreateAndCampusCreatePb();
+    return new OrganisationCreateAndCampusCreateReqPb();
   }
 
   @java.lang.Override
@@ -32,15 +32,15 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tiwari.studence.proto.campus.CampusPbOuterClass.internal_static_com_tiwari_studence_proto_campus_OrganisationCreateAndCampusCreatePb_descriptor;
+    return com.tiwari.studence.proto.campus.CampusPbOuterClass.internal_static_com_tiwari_studence_proto_campus_OrganisationCreateAndCampusCreateReqPb_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tiwari.studence.proto.campus.CampusPbOuterClass.internal_static_com_tiwari_studence_proto_campus_OrganisationCreateAndCampusCreatePb_fieldAccessorTable
+    return com.tiwari.studence.proto.campus.CampusPbOuterClass.internal_static_com_tiwari_studence_proto_campus_OrganisationCreateAndCampusCreateReqPb_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb.class, com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb.Builder.class);
+            com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb.class, com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb.Builder.class);
   }
 
   public static final int ORGANISATION_FIELD_NUMBER = 1;
@@ -142,10 +142,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb)) {
+    if (!(obj instanceof com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb)) {
       return super.equals(obj);
     }
-    com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb other = (com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb) obj;
+    com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb other = (com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb) obj;
 
     if (hasOrganisation() != other.hasOrganisation()) return false;
     if (hasOrganisation()) {
@@ -181,69 +181,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb parseFrom(
+  public static com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb parseFrom(
+  public static com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb parseFrom(
+  public static com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb parseFrom(
+  public static com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb parseFrom(byte[] data)
+  public static com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb parseFrom(
+  public static com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb parseFrom(java.io.InputStream input)
+  public static com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb parseFrom(
+  public static com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb parseDelimitedFrom(java.io.InputStream input)
+  public static com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb parseDelimitedFrom(
+  public static com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb parseFrom(
+  public static com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb parseFrom(
+  public static com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -256,7 +256,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb prototype) {
+  public static Builder newBuilder(com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -272,26 +272,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb}
+   * Protobuf type {@code com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb)
-      com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePbOrBuilder {
+      // @@protoc_insertion_point(builder_implements:com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb)
+      com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPbOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tiwari.studence.proto.campus.CampusPbOuterClass.internal_static_com_tiwari_studence_proto_campus_OrganisationCreateAndCampusCreatePb_descriptor;
+      return com.tiwari.studence.proto.campus.CampusPbOuterClass.internal_static_com_tiwari_studence_proto_campus_OrganisationCreateAndCampusCreateReqPb_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tiwari.studence.proto.campus.CampusPbOuterClass.internal_static_com_tiwari_studence_proto_campus_OrganisationCreateAndCampusCreatePb_fieldAccessorTable
+      return com.tiwari.studence.proto.campus.CampusPbOuterClass.internal_static_com_tiwari_studence_proto_campus_OrganisationCreateAndCampusCreateReqPb_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb.class, com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb.Builder.class);
+              com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb.class, com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb.Builder.class);
     }
 
-    // Construct using com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb.newBuilder()
+    // Construct using com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb.newBuilder()
     private Builder() {
 
     }
@@ -321,17 +321,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tiwari.studence.proto.campus.CampusPbOuterClass.internal_static_com_tiwari_studence_proto_campus_OrganisationCreateAndCampusCreatePb_descriptor;
+      return com.tiwari.studence.proto.campus.CampusPbOuterClass.internal_static_com_tiwari_studence_proto_campus_OrganisationCreateAndCampusCreateReqPb_descriptor;
     }
 
     @java.lang.Override
-    public com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb getDefaultInstanceForType() {
-      return com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb.getDefaultInstance();
+    public com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb getDefaultInstanceForType() {
+      return com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb build() {
-      com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb result = buildPartial();
+    public com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb build() {
+      com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -339,14 +339,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb buildPartial() {
-      com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb result = new com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb(this);
+    public com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb buildPartial() {
+      com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb result = new com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb result) {
+    private void buildPartial0(com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.organisation_ = organisationBuilder_ == null
@@ -394,16 +394,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb) {
-        return mergeFrom((com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb)other);
+      if (other instanceof com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb) {
+        return mergeFrom((com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb other) {
-      if (other == com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb other) {
+      if (other == com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb.getDefaultInstance()) return this;
       if (other.hasOrganisation()) {
         mergeOrganisation(other.getOrganisation());
       }
@@ -717,23 +717,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb)
+    // @@protoc_insertion_point(builder_scope:com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb)
   }
 
-  // @@protoc_insertion_point(class_scope:com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb)
-  private static final com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb)
+  private static final com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb();
+    DEFAULT_INSTANCE = new com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb();
   }
 
-  public static com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb getDefaultInstance() {
+  public static com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<OrganisationCreateAndCampusCreatePb>
-      PARSER = new com.google.protobuf.AbstractParser<OrganisationCreateAndCampusCreatePb>() {
+  private static final com.google.protobuf.Parser<OrganisationCreateAndCampusCreateReqPb>
+      PARSER = new com.google.protobuf.AbstractParser<OrganisationCreateAndCampusCreateReqPb>() {
     @java.lang.Override
-    public OrganisationCreateAndCampusCreatePb parsePartialFrom(
+    public OrganisationCreateAndCampusCreateReqPb parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -752,17 +752,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<OrganisationCreateAndCampusCreatePb> parser() {
+  public static com.google.protobuf.Parser<OrganisationCreateAndCampusCreateReqPb> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<OrganisationCreateAndCampusCreatePb> getParserForType() {
+  public com.google.protobuf.Parser<OrganisationCreateAndCampusCreateReqPb> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreatePb getDefaultInstanceForType() {
+  public com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

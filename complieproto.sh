@@ -31,6 +31,7 @@ rm -rf studence-pushNotification/src/main/java/com/tiwari/studence/proto
 rm -rf studence-management-app/src/main/java/com/tiwari/studence/proto
 cd studence-proto
 echo [COMPILEING..........]
+protoc voidPb.proto --java_out=../studence-util/src/main/java
 protoc time.proto --java_out=../studence-common/src/main/java
 protoc timePb.proto --java_out=../studence-util/src/main/java
 protoc summaryPb.proto --java_out=../studence-util/src/main/java

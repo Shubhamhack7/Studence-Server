@@ -57,8 +57,10 @@ public final class PushNotificationPbOuterClass {
       "Ref\030\006 \001(\01322.com.tiwari.studence.proto.ge" +
       "nericRef.GenericRefPb\"8\n\025PushNotificatio" +
       "nRefPb\022\020\n\010dbInfoId\030\001 \001(\t\022\r\n\005token\030\002 \001(\t\"" +
-      ",\n\033PushNotificationSearchReqPb\022\r\n\005token\030" +
-      "\001 \001(\t\"\256\001\n\034PushNotificationSearchRespPb\022=" +
+      "|\n\033PushNotificationSearchReqPb\022\r\n\005token\030" +
+      "\001 \001(\t\022\020\n\010orgRefId\030\002 \001(\t\022\023\n\013campusRefId\030\003" +
+      " \001(\t\022\023\n\013deviceRefId\030\004 \001(\t\022\022\n\nloginRefId\030" +
+      "\005 \001(\t\"\256\001\n\034PushNotificationSearchRespPb\022=" +
       "\n\007summary\030\001 \001(\0132,.com.tiwari.studence.pr" +
       "oto.summary.SummaryPb\022O\n\007results\030\002 \003(\0132>" +
       ".com.tiwari.studence.proto.pushNotificat" +
@@ -88,7 +90,7 @@ public final class PushNotificationPbOuterClass {
     internal_static_com_tiwari_studence_proto_pushNotification_PushNotificationSearchReqPb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tiwari_studence_proto_pushNotification_PushNotificationSearchReqPb_descriptor,
-        new java.lang.String[] { "Token", });
+        new java.lang.String[] { "Token", "OrgRefId", "CampusRefId", "DeviceRefId", "LoginRefId", });
     internal_static_com_tiwari_studence_proto_pushNotification_PushNotificationSearchRespPb_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_com_tiwari_studence_proto_pushNotification_PushNotificationSearchRespPb_fieldAccessorTable = new
