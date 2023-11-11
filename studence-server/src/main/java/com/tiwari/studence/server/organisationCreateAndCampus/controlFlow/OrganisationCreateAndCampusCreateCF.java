@@ -46,7 +46,7 @@ public class OrganisationCreateAndCampusCreateCF extends
     @Override
     public State handleState() {
       try {
-        if(EntityUtilHelper.isDbEntityEmpty(m_future.get().getDbInfo())){
+        if(EntityUtilHelper.isDbEntityNotEmpty(m_future.get().getDbInfo())){
           m_response.setOrganisation(m_future.get());
           return State.CREATE_CAMPUS;
         }else{
@@ -74,7 +74,7 @@ public class OrganisationCreateAndCampusCreateCF extends
     @Override
     public State handleState() {
       try {
-        if(EntityUtilHelper.isDbEntityEmpty(m_future.get().getDbInfo())){
+        if(EntityUtilHelper.isDbEntityNotEmpty(m_future.get().getDbInfo())){
           m_response.setCampus(m_future.get());
           getAsyncCallback().set(0,m_response.build());
           return State.DONE;

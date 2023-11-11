@@ -36,7 +36,7 @@ public class ContactDetailsHelper {
         });
     }
 
-    private void updateMobile(MobileNumberPb primary, MobileNumberPb.Builder primaryBuilder) {
+    public void updateMobile(MobileNumberPb primary, MobileNumberPb.Builder primaryBuilder) {
         primaryBuilder.setCode(primary.getCode());
         primaryBuilder.setNumber(primary.getNumber());
         primaryBuilder.setCanonicalNumber(m_isdCodeFormatter.getStringValue(primary.getCode())+primary.getNumber());
@@ -49,7 +49,7 @@ public class ContactDetailsHelper {
         });
     }
 
-    private void updateEmail(EmailPb primary, EmailPb.Builder primaryBuilder) {
+    public void updateEmail(EmailPb primary, EmailPb.Builder primaryBuilder) {
         primaryBuilder.setLocalPart(primary.getLocalPart());
         primaryBuilder.setDomainPart(primary.getDomainPart());
         primaryBuilder.setCanonicalEmail(primary.getLocalPart() + StudenceSpecialCharecterEnum.AT_SIGN.getSign() + primary.getDomainPart());

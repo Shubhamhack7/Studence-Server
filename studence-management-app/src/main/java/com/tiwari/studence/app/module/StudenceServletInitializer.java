@@ -1,6 +1,7 @@
 package com.tiwari.studence.app.module;
 
 import com.tiwari.studence.app.servlet.MyServlet;
+import com.tiwari.studence.login.servlet.LoginServlet;
 import com.tiwari.studence.organisation.servlet.OrganisationServlet;
 import com.tiwari.studence.pushNotification.servlet.PushNotificationServlet;
 import com.tiwari.studence.server.organisationCreateAndCampus.servlet.OrganisationCreateAndCampusServlet;
@@ -25,6 +26,8 @@ public class StudenceServletInitializer implements ServletContainerInitializer {
     servletRegistration.addMapping("/pushNotification");
     servletRegistration = servletContext.addServlet("organisation", OrganisationServlet.class);
     servletRegistration.addMapping("/organisation");
+    servletRegistration = servletContext.addServlet("login", LoginServlet.class);
+    servletRegistration.addMapping("/login");
     servletRegistration = servletContext.addServlet("organisationAndCampusCreateService",
             OrganisationCreateAndCampusServlet.class);
     servletRegistration.addMapping("/organisationAndCampusCreateService");

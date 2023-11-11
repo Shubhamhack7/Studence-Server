@@ -60,10 +60,20 @@ public final class DevicePb {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_tiwari_studence_proto_devices_DeviceScreenSize_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tiwari_studence_proto_devices_DeviceIpAddress_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tiwari_studence_proto_devices_DeviceIpAddress_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_tiwari_studence_proto_devices_DeviceDetailsPb_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_tiwari_studence_proto_devices_DeviceDetailsPb_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tiwari_studence_proto_devices_DeviceDetailsRefPb_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tiwari_studence_proto_devices_DeviceDetailsRefPb_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_tiwari_studence_proto_devices_DeviceDetailsSearchReqPb_descriptor;
   static final 
@@ -151,46 +161,61 @@ public final class DevicePb {
       "\030\006 \001(\t\022\022\n\nprettyName\030\007 \001(\t\022\017\n\007buildId\030\010 " +
       "\001(\t\022\017\n\007variant\030\t \001(\t\022\021\n\tvariantId\030\n \001(\t\022" +
       "\021\n\tmachineId\030\013 \001(\t\"1\n\020DeviceScreenSize\022\016" +
-      "\n\006hieght\030\001 \001(\005\022\r\n\005width\030\002 \001(\005\"\363\007\n\017Device" +
-      "DetailsPb\022:\n\006dbInfo\030\001 \001(\0132*.com.tiwari.s" +
-      "tudence.proto.entity.EntityPb\022I\n\014deviceO" +
-      "sType\030\002 \001(\01623.com.tiwari.studence.proto." +
-      "devices.DeviceOSTypeEnum\022N\n\randroidDevic" +
-      "e\030\003 \001(\01327.com.tiwari.studence.proto.devi" +
-      "ces.AndroidDeviceDetails\022F\n\tiosDevice\030\004 " +
-      "\001(\01323.com.tiwari.studence.proto.devices." +
-      "IOSDeviceDetails\022N\n\rwindowsDevice\030\005 \001(\0132" +
-      "7.com.tiwari.studence.proto.devices.Wind" +
-      "owsDeviceDetails\022J\n\013macOsDevice\030\006 \001(\01325." +
-      "com.tiwari.studence.proto.devices.MacOSD" +
-      "eviceDetails\022R\n\020webBrowserDevice\030\007 \001(\01328" +
-      ".com.tiwari.studence.proto.devices.WebBr" +
-      "owserInfoDetails\022N\n\013linuxDevice\030\010 \001(\01329." +
-      "com.tiwari.studence.proto.devices.LinuxD" +
-      "eviceInfoDetails\022F\n\tscreeSize\030\t \001(\01323.co" +
-      "m.tiwari.studence.proto.devices.DeviceSc" +
-      "reenSize\022\023\n\013deviceMacId\030\n \001(\t\022\027\n\017deviceI" +
-      "pAddress\030\013 \001(\t\022\021\n\tunique_id\030\014 \001(\t\022>\n\004mod" +
-      "e\030\r \001(\01620.com.tiwari.studence.proto.devi" +
-      "ces.DeviceAppMode\022E\n\ndeviceType\030\016 \001(\01621." +
-      "com.tiwari.studence.proto.devices.Device" +
-      "TypeEnum\022^\n\023pushNotificationRef\030\017 \001(\0132A." +
-      "com.tiwari.studence.proto.pushNotificati" +
-      "on.PushNotificationRefPb\022\021\n\tdevice_id\030\020 " +
-      "\001(\t\"e\n\030DeviceDetailsSearchReqPb\022I\n\014devic" +
-      "eOsType\030\001 \001(\01623.com.tiwari.studence.prot" +
-      "o.devices.DeviceOSTypeEnum\"\237\001\n\031DeviceDet" +
-      "ailsSearchRespPb\022=\n\007summary\030\001 \001(\0132,.com." +
-      "tiwari.studence.proto.summary.SummaryPb\022" +
-      "C\n\007results\030\002 \003(\01322.com.tiwari.studence.p" +
-      "roto.devices.DeviceDetailsPb*Y\n\020DeviceOS" +
-      "TypeEnum\022\016\n\nUNKNOWN_OS\020\000\022\013\n\007ANDROID\020\001\022\007\n" +
-      "\003IOS\020\002\022\013\n\007WINDOWS\020\003\022\007\n\003MAC\020\004\022\t\n\005LINUX\020\005*" +
-      "U\n\016DeviceTypeEnum\022\027\n\023UNKNOWN_DEVICE_TYPE" +
-      "\020\000\022\n\n\006LAPTOP\020\001\022\006\n\002PC\020\002\022\n\n\006MOBILE\020\003\022\n\n\006TA" +
-      "BLET\020\004*=\n\rDeviceAppMode\022\017\n\013UKNOWN_MODE\020\000" +
-      "\022\013\n\007WEB_APP\020\001\022\016\n\nMOBILE_APP\020\002B\005P\001\240\001\001b\006pr" +
-      "oto3"
+      "\n\006hieght\030\001 \001(\005\022\r\n\005width\030\002 \001(\005\"r\n\017DeviceI" +
+      "pAddress\022\027\n\017deviceIpAddress\030\001 \001(\t\022F\n\006ipT" +
+      "ype\030\002 \001(\01626.com.tiwari.studence.proto.de" +
+      "vices.DeviceIPAddressType\"\247\010\n\017DeviceDeta" +
+      "ilsPb\022:\n\006dbInfo\030\001 \001(\0132*.com.tiwari.stude" +
+      "nce.proto.entity.EntityPb\022I\n\014deviceOsTyp" +
+      "e\030\002 \001(\01623.com.tiwari.studence.proto.devi" +
+      "ces.DeviceOSTypeEnum\022N\n\randroidDevice\030\003 " +
+      "\001(\01327.com.tiwari.studence.proto.devices." +
+      "AndroidDeviceDetails\022F\n\tiosDevice\030\004 \001(\0132" +
+      "3.com.tiwari.studence.proto.devices.IOSD" +
+      "eviceDetails\022N\n\rwindowsDevice\030\005 \001(\01327.co" +
+      "m.tiwari.studence.proto.devices.WindowsD" +
+      "eviceDetails\022J\n\013macOsDevice\030\006 \001(\01325.com." +
+      "tiwari.studence.proto.devices.MacOSDevic" +
+      "eDetails\022R\n\020webBrowserDevice\030\007 \001(\01328.com" +
+      ".tiwari.studence.proto.devices.WebBrowse" +
+      "rInfoDetails\022N\n\013linuxDevice\030\010 \001(\01329.com." +
+      "tiwari.studence.proto.devices.LinuxDevic" +
+      "eInfoDetails\022F\n\tscreeSize\030\t \001(\01323.com.ti" +
+      "wari.studence.proto.devices.DeviceScreen" +
+      "Size\022\023\n\013deviceMacId\030\n \001(\t\022K\n\017deviceIpAdd" +
+      "ress\030\013 \001(\01322.com.tiwari.studence.proto.d" +
+      "evices.DeviceIpAddress\022\021\n\tunique_id\030\014 \001(" +
+      "\t\022>\n\004mode\030\r \001(\01620.com.tiwari.studence.pr" +
+      "oto.devices.DeviceAppMode\022E\n\ndeviceType\030" +
+      "\016 \001(\01621.com.tiwari.studence.proto.device" +
+      "s.DeviceTypeEnum\022^\n\023pushNotificationRef\030" +
+      "\017 \001(\0132A.com.tiwari.studence.proto.pushNo" +
+      "tification.PushNotificationRefPb\022\021\n\tdevi" +
+      "ce_id\030\020 \001(\t\"\200\003\n\022DeviceDetailsRefPb\022\020\n\010db" +
+      "InfoId\030\001 \001(\t\022I\n\014deviceOsType\030\002 \001(\01623.com" +
+      ".tiwari.studence.proto.devices.DeviceOST" +
+      "ypeEnum\022\023\n\013deviceMacId\030\003 \001(\t\022K\n\017deviceIp" +
+      "Address\030\004 \001(\01322.com.tiwari.studence.prot" +
+      "o.devices.DeviceIpAddress\022\021\n\tunique_id\030\005" +
+      " \001(\t\022>\n\004mode\030\006 \001(\01620.com.tiwari.studence" +
+      ".proto.devices.DeviceAppMode\022E\n\ndeviceTy" +
+      "pe\030\007 \001(\01621.com.tiwari.studence.proto.dev" +
+      "ices.DeviceTypeEnum\022\021\n\tdevice_id\030\010 \001(\t\"e" +
+      "\n\030DeviceDetailsSearchReqPb\022I\n\014deviceOsTy" +
+      "pe\030\001 \001(\01623.com.tiwari.studence.proto.dev" +
+      "ices.DeviceOSTypeEnum\"\237\001\n\031DeviceDetailsS" +
+      "earchRespPb\022=\n\007summary\030\001 \001(\0132,.com.tiwar" +
+      "i.studence.proto.summary.SummaryPb\022C\n\007re" +
+      "sults\030\002 \003(\01322.com.tiwari.studence.proto." +
+      "devices.DeviceDetailsPb*Y\n\020DeviceOSTypeE" +
+      "num\022\016\n\nUNKNOWN_OS\020\000\022\013\n\007ANDROID\020\001\022\007\n\003IOS\020" +
+      "\002\022\013\n\007WINDOWS\020\003\022\007\n\003MAC\020\004\022\t\n\005LINUX\020\005*U\n\016De" +
+      "viceTypeEnum\022\027\n\023UNKNOWN_DEVICE_TYPE\020\000\022\n\n" +
+      "\006LAPTOP\020\001\022\006\n\002PC\020\002\022\n\n\006MOBILE\020\003\022\n\n\006TABLET\020" +
+      "\004*=\n\rDeviceAppMode\022\017\n\013UKNOWN_MODE\020\000\022\013\n\007W" +
+      "EB_APP\020\001\022\016\n\nMOBILE_APP\020\002*E\n\023DeviceIPAddr" +
+      "essType\022\032\n\026UNKNOWN_IPADDRESS_TYPE\020\000\022\010\n\004I" +
+      "PV4\020\001\022\010\n\004IPV6\020\002B\005P\001\240\001\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -253,20 +278,32 @@ public final class DevicePb {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tiwari_studence_proto_devices_DeviceScreenSize_descriptor,
         new java.lang.String[] { "Hieght", "Width", });
-    internal_static_com_tiwari_studence_proto_devices_DeviceDetailsPb_descriptor =
+    internal_static_com_tiwari_studence_proto_devices_DeviceIpAddress_descriptor =
       getDescriptor().getMessageTypes().get(9);
+    internal_static_com_tiwari_studence_proto_devices_DeviceIpAddress_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_devices_DeviceIpAddress_descriptor,
+        new java.lang.String[] { "DeviceIpAddress", "IpType", });
+    internal_static_com_tiwari_studence_proto_devices_DeviceDetailsPb_descriptor =
+      getDescriptor().getMessageTypes().get(10);
     internal_static_com_tiwari_studence_proto_devices_DeviceDetailsPb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tiwari_studence_proto_devices_DeviceDetailsPb_descriptor,
         new java.lang.String[] { "DbInfo", "DeviceOsType", "AndroidDevice", "IosDevice", "WindowsDevice", "MacOsDevice", "WebBrowserDevice", "LinuxDevice", "ScreeSize", "DeviceMacId", "DeviceIpAddress", "UniqueId", "Mode", "DeviceType", "PushNotificationRef", "DeviceId", });
+    internal_static_com_tiwari_studence_proto_devices_DeviceDetailsRefPb_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_com_tiwari_studence_proto_devices_DeviceDetailsRefPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_devices_DeviceDetailsRefPb_descriptor,
+        new java.lang.String[] { "DbInfoId", "DeviceOsType", "DeviceMacId", "DeviceIpAddress", "UniqueId", "Mode", "DeviceType", "DeviceId", });
     internal_static_com_tiwari_studence_proto_devices_DeviceDetailsSearchReqPb_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_com_tiwari_studence_proto_devices_DeviceDetailsSearchReqPb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tiwari_studence_proto_devices_DeviceDetailsSearchReqPb_descriptor,
         new java.lang.String[] { "DeviceOsType", });
     internal_static_com_tiwari_studence_proto_devices_DeviceDetailsSearchRespPb_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_com_tiwari_studence_proto_devices_DeviceDetailsSearchRespPb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tiwari_studence_proto_devices_DeviceDetailsSearchRespPb_descriptor,

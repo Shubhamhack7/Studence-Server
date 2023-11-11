@@ -34,6 +34,7 @@ message LoginPb{
   com.tiwari.studence.proto.contactDetails.MobileNumberPb mobileNo = 4;
   com.tiwari.studence.proto.contactDetails.EmailPb emailId = 5;
   string encryptedPassword  = 6;
+  string firebase_token =7;
 }
 
 
@@ -46,5 +47,17 @@ message LoginSearchReqPb{
 message LoginSearchRespPb{
   com.tiwari.studence.proto.summary.SummaryPb summary =1;
   repeated LoginPb results = 2;
+}
+
+message LoginReqUiPb{
+  string mobileNo = 1;
+  string emailId = 2;
+  string password  = 3;
+}
+
+message LoginRespUiPb{
+  LoginPb login = 1;
+  string sesssionId =2;
+  string sesssionToken =3;
 }
 

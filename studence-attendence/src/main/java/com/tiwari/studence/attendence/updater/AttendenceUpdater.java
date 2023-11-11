@@ -44,7 +44,7 @@ public class AttendenceUpdater extends
         if (Strings.notEmpty(builder.getClassRef().getDbInfoId())){
             attendeceBuilder.setClassRef(builder.getClassRef());
         }
-        if(builder.getIsPresent()!=BooleanEnum.UNRECOGNIZED){
+        if(builder.getIsPresent()!=BooleanEnum.FALSE){
             attendeceBuilder.setIsPresent(builder.getIsPresent());
         }
 

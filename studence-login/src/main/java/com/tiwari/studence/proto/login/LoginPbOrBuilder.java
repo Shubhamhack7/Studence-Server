@@ -89,4 +89,16 @@ public interface LoginPbOrBuilder extends
    */
   com.google.protobuf.ByteString
       getEncryptedPasswordBytes();
+
+  /**
+   * <code>string firebase_token = 7;</code>
+   * @return The firebaseToken.
+   */
+  java.lang.String getFirebaseToken();
+  /**
+   * <code>string firebase_token = 7;</code>
+   * @return The bytes for firebaseToken.
+   */
+  com.google.protobuf.ByteString
+      getFirebaseTokenBytes();
 }

@@ -52,8 +52,9 @@ public class DevicesUpdater extends
     if (Strings.notEmpty(builder.getDeviceMacId())) {
       orgBuilder.setDeviceMacId(builder.getDeviceMacId());
     }
-    if (Strings.notEmpty(builder.getDeviceIpAddress())) {
-      orgBuilder.setDeviceIpAddress(builder.getDeviceIpAddress());
+    if (Strings.notEmpty(builder.getDeviceIpAddress().getDeviceIpAddress())) {
+      m_deviceHelper.updateDeviceIpAddress(orgBuilder.getDeviceIpAddressBuilder(),
+              builder.getDeviceIpAddress());
     }
     if (Strings.notEmpty(builder.getUniqueId())) {
       orgBuilder.setUniqueId(builder.getUniqueId());

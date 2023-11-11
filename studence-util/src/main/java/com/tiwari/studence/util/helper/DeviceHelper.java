@@ -404,7 +404,7 @@ public class DeviceHelper {
               EntityUtilHelper.getDbInfoIdWithSpecialCharecterUsingEntityPb(builder.getDbInfo()));
     }
     uniqueId.append(StudenceSpecialCharecterEnum.HASH_SIGN.getSign());
-    uniqueId.append(builder.getDeviceIpAddress());
+    uniqueId.append(builder.getDeviceIpAddress().getDeviceIpAddress());
     uniqueId.append(StudenceSpecialCharecterEnum.HASH_SIGN.getSign());
     uniqueId.append(builder.getMode().name());
     uniqueId.append(StudenceSpecialCharecterEnum.HASH_SIGN.getSign());
@@ -412,5 +412,17 @@ public class DeviceHelper {
     uniqueId.append(StudenceSpecialCharecterEnum.HASH_SIGN.getSign());
     uniqueId.append(builder.getDeviceOsType().name());
     return uniqueId.toString();
+  }
+
+  public void updateDeviceIpAddress(DeviceIpAddress.Builder deviceIpAddress,
+          DeviceIpAddress deviceIpAddress1) {
+    if(Strings.notEmpty(deviceIpAddress.getDeviceIpAddress())){
+      deviceIpAddress.setDeviceIpAddress(deviceIpAddress1.getDeviceIpAddress());
+    }
+    if(deviceIpAddress.getIpType()!=DeviceIPAddressType.UNKNOWN_IPADDRESS_TYPE){
+      deviceIpAddress.setIpType(deviceIpAddress1.getIpType());
+    }else{
+      deviceIpAddress.setIpType(IPAddressCategorizer.getIPType(deviceIpAddress.getDeviceIpAddress()));
+    }
   }
 }

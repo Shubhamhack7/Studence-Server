@@ -29,16 +29,12 @@ public class FirebaseInitializer {
               .setDatabaseUrl("https://studence-dev-default-rtdb.firebaseio.com")
               .setProjectId("studence-dev").build();
       FirebaseApp.initializeApp(options);
-     System.out.print( FirebaseAuth.getInstance().createCustomToken("HEELO"));
     } catch (IOException e) {
       new ErrorException(e);
-    } catch (FirebaseAuthException e) {
-      throw new RuntimeException(e);
     }
-
   }
 
-  public FirebaseAuth getFirebaseAuth() {
+  public static FirebaseAuth getFirebaseAuth() {
     return FirebaseAuth.getInstance();
   }
 

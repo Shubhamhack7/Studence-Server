@@ -151,16 +151,19 @@ public interface DeviceDetailsPbOrBuilder extends
       getDeviceMacIdBytes();
 
   /**
-   * <code>string deviceIpAddress = 11;</code>
+   * <code>.com.tiwari.studence.proto.devices.DeviceIpAddress deviceIpAddress = 11;</code>
+   * @return Whether the deviceIpAddress field is set.
+   */
+  boolean hasDeviceIpAddress();
+  /**
+   * <code>.com.tiwari.studence.proto.devices.DeviceIpAddress deviceIpAddress = 11;</code>
    * @return The deviceIpAddress.
    */
-  java.lang.String getDeviceIpAddress();
+  com.tiwari.studence.proto.devices.DeviceIpAddress getDeviceIpAddress();
   /**
-   * <code>string deviceIpAddress = 11;</code>
-   * @return The bytes for deviceIpAddress.
+   * <code>.com.tiwari.studence.proto.devices.DeviceIpAddress deviceIpAddress = 11;</code>
    */
-  com.google.protobuf.ByteString
-      getDeviceIpAddressBytes();
+  com.tiwari.studence.proto.devices.DeviceIpAddressOrBuilder getDeviceIpAddressOrBuilder();
 
   /**
    * <code>string unique_id = 12;</code>

@@ -34,6 +34,12 @@ enum DeviceAppMode {
   MOBILE_APP =2;
 }
 
+enum DeviceIPAddressType {
+  UNKNOWN_IPADDRESS_TYPE = 0;
+  IPV4 =1;
+  IPV6 =2;
+}
+
 message AndroidDisplayInfo{
   float display_size_inches = 1;
   int32 display_width_pixels = 2;
@@ -175,7 +181,10 @@ message DeviceScreenSize {
   int32 hieght=1;
   int32 width=2;
 }
-
+message DeviceIpAddress {
+  string deviceIpAddress=1;
+  DeviceIPAddressType ipType=2;
+}
 message DeviceDetailsPb{
   com.tiwari.studence.proto.entity.EntityPb dbInfo =1;
   DeviceOSTypeEnum deviceOsType = 2;
@@ -187,16 +196,27 @@ message DeviceDetailsPb{
   LinuxDeviceInfoDetails linuxDevice =8;
   DeviceScreenSize screeSize =9;
   string deviceMacId = 10;
-  string deviceIpAddress =11;
+  DeviceIpAddress deviceIpAddress =11;
   string unique_id = 12;
   DeviceAppMode mode = 13;
   DeviceTypeEnum deviceType =14;
-  com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef = 15;
-  string device_id = 16;
+  string device_id = 15;
+}
+
+message DeviceDetailsRefPb{
+  string dbInfoId =1;
+  DeviceOSTypeEnum deviceOsType = 2;
+  string deviceMacId = 3;
+  DeviceIpAddress deviceIpAddress =4;
+  string unique_id = 5;
+  DeviceAppMode mode = 6;
+  DeviceTypeEnum deviceType =7;
+  string device_id = 8;
 }
 
 message DeviceDetailsSearchReqPb{
   DeviceOSTypeEnum deviceOsType = 1;
+
 }
 
 

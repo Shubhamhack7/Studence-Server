@@ -33,7 +33,6 @@ public class TeacherUpdater
   public HashMap<String, AttributeValue> updater(TeacherPb builder, EntityPb pb) {
     TeacherPb.Builder teacherBuilder = getBuilderProvider().getBuilder();
     updateEntityBuilder(teacherBuilder.getDbInfoBuilder(), pb);
-    updateEntityBuilder(teacherBuilder.getDbInfoBuilder(), pb);
     if (Strings.notEmpty(builder.getName().getFirstName())) {
       m_nameHelper.updateNamePb(builder.getName(), teacherBuilder.getNameBuilder());
     }

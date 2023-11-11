@@ -9,8 +9,6 @@ option java_generate_equals_and_hash = true;
 
 
 enum ISDCode {
-
-
   ISD_ONE = 0;
   ISD_SEVEN = 1;
   ISD_TWENTY = 2;

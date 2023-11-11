@@ -59,7 +59,7 @@ public class LoginService extends
 
   @Override
   public IFuture<LoginPb, ErrorException> update(String id, LoginPb entity) {
-    return null;
+    return super.updateEntity(id,entity);
   }
 
   @Override

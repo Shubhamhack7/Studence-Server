@@ -13,7 +13,7 @@ import javax.inject.Singleton;
 public class OrganisationCreateAndCampusCreateService
         implements IOrganisationCreateAndCampusCreate {
 
-  OrganisationCreateAndCampusCreate m_organisationCreateAndCampusCreate;
+  private OrganisationCreateAndCampusCreate m_organisationCreateAndCampusCreate;
 
   @Inject
   OrganisationCreateAndCampusCreateService(
