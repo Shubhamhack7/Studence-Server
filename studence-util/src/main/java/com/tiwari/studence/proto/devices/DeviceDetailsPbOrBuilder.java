@@ -200,27 +200,12 @@ public interface DeviceDetailsPbOrBuilder extends
   com.tiwari.studence.proto.devices.DeviceTypeEnum getDeviceType();
 
   /**
-   * <code>.com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef = 15;</code>
-   * @return Whether the pushNotificationRef field is set.
-   */
-  boolean hasPushNotificationRef();
-  /**
-   * <code>.com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef = 15;</code>
-   * @return The pushNotificationRef.
-   */
-  com.tiwari.studence.proto.pushNotification.PushNotificationRefPb getPushNotificationRef();
-  /**
-   * <code>.com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef = 15;</code>
-   */
-  com.tiwari.studence.proto.pushNotification.PushNotificationRefPbOrBuilder getPushNotificationRefOrBuilder();
-
-  /**
-   * <code>string device_id = 16;</code>
+   * <code>string device_id = 15;</code>
    * @return The deviceId.
    */
   java.lang.String getDeviceId();
   /**
-   * <code>string device_id = 16;</code>
+   * <code>string device_id = 15;</code>
    * @return The bytes for deviceId.
    */
   com.google.protobuf.ByteString

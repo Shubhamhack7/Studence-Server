@@ -1,12 +1,11 @@
 package com.tiwari.studence.student.updater;
 
 import com.tiwari.studence.common.updater.AEntityUpdater;
-import com.tiwari.studence.proto.classes.ClassType;
 import com.tiwari.studence.proto.entity.EntityPb;
 import com.tiwari.studence.proto.student.StudentPb;
 import com.tiwari.studence.student.indexer.StudentIndexer;
 import com.tiwari.studence.student.provider.StudentProvider;
-import com.tiwari.studence.util.Strings;
+import com.tiwari.studence.util.common.Strings;
 import com.tiwari.studence.util.helper.ContactDetailsHelper;
 import com.tiwari.studence.util.helper.NameHelper;
 import software.amazon.awssdk.services.dynamodb.model.AttributeValue;

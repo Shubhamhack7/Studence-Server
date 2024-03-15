@@ -1,7 +1,7 @@
 package com.tiwari.studence.util.helper;
 
 import com.tiwari.studence.proto.contactDetails.*;
-import com.tiwari.studence.util.StudenceSpecialCharecterEnum;
+import com.tiwari.studence.util.common.StudenceSpecialCharecterEnum;
 import com.tiwari.studence.util.formatter.ISDCodeFormatter;
 
 import javax.inject.Inject;

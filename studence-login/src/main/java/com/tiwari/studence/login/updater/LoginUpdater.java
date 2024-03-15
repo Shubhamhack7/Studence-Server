@@ -6,7 +6,7 @@ import com.tiwari.studence.login.provider.LoginPbProvider;
 import com.tiwari.studence.proto.entity.EntityPb;
 import com.tiwari.studence.proto.login.LoginPb;
 import com.tiwari.studence.proto.login.ProfileTypeEnum;
-import com.tiwari.studence.util.Strings;
+import com.tiwari.studence.util.common.Strings;
 import com.tiwari.studence.util.encoder.PasswordEncryptor;
 import com.tiwari.studence.util.helper.ContactDetailsHelper;
 import com.tiwari.studence.util.helper.GenericRefHelper;

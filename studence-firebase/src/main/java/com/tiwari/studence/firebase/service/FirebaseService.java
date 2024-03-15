@@ -1,5 +1,8 @@
 package com.tiwari.studence.firebase.service;
 
+import com.google.cloud.storage.Blob;
+import com.google.cloud.storage.BlobId;
+import com.google.cloud.storage.Storage;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthException;
 import com.google.firebase.auth.UserRecord;
@@ -7,6 +10,7 @@ import com.google.firebase.messaging.FirebaseMessagingException;
 import com.google.firebase.messaging.Message;
 import com.google.firebase.messaging.Notification;
 import com.tiwari.studence.firebase.initializer.FirebaseInitializer;
+import com.tiwari.studence.util.log.DebugLogger;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -53,5 +57,26 @@ public class FirebaseService extends FirebaseInitializer implements IFirebaseSer
   @Override
   public UserRecord signInWithEmailAndPassword(String email, String password) {
     return null;
+  }
+
+  @Override
+  public void moveFiles(Storage storage, String sourceBucketName, String sourceObjectName,
+          String targetBucketName, String targetObjectName) {
+    BlobId source = BlobId.of(sourceBucketName, sourceObjectName);
+    BlobId target = BlobId.of(targetBucketName, targetObjectName);
+    Storage.BlobTargetOption precondition;
+    if (storage.get(targetBucketName, targetObjectName) == null) {
+      precondition = Storage.BlobTargetOption.doesNotExist();
+    } else {
+      precondition = Storage.BlobTargetOption.generationMatch(
+              storage.get(targetBucketName, targetObjectName).getGeneration());
+    }
+    storage.copy(Storage.CopyRequest.newBuilder().setSource(source).setTarget(target, precondition)
+            .build());
+    Blob copiedObject = storage.get(target);
+    storage.get(source).delete();
+
+    DebugLogger.info(
+            "Moved object " + sourceObjectName + " from bucket " + sourceBucketName + " to " + targetObjectName + " in bucket " + copiedObject.getBucket());
   }
 }

@@ -2,7 +2,7 @@ package com.tiwari.studence.student.helper;
 
 import com.tiwari.studence.proto.classes.ClassType;
 import com.tiwari.studence.proto.student.StudentRefPb;
-import com.tiwari.studence.util.Strings;
+import com.tiwari.studence.util.common.Strings;
 
 import javax.inject.Inject;
 

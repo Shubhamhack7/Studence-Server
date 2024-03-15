@@ -9,7 +9,7 @@ import com.tiwari.studence.common.request.RequestExecutor;
 import com.tiwari.studence.proto.error.ErrorCategoryUiEnum;
 import com.tiwari.studence.proto.error.ErrorResponsePb;
 import com.tiwari.studence.proto.error.RedirectPb;
-import com.tiwari.studence.util.Strings;
+import com.tiwari.studence.util.common.Strings;
 import com.tiwari.studence.util.exception.Exceptions;
 import com.tiwari.studence.util.exception.LoggedRuntimeException;
 import com.tiwari.studence.util.exception.Preconditions;

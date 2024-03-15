@@ -1,8 +1,7 @@
 package com.tiwari.studence.teacher.helper;
 
-import com.tiwari.studence.proto.classes.ClassType;
 import com.tiwari.studence.proto.teacher.TeacherRefPb;
-import com.tiwari.studence.util.Strings;
+import com.tiwari.studence.util.common.Strings;
 
 import javax.inject.Inject;
 

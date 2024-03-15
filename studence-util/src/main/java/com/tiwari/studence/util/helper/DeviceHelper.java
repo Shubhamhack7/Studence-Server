@@ -1,8 +1,8 @@
 package com.tiwari.studence.util.helper;
 
 import com.tiwari.studence.proto.devices.*;
-import com.tiwari.studence.util.Strings;
-import com.tiwari.studence.util.StudenceSpecialCharecterEnum;
+import com.tiwari.studence.util.common.Strings;
+import com.tiwari.studence.util.common.StudenceSpecialCharecterEnum;
 import com.tiwari.studence.util.entity.EntityUtilHelper;
 
 import javax.inject.Inject;

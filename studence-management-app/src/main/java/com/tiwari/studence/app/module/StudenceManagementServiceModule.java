@@ -15,10 +15,13 @@ import com.tiwari.studence.campus.module.CampusModule;
 import com.tiwari.studence.common.module.*;
 import com.tiwari.studence.devices.module.DevicesModule;
 import com.tiwari.studence.dynamodb.database.module.CreateDynamoDbTableModule;
+import com.tiwari.studence.firebase.module.FirebaseServiceModule;
 import com.tiwari.studence.login.module.LoginModule;
 import com.tiwari.studence.organisation.module.OrganisationModule;
 import com.tiwari.studence.pushNotification.module.PushNotificationModule;
+import com.tiwari.studence.server.createLogin.module.CreateLoginModule;
 import com.tiwari.studence.server.organisationCreateAndCampus.module.OrganisationCreateAndCampusModule;
+import com.tiwari.studence.typeAhed.module.TypeAhedModule;
 import com.tiwari.studence.util.collect.Maps;
 import com.tiwari.studence.util.module.ServerExceptionModule;
 import com.tiwari.studence.util.module.ServerListnerModule;
@@ -36,8 +39,10 @@ public class StudenceManagementServiceModule extends ServletModule {
           PutItemDynamoTableModule putItemDynamoTableModule,
           SearchItemDynamoTableModule searchItemDynamoTableModule,
           OrganisationModule orgnisationModule, CampusModule campusModule,
-          DevicesModule devicesModule, OrganisationCreateAndCampusModule organisationCreateAndCampusModule,
-          PushNotificationModule pushNotificationModule, LoginModule loginModule) {
+          DevicesModule devicesModule, FirebaseServiceModule firebaseServiceModule,
+          OrganisationCreateAndCampusModule organisationCreateAndCampusModule,
+          PushNotificationModule pushNotificationModule, LoginModule loginModule,
+          TypeAhedModule typeAhedModule,CreateLoginModule createLoginModule) {
     moduleSet.add(this);
     moduleSet.add(serverExceptionModule);
     moduleSet.add(serverListnerModule);
@@ -51,8 +56,11 @@ public class StudenceManagementServiceModule extends ServletModule {
     moduleSet.add(pushNotificationModule);
     moduleSet.add(orgnisationModule);
     moduleSet.add(campusModule);
+    moduleSet.add(typeAhedModule);
     moduleSet.add(organisationCreateAndCampusModule);
     moduleSet.add(loginModule);
+    moduleSet.add(firebaseServiceModule);
+    moduleSet.add(createLoginModule);
   }
 
   @Override

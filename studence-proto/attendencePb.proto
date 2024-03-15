@@ -41,3 +41,6 @@ message AttendenceSearchRespPb{
   repeated AttendencePb results = 2;
 }
 
+message MarkAttendencePb{
+    repeated string attendenceId = 1;
+}

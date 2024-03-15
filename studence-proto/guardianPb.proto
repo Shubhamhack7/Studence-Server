@@ -29,7 +29,8 @@ message GuardianRefPb{
 }
 
 message GuardianSearchReqPb{
-  string name = 1;
+  string nextToken=1;
+  string name = 2;
 }
 
 

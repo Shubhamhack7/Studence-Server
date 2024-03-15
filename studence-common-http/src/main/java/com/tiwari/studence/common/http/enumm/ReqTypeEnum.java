@@ -12,7 +12,7 @@ import com.google.common.io.CharStreams;
 import com.tiwari.studence.common.http.util.ServletUtil;
 import com.tiwari.studence.proto.error.ErrorTypePbEnum;
 import com.tiwari.studence.proto.requestcontext.ReqTypeUiEnum;
-import com.tiwari.studence.util.Strings;
+import com.tiwari.studence.util.common.Strings;
 import com.tiwari.studence.util.exception.Exceptions;
 import com.tiwari.studence.util.exception.Preconditions;
 import jakarta.servlet.http.HttpServletRequest;
@@ -158,7 +158,7 @@ public enum ReqTypeEnum {
       if (query == null || query.equals("")) {
         query = "{}";
       }
-      return query;
+      return ServletUtil.decodeUTF8(query);
     }
 
     @Override

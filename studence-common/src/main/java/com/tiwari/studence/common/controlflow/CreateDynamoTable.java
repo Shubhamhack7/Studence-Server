@@ -6,7 +6,7 @@ import javax.inject.Singleton;
 import com.tiwari.studence.common.async.IFuture;
 import com.tiwari.studence.common.interfaces.IDynamoCreateTable;
 import com.tiwari.studence.dynamodb.database.table.CreateDynamoDbTable;
-import com.tiwari.studence.util.Strings;
+import com.tiwari.studence.util.common.Strings;
 import com.tiwari.studence.util.database.TableNameUtil;
 import com.tiwari.studence.util.exception.ErrorException;
 import com.tiwari.studence.util.exception.Preconditions;

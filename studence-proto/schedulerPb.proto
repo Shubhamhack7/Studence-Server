@@ -1,0 +1,42 @@
+// Copyright (c) 2022, All Right Reserved, Shubham Tiwari
+
+syntax = "proto3";
+
+package com.tiwari.studence.proto.scheduler;
+
+
+option java_multiple_files = true;
+option java_generate_equals_and_hash = true;
+
+//The following protos are reserved 12,13,14,15,16.You shd not use them
+
+enum TimeType {
+  UNKNOWN_TIME_TYPE = 0;
+  SINGLE = 1;
+  INTERVAL = 2;
+}
+
+enum IntervalType {
+  UNKNOWN_INTERVAL_TYPE = 0;
+  MILLI_SECONDS = 1;
+  SECONDS = 2;
+  MINUTE = 3;
+  HOUR = 4;
+  DAY = 5;
+  WEEK = 6;
+  DAY_OF_MONTH = 7;
+  MONTH = 8;
+  DAY_OF_WEEK = 9;
+  QUARTER_MONTH = 10;
+  SEMESTER_MONTH = 11;
+  YEAR = 12;
+}
+
+
+message SchedulerPb{
+  string taskName = 1;
+  TimeType timeType = 2;
+  IntervalType intervalType = 3;
+  string singleTimeTask = 4;
+}
+

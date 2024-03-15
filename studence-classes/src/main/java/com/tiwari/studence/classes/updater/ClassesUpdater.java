@@ -5,8 +5,7 @@ import com.tiwari.studence.classes.provider.ClassesProvider;
 import com.tiwari.studence.common.updater.AEntityUpdater;
 import com.tiwari.studence.proto.classes.ClassesPb;
 import com.tiwari.studence.proto.entity.EntityPb;
-import com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean;
-import com.tiwari.studence.util.Strings;
+import com.tiwari.studence.util.common.Strings;
 import com.tiwari.studence.util.helper.ContactDetailsHelper;
 import com.tiwari.studence.util.helper.NameHelper;
 import software.amazon.awssdk.services.dynamodb.model.AttributeValue;
@@ -14,7 +13,6 @@ import software.amazon.awssdk.services.dynamodb.model.AttributeValue;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 import java.util.HashMap;
-import java.util.List;
 
 @Singleton
 public class ClassesUpdater
@@ -42,8 +40,6 @@ public class ClassesUpdater
     if (Strings.notEmpty("")){
       classBuilder.setCampusRef(builder.getCampusRef());
     }
-    List<GenericRefPbWithBoolean> teachersFromBuilder = builder.getOthersTeacherList();
-    teachersFromBuilder.forEach(teacher -> classBuilder.addOthersTeacher(teacher));
     return super.updater(classBuilder.build());
   }
 }

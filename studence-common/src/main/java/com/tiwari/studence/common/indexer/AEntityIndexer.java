@@ -6,7 +6,7 @@ import javax.inject.Inject;
 
 import com.google.protobuf.GeneratedMessageV3;
 import com.tiwari.studence.proto.entity.EntityPb;
-import com.tiwari.studence.util.Strings;
+import com.tiwari.studence.util.common.Strings;
 import com.tiwari.studence.util.encoder.JsonBaseEncoderDecoder;
 import com.tiwari.studence.util.protobuf.ProtobufToJson;
 
@@ -20,8 +20,10 @@ public abstract class AEntityIndexer<P extends GeneratedMessageV3> implements II
     RANGE,
     LIFETIME,
     VERSION,
-    RAW_DATA
-
+    RAW_DATA,
+    CREATED_AT,
+    UPDATED_AT,
+    UPDATED_BY
   }
 
   private JsonBaseEncoderDecoder m_jsonBaseEncoderDecoder;
@@ -48,6 +50,12 @@ public abstract class AEntityIndexer<P extends GeneratedMessageV3> implements II
             AttributeValue.builder().s(pb.getLifetime().name()).build());
     item.put(GenericIndexerEnum.VERSION.name(),
             AttributeValue.builder().s(String.valueOf(pb.getConfig().getVersion())).build());
+    item.put(GenericIndexerEnum.CREATED_AT.name(), AttributeValue.builder()
+            .s(String.valueOf(pb.getConfig().getCreatedAt().getUnixTimestampMs())).build());
+    item.put(GenericIndexerEnum.UPDATED_AT.name(), AttributeValue.builder()
+            .s(String.valueOf(pb.getConfig().getUpdatedAt().getUnixTimestampMs())).build());
+    item.put(GenericIndexerEnum.UPDATED_BY.name(),
+            AttributeValue.builder().s(pb.getConfig().getUpdatedBy()).build());
     return item;
   }
 
@@ -57,7 +65,7 @@ public abstract class AEntityIndexer<P extends GeneratedMessageV3> implements II
       item.put(key, AttributeValue.builder().s(Strings.getLowerCaseList(value)).build());
     } else if (type == Type.S) {
       item.put(key, AttributeValue.builder().s(value).build());
-    }  else if (type == Type.N) {
+    } else if (type == Type.N) {
       item.put(key, AttributeValue.builder().n(value).build());
     } else if (type == Type.B) {
       item.put(key, AttributeValue.builder().bool(bool_val).build());

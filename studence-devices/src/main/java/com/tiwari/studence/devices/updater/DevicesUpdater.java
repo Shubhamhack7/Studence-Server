@@ -8,7 +8,7 @@ import com.tiwari.studence.proto.devices.DeviceDetailsPb;
 import com.tiwari.studence.proto.devices.DeviceOSTypeEnum;
 import com.tiwari.studence.proto.devices.DeviceTypeEnum;
 import com.tiwari.studence.proto.entity.EntityPb;
-import com.tiwari.studence.util.Strings;
+import com.tiwari.studence.util.common.Strings;
 import com.tiwari.studence.util.helper.DeviceHelper;
 import com.tiwari.studence.util.helper.PushNotificationHelper;
 import software.amazon.awssdk.services.dynamodb.model.AttributeValue;
@@ -67,8 +67,8 @@ public class DevicesUpdater extends
     if (builder.getDeviceType() != DeviceTypeEnum.UNKNOWN_DEVICE_TYPE) {
       orgBuilder.setDeviceType(builder.getDeviceType());
     }
-    m_pushNotificationHelper.updatePushNotificationRef(orgBuilder.getPushNotificationRefBuilder(),
-            builder.getPushNotificationRef());
+   /* m_pushNotificationHelper.updatePushNotificationRef(orgBuilder.getPushNotificationRefBuilder(),
+            builder.getPushNotificationRef());*/
     if (Strings.notEmpty(builder.getDeviceId())) {
       orgBuilder.setDeviceId(builder.getDeviceId());
     }

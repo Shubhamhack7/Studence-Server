@@ -35,9 +35,9 @@ public class DevicesIndexer extends AEntityIndexer<DeviceDetailsPb> {
     addItemToAttritibeMap(items, DevicesIndexerEnum.DEVICE_TYPE.name(),
             builder.getDeviceType().name(), false, AttributeValue.Type.S,
             DevicesIndexerEnum.DEVICE_TYPE.isLowerCase());
-    addItemToAttritibeMap(items, DevicesIndexerEnum.DEVICE_PUSH_NOTIFICATION_REF_ID.name(),
+   /* addItemToAttritibeMap(items, DevicesIndexerEnum.DEVICE_PUSH_NOTIFICATION_REF_ID.name(),
             builder.getPushNotificationRef().getDbInfoId(), false, AttributeValue.Type.S,
-            DevicesIndexerEnum.DEVICE_PUSH_NOTIFICATION_REF_ID.isLowerCase());
+            DevicesIndexerEnum.DEVICE_PUSH_NOTIFICATION_REF_ID.isLowerCase());*/
     return items;
   }
 }

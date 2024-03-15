@@ -8,7 +8,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="studence-organisation" />
         <module name="studence-classes" />
+        <module name="studence-filesInfo" />
         <module name="studence-devices" />
+        <module name="studence-s3storage" />
         <module name="studence-common-http" />
         <module name="studence-pushNotification" />
         <module name="studence-openai" />
@@ -16,6 +18,7 @@
         <module name="studence-firebase" />
         <module name="studence-util" />
         <module name="studence-dynamodb-database" />
+        <module name="studence-email" />
         <module name="studence-teacher" />
         <module name="studence-login" />
         <module name="studence-typeAhead" />

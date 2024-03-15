@@ -9,6 +9,7 @@ com/tiwari/studence/common/http/converter/JsonStringToReqPbConverter.class
 com/tiwari/studence/common/http/servlet/AHttpEntityServlet$1.class
 com/tiwari/studence/common/http/enumm/ReqTypeEnum$GetByExternalIdPbHelper.class
 com/tiwari/studence/common/http/App.class
+com/tiwari/studence/common/http/servlet/AHttpEntityServlet$8.class
 com/tiwari/studence/common/http/servlet/BaseHttpServlet$7.class
 com/tiwari/studence/common/http/enumm/ReqTypeEnum$GetListHelper.class
 com/tiwari/studence/common/http/enumm/ReqTypeEnum$1.class

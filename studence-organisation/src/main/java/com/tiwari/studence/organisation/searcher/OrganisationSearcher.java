@@ -16,7 +16,7 @@ import com.tiwari.studence.proto.search.ComparisonOperatorEnum;
 import com.tiwari.studence.proto.search.DynamoDBValue;
 import com.tiwari.studence.proto.search.SearchPb;
 import com.tiwari.studence.proto.search.SearchRequestsPb;
-import com.tiwari.studence.util.Strings;
+import com.tiwari.studence.util.common.Strings;
 import com.tiwari.studence.util.exception.ErrorException;
 
 import javax.inject.Inject;
@@ -37,6 +37,7 @@ public class OrganisationSearcher extends
   public IFuture<OrganisationSearchRespPb, ErrorException> searcher(
           OrganisationSearchReqPb builder) {
     SearchRequestsPb.Builder requestBuilder = getSearchRequestBuilderProvider().getBuilder();
+    requestBuilder.setNextToken(builder.getNextToken());
     if (Strings.notEmpty(builder.getName())) {
       SearchPb.Builder nameReq = requestBuilder.addRequestsBuilder();
       nameReq.setType(ComparisonOperatorEnum.EQUAL_TO);

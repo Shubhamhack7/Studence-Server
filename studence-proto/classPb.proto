@@ -53,7 +53,6 @@ message ClassesPb{
   ClassType classType = 2;
   SectionType sectionType =3;
   com.tiwari.studence.proto.campus.CampusRefPb campusRef = 4;
-  repeated com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean othersTeacher = 5;
 }
 
 

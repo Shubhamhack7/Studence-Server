@@ -6,7 +6,7 @@ import com.tiwari.studence.common.async.IFuture;
 import com.tiwari.studence.firebase.service.IFirebaseService;
 import com.tiwari.studence.login.service.ILoginService;
 import com.tiwari.studence.proto.login.LoginPb;
-import com.tiwari.studence.util.Strings;
+import com.tiwari.studence.util.common.Strings;
 import com.tiwari.studence.util.entity.EntityUtilHelper;
 import com.tiwari.studence.util.exception.ErrorException;
 import com.tiwari.studence.util.exception.LoggedRuntimeException;

@@ -17,6 +17,10 @@
     <file url="file://$PROJECT_DIR$/studence-dump/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-dynamodb-database/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-dynamodb-database/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/studence-email/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/studence-email/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/studence-filesInfo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/studence-filesInfo/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-firebase/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-firebase/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-guardian/src/main/java" charset="UTF-8" />
@@ -31,6 +35,8 @@
     <file url="file://$PROJECT_DIR$/studence-organisation/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-pushNotification/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-pushNotification/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/studence-s3storage/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/studence-s3storage/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-student/src/main/java" charset="UTF-8" />

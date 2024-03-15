@@ -95,4 +95,15 @@ public interface AttributeNameValuePairOrBuilder extends
    */
   com.google.protobuf.ByteString
       getAttributeValueAliasBytes();
+
+  /**
+   * <code>.com.tiwari.studence.proto.search.ComparisonOperatorEnum compareType = 10;</code>
+   * @return The enum numeric value on the wire for compareType.
+   */
+  int getCompareTypeValue();
+  /**
+   * <code>.com.tiwari.studence.proto.search.ComparisonOperatorEnum compareType = 10;</code>
+   * @return The compareType.
+   */
+  com.tiwari.studence.proto.search.ComparisonOperatorEnum getCompareType();
 }

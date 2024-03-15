@@ -70,6 +70,11 @@
 		</dependency>
 		<dependency>
 			<groupId>com.tiwari.studence</groupId>
+			<artifactId>studence-typeAhead</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.tiwari.studence</groupId>
 			<artifactId>studence-firebase</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
@@ -122,6 +127,12 @@
             <groupId>com.tiwari.studence</groupId>
             <artifactId>studence-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.tiwari.studence</groupId>
+            <artifactId>studence-student</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
    <build>

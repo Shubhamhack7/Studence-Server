@@ -12,7 +12,7 @@ public class CreateLoginService implements ICreateLoginService {
   private CreateLogin m_createLogin;
 
   @Inject
-  CreateLoginService(CreateLogin createLogin) {
+  public CreateLoginService(CreateLogin createLogin) {
     m_createLogin = createLogin;
   }
 

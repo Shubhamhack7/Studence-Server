@@ -20,6 +20,16 @@ public final class TeacherPbOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_tiwari_studence_proto_teacher_TeacherPb_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tiwari_studence_proto_teacher_TeacherClassPb_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tiwari_studence_proto_teacher_TeacherClassPb_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tiwari_studence_proto_teacher_TeacherClassSubjectPb_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tiwari_studence_proto_teacher_TeacherClassSubjectPb_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_tiwari_studence_proto_teacher_TeacherRefPb_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -46,23 +56,35 @@ public final class TeacherPbOuterClass {
       "\n\017teacherPb.proto\022!com.tiwari.studence.p" +
       "roto.teacher\032\016entityPb.proto\032\014namePb.pro" +
       "to\032\026contactDetailsPb.proto\032\017summaryPb.pr" +
-      "oto\032\016campusPb.proto\032\rclassPb.proto\"\332\002\n\tT" +
-      "eacherPb\022:\n\006dbInfo\030\001 \001(\0132*.com.tiwari.st" +
-      "udence.proto.entity.EntityPb\0224\n\004name\030\002 \001" +
-      "(\0132&.com.tiwari.studence.proto.name.Name" +
-      "Pb\022R\n\016contactDetails\030\003 \001(\0132:.com.tiwari." +
-      "studence.proto.contactDetails.ContactDet" +
-      "ailsPb\022@\n\tCampusRef\030\004 \001(\0132-.com.tiwari.s" +
-      "tudence.proto.campus.CampusRefPb\022E\n\014clas" +
-      "sTeacher\030\005 \001(\0132/.com.tiwari.studence.pro" +
-      "to.classes.ClassesRefPb\"U\n\014TeacherRefPb\022" +
-      "\020\n\010dbInfoId\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\023\n\013campu" +
-      "sRefId\030\003 \001(\t\022\020\n\010classRef\030\004 \001(\t\"\"\n\022Teache" +
-      "rSearchReqPb\022\014\n\004name\030\001 \001(\t\"\223\001\n\023TeacherSe" +
-      "archRespPb\022=\n\007summary\030\001 \001(\0132,.com.tiwari" +
-      ".studence.proto.summary.SummaryPb\022=\n\007res" +
-      "ults\030\002 \003(\0132,.com.tiwari.studence.proto.t" +
-      "eacher.TeacherPbB\005P\001\240\001\001b\006proto3"
+      "oto\032\016campusPb.proto\032\021dataTypesPb.proto\032\017" +
+      "subjectPb.proto\032\rclassPb.proto\"\346\002\n\tTeach" +
+      "erPb\022:\n\006dbInfo\030\001 \001(\0132*.com.tiwari.studen" +
+      "ce.proto.entity.EntityPb\0224\n\004name\030\002 \001(\0132&" +
+      ".com.tiwari.studence.proto.name.NamePb\022R" +
+      "\n\016contactDetails\030\003 \001(\0132:.com.tiwari.stud" +
+      "ence.proto.contactDetails.ContactDetails" +
+      "Pb\022@\n\tCampusRef\030\004 \001(\0132-.com.tiwari.stude" +
+      "nce.proto.campus.CampusRefPb\022Q\n\026classTea" +
+      "cherAndTeacher\030\005 \001(\01321.com.tiwari.studen" +
+      "ce.proto.teacher.TeacherClassPb\"\365\001\n\016Teac" +
+      "herClassPb\022H\n\016isCLassTeacher\030\001 \001(\01620.com" +
+      ".tiwari.studence.proto.datatypes.Boolean" +
+      "Enum\022N\n\014classTeacher\030\002 \003(\01328.com.tiwari." +
+      "studence.proto.teacher.TeacherClassSubje" +
+      "ctPb\022I\n\007teacher\030\003 \003(\01328.com.tiwari.stude" +
+      "nce.proto.teacher.TeacherClassSubjectPb\"" +
+      "\247\001\n\025TeacherClassSubjectPb\022G\n\013subjectType" +
+      "\030\001 \001(\01622.com.tiwari.studence.proto.subje" +
+      "ct.SubjectTypeEnum\022E\n\014classTeacher\030\002 \001(\013" +
+      "2/.com.tiwari.studence.proto.classes.Cla" +
+      "ssesRefPb\"U\n\014TeacherRefPb\022\020\n\010dbInfoId\030\001 " +
+      "\001(\t\022\014\n\004name\030\002 \001(\t\022\023\n\013campusRefId\030\003 \001(\t\022\020" +
+      "\n\010classRef\030\004 \001(\t\"\"\n\022TeacherSearchReqPb\022\014" +
+      "\n\004name\030\001 \001(\t\"\223\001\n\023TeacherSearchRespPb\022=\n\007" +
+      "summary\030\001 \001(\0132,.com.tiwari.studence.prot" +
+      "o.summary.SummaryPb\022=\n\007results\030\002 \003(\0132,.c" +
+      "om.tiwari.studence.proto.teacher.Teacher" +
+      "PbB\005P\001\240\001\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -72,6 +94,8 @@ public final class TeacherPbOuterClass {
           com.tiwari.studence.proto.contactDetails.ContactDetailsPbOuterClass.getDescriptor(),
           com.tiwari.studence.proto.summary.SummaryPbOuterClass.getDescriptor(),
           com.tiwari.studence.proto.campus.CampusPbOuterClass.getDescriptor(),
+          com.tiwari.studence.proto.datatypes.DataTypesPb.getDescriptor(),
+          com.tiwari.studence.proto.subject.SubjectPb.getDescriptor(),
           com.tiwari.studence.proto.classes.ClassPb.getDescriptor(),
         });
     internal_static_com_tiwari_studence_proto_teacher_TeacherPb_descriptor =
@@ -79,21 +103,33 @@ public final class TeacherPbOuterClass {
     internal_static_com_tiwari_studence_proto_teacher_TeacherPb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tiwari_studence_proto_teacher_TeacherPb_descriptor,
-        new java.lang.String[] { "DbInfo", "Name", "ContactDetails", "CampusRef", "ClassTeacher", });
-    internal_static_com_tiwari_studence_proto_teacher_TeacherRefPb_descriptor =
+        new java.lang.String[] { "DbInfo", "Name", "ContactDetails", "CampusRef", "ClassTeacherAndTeacher", });
+    internal_static_com_tiwari_studence_proto_teacher_TeacherClassPb_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_com_tiwari_studence_proto_teacher_TeacherClassPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_teacher_TeacherClassPb_descriptor,
+        new java.lang.String[] { "IsCLassTeacher", "ClassTeacher", "Teacher", });
+    internal_static_com_tiwari_studence_proto_teacher_TeacherClassSubjectPb_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_com_tiwari_studence_proto_teacher_TeacherClassSubjectPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_teacher_TeacherClassSubjectPb_descriptor,
+        new java.lang.String[] { "SubjectType", "ClassTeacher", });
+    internal_static_com_tiwari_studence_proto_teacher_TeacherRefPb_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_com_tiwari_studence_proto_teacher_TeacherRefPb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tiwari_studence_proto_teacher_TeacherRefPb_descriptor,
         new java.lang.String[] { "DbInfoId", "Name", "CampusRefId", "ClassRef", });
     internal_static_com_tiwari_studence_proto_teacher_TeacherSearchReqPb_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_com_tiwari_studence_proto_teacher_TeacherSearchReqPb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tiwari_studence_proto_teacher_TeacherSearchReqPb_descriptor,
         new java.lang.String[] { "Name", });
     internal_static_com_tiwari_studence_proto_teacher_TeacherSearchRespPb_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_com_tiwari_studence_proto_teacher_TeacherSearchRespPb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tiwari_studence_proto_teacher_TeacherSearchRespPb_descriptor,
@@ -103,6 +139,8 @@ public final class TeacherPbOuterClass {
     com.tiwari.studence.proto.contactDetails.ContactDetailsPbOuterClass.getDescriptor();
     com.tiwari.studence.proto.summary.SummaryPbOuterClass.getDescriptor();
     com.tiwari.studence.proto.campus.CampusPbOuterClass.getDescriptor();
+    com.tiwari.studence.proto.datatypes.DataTypesPb.getDescriptor();
+    com.tiwari.studence.proto.subject.SubjectPb.getDescriptor();
     com.tiwari.studence.proto.classes.ClassPb.getDescriptor();
   }
 

@@ -1,5 +1,6 @@
 package com.tiwari.studence.firebase.service;
 
+import com.google.cloud.storage.Storage;
 import com.google.firebase.auth.UserRecord;
 
 public interface IFirebaseService {
@@ -8,4 +9,6 @@ public interface IFirebaseService {
 
   public UserRecord createUserWithEmail(String email,String password,String userId);
   public UserRecord signInWithEmailAndPassword(String email,String password);
+  public void moveFiles(Storage storage, String sourceBucketName, String sourceObjectName,
+          String targetBucketName, String targetObjectName);
 }

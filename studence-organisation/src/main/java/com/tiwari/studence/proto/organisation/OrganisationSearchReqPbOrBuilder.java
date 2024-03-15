@@ -8,12 +8,24 @@ public interface OrganisationSearchReqPbOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string name = 1;</code>
+   * <code>string nextToken = 1;</code>
+   * @return The nextToken.
+   */
+  java.lang.String getNextToken();
+  /**
+   * <code>string nextToken = 1;</code>
+   * @return The bytes for nextToken.
+   */
+  com.google.protobuf.ByteString
+      getNextTokenBytes();
+
+  /**
+   * <code>string name = 2;</code>
    * @return The name.
    */
   java.lang.String getName();
   /**
-   * <code>string name = 1;</code>
+   * <code>string name = 2;</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString

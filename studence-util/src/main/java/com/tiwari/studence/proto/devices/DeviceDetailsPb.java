@@ -415,37 +415,11 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tiwari.studence.proto.devices.DeviceTypeEnum.UNRECOGNIZED : result;
   }
 
-  public static final int PUSHNOTIFICATIONREF_FIELD_NUMBER = 15;
-  private com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef_;
-  /**
-   * <code>.com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef = 15;</code>
-   * @return Whether the pushNotificationRef field is set.
-   */
-  @java.lang.Override
-  public boolean hasPushNotificationRef() {
-    return pushNotificationRef_ != null;
-  }
-  /**
-   * <code>.com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef = 15;</code>
-   * @return The pushNotificationRef.
-   */
-  @java.lang.Override
-  public com.tiwari.studence.proto.pushNotification.PushNotificationRefPb getPushNotificationRef() {
-    return pushNotificationRef_ == null ? com.tiwari.studence.proto.pushNotification.PushNotificationRefPb.getDefaultInstance() : pushNotificationRef_;
-  }
-  /**
-   * <code>.com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef = 15;</code>
-   */
-  @java.lang.Override
-  public com.tiwari.studence.proto.pushNotification.PushNotificationRefPbOrBuilder getPushNotificationRefOrBuilder() {
-    return pushNotificationRef_ == null ? com.tiwari.studence.proto.pushNotification.PushNotificationRefPb.getDefaultInstance() : pushNotificationRef_;
-  }
-
-  public static final int DEVICE_ID_FIELD_NUMBER = 16;
+  public static final int DEVICE_ID_FIELD_NUMBER = 15;
   @SuppressWarnings("serial")
   private volatile java.lang.Object deviceId_ = "";
   /**
-   * <code>string device_id = 16;</code>
+   * <code>string device_id = 15;</code>
    * @return The deviceId.
    */
   @java.lang.Override
@@ -462,7 +436,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string device_id = 16;</code>
+   * <code>string device_id = 15;</code>
    * @return The bytes for deviceId.
    */
   @java.lang.Override
@@ -536,11 +510,8 @@ private static final long serialVersionUID = 0L;
     if (deviceType_ != com.tiwari.studence.proto.devices.DeviceTypeEnum.UNKNOWN_DEVICE_TYPE.getNumber()) {
       output.writeEnum(14, deviceType_);
     }
-    if (pushNotificationRef_ != null) {
-      output.writeMessage(15, getPushNotificationRef());
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 16, deviceId_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 15, deviceId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -605,12 +576,8 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(14, deviceType_);
     }
-    if (pushNotificationRef_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(15, getPushNotificationRef());
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, deviceId_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, deviceId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -679,11 +646,6 @@ private static final long serialVersionUID = 0L;
         .equals(other.getUniqueId())) return false;
     if (mode_ != other.mode_) return false;
     if (deviceType_ != other.deviceType_) return false;
-    if (hasPushNotificationRef() != other.hasPushNotificationRef()) return false;
-    if (hasPushNotificationRef()) {
-      if (!getPushNotificationRef()
-          .equals(other.getPushNotificationRef())) return false;
-    }
     if (!getDeviceId()
         .equals(other.getDeviceId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -743,10 +705,6 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + mode_;
     hash = (37 * hash) + DEVICETYPE_FIELD_NUMBER;
     hash = (53 * hash) + deviceType_;
-    if (hasPushNotificationRef()) {
-      hash = (37 * hash) + PUSHNOTIFICATIONREF_FIELD_NUMBER;
-      hash = (53 * hash) + getPushNotificationRef().hashCode();
-    }
     hash = (37 * hash) + DEVICE_ID_FIELD_NUMBER;
     hash = (53 * hash) + getDeviceId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -928,11 +886,6 @@ private static final long serialVersionUID = 0L;
       uniqueId_ = "";
       mode_ = 0;
       deviceType_ = 0;
-      pushNotificationRef_ = null;
-      if (pushNotificationRefBuilder_ != null) {
-        pushNotificationRefBuilder_.dispose();
-        pushNotificationRefBuilder_ = null;
-      }
       deviceId_ = "";
       return this;
     }
@@ -1028,11 +981,6 @@ private static final long serialVersionUID = 0L;
         result.deviceType_ = deviceType_;
       }
       if (((from_bitField0_ & 0x00004000) != 0)) {
-        result.pushNotificationRef_ = pushNotificationRefBuilder_ == null
-            ? pushNotificationRef_
-            : pushNotificationRefBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00008000) != 0)) {
         result.deviceId_ = deviceId_;
       }
     }
@@ -1127,12 +1075,9 @@ private static final long serialVersionUID = 0L;
       if (other.deviceType_ != 0) {
         setDeviceTypeValue(other.getDeviceTypeValue());
       }
-      if (other.hasPushNotificationRef()) {
-        mergePushNotificationRef(other.getPushNotificationRef());
-      }
       if (!other.getDeviceId().isEmpty()) {
         deviceId_ = other.deviceId_;
-        bitField0_ |= 0x00008000;
+        bitField0_ |= 0x00004000;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -1250,17 +1195,10 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 112
             case 122: {
-              input.readMessage(
-                  getPushNotificationRefFieldBuilder().getBuilder(),
-                  extensionRegistry);
+              deviceId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00004000;
               break;
             } // case 122
-            case 130: {
-              deviceId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00008000;
-              break;
-            } // case 130
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2652,128 +2590,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tiwari.studence.proto.pushNotification.PushNotificationRefPb, com.tiwari.studence.proto.pushNotification.PushNotificationRefPb.Builder, com.tiwari.studence.proto.pushNotification.PushNotificationRefPbOrBuilder> pushNotificationRefBuilder_;
-    /**
-     * <code>.com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef = 15;</code>
-     * @return Whether the pushNotificationRef field is set.
-     */
-    public boolean hasPushNotificationRef() {
-      return ((bitField0_ & 0x00004000) != 0);
-    }
-    /**
-     * <code>.com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef = 15;</code>
-     * @return The pushNotificationRef.
-     */
-    public com.tiwari.studence.proto.pushNotification.PushNotificationRefPb getPushNotificationRef() {
-      if (pushNotificationRefBuilder_ == null) {
-        return pushNotificationRef_ == null ? com.tiwari.studence.proto.pushNotification.PushNotificationRefPb.getDefaultInstance() : pushNotificationRef_;
-      } else {
-        return pushNotificationRefBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef = 15;</code>
-     */
-    public Builder setPushNotificationRef(com.tiwari.studence.proto.pushNotification.PushNotificationRefPb value) {
-      if (pushNotificationRefBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        pushNotificationRef_ = value;
-      } else {
-        pushNotificationRefBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00004000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef = 15;</code>
-     */
-    public Builder setPushNotificationRef(
-        com.tiwari.studence.proto.pushNotification.PushNotificationRefPb.Builder builderForValue) {
-      if (pushNotificationRefBuilder_ == null) {
-        pushNotificationRef_ = builderForValue.build();
-      } else {
-        pushNotificationRefBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00004000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef = 15;</code>
-     */
-    public Builder mergePushNotificationRef(com.tiwari.studence.proto.pushNotification.PushNotificationRefPb value) {
-      if (pushNotificationRefBuilder_ == null) {
-        if (((bitField0_ & 0x00004000) != 0) &&
-          pushNotificationRef_ != null &&
-          pushNotificationRef_ != com.tiwari.studence.proto.pushNotification.PushNotificationRefPb.getDefaultInstance()) {
-          getPushNotificationRefBuilder().mergeFrom(value);
-        } else {
-          pushNotificationRef_ = value;
-        }
-      } else {
-        pushNotificationRefBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00004000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef = 15;</code>
-     */
-    public Builder clearPushNotificationRef() {
-      bitField0_ = (bitField0_ & ~0x00004000);
-      pushNotificationRef_ = null;
-      if (pushNotificationRefBuilder_ != null) {
-        pushNotificationRefBuilder_.dispose();
-        pushNotificationRefBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef = 15;</code>
-     */
-    public com.tiwari.studence.proto.pushNotification.PushNotificationRefPb.Builder getPushNotificationRefBuilder() {
-      bitField0_ |= 0x00004000;
-      onChanged();
-      return getPushNotificationRefFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef = 15;</code>
-     */
-    public com.tiwari.studence.proto.pushNotification.PushNotificationRefPbOrBuilder getPushNotificationRefOrBuilder() {
-      if (pushNotificationRefBuilder_ != null) {
-        return pushNotificationRefBuilder_.getMessageOrBuilder();
-      } else {
-        return pushNotificationRef_ == null ?
-            com.tiwari.studence.proto.pushNotification.PushNotificationRefPb.getDefaultInstance() : pushNotificationRef_;
-      }
-    }
-    /**
-     * <code>.com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef = 15;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tiwari.studence.proto.pushNotification.PushNotificationRefPb, com.tiwari.studence.proto.pushNotification.PushNotificationRefPb.Builder, com.tiwari.studence.proto.pushNotification.PushNotificationRefPbOrBuilder> 
-        getPushNotificationRefFieldBuilder() {
-      if (pushNotificationRefBuilder_ == null) {
-        pushNotificationRefBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tiwari.studence.proto.pushNotification.PushNotificationRefPb, com.tiwari.studence.proto.pushNotification.PushNotificationRefPb.Builder, com.tiwari.studence.proto.pushNotification.PushNotificationRefPbOrBuilder>(
-                getPushNotificationRef(),
-                getParentForChildren(),
-                isClean());
-        pushNotificationRef_ = null;
-      }
-      return pushNotificationRefBuilder_;
-    }
-
     private java.lang.Object deviceId_ = "";
     /**
-     * <code>string device_id = 16;</code>
+     * <code>string device_id = 15;</code>
      * @return The deviceId.
      */
     public java.lang.String getDeviceId() {
@@ -2789,7 +2608,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string device_id = 16;</code>
+     * <code>string device_id = 15;</code>
      * @return The bytes for deviceId.
      */
     public com.google.protobuf.ByteString
@@ -2806,7 +2625,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string device_id = 16;</code>
+     * <code>string device_id = 15;</code>
      * @param value The deviceId to set.
      * @return This builder for chaining.
      */
@@ -2814,22 +2633,22 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       deviceId_ = value;
-      bitField0_ |= 0x00008000;
+      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
     /**
-     * <code>string device_id = 16;</code>
+     * <code>string device_id = 15;</code>
      * @return This builder for chaining.
      */
     public Builder clearDeviceId() {
       deviceId_ = getDefaultInstance().getDeviceId();
-      bitField0_ = (bitField0_ & ~0x00008000);
+      bitField0_ = (bitField0_ & ~0x00004000);
       onChanged();
       return this;
     }
     /**
-     * <code>string device_id = 16;</code>
+     * <code>string device_id = 15;</code>
      * @param value The bytes for deviceId to set.
      * @return This builder for chaining.
      */
@@ -2838,7 +2657,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       deviceId_ = value;
-      bitField0_ |= 0x00008000;
+      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }

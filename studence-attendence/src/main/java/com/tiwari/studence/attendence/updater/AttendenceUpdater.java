@@ -7,7 +7,7 @@ import com.tiwari.studence.proto.attendence.AttendencePb;
 import com.tiwari.studence.proto.attendence.AttendencePb.Builder;
 import com.tiwari.studence.proto.datatypes.BooleanEnum;
 import com.tiwari.studence.proto.entity.EntityPb;
-import com.tiwari.studence.util.Strings;
+import com.tiwari.studence.util.common.Strings;
 import com.tiwari.studence.util.helper.ContactDetailsHelper;
 import com.tiwari.studence.util.helper.NameHelper;
 import software.amazon.awssdk.services.dynamodb.model.AttributeValue;

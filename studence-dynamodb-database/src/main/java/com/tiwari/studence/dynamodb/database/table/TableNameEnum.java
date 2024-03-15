@@ -12,8 +12,8 @@ public enum TableNameEnum {
   LOGIN("107_LOGIN"),
   TYPE_AHEAD("108_TYPE_AHEAD"),
   DEVICES("109_DEVICES"),
-  PUSH_NOTIFICATION("110_PUSH_NOTIFICATION");
-
+  PUSH_NOTIFICATION("110_PUSH_NOTIFICATION"),
+  FILE_INFO("111_FILE_INFO");
   private final String value;
 
   TableNameEnum(String value) {

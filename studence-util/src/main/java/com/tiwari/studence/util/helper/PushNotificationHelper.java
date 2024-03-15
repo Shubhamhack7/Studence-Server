@@ -1,7 +1,7 @@
 package com.tiwari.studence.util.helper;
 
 import com.tiwari.studence.proto.pushNotification.PushNotificationRefPb;
-import com.tiwari.studence.util.Strings;
+import com.tiwari.studence.util.common.Strings;
 
 import javax.inject.Inject;
 

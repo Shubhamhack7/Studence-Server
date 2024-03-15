@@ -5,7 +5,7 @@ import com.tiwari.studence.proto.entity.EntityPb;
 import com.tiwari.studence.proto.pushNotification.PushNotificationPb;
 import com.tiwari.studence.pushNotification.indexer.PushNotificationIndexer;
 import com.tiwari.studence.pushNotification.provider.PushNotificationProvider;
-import com.tiwari.studence.util.Strings;
+import com.tiwari.studence.util.common.Strings;
 import com.tiwari.studence.util.helper.GenericRefHelper;
 import software.amazon.awssdk.services.dynamodb.model.AttributeValue;
 

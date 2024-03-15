@@ -16,7 +16,7 @@ import com.tiwari.studence.common.services.interfaces.ITableNameProvider;
 import com.tiwari.studence.common.updater.AEntityUpdater;
 import com.tiwari.studence.proto.entity.EntityPb;
 import com.tiwari.studence.proto.error.ErrorCategoryUiEnum;
-import com.tiwari.studence.util.CommonUtil;
+import com.tiwari.studence.util.common.CommonUtil;
 import com.tiwari.studence.util.entity.EntityUtilHelper;
 import com.tiwari.studence.util.exception.ErrorException;
 import com.tiwari.studence.util.exception.LoggedRuntimeException;

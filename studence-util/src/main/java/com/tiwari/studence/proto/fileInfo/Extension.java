@@ -72,6 +72,10 @@ public enum Extension
    * <code>PPTX = 15;</code>
    */
   PPTX(15),
+  /**
+   * <code>XLS = 16;</code>
+   */
+  XLS(16),
   UNRECOGNIZED(-1),
   ;
 
@@ -139,6 +143,10 @@ public enum Extension
    * <code>PPTX = 15;</code>
    */
   public static final int PPTX_VALUE = 15;
+  /**
+   * <code>XLS = 16;</code>
+   */
+  public static final int XLS_VALUE = 16;
 
 
   public final int getNumber() {
@@ -181,6 +189,7 @@ public enum Extension
       case 13: return HTML;
       case 14: return GIF;
       case 15: return PPTX;
+      case 16: return XLS;
       default: return null;
     }
   }

@@ -16,6 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private OrganisationSearchReqPb() {
+    nextToken_ = "";
     name_ = "";
   }
 
@@ -44,11 +45,50 @@ private static final long serialVersionUID = 0L;
             com.tiwari.studence.proto.organisation.OrganisationSearchReqPb.class, com.tiwari.studence.proto.organisation.OrganisationSearchReqPb.Builder.class);
   }
 
-  public static final int NAME_FIELD_NUMBER = 1;
+  public static final int NEXTTOKEN_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object nextToken_ = "";
+  /**
+   * <code>string nextToken = 1;</code>
+   * @return The nextToken.
+   */
+  @java.lang.Override
+  public java.lang.String getNextToken() {
+    java.lang.Object ref = nextToken_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      nextToken_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string nextToken = 1;</code>
+   * @return The bytes for nextToken.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getNextTokenBytes() {
+    java.lang.Object ref = nextToken_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      nextToken_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int NAME_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private volatile java.lang.Object name_ = "";
   /**
-   * <code>string name = 1;</code>
+   * <code>string name = 2;</code>
    * @return The name.
    */
   @java.lang.Override
@@ -65,7 +105,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string name = 1;</code>
+   * <code>string name = 2;</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -97,8 +137,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextToken_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, nextToken_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -109,8 +152,11 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextToken_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, nextToken_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -127,6 +173,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tiwari.studence.proto.organisation.OrganisationSearchReqPb other = (com.tiwari.studence.proto.organisation.OrganisationSearchReqPb) obj;
 
+    if (!getNextToken()
+        .equals(other.getNextToken())) return false;
     if (!getName()
         .equals(other.getName())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -140,6 +188,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + NEXTTOKEN_FIELD_NUMBER;
+    hash = (53 * hash) + getNextToken().hashCode();
     hash = (37 * hash) + NAME_FIELD_NUMBER;
     hash = (53 * hash) + getName().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -271,6 +321,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      nextToken_ = "";
       name_ = "";
       return this;
     }
@@ -306,6 +357,9 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tiwari.studence.proto.organisation.OrganisationSearchReqPb result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.nextToken_ = nextToken_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.name_ = name_;
       }
     }
@@ -354,9 +408,14 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tiwari.studence.proto.organisation.OrganisationSearchReqPb other) {
       if (other == com.tiwari.studence.proto.organisation.OrganisationSearchReqPb.getDefaultInstance()) return this;
+      if (!other.getNextToken().isEmpty()) {
+        nextToken_ = other.nextToken_;
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -386,10 +445,15 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              name_ = input.readStringRequireUtf8();
+              nextToken_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 18: {
+              name_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -407,9 +471,81 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
+    private java.lang.Object nextToken_ = "";
+    /**
+     * <code>string nextToken = 1;</code>
+     * @return The nextToken.
+     */
+    public java.lang.String getNextToken() {
+      java.lang.Object ref = nextToken_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nextToken_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string nextToken = 1;</code>
+     * @return The bytes for nextToken.
+     */
+    public com.google.protobuf.ByteString
+        getNextTokenBytes() {
+      java.lang.Object ref = nextToken_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nextToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string nextToken = 1;</code>
+     * @param value The nextToken to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNextToken(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      nextToken_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string nextToken = 1;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearNextToken() {
+      nextToken_ = getDefaultInstance().getNextToken();
+      bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string nextToken = 1;</code>
+     * @param value The bytes for nextToken to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNextTokenBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      nextToken_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
     private java.lang.Object name_ = "";
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 2;</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -425,7 +561,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 2;</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -442,7 +578,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 2;</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -450,22 +586,22 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       name_ = value;
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
       name_ = getDefaultInstance().getName();
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 2;</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
@@ -474,7 +610,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       name_ = value;
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

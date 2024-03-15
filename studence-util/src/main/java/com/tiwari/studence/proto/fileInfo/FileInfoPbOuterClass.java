@@ -67,15 +67,15 @@ public final class FileInfoPbOuterClass {
       "\006 \001(\t\"\226\001\n\024FileInfoSearchRespPb\022=\n\007summar" +
       "y\030\001 \001(\0132,.com.tiwari.studence.proto.summ" +
       "ary.SummaryPb\022?\n\007results\030\002 \003(\0132..com.tiw" +
-      "ari.studence.proto.fileInfo.FileInfoPb*\256" +
+      "ari.studence.proto.fileInfo.FileInfoPb*\267" +
       "\001\n\tExtension\022\025\n\021UNKNOWN_EXTENSION\020\000\022\007\n\003J" +
       "PG\020\001\022\007\n\003PNG\020\002\022\007\n\003PDF\020\003\022\010\n\004DOCX\020\004\022\007\n\003TXT\020" +
       "\005\022\007\n\003CSV\020\006\022\010\n\004XLSX\020\007\022\007\n\003MP3\020\010\022\007\n\003MP4\020\t\022\007" +
       "\n\003ZIP\020\n\022\010\n\004JSON\020\013\022\007\n\003XML\020\014\022\010\n\004HTML\020\r\022\007\n\003" +
-      "GIF\020\016\022\010\n\004PPTX\020\017*b\n\014FileSizeUnit\022\020\n\014UNKNO" +
-      "WN_UNIT\020\000\022\010\n\004BYTE\020\001\022\014\n\010KILOBYTE\020\002\022\014\n\010MEG" +
-      "ABYTE\020\003\022\014\n\010GIGABYTE\020\004\022\014\n\010TERABYTE\020\005B\005P\001\240" +
-      "\001\001b\006proto3"
+      "GIF\020\016\022\010\n\004PPTX\020\017\022\007\n\003XLS\020\020*b\n\014FileSizeUnit" +
+      "\022\020\n\014UNKNOWN_UNIT\020\000\022\010\n\004BYTE\020\001\022\014\n\010KILOBYTE" +
+      "\020\002\022\014\n\010MEGABYTE\020\003\022\014\n\010GIGABYTE\020\004\022\014\n\010TERABY" +
+      "TE\020\005B\005P\001\240\001\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

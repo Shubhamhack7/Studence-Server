@@ -16,7 +16,7 @@ import com.tiwari.studence.pushNotification.indexer.PushNotificationIndexerEnum;
 import com.tiwari.studence.pushNotification.provider.PushNotificationProvider;
 import com.tiwari.studence.pushNotification.provider.PushNotificationSearchPbProvider;
 import com.tiwari.studence.pushNotification.provider.PushNotificationTableNameProvider;
-import com.tiwari.studence.util.Strings;
+import com.tiwari.studence.util.common.Strings;
 import com.tiwari.studence.util.exception.ErrorException;
 
 import javax.inject.Inject;

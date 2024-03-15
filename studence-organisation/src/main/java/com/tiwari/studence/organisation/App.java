@@ -24,16 +24,17 @@ public class App
       Injector inj = InjectorProvider.createInjector();
       IOrganisationService a  = inj.getInstance(IOrganisationService.class);
       IOrganisationBigQueryService service  = inj.getInstance(IOrganisationBigQueryService.class);
-     /* OrganisationSearchReqPb.Builder builder = OrganisationSearchReqPb.newBuilder();
-      builder.setName("ram shyam");
-      System.out.print(ProtobufToJson.protobufToJsonString(builder.build()));*/
+      OrganisationSearchReqPb.Builder builder = OrganisationSearchReqPb.newBuilder();
+      builder.setNextToken("SUQjVXJAUkFOR0UjMTMyMw==");
+
+      System.out.print(ProtobufToJson.protobufToJsonString(builder.build()));
         //System.out.println(a.search(builder.build()).get());
       //System.out.println(service.createTable("100_ORGANISATION","studence_dev_devel"));
       Map<String,Object> data = new HashMap<String,Object>();
       data.put("dbInfo.id","asdas");
       data.put("dbInfo.lifetime","active");
       data.put("name","help");
-      //System.out.println(service.insertingDataTypes("100_ORGANISATION",data));
+      System.out.println(a.search(builder.build()).get());
 
 
     }
