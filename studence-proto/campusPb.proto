@@ -38,6 +38,11 @@ message OrganisationCreateAndCampusCreateReqPb {
     CampusPb campus =2;
 }
 
+message OrganisationCreateAndCampusCreatePb {
+  com.tiwari.studence.proto.organisation.OrganisationPb organisation =1;
+  CampusPb campus =2;
+}
+
 message OrganisationCreateAndCampusCreateRespPb {
   com.tiwari.studence.proto.organisation.OrganisationPb organisation =1;
   CampusPb campus =2;

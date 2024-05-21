@@ -9,7 +9,9 @@
 /home/tiwaritiwari/Studence/Studence-Server/studence-campus/src/main/java/com/tiwari/studence/proto/campus/OrganisationCreateAndCampusCreateRespPb.java
 /home/tiwaritiwari/Studence/Studence-Server/studence-campus/src/main/java/com/tiwari/studence/proto/campus/CampusSearchReqPbOrBuilder.java
 /home/tiwaritiwari/Studence/Studence-Server/studence-campus/src/main/java/com/tiwari/studence/proto/campus/CampusSearchReqPb.java
+/home/tiwaritiwari/Studence/Studence-Server/studence-campus/src/main/java/com/tiwari/studence/proto/campus/OrganisationCreateAndCampusCreatePbOrBuilder.java
 /home/tiwaritiwari/Studence/Studence-Server/studence-campus/src/main/java/com/tiwari/studence/proto/campus/OrganisationCreateAndCampusCreateReqPbOrBuilder.java
+/home/tiwaritiwari/Studence/Studence-Server/studence-campus/src/main/java/com/tiwari/studence/proto/campus/OrganisationCreateAndCampusCreatePb.java
 /home/tiwaritiwari/Studence/Studence-Server/studence-campus/src/main/java/com/tiwari/studence/campus/indexer/CampusIndexer.java
 /home/tiwaritiwari/Studence/Studence-Server/studence-campus/src/main/java/com/tiwari/studence/campus/module/CampusModule.java
 /home/tiwaritiwari/Studence/Studence-Server/studence-campus/src/main/java/com/tiwari/studence/campus/helper/CampusHelper.java
