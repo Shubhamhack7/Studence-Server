@@ -151,19 +151,16 @@ public interface DeviceDetailsPbOrBuilder extends
       getDeviceMacIdBytes();
 
   /**
-   * <code>.com.tiwari.studence.proto.devices.DeviceIpAddress deviceIpAddress = 11;</code>
-   * @return Whether the deviceIpAddress field is set.
-   */
-  boolean hasDeviceIpAddress();
-  /**
-   * <code>.com.tiwari.studence.proto.devices.DeviceIpAddress deviceIpAddress = 11;</code>
+   * <code>string deviceIpAddress = 11;</code>
    * @return The deviceIpAddress.
    */
-  com.tiwari.studence.proto.devices.DeviceIpAddress getDeviceIpAddress();
+  java.lang.String getDeviceIpAddress();
   /**
-   * <code>.com.tiwari.studence.proto.devices.DeviceIpAddress deviceIpAddress = 11;</code>
+   * <code>string deviceIpAddress = 11;</code>
+   * @return The bytes for deviceIpAddress.
    */
-  com.tiwari.studence.proto.devices.DeviceIpAddressOrBuilder getDeviceIpAddressOrBuilder();
+  com.google.protobuf.ByteString
+      getDeviceIpAddressBytes();
 
   /**
    * <code>string unique_id = 12;</code>
@@ -200,14 +197,17 @@ public interface DeviceDetailsPbOrBuilder extends
   com.tiwari.studence.proto.devices.DeviceTypeEnum getDeviceType();
 
   /**
-   * <code>string device_id = 15;</code>
-   * @return The deviceId.
+   * <code>.com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef = 15;</code>
+   * @return Whether the pushNotificationRef field is set.
    */
-  java.lang.String getDeviceId();
+  boolean hasPushNotificationRef();
   /**
-   * <code>string device_id = 15;</code>
-   * @return The bytes for deviceId.
+   * <code>.com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef = 15;</code>
+   * @return The pushNotificationRef.
    */
-  com.google.protobuf.ByteString
-      getDeviceIdBytes();
+  com.tiwari.studence.proto.pushNotification.PushNotificationRefPb getPushNotificationRef();
+  /**
+   * <code>.com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef = 15;</code>
+   */
+  com.tiwari.studence.proto.pushNotification.PushNotificationRefPbOrBuilder getPushNotificationRefOrBuilder();
 }

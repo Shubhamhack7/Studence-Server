@@ -17,10 +17,6 @@ private static final long serialVersionUID = 0L;
   }
   private PushNotificationSearchReqPb() {
     token_ = "";
-    orgRefId_ = "";
-    campusRefId_ = "";
-    deviceRefId_ = "";
-    loginRefId_ = "";
   }
 
   @java.lang.Override
@@ -87,162 +83,6 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int ORGREFID_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object orgRefId_ = "";
-  /**
-   * <code>string orgRefId = 2;</code>
-   * @return The orgRefId.
-   */
-  @java.lang.Override
-  public java.lang.String getOrgRefId() {
-    java.lang.Object ref = orgRefId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      orgRefId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string orgRefId = 2;</code>
-   * @return The bytes for orgRefId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getOrgRefIdBytes() {
-    java.lang.Object ref = orgRefId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      orgRefId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int CAMPUSREFID_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object campusRefId_ = "";
-  /**
-   * <code>string campusRefId = 3;</code>
-   * @return The campusRefId.
-   */
-  @java.lang.Override
-  public java.lang.String getCampusRefId() {
-    java.lang.Object ref = campusRefId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      campusRefId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string campusRefId = 3;</code>
-   * @return The bytes for campusRefId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getCampusRefIdBytes() {
-    java.lang.Object ref = campusRefId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      campusRefId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int DEVICEREFID_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object deviceRefId_ = "";
-  /**
-   * <code>string deviceRefId = 4;</code>
-   * @return The deviceRefId.
-   */
-  @java.lang.Override
-  public java.lang.String getDeviceRefId() {
-    java.lang.Object ref = deviceRefId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      deviceRefId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string deviceRefId = 4;</code>
-   * @return The bytes for deviceRefId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getDeviceRefIdBytes() {
-    java.lang.Object ref = deviceRefId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      deviceRefId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int LOGINREFID_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object loginRefId_ = "";
-  /**
-   * <code>string loginRefId = 5;</code>
-   * @return The loginRefId.
-   */
-  @java.lang.Override
-  public java.lang.String getLoginRefId() {
-    java.lang.Object ref = loginRefId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      loginRefId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string loginRefId = 5;</code>
-   * @return The bytes for loginRefId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getLoginRefIdBytes() {
-    java.lang.Object ref = loginRefId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      loginRefId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -260,18 +100,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, token_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgRefId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, orgRefId_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(campusRefId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, campusRefId_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceRefId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, deviceRefId_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loginRefId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, loginRefId_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -283,18 +111,6 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, token_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgRefId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, orgRefId_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(campusRefId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, campusRefId_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceRefId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, deviceRefId_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loginRefId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, loginRefId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -313,14 +129,6 @@ private static final long serialVersionUID = 0L;
 
     if (!getToken()
         .equals(other.getToken())) return false;
-    if (!getOrgRefId()
-        .equals(other.getOrgRefId())) return false;
-    if (!getCampusRefId()
-        .equals(other.getCampusRefId())) return false;
-    if (!getDeviceRefId()
-        .equals(other.getDeviceRefId())) return false;
-    if (!getLoginRefId()
-        .equals(other.getLoginRefId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -334,14 +142,6 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + TOKEN_FIELD_NUMBER;
     hash = (53 * hash) + getToken().hashCode();
-    hash = (37 * hash) + ORGREFID_FIELD_NUMBER;
-    hash = (53 * hash) + getOrgRefId().hashCode();
-    hash = (37 * hash) + CAMPUSREFID_FIELD_NUMBER;
-    hash = (53 * hash) + getCampusRefId().hashCode();
-    hash = (37 * hash) + DEVICEREFID_FIELD_NUMBER;
-    hash = (53 * hash) + getDeviceRefId().hashCode();
-    hash = (37 * hash) + LOGINREFID_FIELD_NUMBER;
-    hash = (53 * hash) + getLoginRefId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -472,10 +272,6 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       token_ = "";
-      orgRefId_ = "";
-      campusRefId_ = "";
-      deviceRefId_ = "";
-      loginRefId_ = "";
       return this;
     }
 
@@ -511,18 +307,6 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.token_ = token_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.orgRefId_ = orgRefId_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.campusRefId_ = campusRefId_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.deviceRefId_ = deviceRefId_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.loginRefId_ = loginRefId_;
       }
     }
 
@@ -575,26 +359,6 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (!other.getOrgRefId().isEmpty()) {
-        orgRefId_ = other.orgRefId_;
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
-      if (!other.getCampusRefId().isEmpty()) {
-        campusRefId_ = other.campusRefId_;
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
-      if (!other.getDeviceRefId().isEmpty()) {
-        deviceRefId_ = other.deviceRefId_;
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
-      if (!other.getLoginRefId().isEmpty()) {
-        loginRefId_ = other.loginRefId_;
-        bitField0_ |= 0x00000010;
-        onChanged();
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -626,26 +390,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
-            case 18: {
-              orgRefId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 26: {
-              campusRefId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            case 34: {
-              deviceRefId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
-            case 42: {
-              loginRefId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -731,294 +475,6 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       token_ = value;
       bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object orgRefId_ = "";
-    /**
-     * <code>string orgRefId = 2;</code>
-     * @return The orgRefId.
-     */
-    public java.lang.String getOrgRefId() {
-      java.lang.Object ref = orgRefId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        orgRefId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string orgRefId = 2;</code>
-     * @return The bytes for orgRefId.
-     */
-    public com.google.protobuf.ByteString
-        getOrgRefIdBytes() {
-      java.lang.Object ref = orgRefId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        orgRefId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string orgRefId = 2;</code>
-     * @param value The orgRefId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOrgRefId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      orgRefId_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string orgRefId = 2;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearOrgRefId() {
-      orgRefId_ = getDefaultInstance().getOrgRefId();
-      bitField0_ = (bitField0_ & ~0x00000002);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string orgRefId = 2;</code>
-     * @param value The bytes for orgRefId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOrgRefIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      orgRefId_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object campusRefId_ = "";
-    /**
-     * <code>string campusRefId = 3;</code>
-     * @return The campusRefId.
-     */
-    public java.lang.String getCampusRefId() {
-      java.lang.Object ref = campusRefId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        campusRefId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string campusRefId = 3;</code>
-     * @return The bytes for campusRefId.
-     */
-    public com.google.protobuf.ByteString
-        getCampusRefIdBytes() {
-      java.lang.Object ref = campusRefId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        campusRefId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string campusRefId = 3;</code>
-     * @param value The campusRefId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setCampusRefId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      campusRefId_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string campusRefId = 3;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearCampusRefId() {
-      campusRefId_ = getDefaultInstance().getCampusRefId();
-      bitField0_ = (bitField0_ & ~0x00000004);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string campusRefId = 3;</code>
-     * @param value The bytes for campusRefId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setCampusRefIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      campusRefId_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object deviceRefId_ = "";
-    /**
-     * <code>string deviceRefId = 4;</code>
-     * @return The deviceRefId.
-     */
-    public java.lang.String getDeviceRefId() {
-      java.lang.Object ref = deviceRefId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        deviceRefId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string deviceRefId = 4;</code>
-     * @return The bytes for deviceRefId.
-     */
-    public com.google.protobuf.ByteString
-        getDeviceRefIdBytes() {
-      java.lang.Object ref = deviceRefId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        deviceRefId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string deviceRefId = 4;</code>
-     * @param value The deviceRefId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setDeviceRefId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      deviceRefId_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string deviceRefId = 4;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearDeviceRefId() {
-      deviceRefId_ = getDefaultInstance().getDeviceRefId();
-      bitField0_ = (bitField0_ & ~0x00000008);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string deviceRefId = 4;</code>
-     * @param value The bytes for deviceRefId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setDeviceRefIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      deviceRefId_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object loginRefId_ = "";
-    /**
-     * <code>string loginRefId = 5;</code>
-     * @return The loginRefId.
-     */
-    public java.lang.String getLoginRefId() {
-      java.lang.Object ref = loginRefId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        loginRefId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string loginRefId = 5;</code>
-     * @return The bytes for loginRefId.
-     */
-    public com.google.protobuf.ByteString
-        getLoginRefIdBytes() {
-      java.lang.Object ref = loginRefId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        loginRefId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string loginRefId = 5;</code>
-     * @param value The loginRefId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setLoginRefId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      loginRefId_ = value;
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string loginRefId = 5;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearLoginRefId() {
-      loginRefId_ = getDefaultInstance().getLoginRefId();
-      bitField0_ = (bitField0_ & ~0x00000010);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string loginRefId = 5;</code>
-     * @param value The bytes for loginRefId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setLoginRefIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      loginRefId_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }

@@ -14,6 +14,7 @@ import com.tiwari.studence.proto.login.ProfileTypeEnum;
 import com.tiwari.studence.proto.name.NamePb;
 import com.tiwari.studence.proto.organisation.OrganisationPb;
 import com.tiwari.studence.server.createLogin.service.ICreateLoginService;
+import com.tiwari.studence.server.injector.InjectorProvider;
 import com.tiwari.studence.server.organisationCreateAndCampus.service.IOrganisationCreateAndCampusCreate;
 import com.tiwari.studence.server.organisationCreateAndCampus.service.OrganisationCreateAndCampusCreateService;
 import com.tiwari.studence.util.exception.ErrorException;
@@ -29,13 +30,20 @@ import java.io.IOException;
 
 public class StudenceServerTest {
   public static void main(String[] args) throws ErrorException, IOException, SchedulerException {
-    //Injector inj = InjectorProvider.createInjector();
+    Injector inj = InjectorProvider.createInjector();
     // createLogin(inj);
     //createTestOrgCampus(inj);
     //FirebaseInitializer.init();
     //eventFirestore();
     //schdulerTest();
-    findTargetFolder("/home/tiwaritiwari/Studence/Studence-Server","target");
+    //findTargetFolder("/home/tiwaritiwari/Studence/Studence-Server","target");
+    getOrganisation(inj);
+  }
+
+  private static void getOrganisation(Injector inj) {
+    IOrganisationService a = inj.getInstance(
+            IOrganisationService.class);
+    System.out.println(a.get("Ny!882"));
   }
 
   public static void findTargetFolder(String initialPath, String targetFolderName)
@@ -212,5 +220,3 @@ public class StudenceServerTest {
   }
 
 }
-
-

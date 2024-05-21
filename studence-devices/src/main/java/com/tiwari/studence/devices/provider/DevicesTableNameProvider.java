@@ -1,11 +1,10 @@
 package com.tiwari.studence.devices.provider;
 
 import com.tiwari.studence.common.services.interfaces.ITableNameProvider;
-import com.tiwari.studence.dynamodb.database.table.TableNameEnum;
 
 public class DevicesTableNameProvider implements ITableNameProvider {
   @Override
   public String getTableName() {
-    return TableNameEnum.DEVICES.getValue();
+    return null;
   }
 }

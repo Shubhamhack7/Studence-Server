@@ -1,15 +1,7 @@
 package com.tiwari.studence.pushNotification.module;
 
-import com.google.inject.AbstractModule;
-import com.tiwari.studence.pushNotification.service.IPushNotificationService;
-import com.tiwari.studence.pushNotification.service.PushNotificationService;
+public class PushNotificationModule {
 
-import javax.inject.Singleton;
+    // TODO: Implement PushNotificationModule
 
-public class PushNotificationModule extends AbstractModule {
-
-  @Override
-  protected void configure() {
-    bind(IPushNotificationService.class).to(PushNotificationService.class);
-  }
 }

@@ -18,10 +18,10 @@ private static final long serialVersionUID = 0L;
   private DeviceDetailsPb() {
     deviceOsType_ = 0;
     deviceMacId_ = "";
+    deviceIpAddress_ = "";
     uniqueId_ = "";
     mode_ = 0;
     deviceType_ = 0;
-    deviceId_ = "";
   }
 
   @java.lang.Override
@@ -315,29 +315,42 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DEVICEIPADDRESS_FIELD_NUMBER = 11;
-  private com.tiwari.studence.proto.devices.DeviceIpAddress deviceIpAddress_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object deviceIpAddress_ = "";
   /**
-   * <code>.com.tiwari.studence.proto.devices.DeviceIpAddress deviceIpAddress = 11;</code>
-   * @return Whether the deviceIpAddress field is set.
-   */
-  @java.lang.Override
-  public boolean hasDeviceIpAddress() {
-    return deviceIpAddress_ != null;
-  }
-  /**
-   * <code>.com.tiwari.studence.proto.devices.DeviceIpAddress deviceIpAddress = 11;</code>
+   * <code>string deviceIpAddress = 11;</code>
    * @return The deviceIpAddress.
    */
   @java.lang.Override
-  public com.tiwari.studence.proto.devices.DeviceIpAddress getDeviceIpAddress() {
-    return deviceIpAddress_ == null ? com.tiwari.studence.proto.devices.DeviceIpAddress.getDefaultInstance() : deviceIpAddress_;
+  public java.lang.String getDeviceIpAddress() {
+    java.lang.Object ref = deviceIpAddress_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      deviceIpAddress_ = s;
+      return s;
+    }
   }
   /**
-   * <code>.com.tiwari.studence.proto.devices.DeviceIpAddress deviceIpAddress = 11;</code>
+   * <code>string deviceIpAddress = 11;</code>
+   * @return The bytes for deviceIpAddress.
    */
   @java.lang.Override
-  public com.tiwari.studence.proto.devices.DeviceIpAddressOrBuilder getDeviceIpAddressOrBuilder() {
-    return deviceIpAddress_ == null ? com.tiwari.studence.proto.devices.DeviceIpAddress.getDefaultInstance() : deviceIpAddress_;
+  public com.google.protobuf.ByteString
+      getDeviceIpAddressBytes() {
+    java.lang.Object ref = deviceIpAddress_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      deviceIpAddress_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   public static final int UNIQUE_ID_FIELD_NUMBER = 12;
@@ -415,43 +428,30 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tiwari.studence.proto.devices.DeviceTypeEnum.UNRECOGNIZED : result;
   }
 
-  public static final int DEVICE_ID_FIELD_NUMBER = 15;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object deviceId_ = "";
+  public static final int PUSHNOTIFICATIONREF_FIELD_NUMBER = 15;
+  private com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef_;
   /**
-   * <code>string device_id = 15;</code>
-   * @return The deviceId.
+   * <code>.com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef = 15;</code>
+   * @return Whether the pushNotificationRef field is set.
    */
   @java.lang.Override
-  public java.lang.String getDeviceId() {
-    java.lang.Object ref = deviceId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      deviceId_ = s;
-      return s;
-    }
+  public boolean hasPushNotificationRef() {
+    return pushNotificationRef_ != null;
   }
   /**
-   * <code>string device_id = 15;</code>
-   * @return The bytes for deviceId.
+   * <code>.com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef = 15;</code>
+   * @return The pushNotificationRef.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getDeviceIdBytes() {
-    java.lang.Object ref = deviceId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      deviceId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  public com.tiwari.studence.proto.pushNotification.PushNotificationRefPb getPushNotificationRef() {
+    return pushNotificationRef_ == null ? com.tiwari.studence.proto.pushNotification.PushNotificationRefPb.getDefaultInstance() : pushNotificationRef_;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef = 15;</code>
+   */
+  @java.lang.Override
+  public com.tiwari.studence.proto.pushNotification.PushNotificationRefPbOrBuilder getPushNotificationRefOrBuilder() {
+    return pushNotificationRef_ == null ? com.tiwari.studence.proto.pushNotification.PushNotificationRefPb.getDefaultInstance() : pushNotificationRef_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -498,8 +498,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceMacId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 10, deviceMacId_);
     }
-    if (deviceIpAddress_ != null) {
-      output.writeMessage(11, getDeviceIpAddress());
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceIpAddress_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 11, deviceIpAddress_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uniqueId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 12, uniqueId_);
@@ -510,8 +510,8 @@ private static final long serialVersionUID = 0L;
     if (deviceType_ != com.tiwari.studence.proto.devices.DeviceTypeEnum.UNKNOWN_DEVICE_TYPE.getNumber()) {
       output.writeEnum(14, deviceType_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 15, deviceId_);
+    if (pushNotificationRef_ != null) {
+      output.writeMessage(15, getPushNotificationRef());
     }
     getUnknownFields().writeTo(output);
   }
@@ -561,9 +561,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceMacId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, deviceMacId_);
     }
-    if (deviceIpAddress_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(11, getDeviceIpAddress());
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceIpAddress_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, deviceIpAddress_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uniqueId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, uniqueId_);
@@ -576,8 +575,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(14, deviceType_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deviceId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, deviceId_);
+    if (pushNotificationRef_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(15, getPushNotificationRef());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -637,17 +637,17 @@ private static final long serialVersionUID = 0L;
     }
     if (!getDeviceMacId()
         .equals(other.getDeviceMacId())) return false;
-    if (hasDeviceIpAddress() != other.hasDeviceIpAddress()) return false;
-    if (hasDeviceIpAddress()) {
-      if (!getDeviceIpAddress()
-          .equals(other.getDeviceIpAddress())) return false;
-    }
+    if (!getDeviceIpAddress()
+        .equals(other.getDeviceIpAddress())) return false;
     if (!getUniqueId()
         .equals(other.getUniqueId())) return false;
     if (mode_ != other.mode_) return false;
     if (deviceType_ != other.deviceType_) return false;
-    if (!getDeviceId()
-        .equals(other.getDeviceId())) return false;
+    if (hasPushNotificationRef() != other.hasPushNotificationRef()) return false;
+    if (hasPushNotificationRef()) {
+      if (!getPushNotificationRef()
+          .equals(other.getPushNotificationRef())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -695,18 +695,18 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + DEVICEMACID_FIELD_NUMBER;
     hash = (53 * hash) + getDeviceMacId().hashCode();
-    if (hasDeviceIpAddress()) {
-      hash = (37 * hash) + DEVICEIPADDRESS_FIELD_NUMBER;
-      hash = (53 * hash) + getDeviceIpAddress().hashCode();
-    }
+    hash = (37 * hash) + DEVICEIPADDRESS_FIELD_NUMBER;
+    hash = (53 * hash) + getDeviceIpAddress().hashCode();
     hash = (37 * hash) + UNIQUE_ID_FIELD_NUMBER;
     hash = (53 * hash) + getUniqueId().hashCode();
     hash = (37 * hash) + MODE_FIELD_NUMBER;
     hash = (53 * hash) + mode_;
     hash = (37 * hash) + DEVICETYPE_FIELD_NUMBER;
     hash = (53 * hash) + deviceType_;
-    hash = (37 * hash) + DEVICE_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getDeviceId().hashCode();
+    if (hasPushNotificationRef()) {
+      hash = (37 * hash) + PUSHNOTIFICATIONREF_FIELD_NUMBER;
+      hash = (53 * hash) + getPushNotificationRef().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -878,15 +878,15 @@ private static final long serialVersionUID = 0L;
         screeSizeBuilder_ = null;
       }
       deviceMacId_ = "";
-      deviceIpAddress_ = null;
-      if (deviceIpAddressBuilder_ != null) {
-        deviceIpAddressBuilder_.dispose();
-        deviceIpAddressBuilder_ = null;
-      }
+      deviceIpAddress_ = "";
       uniqueId_ = "";
       mode_ = 0;
       deviceType_ = 0;
-      deviceId_ = "";
+      pushNotificationRef_ = null;
+      if (pushNotificationRefBuilder_ != null) {
+        pushNotificationRefBuilder_.dispose();
+        pushNotificationRefBuilder_ = null;
+      }
       return this;
     }
 
@@ -967,9 +967,7 @@ private static final long serialVersionUID = 0L;
         result.deviceMacId_ = deviceMacId_;
       }
       if (((from_bitField0_ & 0x00000400) != 0)) {
-        result.deviceIpAddress_ = deviceIpAddressBuilder_ == null
-            ? deviceIpAddress_
-            : deviceIpAddressBuilder_.build();
+        result.deviceIpAddress_ = deviceIpAddress_;
       }
       if (((from_bitField0_ & 0x00000800) != 0)) {
         result.uniqueId_ = uniqueId_;
@@ -981,7 +979,9 @@ private static final long serialVersionUID = 0L;
         result.deviceType_ = deviceType_;
       }
       if (((from_bitField0_ & 0x00004000) != 0)) {
-        result.deviceId_ = deviceId_;
+        result.pushNotificationRef_ = pushNotificationRefBuilder_ == null
+            ? pushNotificationRef_
+            : pushNotificationRefBuilder_.build();
       }
     }
 
@@ -1061,8 +1061,10 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000200;
         onChanged();
       }
-      if (other.hasDeviceIpAddress()) {
-        mergeDeviceIpAddress(other.getDeviceIpAddress());
+      if (!other.getDeviceIpAddress().isEmpty()) {
+        deviceIpAddress_ = other.deviceIpAddress_;
+        bitField0_ |= 0x00000400;
+        onChanged();
       }
       if (!other.getUniqueId().isEmpty()) {
         uniqueId_ = other.uniqueId_;
@@ -1075,10 +1077,8 @@ private static final long serialVersionUID = 0L;
       if (other.deviceType_ != 0) {
         setDeviceTypeValue(other.getDeviceTypeValue());
       }
-      if (!other.getDeviceId().isEmpty()) {
-        deviceId_ = other.deviceId_;
-        bitField0_ |= 0x00004000;
-        onChanged();
+      if (other.hasPushNotificationRef()) {
+        mergePushNotificationRef(other.getPushNotificationRef());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1173,9 +1173,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 82
             case 90: {
-              input.readMessage(
-                  getDeviceIpAddressFieldBuilder().getBuilder(),
-                  extensionRegistry);
+              deviceIpAddress_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000400;
               break;
             } // case 90
@@ -1195,7 +1193,9 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 112
             case 122: {
-              deviceId_ = input.readStringRequireUtf8();
+              input.readMessage(
+                  getPushNotificationRefFieldBuilder().getBuilder(),
+                  extensionRegistry);
               bitField0_ |= 0x00004000;
               break;
             } // case 122
@@ -2293,123 +2293,76 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.tiwari.studence.proto.devices.DeviceIpAddress deviceIpAddress_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tiwari.studence.proto.devices.DeviceIpAddress, com.tiwari.studence.proto.devices.DeviceIpAddress.Builder, com.tiwari.studence.proto.devices.DeviceIpAddressOrBuilder> deviceIpAddressBuilder_;
+    private java.lang.Object deviceIpAddress_ = "";
     /**
-     * <code>.com.tiwari.studence.proto.devices.DeviceIpAddress deviceIpAddress = 11;</code>
-     * @return Whether the deviceIpAddress field is set.
-     */
-    public boolean hasDeviceIpAddress() {
-      return ((bitField0_ & 0x00000400) != 0);
-    }
-    /**
-     * <code>.com.tiwari.studence.proto.devices.DeviceIpAddress deviceIpAddress = 11;</code>
+     * <code>string deviceIpAddress = 11;</code>
      * @return The deviceIpAddress.
      */
-    public com.tiwari.studence.proto.devices.DeviceIpAddress getDeviceIpAddress() {
-      if (deviceIpAddressBuilder_ == null) {
-        return deviceIpAddress_ == null ? com.tiwari.studence.proto.devices.DeviceIpAddress.getDefaultInstance() : deviceIpAddress_;
+    public java.lang.String getDeviceIpAddress() {
+      java.lang.Object ref = deviceIpAddress_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        deviceIpAddress_ = s;
+        return s;
       } else {
-        return deviceIpAddressBuilder_.getMessage();
+        return (java.lang.String) ref;
       }
     }
     /**
-     * <code>.com.tiwari.studence.proto.devices.DeviceIpAddress deviceIpAddress = 11;</code>
+     * <code>string deviceIpAddress = 11;</code>
+     * @return The bytes for deviceIpAddress.
      */
-    public Builder setDeviceIpAddress(com.tiwari.studence.proto.devices.DeviceIpAddress value) {
-      if (deviceIpAddressBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        deviceIpAddress_ = value;
+    public com.google.protobuf.ByteString
+        getDeviceIpAddressBytes() {
+      java.lang.Object ref = deviceIpAddress_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        deviceIpAddress_ = b;
+        return b;
       } else {
-        deviceIpAddressBuilder_.setMessage(value);
+        return (com.google.protobuf.ByteString) ref;
       }
-      bitField0_ |= 0x00000400;
-      onChanged();
-      return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.devices.DeviceIpAddress deviceIpAddress = 11;</code>
+     * <code>string deviceIpAddress = 11;</code>
+     * @param value The deviceIpAddress to set.
+     * @return This builder for chaining.
      */
     public Builder setDeviceIpAddress(
-        com.tiwari.studence.proto.devices.DeviceIpAddress.Builder builderForValue) {
-      if (deviceIpAddressBuilder_ == null) {
-        deviceIpAddress_ = builderForValue.build();
-      } else {
-        deviceIpAddressBuilder_.setMessage(builderForValue.build());
-      }
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      deviceIpAddress_ = value;
       bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.devices.DeviceIpAddress deviceIpAddress = 11;</code>
-     */
-    public Builder mergeDeviceIpAddress(com.tiwari.studence.proto.devices.DeviceIpAddress value) {
-      if (deviceIpAddressBuilder_ == null) {
-        if (((bitField0_ & 0x00000400) != 0) &&
-          deviceIpAddress_ != null &&
-          deviceIpAddress_ != com.tiwari.studence.proto.devices.DeviceIpAddress.getDefaultInstance()) {
-          getDeviceIpAddressBuilder().mergeFrom(value);
-        } else {
-          deviceIpAddress_ = value;
-        }
-      } else {
-        deviceIpAddressBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00000400;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.com.tiwari.studence.proto.devices.DeviceIpAddress deviceIpAddress = 11;</code>
+     * <code>string deviceIpAddress = 11;</code>
+     * @return This builder for chaining.
      */
     public Builder clearDeviceIpAddress() {
+      deviceIpAddress_ = getDefaultInstance().getDeviceIpAddress();
       bitField0_ = (bitField0_ & ~0x00000400);
-      deviceIpAddress_ = null;
-      if (deviceIpAddressBuilder_ != null) {
-        deviceIpAddressBuilder_.dispose();
-        deviceIpAddressBuilder_ = null;
-      }
       onChanged();
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.devices.DeviceIpAddress deviceIpAddress = 11;</code>
+     * <code>string deviceIpAddress = 11;</code>
+     * @param value The bytes for deviceIpAddress to set.
+     * @return This builder for chaining.
      */
-    public com.tiwari.studence.proto.devices.DeviceIpAddress.Builder getDeviceIpAddressBuilder() {
+    public Builder setDeviceIpAddressBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      deviceIpAddress_ = value;
       bitField0_ |= 0x00000400;
       onChanged();
-      return getDeviceIpAddressFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.com.tiwari.studence.proto.devices.DeviceIpAddress deviceIpAddress = 11;</code>
-     */
-    public com.tiwari.studence.proto.devices.DeviceIpAddressOrBuilder getDeviceIpAddressOrBuilder() {
-      if (deviceIpAddressBuilder_ != null) {
-        return deviceIpAddressBuilder_.getMessageOrBuilder();
-      } else {
-        return deviceIpAddress_ == null ?
-            com.tiwari.studence.proto.devices.DeviceIpAddress.getDefaultInstance() : deviceIpAddress_;
-      }
-    }
-    /**
-     * <code>.com.tiwari.studence.proto.devices.DeviceIpAddress deviceIpAddress = 11;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tiwari.studence.proto.devices.DeviceIpAddress, com.tiwari.studence.proto.devices.DeviceIpAddress.Builder, com.tiwari.studence.proto.devices.DeviceIpAddressOrBuilder> 
-        getDeviceIpAddressFieldBuilder() {
-      if (deviceIpAddressBuilder_ == null) {
-        deviceIpAddressBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tiwari.studence.proto.devices.DeviceIpAddress, com.tiwari.studence.proto.devices.DeviceIpAddress.Builder, com.tiwari.studence.proto.devices.DeviceIpAddressOrBuilder>(
-                getDeviceIpAddress(),
-                getParentForChildren(),
-                isClean());
-        deviceIpAddress_ = null;
-      }
-      return deviceIpAddressBuilder_;
+      return this;
     }
 
     private java.lang.Object uniqueId_ = "";
@@ -2590,76 +2543,123 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object deviceId_ = "";
+    private com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tiwari.studence.proto.pushNotification.PushNotificationRefPb, com.tiwari.studence.proto.pushNotification.PushNotificationRefPb.Builder, com.tiwari.studence.proto.pushNotification.PushNotificationRefPbOrBuilder> pushNotificationRefBuilder_;
     /**
-     * <code>string device_id = 15;</code>
-     * @return The deviceId.
+     * <code>.com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef = 15;</code>
+     * @return Whether the pushNotificationRef field is set.
      */
-    public java.lang.String getDeviceId() {
-      java.lang.Object ref = deviceId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        deviceId_ = s;
-        return s;
+    public boolean hasPushNotificationRef() {
+      return ((bitField0_ & 0x00004000) != 0);
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef = 15;</code>
+     * @return The pushNotificationRef.
+     */
+    public com.tiwari.studence.proto.pushNotification.PushNotificationRefPb getPushNotificationRef() {
+      if (pushNotificationRefBuilder_ == null) {
+        return pushNotificationRef_ == null ? com.tiwari.studence.proto.pushNotification.PushNotificationRefPb.getDefaultInstance() : pushNotificationRef_;
       } else {
-        return (java.lang.String) ref;
+        return pushNotificationRefBuilder_.getMessage();
       }
     }
     /**
-     * <code>string device_id = 15;</code>
-     * @return The bytes for deviceId.
+     * <code>.com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef = 15;</code>
      */
-    public com.google.protobuf.ByteString
-        getDeviceIdBytes() {
-      java.lang.Object ref = deviceId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        deviceId_ = b;
-        return b;
+    public Builder setPushNotificationRef(com.tiwari.studence.proto.pushNotification.PushNotificationRefPb value) {
+      if (pushNotificationRefBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        pushNotificationRef_ = value;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        pushNotificationRefBuilder_.setMessage(value);
       }
-    }
-    /**
-     * <code>string device_id = 15;</code>
-     * @param value The deviceId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setDeviceId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      deviceId_ = value;
       bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
     /**
-     * <code>string device_id = 15;</code>
-     * @return This builder for chaining.
+     * <code>.com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef = 15;</code>
      */
-    public Builder clearDeviceId() {
-      deviceId_ = getDefaultInstance().getDeviceId();
+    public Builder setPushNotificationRef(
+        com.tiwari.studence.proto.pushNotification.PushNotificationRefPb.Builder builderForValue) {
+      if (pushNotificationRefBuilder_ == null) {
+        pushNotificationRef_ = builderForValue.build();
+      } else {
+        pushNotificationRefBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef = 15;</code>
+     */
+    public Builder mergePushNotificationRef(com.tiwari.studence.proto.pushNotification.PushNotificationRefPb value) {
+      if (pushNotificationRefBuilder_ == null) {
+        if (((bitField0_ & 0x00004000) != 0) &&
+          pushNotificationRef_ != null &&
+          pushNotificationRef_ != com.tiwari.studence.proto.pushNotification.PushNotificationRefPb.getDefaultInstance()) {
+          getPushNotificationRefBuilder().mergeFrom(value);
+        } else {
+          pushNotificationRef_ = value;
+        }
+      } else {
+        pushNotificationRefBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef = 15;</code>
+     */
+    public Builder clearPushNotificationRef() {
       bitField0_ = (bitField0_ & ~0x00004000);
+      pushNotificationRef_ = null;
+      if (pushNotificationRefBuilder_ != null) {
+        pushNotificationRefBuilder_.dispose();
+        pushNotificationRefBuilder_ = null;
+      }
       onChanged();
       return this;
     }
     /**
-     * <code>string device_id = 15;</code>
-     * @param value The bytes for deviceId to set.
-     * @return This builder for chaining.
+     * <code>.com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef = 15;</code>
      */
-    public Builder setDeviceIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      deviceId_ = value;
+    public com.tiwari.studence.proto.pushNotification.PushNotificationRefPb.Builder getPushNotificationRefBuilder() {
       bitField0_ |= 0x00004000;
       onChanged();
-      return this;
+      return getPushNotificationRefFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef = 15;</code>
+     */
+    public com.tiwari.studence.proto.pushNotification.PushNotificationRefPbOrBuilder getPushNotificationRefOrBuilder() {
+      if (pushNotificationRefBuilder_ != null) {
+        return pushNotificationRefBuilder_.getMessageOrBuilder();
+      } else {
+        return pushNotificationRef_ == null ?
+            com.tiwari.studence.proto.pushNotification.PushNotificationRefPb.getDefaultInstance() : pushNotificationRef_;
+      }
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef = 15;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tiwari.studence.proto.pushNotification.PushNotificationRefPb, com.tiwari.studence.proto.pushNotification.PushNotificationRefPb.Builder, com.tiwari.studence.proto.pushNotification.PushNotificationRefPbOrBuilder> 
+        getPushNotificationRefFieldBuilder() {
+      if (pushNotificationRefBuilder_ == null) {
+        pushNotificationRefBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tiwari.studence.proto.pushNotification.PushNotificationRefPb, com.tiwari.studence.proto.pushNotification.PushNotificationRefPb.Builder, com.tiwari.studence.proto.pushNotification.PushNotificationRefPbOrBuilder>(
+                getPushNotificationRef(),
+                getParentForChildren(),
+                isClean());
+        pushNotificationRef_ = null;
+      }
+      return pushNotificationRefBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
