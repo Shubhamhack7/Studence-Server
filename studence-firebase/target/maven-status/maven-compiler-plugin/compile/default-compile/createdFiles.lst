@@ -1,10 +1,5 @@
-com/tiwari/studence/firebase/module/FirebaseModule.class
-com/tiwari/studence/firebase/indexer/FirebaseIndexer.class
-com/tiwari/studence/firebase/service/FirebaseService.class
-com/tiwari/studence/firebase/updater/FirebaseUpdater.class
-com/tiwari/studence/firebase/provider/FirebaseProvider.class
-com/tiwari/studence/firebase/convertor/FirebaseConvertor.class
-com/tiwari/studence/firebase/searcher/FirebaseSearcher.class
 com/tiwari/studence/firebase/APP.class
-com/tiwari/studence/firebase/servlet/FirebaseServlet.class
-com/tiwari/studence/firebase/injector/FirebaseInjector.class
+com/tiwari/studence/firebase/module/FirebaseServiceModule.class
+com/tiwari/studence/firebase/service/IFirebaseService.class
+com/tiwari/studence/firebase/initializer/FirebaseInitializer.class
+com/tiwari/studence/firebase/service/FirebaseService.class

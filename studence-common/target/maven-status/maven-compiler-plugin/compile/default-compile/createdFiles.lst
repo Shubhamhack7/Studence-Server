@@ -52,6 +52,7 @@ com/tiwari/studence/common/entity/EntityGetAndUpdateCF$GetEntityPb.class
 com/tiwari/studence/common/async/IBatchAsyncCall.class
 com/tiwari/studence/proto/time/AccumulatedTimeStatsIdPb.class
 com/tiwari/studence/common/provider/IReqRespPbBuilderProvider.class
+com/tiwari/studence/documentReader/excelReader/ExcelReader$1.class
 com/tiwari/studence/common/controlflow/PutTableCF$State.class
 com/tiwari/studence/common/async/IStatistics.class
 com/tiwari/studence/common/services/interfaces/ITableNameProvider.class
@@ -122,6 +123,7 @@ com/tiwari/studence/common/async/Timer.class
 com/tiwari/studence/common/entity/EntityGetCF$GetEntity.class
 com/tiwari/studence/proto/time/TimeProfileDimensionEnum.class
 com/tiwari/studence/common/entity/EntityCreateCF$GetEntity.class
+com/tiwari/studence/common/schduler/StudenceSchduler.class
 com/tiwari/studence/common/controlflow/SearchItemCF$SearchInDynamoDB.class
 com/tiwari/studence/common/entity/EntityGetAndDeleteCF$UpdatePBWithDelete.class
 com/tiwari/studence/common/async/ABatchAsyncCall$TIME_STATS_ID.class
@@ -165,6 +167,7 @@ com/tiwari/studence/common/searcher/AEntitySearcher.class
 com/tiwari/studence/common/module/UpdateItemDynamoDbModule.class
 com/tiwari/studence/common/async/RequestScopes$1.class
 com/tiwari/studence/common/entity/GetAndUpdateEntityCF.class
+com/tiwari/studence/documentReader/excelReader/ExcelReader.class
 com/tiwari/studence/common/indexer/AEntityIndexer.class
 com/tiwari/studence/common/controlflow/CreateDynamoTable.class
 com/tiwari/studence/common/controlflow/PutTableCF$InsertDynamoDb.class
