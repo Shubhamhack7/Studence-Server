@@ -1,6 +1,6 @@
 package com.tiwari.studence.typeAhed.convertor;
 
-import com.tiwari.studence.common.convertor.AEntityConvertor;
+import com.tiwari.studence.common.service.v1.convertor.AEntityConvertor;
 import com.tiwari.studence.proto.typeAhead.TypeAheadPb;
 import com.tiwari.studence.proto.typeAhead.TypeAheadSearchReqPb;
 import com.tiwari.studence.proto.typeAhead.TypeAheadSearchRespPb;

@@ -1,6 +1,6 @@
 package com.tiwari.studence.teacher.converter;
 
-import com.tiwari.studence.common.convertor.AEntityConvertor;
+import com.tiwari.studence.common.service.v1.convertor.AEntityConvertor;
 import com.tiwari.studence.proto.teacher.TeacherPb;
 import com.tiwari.studence.proto.teacher.TeacherSearchReqPb;
 import com.tiwari.studence.proto.teacher.TeacherSearchRespPb;

@@ -2,7 +2,7 @@ package com.tiwari.studence.attendence.updater;
 
 import com.tiwari.studence.attendence.indexer.AttendenceIndexer;
 import com.tiwari.studence.attendence.provider.AttendencePbProvider;
-import com.tiwari.studence.common.updater.AEntityUpdater;
+import com.tiwari.studence.common.service.v1.updater.AEntityUpdater;
 import com.tiwari.studence.proto.attendence.AttendencePb;
 import com.tiwari.studence.proto.attendence.AttendencePb.Builder;
 import com.tiwari.studence.proto.datatypes.BooleanEnum;

@@ -1,0 +1,15 @@
+// Copyright (c) 2011, All Right Reserved, http://nsimpl.com/
+syntax = "proto3";
+package com.tiwari.studence.proto.mergeOption;
+
+option java_multiple_files = true;
+option java_generate_equals_and_hash = true;
+
+import "google/protobuf/descriptor.proto";
+
+
+extend google.protobuf.MessageOptions {
+  optional string mergeToken = 51234;
+  optional string isBasicType = 51235; 
+  optional string matcher = 51236; 
+}

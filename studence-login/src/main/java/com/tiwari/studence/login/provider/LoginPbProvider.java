@@ -1,6 +1,6 @@
 package com.tiwari.studence.login.provider;
 
-import com.tiwari.studence.common.provider.IPbBuilderProvider;
+import com.tiwari.studence.common.providerInterfaces.IPbBuilderProvider;
 import com.tiwari.studence.proto.login.LoginPb;
 
 import javax.inject.Singleton;

@@ -121,6 +121,32 @@ private static final long serialVersionUID = 0L;
     return contactDetails_ == null ? com.tiwari.studence.proto.contactDetails.ContactDetailsPb.getDefaultInstance() : contactDetails_;
   }
 
+  public static final int ENTITY_FIELD_NUMBER = 4;
+  private com.tiwari.studence.proto.entity.EntityProtoPb entity_;
+  /**
+   * <code>.com.tiwari.studence.proto.entity.EntityProtoPb entity = 4;</code>
+   * @return Whether the entity field is set.
+   */
+  @java.lang.Override
+  public boolean hasEntity() {
+    return entity_ != null;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.entity.EntityProtoPb entity = 4;</code>
+   * @return The entity.
+   */
+  @java.lang.Override
+  public com.tiwari.studence.proto.entity.EntityProtoPb getEntity() {
+    return entity_ == null ? com.tiwari.studence.proto.entity.EntityProtoPb.getDefaultInstance() : entity_;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.entity.EntityProtoPb entity = 4;</code>
+   */
+  @java.lang.Override
+  public com.tiwari.studence.proto.entity.EntityProtoPbOrBuilder getEntityOrBuilder() {
+    return entity_ == null ? com.tiwari.studence.proto.entity.EntityProtoPb.getDefaultInstance() : entity_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -144,6 +170,9 @@ private static final long serialVersionUID = 0L;
     if (contactDetails_ != null) {
       output.writeMessage(3, getContactDetails());
     }
+    if (entity_ != null) {
+      output.writeMessage(4, getEntity());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -164,6 +193,10 @@ private static final long serialVersionUID = 0L;
     if (contactDetails_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getContactDetails());
+    }
+    if (entity_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, getEntity());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -195,6 +228,11 @@ private static final long serialVersionUID = 0L;
       if (!getContactDetails()
           .equals(other.getContactDetails())) return false;
     }
+    if (hasEntity() != other.hasEntity()) return false;
+    if (hasEntity()) {
+      if (!getEntity()
+          .equals(other.getEntity())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -217,6 +255,10 @@ private static final long serialVersionUID = 0L;
     if (hasContactDetails()) {
       hash = (37 * hash) + CONTACTDETAILS_FIELD_NUMBER;
       hash = (53 * hash) + getContactDetails().hashCode();
+    }
+    if (hasEntity()) {
+      hash = (37 * hash) + ENTITY_FIELD_NUMBER;
+      hash = (53 * hash) + getEntity().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -362,6 +404,11 @@ private static final long serialVersionUID = 0L;
         contactDetailsBuilder_.dispose();
         contactDetailsBuilder_ = null;
       }
+      entity_ = null;
+      if (entityBuilder_ != null) {
+        entityBuilder_.dispose();
+        entityBuilder_ = null;
+      }
       return this;
     }
 
@@ -409,6 +456,11 @@ private static final long serialVersionUID = 0L;
         result.contactDetails_ = contactDetailsBuilder_ == null
             ? contactDetails_
             : contactDetailsBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.entity_ = entityBuilder_ == null
+            ? entity_
+            : entityBuilder_.build();
       }
     }
 
@@ -465,6 +517,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasContactDetails()) {
         mergeContactDetails(other.getContactDetails());
       }
+      if (other.hasEntity()) {
+        mergeEntity(other.getEntity());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -512,6 +567,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 26
+            case 34: {
+              input.readMessage(
+                  getEntityFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -884,6 +946,125 @@ private static final long serialVersionUID = 0L;
         contactDetails_ = null;
       }
       return contactDetailsBuilder_;
+    }
+
+    private com.tiwari.studence.proto.entity.EntityProtoPb entity_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tiwari.studence.proto.entity.EntityProtoPb, com.tiwari.studence.proto.entity.EntityProtoPb.Builder, com.tiwari.studence.proto.entity.EntityProtoPbOrBuilder> entityBuilder_;
+    /**
+     * <code>.com.tiwari.studence.proto.entity.EntityProtoPb entity = 4;</code>
+     * @return Whether the entity field is set.
+     */
+    public boolean hasEntity() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.entity.EntityProtoPb entity = 4;</code>
+     * @return The entity.
+     */
+    public com.tiwari.studence.proto.entity.EntityProtoPb getEntity() {
+      if (entityBuilder_ == null) {
+        return entity_ == null ? com.tiwari.studence.proto.entity.EntityProtoPb.getDefaultInstance() : entity_;
+      } else {
+        return entityBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.entity.EntityProtoPb entity = 4;</code>
+     */
+    public Builder setEntity(com.tiwari.studence.proto.entity.EntityProtoPb value) {
+      if (entityBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        entity_ = value;
+      } else {
+        entityBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.entity.EntityProtoPb entity = 4;</code>
+     */
+    public Builder setEntity(
+        com.tiwari.studence.proto.entity.EntityProtoPb.Builder builderForValue) {
+      if (entityBuilder_ == null) {
+        entity_ = builderForValue.build();
+      } else {
+        entityBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.entity.EntityProtoPb entity = 4;</code>
+     */
+    public Builder mergeEntity(com.tiwari.studence.proto.entity.EntityProtoPb value) {
+      if (entityBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) != 0) &&
+          entity_ != null &&
+          entity_ != com.tiwari.studence.proto.entity.EntityProtoPb.getDefaultInstance()) {
+          getEntityBuilder().mergeFrom(value);
+        } else {
+          entity_ = value;
+        }
+      } else {
+        entityBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.entity.EntityProtoPb entity = 4;</code>
+     */
+    public Builder clearEntity() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      entity_ = null;
+      if (entityBuilder_ != null) {
+        entityBuilder_.dispose();
+        entityBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.entity.EntityProtoPb entity = 4;</code>
+     */
+    public com.tiwari.studence.proto.entity.EntityProtoPb.Builder getEntityBuilder() {
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return getEntityFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.entity.EntityProtoPb entity = 4;</code>
+     */
+    public com.tiwari.studence.proto.entity.EntityProtoPbOrBuilder getEntityOrBuilder() {
+      if (entityBuilder_ != null) {
+        return entityBuilder_.getMessageOrBuilder();
+      } else {
+        return entity_ == null ?
+            com.tiwari.studence.proto.entity.EntityProtoPb.getDefaultInstance() : entity_;
+      }
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.entity.EntityProtoPb entity = 4;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tiwari.studence.proto.entity.EntityProtoPb, com.tiwari.studence.proto.entity.EntityProtoPb.Builder, com.tiwari.studence.proto.entity.EntityProtoPbOrBuilder> 
+        getEntityFieldBuilder() {
+      if (entityBuilder_ == null) {
+        entityBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tiwari.studence.proto.entity.EntityProtoPb, com.tiwari.studence.proto.entity.EntityProtoPb.Builder, com.tiwari.studence.proto.entity.EntityProtoPbOrBuilder>(
+                getEntity(),
+                getParentForChildren(),
+                isClean());
+        entity_ = null;
+      }
+      return entityBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

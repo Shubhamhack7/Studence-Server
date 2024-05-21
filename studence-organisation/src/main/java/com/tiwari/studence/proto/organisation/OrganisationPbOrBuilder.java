@@ -51,4 +51,19 @@ public interface OrganisationPbOrBuilder extends
    * <code>.com.tiwari.studence.proto.contactDetails.ContactDetailsPb contactDetails = 3;</code>
    */
   com.tiwari.studence.proto.contactDetails.ContactDetailsPbOrBuilder getContactDetailsOrBuilder();
+
+  /**
+   * <code>.com.tiwari.studence.proto.entity.EntityProtoPb entity = 4;</code>
+   * @return Whether the entity field is set.
+   */
+  boolean hasEntity();
+  /**
+   * <code>.com.tiwari.studence.proto.entity.EntityProtoPb entity = 4;</code>
+   * @return The entity.
+   */
+  com.tiwari.studence.proto.entity.EntityProtoPb getEntity();
+  /**
+   * <code>.com.tiwari.studence.proto.entity.EntityProtoPb entity = 4;</code>
+   */
+  com.tiwari.studence.proto.entity.EntityProtoPbOrBuilder getEntityOrBuilder();
 }

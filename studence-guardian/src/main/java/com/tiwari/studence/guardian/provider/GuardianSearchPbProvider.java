@@ -1,6 +1,6 @@
 package com.tiwari.studence.guardian.provider;
 
-import com.tiwari.studence.common.provider.IReqRespPbBuilderProvider;
+import com.tiwari.studence.common.providerInterfaces.IReqRespPbBuilderProvider;
 import com.tiwari.studence.proto.guardian.GuardianSearchReqPb;
 import com.tiwari.studence.proto.guardian.GuardianSearchRespPb;
 

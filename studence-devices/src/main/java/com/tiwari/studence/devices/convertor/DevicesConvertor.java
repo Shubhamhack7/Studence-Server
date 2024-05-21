@@ -1,6 +1,6 @@
 package com.tiwari.studence.devices.convertor;
 
-import com.tiwari.studence.common.convertor.AEntityConvertor;
+import com.tiwari.studence.common.service.v1.convertor.AEntityConvertor;
 import com.tiwari.studence.devices.provider.DevicesProvider;
 import com.tiwari.studence.devices.provider.DevicesSearchPbProvider;
 import com.tiwari.studence.proto.devices.DeviceDetailsPb;

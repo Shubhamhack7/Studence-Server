@@ -1,6 +1,6 @@
 package com.tiwari.studence.pushNotification.provider;
 
-import com.tiwari.studence.common.provider.IReqRespPbBuilderProvider;
+import com.tiwari.studence.common.providerInterfaces.IReqRespPbBuilderProvider;
 import com.tiwari.studence.proto.pushNotification.PushNotificationSearchReqPb;
 import com.tiwari.studence.proto.pushNotification.PushNotificationSearchRespPb;
 

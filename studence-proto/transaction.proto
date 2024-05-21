@@ -1,0 +1,43 @@
+// Copyright (c) 2011, All Right Reserved, http://nsimpl.com/
+syntax = "proto3";
+package com.tiwari.studence.proto.transaction;
+
+option java_multiple_files = true;
+option java_generate_equals_and_hash = true;
+
+import "reference.proto";
+import "mergeOption.proto";
+
+
+enum TransactionState {
+  UNKNOWN_STATE=0;
+  NEW = 1;
+  IN_PROCESS = 2;
+  COMMIT = 3;
+  COMMITTED = 4;
+  ROLLBACK = 5;
+  ROLLBACKED = 6;
+}
+
+message TransactionInfo {
+  optional com.tiwari.studence.proto.reference.MultiLevelReferencePb transactionId = 1;
+  optional TransactionState state = 2;
+}
+
+enum Outcome {
+  UNLNOWN_OUTCOME=0;
+  SUCCESS = 1;
+  FAILED = 2;
+  EXCEPTION = 3;
+}
+
+message ManagedTransaction {
+  option (com.tiwari.studence.proto.mergeOption.mergeToken) = "1.1";
+  optional com.tiwari.studence.proto.reference.MultiLevelReferencePb id = 1;
+  optional TransactionState state = 2;
+  // This is the time when it entered into this state.
+  optional Outcome result = 3;
+  // TODO : change time to timePb
+  optional int32 time = 4;
+  optional int32 retryCount = 5;
+}

@@ -1,6 +1,6 @@
 package com.tiwari.studence.teacher.indexer;
 
-import com.tiwari.studence.common.indexer.AEntityIndexer;
+import com.tiwari.studence.common.service.v1.indexer.AEntityIndexer;
 import com.tiwari.studence.proto.teacher.TeacherPb;
 import com.tiwari.studence.util.encoder.JsonBaseEncoderDecoder;
 import software.amazon.awssdk.services.dynamodb.model.AttributeValue;

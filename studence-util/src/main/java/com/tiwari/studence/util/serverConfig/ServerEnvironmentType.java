@@ -9,6 +9,8 @@ public enum ServerEnvironmentType {
 
     UNKNOWN_SERVER,
     PRODUCTION,
+    QA,
+    PRODUCTION_TEST,
     DEVELOPMENT;
 
 

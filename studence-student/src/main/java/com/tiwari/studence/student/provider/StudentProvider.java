@@ -1,7 +1,6 @@
 package com.tiwari.studence.student.provider;
 
-import com.tiwari.studence.common.provider.IPbBuilderProvider;
-import com.tiwari.studence.proto.campus.CampusPb;
+import com.tiwari.studence.common.providerInterfaces.IPbBuilderProvider;
 import com.tiwari.studence.proto.student.StudentPb;
 
 import javax.inject.Singleton;

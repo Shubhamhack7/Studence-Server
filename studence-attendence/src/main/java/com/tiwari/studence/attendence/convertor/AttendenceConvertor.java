@@ -2,7 +2,7 @@ package com.tiwari.studence.attendence.convertor;
 
 import com.tiwari.studence.attendence.provider.AttendencePbProvider;
 import com.tiwari.studence.attendence.provider.AttendenceSearchPbProvider;
-import com.tiwari.studence.common.convertor.AEntityConvertor;
+import com.tiwari.studence.common.service.v1.convertor.AEntityConvertor;
 import com.tiwari.studence.proto.attendence.AttendencePb;
 import com.tiwari.studence.proto.attendence.AttendenceSearchReqPb;
 import com.tiwari.studence.proto.attendence.AttendenceSearchRespPb;

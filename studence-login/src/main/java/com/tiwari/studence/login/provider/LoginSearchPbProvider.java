@@ -1,6 +1,6 @@
 package com.tiwari.studence.login.provider;
 
-import com.tiwari.studence.common.provider.IReqRespPbBuilderProvider;
+import com.tiwari.studence.common.providerInterfaces.IReqRespPbBuilderProvider;
 import com.tiwari.studence.proto.login.LoginSearchReqPb;
 import com.tiwari.studence.proto.login.LoginSearchRespPb;
 

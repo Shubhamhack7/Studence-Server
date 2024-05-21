@@ -1,6 +1,6 @@
 package com.tiwari.studence.login.convertor;
 
-import com.tiwari.studence.common.convertor.AEntityConvertor;
+import com.tiwari.studence.common.service.v1.convertor.AEntityConvertor;
 import com.tiwari.studence.login.provider.LoginPbProvider;
 import com.tiwari.studence.login.provider.LoginSearchPbProvider;
 import com.tiwari.studence.proto.login.LoginPb;

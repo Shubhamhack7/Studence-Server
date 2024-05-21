@@ -5,6 +5,8 @@ package com.tiwari.studence.proto.time;
 option java_multiple_files = true;
 option java_generate_equals_and_hash = true;
 
+import "mergeOption.proto";
+
 enum TimezoneEnum {
   UNKNOWN_TIMEZONE = 0;
   AMERICA_NEW_YORK = 1;
@@ -129,4 +131,90 @@ enum WeekDay {
   THURSDAY = 5;
   FRIDAY = 6;
   SATURDAY = 7;
+}
+
+enum WeekdaysUiEnum {
+  UNKNOWN_WEEKDAYS = 0;
+  MON = 1;
+  TUE = 2;
+  WED = 3;
+  THU = 4;
+  FRI = 5;
+  SAT = 6;
+  SUN = 7;
+  WEEKDAY = 8; // MON-FRI
+  WEEKEND = 9; // SAT-SUN
+  ALL_DAYS = 10;
+}
+
+
+enum TimePrecisionUiEnum {
+  UNKNOWN_TIME_PRECISION = 0;
+  YEAR = 1;
+  MONTH = 2;
+  DAY = 3;
+  HOUR = 4;
+  MINUTE = 5;
+  SEC = 6;
+  MILLI_SEC = 7;
+  WEEK = 8;
+  SEMESTER =9;
+}
+
+message TimeUiPb {
+  optional int64 milliSeconds = 1;
+  optional TimePrecisionUiEnum precision = 2;
+  optional string formattedDate = 3;		// YYYYMMDD
+  optional string formattedDateTime = 4; // "YYYYMMDD HH:MM:SS"
+  optional TimezoneEnum timeZone = 5;
+  optional string formattedMonth = 6;		// "YYYYMM"
+  optional string formattedHour = 7;		// "YYYYMMDD HH"
+  optional string formattedYear = 8;		// "YYYY"
+  optional string formattedTimestamp = 9;
+}
+
+message TimeRangeUiPb {
+  option (com.tiwari.studence.proto.mergeOption.isBasicType) = "yes";
+  optional TimeUiPb timeStart = 1;
+  optional TimeUiPb timeEnd = 2;
+}
+
+message TimeRangePb {
+  option (com.tiwari.studence.proto.mergeOption.isBasicType) = "yes";
+  optional TimePb timeStart = 1;
+  optional TimePb timeEnd = 2;
+}
+
+message TimeQueryRangeUiPb {
+  optional TimePrecisionUiEnum precision = 1;
+  optional string prefixTime = 2;
+  optional string startTime = 3;
+  optional string endTime = 4;
+  optional int64 prefixTimeMilli = 5;
+  optional int64 startTimeMilli = 6;
+  optional int64 endTimeMilli = 7;
+  optional TimezoneEnum timeZone = 8;
+}
+
+
+message TimeDurationUiPb {
+  optional int32 days = 1;
+  optional int32 hours = 2;
+  optional int32 mins = 3;
+  optional int32 secs = 4;
+  optional int32 months = 5;
+  optional int32 years = 6;
+  optional int32 monthsThirtyDays = 7;
+  optional int32 yearsThreeSixtyDays = 8;
+}
+
+message TimeDurationPb{
+  optional int32 days = 1;
+  optional int32 hours = 2;
+  optional int32 mins = 3;
+  optional int32 secs = 4;
+  optional int32 months = 5;
+  optional int32 years = 6;
+  optional int32 monthsThirtyDays = 7;
+  optional int32 yearsThreeSixtyDays = 8;
 }

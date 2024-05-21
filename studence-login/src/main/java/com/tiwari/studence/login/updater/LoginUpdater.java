@@ -1,6 +1,6 @@
 package com.tiwari.studence.login.updater;
 
-import com.tiwari.studence.common.updater.AEntityUpdater;
+import com.tiwari.studence.common.service.v1.updater.AEntityUpdater;
 import com.tiwari.studence.login.indexer.LoginIndexer;
 import com.tiwari.studence.login.provider.LoginPbProvider;
 import com.tiwari.studence.proto.entity.EntityPb;

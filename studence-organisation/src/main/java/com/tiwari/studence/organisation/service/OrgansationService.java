@@ -4,11 +4,11 @@ import javax.inject.Inject;
 import javax.inject.Singleton;
 
 import com.tiwari.studence.common.async.IFuture;
-import com.tiwari.studence.common.entity.IGetEntityId;
+import com.tiwari.studence.common.service.v1.entity.IGetEntityId;
 import com.tiwari.studence.common.interfaces.IDynamoGetEntityTable;
 import com.tiwari.studence.common.interfaces.IDynamoPutTable;
 import com.tiwari.studence.common.interfaces.IDynamoUpdateTable;
-import com.tiwari.studence.common.services.AEntityService;
+import com.tiwari.studence.common.service.v1.services.AEntityService;
 import com.tiwari.studence.organisation.convertor.OrganisationConvertor;
 import com.tiwari.studence.organisation.indexer.OrganisationIndexer;
 import com.tiwari.studence.organisation.provider.OraganisationTableNameProvider;

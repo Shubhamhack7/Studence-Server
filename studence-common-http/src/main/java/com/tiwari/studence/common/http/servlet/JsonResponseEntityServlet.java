@@ -7,11 +7,10 @@ import com.google.protobuf.GeneratedMessageV3;
 import com.tiwari.studence.common.error.ErrorResponsePbConverter;
 import com.tiwari.studence.common.http.converter.JsonStringToPbConverter;
 import com.tiwari.studence.common.http.converter.JsonStringToReqPbConverter;
-import com.tiwari.studence.common.provider.IPbBuilderProvider;
-import com.tiwari.studence.common.provider.IReqRespPbBuilderProvider;
+import com.tiwari.studence.common.providerInterfaces.IPbBuilderProvider;
+import com.tiwari.studence.common.providerInterfaces.IReqRespPbBuilderProvider;
 import com.tiwari.studence.util.log.IServerExceptionLogger;
 import com.tiwari.studence.util.serverConfig.ServerConfigUtility;
-import jakarta.servlet.ServletException;
 
 @Singleton
 public class JsonResponseEntityServlet<Service, UiPb extends GeneratedMessageV3,Req extends GeneratedMessageV3,Resp extends GeneratedMessageV3, UiPbBuProvider extends IPbBuilderProvider<?,?>,ReqPbBuProvider extends IReqRespPbBuilderProvider<?, ?, ?, ?>>

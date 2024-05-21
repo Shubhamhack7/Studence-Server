@@ -1,6 +1,6 @@
 package com.tiwari.studence.server.organisationCreateAndCampus.provider;
 
-import com.tiwari.studence.common.provider.IReqRespPbBuilderProvider;
+import com.tiwari.studence.common.providerInterfaces.IReqRespPbBuilderProvider;
 import com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateReqPb;
 import com.tiwari.studence.proto.campus.OrganisationCreateAndCampusCreateRespPb;
 

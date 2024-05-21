@@ -1,0 +1,62 @@
+syntax = "proto3";
+
+package com.tiwari.studence.proto.search;
+
+option java_multiple_files = true;
+option java_generate_equals_and_hash = true;
+
+// @Deprecate
+message PaginationRequestPb {
+  optional int32 maxResults = 1;
+  optional string startToken = 2;
+  optional int32 startIndex = 3;
+}
+
+// @Deprecate
+message SearchResultSummaryPb {
+  optional int32 totalHits = 1;
+  optional string nextToken = 2;
+  optional int32 nextIndex = 3;
+}
+
+enum DynamoDbRangeStoreSearchTypeUiEnum {
+  UNKNOWN_SEARCH = 0;
+  RANGE_SEARCH = 1;
+  PREFIX_SEARCH = 2;
+  GREATEST_SEARCH = 3;
+  SMALLEST_SEARCH = 4;
+}
+
+message DynamoDbRangeStoreSearchReqUiPb {
+  optional PaginationRequestUiPb pagination = 1;
+  optional TablePartitionInfoUiPb partitionInfo = 2;
+  optional DynamoDbRangeStoreSearchTypeUiEnum searchType = 3;
+  optional bool ascending = 4 ;
+  optional string hash = 5;
+  optional string startRange = 6;
+  optional string endRange = 7;
+  optional string range = 8;
+  optional bool includeMatch = 9 ;
+}
+
+message PaginationRequestUiPb {
+  optional int32 maxResults = 1;
+  optional string startToken = 2;
+  optional int32 startIndex = 3;
+}
+
+message SearchResultSummaryUiPb {
+  optional int32 totalHits = 1;
+  optional string nextToken = 2;
+  optional int32 nextIndex = 3;
+}
+
+message PaginationTokenUiPb {
+  optional string keyOne = 1;
+  optional string keyTwo = 2;
+}
+
+message TablePartitionInfoUiPb {
+  optional string startPartitionKey = 1;
+  optional string endPartitionKey = 2;
+}

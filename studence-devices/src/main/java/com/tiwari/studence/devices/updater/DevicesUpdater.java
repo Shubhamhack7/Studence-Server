@@ -1,6 +1,6 @@
 package com.tiwari.studence.devices.updater;
 
-import com.tiwari.studence.common.updater.AEntityUpdater;
+import com.tiwari.studence.common.service.v1.updater.AEntityUpdater;
 import com.tiwari.studence.devices.indexer.DevicesIndexer;
 import com.tiwari.studence.devices.provider.DevicesProvider;
 import com.tiwari.studence.proto.devices.DeviceAppMode;

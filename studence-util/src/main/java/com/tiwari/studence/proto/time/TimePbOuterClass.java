@@ -19,6 +19,36 @@ public final class TimePbOuterClass {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_tiwari_studence_proto_time_TimePb_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tiwari_studence_proto_time_TimeUiPb_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tiwari_studence_proto_time_TimeUiPb_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tiwari_studence_proto_time_TimeRangeUiPb_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tiwari_studence_proto_time_TimeRangeUiPb_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tiwari_studence_proto_time_TimeRangePb_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tiwari_studence_proto_time_TimeRangePb_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tiwari_studence_proto_time_TimeQueryRangeUiPb_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tiwari_studence_proto_time_TimeQueryRangeUiPb_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tiwari_studence_proto_time_TimeDurationUiPb_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tiwari_studence_proto_time_TimeDurationUiPb_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tiwari_studence_proto_time_TimeDurationPb_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tiwari_studence_proto_time_TimeDurationPb_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -29,50 +59,107 @@ public final class TimePbOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\014timePb.proto\022\036com.tiwari.studence.prot" +
-      "o.time\"\334\003\n\006TimePb\022\014\n\004date\030\001 \001(\t\022\020\n\010time_" +
-      "24h\030\002 \001(\t\022\020\n\010time_12h\030\003 \001(\t\022>\n\010timezone\030" +
-      "\004 \001(\0162,.com.tiwari.studence.proto.time.T" +
-      "imezoneEnum\022<\n\013day_of_week\030\005 \001(\0162\'.com.t" +
-      "iwari.studence.proto.time.WeekDay\022\014\n\004yea" +
-      "r\030\006 \001(\005\022\023\n\013monthOfYear\030\007 \001(\005\022\022\n\ndayOfMon" +
-      "th\030\010 \001(\005\0224\n\005month\030\t \001(\0162%.com.tiwari.stu" +
-      "dence.proto.time.Month\0220\n\003day\030\n \001(\0162#.co" +
-      "m.tiwari.studence.proto.time.Day\022\026\n\016unix" +
-      "_timestamp\030\013 \001(\003\022\031\n\021unix_timestamp_ms\030\014 " +
-      "\001(\003\022\031\n\021unix_timestamp_us\030\r \001(\003\022\031\n\021unix_t" +
-      "imestamp_ns\030\016 \001(\003\022\032\n\022canonical_datetime\030" +
-      "\017 \001(\t*\317\002\n\014TimezoneEnum\022\024\n\020UNKNOWN_TIMEZO" +
-      "NE\020\000\022\024\n\020AMERICA_NEW_YORK\020\001\022\027\n\023AMERICA_LO" +
-      "S_ANGELES\020\002\022\023\n\017AMERICA_CHICAGO\020\003\022\022\n\016AMER" +
-      "ICA_DENVER\020\004\022\021\n\rEUROPE_LONDON\020\005\022\020\n\014EUROP" +
-      "E_PARIS\020\006\022\021\n\rEUROPE_BERLIN\020\007\022\017\n\013EUROPE_R" +
-      "OME\020\010\022\016\n\nASIA_TOKYO\020\t\022\021\n\rASIA_SHANGHAI\020\n" +
-      "\022\016\n\nASIA_DUBAI\020\013\022\020\n\014ASIA_KOLKATA\020\014\022\024\n\020AU" +
-      "STRALIA_SYDNEY\020\r\022\027\n\023AUSTRALIA_MELBOURNE\020" +
-      "\016\022\024\n\020PACIFIC_AUCKLAND\020\017*\246\001\n\005Month\022\013\n\007UNK" +
-      "NOWN\020\000\022\013\n\007JANUARY\020\001\022\014\n\010FEBRUARY\020\002\022\t\n\005MAR" +
-      "CH\020\003\022\t\n\005APRIL\020\004\022\007\n\003MAY\020\005\022\010\n\004JUNE\020\006\022\010\n\004JU" +
-      "LY\020\007\022\n\n\006AUGUST\020\010\022\r\n\tSEPTEMBER\020\t\022\013\n\007OCTOB" +
-      "ER\020\n\022\014\n\010NOVEMBER\020\013\022\014\n\010DECEMBER\020\014*\263\003\n\003Day" +
-      "\022\017\n\013UNKNOWN_DAY\020\000\022\007\n\003ONE\020\001\022\007\n\003TWO\020\002\022\t\n\005T" +
-      "HREE\020\003\022\010\n\004FOUR\020\004\022\010\n\004FIVE\020\005\022\007\n\003SIX\020\006\022\t\n\005S" +
-      "EVEN\020\007\022\t\n\005EIGHT\020\010\022\010\n\004NINE\020\t\022\007\n\003TEN\020\n\022\n\n\006" +
-      "ELEVEN\020\013\022\n\n\006TWELVE\020\014\022\014\n\010THIRTEEN\020\r\022\014\n\010FO" +
-      "URTEEN\020\016\022\013\n\007FIFTEEN\020\017\022\013\n\007SIXTEEN\020\020\022\r\n\tSE" +
-      "VENTEEN\020\021\022\014\n\010EIGHTEEN\020\022\022\014\n\010NINETEEN\020\023\022\n\n" +
-      "\006TWENTY\020\024\022\016\n\nTWENTY_ONE\020\025\022\016\n\nTWENTY_TWO\020" +
-      "\026\022\020\n\014TWENTY_THREE\020\027\022\017\n\013TWENTY_FOUR\020\030\022\017\n\013" +
-      "TWENTY_FIVE\020\031\022\016\n\nTWENTY_SIX\020\032\022\020\n\014TWENTY_" +
-      "SEVEN\020\033\022\020\n\014TWENTY_EIGHT\020\034\022\017\n\013TWENTY_NINE" +
-      "\020\035\022\n\n\006THIRTY\020\036\022\016\n\nTHIRTY_ONE\020\037*z\n\007WeekDa" +
-      "y\022\023\n\017UNKNOWN_WEEKDAY\020\000\022\n\n\006SUNDAY\020\001\022\n\n\006MO" +
-      "NDAY\020\002\022\013\n\007TUESDAY\020\003\022\r\n\tWEDNESDAY\020\004\022\014\n\010TH" +
-      "URSDAY\020\005\022\n\n\006FRIDAY\020\006\022\014\n\010SATURDAY\020\007B\005P\001\240\001" +
-      "\001b\006proto3"
+      "o.time\032\021mergeOption.proto\"\334\003\n\006TimePb\022\014\n\004" +
+      "date\030\001 \001(\t\022\020\n\010time_24h\030\002 \001(\t\022\020\n\010time_12h" +
+      "\030\003 \001(\t\022>\n\010timezone\030\004 \001(\0162,.com.tiwari.st" +
+      "udence.proto.time.TimezoneEnum\022<\n\013day_of" +
+      "_week\030\005 \001(\0162\'.com.tiwari.studence.proto." +
+      "time.WeekDay\022\014\n\004year\030\006 \001(\005\022\023\n\013monthOfYea" +
+      "r\030\007 \001(\005\022\022\n\ndayOfMonth\030\010 \001(\005\0224\n\005month\030\t \001" +
+      "(\0162%.com.tiwari.studence.proto.time.Mont" +
+      "h\0220\n\003day\030\n \001(\0162#.com.tiwari.studence.pro" +
+      "to.time.Day\022\026\n\016unix_timestamp\030\013 \001(\003\022\031\n\021u" +
+      "nix_timestamp_ms\030\014 \001(\003\022\031\n\021unix_timestamp" +
+      "_us\030\r \001(\003\022\031\n\021unix_timestamp_ns\030\016 \001(\003\022\032\n\022" +
+      "canonical_datetime\030\017 \001(\t\"\213\004\n\010TimeUiPb\022\031\n" +
+      "\014milliSeconds\030\001 \001(\003H\000\210\001\001\022K\n\tprecision\030\002 " +
+      "\001(\01623.com.tiwari.studence.proto.time.Tim" +
+      "ePrecisionUiEnumH\001\210\001\001\022\032\n\rformattedDate\030\003" +
+      " \001(\tH\002\210\001\001\022\036\n\021formattedDateTime\030\004 \001(\tH\003\210\001" +
+      "\001\022C\n\010timeZone\030\005 \001(\0162,.com.tiwari.studenc" +
+      "e.proto.time.TimezoneEnumH\004\210\001\001\022\033\n\016format" +
+      "tedMonth\030\006 \001(\tH\005\210\001\001\022\032\n\rformattedHour\030\007 \001" +
+      "(\tH\006\210\001\001\022\032\n\rformattedYear\030\010 \001(\tH\007\210\001\001\022\037\n\022f" +
+      "ormattedTimestamp\030\t \001(\tH\010\210\001\001B\017\n\r_milliSe" +
+      "condsB\014\n\n_precisionB\020\n\016_formattedDateB\024\n" +
+      "\022_formattedDateTimeB\013\n\t_timeZoneB\021\n\017_for" +
+      "mattedMonthB\020\n\016_formattedHourB\020\n\016_format" +
+      "tedYearB\025\n\023_formattedTimestamp\"\264\001\n\rTimeR" +
+      "angeUiPb\022@\n\ttimeStart\030\001 \001(\0132(.com.tiwari" +
+      ".studence.proto.time.TimeUiPbH\000\210\001\001\022>\n\007ti" +
+      "meEnd\030\002 \001(\0132(.com.tiwari.studence.proto." +
+      "time.TimeUiPbH\001\210\001\001:\007\232\202\031\003yesB\014\n\n_timeStar" +
+      "tB\n\n\010_timeEnd\"\256\001\n\013TimeRangePb\022>\n\ttimeSta" +
+      "rt\030\001 \001(\0132&.com.tiwari.studence.proto.tim" +
+      "e.TimePbH\000\210\001\001\022<\n\007timeEnd\030\002 \001(\0132&.com.tiw" +
+      "ari.studence.proto.time.TimePbH\001\210\001\001:\007\232\202\031" +
+      "\003yesB\014\n\n_timeStartB\n\n\010_timeEnd\"\277\003\n\022TimeQ" +
+      "ueryRangeUiPb\022K\n\tprecision\030\001 \001(\01623.com.t" +
+      "iwari.studence.proto.time.TimePrecisionU" +
+      "iEnumH\000\210\001\001\022\027\n\nprefixTime\030\002 \001(\tH\001\210\001\001\022\026\n\ts" +
+      "tartTime\030\003 \001(\tH\002\210\001\001\022\024\n\007endTime\030\004 \001(\tH\003\210\001" +
+      "\001\022\034\n\017prefixTimeMilli\030\005 \001(\003H\004\210\001\001\022\033\n\016start" +
+      "TimeMilli\030\006 \001(\003H\005\210\001\001\022\031\n\014endTimeMilli\030\007 \001" +
+      "(\003H\006\210\001\001\022C\n\010timeZone\030\010 \001(\0162,.com.tiwari.s" +
+      "tudence.proto.time.TimezoneEnumH\007\210\001\001B\014\n\n" +
+      "_precisionB\r\n\013_prefixTimeB\014\n\n_startTimeB" +
+      "\n\n\010_endTimeB\022\n\020_prefixTimeMilliB\021\n\017_star" +
+      "tTimeMilliB\017\n\r_endTimeMilliB\013\n\t_timeZone" +
+      "\"\260\002\n\020TimeDurationUiPb\022\021\n\004days\030\001 \001(\005H\000\210\001\001" +
+      "\022\022\n\005hours\030\002 \001(\005H\001\210\001\001\022\021\n\004mins\030\003 \001(\005H\002\210\001\001\022" +
+      "\021\n\004secs\030\004 \001(\005H\003\210\001\001\022\023\n\006months\030\005 \001(\005H\004\210\001\001\022" +
+      "\022\n\005years\030\006 \001(\005H\005\210\001\001\022\035\n\020monthsThirtyDays\030" +
+      "\007 \001(\005H\006\210\001\001\022 \n\023yearsThreeSixtyDays\030\010 \001(\005H" +
+      "\007\210\001\001B\007\n\005_daysB\010\n\006_hoursB\007\n\005_minsB\007\n\005_sec" +
+      "sB\t\n\007_monthsB\010\n\006_yearsB\023\n\021_monthsThirtyD" +
+      "aysB\026\n\024_yearsThreeSixtyDays\"\256\002\n\016TimeDura" +
+      "tionPb\022\021\n\004days\030\001 \001(\005H\000\210\001\001\022\022\n\005hours\030\002 \001(\005" +
+      "H\001\210\001\001\022\021\n\004mins\030\003 \001(\005H\002\210\001\001\022\021\n\004secs\030\004 \001(\005H\003" +
+      "\210\001\001\022\023\n\006months\030\005 \001(\005H\004\210\001\001\022\022\n\005years\030\006 \001(\005H" +
+      "\005\210\001\001\022\035\n\020monthsThirtyDays\030\007 \001(\005H\006\210\001\001\022 \n\023y" +
+      "earsThreeSixtyDays\030\010 \001(\005H\007\210\001\001B\007\n\005_daysB\010" +
+      "\n\006_hoursB\007\n\005_minsB\007\n\005_secsB\t\n\007_monthsB\010\n" +
+      "\006_yearsB\023\n\021_monthsThirtyDaysB\026\n\024_yearsTh" +
+      "reeSixtyDays*\317\002\n\014TimezoneEnum\022\024\n\020UNKNOWN" +
+      "_TIMEZONE\020\000\022\024\n\020AMERICA_NEW_YORK\020\001\022\027\n\023AME" +
+      "RICA_LOS_ANGELES\020\002\022\023\n\017AMERICA_CHICAGO\020\003\022" +
+      "\022\n\016AMERICA_DENVER\020\004\022\021\n\rEUROPE_LONDON\020\005\022\020" +
+      "\n\014EUROPE_PARIS\020\006\022\021\n\rEUROPE_BERLIN\020\007\022\017\n\013E" +
+      "UROPE_ROME\020\010\022\016\n\nASIA_TOKYO\020\t\022\021\n\rASIA_SHA" +
+      "NGHAI\020\n\022\016\n\nASIA_DUBAI\020\013\022\020\n\014ASIA_KOLKATA\020" +
+      "\014\022\024\n\020AUSTRALIA_SYDNEY\020\r\022\027\n\023AUSTRALIA_MEL" +
+      "BOURNE\020\016\022\024\n\020PACIFIC_AUCKLAND\020\017*\246\001\n\005Month" +
+      "\022\013\n\007UNKNOWN\020\000\022\013\n\007JANUARY\020\001\022\014\n\010FEBRUARY\020\002" +
+      "\022\t\n\005MARCH\020\003\022\t\n\005APRIL\020\004\022\007\n\003MAY\020\005\022\010\n\004JUNE\020" +
+      "\006\022\010\n\004JULY\020\007\022\n\n\006AUGUST\020\010\022\r\n\tSEPTEMBER\020\t\022\013" +
+      "\n\007OCTOBER\020\n\022\014\n\010NOVEMBER\020\013\022\014\n\010DECEMBER\020\014*" +
+      "\263\003\n\003Day\022\017\n\013UNKNOWN_DAY\020\000\022\007\n\003ONE\020\001\022\007\n\003TWO" +
+      "\020\002\022\t\n\005THREE\020\003\022\010\n\004FOUR\020\004\022\010\n\004FIVE\020\005\022\007\n\003SIX" +
+      "\020\006\022\t\n\005SEVEN\020\007\022\t\n\005EIGHT\020\010\022\010\n\004NINE\020\t\022\007\n\003TE" +
+      "N\020\n\022\n\n\006ELEVEN\020\013\022\n\n\006TWELVE\020\014\022\014\n\010THIRTEEN\020" +
+      "\r\022\014\n\010FOURTEEN\020\016\022\013\n\007FIFTEEN\020\017\022\013\n\007SIXTEEN\020" +
+      "\020\022\r\n\tSEVENTEEN\020\021\022\014\n\010EIGHTEEN\020\022\022\014\n\010NINETE" +
+      "EN\020\023\022\n\n\006TWENTY\020\024\022\016\n\nTWENTY_ONE\020\025\022\016\n\nTWEN" +
+      "TY_TWO\020\026\022\020\n\014TWENTY_THREE\020\027\022\017\n\013TWENTY_FOU" +
+      "R\020\030\022\017\n\013TWENTY_FIVE\020\031\022\016\n\nTWENTY_SIX\020\032\022\020\n\014" +
+      "TWENTY_SEVEN\020\033\022\020\n\014TWENTY_EIGHT\020\034\022\017\n\013TWEN" +
+      "TY_NINE\020\035\022\n\n\006THIRTY\020\036\022\016\n\nTHIRTY_ONE\020\037*z\n" +
+      "\007WeekDay\022\023\n\017UNKNOWN_WEEKDAY\020\000\022\n\n\006SUNDAY\020" +
+      "\001\022\n\n\006MONDAY\020\002\022\013\n\007TUESDAY\020\003\022\r\n\tWEDNESDAY\020" +
+      "\004\022\014\n\010THURSDAY\020\005\022\n\n\006FRIDAY\020\006\022\014\n\010SATURDAY\020" +
+      "\007*\215\001\n\016WeekdaysUiEnum\022\024\n\020UNKNOWN_WEEKDAYS" +
+      "\020\000\022\007\n\003MON\020\001\022\007\n\003TUE\020\002\022\007\n\003WED\020\003\022\007\n\003THU\020\004\022\007" +
+      "\n\003FRI\020\005\022\007\n\003SAT\020\006\022\007\n\003SUN\020\007\022\013\n\007WEEKDAY\020\010\022\013" +
+      "\n\007WEEKEND\020\t\022\014\n\010ALL_DAYS\020\n*\225\001\n\023TimePrecis" +
+      "ionUiEnum\022\032\n\026UNKNOWN_TIME_PRECISION\020\000\022\010\n" +
+      "\004YEAR\020\001\022\t\n\005MONTH\020\002\022\007\n\003DAY\020\003\022\010\n\004HOUR\020\004\022\n\n" +
+      "\006MINUTE\020\005\022\007\n\003SEC\020\006\022\r\n\tMILLI_SEC\020\007\022\010\n\004WEE" +
+      "K\020\010\022\014\n\010SEMESTER\020\tB\005P\001\240\001\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.tiwari.studence.proto.mergeOption.MergeOption.getDescriptor(),
         });
     internal_static_com_tiwari_studence_proto_time_TimePb_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -80,6 +167,48 @@ public final class TimePbOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tiwari_studence_proto_time_TimePb_descriptor,
         new java.lang.String[] { "Date", "Time24H", "Time12H", "Timezone", "DayOfWeek", "Year", "MonthOfYear", "DayOfMonth", "Month", "Day", "UnixTimestamp", "UnixTimestampMs", "UnixTimestampUs", "UnixTimestampNs", "CanonicalDatetime", });
+    internal_static_com_tiwari_studence_proto_time_TimeUiPb_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_com_tiwari_studence_proto_time_TimeUiPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_time_TimeUiPb_descriptor,
+        new java.lang.String[] { "MilliSeconds", "Precision", "FormattedDate", "FormattedDateTime", "TimeZone", "FormattedMonth", "FormattedHour", "FormattedYear", "FormattedTimestamp", "MilliSeconds", "Precision", "FormattedDate", "FormattedDateTime", "TimeZone", "FormattedMonth", "FormattedHour", "FormattedYear", "FormattedTimestamp", });
+    internal_static_com_tiwari_studence_proto_time_TimeRangeUiPb_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_com_tiwari_studence_proto_time_TimeRangeUiPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_time_TimeRangeUiPb_descriptor,
+        new java.lang.String[] { "TimeStart", "TimeEnd", "TimeStart", "TimeEnd", });
+    internal_static_com_tiwari_studence_proto_time_TimeRangePb_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_com_tiwari_studence_proto_time_TimeRangePb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_time_TimeRangePb_descriptor,
+        new java.lang.String[] { "TimeStart", "TimeEnd", "TimeStart", "TimeEnd", });
+    internal_static_com_tiwari_studence_proto_time_TimeQueryRangeUiPb_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_com_tiwari_studence_proto_time_TimeQueryRangeUiPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_time_TimeQueryRangeUiPb_descriptor,
+        new java.lang.String[] { "Precision", "PrefixTime", "StartTime", "EndTime", "PrefixTimeMilli", "StartTimeMilli", "EndTimeMilli", "TimeZone", "Precision", "PrefixTime", "StartTime", "EndTime", "PrefixTimeMilli", "StartTimeMilli", "EndTimeMilli", "TimeZone", });
+    internal_static_com_tiwari_studence_proto_time_TimeDurationUiPb_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_com_tiwari_studence_proto_time_TimeDurationUiPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_time_TimeDurationUiPb_descriptor,
+        new java.lang.String[] { "Days", "Hours", "Mins", "Secs", "Months", "Years", "MonthsThirtyDays", "YearsThreeSixtyDays", "Days", "Hours", "Mins", "Secs", "Months", "Years", "MonthsThirtyDays", "YearsThreeSixtyDays", });
+    internal_static_com_tiwari_studence_proto_time_TimeDurationPb_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_com_tiwari_studence_proto_time_TimeDurationPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_time_TimeDurationPb_descriptor,
+        new java.lang.String[] { "Days", "Hours", "Mins", "Secs", "Months", "Years", "MonthsThirtyDays", "YearsThreeSixtyDays", "Days", "Hours", "Mins", "Secs", "Months", "Years", "MonthsThirtyDays", "YearsThreeSixtyDays", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.tiwari.studence.proto.mergeOption.MergeOption.isBasicType);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    com.tiwari.studence.proto.mergeOption.MergeOption.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

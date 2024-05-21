@@ -13,6 +13,7 @@ import com.googlecode.protobuf.format.JsonFormat.ParseException;
 import com.tiwari.studence.proto.error.ErrorCategoryUiEnum;
 import com.tiwari.studence.util.common.Strings;
 import com.tiwari.studence.util.collect.Lists;
+import com.tiwari.studence.util.protobuf.ProtobufToJson;
 
 /**
  * All Runtime exceptions should be of this time. This exception logs itself on
@@ -153,6 +154,53 @@ public class LoggedRuntimeException extends RuntimeException {
 		m_errorCode = errorCode ;
 		m_uiErrorString = uiErrorString;
 		m_stackTrace = createStackTraceString();
+		printError();
+	}
+
+	public LoggedRuntimeException(ErrorCategoryUiEnum selfCodeError, GeneratedMessageV3 pb) {
+		this.m_errorProto = new ParsedErrorProto(selfCodeError);
+		this.m_args = Lists.newArrayList();
+		this.m_args.add(pb);
+		this.m_stackTrace = "Data -> "+ ProtobufToJson.protobufToJsonString(pb);
+		printError();
+	}
+
+  public LoggedRuntimeException(String serviceCode, ErrorCategoryUiEnum noOrSlowDownstreamConnectionError, Throwable t, Object[] objects) {
+		this.m_errorProto = new ParsedErrorProto(noOrSlowDownstreamConnectionError);;
+		this.m_args = Lists.newArrayList();
+		this.m_serviceCode=serviceCode;
+		this.m_args.add(objects);
+		this.m_stackTrace = createStackTraceString(t);
+		printError();
+  }
+
+	public LoggedRuntimeException(String serviceCode, String format, String uiErrorString, ErrorCategoryUiEnum selfCodeError, Throwable t, Object[] objects) {
+		this.m_errorProto = new ParsedErrorProto(selfCodeError);;
+		this.m_args = Lists.newArrayList();
+		this.m_serviceCode=serviceCode;
+		this.m_uiErrorString=uiErrorString;
+		this.m_args.add(objects);
+		this.m_stackTrace = createStackTraceString(t);
+		printError();
+	}
+
+	public LoggedRuntimeException(ErrorCategoryUiEnum selfCodeError, String toString, int code, String debugInfo) {
+		this.m_errorProto = new ParsedErrorProto(selfCodeError);;
+		this.m_args = Lists.newArrayList();
+		this.m_serviceCode=String.valueOf(code);
+		this.m_uiErrorString=toString;
+		this.m_args.add(debugInfo);
+		this.m_stackTrace = "";
+		printError();
+	}
+
+	public LoggedRuntimeException(ErrorCategoryUiEnum noSlowOrBlockedDownstreamConnectionError, String toString, String debugInfo) {
+		this.m_errorProto = new ParsedErrorProto(noSlowOrBlockedDownstreamConnectionError);;
+		this.m_args = Lists.newArrayList();
+		this.m_serviceCode=String.valueOf(toString);
+		this.m_uiErrorString=debugInfo;
+		this.m_args.add(debugInfo);
+		this.m_stackTrace = "";
 		printError();
 	}
 

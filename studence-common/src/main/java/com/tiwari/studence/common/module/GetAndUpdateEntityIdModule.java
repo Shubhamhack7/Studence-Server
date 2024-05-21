@@ -1,10 +1,8 @@
 package com.tiwari.studence.common.module;
 
 import com.google.inject.AbstractModule;
-import com.tiwari.studence.common.controlflow.PutItemDynamoTable;
-import com.tiwari.studence.common.entity.GetAndUpdateEntity;
-import com.tiwari.studence.common.entity.IGetEntityId;
-import com.tiwari.studence.common.interfaces.IDynamoPutTable;
+import com.tiwari.studence.common.service.v1.entity.GetAndUpdateEntity;
+import com.tiwari.studence.common.service.v1.entity.IGetEntityId;
 
 public class GetAndUpdateEntityIdModule extends AbstractModule{
   @Override

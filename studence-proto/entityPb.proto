@@ -4,6 +4,12 @@ syntax = "proto3";
 package com.tiwari.studence.proto.entity;
 
 import "timePb.proto";
+import "match.proto";
+import "transaction.proto";
+import "backgroundtask.proto";
+import "mergeOption.proto";
+import "locale.proto";
+import "reference.proto";
 
 option java_multiple_files = true;
 option java_generate_equals_and_hash = true;
@@ -13,9 +19,11 @@ option java_generate_equals_and_hash = true;
 enum LifeTimeEnum {
   UNKNOWN_LIFETIME = 0;
   ACTIVE = 1;
-  SUSPENDED = 2;
-  DELETED = 3;
-  LOCKED =4;
+  IMMUTABLE = 2;
+  TRASH = 3;
+  DELETED = 4;
+  PURGED = 5;
+  SUSPENDED = 6;
 }
 
 message EntityPb{
@@ -32,4 +40,232 @@ message PbConfig {
   com.tiwari.studence.proto.time.TimePb updatedAt =  3;
   string updatedBy = 4;
 
+}
+
+message EntityUiPb{
+}
+
+enum NodeTypeUiPbEnum {
+  UNKNOWN_LEAF_NODE = 0;
+  LEAF_NODE = 1;
+  NON_LEAF_NODE = 2;
+}
+
+message LabelReferenceUiPb {
+  optional string id = 1;
+  optional string name = 2;
+  optional bool isDepricated =3;
+}
+
+enum EntityChangeTeamTypeUiEnum {
+  UNKNOWN_TEAM_TYPE = 0;
+  SELF_SERVING = 1;
+  SELF_SUPPORT_TEAM = 2;
+  OUTSOURCED_COMPANY_TEAM = 3;
+  INTERNAL_TEAM = 4;
+  BULK_IMPORTER = 5;
+  INTERNAL_AND_OUTSOURCED_COMPANY_CUPPORT_TEAM = 6;
+
+}
+
+enum AccessInterfaceUiEnum{
+  WEBAPP = 0;
+  MOBILE_WEBAPP = 1;
+  ANDROID_APP  = 2;
+}
+
+//@deprecated
+/*enum DeviceTypeUiEnum{
+	 UNKNOWN = 0;
+	 LAPTOP = 1;
+	 MOBILE = 2;
+	 TABLET = 3;
+	 DESKTOP = 4;
+}*/
+
+message EntityProtoUiPb {
+  optional string id = 1;
+  optional LifeTimeEnum lifeTime = 2;
+  optional int32 version = 3;
+  optional ChangeTrackUiPb lastChangeTrack = 4;
+  optional AccessLogUiPb AccessLogInfo = 5;
+  repeated com.tiwari.studence.proto.match.AltSourceEntityIdUiPb otherIds = 6;
+  optional com.tiwari.studence.proto.locale.LocaleUiPb locale = 7;
+  optional com.tiwari.studence.proto.time.TimeUiPb timeOnServer = 8; // don't save in pb
+  optional com.tiwari.studence.proto.time.TimeUiPb lastModifiedTime = 9;
+}
+
+message ChangeTrackUiPb{
+  optional EntityChangeTeamTypeUiEnum teamType = 1;
+  optional bool isSelfProfileCreate = 2;
+  optional TeamInfoUiPb sourceInfo = 3;
+  optional TeamInfoUiPb sourceSupportInfo = 4;
+  optional com.tiwari.studence.proto.time.TimeUiPb time = 5;
+  optional string sourceRefId = 20;
+  optional com.tiwari.studence.proto.time.TimeUiPb matchedTime = 21;
+}
+
+message AccessLogUiPb{
+  optional NetworkInfoUiPb networkInfo = 3;
+  optional LocationInfoUiPb locationInfo = 4;
+}
+
+message TeamInfoUiPb{
+  optional string teamId = 1;
+  optional string teamPersonId = 2;
+}
+
+message NetworkInfoUiPb{
+  optional string network = 1;
+  optional string ipAddress = 2;
+}
+
+message LocationInfoUiPb{
+  optional double latitude = 1;
+  optional double longitude = 2;
+}
+
+enum EntityOperation {
+  UNKNOWN_OPERATION=0;
+  INSERT = 1;
+  UPDATE = 2;
+  GET = 3;
+  DELETE = 4;
+  LIST = 5;
+  PURGE = 6;
+}
+
+message EntityProtoPb {
+  optional string id = 1;
+  optional int32 version = 2;
+  optional LifeTimeEnum lifetimeState = 3;
+  optional ChangeTrackPb lastChangeTrack = 4;
+  optional AccessLogPb lastChangeAccessInfo = 5;
+  repeated com.tiwari.studence.proto.match.AltSourceEntityIdUiPb otherIds = 6;
+  optional string hashKeyForIdGen = 16;
+  optional string prefixForRangeKeyIdGen = 17;
+  optional com.tiwari.studence.proto.locale.LocalePb locale = 18;
+  optional com.tiwari.studence.proto.time.TimePb lastModifiedTime = 19;
+  // Can be another entity (generally customer)
+  // optional MultiLevelReferencePb ownerEntityId = 4;
+  // optional MultiLevelReferencePb customerUserOwner = 5;
+  // repeated string externalIds = 6;
+  repeated RequestIdPb requestIds = 7;   // @deprecate
+  repeated com.tiwari.studence.proto.transaction.ManagedTransaction managedTransactions = 8;
+  optional com.tiwari.studence.proto.backgroundTask.BackgroundTasks bgTasks = 9; // @deprecate maybe not required in case of dynamodbstream
+  //  repeated string transactionId = 10;
+  // repeated MultiLevelReferencePb users = 11;
+  // repeated AuthSysEnum auth = 12;
+  // repeated EntityAccessPb access = 13;
+}
+
+enum AuthSysEnum {
+  GOOGLE = 0;
+}
+
+
+message ChangeTrackPb {
+  optional EntityChangeTeamTypeUiEnum teamType = 1;
+  optional bool isSelfProfileCreate = 2;
+  optional TeamInfoPb sourceTeam = 3;
+  optional TeamInfoPb sourceSupportTeam = 4;
+  optional com.tiwari.studence.proto.time.TimePb time = 5;
+  // Temp place for merge Info.
+  optional string sourceRefId = 20;
+  optional com.tiwari.studence.proto.time.TimePb matchedTime = 21;
+}
+
+message AccessLogPb {
+  //		optional com.nsimpl.proto.entity.InterfaceInfoPb interfaceUsed = 1 [deprecated = true];
+  //		optional DeviceInfoPb machineInfo = 2 [deprecated = true];
+  optional NetworkInfoPb networkInfo = 3;
+  optional LocationInfoPb locationInfo = 4;
+}
+
+message TeamInfoPb {
+  optional string teamId = 1;
+  optional string teamPersonId = 2;
+}
+
+//@deprecated
+/*message InterfaceInfoPb{
+		optional com.nsimpl.entity.uiproto.AccessInterfaceUiEnum interfaceType = 1;
+		optional string interfaceId = 2;
+}*/
+
+//@deprecated
+/*message DeviceInfoPb{
+		optional com.nsimpl.entity.uiproto.DeviceTypeUiEnum deviceType = 1;
+		optional string deviceId = 2;
+		optional string browser = 3;
+		optional string cookieSessionId = 4;
+}*/
+
+message NetworkInfoPb{
+  optional string network = 1;
+  optional string ipAddress = 2;
+}
+
+message LocationInfoPb{
+  optional double latitude = 1;
+  optional double longitude = 2;
+}
+
+message EntityAccessPb {
+  optional com.tiwari.studence.proto.reference.MultiLevelReferencePb user = 1; // May be a user or a user group, this can be decided on the basis of multilevelReferencePb
+  optional AccessEnum access = 2;
+  //	repeated OperationEnum op = 3;
+  optional bool canShare = 4;
+}
+
+//enum OperationEnum {
+//  INSERT = 1;
+//  UPDATE = 2;
+//  GET = 3;
+//  DELETE = 4;
+//  LIST = 5;
+//  PURGE = 6;
+//  ADVANCED_UPDATE = 7; // Allows super user kind of updates
+//}
+
+enum AccessEnum {
+  UNKNOW_ACCESS=0;
+  EXPLICIT_DENY = 1;
+  ALLOW = 2;
+}
+
+message RequestIdPb {
+  option (com.tiwari.studence.proto.mergeOption.mergeToken) = "1,2";
+  optional string requestId = 1;
+  optional int32 version = 2;
+}
+
+enum EntityType {
+  UNKNOWN_ENTITY=0;
+  PRODUCT = 1;
+  SEASON_CALENDAR = 2;
+  ROOM = 3;
+  INVENTORY_FOR_PRODUCT = 4;
+  RESERVERD_PRODUCT_LINE = 5;
+  TIME = 6;
+  TIME_RANGE = 7;
+  MULTI_PRODUCT_COUNT = 8;
+  RESERVATION = 9;
+  BASE_PRODUCT_LINE = 10;
+  PRODUCT_LINE = 11;
+  LICENSE = 12;
+  BAR_PRICE = 13;
+  RACK_PRICE = 14;
+  EARLY_BIRD = 15;
+  LONG_STAY = 16;
+  PRICE_RESPONSE = 17;
+  PROPERTY = 18;
+  USER = 19;
+  //CUSTOMER = 20;
+  BOOKING_AVAILABILITY = 21;
+  PAYMENT_TRANSACTIONS = 22;
+  INVENTORY_STORE = 23;
+  PROFILE = 24;
+  SELLER_DB_ID = 25;
+  TREE_LABEL = 26;
 }

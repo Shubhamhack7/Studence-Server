@@ -1,0 +1,50 @@
+// Copyright (c) 2011, All Right Reserved, http://nsimpl.com/
+syntax = "proto3";
+package com.tiwari.studence.proto.locale;
+
+option java_multiple_files = true;
+option java_generate_equals_and_hash = true;
+
+import "timePb.proto";
+import "mergeOption.proto";
+
+enum LocaleUiEnum {
+	UNKNOWN_LOCALE = 0;
+	en_IN = 1;	// english india
+	hi_IN = 2;	// hindi india
+	bn_IN = 3;	// bengali india
+	ar = 4;		// arabic generic
+	en = 5;		// english generic
+	te = 6;  	// telugu india
+	ta = 7;  	//tamil
+	kn = 8; 	//Kannada
+	or = 9; 	//Oriya
+	ks = 10;	//Kashmiri
+	pa = 11; 	//Punjabi	
+	ur = 12; 	//Urdu
+	mr = 13;	//Marathi
+	
+}
+
+message LocaleUiPb {
+	repeated LocaleInfoUiPb localesInfo = 1;
+	optional LocaleInfoUiPb defaultLocaleInfo = 2;
+	optional LocaleInfoUiPb currentLocaleInfo = 3; // don't save in pb
+	optional com.tiwari.studence.proto.time.TimezoneEnum defaultTimeZone = 4;
+}
+
+message LocalePb {
+	repeated LocaleInfoPb localesInfo = 1;
+	optional LocaleInfoPb defaultLocaleInfo = 2;
+	optional com.tiwari.studence.proto.time.TimezoneEnum defaultTimeZone = 4;
+}
+
+message LocaleInfoPb {
+	option (com.tiwari.studence.proto.mergeOption.mergeToken) = "1";
+	optional LocaleUiEnum locale = 1;
+}
+
+
+message LocaleInfoUiPb {
+	optional LocaleUiEnum locale = 1;
+}

@@ -1,6 +1,6 @@
 package com.tiwari.studence.pushNotification.provider;
 
-import com.tiwari.studence.common.provider.IPbBuilderProvider;
+import com.tiwari.studence.common.providerInterfaces.IPbBuilderProvider;
 import com.tiwari.studence.proto.pushNotification.PushNotificationPb;
 
 import javax.inject.Inject;

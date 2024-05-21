@@ -7,24 +7,15 @@ import java.util.Set;
 
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
-import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBScanExpression;
-import com.amazonaws.services.dynamodbv2.datamodeling.PaginatedScanList;
-import com.amazonaws.services.dynamodbv2.model.ComparisonOperator;
-import com.amazonaws.services.dynamodbv2.xspec.ExpressionSpecBuilder;
 import com.google.inject.Injector;
-import com.google.protobuf.GeneratedMessageV3;
-import com.tiwari.studence.common.controlflow.CreateDynamoTable;
-import com.tiwari.studence.common.entity.GetAndUpdateEntity;
-import com.tiwari.studence.common.indexer.AEntityIndexer;
+import com.tiwari.studence.common.service.v1.controlflow.CreateDynamoTable;
 import com.tiwari.studence.common.injector.InjectorProvider;
 import com.tiwari.studence.common.interfaces.IDynamoSearchTable;
 import com.tiwari.studence.common.searcher.AEntitySearcher;
 import com.tiwari.studence.dynamodb.database.DynamoDbConnector;
-import com.tiwari.studence.dynamodb.database.table.CreateDynamoDbTable;
 import com.tiwari.studence.dynamodb.database.table.TableNameEnum;
 import com.tiwari.studence.proto.entity.LifeTimeEnum;
 import com.tiwari.studence.proto.search.*;
-import com.tiwari.studence.util.collect.Lists;
 import com.tiwari.studence.util.exception.ErrorException;
 
 import org.apache.commons.text.StringEscapeUtils;

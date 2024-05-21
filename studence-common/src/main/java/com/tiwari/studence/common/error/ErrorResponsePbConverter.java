@@ -6,7 +6,7 @@ import java.util.List;
 import javax.inject.Singleton;
 
 import com.google.inject.Inject;
-import com.tiwari.studence.common.convertor.Converters;
+import com.tiwari.studence.common.service.v1.convertor.Converters;
 import com.tiwari.studence.proto.error.ErrorProtoPb;
 import com.tiwari.studence.proto.error.ErrorResponsePb;
 import com.tiwari.studence.util.common.Strings;

@@ -1,0 +1,11 @@
+syntax = "proto3";
+package com.tiwari.studence.proto.exponentialDelay;
+
+option java_multiple_files = true;
+option java_generate_equals_and_hash = true;
+
+message ExponentialDelayPb {
+	optional int32 baseDelay = 1;
+	//optional int32 orderDelay = 2;
+	optional int32 maxTries = 3;
+}

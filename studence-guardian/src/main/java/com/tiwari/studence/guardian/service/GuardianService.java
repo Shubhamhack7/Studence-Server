@@ -1,12 +1,11 @@
 package com.tiwari.studence.guardian.service;
 
-import com.google.protobuf.GeneratedMessageV3;
 import com.tiwari.studence.common.async.IFuture;
-import com.tiwari.studence.common.entity.IGetEntityId;
+import com.tiwari.studence.common.service.v1.entity.IGetEntityId;
 import com.tiwari.studence.common.interfaces.IDynamoGetEntityTable;
 import com.tiwari.studence.common.interfaces.IDynamoPutTable;
 import com.tiwari.studence.common.interfaces.IDynamoUpdateTable;
-import com.tiwari.studence.common.services.AEntityService;
+import com.tiwari.studence.common.service.v1.services.AEntityService;
 import com.tiwari.studence.guardian.convertor.GuardianConvertor;
 import com.tiwari.studence.guardian.indexer.GuardianIndexer;
 import com.tiwari.studence.guardian.provider.GuardianPbProvider;

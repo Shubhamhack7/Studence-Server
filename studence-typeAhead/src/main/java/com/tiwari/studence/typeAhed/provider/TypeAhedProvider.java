@@ -1,6 +1,6 @@
 package com.tiwari.studence.typeAhed.provider;
 
-import com.tiwari.studence.common.provider.IPbBuilderProvider;
+import com.tiwari.studence.common.providerInterfaces.IPbBuilderProvider;
 import com.tiwari.studence.proto.typeAhead.TypeAheadPb;
 
 import javax.inject.Singleton;

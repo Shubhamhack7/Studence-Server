@@ -1,6 +1,6 @@
 package com.tiwari.studence.typeAhed.updater;
 
-import com.tiwari.studence.common.updater.AEntityUpdater;
+import com.tiwari.studence.common.service.v1.updater.AEntityUpdater;
 import com.tiwari.studence.proto.entity.EntityPb;
 import com.tiwari.studence.proto.typeAhead.TypeAheadPb;
 import com.tiwari.studence.typeAhed.indexer.TypeAhedIndexer;

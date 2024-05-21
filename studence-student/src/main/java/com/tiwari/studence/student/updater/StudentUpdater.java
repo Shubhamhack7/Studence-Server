@@ -1,6 +1,6 @@
 package com.tiwari.studence.student.updater;
 
-import com.tiwari.studence.common.updater.AEntityUpdater;
+import com.tiwari.studence.common.service.v1.updater.AEntityUpdater;
 import com.tiwari.studence.proto.entity.EntityPb;
 import com.tiwari.studence.proto.student.StudentPb;
 import com.tiwari.studence.student.indexer.StudentIndexer;

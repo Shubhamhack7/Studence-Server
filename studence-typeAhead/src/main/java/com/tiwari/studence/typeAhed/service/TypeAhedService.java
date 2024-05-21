@@ -1,11 +1,11 @@
 package com.tiwari.studence.typeAhed.service;
 
 import com.tiwari.studence.common.async.IFuture;
-import com.tiwari.studence.common.entity.IGetEntityId;
+import com.tiwari.studence.common.service.v1.entity.IGetEntityId;
 import com.tiwari.studence.common.interfaces.IDynamoGetEntityTable;
 import com.tiwari.studence.common.interfaces.IDynamoPutTable;
 import com.tiwari.studence.common.interfaces.IDynamoUpdateTable;
-import com.tiwari.studence.common.services.AEntityService;
+import com.tiwari.studence.common.service.v1.services.AEntityService;
 import com.tiwari.studence.proto.entity.EntityPb;
 import com.tiwari.studence.proto.typeAhead.TypeAheadPb;
 import com.tiwari.studence.proto.typeAhead.TypeAheadSearchReqPb;

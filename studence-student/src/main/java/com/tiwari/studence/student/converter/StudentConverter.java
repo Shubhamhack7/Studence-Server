@@ -1,8 +1,6 @@
 package com.tiwari.studence.student.converter;
 
-import com.tiwari.studence.campus.provider.CampusProvider;
-import com.tiwari.studence.campus.provider.CampusSearchReqRespProvider;
-import com.tiwari.studence.common.convertor.AEntityConvertor;
+import com.tiwari.studence.common.service.v1.convertor.AEntityConvertor;
 import com.tiwari.studence.proto.student.StudentPb;
 import com.tiwari.studence.proto.student.StudentSearchReqPb;
 import com.tiwari.studence.proto.student.StudentSearchRespPb;

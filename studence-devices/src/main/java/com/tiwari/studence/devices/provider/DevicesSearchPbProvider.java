@@ -1,6 +1,6 @@
 package com.tiwari.studence.devices.provider;
 
-import com.tiwari.studence.common.provider.IReqRespPbBuilderProvider;
+import com.tiwari.studence.common.providerInterfaces.IReqRespPbBuilderProvider;
 import com.tiwari.studence.proto.devices.DeviceDetailsSearchReqPb;
 import com.tiwari.studence.proto.devices.DeviceDetailsSearchRespPb;
 

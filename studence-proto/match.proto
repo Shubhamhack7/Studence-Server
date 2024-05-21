@@ -1,0 +1,60 @@
+syntax = "proto3";
+
+package com.tiwari.studence.proto.match;
+
+option java_multiple_files = true;
+option java_generate_equals_and_hash = true;
+
+import "mergeOption.proto";
+import "timePb.proto";
+
+enum MatchInfoUiEnum {
+  UNKNOWN_INFO = 0;
+  NOT_FOUND = 1;
+  MATCH = 2;
+  NO_MATCH = 3;
+  APPROX_MATCH = 4;
+}
+
+enum KnownSourceUiEnum {
+  UNKNOWN_SOURCE = 0;
+  MODERATOR = 1;
+  SELF = 2;
+  GOOGLE_MAPS = 3;
+  PRACTO = 4;
+}
+
+// useas   repeated MatchInfoUiPb matchInfo = 13;
+message MatchInfoUiPb {
+  optional string sourceRefId = 1;
+  optional MatchInfoUiEnum matchInfo = 2;
+  optional com.tiwari.studence.proto.time.TimePb matchedTime = 3;
+}
+
+message AltSourceEntityIdUiPb {
+  optional string sourceId = 1;
+  optional string entityId = 2;
+}
+
+message MetaInfoUiPb {
+  repeated MatchInfoUiPb matchInfo = 1;
+}
+
+
+message MatchInfoPb {
+  option (com.tiwari.studence.proto.mergeOption.mergeToken) = "1";
+  optional string sourceRefId = 1;
+  optional MatchInfoUiEnum matchInfo = 2;
+  optional com.tiwari.studence.proto.time.TimePb matchedTime = 3;
+  optional int32 diff = 4;
+}
+
+message AltSourceEntityIdPb {
+  option (com.tiwari.studence.proto.mergeOption.mergeToken) = "1";
+  optional string sourceId = 1;
+  optional string entityId = 2;
+}
+
+message MetaInfoPb {
+  repeated MatchInfoPb matchInfo = 1;
+}

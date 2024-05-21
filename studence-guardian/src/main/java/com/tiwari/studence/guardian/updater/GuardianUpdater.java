@@ -1,6 +1,6 @@
 package com.tiwari.studence.guardian.updater;
 
-import com.tiwari.studence.common.updater.AEntityUpdater;
+import com.tiwari.studence.common.service.v1.updater.AEntityUpdater;
 import com.tiwari.studence.guardian.indexer.GuardianIndexer;
 import com.tiwari.studence.guardian.provider.GuardianPbProvider;
 import com.tiwari.studence.proto.entity.EntityPb;

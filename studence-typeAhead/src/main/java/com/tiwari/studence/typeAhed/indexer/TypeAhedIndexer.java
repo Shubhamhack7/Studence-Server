@@ -1,6 +1,6 @@
 package com.tiwari.studence.typeAhed.indexer;
 
-import com.tiwari.studence.common.indexer.AEntityIndexer;
+import com.tiwari.studence.common.service.v1.indexer.AEntityIndexer;
 import com.tiwari.studence.proto.typeAhead.TypeAheadPb;
 import com.tiwari.studence.util.encoder.JsonBaseEncoderDecoder;
 import software.amazon.awssdk.services.dynamodb.model.AttributeValue;

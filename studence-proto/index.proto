@@ -1,0 +1,92 @@
+syntax = "proto3";
+
+package com.tiwari.studence.proto.index;
+option java_multiple_files = true;
+option java_generate_equals_and_hash = true;
+
+import "entityPb.proto";
+import "timePb.proto";
+import "keyValue.proto";
+
+enum DataType {
+  UNKNOW_DATA_TYPE =0;
+	LONG = 1;
+	STRING = 2;
+	DOUBLE = 3;
+	ISO_DATE_TIME =4;
+}
+
+// @Deprecate
+message VersionPb {
+  optional int64 updateTime = 1;
+  optional int32 versionId = 2;
+  optional string checkpointTime = 3;
+}
+
+
+message IndexField {
+  enum Type {
+    INDEX_FIELD_TYPE=0;
+    EXACT = 1;
+    CASE_INSENSITIVE = 2;
+    ATTACHMENT = 3;
+    FULL_TEXT = 4;
+    HIERARCHICAL_TIME = 5;
+    DATE_RANGE = 6;
+    GEO_10_22 = 7;
+    PREFIX_NAME=8;
+    DATE=9;
+    TIME = 10;
+  }
+  optional Type type = 1;
+  optional string fieldName = 2;
+  repeated string fieldValues = 3;
+  //mongoDb support
+  optional DataType dataType = 4;
+  optional string singleStrValue = 5;
+  optional int64  singleLongValue =6;
+  optional double singleDoubleValue =7;
+  repeated string strValues = 8;
+  repeated int64  longValues =9;
+  repeated double doubleValues =10;
+  optional com.tiwari.studence.proto.time.TimePb dateTime =11;
+}
+
+message IndexPb {
+  optional com.tiwari.studence.proto.entity.EntityProtoPb entityProto = 1;
+  optional string providerId = 2;
+  optional string key = 3;
+  optional VersionPb version = 4;
+  optional string actualSearchPb = 5;
+  repeated IndexField fields = 6;
+}
+
+message IndexVersionPb{
+    optional int32 entityVersion = 1 ;
+    optional string indexVersion = 2;
+}
+
+message GlobalIndexKeyPb {
+	optional string indexName = 1;
+	optional string indexHashKey = 2;
+	optional string indexRangeKey = 3;
+}
+
+// key- entityId@indexName // separate entity for each indexName
+message DynamoDbIndexPb {
+	optional com.tiwari.studence.proto.entity.EntityProtoPb entityProto = 1;
+	optional string entityId = 2;
+	optional string entityRawData = 3; // can use compressed bytes instead of string
+	repeated com.tiwari.studence.proto.keyValue.KeyValuePb indexFields = 4;
+	repeated GlobalIndexKeyPb indexes = 5;
+}
+
+// @Deprecate
+message SimpleQueryPb {
+  optional string query = 1;
+}
+
+// @Deprecate
+message ListIndicesResponsePb {
+	repeated IndexPb indices = 1;
+}

@@ -17,17 +17,25 @@ public enum LifeTimeEnum
    */
   ACTIVE(1),
   /**
-   * <code>SUSPENDED = 2;</code>
+   * <code>IMMUTABLE = 2;</code>
    */
-  SUSPENDED(2),
+  IMMUTABLE(2),
   /**
-   * <code>DELETED = 3;</code>
+   * <code>TRASH = 3;</code>
    */
-  DELETED(3),
+  TRASH(3),
   /**
-   * <code>LOCKED = 4;</code>
+   * <code>DELETED = 4;</code>
    */
-  LOCKED(4),
+  DELETED(4),
+  /**
+   * <code>PURGED = 5;</code>
+   */
+  PURGED(5),
+  /**
+   * <code>SUSPENDED = 6;</code>
+   */
+  SUSPENDED(6),
   UNRECOGNIZED(-1),
   ;
 
@@ -40,17 +48,25 @@ public enum LifeTimeEnum
    */
   public static final int ACTIVE_VALUE = 1;
   /**
-   * <code>SUSPENDED = 2;</code>
+   * <code>IMMUTABLE = 2;</code>
    */
-  public static final int SUSPENDED_VALUE = 2;
+  public static final int IMMUTABLE_VALUE = 2;
   /**
-   * <code>DELETED = 3;</code>
+   * <code>TRASH = 3;</code>
    */
-  public static final int DELETED_VALUE = 3;
+  public static final int TRASH_VALUE = 3;
   /**
-   * <code>LOCKED = 4;</code>
+   * <code>DELETED = 4;</code>
    */
-  public static final int LOCKED_VALUE = 4;
+  public static final int DELETED_VALUE = 4;
+  /**
+   * <code>PURGED = 5;</code>
+   */
+  public static final int PURGED_VALUE = 5;
+  /**
+   * <code>SUSPENDED = 6;</code>
+   */
+  public static final int SUSPENDED_VALUE = 6;
 
 
   public final int getNumber() {
@@ -79,9 +95,11 @@ public enum LifeTimeEnum
     switch (value) {
       case 0: return UNKNOWN_LIFETIME;
       case 1: return ACTIVE;
-      case 2: return SUSPENDED;
-      case 3: return DELETED;
-      case 4: return LOCKED;
+      case 2: return IMMUTABLE;
+      case 3: return TRASH;
+      case 4: return DELETED;
+      case 5: return PURGED;
+      case 6: return SUSPENDED;
       default: return null;
     }
   }

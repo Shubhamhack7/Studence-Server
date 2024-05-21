@@ -1,0 +1,70 @@
+syntax = "proto3";
+
+package com.tiwari.studence.proto.stringParser;
+
+option java_multiple_files = true;
+option java_generate_equals_and_hash = true;
+
+message StringParserConfigPb{
+	optional LengthRestrictionPb lengthRestriction = 1;
+	optional CharactersRestrictionPb charRestriction = 2;
+	optional SubStringPb subStringChooser = 3;	
+	optional SubStringPb subStringElimination = 4;
+	optional CaseNormalizerPb caseNormalizer = 5; 
+}
+
+message LengthRestrictionPb{
+	optional bool isEnabled = 1;
+	optional int32 maxLength = 2;
+	optional int32 minLength = 3;
+}
+
+message CharactersRestrictionPb{
+	optional bool isEnabled = 1;
+	optional bool allowNumeric = 2;
+	optional bool allowAlphabet = 3;
+	repeated string allowedSpecialChars = 4;
+}
+
+message SubStringPb{
+  optional bool isEnabled = 1;
+  optional int32 startIndex = 2;
+  optional int32 endIndex = 3;
+}
+
+message CaseNormalizerPb {
+  optional bool isEnabled = 1;
+  optional bool toUppercase = 2;
+}
+
+message StringParserConfigUiPb{
+	optional LengthRestrictionUiPb lengthRestriction = 1;
+	optional CharactersRestrictionUiPb charRestriction = 2;
+	optional SubStringUiPb subStringChooser = 3;
+	optional SubStringUiPb subStringElimination = 4;
+	optional CaseNormalizerUiPb caseNormalizer = 5;
+}
+
+message LengthRestrictionUiPb{
+	optional bool isEnabled = 1;
+	optional int32 maxLength = 2;
+	optional int32 minLength = 3;
+}
+
+message CharactersRestrictionUiPb{
+	optional bool isEnabled = 1;
+	optional bool allowNumeric = 2;
+	optional bool allowAlphabet = 3;
+	repeated string allowedSpecialChars = 4;
+}
+
+message SubStringUiPb{
+	optional bool isEnabled = 1;
+	optional int32 startIndex = 2;
+	optional int32 endIndex = 3;
+}
+
+message CaseNormalizerUiPb {
+	optional bool isEnabled = 1;
+	optional bool toUppercase = 2;
+}

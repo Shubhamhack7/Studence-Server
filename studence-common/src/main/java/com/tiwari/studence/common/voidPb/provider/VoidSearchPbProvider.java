@@ -1,6 +1,6 @@
 package com.tiwari.studence.common.voidPb.provider;
 
-import com.tiwari.studence.common.provider.IReqRespPbBuilderProvider;
+import com.tiwari.studence.common.providerInterfaces.IReqRespPbBuilderProvider;
 import com.tiwari.studence.proto.voidPb.VoidSearchReqPb;
 import com.tiwari.studence.proto.voidPb.VoidSearchRespPb;
 

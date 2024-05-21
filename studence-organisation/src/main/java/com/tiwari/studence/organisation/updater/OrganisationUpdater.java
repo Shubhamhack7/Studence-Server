@@ -5,7 +5,7 @@ import java.util.HashMap;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
-import com.tiwari.studence.common.updater.AEntityUpdater;
+import com.tiwari.studence.common.service.v1.updater.AEntityUpdater;
 import com.tiwari.studence.organisation.indexer.OrganisationIndexer;
 import com.tiwari.studence.organisation.provider.OrganisationPbProvider;
 import com.tiwari.studence.proto.entity.EntityPb;

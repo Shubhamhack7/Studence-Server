@@ -1,6 +1,6 @@
 package com.tiwari.studence.guardian.provider;
 
-import com.tiwari.studence.common.provider.IPbBuilderProvider;
+import com.tiwari.studence.common.providerInterfaces.IPbBuilderProvider;
 import com.tiwari.studence.proto.guardian.GuardianPb;
 
 import javax.inject.Singleton;

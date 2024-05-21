@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package com.tiwari.studence.proto.backgroundTask;
+
+option java_multiple_files = true;
+option java_generate_equals_and_hash = true;
+
+import "timePb.proto";
+import "mergeOption.proto";
+
+message BackgroundTasks {
+
+	repeated BackgroundTaskId bgTaskIds = 1;
+	// These would be used for indexing background task states
+	optional TaskState taskStates = 2;		// "set" of all the states in bgTaskIds
+	optional TaskState latestTaskState = 3;
+}
+
+message BackgroundTaskId {
+    option (com.tiwari.studence.proto.mergeOption.mergeToken) = "1.1";
+	optional int32 taskId = 1;	// just the version
+	optional TaskState taskState = 2;
+  	optional com.tiwari.studence.proto.time.TimePb taskTime = 3;
+	optional bytes taskData = 4;
+}
+
+enum TaskState {
+	UNKNOWN_STATE=0;
+	PENDING = 1;
+	SUCCESSFUL = 2;
+	FAILED = 3;
+}

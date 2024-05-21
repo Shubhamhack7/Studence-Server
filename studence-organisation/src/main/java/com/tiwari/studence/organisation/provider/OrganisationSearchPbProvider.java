@@ -1,6 +1,6 @@
 package com.tiwari.studence.organisation.provider;
 
-import com.tiwari.studence.common.provider.IReqRespPbBuilderProvider;
+import com.tiwari.studence.common.providerInterfaces.IReqRespPbBuilderProvider;
 import com.tiwari.studence.proto.organisation.OrganisationSearchReqPb;
 import com.tiwari.studence.proto.organisation.OrganisationSearchRespPb;
 
