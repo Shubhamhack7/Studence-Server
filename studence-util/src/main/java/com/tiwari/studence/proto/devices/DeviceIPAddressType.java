@@ -6,7 +6,7 @@ package com.tiwari.studence.proto.devices;
 /**
  * Protobuf enum {@code com.tiwari.studence.proto.devices.DeviceIPAddressType}
  */
-public enum DeviceIPAddressType
+public enum mvnDeviceIPAddressType
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <code>UNKNOWN_IPADDRESS_TYPE = 0;</code>
