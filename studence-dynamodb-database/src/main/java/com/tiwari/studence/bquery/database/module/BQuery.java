@@ -3,7 +3,7 @@ package com.tiwari.studence.bquery.database.module;
 import java.util.List;
 
 import com.google.common.collect.Lists;
-import com.tiwari.studence.util.Strings;
+import com.tiwari.studence.util.common.Strings;
 
 // not a singleton class
 @SuppressWarnings("rawtypes")

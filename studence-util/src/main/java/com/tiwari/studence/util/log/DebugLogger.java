@@ -8,6 +8,9 @@ import java.util.logging.Logger;
 import com.tiwari.studence.util.exception.ExceptionStackTrace;
 
 public class DebugLogger implements IServerExceptionLogger{
+
+	private static Class m_loggerClass;
+
 	private static Logger s_logger = Logger.getLogger("DebugLogger");
 
 	private static ILogger m_logger = new ILogger() {
@@ -19,6 +22,7 @@ public class DebugLogger implements IServerExceptionLogger{
 
 	public static void error(String message) {
 		m_logger.addLog(Level.SEVERE, message);
+
 	}
 
 	public static void error(Throwable e) {

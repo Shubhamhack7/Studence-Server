@@ -10,7 +10,7 @@ import com.tiwari.studence.common.interfaces.IDynamoGetEntityTable;
 import com.tiwari.studence.common.provider.IPbBuilderProvider;
 import com.tiwari.studence.common.services.interfaces.ITableNameProvider;
 import com.tiwari.studence.proto.entity.EntityPb;
-import com.tiwari.studence.util.StudenceSpecialCharecterEnum;
+import com.tiwari.studence.util.common.StudenceSpecialCharecterEnum;
 import com.tiwari.studence.util.exception.ErrorException;
 
 @Singleton

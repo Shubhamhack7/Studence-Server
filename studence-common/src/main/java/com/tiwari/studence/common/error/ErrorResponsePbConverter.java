@@ -9,7 +9,7 @@ import com.google.inject.Inject;
 import com.tiwari.studence.common.convertor.Converters;
 import com.tiwari.studence.proto.error.ErrorProtoPb;
 import com.tiwari.studence.proto.error.ErrorResponsePb;
-import com.tiwari.studence.util.Strings;
+import com.tiwari.studence.util.common.Strings;
 import com.tiwari.studence.util.encoder.IConverter;
 import com.tiwari.studence.util.exception.ErrorException;
 import com.tiwari.studence.util.exception.LoggedRuntimeException;

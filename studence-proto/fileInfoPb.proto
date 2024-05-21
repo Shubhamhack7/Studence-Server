@@ -1,0 +1,75 @@
+// Copyright (c) 2022, All Right Reserved, Shubham Tiwari
+
+syntax = "proto3";
+
+package com.tiwari.studence.proto.fileInfo;
+
+import "entityPb.proto";
+import "summaryPb.proto";
+
+option java_multiple_files = true;
+option java_generate_equals_and_hash = true;
+
+//The following protos are reserved 12,13,14,15,16.You shd not use them
+
+enum Extension {
+  UNKNOWN_EXTENSION = 0;
+  JPG = 1;
+  PNG = 2;
+  PDF = 3;
+  DOCX = 4;
+  TXT = 5;
+  CSV = 6;
+  XLSX = 7;
+  MP3 = 8;
+  MP4 = 9;
+  ZIP = 10;
+  JSON = 11;
+  XML = 12;
+  HTML = 13;
+  GIF = 14;
+  PPTX = 15;
+  XLS = 16;
+}
+enum FileSizeUnit {
+  UNKNOWN_UNIT = 0;
+  BYTE = 1;
+  KILOBYTE = 2;
+  MEGABYTE = 3;
+  GIGABYTE = 4;
+  TERABYTE = 5;
+}
+
+message DimensionPb{
+  int32 height = 1;
+  int32 width = 2;
+  uint64 size = 3;
+  FileSizeUnit unit = 4;
+}
+
+message FileInfoPb{
+  com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;
+  Extension extension = 2;
+  DimensionPb dimension = 3;
+  string name = 4;
+  string canonicalName = 5;
+  string URL = 6;
+}
+
+message FileInfoRefPb{
+  string dbInfoId = 1;
+}
+
+message FileInfoSearchReqPb{
+  Extension extension = 2;
+  string name = 4;
+  string canonicalName = 5;
+  string URL = 6;
+}
+
+
+message FileInfoSearchRespPb{
+  com.tiwari.studence.proto.summary.SummaryPb summary = 1;
+  repeated FileInfoPb results = 2;
+}
+

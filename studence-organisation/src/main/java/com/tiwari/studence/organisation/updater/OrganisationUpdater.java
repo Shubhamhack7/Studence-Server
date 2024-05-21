@@ -3,20 +3,21 @@ package com.tiwari.studence.organisation.updater;
 import java.util.HashMap;
 
 import javax.inject.Inject;
+import javax.inject.Singleton;
 
 import com.tiwari.studence.common.updater.AEntityUpdater;
 import com.tiwari.studence.organisation.indexer.OrganisationIndexer;
 import com.tiwari.studence.organisation.provider.OrganisationPbProvider;
 import com.tiwari.studence.proto.entity.EntityPb;
-import com.tiwari.studence.proto.entity.LifeTimeEnum;
 import com.tiwari.studence.proto.organisation.OrganisationPb;
 import com.tiwari.studence.proto.organisation.OrganisationPb.Builder;
-import com.tiwari.studence.util.Strings;
+import com.tiwari.studence.util.common.Strings;
 
 import com.tiwari.studence.util.helper.ContactDetailsHelper;
 import com.tiwari.studence.util.helper.NameHelper;
 import software.amazon.awssdk.services.dynamodb.model.AttributeValue;
 
+@Singleton
 public class OrganisationUpdater extends
         AEntityUpdater<OrganisationPb, OrganisationPb.Builder, OrganisationPbProvider, OrganisationIndexer> {
  private NameHelper m_nameHelper;

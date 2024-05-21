@@ -4,7 +4,8 @@ import com.tiwari.studence.proto.entity.EntityPb;
 import com.tiwari.studence.proto.entity.LifeTimeEnum;
 import com.tiwari.studence.proto.time.TimePb;
 import com.tiwari.studence.proto.time.TimezoneEnum;
-import com.tiwari.studence.util.StudenceSpecialCharecterEnum;
+import com.tiwari.studence.util.common.Strings;
+import com.tiwari.studence.util.common.StudenceSpecialCharecterEnum;
 import com.tiwari.studence.util.collect.Pair;
 import com.tiwari.studence.util.exception.Preconditions;
 import com.tiwari.studence.util.time.TimeUtil;
@@ -63,5 +64,17 @@ public class EntityUtilHelper {
     pb.getConfigBuilder().setUpdatedAt(TimeUtil.getCurrentTime(pb.getTimezone()));
     pb.getConfigBuilder().setUpdatedBy("system");
     return pb.build();
+  }
+
+  public static boolean isDbEntityEmpty(EntityPb dbInfo) {
+    if (Strings.notEmpty(dbInfo.getHashId()) && Strings.notEmpty(dbInfo.getRangeId())) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  public static boolean isDbEntityNotEmpty(EntityPb dbInfo) {
+   return !isDbEntityEmpty(dbInfo);
   }
 }

@@ -14,7 +14,7 @@ import com.tiwari.studence.typeAhed.indexer.TypeAhedIndexer;
 import com.tiwari.studence.typeAhed.provider.TypeAheadSearchReqRespProvider;
 import com.tiwari.studence.typeAhed.provider.TypeAheadTableNameProvider;
 import com.tiwari.studence.typeAhed.provider.TypeAhedProvider;
-import com.tiwari.studence.util.Strings;
+import com.tiwari.studence.util.common.Strings;
 import com.tiwari.studence.util.exception.ErrorException;
 
 import javax.inject.Inject;

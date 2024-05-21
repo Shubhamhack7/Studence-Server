@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0                       http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    	
-  
+
+
   <modelVersion>4.0.0</modelVersion>
     	
   
@@ -74,17 +74,21 @@
                         					
           
           </executions>
-                    					
-          
+
+<!--          <configuration>
+            <executable>cmd.exe</executable>
+            <commandlineArgs>/c complieproto.bat</commandlineArgs>
+          </configuration>-->
+
           <configuration>
-                        						
-            
+
+
             <executable>bash</executable>
-                        						
-            
+
+
             <commandlineArgs>complieproto.sh</commandlineArgs>
-                        					
-          
+
+
           </configuration>
                     				
         
@@ -265,13 +269,20 @@
 	
   
   <modules>
+        <module>studence-email</module>
+        <module>studence-s3storage</module>
+    <module>studence-devices</module>
     <module>studence-dump</module>
     <module>studence-typeAhead</module>
     <module>studence-util</module>
+    <module>studence-firebase</module>
     <module>studence-common</module>
     <module>studence-dynamodb-database</module>
     <module>studence-common-http</module>
     <module>studence-organisation</module>
+    <module>studence-pushNotification</module>
+    <module>studence-filesInfo</module>
+    <module>studence-openai</module>
     <module>studence-campus</module>
     <module>studence-teacher</module>
     <module>studence-login</module>
@@ -279,6 +290,7 @@
     <module>studence-classes</module>
     <module>studence-student</module>
     <module>studence-attendence</module>
+    <module>studence-server</module>
     <module>studence-management-app</module>
   </modules>
     

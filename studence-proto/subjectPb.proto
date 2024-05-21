@@ -1,0 +1,22 @@
+// Copyright (c) 2022, All Right Reserved, Shubham Tiwari
+
+syntax = "proto3";
+
+package com.tiwari.studence.proto.subject;
+
+
+option java_multiple_files = true;
+option java_generate_equals_and_hash = true;
+
+//The following protos are reserved 12,13,14,15,16.You shd not use them
+
+enum SubjectTypeEnum {
+UNKNOWN_SUBJECT=0;
+ENGLISH=1;
+HINDI=2;
+MATHS=3;
+SCIENCE=4;
+SOCIAL_SCIENCE=5;
+ART_AND_CRAFT=6;
+COMPUTER=7;
+}

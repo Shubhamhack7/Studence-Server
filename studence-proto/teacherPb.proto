@@ -9,6 +9,8 @@ import "namePb.proto";
 import "contactDetailsPb.proto";
 import "summaryPb.proto";
 import "campusPb.proto";
+import "dataTypesPb.proto";
+import "subjectPb.proto";
 import "classPb.proto";
 
 option java_multiple_files = true;
@@ -21,8 +23,19 @@ message TeacherPb{
   com.tiwari.studence.proto.name.NamePb name= 2;
   com.tiwari.studence.proto.contactDetails.ContactDetailsPb contactDetails= 3;
   com.tiwari.studence.proto.campus.CampusRefPb CampusRef = 4;
-  com.tiwari.studence.proto.classes.ClassesRefPb classTeacher = 5;
+  TeacherClassPb classTeacherAndTeacher = 5;
 }
+
+message TeacherClassPb{
+  com.tiwari.studence.proto.datatypes.BooleanEnum isCLassTeacher=1;
+  repeated TeacherClassSubjectPb classTeacher = 2;
+  repeated TeacherClassSubjectPb teacher = 3;
+}
+message TeacherClassSubjectPb{
+  com.tiwari.studence.proto.subject.SubjectTypeEnum subjectType=1;
+  com.tiwari.studence.proto.classes.ClassesRefPb classTeacher = 2;
+}
+
 
 message TeacherRefPb{
   string dbInfoId =1;

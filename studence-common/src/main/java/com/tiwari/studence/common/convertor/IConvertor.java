@@ -9,5 +9,6 @@ import software.amazon.awssdk.services.dynamodb.model.AttributeValue;
 
 public interface IConvertor<P extends GeneratedMessageV3,Lresp extends GeneratedMessageV3> {
   public P convert(HashMap<String, AttributeValue> map);
-  public Lresp searchRespConvert(List<HashMap<String, AttributeValue>> map);
+  public Lresp searchRespConvert(List<HashMap<String, AttributeValue>> map,
+          HashMap<String, AttributeValue> lastKey);
 }

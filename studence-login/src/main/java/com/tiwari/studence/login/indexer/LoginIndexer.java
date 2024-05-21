@@ -5,12 +5,14 @@ import com.tiwari.studence.proto.login.LoginPb;
 import com.tiwari.studence.util.encoder.JsonBaseEncoderDecoder;
 import software.amazon.awssdk.services.dynamodb.model.AttributeValue;
 
+import javax.inject.Inject;
 import javax.inject.Singleton;
 import java.util.HashMap;
 
 @Singleton
 public class LoginIndexer extends AEntityIndexer<LoginPb> {
 
+  @Inject
   public LoginIndexer(JsonBaseEncoderDecoder jsonBaseEncoderDecoder) {
     super(jsonBaseEncoderDecoder);
   }
@@ -33,6 +35,9 @@ public class LoginIndexer extends AEntityIndexer<LoginPb> {
     addItemToAttritibeMap(items, LoginIndexerEnum.LOGIN_EMAIL_ID.name(),
             builder.getEmailId().getCanonicalEmail(), false, AttributeValue.Type.S,
             LoginIndexerEnum.LOGIN_EMAIL_ID.isLowerCase());
+    addItemToAttritibeMap(items, LoginIndexerEnum.LOGIN_FIREBASE_TOKEN.name(),
+            builder.getFirebaseToken(), false, AttributeValue.Type.S,
+            LoginIndexerEnum.LOGIN_FIREBASE_TOKEN.isLowerCase());
     return items;
   }
 }

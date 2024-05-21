@@ -1,7 +1,6 @@
 package com.tiwari.studence.common.controlflow;
 
 import java.util.HashMap;
-import java.util.Map;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -9,7 +8,7 @@ import javax.inject.Singleton;
 import com.tiwari.studence.common.async.IFuture;
 import com.tiwari.studence.common.interfaces.IDynamoPutTable;
 import com.tiwari.studence.dynamodb.database.table.PutItemInDynamoDbTable;
-import com.tiwari.studence.util.Strings;
+import com.tiwari.studence.util.common.Strings;
 import com.tiwari.studence.util.database.TableNameUtil;
 import com.tiwari.studence.util.exception.ErrorException;
 import com.tiwari.studence.util.exception.Preconditions;

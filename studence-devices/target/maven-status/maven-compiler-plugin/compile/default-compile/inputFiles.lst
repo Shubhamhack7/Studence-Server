@@ -1,0 +1,13 @@
+/home/tiwaritiwari/Studence/Studence-Server/studence-devices/src/main/java/com/tiwari/studence/devices/injector/DevicesInjector.java
+/home/tiwaritiwari/Studence/Studence-Server/studence-devices/src/main/java/com/tiwari/studence/devices/convertor/DevicesConvertor.java
+/home/tiwaritiwari/Studence/Studence-Server/studence-devices/src/main/java/com/tiwari/studence/devices/provider/DevicesTableNameProvider.java
+/home/tiwaritiwari/Studence/Studence-Server/studence-devices/src/main/java/com/tiwari/studence/devices/module/DevicesModule.java
+/home/tiwaritiwari/Studence/Studence-Server/studence-devices/src/main/java/com/tiwari/studence/devices/indexer/DevicesIndexer.java
+/home/tiwaritiwari/Studence/Studence-Server/studence-devices/src/main/java/com/tiwari/studence/devices/service/IDevicesService.java
+/home/tiwaritiwari/Studence/Studence-Server/studence-devices/src/main/java/com/tiwari/studence/devices/servlet/DevicesServlet.java
+/home/tiwaritiwari/Studence/Studence-Server/studence-devices/src/main/java/com/tiwari/studence/devices/service/DevicesService.java
+/home/tiwaritiwari/Studence/Studence-Server/studence-devices/src/main/java/com/tiwari/studence/devices/provider/DevicesSearchPbProvider.java
+/home/tiwaritiwari/Studence/Studence-Server/studence-devices/src/main/java/com/tiwari/studence/devices/provider/DevicesProvider.java
+/home/tiwaritiwari/Studence/Studence-Server/studence-devices/src/main/java/com/tiwari/studence/devices/searcher/DevicesSearcher.java
+/home/tiwaritiwari/Studence/Studence-Server/studence-devices/src/main/java/com/tiwari/studence/devices/updater/DevicesUpdater.java
+/home/tiwaritiwari/Studence/Studence-Server/studence-devices/src/main/java/com/tiwari/studence/devices/indexer/DevicesIndexerEnum.java

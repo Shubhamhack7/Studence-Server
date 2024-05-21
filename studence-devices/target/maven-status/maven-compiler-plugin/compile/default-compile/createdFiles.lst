@@ -1,0 +1,13 @@
+com/tiwari/studence/devices/updater/DevicesUpdater.class
+com/tiwari/studence/devices/indexer/DevicesIndexerEnum.class
+com/tiwari/studence/devices/indexer/DevicesIndexer.class
+com/tiwari/studence/devices/searcher/DevicesSearcher.class
+com/tiwari/studence/devices/provider/DevicesTableNameProvider.class
+com/tiwari/studence/devices/servlet/DevicesServlet.class
+com/tiwari/studence/devices/provider/DevicesProvider.class
+com/tiwari/studence/devices/injector/DevicesInjector.class
+com/tiwari/studence/devices/module/DevicesModule.class
+com/tiwari/studence/devices/service/DevicesService.class
+com/tiwari/studence/devices/service/IDevicesService.class
+com/tiwari/studence/devices/convertor/DevicesConvertor.class
+com/tiwari/studence/devices/provider/DevicesSearchPbProvider.class

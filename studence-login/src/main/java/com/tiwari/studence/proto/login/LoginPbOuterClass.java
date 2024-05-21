@@ -29,6 +29,16 @@ public final class LoginPbOuterClass {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_tiwari_studence_proto_login_LoginSearchRespPb_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tiwari_studence_proto_login_LoginReqUiPb_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tiwari_studence_proto_login_LoginReqUiPb_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tiwari_studence_proto_login_LoginRespUiPb_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tiwari_studence_proto_login_LoginRespUiPb_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -41,7 +51,7 @@ public final class LoginPbOuterClass {
       "\n\rloginPb.proto\022\037com.tiwari.studence.pro" +
       "to.login\032\016entityPb.proto\032\026contactDetails" +
       "Pb.proto\032\017summaryPb.proto\032\022genericRefPb." +
-      "proto\"\361\002\n\007LoginPb\022:\n\006dbInfo\030\001 \001(\0132*.com." +
+      "proto\"\211\003\n\007LoginPb\022:\n\006dbInfo\030\001 \001(\0132*.com." +
       "tiwari.studence.proto.entity.EntityPb\022>\n" +
       "\004type\030\002 \001(\01620.com.tiwari.studence.proto." +
       "login.ProfileTypeEnum\022?\n\003ref\030\003 \001(\01322.com" +
@@ -50,15 +60,21 @@ public final class LoginPbOuterClass {
       "udence.proto.contactDetails.MobileNumber" +
       "Pb\022B\n\007emailId\030\005 \001(\01321.com.tiwari.studenc" +
       "e.proto.contactDetails.EmailPb\022\031\n\021encryp" +
-      "tedPassword\030\006 \001(\t\"5\n\020LoginSearchReqPb\022\020\n" +
-      "\010mobileNo\030\001 \001(\t\022\017\n\007emailId\030\002 \001(\t\"\215\001\n\021Log" +
-      "inSearchRespPb\022=\n\007summary\030\001 \001(\0132,.com.ti" +
-      "wari.studence.proto.summary.SummaryPb\0229\n" +
-      "\007results\030\002 \003(\0132(.com.tiwari.studence.pro" +
-      "to.login.LoginPb*y\n\017ProfileTypeEnum\022\026\n\022U" +
-      "NKNOWN_LOGIN_TYPE\020\000\022\t\n\005ADMIN\020\001\022\020\n\014ORGANI" +
-      "SATION\020\002\022\n\n\006CAMPUS\020\003\022\013\n\007TEACHER\020\004\022\013\n\007STU" +
-      "DENT\020\005\022\013\n\007PARENTS\020\006B\005P\001\240\001\001b\006proto3"
+      "tedPassword\030\006 \001(\t\022\026\n\016firebase_token\030\007 \001(" +
+      "\t\"5\n\020LoginSearchReqPb\022\020\n\010mobileNo\030\001 \001(\t\022" +
+      "\017\n\007emailId\030\002 \001(\t\"\215\001\n\021LoginSearchRespPb\022=" +
+      "\n\007summary\030\001 \001(\0132,.com.tiwari.studence.pr" +
+      "oto.summary.SummaryPb\0229\n\007results\030\002 \003(\0132(" +
+      ".com.tiwari.studence.proto.login.LoginPb" +
+      "\"C\n\014LoginReqUiPb\022\020\n\010mobileNo\030\001 \001(\t\022\017\n\007em" +
+      "ailId\030\002 \001(\t\022\020\n\010password\030\003 \001(\t\"s\n\rLoginRe" +
+      "spUiPb\0227\n\005login\030\001 \001(\0132(.com.tiwari.stude" +
+      "nce.proto.login.LoginPb\022\022\n\nsesssionId\030\002 " +
+      "\001(\t\022\025\n\rsesssionToken\030\003 \001(\t*y\n\017ProfileTyp" +
+      "eEnum\022\026\n\022UNKNOWN_LOGIN_TYPE\020\000\022\t\n\005ADMIN\020\001" +
+      "\022\020\n\014ORGANISATION\020\002\022\n\n\006CAMPUS\020\003\022\013\n\007TEACHE" +
+      "R\020\004\022\013\n\007STUDENT\020\005\022\013\n\007PARENTS\020\006B\005P\001\240\001\001b\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -73,7 +89,7 @@ public final class LoginPbOuterClass {
     internal_static_com_tiwari_studence_proto_login_LoginPb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tiwari_studence_proto_login_LoginPb_descriptor,
-        new java.lang.String[] { "DbInfo", "Type", "Ref", "MobileNo", "EmailId", "EncryptedPassword", });
+        new java.lang.String[] { "DbInfo", "Type", "Ref", "MobileNo", "EmailId", "EncryptedPassword", "FirebaseToken", });
     internal_static_com_tiwari_studence_proto_login_LoginSearchReqPb_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_com_tiwari_studence_proto_login_LoginSearchReqPb_fieldAccessorTable = new
@@ -86,6 +102,18 @@ public final class LoginPbOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tiwari_studence_proto_login_LoginSearchRespPb_descriptor,
         new java.lang.String[] { "Summary", "Results", });
+    internal_static_com_tiwari_studence_proto_login_LoginReqUiPb_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_com_tiwari_studence_proto_login_LoginReqUiPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_login_LoginReqUiPb_descriptor,
+        new java.lang.String[] { "MobileNo", "EmailId", "Password", });
+    internal_static_com_tiwari_studence_proto_login_LoginRespUiPb_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_com_tiwari_studence_proto_login_LoginRespUiPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_login_LoginRespUiPb_descriptor,
+        new java.lang.String[] { "Login", "SesssionId", "SesssionToken", });
     com.tiwari.studence.proto.entity.EntityPbOuterClass.getDescriptor();
     com.tiwari.studence.proto.contactDetails.ContactDetailsPbOuterClass.getDescriptor();
     com.tiwari.studence.proto.summary.SummaryPbOuterClass.getDescriptor();

@@ -16,10 +16,12 @@ import com.tiwari.studence.common.services.interfaces.ITableNameProvider;
 import com.tiwari.studence.common.updater.AEntityUpdater;
 import com.tiwari.studence.proto.entity.EntityPb;
 import com.tiwari.studence.proto.error.ErrorCategoryUiEnum;
+import com.tiwari.studence.util.common.CommonUtil;
 import com.tiwari.studence.util.entity.EntityUtilHelper;
 import com.tiwari.studence.util.exception.ErrorException;
 import com.tiwari.studence.util.exception.LoggedRuntimeException;
 import com.tiwari.studence.util.protobuf.ProtobufToJson;
+import org.json.JSONObject;
 import software.amazon.awssdk.services.dynamodb.model.AttributeValue;
 
 import java.util.HashMap;
@@ -128,10 +130,14 @@ public class EntityGetAndUpdateCF<P extends GeneratedMessageV3, Lresp extends Ge
 
     private String mergeJson(String oldJson, String newJson) {
       try {
+        JSONObject olderObject = new JSONObject(oldJson);
+        JSONObject updatedObject = new JSONObject(newJson);
+        CommonUtil.mergeJSONObjects(olderObject, updatedObject);
         Descriptors.Descriptor descriptor = m_pb.getDescriptorForType();
         DynamicMessage.Builder builder = DynamicMessage.newBuilder(descriptor);
-        JsonFormat.parser().merge(oldJson, builder);
-        JsonFormat.parser().merge(newJson, builder);
+        JsonFormat.parser().merge(olderObject.toString(), builder);
+        //JsonFormat.parser().merge(oldJson, builder);
+        //JsonFormat.parser().merge(newJson, builder);
         return JsonFormat.printer().print(builder.build());
       } catch (InvalidProtocolBufferException e) {
         throw new LoggedRuntimeException(ErrorCategoryUiEnum.INPUT_VALIDATION_ERROR);
@@ -148,11 +154,15 @@ public class EntityGetAndUpdateCF<P extends GeneratedMessageV3, Lresp extends Ge
       Descriptors.Descriptor descriptor = m_updatedPb.getDescriptorForType();
       Descriptors.FieldDescriptor fieldDescriptor = descriptor.findFieldByNumber(1);
       if (!m_isToBeDelete) {
-        attrMap = m_updater.updater((P) m_updatedPb, EntityUtilHelper.updateEntityWithVersion(
-                (EntityPb) m_updatedPb.getField(fieldDescriptor)));
+        EntityPb entityPb = EntityUtilHelper.updateEntityWithVersion(
+                (EntityPb) m_updatedPb.getField(fieldDescriptor));
+        attrMap.putAll(m_updater.updater((P) m_updatedPb, entityPb));
+        m_updater.getIndexer().getGenricEntityIndexer(attrMap, entityPb);
       } else {
-        attrMap = m_updater.updater((P) m_updatedPb, EntityUtilHelper.deleteEntity(
-                (EntityPb) m_updatedPb.getField(fieldDescriptor)));
+        EntityPb entityPb = EntityUtilHelper.deleteEntity(
+                (EntityPb) m_updatedPb.getField(fieldDescriptor));
+        attrMap.putAll(m_updater.updater((P) m_updatedPb, entityPb));
+        m_updater.getIndexer().getGenricEntityIndexer(attrMap, entityPb);
       }
       for (AEntityIndexer.GenericIndexerEnum index : AEntityIndexer.GenericIndexerEnum.values()) {
         AttributeValue value = attrMap.get(index.name());

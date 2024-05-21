@@ -2,7 +2,7 @@ package com.tiwari.studence.common.async;
 
 import java.util.concurrent.ExecutorService;
 
-import com.tiwari.studence.util.Strings;
+import com.tiwari.studence.util.common.Strings;
 import com.tiwari.studence.util.callable.ALoggableCallable;
 import com.tiwari.studence.util.exception.ErrorException;
 import com.tiwari.studence.util.exception.ExceptionHandler;

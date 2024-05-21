@@ -12,6 +12,7 @@ import com.tiwari.studence.common.indexer.AEntityIndexer.GenericIndexerEnum;
 import com.tiwari.studence.common.provider.IPbBuilderProvider;
 import com.tiwari.studence.common.provider.IReqRespPbBuilderProvider;
 import com.tiwari.studence.proto.summary.SummaryPb;
+import com.tiwari.studence.util.common.CommonUtil;
 import com.tiwari.studence.util.collect.Lists;
 import com.tiwari.studence.util.encoder.JsonBaseEncoderDecoder;
 import com.tiwari.studence.util.protobuf.ProtobufToJson;
@@ -42,13 +43,15 @@ public abstract class AEntityConvertor<P extends GeneratedMessageV3, BU extends 
     return protObj;
   }
 
-  public Lresp searchRespConvert(List<HashMap<String, AttributeValue>> listmap) {
+  public Lresp searchRespConvert(List<HashMap<String, AttributeValue>> listmap,
+          HashMap<String, AttributeValue> lastKey) {
     RBU resp = m_respProvider.getRespBuilder();
     Descriptors.FieldDescriptor summaryDesc=resp.getDescriptorForType().findFieldByNumber(1);
     Descriptors.FieldDescriptor respDesc = resp.getDescriptorForType().findFieldByNumber(2);
     DynamicMessage.Builder dynamicMessageBuilder = DynamicMessage.newBuilder(resp.getDescriptorForType());
     SummaryPb.Builder summaryPb = SummaryPb.newBuilder();
     summaryPb.setResultsCount(listmap.size());
+    summaryPb.setNextToken(CommonUtil.getNextToken(m_jsonBaseEncoderDecoder,lastKey));
     dynamicMessageBuilder.setField(summaryDesc, summaryPb.build());
     List<P> m_responseList = Lists.newArrayList();
     listmap.forEach(list1->{

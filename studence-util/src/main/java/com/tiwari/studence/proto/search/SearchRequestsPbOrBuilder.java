@@ -70,4 +70,16 @@ public interface SearchRequestsPbOrBuilder extends
    */
   com.tiwari.studence.proto.search.SearchPbOrBuilder getRequestsOrBuilder(
       int index);
+
+  /**
+   * <code>string nextToken = 4;</code>
+   * @return The nextToken.
+   */
+  java.lang.String getNextToken();
+  /**
+   * <code>string nextToken = 4;</code>
+   * @return The bytes for nextToken.
+   */
+  com.google.protobuf.ByteString
+      getNextTokenBytes();
 }

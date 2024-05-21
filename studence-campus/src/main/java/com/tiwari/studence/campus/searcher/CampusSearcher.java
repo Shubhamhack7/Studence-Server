@@ -21,4 +21,5 @@ public class CampusSearcher extends
           CampusSearchReqRespProvider responseBuilderProvider) {
     super(convertor, dyamodbSearchTable, tableNameProvider, responseBuilderProvider);
   }
+
 }
