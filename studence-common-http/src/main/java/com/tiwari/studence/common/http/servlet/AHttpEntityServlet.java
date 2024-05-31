@@ -11,15 +11,14 @@ import com.tiwari.studence.common.http.converter.JsonStringToPbConverter;
 import com.tiwari.studence.common.http.converter.JsonStringToReqPbConverter;
 import com.tiwari.studence.common.http.enumm.ReqTypeEnum;
 import com.tiwari.studence.common.http.util.ServletUtil;
-import com.tiwari.studence.common.provider.IPbBuilderProvider;
-import com.tiwari.studence.common.provider.IReqRespPbBuilderProvider;
+import com.tiwari.studence.common.providerInterfaces.IPbBuilderProvider;
+import com.tiwari.studence.common.providerInterfaces.IReqRespPbBuilderProvider;
 import com.tiwari.studence.common.request.RequestExecutor;
-import com.tiwari.studence.common.services.interfaces.*;
+import com.tiwari.studence.common.service.v1.services.interfaces.*;
 import com.tiwari.studence.util.exception.ErrorException;
 import com.tiwari.studence.util.exception.Preconditions;
 import com.tiwari.studence.util.log.IServerExceptionLogger;
 import com.tiwari.studence.util.serverConfig.ServerConfigUtility;
-import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 
 public abstract class AHttpEntityServlet<Service, UiPb extends GeneratedMessageV3, Lreq extends GeneratedMessageV3, Lresp extends GeneratedMessageV3, UiPbBuProvider extends IPbBuilderProvider<?, ?>, ReqPbBuProvider extends IReqRespPbBuilderProvider<?, ?, ?, ?>>

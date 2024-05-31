@@ -2,7 +2,7 @@ package com.tiwari.studence.classes.updater;
 
 import com.tiwari.studence.classes.indexer.ClassesIndexer;
 import com.tiwari.studence.classes.provider.ClassesProvider;
-import com.tiwari.studence.common.updater.AEntityUpdater;
+import com.tiwari.studence.common.service.v1.updater.AEntityUpdater;
 import com.tiwari.studence.proto.classes.ClassesPb;
 import com.tiwari.studence.proto.entity.EntityPb;
 import com.tiwari.studence.util.common.Strings;
