@@ -23,6 +23,7 @@ private static final long serialVersionUID = 0L;
     expression_ = "";
     attributeNameAlias_ = "";
     attributeValueAlias_ = "";
+    compareType_ = 0;
   }
 
   @java.lang.Override
@@ -296,6 +297,24 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int COMPARETYPE_FIELD_NUMBER = 10;
+  private int compareType_ = 0;
+  /**
+   * <code>.com.tiwari.studence.proto.search.ComparisonOperatorEnum compareType = 10;</code>
+   * @return The enum numeric value on the wire for compareType.
+   */
+  @java.lang.Override public int getCompareTypeValue() {
+    return compareType_;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.search.ComparisonOperatorEnum compareType = 10;</code>
+   * @return The compareType.
+   */
+  @java.lang.Override public com.tiwari.studence.proto.search.ComparisonOperatorEnum getCompareType() {
+    com.tiwari.studence.proto.search.ComparisonOperatorEnum result = com.tiwari.studence.proto.search.ComparisonOperatorEnum.forNumber(compareType_);
+    return result == null ? com.tiwari.studence.proto.search.ComparisonOperatorEnum.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -337,6 +356,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(attributeValueAlias_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 9, attributeValueAlias_);
     }
+    if (compareType_ != com.tiwari.studence.proto.search.ComparisonOperatorEnum.UNKNOWN.getNumber()) {
+      output.writeEnum(10, compareType_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -377,6 +399,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(attributeValueAlias_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, attributeValueAlias_);
     }
+    if (compareType_ != com.tiwari.studence.proto.search.ComparisonOperatorEnum.UNKNOWN.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(10, compareType_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -410,6 +436,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getAttributeNameAlias())) return false;
     if (!getAttributeValueAlias()
         .equals(other.getAttributeValueAlias())) return false;
+    if (compareType_ != other.compareType_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -440,6 +467,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getAttributeNameAlias().hashCode();
     hash = (37 * hash) + ATTRIBUTEVALUEALIAS_FIELD_NUMBER;
     hash = (53 * hash) + getAttributeValueAlias().hashCode();
+    hash = (37 * hash) + COMPARETYPE_FIELD_NUMBER;
+    hash = (53 * hash) + compareType_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -578,6 +607,7 @@ private static final long serialVersionUID = 0L;
       expression_ = "";
       attributeNameAlias_ = "";
       attributeValueAlias_ = "";
+      compareType_ = 0;
       return this;
     }
 
@@ -637,6 +667,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.attributeValueAlias_ = attributeValueAlias_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.compareType_ = compareType_;
       }
     }
 
@@ -721,6 +754,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000100;
         onChanged();
       }
+      if (other.compareType_ != 0) {
+        setCompareTypeValue(other.getCompareTypeValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -792,6 +828,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000100;
               break;
             } // case 74
+            case 80: {
+              compareType_ = input.readEnum();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 80
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1314,6 +1355,59 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       attributeValueAlias_ = value;
       bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+
+    private int compareType_ = 0;
+    /**
+     * <code>.com.tiwari.studence.proto.search.ComparisonOperatorEnum compareType = 10;</code>
+     * @return The enum numeric value on the wire for compareType.
+     */
+    @java.lang.Override public int getCompareTypeValue() {
+      return compareType_;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.search.ComparisonOperatorEnum compareType = 10;</code>
+     * @param value The enum numeric value on the wire for compareType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCompareTypeValue(int value) {
+      compareType_ = value;
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.search.ComparisonOperatorEnum compareType = 10;</code>
+     * @return The compareType.
+     */
+    @java.lang.Override
+    public com.tiwari.studence.proto.search.ComparisonOperatorEnum getCompareType() {
+      com.tiwari.studence.proto.search.ComparisonOperatorEnum result = com.tiwari.studence.proto.search.ComparisonOperatorEnum.forNumber(compareType_);
+      return result == null ? com.tiwari.studence.proto.search.ComparisonOperatorEnum.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.search.ComparisonOperatorEnum compareType = 10;</code>
+     * @param value The compareType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCompareType(com.tiwari.studence.proto.search.ComparisonOperatorEnum value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000200;
+      compareType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.search.ComparisonOperatorEnum compareType = 10;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCompareType() {
+      bitField0_ = (bitField0_ & ~0x00000200);
+      compareType_ = 0;
       onChanged();
       return this;
     }

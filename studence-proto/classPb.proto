@@ -1,0 +1,76 @@
+// Copyright (c) 2022, All Right Reserved, Shubham Tiwari
+
+syntax = "proto3";
+
+package com.tiwari.studence.proto.classes;
+
+import "entityPb.proto";
+import "summaryPb.proto";
+import "campusPb.proto";
+import "genericRefPb.proto";
+
+option java_multiple_files = true;
+option java_generate_equals_and_hash = true;
+
+//The following protos are reserved 12,13,14,15,16.You shd not use them
+
+enum ClassType {
+  CLASS_UNKNOWN = 0;
+  CLASS_ONE = 1;
+  CLASS_TWO = 2;
+  CLASS_THREE = 3;
+  CLASS_FOUR = 4;
+  CLASS_FIVE = 5;
+  CLASS_SIX = 6;
+  CLASS_SEVEN = 7;
+  CLASS_EIGHT = 8;
+  CLASS_NINE = 9;
+  CLASS_TEN = 10;
+  CLASS_ELEVEN = 11;
+  CLASS_TWELVE = 12;
+  CLASS_NURSERY = 13;
+  CLASS_LKG = 14;
+  CLASS_UKG = 15;
+}
+
+
+enum SectionType {
+  SECTION_UNKNOWN = 0;
+  SECTION_A = 1;
+  SECTION_B = 2;
+  SECTION_C = 3;
+  SECTION_D = 4;
+  SECTION_E = 5;
+  SECTION_F = 6;
+  SECTION_G = 7;
+  SECTION_H = 8;
+  SECTION_I = 9;
+  SECTION_J = 10;
+}
+
+message ClassesPb{
+  com.tiwari.studence.proto.entity.EntityPb dbInfo =1;
+  ClassType classType = 2;
+  SectionType sectionType =3;
+  com.tiwari.studence.proto.campus.CampusRefPb campusRef = 4;
+}
+
+
+message ClassesRefPb{
+  string dbInfoId =1;
+  ClassType classType = 2;
+  SectionType sectionType =3;
+}
+
+message ClassesSearchReqPb{
+  ClassType classType = 1;
+  SectionType sectionType =2;
+  string campusRefId = 3;
+}
+
+
+message ClassesSearchRespPb{
+  com.tiwari.studence.proto.summary.SummaryPb summary =1;
+  repeated ClassesPb results = 2;
+}
+

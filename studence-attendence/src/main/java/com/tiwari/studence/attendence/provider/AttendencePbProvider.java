@@ -1,6 +1,6 @@
 package com.tiwari.studence.attendence.provider;
 
-import com.tiwari.studence.common.provider.IPbBuilderProvider;
+import com.tiwari.studence.common.providerInterfaces.IPbBuilderProvider;
 import com.tiwari.studence.proto.attendence.AttendencePb;
 import com.tiwari.studence.proto.attendence.AttendencePb.Builder;
 

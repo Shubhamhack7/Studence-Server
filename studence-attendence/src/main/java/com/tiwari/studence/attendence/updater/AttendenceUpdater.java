@@ -2,12 +2,12 @@ package com.tiwari.studence.attendence.updater;
 
 import com.tiwari.studence.attendence.indexer.AttendenceIndexer;
 import com.tiwari.studence.attendence.provider.AttendencePbProvider;
-import com.tiwari.studence.common.updater.AEntityUpdater;
+import com.tiwari.studence.common.service.v1.updater.AEntityUpdater;
 import com.tiwari.studence.proto.attendence.AttendencePb;
 import com.tiwari.studence.proto.attendence.AttendencePb.Builder;
 import com.tiwari.studence.proto.datatypes.BooleanEnum;
 import com.tiwari.studence.proto.entity.EntityPb;
-import com.tiwari.studence.util.Strings;
+import com.tiwari.studence.util.common.Strings;
 import com.tiwari.studence.util.helper.ContactDetailsHelper;
 import com.tiwari.studence.util.helper.NameHelper;
 import software.amazon.awssdk.services.dynamodb.model.AttributeValue;
@@ -44,7 +44,7 @@ public class AttendenceUpdater extends
         if (Strings.notEmpty(builder.getClassRef().getDbInfoId())){
             attendeceBuilder.setClassRef(builder.getClassRef());
         }
-        if(builder.getIsPresent()!=BooleanEnum.UNRECOGNIZED){
+        if(builder.getIsPresent()!=BooleanEnum.FALSE){
             attendeceBuilder.setIsPresent(builder.getIsPresent());
         }
 

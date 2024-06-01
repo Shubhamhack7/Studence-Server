@@ -55,12 +55,13 @@ public final class GuardianPbOuterClass {
       "\030\005 \001(\0132:.com.tiwari.studence.proto.conta" +
       "ctDetails.ContactDetailsPb\"I\n\rGuardianRe" +
       "fPb\022\020\n\010dbInfoId\030\001 \001(\t\022\022\n\nfatherName\030\002 \001(" +
-      "\t\022\022\n\nmotherName\030\003 \001(\t\"#\n\023GuardianSearchR" +
-      "eqPb\022\014\n\004name\030\001 \001(\t\"\226\001\n\024GuardianSearchRes" +
-      "pPb\022=\n\007summary\030\001 \001(\0132,.com.tiwari.studen" +
-      "ce.proto.summary.SummaryPb\022?\n\007results\030\002 " +
-      "\003(\0132..com.tiwari.studence.proto.guardian" +
-      ".GuardianPbB\005P\001\240\001\001b\006proto3"
+      "\t\022\022\n\nmotherName\030\003 \001(\t\"6\n\023GuardianSearchR" +
+      "eqPb\022\021\n\tnextToken\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\"\226\001" +
+      "\n\024GuardianSearchRespPb\022=\n\007summary\030\001 \001(\0132" +
+      ",.com.tiwari.studence.proto.summary.Summ" +
+      "aryPb\022?\n\007results\030\002 \003(\0132..com.tiwari.stud" +
+      "ence.proto.guardian.GuardianPbB\005P\001\240\001\001b\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -87,7 +88,7 @@ public final class GuardianPbOuterClass {
     internal_static_com_tiwari_studence_proto_guardian_GuardianSearchReqPb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tiwari_studence_proto_guardian_GuardianSearchReqPb_descriptor,
-        new java.lang.String[] { "Name", });
+        new java.lang.String[] { "NextToken", "Name", });
     internal_static_com_tiwari_studence_proto_guardian_GuardianSearchRespPb_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_com_tiwari_studence_proto_guardian_GuardianSearchRespPb_fieldAccessorTable = new

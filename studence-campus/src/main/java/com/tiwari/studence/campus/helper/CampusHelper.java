@@ -1,7 +1,7 @@
 package com.tiwari.studence.campus.helper;
 
 import com.tiwari.studence.proto.campus.CampusRefPb;
-import com.tiwari.studence.util.Strings;
+import com.tiwari.studence.util.common.Strings;
 import com.tiwari.studence.util.helper.ContactDetailsHelper;
 import com.tiwari.studence.util.helper.NameHelper;
 

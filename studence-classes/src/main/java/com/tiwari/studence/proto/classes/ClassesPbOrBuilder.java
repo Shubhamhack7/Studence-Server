@@ -58,28 +58,4 @@ public interface ClassesPbOrBuilder extends
    * <code>.com.tiwari.studence.proto.campus.CampusRefPb campusRef = 4;</code>
    */
   com.tiwari.studence.proto.campus.CampusRefPbOrBuilder getCampusRefOrBuilder();
-
-  /**
-   * <code>repeated .com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean othersTeacher = 5;</code>
-   */
-  java.util.List<com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean> 
-      getOthersTeacherList();
-  /**
-   * <code>repeated .com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean othersTeacher = 5;</code>
-   */
-  com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean getOthersTeacher(int index);
-  /**
-   * <code>repeated .com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean othersTeacher = 5;</code>
-   */
-  int getOthersTeacherCount();
-  /**
-   * <code>repeated .com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean othersTeacher = 5;</code>
-   */
-  java.util.List<? extends com.tiwari.studence.proto.genericRef.GenericRefPbWithBooleanOrBuilder> 
-      getOthersTeacherOrBuilderList();
-  /**
-   * <code>repeated .com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean othersTeacher = 5;</code>
-   */
-  com.tiwari.studence.proto.genericRef.GenericRefPbWithBooleanOrBuilder getOthersTeacherOrBuilder(
-      int index);
 }

@@ -6,6 +6,7 @@ package com.tiwari.studence.proto.devices;
 
 import "entityPb.proto";
 import "pushNotificationPb.proto";
+import "summaryPb.proto";
 
 option java_multiple_files = true;
 option java_generate_equals_and_hash = true;
@@ -33,14 +34,20 @@ enum DeviceAppMode {
   MOBILE_APP =2;
 }
 
+enum DeviceIPAddressType {
+  UNKNOWN_IPADDRESS_TYPE = 0;
+  IPV4 =1;
+  IPV6 =2;
+}
+
 message AndroidDisplayInfo{
-  float display_size_inches = 27;
-  int32 display_width_pixels = 28;
-  float display_width_inches = 29;
-  int32 display_height_pixels = 30;
-  float display_height_inches = 31;
-  float display_x_dpi = 32;
-  float display_y_dpi = 33;
+  float display_size_inches = 1;
+  int32 display_width_pixels = 2;
+  float display_width_inches = 3;
+  int32 display_height_pixels = 4;
+  float display_height_inches = 5;
+  float display_x_dpi = 6;
+  float display_y_dpi = 7;
 }
 
 message AndroidDeviceDetails {
@@ -174,7 +181,10 @@ message DeviceScreenSize {
   int32 hieght=1;
   int32 width=2;
 }
-
+message DeviceIpAddress {
+  string deviceIpAddress=1;
+  DeviceIPAddressType ipType=2;
+}
 message DeviceDetailsPb{
   com.tiwari.studence.proto.entity.EntityPb dbInfo =1;
   DeviceOSTypeEnum deviceOsType = 2;
@@ -186,9 +196,31 @@ message DeviceDetailsPb{
   LinuxDeviceInfoDetails linuxDevice =8;
   DeviceScreenSize screeSize =9;
   string deviceMacId = 10;
-  string deviceIpAddress =11;
+  DeviceIpAddress deviceIpAddress =11;
   string unique_id = 12;
   DeviceAppMode mode = 13;
   DeviceTypeEnum deviceType =14;
-  com.tiwari.studence.proto.pushNotification.PushNotificationRefPb pushNotificationRef = 15;
+  string device_id = 15;
+}
+
+message DeviceDetailsRefPb{
+  string dbInfoId =1;
+  DeviceOSTypeEnum deviceOsType = 2;
+  string deviceMacId = 3;
+  DeviceIpAddress deviceIpAddress =4;
+  string unique_id = 5;
+  DeviceAppMode mode = 6;
+  DeviceTypeEnum deviceType =7;
+  string device_id = 8;
+}
+
+message DeviceDetailsSearchReqPb{
+  DeviceOSTypeEnum deviceOsType = 1;
+
+}
+
+
+message DeviceDetailsSearchRespPb{
+  com.tiwari.studence.proto.summary.SummaryPb summary =1;
+  repeated DeviceDetailsPb results = 2;
 }

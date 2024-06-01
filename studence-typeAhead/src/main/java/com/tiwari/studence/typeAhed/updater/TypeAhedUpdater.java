@@ -5,9 +5,10 @@ import com.tiwari.studence.proto.entity.EntityPb;
 import com.tiwari.studence.proto.typeAhead.TypeAheadPb;
 import com.tiwari.studence.typeAhed.indexer.TypeAhedIndexer;
 import com.tiwari.studence.typeAhed.provider.TypeAhedProvider;
-import com.tiwari.studence.util.Strings;
+import com.tiwari.studence.util.common.Strings;
 import software.amazon.awssdk.services.dynamodb.model.AttributeValue;
 
+import javax.inject.Inject;
 import javax.inject.Singleton;
 import java.util.HashMap;
 
@@ -15,7 +16,7 @@ import java.util.HashMap;
 public class TypeAhedUpdater extends
         AEntityUpdater<TypeAheadPb, TypeAheadPb.Builder, TypeAhedProvider, TypeAhedIndexer> {
 
-  @Singleton
+  @Inject
   public TypeAhedUpdater(TypeAhedIndexer indexer, TypeAhedProvider builderProvider) {
     super(indexer, builderProvider);
   }

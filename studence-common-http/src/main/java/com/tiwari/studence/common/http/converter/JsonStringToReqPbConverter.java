@@ -4,7 +4,7 @@ import com.google.inject.Inject;
 import com.google.protobuf.ExtensionRegistry;
 import com.google.protobuf.GeneratedMessageV3;
 import com.googlecode.protobuf.format.JsonFormat;
-import com.tiwari.studence.common.provider.IReqRespPbBuilderProvider;
+import com.tiwari.studence.common.providerInterfaces.IReqRespPbBuilderProvider;
 import com.tiwari.studence.proto.error.ErrorCategoryUiEnum;
 import com.tiwari.studence.util.exception.LoggedRuntimeException;
 

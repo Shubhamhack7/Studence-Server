@@ -1,0 +1,167 @@
+// Copyright (c) 2022, All Right Reserved, Shubham Tiwari
+
+syntax = "proto3";
+
+package com.tiwari.studence.proto.contactDetails;
+
+option java_multiple_files = true;
+option java_generate_equals_and_hash = true;
+
+
+enum ISDCode {
+  ISD_ONE = 0;
+  ISD_SEVEN = 1;
+  ISD_TWENTY = 2;
+  ISD_TWENTY_SEVEN = 3;
+  ISD_THIRTY = 4;
+  ISD_THIRTY_ONE = 5;
+  ISD_THIRTY_TWO = 6;
+  ISD_THIRTY_THREE = 7;
+  ISD_THIRTY_FOUR = 8;
+  ISD_THIRTY_FIVE = 9;
+  ISD_THIRTY_SIX = 10;
+  ISD_THIRTY_SEVEN = 11;
+  ISD_THIRTY_EIGHT = 12;
+  ISD_THIRTY_NINE = 13;
+  ISD_FORTY = 14;
+  ISD_FORTY_ONE = 15;
+  ISD_FORTY_TWO = 16;
+  ISD_FORTY_THREE = 17;
+  ISD_FORTY_FOUR = 18;
+  ISD_FORTY_FIVE = 19;
+  ISD_FORTY_SIX = 20;
+  ISD_FORTY_SEVEN = 21;
+  ISD_FORTY_EIGHT = 22;
+  ISD_FORTY_NINE = 23;
+  ISD_FIFTY = 24;
+  ISD_FIFTY_ONE = 25;
+  ISD_FIFTY_TWO = 26;
+  ISD_FIFTY_THREE = 27;
+  ISD_FIFTY_FOUR = 28;
+  ISD_FIFTY_FIVE = 29;
+  ISD_FIFTY_SIX = 30;
+  ISD_FIFTY_SEVEN = 31;
+  ISD_FIFTY_EIGHT = 32;
+  ISD_FIFTY_NINE = 33;
+  ISD_SIXTY = 34;
+  ISD_SIXTY_ONE = 35;
+  ISD_SIXTY_TWO = 36;
+  ISD_SIXTY_THREE = 37;
+  ISD_SIXTY_FOUR = 38;
+  ISD_SIXTY_FIVE = 39;
+  ISD_SIXTY_SIX = 40;
+  ISD_SIXTY_SEVEN = 41;
+  ISD_SIXTY_EIGHT = 42;
+  ISD_SIXTY_NINE = 43;
+  ISD_SEVENTY = 44;
+  ISD_SEVENTY_ONE = 45;
+  ISD_SEVENTY_TWO = 46;
+  ISD_SEVENTY_THREE = 47;
+  ISD_SEVENTY_FOUR = 48;
+  ISD_SEVENTY_FIVE = 49;
+  ISD_SEVENTY_SIX = 50;
+  ISD_SEVENTY_SEVEN = 51;
+  ISD_SEVENTY_EIGHT = 52;
+  ISD_SEVENTY_NINE = 53;
+  ISD_EIGHTY = 54;
+  ISD_EIGHTY_ONE = 55;
+  ISD_EIGHTY_TWO = 56;
+  ISD_EIGHTY_THREE = 57;
+  ISD_EIGHTY_FOUR = 58 ;
+  ISD_EIGHTY_FIVE = 59;
+  ISD_EIGHTY_SIX = 60 ;
+  ISD_EIGHTY_SEVEN = 61 ;
+  ISD_EIGHTY_EIGHT = 62 ;
+  ISD_EIGHTY_NINE = 63;
+  ISD_NINETY = 64 ;
+  ISD_NINETY_ONE = 65 ;
+  ISD_NINETY_TWO = 66 ;
+  ISD_NINETY_THREE = 67;
+  ISD_NINETY_FOUR = 68 ;
+  ISD_NINETY_FIVE = 69 ;
+  ISD_NINETY_SIX = 70 ;
+  ISD_NINETY_SEVEN = 71 ;
+  ISD_NINETY_EIGHT = 72;
+}
+
+enum CountryStateEnum {
+  ANDHRA_PRADESH = 0;
+  ARUNACHAL_PRADESH = 1;
+  ASSAM = 2;
+  BIHAR = 3;
+  CHHATTISGARH = 4;
+  GOA = 5;
+  GUJARAT = 6;
+  HARYANA = 7;
+  HIMACHAL_PRADESH = 8;
+  JHARKHAND = 9;
+  KARNATAKA = 10;
+  KERALA = 11;
+  MADHYA_PRADESH = 12;
+  MAHARASHTRA = 13;
+  MANIPUR = 14;
+  MEGHALAYA = 15;
+  MIZORAM = 16;
+  NAGALAND = 17;
+  ODISHA = 18;
+  PUNJAB = 19;
+  RAJASTHAN = 20;
+  SIKKIM = 21;
+  TAMIL_NADU = 22;
+  TELANGANA = 23;
+  TRIPURA = 24;
+  UTTARAKHAND = 25;
+  UTTAR_PRADESH = 26;
+  WEST_BENGAL = 27;
+  ANDAMAN_AND_NICOBAR_ISLANDS = 28;
+  CHANDIGARH = 29;
+  DADRA_AND_NAGAR_HAVELI_AND_DAMAN_AND_DIU = 30;
+  DELHI = 31;
+  LAKSHADWEEP = 32;
+  PUDUCHERRY = 33;
+}
+
+message MobileNumberPb{
+  ISDCode code = 1 ;
+  string number = 2;
+  string canonicalNumber = 3 ;
+}
+
+message MobileNumbersPb{
+  MobileNumberPb primary = 1 ;
+  repeated MobileNumberPb others = 2;
+}
+message EmailPb{
+  string localPart = 1 ;
+  string domainPart = 2;
+  string canonicalEmail = 3;
+}
+
+message EmailsPb{
+  EmailPb primary = 1 ;
+  repeated EmailPb others = 2;
+}
+
+message AddressPb{
+  string street = 1 ;
+  string area = 2 ;
+  string landmark = 3 ;
+  string city = 4 ;
+  string pincode = 5 ;
+  string state = 6;
+  string country =7;
+  string canonicalAddress =8;
+}
+
+message AddressesPb{
+  AddressPb primary = 1 ;
+  repeated AddressPb others = 2 ;
+}
+
+message ContactDetailsPb{
+  MobileNumbersPb mobileNumbers = 1 ;
+  EmailsPb emails = 2;
+  AddressesPb address = 3 ;
+}
+
+

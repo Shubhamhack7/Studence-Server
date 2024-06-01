@@ -1,0 +1,56 @@
+// Copyright (c) 2022, All Right Reserved, Shubham Tiwari
+
+syntax = "proto3";
+
+package com.tiwari.studence.proto.teacher;
+
+import "entityPb.proto";
+import "namePb.proto";
+import "contactDetailsPb.proto";
+import "summaryPb.proto";
+import "campusPb.proto";
+import "dataTypesPb.proto";
+import "subjectPb.proto";
+import "classPb.proto";
+
+option java_multiple_files = true;
+option java_generate_equals_and_hash = true;
+
+//The following protos are reserved 12,13,14,15,16.You shd not use them
+
+message TeacherPb{
+  com.tiwari.studence.proto.entity.EntityPb dbInfo =1;
+  com.tiwari.studence.proto.name.NamePb name= 2;
+  com.tiwari.studence.proto.contactDetails.ContactDetailsPb contactDetails= 3;
+  com.tiwari.studence.proto.campus.CampusRefPb CampusRef = 4;
+  TeacherClassPb classTeacherAndTeacher = 5;
+}
+
+message TeacherClassPb{
+  com.tiwari.studence.proto.datatypes.BooleanEnum isCLassTeacher=1;
+  repeated TeacherClassSubjectPb classTeacher = 2;
+  repeated TeacherClassSubjectPb teacher = 3;
+}
+message TeacherClassSubjectPb{
+  com.tiwari.studence.proto.subject.SubjectTypeEnum subjectType=1;
+  com.tiwari.studence.proto.classes.ClassesRefPb classTeacher = 2;
+}
+
+
+message TeacherRefPb{
+  string dbInfoId =1;
+  string name= 2;
+  string campusRefId =3;
+  string classRef =4;
+}
+
+message TeacherSearchReqPb{
+  string name = 1;
+}
+
+
+message TeacherSearchRespPb{
+  com.tiwari.studence.proto.summary.SummaryPb summary =1;
+  repeated TeacherPb results = 2;
+}
+

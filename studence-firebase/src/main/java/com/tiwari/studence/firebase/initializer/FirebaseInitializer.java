@@ -12,7 +12,7 @@ import com.google.firebase.cloud.StorageClient;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.messaging.FirebaseMessaging;
-import com.tiwari.studence.util.Strings;
+import com.tiwari.studence.util.common.Strings;
 import com.tiwari.studence.util.exception.ErrorException;
 
 import java.io.FileInputStream;
@@ -38,8 +38,12 @@ public class FirebaseInitializer {
 
   }
 
-  public FirebaseAuth getFirebaseAuth() {
+  public static FirebaseAuth getFirebaseAuth() {
     return FirebaseAuth.getInstance();
+  }
+
+  public static StorageClient getFirebaseStorageClient() {
+    return StorageClient.getInstance();
   }
 
   public DatabaseReference getDatabaseReference() {
@@ -54,7 +58,7 @@ public class FirebaseInitializer {
     return FirebaseMessaging.getInstance();
   }
 
-  public StorageClient getFirebaseStorageClient(String bucketName) {
+  public static StorageClient getFirebaseStorageClient(String bucketName) {
     return StorageClient.getInstance();
   }
 

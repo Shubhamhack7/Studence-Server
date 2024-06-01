@@ -1,10 +1,5 @@
 package com.tiwari.studence.app.module;
 
-import java.util.Map;
-import java.util.Set;
-
-import javax.inject.Inject;
-
 import com.google.inject.AbstractModule;
 import com.google.inject.Singleton;
 import com.google.inject.name.Named;
@@ -14,10 +9,18 @@ import com.tiwari.studence.app.servlet.MyServlet;
 import com.tiwari.studence.campus.module.CampusModule;
 import com.tiwari.studence.common.module.*;
 import com.tiwari.studence.dynamodb.database.module.CreateDynamoDbTableModule;
+import com.tiwari.studence.firebase.module.FirebaseServiceModule;
+import com.tiwari.studence.login.module.LoginModule;
 import com.tiwari.studence.organisation.module.OrganisationModule;
+import com.tiwari.studence.server.createLogin.module.CreateLoginModule;
+import com.tiwari.studence.server.organisationCreateAndCampus.module.OrganisationCreateAndCampusModule;
 import com.tiwari.studence.util.collect.Maps;
 import com.tiwari.studence.util.module.ServerExceptionModule;
 import com.tiwari.studence.util.module.ServerListnerModule;
+
+import javax.inject.Inject;
+import java.util.Map;
+import java.util.Set;
 
 @Singleton
 public class StudenceManagementServiceModule extends ServletModule {
@@ -31,7 +34,11 @@ public class StudenceManagementServiceModule extends ServletModule {
           CreateDynamoDbTableModule createDynamoDbTableModule,
           PutItemDynamoTableModule putItemDynamoTableModule,
           SearchItemDynamoTableModule searchItemDynamoTableModule,
-          OrganisationModule orgnisationModule, CampusModule campusModule) {
+          OrganisationModule orgnisationModule, CampusModule campusModule
+         /* DevicesModule devicesModule*/, FirebaseServiceModule firebaseServiceModule,
+          OrganisationCreateAndCampusModule organisationCreateAndCampusModule
+          /*PushNotificationModule pushNotificationModule*/, LoginModule loginModule
+         /* TypeAhedModule typeAhedModule*/,CreateLoginModule createLoginModule) {
     moduleSet.add(this);
     moduleSet.add(serverExceptionModule);
     moduleSet.add(serverListnerModule);
@@ -41,8 +48,15 @@ public class StudenceManagementServiceModule extends ServletModule {
     moduleSet.add(putItemDynamoTableModule);
     moduleSet.add(createDynamoDbTableModule);
     moduleSet.add(searchItemDynamoTableModule);
+   // moduleSet.add(devicesModule);
+   // moduleSet.add(pushNotificationModule);
     moduleSet.add(orgnisationModule);
     moduleSet.add(campusModule);
+    //moduleSet.add(typeAhedModule);
+    moduleSet.add(organisationCreateAndCampusModule);
+    moduleSet.add(loginModule);
+    moduleSet.add(firebaseServiceModule);
+    moduleSet.add(createLoginModule);
   }
 
   @Override

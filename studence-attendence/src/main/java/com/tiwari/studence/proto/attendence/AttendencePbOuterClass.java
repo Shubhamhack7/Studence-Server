@@ -34,6 +34,11 @@ public final class AttendencePbOuterClass {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_tiwari_studence_proto_attendence_AttendenceSearchRespPb_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tiwari_studence_proto_attendence_MarkAttendencePb_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tiwari_studence_proto_attendence_MarkAttendencePb_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -63,8 +68,9 @@ public final class AttendencePbOuterClass {
       "nceSearchRespPb\022=\n\007summary\030\001 \001(\0132,.com.t" +
       "iwari.studence.proto.summary.SummaryPb\022C" +
       "\n\007results\030\002 \003(\01322.com.tiwari.studence.pr" +
-      "oto.attendence.AttendencePbB\005P\001\240\001\001b\006prot" +
-      "o3"
+      "oto.attendence.AttendencePb\"(\n\020MarkAtten" +
+      "dencePb\022\024\n\014attendenceId\030\001 \003(\tB\005P\001\240\001\001b\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -101,6 +107,12 @@ public final class AttendencePbOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tiwari_studence_proto_attendence_AttendenceSearchRespPb_descriptor,
         new java.lang.String[] { "Summary", "Results", });
+    internal_static_com_tiwari_studence_proto_attendence_MarkAttendencePb_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_com_tiwari_studence_proto_attendence_MarkAttendencePb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_attendence_MarkAttendencePb_descriptor,
+        new java.lang.String[] { "AttendenceId", });
     com.tiwari.studence.proto.entity.EntityPbOuterClass.getDescriptor();
     com.tiwari.studence.proto.name.NamePbOuterClass.getDescriptor();
     com.tiwari.studence.proto.summary.SummaryPbOuterClass.getDescriptor();

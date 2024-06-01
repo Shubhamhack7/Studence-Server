@@ -2,7 +2,6 @@ package com.tiwari.studence.attendence.searcher;
 
 import com.tiwari.studence.attendence.convertor.AttendenceConvertor;
 import com.tiwari.studence.attendence.indexer.AttendenceIndexer;
-import com.tiwari.studence.attendence.indexer.AttendenceIndexerEnum;
 import com.tiwari.studence.attendence.provider.AttendencePbProvider;
 import com.tiwari.studence.attendence.provider.AttendenceSearchPbProvider;
 import com.tiwari.studence.attendence.provider.AttendenceTableNameProvider;
@@ -12,11 +11,7 @@ import com.tiwari.studence.common.searcher.AEntitySearcher;
 import com.tiwari.studence.proto.attendence.AttendencePb;
 import com.tiwari.studence.proto.attendence.AttendenceSearchReqPb;
 import com.tiwari.studence.proto.attendence.AttendenceSearchRespPb;
-import com.tiwari.studence.proto.search.ComparisonOperatorEnum;
-import com.tiwari.studence.proto.search.DynamoDBValue;
-import com.tiwari.studence.proto.search.SearchPb;
 import com.tiwari.studence.proto.search.SearchRequestsPb;
-import com.tiwari.studence.util.Strings;
 import com.tiwari.studence.util.exception.ErrorException;
 
 import javax.inject.Inject;

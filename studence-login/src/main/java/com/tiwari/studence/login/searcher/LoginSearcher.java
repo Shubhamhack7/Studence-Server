@@ -16,7 +16,7 @@ import com.tiwari.studence.proto.search.ComparisonOperatorEnum;
 import com.tiwari.studence.proto.search.DynamoDBValue;
 import com.tiwari.studence.proto.search.SearchPb;
 import com.tiwari.studence.proto.search.SearchRequestsPb;
-import com.tiwari.studence.util.Strings;
+import com.tiwari.studence.util.common.Strings;
 import com.tiwari.studence.util.exception.ErrorException;
 
 import javax.inject.Inject;

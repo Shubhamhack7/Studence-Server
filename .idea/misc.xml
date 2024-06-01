@@ -10,15 +10,19 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-<<<<<<< HEAD
         <option value="$PROJECT_DIR$/studence-login/pom.xml" />
         <option value="$PROJECT_DIR$/studence-guardian/pom.xml" />
         <option value="$PROJECT_DIR$/studence-firebase/pom.xml" />
         <option value="$PROJECT_DIR$/studence-pushNotification/pom.xml" />
         <option value="$PROJECT_DIR$/studence-server/pom.xml" />
-=======
->>>>>>> production
+        <option value="$PROJECT_DIR$/studence-openai/pom.xml" />
+        <option value="$PROJECT_DIR$/studence-filesInfo/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/studence-util/studence-login/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK" />

@@ -147,30 +147,30 @@ private static final long serialVersionUID = 0L;
     return campusRef_ == null ? com.tiwari.studence.proto.campus.CampusRefPb.getDefaultInstance() : campusRef_;
   }
 
-  public static final int CLASSTEACHER_FIELD_NUMBER = 5;
-  private com.tiwari.studence.proto.classes.ClassesRefPb classTeacher_;
+  public static final int CLASSTEACHERANDTEACHER_FIELD_NUMBER = 5;
+  private com.tiwari.studence.proto.teacher.TeacherClassPb classTeacherAndTeacher_;
   /**
-   * <code>.com.tiwari.studence.proto.classes.ClassesRefPb classTeacher = 5;</code>
-   * @return Whether the classTeacher field is set.
+   * <code>.com.tiwari.studence.proto.teacher.TeacherClassPb classTeacherAndTeacher = 5;</code>
+   * @return Whether the classTeacherAndTeacher field is set.
    */
   @java.lang.Override
-  public boolean hasClassTeacher() {
-    return classTeacher_ != null;
+  public boolean hasClassTeacherAndTeacher() {
+    return classTeacherAndTeacher_ != null;
   }
   /**
-   * <code>.com.tiwari.studence.proto.classes.ClassesRefPb classTeacher = 5;</code>
-   * @return The classTeacher.
+   * <code>.com.tiwari.studence.proto.teacher.TeacherClassPb classTeacherAndTeacher = 5;</code>
+   * @return The classTeacherAndTeacher.
    */
   @java.lang.Override
-  public com.tiwari.studence.proto.classes.ClassesRefPb getClassTeacher() {
-    return classTeacher_ == null ? com.tiwari.studence.proto.classes.ClassesRefPb.getDefaultInstance() : classTeacher_;
+  public com.tiwari.studence.proto.teacher.TeacherClassPb getClassTeacherAndTeacher() {
+    return classTeacherAndTeacher_ == null ? com.tiwari.studence.proto.teacher.TeacherClassPb.getDefaultInstance() : classTeacherAndTeacher_;
   }
   /**
-   * <code>.com.tiwari.studence.proto.classes.ClassesRefPb classTeacher = 5;</code>
+   * <code>.com.tiwari.studence.proto.teacher.TeacherClassPb classTeacherAndTeacher = 5;</code>
    */
   @java.lang.Override
-  public com.tiwari.studence.proto.classes.ClassesRefPbOrBuilder getClassTeacherOrBuilder() {
-    return classTeacher_ == null ? com.tiwari.studence.proto.classes.ClassesRefPb.getDefaultInstance() : classTeacher_;
+  public com.tiwari.studence.proto.teacher.TeacherClassPbOrBuilder getClassTeacherAndTeacherOrBuilder() {
+    return classTeacherAndTeacher_ == null ? com.tiwari.studence.proto.teacher.TeacherClassPb.getDefaultInstance() : classTeacherAndTeacher_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -199,8 +199,8 @@ private static final long serialVersionUID = 0L;
     if (campusRef_ != null) {
       output.writeMessage(4, getCampusRef());
     }
-    if (classTeacher_ != null) {
-      output.writeMessage(5, getClassTeacher());
+    if (classTeacherAndTeacher_ != null) {
+      output.writeMessage(5, getClassTeacherAndTeacher());
     }
     getUnknownFields().writeTo(output);
   }
@@ -227,9 +227,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getCampusRef());
     }
-    if (classTeacher_ != null) {
+    if (classTeacherAndTeacher_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, getClassTeacher());
+        .computeMessageSize(5, getClassTeacherAndTeacher());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -266,10 +266,10 @@ private static final long serialVersionUID = 0L;
       if (!getCampusRef()
           .equals(other.getCampusRef())) return false;
     }
-    if (hasClassTeacher() != other.hasClassTeacher()) return false;
-    if (hasClassTeacher()) {
-      if (!getClassTeacher()
-          .equals(other.getClassTeacher())) return false;
+    if (hasClassTeacherAndTeacher() != other.hasClassTeacherAndTeacher()) return false;
+    if (hasClassTeacherAndTeacher()) {
+      if (!getClassTeacherAndTeacher()
+          .equals(other.getClassTeacherAndTeacher())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -298,9 +298,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CAMPUSREF_FIELD_NUMBER;
       hash = (53 * hash) + getCampusRef().hashCode();
     }
-    if (hasClassTeacher()) {
-      hash = (37 * hash) + CLASSTEACHER_FIELD_NUMBER;
-      hash = (53 * hash) + getClassTeacher().hashCode();
+    if (hasClassTeacherAndTeacher()) {
+      hash = (37 * hash) + CLASSTEACHERANDTEACHER_FIELD_NUMBER;
+      hash = (53 * hash) + getClassTeacherAndTeacher().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -451,10 +451,10 @@ private static final long serialVersionUID = 0L;
         campusRefBuilder_.dispose();
         campusRefBuilder_ = null;
       }
-      classTeacher_ = null;
-      if (classTeacherBuilder_ != null) {
-        classTeacherBuilder_.dispose();
-        classTeacherBuilder_ = null;
+      classTeacherAndTeacher_ = null;
+      if (classTeacherAndTeacherBuilder_ != null) {
+        classTeacherAndTeacherBuilder_.dispose();
+        classTeacherAndTeacherBuilder_ = null;
       }
       return this;
     }
@@ -510,9 +510,9 @@ private static final long serialVersionUID = 0L;
             : campusRefBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.classTeacher_ = classTeacherBuilder_ == null
-            ? classTeacher_
-            : classTeacherBuilder_.build();
+        result.classTeacherAndTeacher_ = classTeacherAndTeacherBuilder_ == null
+            ? classTeacherAndTeacher_
+            : classTeacherAndTeacherBuilder_.build();
       }
     }
 
@@ -572,8 +572,8 @@ private static final long serialVersionUID = 0L;
       if (other.hasCampusRef()) {
         mergeCampusRef(other.getCampusRef());
       }
-      if (other.hasClassTeacher()) {
-        mergeClassTeacher(other.getClassTeacher());
+      if (other.hasClassTeacherAndTeacher()) {
+        mergeClassTeacherAndTeacher(other.getClassTeacherAndTeacher());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -631,7 +631,7 @@ private static final long serialVersionUID = 0L;
             } // case 34
             case 42: {
               input.readMessage(
-                  getClassTeacherFieldBuilder().getBuilder(),
+                  getClassTeacherAndTeacherFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000010;
               break;
@@ -1129,123 +1129,123 @@ private static final long serialVersionUID = 0L;
       return campusRefBuilder_;
     }
 
-    private com.tiwari.studence.proto.classes.ClassesRefPb classTeacher_;
+    private com.tiwari.studence.proto.teacher.TeacherClassPb classTeacherAndTeacher_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tiwari.studence.proto.classes.ClassesRefPb, com.tiwari.studence.proto.classes.ClassesRefPb.Builder, com.tiwari.studence.proto.classes.ClassesRefPbOrBuilder> classTeacherBuilder_;
+        com.tiwari.studence.proto.teacher.TeacherClassPb, com.tiwari.studence.proto.teacher.TeacherClassPb.Builder, com.tiwari.studence.proto.teacher.TeacherClassPbOrBuilder> classTeacherAndTeacherBuilder_;
     /**
-     * <code>.com.tiwari.studence.proto.classes.ClassesRefPb classTeacher = 5;</code>
-     * @return Whether the classTeacher field is set.
+     * <code>.com.tiwari.studence.proto.teacher.TeacherClassPb classTeacherAndTeacher = 5;</code>
+     * @return Whether the classTeacherAndTeacher field is set.
      */
-    public boolean hasClassTeacher() {
+    public boolean hasClassTeacherAndTeacher() {
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
-     * <code>.com.tiwari.studence.proto.classes.ClassesRefPb classTeacher = 5;</code>
-     * @return The classTeacher.
+     * <code>.com.tiwari.studence.proto.teacher.TeacherClassPb classTeacherAndTeacher = 5;</code>
+     * @return The classTeacherAndTeacher.
      */
-    public com.tiwari.studence.proto.classes.ClassesRefPb getClassTeacher() {
-      if (classTeacherBuilder_ == null) {
-        return classTeacher_ == null ? com.tiwari.studence.proto.classes.ClassesRefPb.getDefaultInstance() : classTeacher_;
+    public com.tiwari.studence.proto.teacher.TeacherClassPb getClassTeacherAndTeacher() {
+      if (classTeacherAndTeacherBuilder_ == null) {
+        return classTeacherAndTeacher_ == null ? com.tiwari.studence.proto.teacher.TeacherClassPb.getDefaultInstance() : classTeacherAndTeacher_;
       } else {
-        return classTeacherBuilder_.getMessage();
+        return classTeacherAndTeacherBuilder_.getMessage();
       }
     }
     /**
-     * <code>.com.tiwari.studence.proto.classes.ClassesRefPb classTeacher = 5;</code>
+     * <code>.com.tiwari.studence.proto.teacher.TeacherClassPb classTeacherAndTeacher = 5;</code>
      */
-    public Builder setClassTeacher(com.tiwari.studence.proto.classes.ClassesRefPb value) {
-      if (classTeacherBuilder_ == null) {
+    public Builder setClassTeacherAndTeacher(com.tiwari.studence.proto.teacher.TeacherClassPb value) {
+      if (classTeacherAndTeacherBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        classTeacher_ = value;
+        classTeacherAndTeacher_ = value;
       } else {
-        classTeacherBuilder_.setMessage(value);
+        classTeacherAndTeacherBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.classes.ClassesRefPb classTeacher = 5;</code>
+     * <code>.com.tiwari.studence.proto.teacher.TeacherClassPb classTeacherAndTeacher = 5;</code>
      */
-    public Builder setClassTeacher(
-        com.tiwari.studence.proto.classes.ClassesRefPb.Builder builderForValue) {
-      if (classTeacherBuilder_ == null) {
-        classTeacher_ = builderForValue.build();
+    public Builder setClassTeacherAndTeacher(
+        com.tiwari.studence.proto.teacher.TeacherClassPb.Builder builderForValue) {
+      if (classTeacherAndTeacherBuilder_ == null) {
+        classTeacherAndTeacher_ = builderForValue.build();
       } else {
-        classTeacherBuilder_.setMessage(builderForValue.build());
+        classTeacherAndTeacherBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.classes.ClassesRefPb classTeacher = 5;</code>
+     * <code>.com.tiwari.studence.proto.teacher.TeacherClassPb classTeacherAndTeacher = 5;</code>
      */
-    public Builder mergeClassTeacher(com.tiwari.studence.proto.classes.ClassesRefPb value) {
-      if (classTeacherBuilder_ == null) {
+    public Builder mergeClassTeacherAndTeacher(com.tiwari.studence.proto.teacher.TeacherClassPb value) {
+      if (classTeacherAndTeacherBuilder_ == null) {
         if (((bitField0_ & 0x00000010) != 0) &&
-          classTeacher_ != null &&
-          classTeacher_ != com.tiwari.studence.proto.classes.ClassesRefPb.getDefaultInstance()) {
-          getClassTeacherBuilder().mergeFrom(value);
+          classTeacherAndTeacher_ != null &&
+          classTeacherAndTeacher_ != com.tiwari.studence.proto.teacher.TeacherClassPb.getDefaultInstance()) {
+          getClassTeacherAndTeacherBuilder().mergeFrom(value);
         } else {
-          classTeacher_ = value;
+          classTeacherAndTeacher_ = value;
         }
       } else {
-        classTeacherBuilder_.mergeFrom(value);
+        classTeacherAndTeacherBuilder_.mergeFrom(value);
       }
       bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.classes.ClassesRefPb classTeacher = 5;</code>
+     * <code>.com.tiwari.studence.proto.teacher.TeacherClassPb classTeacherAndTeacher = 5;</code>
      */
-    public Builder clearClassTeacher() {
+    public Builder clearClassTeacherAndTeacher() {
       bitField0_ = (bitField0_ & ~0x00000010);
-      classTeacher_ = null;
-      if (classTeacherBuilder_ != null) {
-        classTeacherBuilder_.dispose();
-        classTeacherBuilder_ = null;
+      classTeacherAndTeacher_ = null;
+      if (classTeacherAndTeacherBuilder_ != null) {
+        classTeacherAndTeacherBuilder_.dispose();
+        classTeacherAndTeacherBuilder_ = null;
       }
       onChanged();
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.classes.ClassesRefPb classTeacher = 5;</code>
+     * <code>.com.tiwari.studence.proto.teacher.TeacherClassPb classTeacherAndTeacher = 5;</code>
      */
-    public com.tiwari.studence.proto.classes.ClassesRefPb.Builder getClassTeacherBuilder() {
+    public com.tiwari.studence.proto.teacher.TeacherClassPb.Builder getClassTeacherAndTeacherBuilder() {
       bitField0_ |= 0x00000010;
       onChanged();
-      return getClassTeacherFieldBuilder().getBuilder();
+      return getClassTeacherAndTeacherFieldBuilder().getBuilder();
     }
     /**
-     * <code>.com.tiwari.studence.proto.classes.ClassesRefPb classTeacher = 5;</code>
+     * <code>.com.tiwari.studence.proto.teacher.TeacherClassPb classTeacherAndTeacher = 5;</code>
      */
-    public com.tiwari.studence.proto.classes.ClassesRefPbOrBuilder getClassTeacherOrBuilder() {
-      if (classTeacherBuilder_ != null) {
-        return classTeacherBuilder_.getMessageOrBuilder();
+    public com.tiwari.studence.proto.teacher.TeacherClassPbOrBuilder getClassTeacherAndTeacherOrBuilder() {
+      if (classTeacherAndTeacherBuilder_ != null) {
+        return classTeacherAndTeacherBuilder_.getMessageOrBuilder();
       } else {
-        return classTeacher_ == null ?
-            com.tiwari.studence.proto.classes.ClassesRefPb.getDefaultInstance() : classTeacher_;
+        return classTeacherAndTeacher_ == null ?
+            com.tiwari.studence.proto.teacher.TeacherClassPb.getDefaultInstance() : classTeacherAndTeacher_;
       }
     }
     /**
-     * <code>.com.tiwari.studence.proto.classes.ClassesRefPb classTeacher = 5;</code>
+     * <code>.com.tiwari.studence.proto.teacher.TeacherClassPb classTeacherAndTeacher = 5;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tiwari.studence.proto.classes.ClassesRefPb, com.tiwari.studence.proto.classes.ClassesRefPb.Builder, com.tiwari.studence.proto.classes.ClassesRefPbOrBuilder> 
-        getClassTeacherFieldBuilder() {
-      if (classTeacherBuilder_ == null) {
-        classTeacherBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tiwari.studence.proto.classes.ClassesRefPb, com.tiwari.studence.proto.classes.ClassesRefPb.Builder, com.tiwari.studence.proto.classes.ClassesRefPbOrBuilder>(
-                getClassTeacher(),
+        com.tiwari.studence.proto.teacher.TeacherClassPb, com.tiwari.studence.proto.teacher.TeacherClassPb.Builder, com.tiwari.studence.proto.teacher.TeacherClassPbOrBuilder> 
+        getClassTeacherAndTeacherFieldBuilder() {
+      if (classTeacherAndTeacherBuilder_ == null) {
+        classTeacherAndTeacherBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tiwari.studence.proto.teacher.TeacherClassPb, com.tiwari.studence.proto.teacher.TeacherClassPb.Builder, com.tiwari.studence.proto.teacher.TeacherClassPbOrBuilder>(
+                getClassTeacherAndTeacher(),
                 getParentForChildren(),
                 isClean());
-        classTeacher_ = null;
+        classTeacherAndTeacher_ = null;
       }
-      return classTeacherBuilder_;
+      return classTeacherAndTeacherBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
