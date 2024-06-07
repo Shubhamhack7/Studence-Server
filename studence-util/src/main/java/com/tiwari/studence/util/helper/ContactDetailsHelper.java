@@ -1,7 +1,7 @@
 package com.tiwari.studence.util.helper;
 
 import com.tiwari.studence.proto.contactDetails.*;
-import com.tiwari.studence.util.common.StudenceSpecialCharecterEnum;
+import com.tiwari.studence.util.StudenceSpecialCharecterEnum;
 import com.tiwari.studence.util.formatter.ISDCodeFormatter;
 
 import javax.inject.Inject;
@@ -36,7 +36,7 @@ public class ContactDetailsHelper {
         });
     }
 
-    public void updateMobile(MobileNumberPb primary, MobileNumberPb.Builder primaryBuilder) {
+    private void updateMobile(MobileNumberPb primary, MobileNumberPb.Builder primaryBuilder) {
         primaryBuilder.setCode(primary.getCode());
         primaryBuilder.setNumber(primary.getNumber());
         primaryBuilder.setCanonicalNumber(m_isdCodeFormatter.getStringValue(primary.getCode())+primary.getNumber());
@@ -49,7 +49,7 @@ public class ContactDetailsHelper {
         });
     }
 
-    public void updateEmail(EmailPb primary, EmailPb.Builder primaryBuilder) {
+    private void updateEmail(EmailPb primary, EmailPb.Builder primaryBuilder) {
         primaryBuilder.setLocalPart(primary.getLocalPart());
         primaryBuilder.setDomainPart(primary.getDomainPart());
         primaryBuilder.setCanonicalEmail(primary.getLocalPart() + StudenceSpecialCharecterEnum.AT_SIGN.getSign() + primary.getDomainPart());

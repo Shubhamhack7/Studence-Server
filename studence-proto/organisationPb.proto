@@ -26,8 +26,7 @@ message OrganisationRefPb{
 }
 
 message OrganisationSearchReqPb{
-    string nextToken=1;
-	  string name = 2;
+	  string name = 1;
 }
 
 

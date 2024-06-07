@@ -7,8 +7,7 @@ import javax.inject.Inject;
 import com.google.protobuf.GeneratedMessageV3;
 import com.google.protobuf.GeneratedMessageV3.Builder;
 import com.tiwari.studence.common.indexer.AEntityIndexer;
-import com.tiwari.studence.common.indexer.IIndexer;
-import com.tiwari.studence.common.prtovider.IPbBuilderProvider;
+import com.tiwari.studence.common.provider.IPbBuilderProvider;
 import com.tiwari.studence.proto.entity.EntityPb;
 
 import software.amazon.awssdk.services.dynamodb.model.AttributeValue;

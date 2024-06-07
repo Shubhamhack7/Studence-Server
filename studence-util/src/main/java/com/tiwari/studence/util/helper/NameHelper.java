@@ -1,7 +1,7 @@
 package com.tiwari.studence.util.helper;
 
 import com.tiwari.studence.proto.name.NamePb;
-import com.tiwari.studence.util.common.StudenceSpecialCharecterEnum;
+import com.tiwari.studence.util.StudenceSpecialCharecterEnum;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;

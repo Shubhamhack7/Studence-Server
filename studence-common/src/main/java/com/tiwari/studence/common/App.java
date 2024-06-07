@@ -1,28 +1,36 @@
 package com.tiwari.studence.common;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBScanExpression;
+import com.amazonaws.services.dynamodbv2.datamodeling.PaginatedScanList;
+import com.amazonaws.services.dynamodbv2.model.ComparisonOperator;
+import com.amazonaws.services.dynamodbv2.xspec.ExpressionSpecBuilder;
 import com.google.inject.Injector;
+import com.google.protobuf.GeneratedMessageV3;
+import com.tiwari.studence.common.controlflow.CreateDynamoTable;
 import com.tiwari.studence.common.entity.GetAndUpdateEntity;
+import com.tiwari.studence.common.indexer.AEntityIndexer;
 import com.tiwari.studence.common.injector.InjectorProvider;
+import com.tiwari.studence.common.interfaces.IDynamoSearchTable;
+import com.tiwari.studence.common.searcher.AEntitySearcher;
 import com.tiwari.studence.dynamodb.database.DynamoDbConnector;
+import com.tiwari.studence.dynamodb.database.table.CreateDynamoDbTable;
+import com.tiwari.studence.dynamodb.database.table.TableNameEnum;
+import com.tiwari.studence.proto.entity.LifeTimeEnum;
+import com.tiwari.studence.proto.search.*;
+import com.tiwari.studence.util.collect.Lists;
 import com.tiwari.studence.util.exception.ErrorException;
 
+import org.apache.commons.text.StringEscapeUtils;
 import software.amazon.awssdk.services.dynamodb.DynamoDbClient;
-import software.amazon.awssdk.services.dynamodb.model.AttributeAction;
-import software.amazon.awssdk.services.dynamodb.model.AttributeValue;
-import software.amazon.awssdk.services.dynamodb.model.AttributeValueUpdate;
-import software.amazon.awssdk.services.dynamodb.model.DynamoDbException;
-import software.amazon.awssdk.services.dynamodb.model.GetItemRequest;
-import software.amazon.awssdk.services.dynamodb.model.QueryRequest;
-import software.amazon.awssdk.services.dynamodb.model.QueryResponse;
-import software.amazon.awssdk.services.dynamodb.model.ResourceNotFoundException;
-import software.amazon.awssdk.services.dynamodb.model.ScanRequest;
-import software.amazon.awssdk.services.dynamodb.model.ScanResponse;
-import software.amazon.awssdk.services.dynamodb.model.UpdateItemRequest;
-import software.amazon.awssdk.services.dynamodb.model.UpdateItemResponse;
+import software.amazon.awssdk.services.dynamodb.model.*;
+import software.amazon.awssdk.services.dynamodb.paginators.ScanIterable;
 
 /**
  * Hello world!
@@ -32,16 +40,84 @@ public class App {
   public static void main(String[] args) throws ErrorException {
 
     Injector inj = InjectorProvider.createInjector();
-    // CreateDynamoTable service = inj.getInstance(CreateDynamoTable.class);
-    GetAndUpdateEntity service = inj.getInstance(GetAndUpdateEntity.class);
+    CreateDynamoTable service = inj.getInstance(CreateDynamoTable.class);
+    //GetAndUpdateEntity service = inj.getInstance(GetAndUpdateEntity.class);
     // System.out.println(service.getNewEntityId().get());
 
     DynamoDbConnector connector = new DynamoDbConnector();
     //updateTableItem(connector.getDynamoDbClient());
    // System.out.println(queryTable(connector.getDynamoDbClient()));
-    scanItems(connector.getDynamoDbClient());
+    //scanItems(connector.getDynamoDbClient());
+   /// searchData(inj);
+    for (TableNameEnum tableName :TableNameEnum.values()) {
+      try {
+        service.createDbTable(tableName.getValue());
+      }catch(Exception e) {
+        continue;
+      }
+    }
+
+    //searchData(inj);
   }
-  
+
+  private static void scanandFilter(Injector inj, DynamoDbConnector connector) {
+    AmazonDynamoDB aclient  = connector.getAmazonDynamoDB();
+    DynamoDbClient dclient  = connector.getDynamoDbClient();
+    DynamoDBMapper mapper = new DynamoDBMapper(aclient);
+
+    Condition condition1 = Condition.builder()
+            .attributeValueList(AttributeValue.builder().s("ACTIVE").build())
+            .comparisonOperator(software.amazon.awssdk.services.dynamodb.model.ComparisonOperator.EQ)
+            .build();
+
+    Condition condition2 = Condition.builder()
+            .attributeValueList(AttributeValue.builder().s("demo").build())
+            .comparisonOperator(software.amazon.awssdk.services.dynamodb.model.ComparisonOperator.EQ)
+            .build();
+
+    Map<String, Condition> conditions = new HashMap<>();
+    conditions.put("LIFETIME", condition1);
+    conditions.put("NAME", condition2);
+
+    // Configure the scan request
+    ScanRequest scanRequest = ScanRequest.builder()
+            .tableName("100_ORGANISATION_DEVEL")
+            .scanFilter(conditions)
+            .build();
+
+    // Execute the scan operation and get the results
+    ScanIterable scanResults = dclient.scanPaginator(scanRequest);
+    for (ScanResponse page : scanResults) {
+      // Process the results
+      List<Map<String, AttributeValue>> items = page.items();
+      for (Map<String, AttributeValue> item : items) {
+       System.out.println(item);
+      }
+    }
+
+  }
+
+
+  private static void searchData(Injector inj) {
+    IDynamoSearchTable search = inj.getInstance(IDynamoSearchTable.class);
+    SearchRequestsPb.Builder searchRequest = SearchRequestsPb.newBuilder();
+    searchRequest.setModeValue(DynamoDBSearchMode.SCAN_FILTER_MODE_VALUE);
+    SearchPb.Builder builder = searchRequest.addRequestsBuilder();
+    AttributeNameValuePair.Builder builder1 = builder.addAttributesBuilder();
+    builder.setType(ComparisonOperatorEnum.EQUAL_TO);
+    builder1.setType(DynamoDBValue.DYNAMODB_VALUE_STRING);
+    builder1.setName(AEntitySearcher.GenericSearchEnum.LIFETIME.name());
+    builder1.setStringValue(LifeTimeEnum.ACTIVE.name());
+    AttributeNameValuePair.Builder attrbu2 = builder.addAttributesBuilder();
+    attrbu2.setType(DynamoDBValue.DYNAMODB_VALUE_STRING);
+    attrbu2.setName("ORGANISATION_NAME");
+    attrbu2.setStringValue("ram shyam");
+   // System.out.print(searchRequest);
+    searchRequest.addOperators(DynamoDBLogicalOperators.AND);
+    System.out.print(StringEscapeUtils.unescapeJava("\\u003d"));
+    search.searchDbTable("100_ORGANISATION",searchRequest.build());
+  }
+
   public static void scanItems( DynamoDbClient ddb ) {
 	  HashMap<String,String> attrNameAlias = new HashMap<String,String>();
       attrNameAlias.put("#lifetime", "LIFETIME");

@@ -9,6 +9,7 @@
     <project>studence-util</project>
     <project>studence-login</project>
     <project>studence-organisation</project>
+    <project>studence-campus</project>
   </projects>
   <buildSpec>
     <buildCommand>

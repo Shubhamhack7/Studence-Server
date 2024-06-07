@@ -8,11 +8,11 @@ import com.tiwari.studence.campus.provider.CampusTableNameProvider;
 import com.tiwari.studence.campus.searcher.CampusSearcher;
 import com.tiwari.studence.campus.updater.CampusUpdater;
 import com.tiwari.studence.common.async.IFuture;
-import com.tiwari.studence.common.service.v1.entity.IGetEntityId;
+import com.tiwari.studence.common.entity.IGetEntityId;
 import com.tiwari.studence.common.interfaces.IDynamoGetEntityTable;
 import com.tiwari.studence.common.interfaces.IDynamoPutTable;
 import com.tiwari.studence.common.interfaces.IDynamoUpdateTable;
-import com.tiwari.studence.common.service.v1.services.AEntityService;
+import com.tiwari.studence.common.services.AEntityService;
 import com.tiwari.studence.proto.campus.*;
 import com.tiwari.studence.proto.entity.EntityPb;
 import com.tiwari.studence.util.exception.ErrorException;
@@ -34,32 +34,32 @@ public class CampusService extends AEntityService<CampusPb, CampusSearchReqPb, C
             getNewId, dynamoPutTable, dynamoGetTable, dynamoUpdateTable);
   }
 
-  @Override
+
   public IFuture<CampusPb, ErrorException> get(String entity) {
     return super.getEntity(entity);
   }
 
-  @Override
+
   public IFuture<CampusPb, ErrorException> get(EntityPb entity) {
     return super.getEntity(entity);
   }
 
-  @Override
+
   public IFuture<CampusPb, ErrorException> create(CampusPb entity) {
     return super.createEntity(entity);
   }
 
-  @Override
+
   public IFuture<CampusPb, ErrorException> delete(String entity) {
     return null;
   }
 
-  @Override
+
   public IFuture<CampusPb, ErrorException> update(String id, CampusPb entity) {
     return null;
   }
 
-  @Override
+@Override
   public IFuture<CampusSearchRespPb, ErrorException> search(CampusSearchReqPb entity) {
     return super.searchEntity(entity);
   }

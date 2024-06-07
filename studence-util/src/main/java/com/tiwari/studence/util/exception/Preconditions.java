@@ -3,7 +3,7 @@
 package com.tiwari.studence.util.exception;
 
 import com.tiwari.studence.proto.error.ErrorCategoryUiEnum;
-import com.tiwari.studence.util.common.Strings;
+import com.tiwari.studence.util.Strings;
 
 
 public class Preconditions {

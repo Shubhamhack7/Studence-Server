@@ -121,8 +121,6 @@
 /home/hacker/Project/Studence-Server/studence-util/src/main/java/com/tiwari/studence/proto/search/SearchRequestsPb.java
 /home/hacker/Project/Studence-Server/studence-util/src/main/java/com/tiwari/studence/proto/search/SearchRequestsPbOrBuilder.java
 /home/hacker/Project/Studence-Server/studence-util/src/main/java/com/tiwari/studence/proto/search/Searchdynamodb.java
-/home/hacker/Project/Studence-Server/studence-util/src/main/java/com/tiwari/studence/proto/subject/SubjectPb.java
-/home/hacker/Project/Studence-Server/studence-util/src/main/java/com/tiwari/studence/proto/subject/SubjectTypeEnum.java
 /home/hacker/Project/Studence-Server/studence-util/src/main/java/com/tiwari/studence/proto/summary/SummaryPb.java
 /home/hacker/Project/Studence-Server/studence-util/src/main/java/com/tiwari/studence/proto/summary/SummaryPbOrBuilder.java
 /home/hacker/Project/Studence-Server/studence-util/src/main/java/com/tiwari/studence/proto/summary/SummaryPbOuterClass.java
@@ -148,6 +146,9 @@
 /home/hacker/Project/Studence-Server/studence-util/src/main/java/com/tiwari/studence/shudence/util/cache/IFuture.java
 /home/hacker/Project/Studence-Server/studence-util/src/main/java/com/tiwari/studence/shudence/util/cache/LoadingCache.java
 /home/hacker/Project/Studence-Server/studence-util/src/main/java/com/tiwari/studence/util/App.java
+/home/hacker/Project/Studence-Server/studence-util/src/main/java/com/tiwari/studence/util/JsonToMapConverter.java
+/home/hacker/Project/Studence-Server/studence-util/src/main/java/com/tiwari/studence/util/Strings.java
+/home/hacker/Project/Studence-Server/studence-util/src/main/java/com/tiwari/studence/util/StudenceSpecialCharecterEnum.java
 /home/hacker/Project/Studence-Server/studence-util/src/main/java/com/tiwari/studence/util/callable/ALoggableCallable.java
 /home/hacker/Project/Studence-Server/studence-util/src/main/java/com/tiwari/studence/util/collect/ExtendedMaps.java
 /home/hacker/Project/Studence-Server/studence-util/src/main/java/com/tiwari/studence/util/collect/ExtendedSets.java

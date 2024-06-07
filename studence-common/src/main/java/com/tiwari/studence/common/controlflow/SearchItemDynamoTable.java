@@ -5,6 +5,7 @@ import com.tiwari.studence.common.interfaces.IDynamoSearchTable;
 import com.tiwari.studence.dynamodb.database.helper.DynamoDBSearchHelper;
 import com.tiwari.studence.dynamodb.database.table.SearchItemInDynamoDbTable;
 import com.tiwari.studence.proto.search.SearchPb;
+import com.tiwari.studence.proto.search.SearchRequestsPb;
 import com.tiwari.studence.util.Strings;
 import com.tiwari.studence.util.database.TableNameUtil;
 import com.tiwari.studence.util.exception.ErrorException;
@@ -16,6 +17,7 @@ import javax.inject.Inject;
 import javax.inject.Singleton;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Singleton
 public class SearchItemDynamoTable implements IDynamoSearchTable {
@@ -35,11 +37,12 @@ public class SearchItemDynamoTable implements IDynamoSearchTable {
     m_searchItemInDynamoDbTable = searchItemInDynamoDbTable;
   }
 
-  public IFuture<List<HashMap<String, AttributeValue>>, ErrorException> searchDbTable(String tablename,
-          List<SearchPb> attributeValues) {
+  @Override
+  public IFuture<List<Map<String, AttributeValue>>, ErrorException> searchDbTable(
+          String tablename, SearchRequestsPb build) {
     Preconditions.validate(Strings.notEmpty(tablename), "Table Name is Empty");
-    Preconditions.validate(attributeValues.size() != 0, "Data is Empty");
-    SearchItemCF cf = new SearchItemCF(tablename, attributeValues, m_searchItemInDynamoDbTable,
+    Preconditions.validate(build.getRequestsList().size() != 0, "Data is Empty");
+    SearchItemCF cf = new SearchItemCF(tablename, build, m_searchItemInDynamoDbTable,
             m_helper, m_tableNameUtil, m_ServerListener);
     cf.addLogObjects(tablename);
     cf.startAsyncCall();

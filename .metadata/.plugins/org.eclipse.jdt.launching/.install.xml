@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <dirs>
+    <entry loc="/usr/lib/jvm/java-17-openjdk-amd64" stamp="1717153025222"/>
+    <entry loc="/home/hacker/Software/eclipse-java-2024-03-R-linux-gtk-x86_64/eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_17.0.10.v20240120-1143/jre" stamp="1709827878193"/>
+    <entry loc="/home/hacker/Software/eclipse-java-2024-03-R-linux-gtk-x86_64/eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_17.0.10.v20240120-1143" stamp="1709827878193"/>
     <entry loc="/root/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_17.0.4.v20221004-1257" stamp="1666936026887"/>
     <entry loc="/root/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_17.0.4.v20221004-1257/jre" stamp="1666936026887"/>
+    <entry loc="/usr/lib/jvm/jdk-17-oracle-x64" stamp="1717231100228"/>
 </dirs>

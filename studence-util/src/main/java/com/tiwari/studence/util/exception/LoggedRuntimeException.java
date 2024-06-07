@@ -7,11 +7,12 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Logger;
 
+import com.google.protobuf.GeneratedMessage;
 import com.google.protobuf.GeneratedMessageV3;
 import com.googlecode.protobuf.format.JsonFormat;
 import com.googlecode.protobuf.format.JsonFormat.ParseException;
 import com.tiwari.studence.proto.error.ErrorCategoryUiEnum;
-import com.tiwari.studence.util.common.Strings;
+import com.tiwari.studence.util.Strings;
 import com.tiwari.studence.util.collect.Lists;
 
 /**
@@ -152,6 +153,23 @@ public class LoggedRuntimeException extends RuntimeException {
 		m_args = Lists.newArrayList(args);
 		m_errorCode = errorCode ;
 		m_uiErrorString = uiErrorString;
+		m_stackTrace = createStackTraceString();
+		printError();
+	}
+
+	public LoggedRuntimeException(ErrorCategoryUiEnum errorCategoryUiEnum, String string, int code, String debugInfo) {
+		m_errorProto = new ParsedErrorProto(errorCategoryUiEnum);
+		m_args = Lists.newArrayList(string);
+		m_errorCode = String.valueOf(code);
+		m_uiErrorString = debugInfo;
+		m_stackTrace = createStackTraceString();
+		printError();
+	}
+
+	public LoggedRuntimeException(ErrorCategoryUiEnum errorCategoryUiEnum, String string, String debugInfo) {
+		m_errorProto = new ParsedErrorProto(errorCategoryUiEnum);
+		m_args = Lists.newArrayList(string);
+		m_uiErrorString = debugInfo;
 		m_stackTrace = createStackTraceString();
 		printError();
 	}

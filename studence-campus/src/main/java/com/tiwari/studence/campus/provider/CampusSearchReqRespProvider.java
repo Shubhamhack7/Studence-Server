@@ -1,6 +1,7 @@
 package com.tiwari.studence.campus.provider;
 
-import com.tiwari.studence.common.providerInterfaces.IReqRespPbBuilderProvider;
+
+import com.tiwari.studence.common.provider.IReqRespPbBuilderProvider;
 import com.tiwari.studence.proto.campus.CampusSearchReqPb;
 import com.tiwari.studence.proto.campus.CampusSearchRespPb;
 

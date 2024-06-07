@@ -16,23 +16,22 @@ import software.amazon.awssdk.services.dynamodb.DynamoDbClient;
 
 public class DynamoDbConnector extends AwsCredentials {
 
-  public DynamoDbClient getDynamoDbClient() {
-    return DynamoDbClient.builder().endpointOverride(URI.create(getLOCAL_URL()))
-            // The region is meaningless for local DynamoDb but required for client builder
-            // validation
-            .region(Region.US_WEST_2).credentialsProvider(StaticCredentialsProvider.create(
-                    AwsBasicCredentials.create(getACCESS_KEY_ID(), getSECRET_ACCESS_KEY())))
-            .build();
-  }
+	public DynamoDbClient getDynamoDbClient() {
+		return DynamoDbClient.builder().endpointOverride(URI.create(getREMOTE_URL()))
+				// The region is meaningless for local DynamoDb but required for client builder
+				// validation
+				.region(Region.US_WEST_2).credentialsProvider(StaticCredentialsProvider
+						.create(AwsBasicCredentials.create(getACCESS_KEY_ID(), getSECRET_ACCESS_KEY())))
+				.build();
+	}
+	
+	public AmazonDynamoDB getAmazonDynamoDB() {
+		AWSCredentials credentials = new BasicAWSCredentials(getACCESS_KEY_ID(), getSECRET_ACCESS_KEY());
+		return AmazonDynamoDBClientBuilder.standard()
+				.withCredentials(new AWSStaticCredentialsProvider(credentials))
+				.withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration(getREMOTE_URL(), " us-west-2"))
+				.build();
+	}
 
-  public AmazonDynamoDB getAmazonDynamoDB() {
-    AWSCredentials credentials = new BasicAWSCredentials(getACCESS_KEY_ID(),
-            getSECRET_ACCESS_KEY());
-    return AmazonDynamoDBClientBuilder.standard()
-            .withCredentials(new AWSStaticCredentialsProvider(credentials))
-            .withEndpointConfiguration(
-                    new AwsClientBuilder.EndpointConfiguration(getLOCAL_URL(), " us-west-2"))
-            .build();
-  }
 
 }

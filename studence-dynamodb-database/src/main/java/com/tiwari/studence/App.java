@@ -10,6 +10,9 @@ import com.amazonaws.services.dynamodbv2.document.utils.ValueMap;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.tiwari.studence.dynamodb.database.DynamoDbConnector;
 
+import com.tiwari.studence.dynamodb.database.table.CreateDynamoDbTable;
+import com.tiwari.studence.dynamodb.database.table.SearchItemInDynamoDbTable;
+import com.tiwari.studence.dynamodb.database.table.TableNameEnum;
 import software.amazon.awssdk.core.waiters.WaiterResponse;
 import software.amazon.awssdk.services.dynamodb.DynamoDbClient;
 import software.amazon.awssdk.services.dynamodb.model.*;
@@ -22,9 +25,10 @@ import software.amazon.awssdk.services.dynamodb.waiters.DynamoDbWaiter;
 public class App {
   public static void main(String[] args) throws JsonProcessingException {
     DynamoDbConnector connector = new DynamoDbConnector();
-    putItemInTable(connector.getDynamoDbClient(), "00_ENTITY_DEVEL");
-    putItemInTable(connector.getDynamoDbClient(), "00_ENTITY_PROD");
+   // putItemInTable(connector.getDynamoDbClient(), "00_ENTITY_DEVEL");
+    //putItemInTable(connector.getDynamoDbClient(), "00_ENTITY_PROD");
    // searchItem(connector);
+    //SearchItemInDynamoDbTable searchItem = new SearchItemInDynamoDbTable(connector);
     //searchItem.queryOpreationResponse("100_ORGANISATION_DEVEL");
     //searchItem.scanandFilterResponse("100_ORGANISATION_DEVEL");
     truncateTable(connector.getDynamoDbClient(),"100_ORGANISATION_DEVEL");

@@ -61,7 +61,7 @@ public class FirebaseService extends FirebaseInitializer implements IFirebaseSer
 
 
   public void moveFiles(Storage storage, String sourceBucketName, String sourceObjectName,
-          String targetBucketName, String targetObjectName) {
+                        String targetBucketName, String targetObjectName) {
     BlobId source = BlobId.of(sourceBucketName, sourceObjectName);
     BlobId target = BlobId.of(targetBucketName, targetObjectName);
     Storage.BlobTargetOption precondition;
@@ -69,8 +69,8 @@ public class FirebaseService extends FirebaseInitializer implements IFirebaseSer
       precondition = Storage.BlobTargetOption.doesNotExist();
     } else {
       precondition = Storage.BlobTargetOption.generationMatch();
-     // precondition = Storage.BlobTargetOption.generationMatch(
-             // storage.get(targetBucketName, targetObjectName).getGeneration());
+      // precondition = Storage.BlobTargetOption.generationMatch(
+      // storage.get(targetBucketName, targetObjectName).getGeneration());
     }
     storage.copy(Storage.CopyRequest.newBuilder().setSource(source).setTarget(target, precondition)
             .build());

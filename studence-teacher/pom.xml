@@ -47,22 +47,6 @@
           <artifactId>studence-common</artifactId>
           <version>0.0.1-SNAPSHOT</version>
       </dependency>
-      <dependency>
-          <groupId>com.tiwari.studence</groupId>
-          <artifactId>studence-campus</artifactId>
-          <version>0.0.1-SNAPSHOT</version>
-      </dependency>
-      <dependency>
-          <groupId>com.tiwari.studence</groupId>
-          <artifactId>studence-classes</artifactId>
-          <version>0.0.1-SNAPSHOT</version>
-      </dependency>
-      <dependency>
-          <groupId>javax.inject</groupId>
-          <artifactId>javax.inject</artifactId>
-          <version>1</version>
-          <scope>compile</scope>
-      </dependency>
   </dependencies>
 
   <build>
@@ -125,16 +109,7 @@
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
-          <plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-compiler-plugin</artifactId>
-              <configuration>
-                  <source>11</source>
-                  <target>11</target>
-              </configuration>
-          </plugin>
       </plugins>
     </pluginManagement>
-
   </build>
 </project>

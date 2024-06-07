@@ -11,14 +11,15 @@ import com.tiwari.studence.common.http.converter.JsonStringToPbConverter;
 import com.tiwari.studence.common.http.converter.JsonStringToReqPbConverter;
 import com.tiwari.studence.common.http.enumm.ReqTypeEnum;
 import com.tiwari.studence.common.http.util.ServletUtil;
-import com.tiwari.studence.common.providerInterfaces.IPbBuilderProvider;
-import com.tiwari.studence.common.providerInterfaces.IReqRespPbBuilderProvider;
+import com.tiwari.studence.common.provider.IPbBuilderProvider;
+import com.tiwari.studence.common.provider.IReqRespPbBuilderProvider;
 import com.tiwari.studence.common.request.RequestExecutor;
-import com.tiwari.studence.common.service.v1.services.interfaces.*;
+import com.tiwari.studence.common.services.interfaces.*;
 import com.tiwari.studence.util.exception.ErrorException;
 import com.tiwari.studence.util.exception.Preconditions;
 import com.tiwari.studence.util.log.IServerExceptionLogger;
 import com.tiwari.studence.util.serverConfig.ServerConfigUtility;
+import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 
 public abstract class AHttpEntityServlet<Service, UiPb extends GeneratedMessageV3, Lreq extends GeneratedMessageV3, Lresp extends GeneratedMessageV3, UiPbBuProvider extends IPbBuilderProvider<?, ?>, ReqPbBuProvider extends IReqRespPbBuilderProvider<?, ?, ?, ?>>
@@ -31,9 +32,9 @@ public abstract class AHttpEntityServlet<Service, UiPb extends GeneratedMessageV
 
   @Inject
   public AHttpEntityServlet(JsonStringToPbConverter<UiPb, UiPbBuProvider> reqParser,
-          JsonStringToReqPbConverter<Lreq, ReqPbBuProvider> searchReqParser, Service service,
-          ErrorResponsePbConverter errorResponsePbConverter, IServerExceptionLogger exLogger,
-          ResponseInterceptor responseInterceptor, ServerConfigUtility serverConfigUtility) {
+                            JsonStringToReqPbConverter<Lreq, ReqPbBuProvider> searchReqParser, Service service,
+                            ErrorResponsePbConverter errorResponsePbConverter, IServerExceptionLogger exLogger,
+                            ResponseInterceptor responseInterceptor, ServerConfigUtility serverConfigUtility) {
     super(errorResponsePbConverter, exLogger, responseInterceptor, serverConfigUtility);
     m_reqParser = reqParser;
     m_searchReqParser = searchReqParser;
@@ -47,18 +48,14 @@ public abstract class AHttpEntityServlet<Service, UiPb extends GeneratedMessageV
             "", req.getPathInfo(), req.getMethod());
     ;
     switch (reqTypeEnum) {
-    case CREATE:
-      String reqString = reqTypeEnum.getReqString(req);
-      UiPb reqUiPb = m_reqParser.convert(reqString);
-      return (IFuture) createResource(reqUiPb);
-    case GET_OR_CREATE_BY_EXTERNALIDPB:
-      String reqString2 = reqTypeEnum.getReqString(req);
-      Lreq reqUiPb2 = m_searchReqParser.convert(reqString2);
-      return (IFuture) getOrCreateResource(reqUiPb2);
-    default:
-      Preconditions.validateWithUiErrorString(false, "Unknown Operation on Resourse", "",
-              req.getPathInfo(), req.getMethod());
-      return null;
+      case CREATE:
+        String reqString = reqTypeEnum.getReqString(req);
+        UiPb reqUiPb = m_reqParser.convert(reqString);
+        return (IFuture) createResource(reqUiPb);
+      default:
+        Preconditions.validateWithUiErrorString(false, "Unknown Operation on Resourse", "",
+                req.getPathInfo(), req.getMethod());
+        return null;
     }
   }
 
@@ -69,15 +66,15 @@ public abstract class AHttpEntityServlet<Service, UiPb extends GeneratedMessageV
             "", req.getPathInfo(), req.getMethod());
     ;
     switch (reqTypeEnum) {
-    case UPDATE:
-      String reqId = reqTypeEnum.getReqId(req);
-      String reqString = reqTypeEnum.getReqString(req);
-      UiPb reqUiPb = m_reqParser.convert(reqString);
-      return (IFuture) updateResource(reqId, reqUiPb);
-    default:
-      Preconditions.validateWithUiErrorString(false, "Unknown Operation on Resourse", "",
-              req.getPathInfo(), req.getMethod());
-      return null;
+      case UPDATE:
+        String reqId = reqTypeEnum.getReqId(req);
+        String reqString = reqTypeEnum.getReqString(req);
+        UiPb reqUiPb = m_reqParser.convert(reqString);
+        return (IFuture) updateResource(reqId, reqUiPb);
+      default:
+        Preconditions.validateWithUiErrorString(false, "Unknown Operation on Resourse", "",
+                req.getPathInfo(), req.getMethod());
+        return null;
     }
   }
 
@@ -88,13 +85,13 @@ public abstract class AHttpEntityServlet<Service, UiPb extends GeneratedMessageV
             "", req.getPathInfo(), req.getMethod());
     ;
     switch (reqTypeEnum) {
-    case DELETE:
-      String reqId = reqTypeEnum.getReqId(req);
-      return (IFuture) deleteResource(reqId);
-    default:
-      Preconditions.validateWithUiErrorString(false, "Unknown Operation on Resourse", "",
-              req.getPathInfo(), req.getMethod());
-      return null;
+      case DELETE:
+        String reqId = reqTypeEnum.getReqId(req);
+        return (IFuture) deleteResource(reqId);
+      default:
+        Preconditions.validateWithUiErrorString(false, "Unknown Operation on Resourse", "",
+                req.getPathInfo(), req.getMethod());
+        return null;
     }
   }
 
@@ -106,22 +103,18 @@ public abstract class AHttpEntityServlet<Service, UiPb extends GeneratedMessageV
             "", req.getPathInfo(), req.getMethod());
     ;
     switch (reqTypeEnum) {
-    case GET_ID: {
-      String reqId = reqTypeEnum.getReqId(req);
-      return (IFuture) getResource(reqId);
-    }
-    case GET_LIST: {
-      String dataReq = reqTypeEnum.getReqString(req);
-      return (IFuture) getResourceList(m_searchReqParser.convert(dataReq));
-    }
-    case GET_OR_CREATE_BY_EXTERNALIDPB:
-      String reqString2 = reqTypeEnum.getReqString(req);
-      UiPb reqUiPb2 = m_reqParser.convert(reqString2);
-      return (IFuture) getOrCreateResourceUiPb(reqUiPb2);
-    default:
-      Preconditions.validateWithUiErrorString(false, "Unknown Operation on Resourse", "",
-              req.getPathInfo(), req.getMethod());
-      return null;
+      case GET_ID: {
+        String reqId = reqTypeEnum.getReqId(req);
+        return (IFuture) getResource(reqId);
+      }
+      case GET_LIST: {
+        String dataReq = reqTypeEnum.getReqString(req);
+        return (IFuture) getResourceList(m_searchReqParser.convert(dataReq));
+      }
+      default:
+        Preconditions.validateWithUiErrorString(false, "Unknown Operation on Resourse", "",
+                req.getPathInfo(), req.getMethod());
+        return null;
     }
   }
 
@@ -170,35 +163,6 @@ public abstract class AHttpEntityServlet<Service, UiPb extends GeneratedMessageV
     return null;
   }
 
-  private IFuture<Lresp, ErrorException> getOrCreateResource(final Lreq request) {
-    if (m_service instanceof IHandleService) {
-      return (IFuture<Lresp, ErrorException>) RequestExecutor.getInstance()
-              .runRequestInContext(m_service.getClass().getSimpleName(),
-                      IHandleService.class.getSimpleName(), new Callable<IFuture>() {
-                        @Override
-                        public IFuture<UiPb, ErrorException> call() throws Exception {
-                          return ((IHandleService) m_service).executeService(request);
-                        }
-                      });
-    }
-    Preconditions.validate(false, "Create is not supported for this resource");
-    return null;
-  }
-
-  private IFuture<UiPb, ErrorException> getOrCreateResourceUiPb(final UiPb request) {
-    if (m_service instanceof IHandleService) {
-      return (IFuture<UiPb, ErrorException>) RequestExecutor.getInstance()
-              .runRequestInContext(m_service.getClass().getSimpleName(),
-                      IHandleService.class.getSimpleName(), new Callable<IFuture>() {
-                        @Override
-                        public IFuture<UiPb, ErrorException> call() throws Exception {
-                          return ((IHandleService) m_service).executeService(request);
-                        }
-                      });
-    }
-    Preconditions.validate(false, "Create is not supported for this resource");
-    return null;
-  }
   //	private IFuture<UiPb, VoidException> safeCreateResource(final UiPb request) {
   //		if (m_service instanceof ISafeCreateByExternalId) {
   //			return (IFuture<UiPb, VoidException>) RequestExecutor.getInstance().runRequestInContext(
@@ -292,17 +256,17 @@ public abstract class AHttpEntityServlet<Service, UiPb extends GeneratedMessageV
   protected IFuture<?, Exception> handleAsyncCall(HttpServletRequest req, ReqMethod reqType) {
     ServletUtil.logRequest(req, reqType);
     switch (reqType) {
-    case POST:
-      return postInternal(req);
-    case PUT:
-      return putInternal(req);
-    case DELETE:
-      return deleteInternal(req);
-    case GET:
-      return getInternal(req);
-    default:
-      Preconditions.check(false);
-      return null;
+      case POST:
+        return postInternal(req);
+      case PUT:
+        return putInternal(req);
+      case DELETE:
+        return deleteInternal(req);
+      case GET:
+        return getInternal(req);
+      default:
+        Preconditions.check(false);
+        return null;
     }
   }
 

@@ -51,4 +51,3 @@ message CampusSearchRespPb{
   com.tiwari.studence.proto.summary.SummaryPb summary =1;
   repeated CampusPb results = 2;
 }
-

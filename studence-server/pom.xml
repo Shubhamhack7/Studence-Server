@@ -25,11 +25,6 @@
             <version>4.0.1</version>
             <scope>provided</scope>
         </dependency>
-		<dependency>
-			<groupId>com.tiwari.studence</groupId>
-			<artifactId>studence-common-http</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
 		<!-- https://mvnrepository.com/artifact/com.thetransactioncompany/cors-filter -->
 		<dependency>
 			<groupId>com.thetransactioncompany</groupId>

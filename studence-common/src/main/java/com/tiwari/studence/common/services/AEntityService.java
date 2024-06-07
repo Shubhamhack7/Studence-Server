@@ -5,14 +5,13 @@ import javax.inject.Inject;
 import com.google.protobuf.GeneratedMessageV3;
 import com.tiwari.studence.common.async.IFuture;
 import com.tiwari.studence.common.convertor.AEntityConvertor;
-import com.tiwari.studence.common.entity.EntityCreate;
-import com.tiwari.studence.common.entity.EntityCreateCF;
-import com.tiwari.studence.common.entity.EntityGet;
-import com.tiwari.studence.common.entity.IGetEntityId;
+import com.tiwari.studence.common.entity.*;
 import com.tiwari.studence.common.indexer.AEntityIndexer;
 import com.tiwari.studence.common.interfaces.IDynamoGetEntityTable;
 import com.tiwari.studence.common.interfaces.IDynamoPutTable;
-import com.tiwari.studence.common.prtovider.IPbBuilderProvider;
+import com.tiwari.studence.common.interfaces.IDynamoUpdateTable;
+import com.tiwari.studence.common.provider.IPbBuilderProvider;
+import com.tiwari.studence.common.provider.IReqRespPbBuilderProvider;
 import com.tiwari.studence.common.searcher.AEntitySearcher;
 import com.tiwari.studence.common.services.interfaces.IService;
 import com.tiwari.studence.common.services.interfaces.ITableNameProvider;
@@ -20,7 +19,7 @@ import com.tiwari.studence.common.updater.AEntityUpdater;
 import com.tiwari.studence.proto.entity.EntityPb;
 import com.tiwari.studence.util.exception.ErrorException;
 
-public abstract class AEntityService<P extends GeneratedMessageV3, LReq extends GeneratedMessageV3, LResp extends GeneratedMessageV3, BU extends GeneratedMessageV3.Builder, BP extends IPbBuilderProvider<P, BU>, RBU extends GeneratedMessageV3.Builder, RBUP extends IPbBuilderProvider<LResp, RBU>, I extends AEntityIndexer<P>, U extends AEntityUpdater<P, BU, BP, I>, C extends AEntityConvertor<P, BU, BP>, S extends AEntitySearcher<P, LReq, LResp, RBU, RBUP, I>, T extends ITableNameProvider>
+public abstract class AEntityService<P extends GeneratedMessageV3, LReq extends GeneratedMessageV3, LReqBU extends GeneratedMessageV3.Builder, LResp extends GeneratedMessageV3, BU extends GeneratedMessageV3.Builder, BP extends IPbBuilderProvider<P, BU>, RBU extends GeneratedMessageV3.Builder, RBUP extends IReqRespPbBuilderProvider<LReq, LReqBU, LResp, RBU>, I extends AEntityIndexer<P>, U extends AEntityUpdater<P, BU, BP, I>, C extends AEntityConvertor<P, BU, BP, LReq, LReqBU, LResp, RBU, RBUP>, S extends AEntitySearcher<P, BU, BP, LReq, LReqBU, LResp, RBU, RBUP, C, I, T>, T extends ITableNameProvider>
         implements IService<P, LReq, LResp> {
 
   private S m_searcher;
@@ -32,11 +31,16 @@ public abstract class AEntityService<P extends GeneratedMessageV3, LReq extends 
   private EntityCreate m_create;
   private EntityGet m_get;
 
+  private SearchEntity m_search;
+  private EntityGetAndUpdate m_update;
+  private EntityGetAndDelete m_delete;
+
   @Inject
   public AEntityService(S searcher, U updator, C convertor, BP builderProvder,
           RBUP requestBuilderprovider, T tableNameProvider, IGetEntityId getNewId,
-          IDynamoPutTable dynamoPutTable, IDynamoGetEntityTable dynamoGetTable) {
-     m_searcher = searcher;
+          IDynamoPutTable dynamoPutTable, IDynamoGetEntityTable dynamoGetTable,
+          IDynamoUpdateTable dynamoUpdateTable) {
+    m_searcher = searcher;
     m_updator = updator;
     m_convertor = convertor;
     m_builderProvder = builderProvder;
@@ -45,6 +49,10 @@ public abstract class AEntityService<P extends GeneratedMessageV3, LReq extends 
     m_get = new EntityGet(convertor, builderProvder, tableNameProvider, dynamoGetTable);
     m_create = new EntityCreate(m_updator, m_convertor, m_builderProvder, tableNameProvider,
             getNewId, dynamoPutTable, m_get);
+    m_update = new EntityGetAndUpdate(m_updator, m_convertor, m_builderProvder, tableNameProvider,
+            dynamoGetTable, dynamoUpdateTable, false);
+    m_delete = new EntityGetAndDelete(m_updator, m_convertor, m_builderProvder, tableNameProvider,
+            dynamoGetTable, dynamoUpdateTable);
   }
 
   @Override
@@ -69,14 +77,12 @@ public abstract class AEntityService<P extends GeneratedMessageV3, LReq extends 
 
   @Override
   public IFuture<P, ErrorException> updateEntity(String id, P entity) {
-    // TODO Auto-generated method stub
-    return null;
+    return m_update.updateEntity(id, entity);
   }
 
   @Override
   public IFuture<P, ErrorException> deleteEntity(String entity) {
-    // TODO Auto-generated method stub
-    return null;
+    return m_delete.deleteEntity(entity);
   }
 
 }

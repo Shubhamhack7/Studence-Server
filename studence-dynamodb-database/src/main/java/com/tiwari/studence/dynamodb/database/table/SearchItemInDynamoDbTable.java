@@ -70,7 +70,7 @@ public class SearchItemInDynamoDbTable implements ISearchItemTable {
 
   public Pair<Set<Map.Entry<String, AttributeValue>>, List<Map<String, AttributeValue>>> scanandFilterResponse(
           DynamoDbSearchPb req) {
-    Map<String, AttributeValue> expressionAttributeValues = new HashMap<>();
+   /* Map<String, AttributeValue> expressionAttributeValues = new HashMap<>();
     Map<String, AttributeValue> exclusiveStartKey = new HashMap<>();
     if (Strings.notEmpty(req.getNextToken())) {
       CommonUtil.getKeyValueFromNextToken(exclusiveStartKey, req.getNextToken());
@@ -111,8 +111,8 @@ public class SearchItemInDynamoDbTable implements ISearchItemTable {
 
     List<Map<String, AttributeValue>> items = scanResponse.items();
     Pair<Set<Map.Entry<String, AttributeValue>>, List<Map<String, AttributeValue>>> resPair = new Pair(
-            scanResponse.lastEvaluatedKey().entrySet(), scanResponse.items());
-    return resPair;
+            scanResponse.lastEvaluatedKey().entrySet(), scanResponse.items());*/
+    return null;
   }
 }
 

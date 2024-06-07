@@ -5,8 +5,7 @@ public enum LoginIndexerEnum {
   LOGIN_REF_ID("LOGIN_REF_ID",false),
   LOGIN_REF_NAME("LOGIN_REF_NAME",true),
   LOGIN_MOBILE_NO("LOGIN_MOBILE_NO",false),
-  LOGIN_EMAIL_ID("LOGIN_EMAIL_ID",true),
-  LOGIN_FIREBASE_TOKEN("LOGIN_FIREBASE_TOKEN",false);
+  LOGIN_EMAIL_ID("LOGIN_EMAIL_ID",true);
 
   private final String label;
   private final boolean isLowerCase;

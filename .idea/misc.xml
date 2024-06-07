@@ -17,6 +17,8 @@
         <option value="$PROJECT_DIR$/studence-server/pom.xml" />
         <option value="$PROJECT_DIR$/studence-openai/pom.xml" />
         <option value="$PROJECT_DIR$/studence-filesInfo/pom.xml" />
+        <option value="$PROJECT_DIR$/studence-devices/pom.xml" />
+        <option value="$PROJECT_DIR$/studence-email/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

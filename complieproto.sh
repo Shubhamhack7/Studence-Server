@@ -26,20 +26,13 @@ rm -rf studence-campus/src/main/java/com/tiwari/studence/proto
 rm -rf studence-guardian/src/main/java/com/tiwari/studence/proto
 rm -rf studence-attendence/src/main/java/com/tiwari/studence/proto
 rm -rf studence-typeAhead/src/main/java/com/tiwari/studence/proto
-rm -rf studence-devices/src/main/java/com/tiwari/studence/proto
-rm -rf studence-pushNotification/src/main/java/com/tiwari/studence/proto
 rm -rf studence-management-app/src/main/java/com/tiwari/studence/proto
 cd studence-proto
 echo [COMPILEING..........]
-protoc voidPb.proto --java_out=../studence-util/src/main/java
-protoc stringParserConfig.proto --java_out=../studence-util/src/main/java
-protoc search.proto --java_out=../studence-util/src/main/java
-protoc keyValue.proto --java_out=../studence-util/src/main/java
-protoc exponentialDelay.proto --java_out=../studence-util/src/main/java
-protoc schedulerPb.proto --java_out=../studence-util/src/main/java
 protoc time.proto --java_out=../studence-common/src/main/java
-protoc subjectPb.proto --java_out=../studence-util/src/main/java
+protoc voidPb.proto --java_out=../studence-util/src/main/java
 protoc timePb.proto --java_out=../studence-util/src/main/java
+protoc schedulerPb.proto --java_out=../studence-util/src/main/java
 protoc summaryPb.proto --java_out=../studence-util/src/main/java
 protoc genericRefPb.proto --java_out=../studence-util/src/main/java
 protoc namePb.proto --java_out=../studence-util/src/main/java
@@ -47,19 +40,11 @@ protoc searchdynamodb.proto --java_out=../studence-util/src/main/java
 protoc contactDetailsPb.proto --java_out=../studence-util/src/main/java
 protoc error.proto --java_out=../studence-util/src/main/java
 protoc requestContextPb.proto --java_out=../studence-common/src/main/java
-protoc match.proto --java_out=../studence-util/src/main/java
-protoc locale.proto --java_out=../studence-util/src/main/java
-protoc reference.proto --java_out=../studence-util/src/main/java
-protoc mergeOption.proto --java_out=../studence-util/src/main/java
-protoc backgroundtask.proto --java_out=../studence-util/src/main/java
-protoc transaction.proto --java_out=../studence-util/src/main/java
 protoc entityPb.proto --java_out=../studence-util/src/main/java
-protoc index.proto --java_out=../studence-util/src/main/java
-protoc id.proto --java_out=../studence-util/src/main/java
 protoc fileInfoPb.proto --java_out=../studence-util/src/main/java
-protoc dataTypesPb.proto --java_out=../studence-util/src/main/java
 protoc pushNotificationPb.proto --java_out=../studence-util/src/main/java
 protoc devicePb.proto --java_out=../studence-util/src/main/java
+protoc dataTypesPb.proto --java_out=../studence-util/src/main/java
 protoc loginPb.proto --java_out=../studence-login/src/main/java
 protoc typeAheadPb.proto --java_out=../studence-typeAhead/src/main/java
 protoc organisationPb.proto --java_out=../studence-organisation/src/main/java

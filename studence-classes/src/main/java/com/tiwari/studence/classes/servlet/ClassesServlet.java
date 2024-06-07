@@ -1,32 +1,7 @@
 package com.tiwari.studence.classes.servlet;
 
-import com.tiwari.studence.classes.provider.ClassesProvider;
-import com.tiwari.studence.classes.provider.ClassesSearchReqRespProvider;
-import com.tiwari.studence.classes.service.IClassesService;
-import com.tiwari.studence.common.error.ErrorResponsePbConverter;
-import com.tiwari.studence.common.http.converter.JsonStringToPbConverter;
-import com.tiwari.studence.common.http.converter.JsonStringToReqPbConverter;
-import com.tiwari.studence.common.http.servlet.JsonResponseEntityServlet;
-import com.tiwari.studence.common.http.servlet.ResponseInterceptor;
-import com.tiwari.studence.proto.classes.ClassesPb;
-import com.tiwari.studence.proto.classes.ClassesSearchReqPb;
-import com.tiwari.studence.proto.classes.ClassesSearchRespPb;
-import com.tiwari.studence.util.log.IServerExceptionLogger;
-import com.tiwari.studence.util.serverConfig.ServerConfigUtility;
+public class ClassesServlet {
 
-import javax.inject.Inject;
+    // TODO: Implement ClassesServlet
 
-public class ClassesServlet extends
-        JsonResponseEntityServlet<IClassesService, ClassesPb, ClassesSearchReqPb, ClassesSearchRespPb, ClassesProvider, ClassesSearchReqRespProvider> {
-
-  private static final long serialVersionUID = 1L;
-  @Inject
-  public ClassesServlet(JsonStringToPbConverter<ClassesPb, ClassesProvider> reqParser,
-                        JsonStringToReqPbConverter<ClassesSearchReqPb, ClassesSearchReqRespProvider> searchReqParser,
-                        IClassesService iCampusService, ErrorResponsePbConverter errorResponsePbConverter,
-                        IServerExceptionLogger exLogger, ResponseInterceptor responseInterceptor,
-                        ServerConfigUtility serverConfigUtility) {
-    super(reqParser, searchReqParser, iCampusService, errorResponsePbConverter, exLogger,
-            responseInterceptor, serverConfigUtility);
-  }
 }
