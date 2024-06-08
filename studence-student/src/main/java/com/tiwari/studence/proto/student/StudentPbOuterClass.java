@@ -45,30 +45,30 @@ public final class StudentPbOuterClass {
     java.lang.String[] descriptorData = {
       "\n\017studentPb.proto\022!com.tiwari.studence.p" +
       "roto.student\032\016entityPb.proto\032\014namePb.pro" +
-      "to\032\017summaryPb.proto\032\rclassPb.proto\032\016camp" +
-      "usPb.proto\032\020guardianPb.proto\"\375\002\n\tStudent" +
-      "Pb\022:\n\006dbInfo\030\001 \001(\0132*.com.tiwari.studence" +
-      ".proto.entity.EntityPb\0224\n\004name\030\002 \001(\0132&.c" +
-      "om.tiwari.studence.proto.name.NamePb\022A\n\010" +
-      "classRef\030\003 \001(\0132/.com.tiwari.studence.pro" +
-      "to.classes.ClassesRefPb\022@\n\tcampusRef\030\004 \001" +
-      "(\0132-.com.tiwari.studence.proto.campus.Ca" +
-      "mpusRefPb\022\023\n\013classRollNo\030\005 \001(\t\022\036\n\026serial" +
-      "OrRegistrationNo\030\006 \001(\t\022D\n\tparentRef\030\007 \001(" +
-      "\01321.com.tiwari.studence.proto.guardian.G" +
-      "uardianRefPb\"\214\002\n\014StudentRefPb\022\020\n\010dbInfoI" +
-      "d\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022?\n\tclassType\030\003 \001(\016" +
-      "2,.com.tiwari.studence.proto.classes.Cla" +
-      "ssType\022@\n\tcampusRef\030\004 \001(\0132-.com.tiwari.s" +
-      "tudence.proto.campus.CampusRefPb\022\023\n\013clas" +
-      "sRollNo\030\005 \001(\t\022D\n\tparentRef\030\006 \001(\01321.com.t" +
-      "iwari.studence.proto.guardian.GuardianRe" +
-      "fPb\"\"\n\022StudentSearchReqPb\022\014\n\004name\030\001 \001(\t\"" +
-      "\223\001\n\023StudentSearchRespPb\022=\n\007summary\030\001 \001(\013" +
-      "2,.com.tiwari.studence.proto.summary.Sum" +
-      "maryPb\022=\n\007results\030\002 \003(\0132,.com.tiwari.stu" +
-      "dence.proto.student.StudentPbB\005P\001\240\001\001b\006pr" +
-      "oto3"
+      "to\032\017summaryPb.proto\032\017classesPb.proto\032\016ca" +
+      "mpusPb.proto\032\022genericRefPb.proto\"\206\003\n\tStu" +
+      "dentPb\022:\n\006dbInfo\030\001 \001(\0132*.com.tiwari.stud" +
+      "ence.proto.entity.EntityPb\0224\n\004name\030\002 \001(\013" +
+      "2&.com.tiwari.studence.proto.name.NamePb" +
+      "\022A\n\010classRef\030\003 \001(\0132/.com.tiwari.studence" +
+      ".proto.classes.ClassesRefPb\022@\n\tcampusRef" +
+      "\030\004 \001(\0132-.com.tiwari.studence.proto.campu" +
+      "s.CampusRefPb\022\023\n\013classRollNo\030\005 \001(\t\022\036\n\026se" +
+      "rialOrRegistrationNo\030\006 \001(\t\022M\n\tparentRef\030" +
+      "\007 \001(\0132:.com.tiwari.studence.proto.generi" +
+      "cRef.GenericGuardianRefPb\"\225\002\n\014StudentRef" +
+      "Pb\022\020\n\010dbInfoId\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022?\n\tcl" +
+      "assType\030\003 \001(\0162,.com.tiwari.studence.prot" +
+      "o.classes.ClassType\022@\n\tcampusRef\030\004 \001(\0132-" +
+      ".com.tiwari.studence.proto.campus.Campus" +
+      "RefPb\022\023\n\013classRollNo\030\005 \001(\t\022M\n\tparentRef\030" +
+      "\006 \001(\0132:.com.tiwari.studence.proto.generi" +
+      "cRef.GenericGuardianRefPb\"\"\n\022StudentSear" +
+      "chReqPb\022\014\n\004name\030\001 \001(\t\"\223\001\n\023StudentSearchR" +
+      "espPb\022=\n\007summary\030\001 \001(\0132,.com.tiwari.stud" +
+      "ence.proto.summary.SummaryPb\022=\n\007results\030" +
+      "\002 \003(\0132,.com.tiwari.studence.proto.studen" +
+      "t.StudentPbB\005P\001\240\001\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -76,9 +76,9 @@ public final class StudentPbOuterClass {
           com.tiwari.studence.proto.entity.EntityPbOuterClass.getDescriptor(),
           com.tiwari.studence.proto.name.NamePbOuterClass.getDescriptor(),
           com.tiwari.studence.proto.summary.SummaryPbOuterClass.getDescriptor(),
-          com.tiwari.studence.proto.classes.ClassPb.getDescriptor(),
+          com.tiwari.studence.proto.classes.ClassesPbOuterClass.getDescriptor(),
           com.tiwari.studence.proto.campus.CampusPbOuterClass.getDescriptor(),
-          com.tiwari.studence.proto.guardian.GuardianPbOuterClass.getDescriptor(),
+          com.tiwari.studence.proto.genericRef.GenericRefPbOuterClass.getDescriptor(),
         });
     internal_static_com_tiwari_studence_proto_student_StudentPb_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -107,9 +107,9 @@ public final class StudentPbOuterClass {
     com.tiwari.studence.proto.entity.EntityPbOuterClass.getDescriptor();
     com.tiwari.studence.proto.name.NamePbOuterClass.getDescriptor();
     com.tiwari.studence.proto.summary.SummaryPbOuterClass.getDescriptor();
-    com.tiwari.studence.proto.classes.ClassPb.getDescriptor();
+    com.tiwari.studence.proto.classes.ClassesPbOuterClass.getDescriptor();
     com.tiwari.studence.proto.campus.CampusPbOuterClass.getDescriptor();
-    com.tiwari.studence.proto.guardian.GuardianPbOuterClass.getDescriptor();
+    com.tiwari.studence.proto.genericRef.GenericRefPbOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

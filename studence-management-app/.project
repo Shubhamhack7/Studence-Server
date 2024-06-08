@@ -7,9 +7,11 @@
     <project>studence-common</project>
     <project>studence-dynamodb-database</project>
     <project>studence-util</project>
+    <project>studence-server</project>
     <project>studence-login</project>
     <project>studence-organisation</project>
     <project>studence-campus</project>
+    <project>studence-firebase</project>
   </projects>
   <buildSpec>
     <buildCommand>

@@ -40,10 +40,10 @@ public class TeacherIndexer extends AEntityIndexer<TeacherPb> {
             builder.getCampusRef().getName(), false, AttributeValue.Type.S,
             TeacherIndexerEnum.TEACHER_CAMPUS_REF_NAME.isLowerCase());
     addItemToAttritibeMap(items, TeacherIndexerEnum.TEACHER_CAMPUS_REF_ORG_ID.name(),
-            builder.getCampusRef().getOrganisationRef().getDbInfoId(), false, AttributeValue.Type.S,
+            builder.getCampusRef().getDbInfoId(), false, AttributeValue.Type.S,
             TeacherIndexerEnum.TEACHER_CAMPUS_REF_ORG_ID.isLowerCase());
     addItemToAttritibeMap(items, TeacherIndexerEnum.TEACHER_CAMPUS_REF_ORG_NAME.name(),
-            builder.getCampusRef().getOrganisationRef().getName().toLowerCase(), false,
+            builder.getCampusRef().getName().toLowerCase(), false,
             AttributeValue.Type.S, TeacherIndexerEnum.TEACHER_CAMPUS_REF_ORG_NAME.isLowerCase());
     addItemToAttritibeMap(items, TeacherIndexerEnum.TEACHER_IS_CLASS_TEACHER.getLabel(),
             builder.getClassTeacherAndTeacher().getIsCLassTeacher().name(), false,

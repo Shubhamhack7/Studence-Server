@@ -124,9 +124,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ORGANISATIONREF_FIELD_NUMBER = 3;
-  private com.tiwari.studence.proto.organisation.OrganisationRefPb organisationRef_;
+  private com.tiwari.studence.proto.genericRef.GenericRefPb organisationRef_;
   /**
-   * <code>.com.tiwari.studence.proto.organisation.OrganisationRefPb organisationRef = 3;</code>
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb organisationRef = 3;</code>
    * @return Whether the organisationRef field is set.
    */
   @java.lang.Override
@@ -134,19 +134,19 @@ private static final long serialVersionUID = 0L;
     return organisationRef_ != null;
   }
   /**
-   * <code>.com.tiwari.studence.proto.organisation.OrganisationRefPb organisationRef = 3;</code>
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb organisationRef = 3;</code>
    * @return The organisationRef.
    */
   @java.lang.Override
-  public com.tiwari.studence.proto.organisation.OrganisationRefPb getOrganisationRef() {
-    return organisationRef_ == null ? com.tiwari.studence.proto.organisation.OrganisationRefPb.getDefaultInstance() : organisationRef_;
+  public com.tiwari.studence.proto.genericRef.GenericRefPb getOrganisationRef() {
+    return organisationRef_ == null ? com.tiwari.studence.proto.genericRef.GenericRefPb.getDefaultInstance() : organisationRef_;
   }
   /**
-   * <code>.com.tiwari.studence.proto.organisation.OrganisationRefPb organisationRef = 3;</code>
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb organisationRef = 3;</code>
    */
   @java.lang.Override
-  public com.tiwari.studence.proto.organisation.OrganisationRefPbOrBuilder getOrganisationRefOrBuilder() {
-    return organisationRef_ == null ? com.tiwari.studence.proto.organisation.OrganisationRefPb.getDefaultInstance() : organisationRef_;
+  public com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder getOrganisationRefOrBuilder() {
+    return organisationRef_ == null ? com.tiwari.studence.proto.genericRef.GenericRefPb.getDefaultInstance() : organisationRef_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -677,31 +677,31 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.tiwari.studence.proto.organisation.OrganisationRefPb organisationRef_;
+    private com.tiwari.studence.proto.genericRef.GenericRefPb organisationRef_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tiwari.studence.proto.organisation.OrganisationRefPb, com.tiwari.studence.proto.organisation.OrganisationRefPb.Builder, com.tiwari.studence.proto.organisation.OrganisationRefPbOrBuilder> organisationRefBuilder_;
+        com.tiwari.studence.proto.genericRef.GenericRefPb, com.tiwari.studence.proto.genericRef.GenericRefPb.Builder, com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder> organisationRefBuilder_;
     /**
-     * <code>.com.tiwari.studence.proto.organisation.OrganisationRefPb organisationRef = 3;</code>
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb organisationRef = 3;</code>
      * @return Whether the organisationRef field is set.
      */
     public boolean hasOrganisationRef() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>.com.tiwari.studence.proto.organisation.OrganisationRefPb organisationRef = 3;</code>
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb organisationRef = 3;</code>
      * @return The organisationRef.
      */
-    public com.tiwari.studence.proto.organisation.OrganisationRefPb getOrganisationRef() {
+    public com.tiwari.studence.proto.genericRef.GenericRefPb getOrganisationRef() {
       if (organisationRefBuilder_ == null) {
-        return organisationRef_ == null ? com.tiwari.studence.proto.organisation.OrganisationRefPb.getDefaultInstance() : organisationRef_;
+        return organisationRef_ == null ? com.tiwari.studence.proto.genericRef.GenericRefPb.getDefaultInstance() : organisationRef_;
       } else {
         return organisationRefBuilder_.getMessage();
       }
     }
     /**
-     * <code>.com.tiwari.studence.proto.organisation.OrganisationRefPb organisationRef = 3;</code>
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb organisationRef = 3;</code>
      */
-    public Builder setOrganisationRef(com.tiwari.studence.proto.organisation.OrganisationRefPb value) {
+    public Builder setOrganisationRef(com.tiwari.studence.proto.genericRef.GenericRefPb value) {
       if (organisationRefBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -715,10 +715,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.organisation.OrganisationRefPb organisationRef = 3;</code>
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb organisationRef = 3;</code>
      */
     public Builder setOrganisationRef(
-        com.tiwari.studence.proto.organisation.OrganisationRefPb.Builder builderForValue) {
+        com.tiwari.studence.proto.genericRef.GenericRefPb.Builder builderForValue) {
       if (organisationRefBuilder_ == null) {
         organisationRef_ = builderForValue.build();
       } else {
@@ -729,13 +729,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.organisation.OrganisationRefPb organisationRef = 3;</code>
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb organisationRef = 3;</code>
      */
-    public Builder mergeOrganisationRef(com.tiwari.studence.proto.organisation.OrganisationRefPb value) {
+    public Builder mergeOrganisationRef(com.tiwari.studence.proto.genericRef.GenericRefPb value) {
       if (organisationRefBuilder_ == null) {
         if (((bitField0_ & 0x00000004) != 0) &&
           organisationRef_ != null &&
-          organisationRef_ != com.tiwari.studence.proto.organisation.OrganisationRefPb.getDefaultInstance()) {
+          organisationRef_ != com.tiwari.studence.proto.genericRef.GenericRefPb.getDefaultInstance()) {
           getOrganisationRefBuilder().mergeFrom(value);
         } else {
           organisationRef_ = value;
@@ -748,7 +748,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.organisation.OrganisationRefPb organisationRef = 3;</code>
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb organisationRef = 3;</code>
      */
     public Builder clearOrganisationRef() {
       bitField0_ = (bitField0_ & ~0x00000004);
@@ -761,33 +761,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.organisation.OrganisationRefPb organisationRef = 3;</code>
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb organisationRef = 3;</code>
      */
-    public com.tiwari.studence.proto.organisation.OrganisationRefPb.Builder getOrganisationRefBuilder() {
+    public com.tiwari.studence.proto.genericRef.GenericRefPb.Builder getOrganisationRefBuilder() {
       bitField0_ |= 0x00000004;
       onChanged();
       return getOrganisationRefFieldBuilder().getBuilder();
     }
     /**
-     * <code>.com.tiwari.studence.proto.organisation.OrganisationRefPb organisationRef = 3;</code>
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb organisationRef = 3;</code>
      */
-    public com.tiwari.studence.proto.organisation.OrganisationRefPbOrBuilder getOrganisationRefOrBuilder() {
+    public com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder getOrganisationRefOrBuilder() {
       if (organisationRefBuilder_ != null) {
         return organisationRefBuilder_.getMessageOrBuilder();
       } else {
         return organisationRef_ == null ?
-            com.tiwari.studence.proto.organisation.OrganisationRefPb.getDefaultInstance() : organisationRef_;
+            com.tiwari.studence.proto.genericRef.GenericRefPb.getDefaultInstance() : organisationRef_;
       }
     }
     /**
-     * <code>.com.tiwari.studence.proto.organisation.OrganisationRefPb organisationRef = 3;</code>
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb organisationRef = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tiwari.studence.proto.organisation.OrganisationRefPb, com.tiwari.studence.proto.organisation.OrganisationRefPb.Builder, com.tiwari.studence.proto.organisation.OrganisationRefPbOrBuilder> 
+        com.tiwari.studence.proto.genericRef.GenericRefPb, com.tiwari.studence.proto.genericRef.GenericRefPb.Builder, com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder> 
         getOrganisationRefFieldBuilder() {
       if (organisationRefBuilder_ == null) {
         organisationRefBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tiwari.studence.proto.organisation.OrganisationRefPb, com.tiwari.studence.proto.organisation.OrganisationRefPb.Builder, com.tiwari.studence.proto.organisation.OrganisationRefPbOrBuilder>(
+            com.tiwari.studence.proto.genericRef.GenericRefPb, com.tiwari.studence.proto.genericRef.GenericRefPb.Builder, com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder>(
                 getOrganisationRef(),
                 getParentForChildren(),
                 isClean());

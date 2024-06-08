@@ -24,7 +24,7 @@ public class DevicesIndexer extends AEntityIndexer<DeviceDetailsPb> {
             builder.getDeviceOsType().name(), false, AttributeValue.Type.S,
             DevicesIndexerEnum.DEVICE_OS_TYPE.isLowerCase());
     addItemToAttritibeMap(items, DevicesIndexerEnum.DEVICE_IP_ADDRESS.name(),
-            builder.getDeviceIpAddress(), false, AttributeValue.Type.S,
+            builder.getDeviceIpAddress().getDeviceIpAddress(), false, AttributeValue.Type.S,
             DevicesIndexerEnum.DEVICE_IP_ADDRESS.isLowerCase());
     addItemToAttritibeMap(items, DevicesIndexerEnum.DEVICE_UNIQUE_ID.name(),
             builder.getUniqueId(), false, AttributeValue.Type.S,

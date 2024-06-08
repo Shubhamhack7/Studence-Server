@@ -8,7 +8,7 @@ import "entityPb.proto";
 import "namePb.proto";
 import "summaryPb.proto";
 import "studentPb.proto";
-import "classPb.proto";
+import "classesPb.proto";
 import "teacherPb.proto";
 import "dataTypesPb.proto";
 

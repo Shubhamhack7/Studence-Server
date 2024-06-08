@@ -1,7 +1,18 @@
 package com.tiwari.studence.classes.provider;
 
-public class ClassesProvider {
+import com.tiwari.studence.common.provider.IPbBuilderProvider;
+import com.tiwari.studence.proto.classes.ClassesPb;
 
-    // TODO: Implement ClassesProvider
+public class ClassesProvider implements IPbBuilderProvider<ClassesPb, ClassesPb.Builder> {
+    @Override
+    public ClassesPb.Builder getBuilder() {
+        return ClassesPb.newBuilder();
+    }
+
+    @Override
+    public ClassesPb.Builder getBuilder(ClassesPb builder) {
+        return ClassesPb.newBuilder(builder);
+    }
+
 
 }

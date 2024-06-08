@@ -32,17 +32,17 @@ public interface CampusRefPbOrBuilder extends
       getNameBytes();
 
   /**
-   * <code>.com.tiwari.studence.proto.organisation.OrganisationRefPb organisationRef = 3;</code>
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb organisationRef = 3;</code>
    * @return Whether the organisationRef field is set.
    */
   boolean hasOrganisationRef();
   /**
-   * <code>.com.tiwari.studence.proto.organisation.OrganisationRefPb organisationRef = 3;</code>
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb organisationRef = 3;</code>
    * @return The organisationRef.
    */
-  com.tiwari.studence.proto.organisation.OrganisationRefPb getOrganisationRef();
+  com.tiwari.studence.proto.genericRef.GenericRefPb getOrganisationRef();
   /**
-   * <code>.com.tiwari.studence.proto.organisation.OrganisationRefPb organisationRef = 3;</code>
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb organisationRef = 3;</code>
    */
-  com.tiwari.studence.proto.organisation.OrganisationRefPbOrBuilder getOrganisationRefOrBuilder();
+  com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder getOrganisationRefOrBuilder();
 }

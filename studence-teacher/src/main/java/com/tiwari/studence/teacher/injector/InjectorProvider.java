@@ -3,7 +3,6 @@ package com.tiwari.studence.teacher.injector;
 import com.google.inject.AbstractModule;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import com.tiwari.studence.organisation.module.OrganisationModule;
 import com.tiwari.studence.teacher.module.TeacherModule;
 import com.tiwari.studence.util.collect.Lists;
 import com.tiwari.studence.util.module.ServerListnerModule;
@@ -28,7 +27,7 @@ public class InjectorProvider {
     modulesList.addAll(com.tiwari.studence.common.injector.InjectorProvider.getModules());
     modulesList.add(new ServerEnvironmentType.ServerEnvironmentTypeModule());
     modulesList.add(new TeacherModule());
-    modulesList.add(new OrganisationModule());
+    //modulesList.add(new OrganisationModule());
     modulesList.add(new ServerListnerModule());
 
     return modulesList;

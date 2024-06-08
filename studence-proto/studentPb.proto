@@ -7,9 +7,9 @@ package com.tiwari.studence.proto.student;
 import "entityPb.proto";
 import "namePb.proto";
 import "summaryPb.proto";
-import "classPb.proto";
+import "classesPb.proto";
 import "campusPb.proto";
-import "guardianPb.proto";
+import "genericRefPb.proto";
 
 option java_multiple_files = true;
 option java_generate_equals_and_hash = true;
@@ -23,7 +23,7 @@ message StudentPb{
   com.tiwari.studence.proto.campus.CampusRefPb campusRef= 4;
   string classRollNo=5;
   string serialOrRegistrationNo = 6;
-  com.tiwari.studence.proto.guardian.GuardianRefPb parentRef= 7;
+  com.tiwari.studence.proto.genericRef.GenericGuardianRefPb parentRef= 7;
 }
 
 message StudentRefPb{
@@ -32,7 +32,7 @@ message StudentRefPb{
   com.tiwari.studence.proto.classes.ClassType classType = 3;
   com.tiwari.studence.proto.campus.CampusRefPb campusRef= 4;
   string classRollNo=5;
-  com.tiwari.studence.proto.guardian.GuardianRefPb parentRef= 6;
+  com.tiwari.studence.proto.genericRef.GenericGuardianRefPb parentRef= 6;
 }
 
 message StudentSearchReqPb{

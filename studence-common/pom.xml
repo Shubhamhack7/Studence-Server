@@ -13,10 +13,10 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.release>17</maven.compiler.release>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
 	</properties>
-
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -41,7 +41,11 @@
 			<artifactId>okhttp</artifactId>
 			<version>2.7.5</version>
 		</dependency>
-
+		<dependency>
+			<groupId>com.tiwari.studence</groupId>
+			<artifactId>studence-util</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<pluginManagement>

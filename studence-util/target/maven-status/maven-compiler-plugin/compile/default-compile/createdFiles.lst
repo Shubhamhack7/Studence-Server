@@ -24,7 +24,6 @@ com/tiwari/studence/proto/voidPb/VoidSearchReqPb$1.class
 com/tiwari/studence/proto/devices/MacOSDeviceDetailsOrBuilder.class
 com/tiwari/studence/proto/fileInfo/FileInfoSearchRespPb.class
 com/tiwari/studence/util/exception/VoidException.class
-com/tiwari/studence/util/common/StudenceThreadManager$1.class
 com/tiwari/studence/util/formatter/ISDCodeFormatter$1.class
 com/tiwari/studence/proto/entity/LifeTimeEnum$1.class
 com/tiwari/studence/shudence/util/cache/ABaseCache$1$1.class

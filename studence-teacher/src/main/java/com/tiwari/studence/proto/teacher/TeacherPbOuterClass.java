@@ -56,35 +56,35 @@ public final class TeacherPbOuterClass {
       "\n\017teacherPb.proto\022!com.tiwari.studence.p" +
       "roto.teacher\032\016entityPb.proto\032\014namePb.pro" +
       "to\032\026contactDetailsPb.proto\032\017summaryPb.pr" +
-      "oto\032\016campusPb.proto\032\021dataTypesPb.proto\032\017" +
-      "subjectPb.proto\032\rclassPb.proto\"\346\002\n\tTeach" +
-      "erPb\022:\n\006dbInfo\030\001 \001(\0132*.com.tiwari.studen" +
-      "ce.proto.entity.EntityPb\0224\n\004name\030\002 \001(\0132&" +
-      ".com.tiwari.studence.proto.name.NamePb\022R" +
-      "\n\016contactDetails\030\003 \001(\0132:.com.tiwari.stud" +
-      "ence.proto.contactDetails.ContactDetails" +
-      "Pb\022@\n\tCampusRef\030\004 \001(\0132-.com.tiwari.stude" +
-      "nce.proto.campus.CampusRefPb\022Q\n\026classTea" +
-      "cherAndTeacher\030\005 \001(\01321.com.tiwari.studen" +
-      "ce.proto.teacher.TeacherClassPb\"\365\001\n\016Teac" +
-      "herClassPb\022H\n\016isCLassTeacher\030\001 \001(\01620.com" +
-      ".tiwari.studence.proto.datatypes.Boolean" +
-      "Enum\022N\n\014classTeacher\030\002 \003(\01328.com.tiwari." +
-      "studence.proto.teacher.TeacherClassSubje" +
-      "ctPb\022I\n\007teacher\030\003 \003(\01328.com.tiwari.stude" +
-      "nce.proto.teacher.TeacherClassSubjectPb\"" +
-      "\247\001\n\025TeacherClassSubjectPb\022G\n\013subjectType" +
-      "\030\001 \001(\01622.com.tiwari.studence.proto.subje" +
-      "ct.SubjectTypeEnum\022E\n\014classTeacher\030\002 \001(\013" +
-      "2/.com.tiwari.studence.proto.classes.Cla" +
-      "ssesRefPb\"U\n\014TeacherRefPb\022\020\n\010dbInfoId\030\001 " +
-      "\001(\t\022\014\n\004name\030\002 \001(\t\022\023\n\013campusRefId\030\003 \001(\t\022\020" +
-      "\n\010classRef\030\004 \001(\t\"\"\n\022TeacherSearchReqPb\022\014" +
-      "\n\004name\030\001 \001(\t\"\223\001\n\023TeacherSearchRespPb\022=\n\007" +
-      "summary\030\001 \001(\0132,.com.tiwari.studence.prot" +
-      "o.summary.SummaryPb\022=\n\007results\030\002 \003(\0132,.c" +
-      "om.tiwari.studence.proto.teacher.Teacher" +
-      "PbB\005P\001\240\001\001b\006proto3"
+      "oto\032\022genericRefPb.proto\032\021dataTypesPb.pro" +
+      "to\032\017subjectPb.proto\032\017classesPb.proto\"\353\002\n" +
+      "\tTeacherPb\022:\n\006dbInfo\030\001 \001(\0132*.com.tiwari." +
+      "studence.proto.entity.EntityPb\0224\n\004name\030\002" +
+      " \001(\0132&.com.tiwari.studence.proto.name.Na" +
+      "mePb\022R\n\016contactDetails\030\003 \001(\0132:.com.tiwar" +
+      "i.studence.proto.contactDetails.ContactD" +
+      "etailsPb\022E\n\tCampusRef\030\004 \001(\01322.com.tiwari" +
+      ".studence.proto.genericRef.GenericRefPb\022" +
+      "Q\n\026classTeacherAndTeacher\030\005 \001(\01321.com.ti" +
+      "wari.studence.proto.teacher.TeacherClass" +
+      "Pb\"\365\001\n\016TeacherClassPb\022H\n\016isCLassTeacher\030" +
+      "\001 \001(\01620.com.tiwari.studence.proto.dataty" +
+      "pes.BooleanEnum\022N\n\014classTeacher\030\002 \003(\01328." +
+      "com.tiwari.studence.proto.teacher.Teache" +
+      "rClassSubjectPb\022I\n\007teacher\030\003 \003(\01328.com.t" +
+      "iwari.studence.proto.teacher.TeacherClas" +
+      "sSubjectPb\"\247\001\n\025TeacherClassSubjectPb\022G\n\013" +
+      "subjectType\030\001 \001(\01622.com.tiwari.studence." +
+      "proto.subject.SubjectTypeEnum\022E\n\014classTe" +
+      "acher\030\002 \001(\0132/.com.tiwari.studence.proto." +
+      "classes.ClassesRefPb\"U\n\014TeacherRefPb\022\020\n\010" +
+      "dbInfoId\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\023\n\013campusRe" +
+      "fId\030\003 \001(\t\022\020\n\010classRef\030\004 \001(\t\"\"\n\022TeacherSe" +
+      "archReqPb\022\014\n\004name\030\001 \001(\t\"\223\001\n\023TeacherSearc" +
+      "hRespPb\022=\n\007summary\030\001 \001(\0132,.com.tiwari.st" +
+      "udence.proto.summary.SummaryPb\022=\n\007result" +
+      "s\030\002 \003(\0132,.com.tiwari.studence.proto.teac" +
+      "her.TeacherPbB\005P\001\240\001\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -93,10 +93,10 @@ public final class TeacherPbOuterClass {
           com.tiwari.studence.proto.name.NamePbOuterClass.getDescriptor(),
           com.tiwari.studence.proto.contactDetails.ContactDetailsPbOuterClass.getDescriptor(),
           com.tiwari.studence.proto.summary.SummaryPbOuterClass.getDescriptor(),
-          com.tiwari.studence.proto.campus.CampusPbOuterClass.getDescriptor(),
+          com.tiwari.studence.proto.genericRef.GenericRefPbOuterClass.getDescriptor(),
           com.tiwari.studence.proto.datatypes.DataTypesPb.getDescriptor(),
           com.tiwari.studence.proto.subject.SubjectPb.getDescriptor(),
-          com.tiwari.studence.proto.classes.ClassPb.getDescriptor(),
+          com.tiwari.studence.proto.classes.ClassesPbOuterClass.getDescriptor(),
         });
     internal_static_com_tiwari_studence_proto_teacher_TeacherPb_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -138,10 +138,10 @@ public final class TeacherPbOuterClass {
     com.tiwari.studence.proto.name.NamePbOuterClass.getDescriptor();
     com.tiwari.studence.proto.contactDetails.ContactDetailsPbOuterClass.getDescriptor();
     com.tiwari.studence.proto.summary.SummaryPbOuterClass.getDescriptor();
-    com.tiwari.studence.proto.campus.CampusPbOuterClass.getDescriptor();
+    com.tiwari.studence.proto.genericRef.GenericRefPbOuterClass.getDescriptor();
     com.tiwari.studence.proto.datatypes.DataTypesPb.getDescriptor();
     com.tiwari.studence.proto.subject.SubjectPb.getDescriptor();
-    com.tiwari.studence.proto.classes.ClassPb.getDescriptor();
+    com.tiwari.studence.proto.classes.ClassesPbOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

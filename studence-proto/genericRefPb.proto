@@ -16,6 +16,19 @@ message GenericRefPb{
   string name =2;
 }
 
+message OrganisationCampusGenericRefPb{
+  string campusDbInfoId = 1;
+  string campusName =2;
+  GenericRefPb organistionRef = 3;
+}
+
+message GenericGuardianRefPb{
+  string dbInfoId =1;
+  string fatherName= 2;
+  string motherName= 3;
+}
+
+
 message GenericRefPbWithBoolean{
   string dbInfoId = 1;
   string name =2;

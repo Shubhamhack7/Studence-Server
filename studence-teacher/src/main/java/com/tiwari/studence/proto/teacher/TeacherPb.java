@@ -122,9 +122,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CAMPUSREF_FIELD_NUMBER = 4;
-  private com.tiwari.studence.proto.campus.CampusRefPb campusRef_;
+  private com.tiwari.studence.proto.genericRef.GenericRefPb campusRef_;
   /**
-   * <code>.com.tiwari.studence.proto.campus.CampusRefPb CampusRef = 4;</code>
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb CampusRef = 4;</code>
    * @return Whether the campusRef field is set.
    */
   @java.lang.Override
@@ -132,19 +132,19 @@ private static final long serialVersionUID = 0L;
     return campusRef_ != null;
   }
   /**
-   * <code>.com.tiwari.studence.proto.campus.CampusRefPb CampusRef = 4;</code>
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb CampusRef = 4;</code>
    * @return The campusRef.
    */
   @java.lang.Override
-  public com.tiwari.studence.proto.campus.CampusRefPb getCampusRef() {
-    return campusRef_ == null ? com.tiwari.studence.proto.campus.CampusRefPb.getDefaultInstance() : campusRef_;
+  public com.tiwari.studence.proto.genericRef.GenericRefPb getCampusRef() {
+    return campusRef_ == null ? com.tiwari.studence.proto.genericRef.GenericRefPb.getDefaultInstance() : campusRef_;
   }
   /**
-   * <code>.com.tiwari.studence.proto.campus.CampusRefPb CampusRef = 4;</code>
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb CampusRef = 4;</code>
    */
   @java.lang.Override
-  public com.tiwari.studence.proto.campus.CampusRefPbOrBuilder getCampusRefOrBuilder() {
-    return campusRef_ == null ? com.tiwari.studence.proto.campus.CampusRefPb.getDefaultInstance() : campusRef_;
+  public com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder getCampusRefOrBuilder() {
+    return campusRef_ == null ? com.tiwari.studence.proto.genericRef.GenericRefPb.getDefaultInstance() : campusRef_;
   }
 
   public static final int CLASSTEACHERANDTEACHER_FIELD_NUMBER = 5;
@@ -1010,31 +1010,31 @@ private static final long serialVersionUID = 0L;
       return contactDetailsBuilder_;
     }
 
-    private com.tiwari.studence.proto.campus.CampusRefPb campusRef_;
+    private com.tiwari.studence.proto.genericRef.GenericRefPb campusRef_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tiwari.studence.proto.campus.CampusRefPb, com.tiwari.studence.proto.campus.CampusRefPb.Builder, com.tiwari.studence.proto.campus.CampusRefPbOrBuilder> campusRefBuilder_;
+        com.tiwari.studence.proto.genericRef.GenericRefPb, com.tiwari.studence.proto.genericRef.GenericRefPb.Builder, com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder> campusRefBuilder_;
     /**
-     * <code>.com.tiwari.studence.proto.campus.CampusRefPb CampusRef = 4;</code>
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb CampusRef = 4;</code>
      * @return Whether the campusRef field is set.
      */
     public boolean hasCampusRef() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <code>.com.tiwari.studence.proto.campus.CampusRefPb CampusRef = 4;</code>
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb CampusRef = 4;</code>
      * @return The campusRef.
      */
-    public com.tiwari.studence.proto.campus.CampusRefPb getCampusRef() {
+    public com.tiwari.studence.proto.genericRef.GenericRefPb getCampusRef() {
       if (campusRefBuilder_ == null) {
-        return campusRef_ == null ? com.tiwari.studence.proto.campus.CampusRefPb.getDefaultInstance() : campusRef_;
+        return campusRef_ == null ? com.tiwari.studence.proto.genericRef.GenericRefPb.getDefaultInstance() : campusRef_;
       } else {
         return campusRefBuilder_.getMessage();
       }
     }
     /**
-     * <code>.com.tiwari.studence.proto.campus.CampusRefPb CampusRef = 4;</code>
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb CampusRef = 4;</code>
      */
-    public Builder setCampusRef(com.tiwari.studence.proto.campus.CampusRefPb value) {
+    public Builder setCampusRef(com.tiwari.studence.proto.genericRef.GenericRefPb value) {
       if (campusRefBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1048,10 +1048,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.campus.CampusRefPb CampusRef = 4;</code>
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb CampusRef = 4;</code>
      */
     public Builder setCampusRef(
-        com.tiwari.studence.proto.campus.CampusRefPb.Builder builderForValue) {
+        com.tiwari.studence.proto.genericRef.GenericRefPb.Builder builderForValue) {
       if (campusRefBuilder_ == null) {
         campusRef_ = builderForValue.build();
       } else {
@@ -1062,13 +1062,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.campus.CampusRefPb CampusRef = 4;</code>
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb CampusRef = 4;</code>
      */
-    public Builder mergeCampusRef(com.tiwari.studence.proto.campus.CampusRefPb value) {
+    public Builder mergeCampusRef(com.tiwari.studence.proto.genericRef.GenericRefPb value) {
       if (campusRefBuilder_ == null) {
         if (((bitField0_ & 0x00000008) != 0) &&
           campusRef_ != null &&
-          campusRef_ != com.tiwari.studence.proto.campus.CampusRefPb.getDefaultInstance()) {
+          campusRef_ != com.tiwari.studence.proto.genericRef.GenericRefPb.getDefaultInstance()) {
           getCampusRefBuilder().mergeFrom(value);
         } else {
           campusRef_ = value;
@@ -1081,7 +1081,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.campus.CampusRefPb CampusRef = 4;</code>
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb CampusRef = 4;</code>
      */
     public Builder clearCampusRef() {
       bitField0_ = (bitField0_ & ~0x00000008);
@@ -1094,33 +1094,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.campus.CampusRefPb CampusRef = 4;</code>
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb CampusRef = 4;</code>
      */
-    public com.tiwari.studence.proto.campus.CampusRefPb.Builder getCampusRefBuilder() {
+    public com.tiwari.studence.proto.genericRef.GenericRefPb.Builder getCampusRefBuilder() {
       bitField0_ |= 0x00000008;
       onChanged();
       return getCampusRefFieldBuilder().getBuilder();
     }
     /**
-     * <code>.com.tiwari.studence.proto.campus.CampusRefPb CampusRef = 4;</code>
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb CampusRef = 4;</code>
      */
-    public com.tiwari.studence.proto.campus.CampusRefPbOrBuilder getCampusRefOrBuilder() {
+    public com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder getCampusRefOrBuilder() {
       if (campusRefBuilder_ != null) {
         return campusRefBuilder_.getMessageOrBuilder();
       } else {
         return campusRef_ == null ?
-            com.tiwari.studence.proto.campus.CampusRefPb.getDefaultInstance() : campusRef_;
+            com.tiwari.studence.proto.genericRef.GenericRefPb.getDefaultInstance() : campusRef_;
       }
     }
     /**
-     * <code>.com.tiwari.studence.proto.campus.CampusRefPb CampusRef = 4;</code>
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb CampusRef = 4;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tiwari.studence.proto.campus.CampusRefPb, com.tiwari.studence.proto.campus.CampusRefPb.Builder, com.tiwari.studence.proto.campus.CampusRefPbOrBuilder> 
+        com.tiwari.studence.proto.genericRef.GenericRefPb, com.tiwari.studence.proto.genericRef.GenericRefPb.Builder, com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder> 
         getCampusRefFieldBuilder() {
       if (campusRefBuilder_ == null) {
         campusRefBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tiwari.studence.proto.campus.CampusRefPb, com.tiwari.studence.proto.campus.CampusRefPb.Builder, com.tiwari.studence.proto.campus.CampusRefPbOrBuilder>(
+            com.tiwari.studence.proto.genericRef.GenericRefPb, com.tiwari.studence.proto.genericRef.GenericRefPb.Builder, com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder>(
                 getCampusRef(),
                 getParentForChildren(),
                 isClean());

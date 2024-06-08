@@ -20,6 +20,16 @@ public final class GenericRefPbOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_tiwari_studence_proto_genericRef_GenericRefPb_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tiwari_studence_proto_genericRef_OrganisationCampusGenericRefPb_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tiwari_studence_proto_genericRef_OrganisationCampusGenericRefPb_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tiwari_studence_proto_genericRef_GenericGuardianRefPb_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tiwari_studence_proto_genericRef_GenericGuardianRefPb_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_tiwari_studence_proto_genericRef_GenericRefPbWithBoolean_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -36,10 +46,16 @@ public final class GenericRefPbOuterClass {
       "\n\022genericRefPb.proto\022$com.tiwari.studenc" +
       "e.proto.genericRef\032\021dataTypesPb.proto\".\n" +
       "\014GenericRefPb\022\020\n\010dbInfoId\030\001 \001(\t\022\014\n\004name\030" +
-      "\002 \001(\t\"{\n\027GenericRefPbWithBoolean\022\020\n\010dbIn" +
-      "foId\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022@\n\010isActive\030\003 \001" +
-      "(\0132..com.tiwari.studence.proto.datatypes" +
-      ".BooleanPbB\005P\001\240\001\001b\006proto3"
+      "\002 \001(\t\"\230\001\n\036OrganisationCampusGenericRefPb" +
+      "\022\026\n\016campusDbInfoId\030\001 \001(\t\022\022\n\ncampusName\030\002" +
+      " \001(\t\022J\n\016organistionRef\030\003 \001(\01322.com.tiwar" +
+      "i.studence.proto.genericRef.GenericRefPb" +
+      "\"P\n\024GenericGuardianRefPb\022\020\n\010dbInfoId\030\001 \001" +
+      "(\t\022\022\n\nfatherName\030\002 \001(\t\022\022\n\nmotherName\030\003 \001" +
+      "(\t\"{\n\027GenericRefPbWithBoolean\022\020\n\010dbInfoI" +
+      "d\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022@\n\010isActive\030\003 \001(\0132" +
+      "..com.tiwari.studence.proto.datatypes.Bo" +
+      "oleanPbB\005P\001\240\001\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -52,8 +68,20 @@ public final class GenericRefPbOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tiwari_studence_proto_genericRef_GenericRefPb_descriptor,
         new java.lang.String[] { "DbInfoId", "Name", });
-    internal_static_com_tiwari_studence_proto_genericRef_GenericRefPbWithBoolean_descriptor =
+    internal_static_com_tiwari_studence_proto_genericRef_OrganisationCampusGenericRefPb_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_com_tiwari_studence_proto_genericRef_OrganisationCampusGenericRefPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_genericRef_OrganisationCampusGenericRefPb_descriptor,
+        new java.lang.String[] { "CampusDbInfoId", "CampusName", "OrganistionRef", });
+    internal_static_com_tiwari_studence_proto_genericRef_GenericGuardianRefPb_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_com_tiwari_studence_proto_genericRef_GenericGuardianRefPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_genericRef_GenericGuardianRefPb_descriptor,
+        new java.lang.String[] { "DbInfoId", "FatherName", "MotherName", });
+    internal_static_com_tiwari_studence_proto_genericRef_GenericRefPbWithBoolean_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_com_tiwari_studence_proto_genericRef_GenericRefPbWithBoolean_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tiwari_studence_proto_genericRef_GenericRefPbWithBoolean_descriptor,

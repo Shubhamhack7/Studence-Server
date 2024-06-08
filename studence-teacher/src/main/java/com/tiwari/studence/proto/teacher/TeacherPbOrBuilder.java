@@ -53,19 +53,19 @@ public interface TeacherPbOrBuilder extends
   com.tiwari.studence.proto.contactDetails.ContactDetailsPbOrBuilder getContactDetailsOrBuilder();
 
   /**
-   * <code>.com.tiwari.studence.proto.campus.CampusRefPb CampusRef = 4;</code>
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb CampusRef = 4;</code>
    * @return Whether the campusRef field is set.
    */
   boolean hasCampusRef();
   /**
-   * <code>.com.tiwari.studence.proto.campus.CampusRefPb CampusRef = 4;</code>
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb CampusRef = 4;</code>
    * @return The campusRef.
    */
-  com.tiwari.studence.proto.campus.CampusRefPb getCampusRef();
+  com.tiwari.studence.proto.genericRef.GenericRefPb getCampusRef();
   /**
-   * <code>.com.tiwari.studence.proto.campus.CampusRefPb CampusRef = 4;</code>
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb CampusRef = 4;</code>
    */
-  com.tiwari.studence.proto.campus.CampusRefPbOrBuilder getCampusRefOrBuilder();
+  com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder getCampusRefOrBuilder();
 
   /**
    * <code>.com.tiwari.studence.proto.teacher.TeacherClassPb classTeacherAndTeacher = 5;</code>

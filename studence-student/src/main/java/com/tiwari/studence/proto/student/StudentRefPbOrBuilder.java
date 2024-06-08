@@ -70,17 +70,17 @@ public interface StudentRefPbOrBuilder extends
       getClassRollNoBytes();
 
   /**
-   * <code>.com.tiwari.studence.proto.guardian.GuardianRefPb parentRef = 6;</code>
+   * <code>.com.tiwari.studence.proto.genericRef.GenericGuardianRefPb parentRef = 6;</code>
    * @return Whether the parentRef field is set.
    */
   boolean hasParentRef();
   /**
-   * <code>.com.tiwari.studence.proto.guardian.GuardianRefPb parentRef = 6;</code>
+   * <code>.com.tiwari.studence.proto.genericRef.GenericGuardianRefPb parentRef = 6;</code>
    * @return The parentRef.
    */
-  com.tiwari.studence.proto.guardian.GuardianRefPb getParentRef();
+  com.tiwari.studence.proto.genericRef.GenericGuardianRefPb getParentRef();
   /**
-   * <code>.com.tiwari.studence.proto.guardian.GuardianRefPb parentRef = 6;</code>
+   * <code>.com.tiwari.studence.proto.genericRef.GenericGuardianRefPb parentRef = 6;</code>
    */
-  com.tiwari.studence.proto.guardian.GuardianRefPbOrBuilder getParentRefOrBuilder();
+  com.tiwari.studence.proto.genericRef.GenericGuardianRefPbOrBuilder getParentRefOrBuilder();
 }

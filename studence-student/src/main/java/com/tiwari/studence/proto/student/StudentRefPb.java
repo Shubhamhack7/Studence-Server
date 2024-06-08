@@ -209,9 +209,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PARENTREF_FIELD_NUMBER = 6;
-  private com.tiwari.studence.proto.guardian.GuardianRefPb parentRef_;
+  private com.tiwari.studence.proto.genericRef.GenericGuardianRefPb parentRef_;
   /**
-   * <code>.com.tiwari.studence.proto.guardian.GuardianRefPb parentRef = 6;</code>
+   * <code>.com.tiwari.studence.proto.genericRef.GenericGuardianRefPb parentRef = 6;</code>
    * @return Whether the parentRef field is set.
    */
   @java.lang.Override
@@ -219,19 +219,19 @@ private static final long serialVersionUID = 0L;
     return parentRef_ != null;
   }
   /**
-   * <code>.com.tiwari.studence.proto.guardian.GuardianRefPb parentRef = 6;</code>
+   * <code>.com.tiwari.studence.proto.genericRef.GenericGuardianRefPb parentRef = 6;</code>
    * @return The parentRef.
    */
   @java.lang.Override
-  public com.tiwari.studence.proto.guardian.GuardianRefPb getParentRef() {
-    return parentRef_ == null ? com.tiwari.studence.proto.guardian.GuardianRefPb.getDefaultInstance() : parentRef_;
+  public com.tiwari.studence.proto.genericRef.GenericGuardianRefPb getParentRef() {
+    return parentRef_ == null ? com.tiwari.studence.proto.genericRef.GenericGuardianRefPb.getDefaultInstance() : parentRef_;
   }
   /**
-   * <code>.com.tiwari.studence.proto.guardian.GuardianRefPb parentRef = 6;</code>
+   * <code>.com.tiwari.studence.proto.genericRef.GenericGuardianRefPb parentRef = 6;</code>
    */
   @java.lang.Override
-  public com.tiwari.studence.proto.guardian.GuardianRefPbOrBuilder getParentRefOrBuilder() {
-    return parentRef_ == null ? com.tiwari.studence.proto.guardian.GuardianRefPb.getDefaultInstance() : parentRef_;
+  public com.tiwari.studence.proto.genericRef.GenericGuardianRefPbOrBuilder getParentRefOrBuilder() {
+    return parentRef_ == null ? com.tiwari.studence.proto.genericRef.GenericGuardianRefPb.getDefaultInstance() : parentRef_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -1088,31 +1088,31 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.tiwari.studence.proto.guardian.GuardianRefPb parentRef_;
+    private com.tiwari.studence.proto.genericRef.GenericGuardianRefPb parentRef_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tiwari.studence.proto.guardian.GuardianRefPb, com.tiwari.studence.proto.guardian.GuardianRefPb.Builder, com.tiwari.studence.proto.guardian.GuardianRefPbOrBuilder> parentRefBuilder_;
+        com.tiwari.studence.proto.genericRef.GenericGuardianRefPb, com.tiwari.studence.proto.genericRef.GenericGuardianRefPb.Builder, com.tiwari.studence.proto.genericRef.GenericGuardianRefPbOrBuilder> parentRefBuilder_;
     /**
-     * <code>.com.tiwari.studence.proto.guardian.GuardianRefPb parentRef = 6;</code>
+     * <code>.com.tiwari.studence.proto.genericRef.GenericGuardianRefPb parentRef = 6;</code>
      * @return Whether the parentRef field is set.
      */
     public boolean hasParentRef() {
       return ((bitField0_ & 0x00000020) != 0);
     }
     /**
-     * <code>.com.tiwari.studence.proto.guardian.GuardianRefPb parentRef = 6;</code>
+     * <code>.com.tiwari.studence.proto.genericRef.GenericGuardianRefPb parentRef = 6;</code>
      * @return The parentRef.
      */
-    public com.tiwari.studence.proto.guardian.GuardianRefPb getParentRef() {
+    public com.tiwari.studence.proto.genericRef.GenericGuardianRefPb getParentRef() {
       if (parentRefBuilder_ == null) {
-        return parentRef_ == null ? com.tiwari.studence.proto.guardian.GuardianRefPb.getDefaultInstance() : parentRef_;
+        return parentRef_ == null ? com.tiwari.studence.proto.genericRef.GenericGuardianRefPb.getDefaultInstance() : parentRef_;
       } else {
         return parentRefBuilder_.getMessage();
       }
     }
     /**
-     * <code>.com.tiwari.studence.proto.guardian.GuardianRefPb parentRef = 6;</code>
+     * <code>.com.tiwari.studence.proto.genericRef.GenericGuardianRefPb parentRef = 6;</code>
      */
-    public Builder setParentRef(com.tiwari.studence.proto.guardian.GuardianRefPb value) {
+    public Builder setParentRef(com.tiwari.studence.proto.genericRef.GenericGuardianRefPb value) {
       if (parentRefBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1126,10 +1126,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.guardian.GuardianRefPb parentRef = 6;</code>
+     * <code>.com.tiwari.studence.proto.genericRef.GenericGuardianRefPb parentRef = 6;</code>
      */
     public Builder setParentRef(
-        com.tiwari.studence.proto.guardian.GuardianRefPb.Builder builderForValue) {
+        com.tiwari.studence.proto.genericRef.GenericGuardianRefPb.Builder builderForValue) {
       if (parentRefBuilder_ == null) {
         parentRef_ = builderForValue.build();
       } else {
@@ -1140,13 +1140,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.guardian.GuardianRefPb parentRef = 6;</code>
+     * <code>.com.tiwari.studence.proto.genericRef.GenericGuardianRefPb parentRef = 6;</code>
      */
-    public Builder mergeParentRef(com.tiwari.studence.proto.guardian.GuardianRefPb value) {
+    public Builder mergeParentRef(com.tiwari.studence.proto.genericRef.GenericGuardianRefPb value) {
       if (parentRefBuilder_ == null) {
         if (((bitField0_ & 0x00000020) != 0) &&
           parentRef_ != null &&
-          parentRef_ != com.tiwari.studence.proto.guardian.GuardianRefPb.getDefaultInstance()) {
+          parentRef_ != com.tiwari.studence.proto.genericRef.GenericGuardianRefPb.getDefaultInstance()) {
           getParentRefBuilder().mergeFrom(value);
         } else {
           parentRef_ = value;
@@ -1159,7 +1159,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.guardian.GuardianRefPb parentRef = 6;</code>
+     * <code>.com.tiwari.studence.proto.genericRef.GenericGuardianRefPb parentRef = 6;</code>
      */
     public Builder clearParentRef() {
       bitField0_ = (bitField0_ & ~0x00000020);
@@ -1172,33 +1172,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.guardian.GuardianRefPb parentRef = 6;</code>
+     * <code>.com.tiwari.studence.proto.genericRef.GenericGuardianRefPb parentRef = 6;</code>
      */
-    public com.tiwari.studence.proto.guardian.GuardianRefPb.Builder getParentRefBuilder() {
+    public com.tiwari.studence.proto.genericRef.GenericGuardianRefPb.Builder getParentRefBuilder() {
       bitField0_ |= 0x00000020;
       onChanged();
       return getParentRefFieldBuilder().getBuilder();
     }
     /**
-     * <code>.com.tiwari.studence.proto.guardian.GuardianRefPb parentRef = 6;</code>
+     * <code>.com.tiwari.studence.proto.genericRef.GenericGuardianRefPb parentRef = 6;</code>
      */
-    public com.tiwari.studence.proto.guardian.GuardianRefPbOrBuilder getParentRefOrBuilder() {
+    public com.tiwari.studence.proto.genericRef.GenericGuardianRefPbOrBuilder getParentRefOrBuilder() {
       if (parentRefBuilder_ != null) {
         return parentRefBuilder_.getMessageOrBuilder();
       } else {
         return parentRef_ == null ?
-            com.tiwari.studence.proto.guardian.GuardianRefPb.getDefaultInstance() : parentRef_;
+            com.tiwari.studence.proto.genericRef.GenericGuardianRefPb.getDefaultInstance() : parentRef_;
       }
     }
     /**
-     * <code>.com.tiwari.studence.proto.guardian.GuardianRefPb parentRef = 6;</code>
+     * <code>.com.tiwari.studence.proto.genericRef.GenericGuardianRefPb parentRef = 6;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tiwari.studence.proto.guardian.GuardianRefPb, com.tiwari.studence.proto.guardian.GuardianRefPb.Builder, com.tiwari.studence.proto.guardian.GuardianRefPbOrBuilder> 
+        com.tiwari.studence.proto.genericRef.GenericGuardianRefPb, com.tiwari.studence.proto.genericRef.GenericGuardianRefPb.Builder, com.tiwari.studence.proto.genericRef.GenericGuardianRefPbOrBuilder> 
         getParentRefFieldBuilder() {
       if (parentRefBuilder_ == null) {
         parentRefBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tiwari.studence.proto.guardian.GuardianRefPb, com.tiwari.studence.proto.guardian.GuardianRefPb.Builder, com.tiwari.studence.proto.guardian.GuardianRefPbOrBuilder>(
+            com.tiwari.studence.proto.genericRef.GenericGuardianRefPb, com.tiwari.studence.proto.genericRef.GenericGuardianRefPb.Builder, com.tiwari.studence.proto.genericRef.GenericGuardianRefPbOrBuilder>(
                 getParentRef(),
                 getParentForChildren(),
                 isClean());

@@ -6,7 +6,6 @@ package com.tiwari.studence.proto.classes;
 
 import "entityPb.proto";
 import "summaryPb.proto";
-import "campusPb.proto";
 import "genericRefPb.proto";
 
 option java_multiple_files = true;
@@ -52,7 +51,7 @@ message ClassesPb{
   com.tiwari.studence.proto.entity.EntityPb dbInfo =1;
   ClassType classType = 2;
   SectionType sectionType =3;
-  com.tiwari.studence.proto.campus.CampusRefPb campusRef = 4;
+  com.tiwari.studence.proto.genericRef.OrganisationCampusGenericRefPb campusRef = 4;
 }
 
 

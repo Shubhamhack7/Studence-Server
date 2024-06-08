@@ -42,7 +42,6 @@ com/tiwari/studence/common/controlflow/SearchItemCF$State.class
 com/tiwari/studence/common/convertor/AEntityConvertor.class
 com/tiwari/studence/common/module/PutItemDynamoTableModule.class
 com/tiwari/studence/common/updater/AEntityUpdater.class
-com/tiwari/studence/common/async/AControlFlow$1.class
 com/tiwari/studence/common/entity/SearchEntityCF$State.class
 com/tiwari/studence/common/async/CallbackFuturesGroup.class
 com/tiwari/studence/common/error/ErrorProtoUiConverter.class
@@ -101,7 +100,6 @@ com/tiwari/studence/common/bquery/BQueryTableServices$1.class
 com/tiwari/studence/common/provider/IPbBuilderProvider.class
 com/tiwari/studence/common/async/InvokingFuturesGetDoneCallback.class
 com/tiwari/studence/common/services/interfaces/IDeleteEntity.class
-com/tiwari/studence/common/async/ABatchAsyncCall$1.class
 com/tiwari/studence/common/request/RequestExecutor.class
 com/tiwari/studence/common/controlflow/PutTableCF$InsertBQuery.class
 com/tiwari/studence/proto/time/TimeProfilePbOrBuilder.class
@@ -158,7 +156,6 @@ com/tiwari/studence/common/entity/EntityGetAndUpdateCF$UpdatedPb.class
 com/tiwari/studence/common/entity/EntityGetAndDeleteCF$GetUpdatedPb.class
 com/tiwari/studence/common/entity/EntityGetAndUpdateCF.class
 com/tiwari/studence/common/async/RequestScopes.class
-com/tiwari/studence/common/async/WaitOnFutureAndExecuteRunnableControlFlow$1.class
 com/tiwari/studence/common/entity/EntityCreateCF$State.class
 com/tiwari/studence/proto/time/AccumulatedTimeStatsIdPb$Builder.class
 com/tiwari/studence/common/handler/AHandler.class

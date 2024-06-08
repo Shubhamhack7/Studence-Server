@@ -51,26 +51,26 @@ public final class AttendencePbOuterClass {
       "\n\022attendencePb.proto\022$com.tiwari.studenc" +
       "e.proto.attendence\032\016entityPb.proto\032\014name" +
       "Pb.proto\032\017summaryPb.proto\032\017studentPb.pro" +
-      "to\032\rclassPb.proto\032\017teacherPb.proto\032\021data" +
-      "TypesPb.proto\"\222\003\n\014AttendencePb\022:\n\006dbInfo" +
-      "\030\001 \001(\0132*.com.tiwari.studence.proto.entit" +
-      "y.EntityPb\0224\n\004name\030\002 \001(\0132&.com.tiwari.st" +
-      "udence.proto.name.NamePb\022C\n\nstudentRef\030\003" +
-      " \001(\0132/.com.tiwari.studence.proto.student" +
-      ".StudentRefPb\022A\n\010classRef\030\004 \001(\0132/.com.ti" +
-      "wari.studence.proto.classes.ClassesRefPb" +
-      "\022C\n\nteacherRef\030\005 \001(\0132/.com.tiwari.studen" +
-      "ce.proto.teacher.TeacherRefPb\022C\n\tisPrese" +
-      "nt\030\006 \001(\01620.com.tiwari.studence.proto.dat" +
-      "atypes.BooleanEnum\"1\n\017AttendenceRefPb\022\020\n" +
-      "\010dbInfoId\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\"%\n\025Attende" +
-      "nceSearchReqPb\022\014\n\004name\030\001 \001(\t\"\234\001\n\026Attende" +
-      "nceSearchRespPb\022=\n\007summary\030\001 \001(\0132,.com.t" +
-      "iwari.studence.proto.summary.SummaryPb\022C" +
-      "\n\007results\030\002 \003(\01322.com.tiwari.studence.pr" +
-      "oto.attendence.AttendencePb\"(\n\020MarkAtten" +
-      "dencePb\022\024\n\014attendenceId\030\001 \003(\tB\005P\001\240\001\001b\006pr" +
-      "oto3"
+      "to\032\017classesPb.proto\032\017teacherPb.proto\032\021da" +
+      "taTypesPb.proto\"\222\003\n\014AttendencePb\022:\n\006dbIn" +
+      "fo\030\001 \001(\0132*.com.tiwari.studence.proto.ent" +
+      "ity.EntityPb\0224\n\004name\030\002 \001(\0132&.com.tiwari." +
+      "studence.proto.name.NamePb\022C\n\nstudentRef" +
+      "\030\003 \001(\0132/.com.tiwari.studence.proto.stude" +
+      "nt.StudentRefPb\022A\n\010classRef\030\004 \001(\0132/.com." +
+      "tiwari.studence.proto.classes.ClassesRef" +
+      "Pb\022C\n\nteacherRef\030\005 \001(\0132/.com.tiwari.stud" +
+      "ence.proto.teacher.TeacherRefPb\022C\n\tisPre" +
+      "sent\030\006 \001(\01620.com.tiwari.studence.proto.d" +
+      "atatypes.BooleanEnum\"1\n\017AttendenceRefPb\022" +
+      "\020\n\010dbInfoId\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\"%\n\025Atten" +
+      "denceSearchReqPb\022\014\n\004name\030\001 \001(\t\"\234\001\n\026Atten" +
+      "denceSearchRespPb\022=\n\007summary\030\001 \001(\0132,.com" +
+      ".tiwari.studence.proto.summary.SummaryPb" +
+      "\022C\n\007results\030\002 \003(\01322.com.tiwari.studence." +
+      "proto.attendence.AttendencePb\"(\n\020MarkAtt" +
+      "endencePb\022\024\n\014attendenceId\030\001 \003(\tB\005P\001\240\001\001b\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -79,7 +79,7 @@ public final class AttendencePbOuterClass {
           com.tiwari.studence.proto.name.NamePbOuterClass.getDescriptor(),
           com.tiwari.studence.proto.summary.SummaryPbOuterClass.getDescriptor(),
           com.tiwari.studence.proto.student.StudentPbOuterClass.getDescriptor(),
-          com.tiwari.studence.proto.classes.ClassPb.getDescriptor(),
+          com.tiwari.studence.proto.classes.ClassesPbOuterClass.getDescriptor(),
           com.tiwari.studence.proto.teacher.TeacherPbOuterClass.getDescriptor(),
           com.tiwari.studence.proto.datatypes.DataTypesPb.getDescriptor(),
         });
@@ -117,7 +117,7 @@ public final class AttendencePbOuterClass {
     com.tiwari.studence.proto.name.NamePbOuterClass.getDescriptor();
     com.tiwari.studence.proto.summary.SummaryPbOuterClass.getDescriptor();
     com.tiwari.studence.proto.student.StudentPbOuterClass.getDescriptor();
-    com.tiwari.studence.proto.classes.ClassPb.getDescriptor();
+    com.tiwari.studence.proto.classes.ClassesPbOuterClass.getDescriptor();
     com.tiwari.studence.proto.teacher.TeacherPbOuterClass.getDescriptor();
     com.tiwari.studence.proto.datatypes.DataTypesPb.getDescriptor();
   }

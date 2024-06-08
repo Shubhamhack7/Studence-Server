@@ -1,6 +1,7 @@
 package com.tiwari.studence.attendence.provider;
 
-import com.tiwari.studence.common.providerInterfaces.IReqRespPbBuilderProvider;
+
+import com.tiwari.studence.common.provider.IReqRespPbBuilderProvider;
 import com.tiwari.studence.proto.attendence.AttendenceSearchReqPb;
 import com.tiwari.studence.proto.attendence.AttendenceSearchRespPb;
 
