@@ -1,10 +1,5 @@
-/home/tiwaritiwari/Studence/Studence-Server/studence-firebase/src/main/java/com/tiwari/studence/firebase/servlet/FirebaseServlet.java
-/home/tiwaritiwari/Studence/Studence-Server/studence-firebase/src/main/java/com/tiwari/studence/firebase/searcher/FirebaseSearcher.java
-/home/tiwaritiwari/Studence/Studence-Server/studence-firebase/src/main/java/com/tiwari/studence/firebase/updater/FirebaseUpdater.java
-/home/tiwaritiwari/Studence/Studence-Server/studence-firebase/src/main/java/com/tiwari/studence/firebase/module/FirebaseModule.java
-/home/tiwaritiwari/Studence/Studence-Server/studence-firebase/src/main/java/com/tiwari/studence/firebase/provider/FirebaseProvider.java
-/home/tiwaritiwari/Studence/Studence-Server/studence-firebase/src/main/java/com/tiwari/studence/firebase/injector/FirebaseInjector.java
-/home/tiwaritiwari/Studence/Studence-Server/studence-firebase/src/main/java/com/tiwari/studence/firebase/APP.java
-/home/tiwaritiwari/Studence/Studence-Server/studence-firebase/src/main/java/com/tiwari/studence/firebase/service/FirebaseService.java
-/home/tiwaritiwari/Studence/Studence-Server/studence-firebase/src/main/java/com/tiwari/studence/firebase/indexer/FirebaseIndexer.java
-/home/tiwaritiwari/Studence/Studence-Server/studence-firebase/src/main/java/com/tiwari/studence/firebase/convertor/FirebaseConvertor.java
+/home/hacker/Project/Studence-Server/studence-firebase/src/main/java/com/tiwari/studence/firebase/APP.java
+/home/hacker/Project/Studence-Server/studence-firebase/src/main/java/com/tiwari/studence/firebase/initializer/FirebaseInitializer.java
+/home/hacker/Project/Studence-Server/studence-firebase/src/main/java/com/tiwari/studence/firebase/module/FirebaseServiceModule.java
+/home/hacker/Project/Studence-Server/studence-firebase/src/main/java/com/tiwari/studence/firebase/service/FirebaseService.java
+/home/hacker/Project/Studence-Server/studence-firebase/src/main/java/com/tiwari/studence/firebase/service/IFirebaseService.java

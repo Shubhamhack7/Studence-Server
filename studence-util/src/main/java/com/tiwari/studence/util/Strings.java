@@ -33,6 +33,10 @@ public class Strings {
     return true;
   }
 
+  public static String generateRandomString(int i) {
+    return "";
+  }
+
   public void validateNotEmpty(String string) {
   }
 

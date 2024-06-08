@@ -157,6 +157,23 @@ public class LoggedRuntimeException extends RuntimeException {
 		printError();
 	}
 
+	public LoggedRuntimeException(ErrorCategoryUiEnum errorCategoryUiEnum, String string, int code, String debugInfo) {
+		m_errorProto = new ParsedErrorProto(errorCategoryUiEnum);
+		m_args = Lists.newArrayList(string);
+		m_errorCode = String.valueOf(code);
+		m_uiErrorString = debugInfo;
+		m_stackTrace = createStackTraceString();
+		printError();
+	}
+
+	public LoggedRuntimeException(ErrorCategoryUiEnum errorCategoryUiEnum, String string, String debugInfo) {
+		m_errorProto = new ParsedErrorProto(errorCategoryUiEnum);
+		m_args = Lists.newArrayList(string);
+		m_uiErrorString = debugInfo;
+		m_stackTrace = createStackTraceString();
+		printError();
+	}
+
 	private void printError() {
 		// LOGGER.severe(ErrorProtoUiPbJsonString.getUrlJson(m_errorProto.getErrorProto()));
 		if (Strings.notEmpty(m_uiErrorString)) {

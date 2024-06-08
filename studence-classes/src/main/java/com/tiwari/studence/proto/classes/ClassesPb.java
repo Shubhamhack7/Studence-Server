@@ -18,7 +18,6 @@ private static final long serialVersionUID = 0L;
   private ClassesPb() {
     classType_ = 0;
     sectionType_ = 0;
-    othersTeacher_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -134,47 +133,6 @@ private static final long serialVersionUID = 0L;
     return campusRef_ == null ? com.tiwari.studence.proto.campus.CampusRefPb.getDefaultInstance() : campusRef_;
   }
 
-  public static final int OTHERSTEACHER_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
-  private java.util.List<com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean> othersTeacher_;
-  /**
-   * <code>repeated .com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean othersTeacher = 5;</code>
-   */
-  @java.lang.Override
-  public java.util.List<com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean> getOthersTeacherList() {
-    return othersTeacher_;
-  }
-  /**
-   * <code>repeated .com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean othersTeacher = 5;</code>
-   */
-  @java.lang.Override
-  public java.util.List<? extends com.tiwari.studence.proto.genericRef.GenericRefPbWithBooleanOrBuilder> 
-      getOthersTeacherOrBuilderList() {
-    return othersTeacher_;
-  }
-  /**
-   * <code>repeated .com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean othersTeacher = 5;</code>
-   */
-  @java.lang.Override
-  public int getOthersTeacherCount() {
-    return othersTeacher_.size();
-  }
-  /**
-   * <code>repeated .com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean othersTeacher = 5;</code>
-   */
-  @java.lang.Override
-  public com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean getOthersTeacher(int index) {
-    return othersTeacher_.get(index);
-  }
-  /**
-   * <code>repeated .com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean othersTeacher = 5;</code>
-   */
-  @java.lang.Override
-  public com.tiwari.studence.proto.genericRef.GenericRefPbWithBooleanOrBuilder getOthersTeacherOrBuilder(
-      int index) {
-    return othersTeacher_.get(index);
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -201,9 +159,6 @@ private static final long serialVersionUID = 0L;
     if (campusRef_ != null) {
       output.writeMessage(4, getCampusRef());
     }
-    for (int i = 0; i < othersTeacher_.size(); i++) {
-      output.writeMessage(5, othersTeacher_.get(i));
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -228,10 +183,6 @@ private static final long serialVersionUID = 0L;
     if (campusRef_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getCampusRef());
-    }
-    for (int i = 0; i < othersTeacher_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, othersTeacher_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -260,8 +211,6 @@ private static final long serialVersionUID = 0L;
       if (!getCampusRef()
           .equals(other.getCampusRef())) return false;
     }
-    if (!getOthersTeacherList()
-        .equals(other.getOthersTeacherList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -284,10 +233,6 @@ private static final long serialVersionUID = 0L;
     if (hasCampusRef()) {
       hash = (37 * hash) + CAMPUSREF_FIELD_NUMBER;
       hash = (53 * hash) + getCampusRef().hashCode();
-    }
-    if (getOthersTeacherCount() > 0) {
-      hash = (37 * hash) + OTHERSTEACHER_FIELD_NUMBER;
-      hash = (53 * hash) + getOthersTeacherList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -430,13 +375,6 @@ private static final long serialVersionUID = 0L;
         campusRefBuilder_.dispose();
         campusRefBuilder_ = null;
       }
-      if (othersTeacherBuilder_ == null) {
-        othersTeacher_ = java.util.Collections.emptyList();
-      } else {
-        othersTeacher_ = null;
-        othersTeacherBuilder_.clear();
-      }
-      bitField0_ = (bitField0_ & ~0x00000010);
       return this;
     }
 
@@ -463,22 +401,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tiwari.studence.proto.classes.ClassesPb buildPartial() {
       com.tiwari.studence.proto.classes.ClassesPb result = new com.tiwari.studence.proto.classes.ClassesPb(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tiwari.studence.proto.classes.ClassesPb result) {
-      if (othersTeacherBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0)) {
-          othersTeacher_ = java.util.Collections.unmodifiableList(othersTeacher_);
-          bitField0_ = (bitField0_ & ~0x00000010);
-        }
-        result.othersTeacher_ = othersTeacher_;
-      } else {
-        result.othersTeacher_ = othersTeacherBuilder_.build();
-      }
     }
 
     private void buildPartial0(com.tiwari.studence.proto.classes.ClassesPb result) {
@@ -557,32 +482,6 @@ private static final long serialVersionUID = 0L;
       if (other.hasCampusRef()) {
         mergeCampusRef(other.getCampusRef());
       }
-      if (othersTeacherBuilder_ == null) {
-        if (!other.othersTeacher_.isEmpty()) {
-          if (othersTeacher_.isEmpty()) {
-            othersTeacher_ = other.othersTeacher_;
-            bitField0_ = (bitField0_ & ~0x00000010);
-          } else {
-            ensureOthersTeacherIsMutable();
-            othersTeacher_.addAll(other.othersTeacher_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.othersTeacher_.isEmpty()) {
-          if (othersTeacherBuilder_.isEmpty()) {
-            othersTeacherBuilder_.dispose();
-            othersTeacherBuilder_ = null;
-            othersTeacher_ = other.othersTeacher_;
-            bitField0_ = (bitField0_ & ~0x00000010);
-            othersTeacherBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getOthersTeacherFieldBuilder() : null;
-          } else {
-            othersTeacherBuilder_.addAllMessages(other.othersTeacher_);
-          }
-        }
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -633,19 +532,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 34
-            case 42: {
-              com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean m =
-                  input.readMessage(
-                      com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean.parser(),
-                      extensionRegistry);
-              if (othersTeacherBuilder_ == null) {
-                ensureOthersTeacherIsMutable();
-                othersTeacher_.add(m);
-              } else {
-                othersTeacherBuilder_.addMessage(m);
-              }
-              break;
-            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1005,246 +891,6 @@ private static final long serialVersionUID = 0L;
         campusRef_ = null;
       }
       return campusRefBuilder_;
-    }
-
-    private java.util.List<com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean> othersTeacher_ =
-      java.util.Collections.emptyList();
-    private void ensureOthersTeacherIsMutable() {
-      if (!((bitField0_ & 0x00000010) != 0)) {
-        othersTeacher_ = new java.util.ArrayList<com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean>(othersTeacher_);
-        bitField0_ |= 0x00000010;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean, com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean.Builder, com.tiwari.studence.proto.genericRef.GenericRefPbWithBooleanOrBuilder> othersTeacherBuilder_;
-
-    /**
-     * <code>repeated .com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean othersTeacher = 5;</code>
-     */
-    public java.util.List<com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean> getOthersTeacherList() {
-      if (othersTeacherBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(othersTeacher_);
-      } else {
-        return othersTeacherBuilder_.getMessageList();
-      }
-    }
-    /**
-     * <code>repeated .com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean othersTeacher = 5;</code>
-     */
-    public int getOthersTeacherCount() {
-      if (othersTeacherBuilder_ == null) {
-        return othersTeacher_.size();
-      } else {
-        return othersTeacherBuilder_.getCount();
-      }
-    }
-    /**
-     * <code>repeated .com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean othersTeacher = 5;</code>
-     */
-    public com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean getOthersTeacher(int index) {
-      if (othersTeacherBuilder_ == null) {
-        return othersTeacher_.get(index);
-      } else {
-        return othersTeacherBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <code>repeated .com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean othersTeacher = 5;</code>
-     */
-    public Builder setOthersTeacher(
-        int index, com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean value) {
-      if (othersTeacherBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureOthersTeacherIsMutable();
-        othersTeacher_.set(index, value);
-        onChanged();
-      } else {
-        othersTeacherBuilder_.setMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean othersTeacher = 5;</code>
-     */
-    public Builder setOthersTeacher(
-        int index, com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean.Builder builderForValue) {
-      if (othersTeacherBuilder_ == null) {
-        ensureOthersTeacherIsMutable();
-        othersTeacher_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        othersTeacherBuilder_.setMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean othersTeacher = 5;</code>
-     */
-    public Builder addOthersTeacher(com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean value) {
-      if (othersTeacherBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureOthersTeacherIsMutable();
-        othersTeacher_.add(value);
-        onChanged();
-      } else {
-        othersTeacherBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean othersTeacher = 5;</code>
-     */
-    public Builder addOthersTeacher(
-        int index, com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean value) {
-      if (othersTeacherBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureOthersTeacherIsMutable();
-        othersTeacher_.add(index, value);
-        onChanged();
-      } else {
-        othersTeacherBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean othersTeacher = 5;</code>
-     */
-    public Builder addOthersTeacher(
-        com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean.Builder builderForValue) {
-      if (othersTeacherBuilder_ == null) {
-        ensureOthersTeacherIsMutable();
-        othersTeacher_.add(builderForValue.build());
-        onChanged();
-      } else {
-        othersTeacherBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean othersTeacher = 5;</code>
-     */
-    public Builder addOthersTeacher(
-        int index, com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean.Builder builderForValue) {
-      if (othersTeacherBuilder_ == null) {
-        ensureOthersTeacherIsMutable();
-        othersTeacher_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        othersTeacherBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean othersTeacher = 5;</code>
-     */
-    public Builder addAllOthersTeacher(
-        java.lang.Iterable<? extends com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean> values) {
-      if (othersTeacherBuilder_ == null) {
-        ensureOthersTeacherIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, othersTeacher_);
-        onChanged();
-      } else {
-        othersTeacherBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean othersTeacher = 5;</code>
-     */
-    public Builder clearOthersTeacher() {
-      if (othersTeacherBuilder_ == null) {
-        othersTeacher_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
-        onChanged();
-      } else {
-        othersTeacherBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean othersTeacher = 5;</code>
-     */
-    public Builder removeOthersTeacher(int index) {
-      if (othersTeacherBuilder_ == null) {
-        ensureOthersTeacherIsMutable();
-        othersTeacher_.remove(index);
-        onChanged();
-      } else {
-        othersTeacherBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean othersTeacher = 5;</code>
-     */
-    public com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean.Builder getOthersTeacherBuilder(
-        int index) {
-      return getOthersTeacherFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <code>repeated .com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean othersTeacher = 5;</code>
-     */
-    public com.tiwari.studence.proto.genericRef.GenericRefPbWithBooleanOrBuilder getOthersTeacherOrBuilder(
-        int index) {
-      if (othersTeacherBuilder_ == null) {
-        return othersTeacher_.get(index);  } else {
-        return othersTeacherBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <code>repeated .com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean othersTeacher = 5;</code>
-     */
-    public java.util.List<? extends com.tiwari.studence.proto.genericRef.GenericRefPbWithBooleanOrBuilder> 
-         getOthersTeacherOrBuilderList() {
-      if (othersTeacherBuilder_ != null) {
-        return othersTeacherBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(othersTeacher_);
-      }
-    }
-    /**
-     * <code>repeated .com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean othersTeacher = 5;</code>
-     */
-    public com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean.Builder addOthersTeacherBuilder() {
-      return getOthersTeacherFieldBuilder().addBuilder(
-          com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean othersTeacher = 5;</code>
-     */
-    public com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean.Builder addOthersTeacherBuilder(
-        int index) {
-      return getOthersTeacherFieldBuilder().addBuilder(
-          index, com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean othersTeacher = 5;</code>
-     */
-    public java.util.List<com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean.Builder> 
-         getOthersTeacherBuilderList() {
-      return getOthersTeacherFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean, com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean.Builder, com.tiwari.studence.proto.genericRef.GenericRefPbWithBooleanOrBuilder> 
-        getOthersTeacherFieldBuilder() {
-      if (othersTeacherBuilder_ == null) {
-        othersTeacherBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean, com.tiwari.studence.proto.genericRef.GenericRefPbWithBoolean.Builder, com.tiwari.studence.proto.genericRef.GenericRefPbWithBooleanOrBuilder>(
-                othersTeacher_,
-                ((bitField0_ & 0x00000010) != 0),
-                getParentForChildren(),
-                isClean());
-        othersTeacher_ = null;
-      }
-      return othersTeacherBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

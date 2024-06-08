@@ -1,0 +1,43 @@
+// Copyright (c) 2022, All Right Reserved, Shubham Tiwari
+
+syntax = "proto3";
+
+package com.tiwari.studence.proto.pushNotification;
+
+import "entityPb.proto";
+import "genericRefPb.proto";
+import "summaryPb.proto";
+
+option java_multiple_files = true;
+option java_generate_equals_and_hash = true;
+
+//The following protos are reserved 12,13,14,15,16.You shd not use them
+
+message PushNotificationPb{
+  com.tiwari.studence.proto.entity.EntityPb dbInfo =1;
+  string token= 2;
+  com.tiwari.studence.proto.genericRef.GenericRefPb orgRef =3;
+  com.tiwari.studence.proto.genericRef.GenericRefPb campusRef =4;
+  com.tiwari.studence.proto.genericRef.GenericRefPb deviceRef =5;
+  com.tiwari.studence.proto.genericRef.GenericRefPb loginRef =6;
+}
+
+message PushNotificationRefPb{
+  string dbInfoId =1;
+  string token= 2;
+}
+
+message PushNotificationSearchReqPb{
+  string token = 1;
+  string orgRefId =2;
+  string campusRefId = 3;
+  string deviceRefId = 4;
+  string loginRefId = 5;
+}
+
+
+message PushNotificationSearchRespPb{
+  com.tiwari.studence.proto.summary.SummaryPb summary =1;
+  repeated PushNotificationPb results = 2;
+}
+

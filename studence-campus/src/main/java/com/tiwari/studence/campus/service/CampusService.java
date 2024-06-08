@@ -34,32 +34,32 @@ public class CampusService extends AEntityService<CampusPb, CampusSearchReqPb, C
             getNewId, dynamoPutTable, dynamoGetTable, dynamoUpdateTable);
   }
 
-  @Override
+
   public IFuture<CampusPb, ErrorException> get(String entity) {
     return super.getEntity(entity);
   }
 
-  @Override
+
   public IFuture<CampusPb, ErrorException> get(EntityPb entity) {
     return super.getEntity(entity);
   }
 
-  @Override
+
   public IFuture<CampusPb, ErrorException> create(CampusPb entity) {
     return super.createEntity(entity);
   }
 
-  @Override
+
   public IFuture<CampusPb, ErrorException> delete(String entity) {
     return null;
   }
 
-  @Override
+
   public IFuture<CampusPb, ErrorException> update(String id, CampusPb entity) {
     return null;
   }
 
-  @Override
+@Override
   public IFuture<CampusSearchRespPb, ErrorException> search(CampusSearchReqPb entity) {
     return super.searchEntity(entity);
   }

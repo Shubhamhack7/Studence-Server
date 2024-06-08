@@ -60,6 +60,7 @@ message AttributeNameValuePair {
   string expression =7;
   string attributeNameAlias  = 8;
   string attributeValueAlias = 9;
+  ComparisonOperatorEnum compareType =10;
 }
 
 
@@ -72,6 +73,7 @@ message SearchRequestsPb{
   DynamoDBSearchMode mode = 1;
   repeated DynamoDBLogicalOperators Operators = 2;
   repeated SearchPb requests = 3;
+  string nextToken = 4;
 }
 
 message DynamoDbSearchPb{
@@ -81,4 +83,5 @@ message DynamoDbSearchPb{
   string keyConditionExpression =4;
   string filterExpression = 6;
   repeated AttributeNameValuePair expressionAttribute =7;
+  string nextToken = 8;
 }

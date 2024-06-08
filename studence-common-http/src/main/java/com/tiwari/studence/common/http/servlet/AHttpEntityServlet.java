@@ -32,9 +32,9 @@ public abstract class AHttpEntityServlet<Service, UiPb extends GeneratedMessageV
 
   @Inject
   public AHttpEntityServlet(JsonStringToPbConverter<UiPb, UiPbBuProvider> reqParser,
-          JsonStringToReqPbConverter<Lreq, ReqPbBuProvider> searchReqParser, Service service,
-          ErrorResponsePbConverter errorResponsePbConverter, IServerExceptionLogger exLogger,
-          ResponseInterceptor responseInterceptor, ServerConfigUtility serverConfigUtility) {
+                            JsonStringToReqPbConverter<Lreq, ReqPbBuProvider> searchReqParser, Service service,
+                            ErrorResponsePbConverter errorResponsePbConverter, IServerExceptionLogger exLogger,
+                            ResponseInterceptor responseInterceptor, ServerConfigUtility serverConfigUtility) {
     super(errorResponsePbConverter, exLogger, responseInterceptor, serverConfigUtility);
     m_reqParser = reqParser;
     m_searchReqParser = searchReqParser;
@@ -48,14 +48,14 @@ public abstract class AHttpEntityServlet<Service, UiPb extends GeneratedMessageV
             "", req.getPathInfo(), req.getMethod());
     ;
     switch (reqTypeEnum) {
-    case CREATE:
-      String reqString = reqTypeEnum.getReqString(req);
-      UiPb reqUiPb = m_reqParser.convert(reqString);
-      return (IFuture) createResource(reqUiPb);
-    default:
-      Preconditions.validateWithUiErrorString(false, "Unknown Operation on Resourse", "",
-              req.getPathInfo(), req.getMethod());
-      return null;
+      case CREATE:
+        String reqString = reqTypeEnum.getReqString(req);
+        UiPb reqUiPb = m_reqParser.convert(reqString);
+        return (IFuture) createResource(reqUiPb);
+      default:
+        Preconditions.validateWithUiErrorString(false, "Unknown Operation on Resourse", "",
+                req.getPathInfo(), req.getMethod());
+        return null;
     }
   }
 
@@ -66,15 +66,15 @@ public abstract class AHttpEntityServlet<Service, UiPb extends GeneratedMessageV
             "", req.getPathInfo(), req.getMethod());
     ;
     switch (reqTypeEnum) {
-    case UPDATE:
-      String reqId = reqTypeEnum.getReqId(req);
-      String reqString = reqTypeEnum.getReqString(req);
-      UiPb reqUiPb = m_reqParser.convert(reqString);
-      return (IFuture) updateResource(reqId, reqUiPb);
-    default:
-      Preconditions.validateWithUiErrorString(false, "Unknown Operation on Resourse", "",
-              req.getPathInfo(), req.getMethod());
-      return null;
+      case UPDATE:
+        String reqId = reqTypeEnum.getReqId(req);
+        String reqString = reqTypeEnum.getReqString(req);
+        UiPb reqUiPb = m_reqParser.convert(reqString);
+        return (IFuture) updateResource(reqId, reqUiPb);
+      default:
+        Preconditions.validateWithUiErrorString(false, "Unknown Operation on Resourse", "",
+                req.getPathInfo(), req.getMethod());
+        return null;
     }
   }
 
@@ -85,13 +85,13 @@ public abstract class AHttpEntityServlet<Service, UiPb extends GeneratedMessageV
             "", req.getPathInfo(), req.getMethod());
     ;
     switch (reqTypeEnum) {
-    case DELETE:
-      String reqId = reqTypeEnum.getReqId(req);
-      return (IFuture) deleteResource(reqId);
-    default:
-      Preconditions.validateWithUiErrorString(false, "Unknown Operation on Resourse", "",
-              req.getPathInfo(), req.getMethod());
-      return null;
+      case DELETE:
+        String reqId = reqTypeEnum.getReqId(req);
+        return (IFuture) deleteResource(reqId);
+      default:
+        Preconditions.validateWithUiErrorString(false, "Unknown Operation on Resourse", "",
+                req.getPathInfo(), req.getMethod());
+        return null;
     }
   }
 
@@ -103,18 +103,18 @@ public abstract class AHttpEntityServlet<Service, UiPb extends GeneratedMessageV
             "", req.getPathInfo(), req.getMethod());
     ;
     switch (reqTypeEnum) {
-    case GET_ID: {
-      String reqId = reqTypeEnum.getReqId(req);
-      return (IFuture) getResource(reqId);
-    }
-    case GET_LIST: {
-      String dataReq = reqTypeEnum.getReqString(req);
-      return (IFuture) getResourceList(m_searchReqParser.convert(dataReq));
-    }
-    default:
-      Preconditions.validateWithUiErrorString(false, "Unknown Operation on Resourse", "",
-              req.getPathInfo(), req.getMethod());
-      return null;
+      case GET_ID: {
+        String reqId = reqTypeEnum.getReqId(req);
+        return (IFuture) getResource(reqId);
+      }
+      case GET_LIST: {
+        String dataReq = reqTypeEnum.getReqString(req);
+        return (IFuture) getResourceList(m_searchReqParser.convert(dataReq));
+      }
+      default:
+        Preconditions.validateWithUiErrorString(false, "Unknown Operation on Resourse", "",
+                req.getPathInfo(), req.getMethod());
+        return null;
     }
   }
 
@@ -256,17 +256,17 @@ public abstract class AHttpEntityServlet<Service, UiPb extends GeneratedMessageV
   protected IFuture<?, Exception> handleAsyncCall(HttpServletRequest req, ReqMethod reqType) {
     ServletUtil.logRequest(req, reqType);
     switch (reqType) {
-    case POST:
-      return postInternal(req);
-    case PUT:
-      return putInternal(req);
-    case DELETE:
-      return deleteInternal(req);
-    case GET:
-      return getInternal(req);
-    default:
-      Preconditions.check(false);
-      return null;
+      case POST:
+        return postInternal(req);
+      case PUT:
+        return putInternal(req);
+      case DELETE:
+        return deleteInternal(req);
+      case GET:
+        return getInternal(req);
+      default:
+        Preconditions.check(false);
+        return null;
     }
   }
 

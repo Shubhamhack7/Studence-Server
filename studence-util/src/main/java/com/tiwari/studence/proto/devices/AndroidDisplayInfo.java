@@ -43,10 +43,10 @@ private static final long serialVersionUID = 0L;
             com.tiwari.studence.proto.devices.AndroidDisplayInfo.class, com.tiwari.studence.proto.devices.AndroidDisplayInfo.Builder.class);
   }
 
-  public static final int DISPLAY_SIZE_INCHES_FIELD_NUMBER = 27;
+  public static final int DISPLAY_SIZE_INCHES_FIELD_NUMBER = 1;
   private float displaySizeInches_ = 0F;
   /**
-   * <code>float display_size_inches = 27;</code>
+   * <code>float display_size_inches = 1;</code>
    * @return The displaySizeInches.
    */
   @java.lang.Override
@@ -54,10 +54,10 @@ private static final long serialVersionUID = 0L;
     return displaySizeInches_;
   }
 
-  public static final int DISPLAY_WIDTH_PIXELS_FIELD_NUMBER = 28;
+  public static final int DISPLAY_WIDTH_PIXELS_FIELD_NUMBER = 2;
   private int displayWidthPixels_ = 0;
   /**
-   * <code>int32 display_width_pixels = 28;</code>
+   * <code>int32 display_width_pixels = 2;</code>
    * @return The displayWidthPixels.
    */
   @java.lang.Override
@@ -65,10 +65,10 @@ private static final long serialVersionUID = 0L;
     return displayWidthPixels_;
   }
 
-  public static final int DISPLAY_WIDTH_INCHES_FIELD_NUMBER = 29;
+  public static final int DISPLAY_WIDTH_INCHES_FIELD_NUMBER = 3;
   private float displayWidthInches_ = 0F;
   /**
-   * <code>float display_width_inches = 29;</code>
+   * <code>float display_width_inches = 3;</code>
    * @return The displayWidthInches.
    */
   @java.lang.Override
@@ -76,10 +76,10 @@ private static final long serialVersionUID = 0L;
     return displayWidthInches_;
   }
 
-  public static final int DISPLAY_HEIGHT_PIXELS_FIELD_NUMBER = 30;
+  public static final int DISPLAY_HEIGHT_PIXELS_FIELD_NUMBER = 4;
   private int displayHeightPixels_ = 0;
   /**
-   * <code>int32 display_height_pixels = 30;</code>
+   * <code>int32 display_height_pixels = 4;</code>
    * @return The displayHeightPixels.
    */
   @java.lang.Override
@@ -87,10 +87,10 @@ private static final long serialVersionUID = 0L;
     return displayHeightPixels_;
   }
 
-  public static final int DISPLAY_HEIGHT_INCHES_FIELD_NUMBER = 31;
+  public static final int DISPLAY_HEIGHT_INCHES_FIELD_NUMBER = 5;
   private float displayHeightInches_ = 0F;
   /**
-   * <code>float display_height_inches = 31;</code>
+   * <code>float display_height_inches = 5;</code>
    * @return The displayHeightInches.
    */
   @java.lang.Override
@@ -98,10 +98,10 @@ private static final long serialVersionUID = 0L;
     return displayHeightInches_;
   }
 
-  public static final int DISPLAY_X_DPI_FIELD_NUMBER = 32;
+  public static final int DISPLAY_X_DPI_FIELD_NUMBER = 6;
   private float displayXDpi_ = 0F;
   /**
-   * <code>float display_x_dpi = 32;</code>
+   * <code>float display_x_dpi = 6;</code>
    * @return The displayXDpi.
    */
   @java.lang.Override
@@ -109,10 +109,10 @@ private static final long serialVersionUID = 0L;
     return displayXDpi_;
   }
 
-  public static final int DISPLAY_Y_DPI_FIELD_NUMBER = 33;
+  public static final int DISPLAY_Y_DPI_FIELD_NUMBER = 7;
   private float displayYDpi_ = 0F;
   /**
-   * <code>float display_y_dpi = 33;</code>
+   * <code>float display_y_dpi = 7;</code>
    * @return The displayYDpi.
    */
   @java.lang.Override
@@ -135,25 +135,25 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (java.lang.Float.floatToRawIntBits(displaySizeInches_) != 0) {
-      output.writeFloat(27, displaySizeInches_);
+      output.writeFloat(1, displaySizeInches_);
     }
     if (displayWidthPixels_ != 0) {
-      output.writeInt32(28, displayWidthPixels_);
+      output.writeInt32(2, displayWidthPixels_);
     }
     if (java.lang.Float.floatToRawIntBits(displayWidthInches_) != 0) {
-      output.writeFloat(29, displayWidthInches_);
+      output.writeFloat(3, displayWidthInches_);
     }
     if (displayHeightPixels_ != 0) {
-      output.writeInt32(30, displayHeightPixels_);
+      output.writeInt32(4, displayHeightPixels_);
     }
     if (java.lang.Float.floatToRawIntBits(displayHeightInches_) != 0) {
-      output.writeFloat(31, displayHeightInches_);
+      output.writeFloat(5, displayHeightInches_);
     }
     if (java.lang.Float.floatToRawIntBits(displayXDpi_) != 0) {
-      output.writeFloat(32, displayXDpi_);
+      output.writeFloat(6, displayXDpi_);
     }
     if (java.lang.Float.floatToRawIntBits(displayYDpi_) != 0) {
-      output.writeFloat(33, displayYDpi_);
+      output.writeFloat(7, displayYDpi_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -166,31 +166,31 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (java.lang.Float.floatToRawIntBits(displaySizeInches_) != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeFloatSize(27, displaySizeInches_);
+        .computeFloatSize(1, displaySizeInches_);
     }
     if (displayWidthPixels_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(28, displayWidthPixels_);
+        .computeInt32Size(2, displayWidthPixels_);
     }
     if (java.lang.Float.floatToRawIntBits(displayWidthInches_) != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeFloatSize(29, displayWidthInches_);
+        .computeFloatSize(3, displayWidthInches_);
     }
     if (displayHeightPixels_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(30, displayHeightPixels_);
+        .computeInt32Size(4, displayHeightPixels_);
     }
     if (java.lang.Float.floatToRawIntBits(displayHeightInches_) != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeFloatSize(31, displayHeightInches_);
+        .computeFloatSize(5, displayHeightInches_);
     }
     if (java.lang.Float.floatToRawIntBits(displayXDpi_) != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeFloatSize(32, displayXDpi_);
+        .computeFloatSize(6, displayXDpi_);
     }
     if (java.lang.Float.floatToRawIntBits(displayYDpi_) != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeFloatSize(33, displayYDpi_);
+        .computeFloatSize(7, displayYDpi_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -539,41 +539,41 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 221: {
+            case 13: {
               displaySizeInches_ = input.readFloat();
               bitField0_ |= 0x00000001;
               break;
-            } // case 221
-            case 224: {
+            } // case 13
+            case 16: {
               displayWidthPixels_ = input.readInt32();
               bitField0_ |= 0x00000002;
               break;
-            } // case 224
-            case 237: {
+            } // case 16
+            case 29: {
               displayWidthInches_ = input.readFloat();
               bitField0_ |= 0x00000004;
               break;
-            } // case 237
-            case 240: {
+            } // case 29
+            case 32: {
               displayHeightPixels_ = input.readInt32();
               bitField0_ |= 0x00000008;
               break;
-            } // case 240
-            case 253: {
+            } // case 32
+            case 45: {
               displayHeightInches_ = input.readFloat();
               bitField0_ |= 0x00000010;
               break;
-            } // case 253
-            case 261: {
+            } // case 45
+            case 53: {
               displayXDpi_ = input.readFloat();
               bitField0_ |= 0x00000020;
               break;
-            } // case 261
-            case 269: {
+            } // case 53
+            case 61: {
               displayYDpi_ = input.readFloat();
               bitField0_ |= 0x00000040;
               break;
-            } // case 269
+            } // case 61
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -593,7 +593,7 @@ private static final long serialVersionUID = 0L;
 
     private float displaySizeInches_ ;
     /**
-     * <code>float display_size_inches = 27;</code>
+     * <code>float display_size_inches = 1;</code>
      * @return The displaySizeInches.
      */
     @java.lang.Override
@@ -601,7 +601,7 @@ private static final long serialVersionUID = 0L;
       return displaySizeInches_;
     }
     /**
-     * <code>float display_size_inches = 27;</code>
+     * <code>float display_size_inches = 1;</code>
      * @param value The displaySizeInches to set.
      * @return This builder for chaining.
      */
@@ -613,7 +613,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>float display_size_inches = 27;</code>
+     * <code>float display_size_inches = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearDisplaySizeInches() {
@@ -625,7 +625,7 @@ private static final long serialVersionUID = 0L;
 
     private int displayWidthPixels_ ;
     /**
-     * <code>int32 display_width_pixels = 28;</code>
+     * <code>int32 display_width_pixels = 2;</code>
      * @return The displayWidthPixels.
      */
     @java.lang.Override
@@ -633,7 +633,7 @@ private static final long serialVersionUID = 0L;
       return displayWidthPixels_;
     }
     /**
-     * <code>int32 display_width_pixels = 28;</code>
+     * <code>int32 display_width_pixels = 2;</code>
      * @param value The displayWidthPixels to set.
      * @return This builder for chaining.
      */
@@ -645,7 +645,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int32 display_width_pixels = 28;</code>
+     * <code>int32 display_width_pixels = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearDisplayWidthPixels() {
@@ -657,7 +657,7 @@ private static final long serialVersionUID = 0L;
 
     private float displayWidthInches_ ;
     /**
-     * <code>float display_width_inches = 29;</code>
+     * <code>float display_width_inches = 3;</code>
      * @return The displayWidthInches.
      */
     @java.lang.Override
@@ -665,7 +665,7 @@ private static final long serialVersionUID = 0L;
       return displayWidthInches_;
     }
     /**
-     * <code>float display_width_inches = 29;</code>
+     * <code>float display_width_inches = 3;</code>
      * @param value The displayWidthInches to set.
      * @return This builder for chaining.
      */
@@ -677,7 +677,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>float display_width_inches = 29;</code>
+     * <code>float display_width_inches = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearDisplayWidthInches() {
@@ -689,7 +689,7 @@ private static final long serialVersionUID = 0L;
 
     private int displayHeightPixels_ ;
     /**
-     * <code>int32 display_height_pixels = 30;</code>
+     * <code>int32 display_height_pixels = 4;</code>
      * @return The displayHeightPixels.
      */
     @java.lang.Override
@@ -697,7 +697,7 @@ private static final long serialVersionUID = 0L;
       return displayHeightPixels_;
     }
     /**
-     * <code>int32 display_height_pixels = 30;</code>
+     * <code>int32 display_height_pixels = 4;</code>
      * @param value The displayHeightPixels to set.
      * @return This builder for chaining.
      */
@@ -709,7 +709,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int32 display_height_pixels = 30;</code>
+     * <code>int32 display_height_pixels = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearDisplayHeightPixels() {
@@ -721,7 +721,7 @@ private static final long serialVersionUID = 0L;
 
     private float displayHeightInches_ ;
     /**
-     * <code>float display_height_inches = 31;</code>
+     * <code>float display_height_inches = 5;</code>
      * @return The displayHeightInches.
      */
     @java.lang.Override
@@ -729,7 +729,7 @@ private static final long serialVersionUID = 0L;
       return displayHeightInches_;
     }
     /**
-     * <code>float display_height_inches = 31;</code>
+     * <code>float display_height_inches = 5;</code>
      * @param value The displayHeightInches to set.
      * @return This builder for chaining.
      */
@@ -741,7 +741,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>float display_height_inches = 31;</code>
+     * <code>float display_height_inches = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearDisplayHeightInches() {
@@ -753,7 +753,7 @@ private static final long serialVersionUID = 0L;
 
     private float displayXDpi_ ;
     /**
-     * <code>float display_x_dpi = 32;</code>
+     * <code>float display_x_dpi = 6;</code>
      * @return The displayXDpi.
      */
     @java.lang.Override
@@ -761,7 +761,7 @@ private static final long serialVersionUID = 0L;
       return displayXDpi_;
     }
     /**
-     * <code>float display_x_dpi = 32;</code>
+     * <code>float display_x_dpi = 6;</code>
      * @param value The displayXDpi to set.
      * @return This builder for chaining.
      */
@@ -773,7 +773,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>float display_x_dpi = 32;</code>
+     * <code>float display_x_dpi = 6;</code>
      * @return This builder for chaining.
      */
     public Builder clearDisplayXDpi() {
@@ -785,7 +785,7 @@ private static final long serialVersionUID = 0L;
 
     private float displayYDpi_ ;
     /**
-     * <code>float display_y_dpi = 33;</code>
+     * <code>float display_y_dpi = 7;</code>
      * @return The displayYDpi.
      */
     @java.lang.Override
@@ -793,7 +793,7 @@ private static final long serialVersionUID = 0L;
       return displayYDpi_;
     }
     /**
-     * <code>float display_y_dpi = 33;</code>
+     * <code>float display_y_dpi = 7;</code>
      * @param value The displayYDpi to set.
      * @return This builder for chaining.
      */
@@ -805,7 +805,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>float display_y_dpi = 33;</code>
+     * <code>float display_y_dpi = 7;</code>
      * @return This builder for chaining.
      */
     public Builder clearDisplayYDpi() {

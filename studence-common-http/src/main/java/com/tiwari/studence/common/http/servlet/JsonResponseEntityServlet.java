@@ -20,10 +20,10 @@ public class JsonResponseEntityServlet<Service, UiPb extends GeneratedMessageV3,
 
 	@Inject
 	public JsonResponseEntityServlet(JsonStringToPbConverter<UiPb, UiPbBuProvider> reqParser,
-					JsonStringToReqPbConverter<Req, ReqPbBuProvider> searchReqParser, Service service,
-					ErrorResponsePbConverter errorResponsePbConverter, IServerExceptionLogger exLogger,
-					ResponseInterceptor responseInterceptor, ServerConfigUtility serverConfigUtility) {
+									 JsonStringToReqPbConverter<Req, ReqPbBuProvider> searchReqParser, Service service,
+									 ErrorResponsePbConverter errorResponsePbConverter, IServerExceptionLogger exLogger,
+									 ResponseInterceptor responseInterceptor, ServerConfigUtility serverConfigUtility) {
 		super(reqParser, searchReqParser, service, errorResponsePbConverter, exLogger,
-						responseInterceptor, serverConfigUtility);
+				responseInterceptor, serverConfigUtility);
 	}
 }

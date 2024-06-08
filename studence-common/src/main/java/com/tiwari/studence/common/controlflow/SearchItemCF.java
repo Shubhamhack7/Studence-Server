@@ -31,8 +31,8 @@ public class SearchItemCF extends AControlFlow<SearchItemCF.State, List<Map<Stri
 
     @Inject
     public SearchItemCF(String tableName, SearchRequestsPb attributeValues,
-                           SearchItemInDynamoDbTable searchItemInDynamoDbTable, DynamoDBSearchHelper helper,TableNameUtil tableNameUtil,
-                           IServerListener serverListener) {
+                        SearchItemInDynamoDbTable searchItemInDynamoDbTable, DynamoDBSearchHelper helper,TableNameUtil tableNameUtil,
+                        IServerListener serverListener) {
         super(State.IN_DYANMODB, State.DONE);
         m_searchItemInDynamoDbTable = searchItemInDynamoDbTable;
         m_attributeValues = attributeValues;
@@ -65,7 +65,7 @@ public class SearchItemCF extends AControlFlow<SearchItemCF.State, List<Map<Stri
                         m_ServerListener.getEnvironmentType(), m_tableName));
                 dynamoDbSearchPb.setMode(m_attributeValues.getMode());
                 m_helper.getAttributesToQuery(dynamoDbSearchPb,m_attributeValues);
-                m_future = m_searchItemInDynamoDbTable.searchItemsScanSpec(dynamoDbSearchPb.build());
+               // m_future = m_searchItemInDynamoDbTable.searchItemsScanSpec(dynamoDbSearchPb.build());
                 getAsyncCallback().set(0, m_future);
             } catch (Exception e) {
                 throw new RuntimeException(e);

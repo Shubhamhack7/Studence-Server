@@ -68,17 +68,17 @@ public interface TeacherPbOrBuilder extends
   com.tiwari.studence.proto.campus.CampusRefPbOrBuilder getCampusRefOrBuilder();
 
   /**
-   * <code>.com.tiwari.studence.proto.classes.ClassesRefPb classTeacher = 5;</code>
-   * @return Whether the classTeacher field is set.
+   * <code>.com.tiwari.studence.proto.teacher.TeacherClassPb classTeacherAndTeacher = 5;</code>
+   * @return Whether the classTeacherAndTeacher field is set.
    */
-  boolean hasClassTeacher();
+  boolean hasClassTeacherAndTeacher();
   /**
-   * <code>.com.tiwari.studence.proto.classes.ClassesRefPb classTeacher = 5;</code>
-   * @return The classTeacher.
+   * <code>.com.tiwari.studence.proto.teacher.TeacherClassPb classTeacherAndTeacher = 5;</code>
+   * @return The classTeacherAndTeacher.
    */
-  com.tiwari.studence.proto.classes.ClassesRefPb getClassTeacher();
+  com.tiwari.studence.proto.teacher.TeacherClassPb getClassTeacherAndTeacher();
   /**
-   * <code>.com.tiwari.studence.proto.classes.ClassesRefPb classTeacher = 5;</code>
+   * <code>.com.tiwari.studence.proto.teacher.TeacherClassPb classTeacherAndTeacher = 5;</code>
    */
-  com.tiwari.studence.proto.classes.ClassesRefPbOrBuilder getClassTeacherOrBuilder();
+  com.tiwari.studence.proto.teacher.TeacherClassPbOrBuilder getClassTeacherAndTeacherOrBuilder();
 }

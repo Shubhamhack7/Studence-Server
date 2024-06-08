@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;BQueryTableServices.java&apos; to &apos;studence-common/src/main/java/com.tiwari.studence.common.bquery&apos;&#x0A;- Original project: &apos;studence-bquery-database&apos;&#x0A;- Destination element: &apos;studence-common/src/main/java/com.tiwari.studence.common.bquery&apos;&#x0A;- Original element: &apos;com.tiwari.studence.bquery.database.module.BQueryTableServices.java&apos;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="=studence-common/src\/main\/java&lt;com.tiwari.studence.common.bquery" element1="/src\/main\/java&lt;com.tiwari.studence.bquery.database.module{BQueryTableServices.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1672484039985" units="1" version="1.0"/>
+</session>

@@ -5,6 +5,8 @@ com/tiwari/studence/common/http/servlet/BaseHttpServlet$2.class
 com/tiwari/studence/common/http/enumm/ReqTypeEnum$GetOrCreateByExternalIdPbHelper.class
 com/tiwari/studence/common/http/servlet/BaseHttpServlet$4.class
 com/tiwari/studence/common/http/servlet/AHttpEntityServlet.class
+com/tiwari/studence/common/http/client/HttpClient.class
+com/tiwari/studence/common/http/client/HttpClient$2.class
 com/tiwari/studence/common/http/converter/JsonStringToReqPbConverter.class
 com/tiwari/studence/common/http/servlet/AHttpEntityServlet$1.class
 com/tiwari/studence/common/http/enumm/ReqTypeEnum$GetByExternalIdPbHelper.class
@@ -20,6 +22,7 @@ com/tiwari/studence/common/http/enumm/IReqTypeHelper.class
 com/tiwari/studence/common/http/enumm/ReqTypeEnum$DeleteHelper.class
 com/tiwari/studence/common/http/servlet/AHttpEntityServlet$2.class
 com/tiwari/studence/common/http/servlet/BaseHttpServlet$1.class
+com/tiwari/studence/common/http/client/HttpClient$1.class
 com/tiwari/studence/common/http/servlet/AHttpEntityServlet$5.class
 com/tiwari/studence/common/http/servlet/BaseHttpServlet$5.class
 com/tiwari/studence/common/http/enumm/ReqTypeEnum$GetIdHelper.class
@@ -35,5 +38,5 @@ com/tiwari/studence/common/http/servlet/BaseHttpServlet$ReqMethod.class
 com/tiwari/studence/common/http/enumm/ReqTypeEnum$ImportHelper.class
 com/tiwari/studence/common/http/enumm/HttpRequestMethodEnum.class
 com/tiwari/studence/common/http/util/RequestLogger.class
-com/tiwari/studence/common/http/servlet/BaseHttpServlet$3.class
 com/tiwari/studence/common/http/servlet/ResponseInterceptor.class
+com/tiwari/studence/common/http/servlet/BaseHttpServlet$3.class

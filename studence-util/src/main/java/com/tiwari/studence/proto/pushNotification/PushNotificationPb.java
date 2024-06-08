@@ -109,6 +109,110 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int ORGREF_FIELD_NUMBER = 3;
+  private com.tiwari.studence.proto.genericRef.GenericRefPb orgRef_;
+  /**
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb orgRef = 3;</code>
+   * @return Whether the orgRef field is set.
+   */
+  @java.lang.Override
+  public boolean hasOrgRef() {
+    return orgRef_ != null;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb orgRef = 3;</code>
+   * @return The orgRef.
+   */
+  @java.lang.Override
+  public com.tiwari.studence.proto.genericRef.GenericRefPb getOrgRef() {
+    return orgRef_ == null ? com.tiwari.studence.proto.genericRef.GenericRefPb.getDefaultInstance() : orgRef_;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb orgRef = 3;</code>
+   */
+  @java.lang.Override
+  public com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder getOrgRefOrBuilder() {
+    return orgRef_ == null ? com.tiwari.studence.proto.genericRef.GenericRefPb.getDefaultInstance() : orgRef_;
+  }
+
+  public static final int CAMPUSREF_FIELD_NUMBER = 4;
+  private com.tiwari.studence.proto.genericRef.GenericRefPb campusRef_;
+  /**
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb campusRef = 4;</code>
+   * @return Whether the campusRef field is set.
+   */
+  @java.lang.Override
+  public boolean hasCampusRef() {
+    return campusRef_ != null;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb campusRef = 4;</code>
+   * @return The campusRef.
+   */
+  @java.lang.Override
+  public com.tiwari.studence.proto.genericRef.GenericRefPb getCampusRef() {
+    return campusRef_ == null ? com.tiwari.studence.proto.genericRef.GenericRefPb.getDefaultInstance() : campusRef_;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb campusRef = 4;</code>
+   */
+  @java.lang.Override
+  public com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder getCampusRefOrBuilder() {
+    return campusRef_ == null ? com.tiwari.studence.proto.genericRef.GenericRefPb.getDefaultInstance() : campusRef_;
+  }
+
+  public static final int DEVICEREF_FIELD_NUMBER = 5;
+  private com.tiwari.studence.proto.genericRef.GenericRefPb deviceRef_;
+  /**
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb deviceRef = 5;</code>
+   * @return Whether the deviceRef field is set.
+   */
+  @java.lang.Override
+  public boolean hasDeviceRef() {
+    return deviceRef_ != null;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb deviceRef = 5;</code>
+   * @return The deviceRef.
+   */
+  @java.lang.Override
+  public com.tiwari.studence.proto.genericRef.GenericRefPb getDeviceRef() {
+    return deviceRef_ == null ? com.tiwari.studence.proto.genericRef.GenericRefPb.getDefaultInstance() : deviceRef_;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb deviceRef = 5;</code>
+   */
+  @java.lang.Override
+  public com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder getDeviceRefOrBuilder() {
+    return deviceRef_ == null ? com.tiwari.studence.proto.genericRef.GenericRefPb.getDefaultInstance() : deviceRef_;
+  }
+
+  public static final int LOGINREF_FIELD_NUMBER = 6;
+  private com.tiwari.studence.proto.genericRef.GenericRefPb loginRef_;
+  /**
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb loginRef = 6;</code>
+   * @return Whether the loginRef field is set.
+   */
+  @java.lang.Override
+  public boolean hasLoginRef() {
+    return loginRef_ != null;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb loginRef = 6;</code>
+   * @return The loginRef.
+   */
+  @java.lang.Override
+  public com.tiwari.studence.proto.genericRef.GenericRefPb getLoginRef() {
+    return loginRef_ == null ? com.tiwari.studence.proto.genericRef.GenericRefPb.getDefaultInstance() : loginRef_;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb loginRef = 6;</code>
+   */
+  @java.lang.Override
+  public com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder getLoginRefOrBuilder() {
+    return loginRef_ == null ? com.tiwari.studence.proto.genericRef.GenericRefPb.getDefaultInstance() : loginRef_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -129,6 +233,18 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, token_);
     }
+    if (orgRef_ != null) {
+      output.writeMessage(3, getOrgRef());
+    }
+    if (campusRef_ != null) {
+      output.writeMessage(4, getCampusRef());
+    }
+    if (deviceRef_ != null) {
+      output.writeMessage(5, getDeviceRef());
+    }
+    if (loginRef_ != null) {
+      output.writeMessage(6, getLoginRef());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -144,6 +260,22 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, token_);
+    }
+    if (orgRef_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getOrgRef());
+    }
+    if (campusRef_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, getCampusRef());
+    }
+    if (deviceRef_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, getDeviceRef());
+    }
+    if (loginRef_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, getLoginRef());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -167,6 +299,26 @@ private static final long serialVersionUID = 0L;
     }
     if (!getToken()
         .equals(other.getToken())) return false;
+    if (hasOrgRef() != other.hasOrgRef()) return false;
+    if (hasOrgRef()) {
+      if (!getOrgRef()
+          .equals(other.getOrgRef())) return false;
+    }
+    if (hasCampusRef() != other.hasCampusRef()) return false;
+    if (hasCampusRef()) {
+      if (!getCampusRef()
+          .equals(other.getCampusRef())) return false;
+    }
+    if (hasDeviceRef() != other.hasDeviceRef()) return false;
+    if (hasDeviceRef()) {
+      if (!getDeviceRef()
+          .equals(other.getDeviceRef())) return false;
+    }
+    if (hasLoginRef() != other.hasLoginRef()) return false;
+    if (hasLoginRef()) {
+      if (!getLoginRef()
+          .equals(other.getLoginRef())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -184,6 +336,22 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + TOKEN_FIELD_NUMBER;
     hash = (53 * hash) + getToken().hashCode();
+    if (hasOrgRef()) {
+      hash = (37 * hash) + ORGREF_FIELD_NUMBER;
+      hash = (53 * hash) + getOrgRef().hashCode();
+    }
+    if (hasCampusRef()) {
+      hash = (37 * hash) + CAMPUSREF_FIELD_NUMBER;
+      hash = (53 * hash) + getCampusRef().hashCode();
+    }
+    if (hasDeviceRef()) {
+      hash = (37 * hash) + DEVICEREF_FIELD_NUMBER;
+      hash = (53 * hash) + getDeviceRef().hashCode();
+    }
+    if (hasLoginRef()) {
+      hash = (37 * hash) + LOGINREF_FIELD_NUMBER;
+      hash = (53 * hash) + getLoginRef().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -319,6 +487,26 @@ private static final long serialVersionUID = 0L;
         dbInfoBuilder_ = null;
       }
       token_ = "";
+      orgRef_ = null;
+      if (orgRefBuilder_ != null) {
+        orgRefBuilder_.dispose();
+        orgRefBuilder_ = null;
+      }
+      campusRef_ = null;
+      if (campusRefBuilder_ != null) {
+        campusRefBuilder_.dispose();
+        campusRefBuilder_ = null;
+      }
+      deviceRef_ = null;
+      if (deviceRefBuilder_ != null) {
+        deviceRefBuilder_.dispose();
+        deviceRefBuilder_ = null;
+      }
+      loginRef_ = null;
+      if (loginRefBuilder_ != null) {
+        loginRefBuilder_.dispose();
+        loginRefBuilder_ = null;
+      }
       return this;
     }
 
@@ -359,6 +547,26 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.token_ = token_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.orgRef_ = orgRefBuilder_ == null
+            ? orgRef_
+            : orgRefBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.campusRef_ = campusRefBuilder_ == null
+            ? campusRef_
+            : campusRefBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.deviceRef_ = deviceRefBuilder_ == null
+            ? deviceRef_
+            : deviceRefBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.loginRef_ = loginRefBuilder_ == null
+            ? loginRef_
+            : loginRefBuilder_.build();
       }
     }
 
@@ -414,6 +622,18 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
+      if (other.hasOrgRef()) {
+        mergeOrgRef(other.getOrgRef());
+      }
+      if (other.hasCampusRef()) {
+        mergeCampusRef(other.getCampusRef());
+      }
+      if (other.hasDeviceRef()) {
+        mergeDeviceRef(other.getDeviceRef());
+      }
+      if (other.hasLoginRef()) {
+        mergeLoginRef(other.getLoginRef());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -452,6 +672,34 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 26: {
+              input.readMessage(
+                  getOrgRefFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
+              input.readMessage(
+                  getCampusRefFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              input.readMessage(
+                  getDeviceRefFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 50: {
+              input.readMessage(
+                  getLoginRefFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -658,6 +906,482 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
+    }
+
+    private com.tiwari.studence.proto.genericRef.GenericRefPb orgRef_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tiwari.studence.proto.genericRef.GenericRefPb, com.tiwari.studence.proto.genericRef.GenericRefPb.Builder, com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder> orgRefBuilder_;
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb orgRef = 3;</code>
+     * @return Whether the orgRef field is set.
+     */
+    public boolean hasOrgRef() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb orgRef = 3;</code>
+     * @return The orgRef.
+     */
+    public com.tiwari.studence.proto.genericRef.GenericRefPb getOrgRef() {
+      if (orgRefBuilder_ == null) {
+        return orgRef_ == null ? com.tiwari.studence.proto.genericRef.GenericRefPb.getDefaultInstance() : orgRef_;
+      } else {
+        return orgRefBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb orgRef = 3;</code>
+     */
+    public Builder setOrgRef(com.tiwari.studence.proto.genericRef.GenericRefPb value) {
+      if (orgRefBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        orgRef_ = value;
+      } else {
+        orgRefBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb orgRef = 3;</code>
+     */
+    public Builder setOrgRef(
+        com.tiwari.studence.proto.genericRef.GenericRefPb.Builder builderForValue) {
+      if (orgRefBuilder_ == null) {
+        orgRef_ = builderForValue.build();
+      } else {
+        orgRefBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb orgRef = 3;</code>
+     */
+    public Builder mergeOrgRef(com.tiwari.studence.proto.genericRef.GenericRefPb value) {
+      if (orgRefBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+          orgRef_ != null &&
+          orgRef_ != com.tiwari.studence.proto.genericRef.GenericRefPb.getDefaultInstance()) {
+          getOrgRefBuilder().mergeFrom(value);
+        } else {
+          orgRef_ = value;
+        }
+      } else {
+        orgRefBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb orgRef = 3;</code>
+     */
+    public Builder clearOrgRef() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      orgRef_ = null;
+      if (orgRefBuilder_ != null) {
+        orgRefBuilder_.dispose();
+        orgRefBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb orgRef = 3;</code>
+     */
+    public com.tiwari.studence.proto.genericRef.GenericRefPb.Builder getOrgRefBuilder() {
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return getOrgRefFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb orgRef = 3;</code>
+     */
+    public com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder getOrgRefOrBuilder() {
+      if (orgRefBuilder_ != null) {
+        return orgRefBuilder_.getMessageOrBuilder();
+      } else {
+        return orgRef_ == null ?
+            com.tiwari.studence.proto.genericRef.GenericRefPb.getDefaultInstance() : orgRef_;
+      }
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb orgRef = 3;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tiwari.studence.proto.genericRef.GenericRefPb, com.tiwari.studence.proto.genericRef.GenericRefPb.Builder, com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder> 
+        getOrgRefFieldBuilder() {
+      if (orgRefBuilder_ == null) {
+        orgRefBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tiwari.studence.proto.genericRef.GenericRefPb, com.tiwari.studence.proto.genericRef.GenericRefPb.Builder, com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder>(
+                getOrgRef(),
+                getParentForChildren(),
+                isClean());
+        orgRef_ = null;
+      }
+      return orgRefBuilder_;
+    }
+
+    private com.tiwari.studence.proto.genericRef.GenericRefPb campusRef_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tiwari.studence.proto.genericRef.GenericRefPb, com.tiwari.studence.proto.genericRef.GenericRefPb.Builder, com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder> campusRefBuilder_;
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb campusRef = 4;</code>
+     * @return Whether the campusRef field is set.
+     */
+    public boolean hasCampusRef() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb campusRef = 4;</code>
+     * @return The campusRef.
+     */
+    public com.tiwari.studence.proto.genericRef.GenericRefPb getCampusRef() {
+      if (campusRefBuilder_ == null) {
+        return campusRef_ == null ? com.tiwari.studence.proto.genericRef.GenericRefPb.getDefaultInstance() : campusRef_;
+      } else {
+        return campusRefBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb campusRef = 4;</code>
+     */
+    public Builder setCampusRef(com.tiwari.studence.proto.genericRef.GenericRefPb value) {
+      if (campusRefBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        campusRef_ = value;
+      } else {
+        campusRefBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb campusRef = 4;</code>
+     */
+    public Builder setCampusRef(
+        com.tiwari.studence.proto.genericRef.GenericRefPb.Builder builderForValue) {
+      if (campusRefBuilder_ == null) {
+        campusRef_ = builderForValue.build();
+      } else {
+        campusRefBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb campusRef = 4;</code>
+     */
+    public Builder mergeCampusRef(com.tiwari.studence.proto.genericRef.GenericRefPb value) {
+      if (campusRefBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) != 0) &&
+          campusRef_ != null &&
+          campusRef_ != com.tiwari.studence.proto.genericRef.GenericRefPb.getDefaultInstance()) {
+          getCampusRefBuilder().mergeFrom(value);
+        } else {
+          campusRef_ = value;
+        }
+      } else {
+        campusRefBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb campusRef = 4;</code>
+     */
+    public Builder clearCampusRef() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      campusRef_ = null;
+      if (campusRefBuilder_ != null) {
+        campusRefBuilder_.dispose();
+        campusRefBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb campusRef = 4;</code>
+     */
+    public com.tiwari.studence.proto.genericRef.GenericRefPb.Builder getCampusRefBuilder() {
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return getCampusRefFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb campusRef = 4;</code>
+     */
+    public com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder getCampusRefOrBuilder() {
+      if (campusRefBuilder_ != null) {
+        return campusRefBuilder_.getMessageOrBuilder();
+      } else {
+        return campusRef_ == null ?
+            com.tiwari.studence.proto.genericRef.GenericRefPb.getDefaultInstance() : campusRef_;
+      }
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb campusRef = 4;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tiwari.studence.proto.genericRef.GenericRefPb, com.tiwari.studence.proto.genericRef.GenericRefPb.Builder, com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder> 
+        getCampusRefFieldBuilder() {
+      if (campusRefBuilder_ == null) {
+        campusRefBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tiwari.studence.proto.genericRef.GenericRefPb, com.tiwari.studence.proto.genericRef.GenericRefPb.Builder, com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder>(
+                getCampusRef(),
+                getParentForChildren(),
+                isClean());
+        campusRef_ = null;
+      }
+      return campusRefBuilder_;
+    }
+
+    private com.tiwari.studence.proto.genericRef.GenericRefPb deviceRef_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tiwari.studence.proto.genericRef.GenericRefPb, com.tiwari.studence.proto.genericRef.GenericRefPb.Builder, com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder> deviceRefBuilder_;
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb deviceRef = 5;</code>
+     * @return Whether the deviceRef field is set.
+     */
+    public boolean hasDeviceRef() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb deviceRef = 5;</code>
+     * @return The deviceRef.
+     */
+    public com.tiwari.studence.proto.genericRef.GenericRefPb getDeviceRef() {
+      if (deviceRefBuilder_ == null) {
+        return deviceRef_ == null ? com.tiwari.studence.proto.genericRef.GenericRefPb.getDefaultInstance() : deviceRef_;
+      } else {
+        return deviceRefBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb deviceRef = 5;</code>
+     */
+    public Builder setDeviceRef(com.tiwari.studence.proto.genericRef.GenericRefPb value) {
+      if (deviceRefBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        deviceRef_ = value;
+      } else {
+        deviceRefBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb deviceRef = 5;</code>
+     */
+    public Builder setDeviceRef(
+        com.tiwari.studence.proto.genericRef.GenericRefPb.Builder builderForValue) {
+      if (deviceRefBuilder_ == null) {
+        deviceRef_ = builderForValue.build();
+      } else {
+        deviceRefBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb deviceRef = 5;</code>
+     */
+    public Builder mergeDeviceRef(com.tiwari.studence.proto.genericRef.GenericRefPb value) {
+      if (deviceRefBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0) &&
+          deviceRef_ != null &&
+          deviceRef_ != com.tiwari.studence.proto.genericRef.GenericRefPb.getDefaultInstance()) {
+          getDeviceRefBuilder().mergeFrom(value);
+        } else {
+          deviceRef_ = value;
+        }
+      } else {
+        deviceRefBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb deviceRef = 5;</code>
+     */
+    public Builder clearDeviceRef() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      deviceRef_ = null;
+      if (deviceRefBuilder_ != null) {
+        deviceRefBuilder_.dispose();
+        deviceRefBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb deviceRef = 5;</code>
+     */
+    public com.tiwari.studence.proto.genericRef.GenericRefPb.Builder getDeviceRefBuilder() {
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return getDeviceRefFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb deviceRef = 5;</code>
+     */
+    public com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder getDeviceRefOrBuilder() {
+      if (deviceRefBuilder_ != null) {
+        return deviceRefBuilder_.getMessageOrBuilder();
+      } else {
+        return deviceRef_ == null ?
+            com.tiwari.studence.proto.genericRef.GenericRefPb.getDefaultInstance() : deviceRef_;
+      }
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb deviceRef = 5;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tiwari.studence.proto.genericRef.GenericRefPb, com.tiwari.studence.proto.genericRef.GenericRefPb.Builder, com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder> 
+        getDeviceRefFieldBuilder() {
+      if (deviceRefBuilder_ == null) {
+        deviceRefBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tiwari.studence.proto.genericRef.GenericRefPb, com.tiwari.studence.proto.genericRef.GenericRefPb.Builder, com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder>(
+                getDeviceRef(),
+                getParentForChildren(),
+                isClean());
+        deviceRef_ = null;
+      }
+      return deviceRefBuilder_;
+    }
+
+    private com.tiwari.studence.proto.genericRef.GenericRefPb loginRef_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tiwari.studence.proto.genericRef.GenericRefPb, com.tiwari.studence.proto.genericRef.GenericRefPb.Builder, com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder> loginRefBuilder_;
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb loginRef = 6;</code>
+     * @return Whether the loginRef field is set.
+     */
+    public boolean hasLoginRef() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb loginRef = 6;</code>
+     * @return The loginRef.
+     */
+    public com.tiwari.studence.proto.genericRef.GenericRefPb getLoginRef() {
+      if (loginRefBuilder_ == null) {
+        return loginRef_ == null ? com.tiwari.studence.proto.genericRef.GenericRefPb.getDefaultInstance() : loginRef_;
+      } else {
+        return loginRefBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb loginRef = 6;</code>
+     */
+    public Builder setLoginRef(com.tiwari.studence.proto.genericRef.GenericRefPb value) {
+      if (loginRefBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        loginRef_ = value;
+      } else {
+        loginRefBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb loginRef = 6;</code>
+     */
+    public Builder setLoginRef(
+        com.tiwari.studence.proto.genericRef.GenericRefPb.Builder builderForValue) {
+      if (loginRefBuilder_ == null) {
+        loginRef_ = builderForValue.build();
+      } else {
+        loginRefBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb loginRef = 6;</code>
+     */
+    public Builder mergeLoginRef(com.tiwari.studence.proto.genericRef.GenericRefPb value) {
+      if (loginRefBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0) &&
+          loginRef_ != null &&
+          loginRef_ != com.tiwari.studence.proto.genericRef.GenericRefPb.getDefaultInstance()) {
+          getLoginRefBuilder().mergeFrom(value);
+        } else {
+          loginRef_ = value;
+        }
+      } else {
+        loginRefBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb loginRef = 6;</code>
+     */
+    public Builder clearLoginRef() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      loginRef_ = null;
+      if (loginRefBuilder_ != null) {
+        loginRefBuilder_.dispose();
+        loginRefBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb loginRef = 6;</code>
+     */
+    public com.tiwari.studence.proto.genericRef.GenericRefPb.Builder getLoginRefBuilder() {
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return getLoginRefFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb loginRef = 6;</code>
+     */
+    public com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder getLoginRefOrBuilder() {
+      if (loginRefBuilder_ != null) {
+        return loginRefBuilder_.getMessageOrBuilder();
+      } else {
+        return loginRef_ == null ?
+            com.tiwari.studence.proto.genericRef.GenericRefPb.getDefaultInstance() : loginRef_;
+      }
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.genericRef.GenericRefPb loginRef = 6;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tiwari.studence.proto.genericRef.GenericRefPb, com.tiwari.studence.proto.genericRef.GenericRefPb.Builder, com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder> 
+        getLoginRefFieldBuilder() {
+      if (loginRefBuilder_ == null) {
+        loginRefBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tiwari.studence.proto.genericRef.GenericRefPb, com.tiwari.studence.proto.genericRef.GenericRefPb.Builder, com.tiwari.studence.proto.genericRef.GenericRefPbOrBuilder>(
+                getLoginRef(),
+                getParentForChildren(),
+                isClean());
+        loginRef_ = null;
+      }
+      return loginRefBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

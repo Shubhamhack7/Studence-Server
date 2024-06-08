@@ -1,5 +1,6 @@
 package com.tiwari.studence.campus.indexer;
 
+
 import com.tiwari.studence.common.indexer.AEntityIndexer;
 import com.tiwari.studence.proto.campus.CampusPb;
 import com.tiwari.studence.util.encoder.JsonBaseEncoderDecoder;

@@ -266,6 +266,7 @@
   
   <modules>
     <module>studence-dump</module>
+    <module>studence-firebase</module>
     <module>studence-typeAhead</module>
     <module>studence-util</module>
     <module>studence-common</module>
@@ -279,6 +280,7 @@
     <module>studence-classes</module>
     <module>studence-student</module>
     <module>studence-attendence</module>
+    <module>studence-server</module>
     <module>studence-management-app</module>
   </modules>
     

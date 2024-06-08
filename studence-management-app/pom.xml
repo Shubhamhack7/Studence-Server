@@ -45,7 +45,7 @@
 		</dependency>
 		<dependency>
 			<groupId>com.tiwari.studence</groupId>
-			<artifactId>studence-login</artifactId>
+			<artifactId>studence-server</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
@@ -54,16 +54,7 @@
 			<version>4.0.1</version>
 			<scope>provided</scope>
 		</dependency>
-		<dependency>
-			<groupId>com.tiwari.studence</groupId>
-			<artifactId>studence-organisation</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>com.tiwari.studence</groupId>
-			<artifactId>studence-campus</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+
 
 		<!-- Google Guice library -->
 		<dependency>

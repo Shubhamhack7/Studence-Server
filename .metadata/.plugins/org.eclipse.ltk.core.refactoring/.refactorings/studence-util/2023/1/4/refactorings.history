@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move package &apos;com.tiwari.studence.entity.bquery&apos; to &apos;studence-common/src/main/java&apos;&#x0A;- Original project: &apos;studence-util&apos;&#x0A;- Destination element: &apos;studence-common/src/main/java&apos;&#x0A;- Original element: &apos;studence-util/src/main/java/com.tiwari.studence.entity.bquery&apos;&#x0A;- Update references to refactored element" description="Move package" destination="=studence-common/src\/main\/java" element1="/src\/main\/java&lt;com.tiwari.studence.entity.bquery" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1674922701096" version="1.0"/>
+</session>

@@ -44,6 +44,11 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
+			<groupId>com.squareup.okhttp3</groupId>
+			<artifactId>okhttp</artifactId>
+			<version>4.9.0</version>
+		</dependency>
+		<dependency>
 			<groupId>jakarta.servlet</groupId>
 			<artifactId>jakarta.servlet-api</artifactId>
 			<version>6.0.0</version>
@@ -55,6 +60,8 @@
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
+	<!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp -->
+
 
 	<build>
 		<pluginManagement>
