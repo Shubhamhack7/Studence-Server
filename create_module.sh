@@ -7,7 +7,7 @@ if [[ $(id -u) -ne 0 ]]; then
 fi
 
 # Maven project directory
-project_dir="/home/tiwaritiwari/Studence/Studence-Server"
+project_dir="/home/hacker/Project/Studence-Server"
 
 # Base package
 base_package="com.tiwari.studence"

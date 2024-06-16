@@ -17,7 +17,6 @@ import com.tiwari.studence.util.serverConfig.ServerConfigUtility;
 
 import javax.inject.Inject;
 
-@Singleton
 public class AttendenceServlet extends
         JsonResponseEntityServlet<IAttendenceService, AttendencePb, AttendenceSearchReqPb, AttendenceSearchRespPb, AttendencePbProvider, AttendenceSearchPbProvider> {
 

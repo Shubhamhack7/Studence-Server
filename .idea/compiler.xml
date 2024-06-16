@@ -14,6 +14,7 @@
         <module name="studence-common-http" />
         <module name="studence-pushNotification" />
         <module name="studence-openai" />
+        <module name="studence-proto" />
         <module name="studence-campus" />
         <module name="studence-firebase" />
         <module name="studence-util" />

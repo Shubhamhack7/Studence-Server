@@ -35,6 +35,8 @@
     <file url="file://$PROJECT_DIR$/studence-openai/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-organisation/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-organisation/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/studence-proto/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/studence-proto/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-pushNotification/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-pushNotification/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/studence-server/src/main/java" charset="UTF-8" />

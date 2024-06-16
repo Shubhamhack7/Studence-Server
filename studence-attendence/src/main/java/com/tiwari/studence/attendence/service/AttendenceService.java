@@ -8,11 +8,11 @@ import com.tiwari.studence.attendence.provider.AttendenceTableNameProvider;
 import com.tiwari.studence.attendence.searcher.AttendenceSearcher;
 import com.tiwari.studence.attendence.updater.AttendenceUpdater;
 import com.tiwari.studence.common.async.IFuture;
-import com.tiwari.studence.common.service.v1.entity.IGetEntityId;
+import com.tiwari.studence.common.entity.IGetEntityId;
 import com.tiwari.studence.common.interfaces.IDynamoGetEntityTable;
 import com.tiwari.studence.common.interfaces.IDynamoPutTable;
 import com.tiwari.studence.common.interfaces.IDynamoUpdateTable;
-import com.tiwari.studence.common.service.v1.services.AEntityService;
+import com.tiwari.studence.common.services.AEntityService;
 import com.tiwari.studence.proto.attendence.AttendencePb;
 import com.tiwari.studence.proto.attendence.AttendenceSearchReqPb;
 import com.tiwari.studence.proto.attendence.AttendenceSearchRespPb;
@@ -23,8 +23,7 @@ import javax.inject.Inject;
 import javax.inject.Singleton;
 
 @Singleton
-public class AttendenceService extends
-        AEntityService<AttendencePb, AttendenceSearchReqPb,AttendenceSearchReqPb.Builder, AttendenceSearchRespPb, AttendencePb.Builder, AttendencePbProvider, AttendenceSearchRespPb.Builder, AttendenceSearchPbProvider, AttendenceIndexer, AttendenceUpdater, AttendenceConvertor, AttendenceSearcher, AttendenceTableNameProvider>
+public class AttendenceService extends AEntityService<AttendencePb, AttendenceSearchReqPb,AttendenceSearchReqPb.Builder, AttendenceSearchRespPb, AttendencePb.Builder, AttendencePbProvider, AttendenceSearchRespPb.Builder, AttendenceSearchPbProvider, AttendenceIndexer, AttendenceUpdater, AttendenceConvertor, AttendenceSearcher, AttendenceTableNameProvider>
         implements IAttendenceService {
 
   @Inject

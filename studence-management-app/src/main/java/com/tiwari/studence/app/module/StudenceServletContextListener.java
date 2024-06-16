@@ -51,7 +51,12 @@ public class StudenceServletContextListener extends GuiceServletContextListener 
 
 
         Injector injector = Guice.createInjector(new EnvironmentModule());
-        injector.getInstance(StudenceManagementServiceModule.class);
+        try {
+            injector.getInstance(StudenceManagementServiceModule.class);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
 
         TypeLiteral<Set<AbstractModule>> moduleSet = new TypeLiteral<Set<AbstractModule>>() {
         };

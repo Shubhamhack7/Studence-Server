@@ -7,6 +7,7 @@
     <project>studence-common</project>
     <project>studence-dynamodb-database</project>
     <project>studence-util</project>
+    <project>studence-proto</project>
     <project>studence-organisation</project>
   </projects>
   <buildSpec>
