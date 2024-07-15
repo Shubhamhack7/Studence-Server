@@ -5,12 +5,14 @@ import com.tiwari.studence.proto.login.LoginPb;
 import com.tiwari.studence.util.encoder.JsonBaseEncoderDecoder;
 import software.amazon.awssdk.services.dynamodb.model.AttributeValue;
 
+import javax.inject.Inject;
 import javax.inject.Singleton;
 import java.util.HashMap;
 
 @Singleton
 public class LoginIndexer extends AEntityIndexer<LoginPb> {
 
+  @Inject
   public LoginIndexer(JsonBaseEncoderDecoder jsonBaseEncoderDecoder) {
     super(jsonBaseEncoderDecoder);
   }

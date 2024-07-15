@@ -19,12 +19,14 @@ public class OrganisationCreateAndCampusCreateCF extends
   private ICampusService m_campusService;
   private OrganisationCreateAndCampusCreateReqPb m_request;
   private OrganisationCreateAndCampusCreateRespPb.Builder m_response;
-  public OrganisationCreateAndCampusCreateCF(OrganisationCreateAndCampusCreateReqPb request,IOrganisationService organisationService,ICampusService campusService) {
+
+  public OrganisationCreateAndCampusCreateCF(OrganisationCreateAndCampusCreateReqPb request,
+          IOrganisationService organisationService, ICampusService campusService) {
     super(State.CREATE_ORGANISATION, State.DONE);
     m_request = request;
     m_response = OrganisationCreateAndCampusCreateRespPb.newBuilder();
-    m_organisationService=organisationService;
-    m_campusService=campusService;
+    m_organisationService = organisationService;
+    m_campusService = campusService;
     addStateHandler(State.CREATE_ORGANISATION, new CreateOrganisation());
     addStateHandler(State.CREATE_CAMPUS, new CreateCampus());
   }
@@ -40,17 +42,17 @@ public class OrganisationCreateAndCampusCreateCF extends
 
     @Override
     public void registerCalls() {
-       m_future =  m_organisationService.create(m_request.getOrganisation());
+      m_future = m_organisationService.create(m_request.getOrganisation());
     }
 
     @Override
     public State handleState() {
       try {
-        if(EntityUtilHelper.isDbEntityNotEmpty(m_future.get().getDbInfo())){
+        if (EntityUtilHelper.isDbEntityNotEmpty(m_future.get().getDbInfo())) {
           m_response.setOrganisation(m_future.get());
           return State.CREATE_CAMPUS;
-        }else{
-          getAsyncCallback().handleUnexpectedException(new LoggedRuntimeException("","",null));
+        } else {
+          getAsyncCallback().handleUnexpectedException(new LoggedRuntimeException("", "", null));
           return State.DONE;
         }
         //getAsyncCallback().set(0, m_future.item());
@@ -67,19 +69,22 @@ public class OrganisationCreateAndCampusCreateCF extends
 
     @Override
     public void registerCalls() {
-
-      m_future =  m_campusService.create(m_request.getCampus());
+      CampusPb.Builder builer = CampusPb.newBuilder(m_request.getCampus());
+      builer.getOrganisationRefBuilder().setDbInfoId(
+              EntityUtilHelper.getDbInfoIdWithSpecialCharecterUsingEntityPb(
+                      m_response.getOrganisation().getDbInfo()));
+      m_future = m_campusService.create(builer.build());
     }
 
     @Override
     public State handleState() {
       try {
-        if(EntityUtilHelper.isDbEntityNotEmpty(m_future.get().getDbInfo())){
+        if (EntityUtilHelper.isDbEntityNotEmpty(m_future.get().getDbInfo())) {
           m_response.setCampus(m_future.get());
-          getAsyncCallback().set(0,m_response.build());
+          getAsyncCallback().set(0, m_response.build());
           return State.DONE;
-        }else{
-          getAsyncCallback().handleUnexpectedException(new LoggedRuntimeException("","",null));
+        } else {
+          getAsyncCallback().handleUnexpectedException(new LoggedRuntimeException("", "", null));
           return State.DONE;
         }
         //getAsyncCallback().set(0, m_future.item());

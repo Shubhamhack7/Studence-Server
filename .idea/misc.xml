@@ -19,10 +19,12 @@
         <option value="$PROJECT_DIR$/studence-filesInfo/pom.xml" />
         <option value="$PROJECT_DIR$/studence-devices/pom.xml" />
         <option value="$PROJECT_DIR$/studence-email/pom.xml" />
+        <option value="$PROJECT_DIR$/studence-services/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/studence-services/pom.xml" />
         <option value="$PROJECT_DIR$/studence-util/studence-login/pom.xml" />
       </set>
     </option>

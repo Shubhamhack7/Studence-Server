@@ -20,4 +20,6 @@ public class CampusConverter extends
           JsonBaseEncoderDecoder jsonBaseEncoderDecoder, CampusSearchReqRespProvider respProvider) {
     super(builderProvider, jsonBaseEncoderDecoder, respProvider);
   }
+
+
 }

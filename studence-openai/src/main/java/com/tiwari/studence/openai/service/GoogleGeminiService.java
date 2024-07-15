@@ -13,10 +13,10 @@ public class GoogleGeminiService {
     try {
       // Replace YOUR_API_KEY with your actual API key
       String apiKey = "AIzaSyDeoPnEs-BGbQ09qm1uOerYrvtLUfJBAnU";
-      String endpoint = "https://generativelanguage.googleapis.com/v1beta3/models/text-bison-001:generateText?key=" + apiKey;
+      String endpoint = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=" + apiKey;
 
       // Request body
-      String requestBody = "{ \"prompt\": { \"text\": \"" + req + "\" } }";
+      String requestBody = "{ \"contents\": { \"parts\": { \"text\": \"" + req + "\" } } }";
 
       // Create URL object
       URL url = new URL(endpoint);

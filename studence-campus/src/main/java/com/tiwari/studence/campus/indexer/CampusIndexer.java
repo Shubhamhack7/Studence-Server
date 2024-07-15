@@ -34,9 +34,6 @@ public class CampusIndexer extends AEntityIndexer<CampusPb> {
             builder.getContactDetails().getAddress().getPrimary().getCanonicalAddress()
                     .toLowerCase(), false, AttributeValue.Type.S,
             CampusIndexerEnum.CAMPUS_ADDRESS.isLowerCase());
-    addItemToAttritibeMap(items, CampusIndexerEnum.CAMPUS_ORG_REF_ID.name(),
-            builder.getOrganisationRef().getDbInfoId(), false, AttributeValue.Type.S,
-            CampusIndexerEnum.CAMPUS_ORG_REF_ID.isLowerCase());
     addItemToAttritibeMap(items, CampusIndexerEnum.CAMPUS_ORG_REF_NAME.name(),
             builder.getOrganisationRef().getName().toLowerCase(), false, AttributeValue.Type.S,
             CampusIndexerEnum.CAMPUS_ORG_REF_NAME.isLowerCase());

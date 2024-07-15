@@ -27,7 +27,7 @@ message EntityPb{
 }
 
 message PbConfig {
-  int32 version =1;
+  int64 version =1;
   com.tiwari.studence.proto.time.TimePb createdAt =  2;
   com.tiwari.studence.proto.time.TimePb updatedAt =  3;
   string updatedBy = 4;
