@@ -69,29 +69,30 @@ public final class CampusPbOuterClass {
       ".tiwari.studence.proto.contactDetails.Co" +
       "ntactDetailsPb\022R\n\017organisationRef\030\004 \001(\0132" +
       "9.com.tiwari.studence.proto.organisation" +
-      ".OrganisationRefPb\022\022\n\ncampusCode\030\005 \001(\t\"z" +
-      "\n\013CampusRefPb\022\020\n\010dbInfoId\030\001 \001(\t\022\014\n\004name\030" +
-      "\002 \001(\t\022K\n\017organisationRef\030\003 \001(\01322.com.tiw" +
-      "ari.studence.proto.genericRef.GenericRef" +
-      "Pb\"!\n\021CampusSearchReqPb\022\014\n\004name\030\001 \001(\t\"\262\001" +
-      "\n&OrganisationCreateAndCampusCreateReqPb" +
-      "\022L\n\014organisation\030\001 \001(\01326.com.tiwari.stud" +
-      "ence.proto.organisation.OrganisationPb\022:" +
-      "\n\006campus\030\002 \001(\0132*.com.tiwari.studence.pro" +
-      "to.campus.CampusPb\"\257\001\n#OrganisationCreat" +
-      "eAndCampusCreatePb\022L\n\014organisation\030\001 \001(\013" +
-      "26.com.tiwari.studence.proto.organisatio" +
-      "n.OrganisationPb\022:\n\006campus\030\002 \001(\0132*.com.t" +
-      "iwari.studence.proto.campus.CampusPb\"\263\001\n" +
-      "\'OrganisationCreateAndCampusCreateRespPb" +
-      "\022L\n\014organisation\030\001 \001(\01326.com.tiwari.stud" +
-      "ence.proto.organisation.OrganisationPb\022:" +
-      "\n\006campus\030\002 \001(\0132*.com.tiwari.studence.pro" +
-      "to.campus.CampusPb\"\220\001\n\022CampusSearchRespP" +
-      "b\022=\n\007summary\030\001 \001(\0132,.com.tiwari.studence" +
-      ".proto.summary.SummaryPb\022;\n\007results\030\002 \003(" +
-      "\0132*.com.tiwari.studence.proto.campus.Cam" +
-      "pusPbB\005P\001\240\001\001b\006proto3"
+      ".OrganisationRefPb\022\022\n\ncampusCode\030\005 \001(\t\"\244" +
+      "\001\n\013CampusRefPb\022:\n\006dbInfo\030\001 \001(\0132*.com.tiw" +
+      "ari.studence.proto.entity.EntityPb\022\014\n\004na" +
+      "me\030\002 \001(\t\022K\n\017organisationRef\030\003 \001(\01322.com." +
+      "tiwari.studence.proto.genericRef.Generic" +
+      "RefPb\"!\n\021CampusSearchReqPb\022\014\n\004name\030\001 \001(\t" +
+      "\"\262\001\n&OrganisationCreateAndCampusCreateRe" +
+      "qPb\022L\n\014organisation\030\001 \001(\01326.com.tiwari.s" +
+      "tudence.proto.organisation.OrganisationP" +
+      "b\022:\n\006campus\030\002 \001(\0132*.com.tiwari.studence." +
+      "proto.campus.CampusPb\"\257\001\n#OrganisationCr" +
+      "eateAndCampusCreatePb\022L\n\014organisation\030\001 " +
+      "\001(\01326.com.tiwari.studence.proto.organisa" +
+      "tion.OrganisationPb\022:\n\006campus\030\002 \001(\0132*.co" +
+      "m.tiwari.studence.proto.campus.CampusPb\"" +
+      "\263\001\n\'OrganisationCreateAndCampusCreateRes" +
+      "pPb\022L\n\014organisation\030\001 \001(\01326.com.tiwari.s" +
+      "tudence.proto.organisation.OrganisationP" +
+      "b\022:\n\006campus\030\002 \001(\0132*.com.tiwari.studence." +
+      "proto.campus.CampusPb\"\220\001\n\022CampusSearchRe" +
+      "spPb\022=\n\007summary\030\001 \001(\0132,.com.tiwari.stude" +
+      "nce.proto.summary.SummaryPb\022;\n\007results\030\002" +
+      " \003(\0132*.com.tiwari.studence.proto.campus." +
+      "CampusPbB\005P\001\240\001\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -114,7 +115,7 @@ public final class CampusPbOuterClass {
     internal_static_com_tiwari_studence_proto_campus_CampusRefPb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tiwari_studence_proto_campus_CampusRefPb_descriptor,
-        new java.lang.String[] { "DbInfoId", "Name", "OrganisationRef", });
+        new java.lang.String[] { "DbInfo", "Name", "OrganisationRef", });
     internal_static_com_tiwari_studence_proto_campus_CampusSearchReqPb_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_com_tiwari_studence_proto_campus_CampusSearchReqPb_fieldAccessorTable = new

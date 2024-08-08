@@ -25,7 +25,7 @@ message CampusPb{
 }
 
 message CampusRefPb{
-  string dbInfoId =1;
+  com.tiwari.studence.proto.entity.EntityPb dbInfo =1;
   string name= 2;
   com.tiwari.studence.proto.genericRef.GenericRefPb organisationRef = 3;
 }

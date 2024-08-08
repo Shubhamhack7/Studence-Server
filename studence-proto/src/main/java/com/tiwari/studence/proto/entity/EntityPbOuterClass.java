@@ -41,7 +41,7 @@ public final class EntityPbOuterClass {
       ".tiwari.studence.proto.entity.PbConfig\022>" +
       "\n\010timezone\030\005 \001(\0162,.com.tiwari.studence.p" +
       "roto.time.TimezoneEnum\"\244\001\n\010PbConfig\022\017\n\007v" +
-      "ersion\030\001 \001(\005\0229\n\tcreatedAt\030\002 \001(\0132&.com.ti" +
+      "ersion\030\001 \001(\003\0229\n\tcreatedAt\030\002 \001(\0132&.com.ti" +
       "wari.studence.proto.time.TimePb\0229\n\tupdat" +
       "edAt\030\003 \001(\0132&.com.tiwari.studence.proto.t" +
       "ime.TimePb\022\021\n\tupdatedBy\030\004 \001(\t*X\n\014LifeTim" +

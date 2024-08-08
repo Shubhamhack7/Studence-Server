@@ -8,16 +8,19 @@ public interface CampusRefPbOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string dbInfoId = 1;</code>
-   * @return The dbInfoId.
+   * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
+   * @return Whether the dbInfo field is set.
    */
-  java.lang.String getDbInfoId();
+  boolean hasDbInfo();
   /**
-   * <code>string dbInfoId = 1;</code>
-   * @return The bytes for dbInfoId.
+   * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
+   * @return The dbInfo.
    */
-  com.google.protobuf.ByteString
-      getDbInfoIdBytes();
+  com.tiwari.studence.proto.entity.EntityPb getDbInfo();
+  /**
+   * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
+   */
+  com.tiwari.studence.proto.entity.EntityPbOrBuilder getDbInfoOrBuilder();
 
   /**
    * <code>string name = 2;</code>

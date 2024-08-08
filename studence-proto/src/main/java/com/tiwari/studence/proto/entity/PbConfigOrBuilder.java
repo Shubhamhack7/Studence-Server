@@ -8,10 +8,10 @@ public interface PbConfigOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int32 version = 1;</code>
+   * <code>int64 version = 1;</code>
    * @return The version.
    */
-  int getVersion();
+  long getVersion();
 
   /**
    * <code>.com.tiwari.studence.proto.time.TimePb createdAt = 2;</code>
