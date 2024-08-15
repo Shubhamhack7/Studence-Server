@@ -9,24 +9,32 @@ package com.tiwari.studence.proto.datatypes;
 public enum BooleanEnum
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
-   * <code>FALSE = 0;</code>
+   * <code>UNKNOWN_BOOLEAN_TYPE = 0;</code>
    */
-  FALSE(0),
+  UNKNOWN_BOOLEAN_TYPE(0),
   /**
-   * <code>TRUE = 1;</code>
+   * <code>FALSE = 1;</code>
    */
-  TRUE(1),
+  FALSE(1),
+  /**
+   * <code>TRUE = 2;</code>
+   */
+  TRUE(2),
   UNRECOGNIZED(-1),
   ;
 
   /**
-   * <code>FALSE = 0;</code>
+   * <code>UNKNOWN_BOOLEAN_TYPE = 0;</code>
    */
-  public static final int FALSE_VALUE = 0;
+  public static final int UNKNOWN_BOOLEAN_TYPE_VALUE = 0;
   /**
-   * <code>TRUE = 1;</code>
+   * <code>FALSE = 1;</code>
    */
-  public static final int TRUE_VALUE = 1;
+  public static final int FALSE_VALUE = 1;
+  /**
+   * <code>TRUE = 2;</code>
+   */
+  public static final int TRUE_VALUE = 2;
 
 
   public final int getNumber() {
@@ -53,8 +61,9 @@ public enum BooleanEnum
    */
   public static BooleanEnum forNumber(int value) {
     switch (value) {
-      case 0: return FALSE;
-      case 1: return TRUE;
+      case 0: return UNKNOWN_BOOLEAN_TYPE;
+      case 1: return FALSE;
+      case 2: return TRUE;
       default: return null;
     }
   }

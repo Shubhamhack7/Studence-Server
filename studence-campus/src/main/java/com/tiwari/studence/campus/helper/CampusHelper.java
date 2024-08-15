@@ -15,8 +15,8 @@ public class CampusHelper {
 
 
     public void updateCampusRef(CampusRefPb pb, CampusRefPb.Builder builder ){
-        if(Strings.notEmpty(pb.getDbInfoId())){
-            builder.setDbInfoId(pb.getDbInfoId());
+        if(Strings.notEmpty(pb.getDbInfo().getHashId())){
+            builder.setDbInfo(pb.getDbInfo());
         }
         if (Strings.notEmpty(pb.getName())) {
             builder.setName(pb.getName());

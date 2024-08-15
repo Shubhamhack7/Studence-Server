@@ -31,8 +31,9 @@ public final class DataTypesPb {
       "\n\021dataTypesPb.proto\022#com.tiwari.studence" +
       ".proto.datatypes\"K\n\tBooleanPb\022>\n\004type\030\001 " +
       "\001(\01620.com.tiwari.studence.proto.datatype" +
-      "s.BooleanEnum*\"\n\013BooleanEnum\022\t\n\005FALSE\020\000\022" +
-      "\010\n\004TRUE\020\001B\005P\001\240\001\001b\006proto3"
+      "s.BooleanEnum*<\n\013BooleanEnum\022\030\n\024UNKNOWN_" +
+      "BOOLEAN_TYPE\020\000\022\t\n\005FALSE\020\001\022\010\n\004TRUE\020\002B\005P\001\240" +
+      "\001\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

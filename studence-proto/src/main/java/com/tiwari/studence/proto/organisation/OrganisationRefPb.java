@@ -44,30 +44,30 @@ private static final long serialVersionUID = 0L;
             com.tiwari.studence.proto.organisation.OrganisationRefPb.class, com.tiwari.studence.proto.organisation.OrganisationRefPb.Builder.class);
   }
 
-  public static final int DBINFO_FIELD_NUMBER = 1;
-  private com.tiwari.studence.proto.entity.EntityPb dbInfo_;
+  public static final int DBINFOID_FIELD_NUMBER = 1;
+  private com.tiwari.studence.proto.entity.EntityPb dbInfoId_;
   /**
-   * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
-   * @return Whether the dbInfo field is set.
+   * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfoId = 1;</code>
+   * @return Whether the dbInfoId field is set.
    */
   @java.lang.Override
-  public boolean hasDbInfo() {
-    return dbInfo_ != null;
+  public boolean hasDbInfoId() {
+    return dbInfoId_ != null;
   }
   /**
-   * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
-   * @return The dbInfo.
+   * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfoId = 1;</code>
+   * @return The dbInfoId.
    */
   @java.lang.Override
-  public com.tiwari.studence.proto.entity.EntityPb getDbInfo() {
-    return dbInfo_ == null ? com.tiwari.studence.proto.entity.EntityPb.getDefaultInstance() : dbInfo_;
+  public com.tiwari.studence.proto.entity.EntityPb getDbInfoId() {
+    return dbInfoId_ == null ? com.tiwari.studence.proto.entity.EntityPb.getDefaultInstance() : dbInfoId_;
   }
   /**
-   * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
+   * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfoId = 1;</code>
    */
   @java.lang.Override
-  public com.tiwari.studence.proto.entity.EntityPbOrBuilder getDbInfoOrBuilder() {
-    return dbInfo_ == null ? com.tiwari.studence.proto.entity.EntityPb.getDefaultInstance() : dbInfo_;
+  public com.tiwari.studence.proto.entity.EntityPbOrBuilder getDbInfoIdOrBuilder() {
+    return dbInfoId_ == null ? com.tiwari.studence.proto.entity.EntityPb.getDefaultInstance() : dbInfoId_;
   }
 
   public static final int NAME_FIELD_NUMBER = 2;
@@ -123,8 +123,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (dbInfo_ != null) {
-      output.writeMessage(1, getDbInfo());
+    if (dbInfoId_ != null) {
+      output.writeMessage(1, getDbInfoId());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
@@ -138,9 +138,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (dbInfo_ != null) {
+    if (dbInfoId_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getDbInfo());
+        .computeMessageSize(1, getDbInfoId());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
@@ -160,10 +160,10 @@ private static final long serialVersionUID = 0L;
     }
     com.tiwari.studence.proto.organisation.OrganisationRefPb other = (com.tiwari.studence.proto.organisation.OrganisationRefPb) obj;
 
-    if (hasDbInfo() != other.hasDbInfo()) return false;
-    if (hasDbInfo()) {
-      if (!getDbInfo()
-          .equals(other.getDbInfo())) return false;
+    if (hasDbInfoId() != other.hasDbInfoId()) return false;
+    if (hasDbInfoId()) {
+      if (!getDbInfoId()
+          .equals(other.getDbInfoId())) return false;
     }
     if (!getName()
         .equals(other.getName())) return false;
@@ -178,9 +178,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasDbInfo()) {
-      hash = (37 * hash) + DBINFO_FIELD_NUMBER;
-      hash = (53 * hash) + getDbInfo().hashCode();
+    if (hasDbInfoId()) {
+      hash = (37 * hash) + DBINFOID_FIELD_NUMBER;
+      hash = (53 * hash) + getDbInfoId().hashCode();
     }
     hash = (37 * hash) + NAME_FIELD_NUMBER;
     hash = (53 * hash) + getName().hashCode();
@@ -313,10 +313,10 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      dbInfo_ = null;
-      if (dbInfoBuilder_ != null) {
-        dbInfoBuilder_.dispose();
-        dbInfoBuilder_ = null;
+      dbInfoId_ = null;
+      if (dbInfoIdBuilder_ != null) {
+        dbInfoIdBuilder_.dispose();
+        dbInfoIdBuilder_ = null;
       }
       name_ = "";
       return this;
@@ -353,9 +353,9 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tiwari.studence.proto.organisation.OrganisationRefPb result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.dbInfo_ = dbInfoBuilder_ == null
-            ? dbInfo_
-            : dbInfoBuilder_.build();
+        result.dbInfoId_ = dbInfoIdBuilder_ == null
+            ? dbInfoId_
+            : dbInfoIdBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.name_ = name_;
@@ -406,8 +406,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tiwari.studence.proto.organisation.OrganisationRefPb other) {
       if (other == com.tiwari.studence.proto.organisation.OrganisationRefPb.getDefaultInstance()) return this;
-      if (other.hasDbInfo()) {
-        mergeDbInfo(other.getDbInfo());
+      if (other.hasDbInfoId()) {
+        mergeDbInfoId(other.getDbInfoId());
       }
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
@@ -442,7 +442,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               input.readMessage(
-                  getDbInfoFieldBuilder().getBuilder(),
+                  getDbInfoIdFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000001;
               break;
@@ -469,123 +469,123 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.tiwari.studence.proto.entity.EntityPb dbInfo_;
+    private com.tiwari.studence.proto.entity.EntityPb dbInfoId_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tiwari.studence.proto.entity.EntityPb, com.tiwari.studence.proto.entity.EntityPb.Builder, com.tiwari.studence.proto.entity.EntityPbOrBuilder> dbInfoBuilder_;
+        com.tiwari.studence.proto.entity.EntityPb, com.tiwari.studence.proto.entity.EntityPb.Builder, com.tiwari.studence.proto.entity.EntityPbOrBuilder> dbInfoIdBuilder_;
     /**
-     * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
-     * @return Whether the dbInfo field is set.
+     * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfoId = 1;</code>
+     * @return Whether the dbInfoId field is set.
      */
-    public boolean hasDbInfo() {
+    public boolean hasDbInfoId() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
-     * @return The dbInfo.
+     * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfoId = 1;</code>
+     * @return The dbInfoId.
      */
-    public com.tiwari.studence.proto.entity.EntityPb getDbInfo() {
-      if (dbInfoBuilder_ == null) {
-        return dbInfo_ == null ? com.tiwari.studence.proto.entity.EntityPb.getDefaultInstance() : dbInfo_;
+    public com.tiwari.studence.proto.entity.EntityPb getDbInfoId() {
+      if (dbInfoIdBuilder_ == null) {
+        return dbInfoId_ == null ? com.tiwari.studence.proto.entity.EntityPb.getDefaultInstance() : dbInfoId_;
       } else {
-        return dbInfoBuilder_.getMessage();
+        return dbInfoIdBuilder_.getMessage();
       }
     }
     /**
-     * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
+     * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfoId = 1;</code>
      */
-    public Builder setDbInfo(com.tiwari.studence.proto.entity.EntityPb value) {
-      if (dbInfoBuilder_ == null) {
+    public Builder setDbInfoId(com.tiwari.studence.proto.entity.EntityPb value) {
+      if (dbInfoIdBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        dbInfo_ = value;
+        dbInfoId_ = value;
       } else {
-        dbInfoBuilder_.setMessage(value);
+        dbInfoIdBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
+     * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfoId = 1;</code>
      */
-    public Builder setDbInfo(
+    public Builder setDbInfoId(
         com.tiwari.studence.proto.entity.EntityPb.Builder builderForValue) {
-      if (dbInfoBuilder_ == null) {
-        dbInfo_ = builderForValue.build();
+      if (dbInfoIdBuilder_ == null) {
+        dbInfoId_ = builderForValue.build();
       } else {
-        dbInfoBuilder_.setMessage(builderForValue.build());
+        dbInfoIdBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
+     * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfoId = 1;</code>
      */
-    public Builder mergeDbInfo(com.tiwari.studence.proto.entity.EntityPb value) {
-      if (dbInfoBuilder_ == null) {
+    public Builder mergeDbInfoId(com.tiwari.studence.proto.entity.EntityPb value) {
+      if (dbInfoIdBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
-          dbInfo_ != null &&
-          dbInfo_ != com.tiwari.studence.proto.entity.EntityPb.getDefaultInstance()) {
-          getDbInfoBuilder().mergeFrom(value);
+          dbInfoId_ != null &&
+          dbInfoId_ != com.tiwari.studence.proto.entity.EntityPb.getDefaultInstance()) {
+          getDbInfoIdBuilder().mergeFrom(value);
         } else {
-          dbInfo_ = value;
+          dbInfoId_ = value;
         }
       } else {
-        dbInfoBuilder_.mergeFrom(value);
+        dbInfoIdBuilder_.mergeFrom(value);
       }
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
+     * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfoId = 1;</code>
      */
-    public Builder clearDbInfo() {
+    public Builder clearDbInfoId() {
       bitField0_ = (bitField0_ & ~0x00000001);
-      dbInfo_ = null;
-      if (dbInfoBuilder_ != null) {
-        dbInfoBuilder_.dispose();
-        dbInfoBuilder_ = null;
+      dbInfoId_ = null;
+      if (dbInfoIdBuilder_ != null) {
+        dbInfoIdBuilder_.dispose();
+        dbInfoIdBuilder_ = null;
       }
       onChanged();
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
+     * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfoId = 1;</code>
      */
-    public com.tiwari.studence.proto.entity.EntityPb.Builder getDbInfoBuilder() {
+    public com.tiwari.studence.proto.entity.EntityPb.Builder getDbInfoIdBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
-      return getDbInfoFieldBuilder().getBuilder();
+      return getDbInfoIdFieldBuilder().getBuilder();
     }
     /**
-     * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
+     * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfoId = 1;</code>
      */
-    public com.tiwari.studence.proto.entity.EntityPbOrBuilder getDbInfoOrBuilder() {
-      if (dbInfoBuilder_ != null) {
-        return dbInfoBuilder_.getMessageOrBuilder();
+    public com.tiwari.studence.proto.entity.EntityPbOrBuilder getDbInfoIdOrBuilder() {
+      if (dbInfoIdBuilder_ != null) {
+        return dbInfoIdBuilder_.getMessageOrBuilder();
       } else {
-        return dbInfo_ == null ?
-            com.tiwari.studence.proto.entity.EntityPb.getDefaultInstance() : dbInfo_;
+        return dbInfoId_ == null ?
+            com.tiwari.studence.proto.entity.EntityPb.getDefaultInstance() : dbInfoId_;
       }
     }
     /**
-     * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
+     * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfoId = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tiwari.studence.proto.entity.EntityPb, com.tiwari.studence.proto.entity.EntityPb.Builder, com.tiwari.studence.proto.entity.EntityPbOrBuilder> 
-        getDbInfoFieldBuilder() {
-      if (dbInfoBuilder_ == null) {
-        dbInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getDbInfoIdFieldBuilder() {
+      if (dbInfoIdBuilder_ == null) {
+        dbInfoIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.tiwari.studence.proto.entity.EntityPb, com.tiwari.studence.proto.entity.EntityPb.Builder, com.tiwari.studence.proto.entity.EntityPbOrBuilder>(
-                getDbInfo(),
+                getDbInfoId(),
                 getParentForChildren(),
                 isClean());
-        dbInfo_ = null;
+        dbInfoId_ = null;
       }
-      return dbInfoBuilder_;
+      return dbInfoIdBuilder_;
     }
 
     private java.lang.Object name_ = "";

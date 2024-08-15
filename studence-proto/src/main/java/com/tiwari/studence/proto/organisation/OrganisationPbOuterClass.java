@@ -51,15 +51,15 @@ public final class OrganisationPbOuterClass {
       "ity.EntityPb\0224\n\004name\030\002 \001(\0132&.com.tiwari." +
       "studence.proto.name.NamePb\022R\n\016contactDet" +
       "ails\030\003 \001(\0132:.com.tiwari.studence.proto.c" +
-      "ontactDetails.ContactDetailsPb\"]\n\021Organi" +
-      "sationRefPb\022:\n\006dbInfo\030\001 \001(\0132*.com.tiwari" +
-      ".studence.proto.entity.EntityPb\022\014\n\004name\030" +
-      "\002 \001(\t\"\'\n\027OrganisationSearchReqPb\022\014\n\004name" +
-      "\030\001 \001(\t\"\242\001\n\030OrganisationSearchRespPb\022=\n\007s" +
-      "ummary\030\001 \001(\0132,.com.tiwari.studence.proto" +
-      ".summary.SummaryPb\022G\n\007results\030\002 \003(\01326.co" +
-      "m.tiwari.studence.proto.organisation.Org" +
-      "anisationPbB\005P\001\240\001\001b\006proto3"
+      "ontactDetails.ContactDetailsPb\"_\n\021Organi" +
+      "sationRefPb\022<\n\010dbInfoId\030\001 \001(\0132*.com.tiwa" +
+      "ri.studence.proto.entity.EntityPb\022\014\n\004nam" +
+      "e\030\002 \001(\t\"\'\n\027OrganisationSearchReqPb\022\014\n\004na" +
+      "me\030\001 \001(\t\"\242\001\n\030OrganisationSearchRespPb\022=\n" +
+      "\007summary\030\001 \001(\0132,.com.tiwari.studence.pro" +
+      "to.summary.SummaryPb\022G\n\007results\030\002 \003(\01326." +
+      "com.tiwari.studence.proto.organisation.O" +
+      "rganisationPbB\005P\001\240\001\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -80,7 +80,7 @@ public final class OrganisationPbOuterClass {
     internal_static_com_tiwari_studence_proto_organisation_OrganisationRefPb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tiwari_studence_proto_organisation_OrganisationRefPb_descriptor,
-        new java.lang.String[] { "DbInfo", "Name", });
+        new java.lang.String[] { "DbInfoId", "Name", });
     internal_static_com_tiwari_studence_proto_organisation_OrganisationSearchReqPb_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_com_tiwari_studence_proto_organisation_OrganisationSearchReqPb_fieldAccessorTable = new

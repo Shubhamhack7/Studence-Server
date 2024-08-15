@@ -19,8 +19,7 @@ public class OrganisationRefConvertor implements IRefConvetor<OrganisationRefPb,
   @Override
   public OrganisationRefPb refUpdater(OrganisationPb pb) {
     OrganisationRefPb.Builder builder = OrganisationRefPb.newBuilder();
-    builder.setDbInfoId(
-            EntityUtilHelper.getDbInfoIdWithSpecialCharecterUsingEntityPb(pb.getDbInfo()));
+    builder.setDbInfoId(pb.getDbInfo());
     builder.setName(pb.getName().getCanonicalName());
     return builder.build();
   }

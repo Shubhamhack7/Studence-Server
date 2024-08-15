@@ -12,6 +12,7 @@
         <module name="studence-email" />
         <module name="studence-teacher" />
         <module name="studence-login" />
+        <module name="studence-uiParser" />
         <module name="studence-typeAhead" />
         <module name="studence-common" />
         <module name="studence-attendence" />

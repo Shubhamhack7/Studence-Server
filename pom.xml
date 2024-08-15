@@ -272,6 +272,7 @@
 	
   
   <modules>
+        <module>studence-uiParser</module>
     <module>studence-proto</module>
     <module>studence-dump</module>
     <module>studence-firebase</module>

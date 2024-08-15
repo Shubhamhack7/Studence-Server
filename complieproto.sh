@@ -31,6 +31,7 @@ rm -rf studence-proto/src/main/java/com/tiwari/studence/proto
 cd studence-proto/src/main/protobuf
 echo [COMPILEING..........]
 protoc time.proto --java_out=../java
+protoc htmlWidgets.proto --java_out=../java
 protoc voidPb.proto --java_out=../java
 protoc timePb.proto --java_out=../java
 protoc schedulerPb.proto --java_out=../java

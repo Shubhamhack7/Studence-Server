@@ -160,7 +160,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (isCLassTeacher_ != com.tiwari.studence.proto.datatypes.BooleanEnum.FALSE.getNumber()) {
+    if (isCLassTeacher_ != com.tiwari.studence.proto.datatypes.BooleanEnum.UNKNOWN_BOOLEAN_TYPE.getNumber()) {
       output.writeEnum(1, isCLassTeacher_);
     }
     for (int i = 0; i < classTeacher_.size(); i++) {
@@ -178,7 +178,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (isCLassTeacher_ != com.tiwari.studence.proto.datatypes.BooleanEnum.FALSE.getNumber()) {
+    if (isCLassTeacher_ != com.tiwari.studence.proto.datatypes.BooleanEnum.UNKNOWN_BOOLEAN_TYPE.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(1, isCLassTeacher_);
     }

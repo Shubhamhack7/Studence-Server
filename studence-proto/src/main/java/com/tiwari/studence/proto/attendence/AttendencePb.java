@@ -221,7 +221,7 @@ private static final long serialVersionUID = 0L;
     if (teacherRef_ != null) {
       output.writeMessage(5, getTeacherRef());
     }
-    if (isPresent_ != com.tiwari.studence.proto.datatypes.BooleanEnum.FALSE.getNumber()) {
+    if (isPresent_ != com.tiwari.studence.proto.datatypes.BooleanEnum.UNKNOWN_BOOLEAN_TYPE.getNumber()) {
       output.writeEnum(6, isPresent_);
     }
     getUnknownFields().writeTo(output);
@@ -253,7 +253,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getTeacherRef());
     }
-    if (isPresent_ != com.tiwari.studence.proto.datatypes.BooleanEnum.FALSE.getNumber()) {
+    if (isPresent_ != com.tiwari.studence.proto.datatypes.BooleanEnum.UNKNOWN_BOOLEAN_TYPE.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(6, isPresent_);
     }

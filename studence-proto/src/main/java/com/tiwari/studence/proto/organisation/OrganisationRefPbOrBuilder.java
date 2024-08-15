@@ -8,19 +8,19 @@ public interface OrganisationRefPbOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
-   * @return Whether the dbInfo field is set.
+   * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfoId = 1;</code>
+   * @return Whether the dbInfoId field is set.
    */
-  boolean hasDbInfo();
+  boolean hasDbInfoId();
   /**
-   * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
-   * @return The dbInfo.
+   * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfoId = 1;</code>
+   * @return The dbInfoId.
    */
-  com.tiwari.studence.proto.entity.EntityPb getDbInfo();
+  com.tiwari.studence.proto.entity.EntityPb getDbInfoId();
   /**
-   * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfo = 1;</code>
+   * <code>.com.tiwari.studence.proto.entity.EntityPb dbInfoId = 1;</code>
    */
-  com.tiwari.studence.proto.entity.EntityPbOrBuilder getDbInfoOrBuilder();
+  com.tiwari.studence.proto.entity.EntityPbOrBuilder getDbInfoIdOrBuilder();
 
   /**
    * <code>string name = 2;</code>

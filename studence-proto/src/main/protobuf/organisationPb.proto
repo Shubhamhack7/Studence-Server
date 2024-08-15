@@ -21,7 +21,7 @@ message OrganisationPb{
 }
 
 message OrganisationRefPb{
-   com.tiwari.studence.proto.entity.EntityPb dbInfo =1;
+   com.tiwari.studence.proto.entity.EntityPb dbInfoId =1;
   string name= 2;
 }
 
