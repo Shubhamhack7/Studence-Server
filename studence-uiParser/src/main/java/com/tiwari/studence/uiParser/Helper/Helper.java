@@ -8,6 +8,7 @@ import org.jsoup.nodes.Attributes;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class Helper {
 
@@ -88,6 +89,7 @@ public class Helper {
         case "name":
           configbuilder.getInputBoxConfigBuilder().setName(config.get(attr.getTag()));
           break;
+
         default:
           break;
         }
@@ -180,6 +182,50 @@ public class Helper {
         }
         configbuilder.setWidthConfig(widthBu.build());
         break;
+      case "height":
+        HeightPb.Builder heightBu = HeightPb.newBuilder();
+        if (entry.getValue().trim().contains("px")) {
+          heightBu.setUnit(ValueUnitTypeEnum.PX);
+        } else if (entry.getValue().trim().contains("%")) {
+          heightBu.setUnit(ValueUnitTypeEnum.PERCENT);
+        } else if (entry.getValue().trim().contains("vh")) {
+          heightBu.setUnit(ValueUnitTypeEnum.VH);
+        } else {
+          heightBu.setUnit(ValueUnitTypeEnum.UNKNOWN_UNIT_TYPE);
+        }
+        if (entry.getValue().trim().contains(" ")) {
+          heightBu.setWidthType(ValueTypeEnum.MULTIPLE_VALUE);
+          String[] paddingSplit = entry.getValue().trim().split(" ");
+          if (paddingSplit.length > 2) {
+            heightBu.getMultipleValuesBuilder()
+                    .setTop(Double.valueOf(paddingSplit[0].replace("px", "")));
+            heightBu.getMultipleValuesBuilder()
+                    .setRight(Double.valueOf(paddingSplit[1].replace("px", "")));
+            heightBu.getMultipleValuesBuilder()
+                    .setBottom(Double.valueOf(paddingSplit[2].replace("px", "")));
+            heightBu.getMultipleValuesBuilder()
+                    .setLeft(Double.valueOf(paddingSplit[3].replace("px", "")));
+          } else {
+            heightBu.getMultipleValuesBuilder()
+                    .setTop(Double.valueOf(paddingSplit[0].replace("px", "")));
+            heightBu.getMultipleValuesBuilder()
+                    .setRight(Double.valueOf(paddingSplit[1].replace("px", "")));
+            heightBu.getMultipleValuesBuilder()
+                    .setBottom(Double.valueOf(paddingSplit[0].replace("px", "")));
+            heightBu.getMultipleValuesBuilder()
+                    .setLeft(Double.valueOf(paddingSplit[1].replace("px", "")));
+          }
+        } else {
+          heightBu.setWidthType(ValueTypeEnum.SINGLE_VALUE);
+          if (entry.getValue().trim().contains("px")) {
+            heightBu.setValue(Double.valueOf(entry.getValue().trim().replace("px", "")));
+          } else if (entry.getValue().trim().contains("%")) {
+            heightBu.setValue(Double.valueOf(entry.getValue().trim().replace("%", "")));
+          }
+
+        }
+        configbuilder.setHeightConfig(heightBu.build());
+        break;
       case "margin":
         MarginPb.Builder marginBu = MarginPb.newBuilder();
         if (entry.getValue().trim().contains("px")) {
@@ -249,6 +295,46 @@ public class Helper {
         }
         configbuilder.setBorderConfig(borderConfigPb.build());
         break;
+      case "border-radius":
+        BorderConfigPb.Builder borderRadiusConfigPb = BorderConfigPb.newBuilder();
+        if (entry.getValue().trim().contains("px")) {
+          borderRadiusConfigPb.setUnit(ValueUnitTypeEnum.PX);
+        } else {
+          borderRadiusConfigPb.setUnit(ValueUnitTypeEnum.PERCENT);
+        }
+        if (entry.getValue().trim().contains(" ")) {
+          borderRadiusConfigPb.getBorderRadiusBuilder().setBorderValueType(ValueTypeEnum.MULTIPLE_VALUE);
+          String[] paddingSplit = entry.getValue().trim().split(" ");
+          if (paddingSplit.length > 2) {
+            borderRadiusConfigPb.getBorderRadiusBuilder().getMultipleValuesBuilder()
+                    .setTop(Double.valueOf(paddingSplit[0].replace("px", "")));
+            borderRadiusConfigPb.getBorderRadiusBuilder().getMultipleValuesBuilder()
+                    .setRight(Double.valueOf(paddingSplit[1].replace("px", "")));
+            borderRadiusConfigPb.getBorderRadiusBuilder().getMultipleValuesBuilder()
+                    .setBottom(Double.valueOf(paddingSplit[2].replace("px", "")));
+            borderRadiusConfigPb.getBorderRadiusBuilder().getMultipleValuesBuilder()
+                    .setLeft(Double.valueOf(paddingSplit[3].replace("px", "")));
+          } else {
+            borderRadiusConfigPb.getBorderRadiusBuilder().getMultipleValuesBuilder()
+                    .setTop(Double.valueOf(paddingSplit[0].replace("px", "")));
+            borderRadiusConfigPb.getBorderRadiusBuilder().getMultipleValuesBuilder()
+                    .setRight(Double.valueOf(paddingSplit[1].replace("px", "")));
+            borderRadiusConfigPb.getBorderRadiusBuilder().getMultipleValuesBuilder()
+                    .setBottom(Double.valueOf(paddingSplit[0].replace("px", "")));
+            borderRadiusConfigPb.getBorderRadiusBuilder().getMultipleValuesBuilder()
+                    .setLeft(Double.valueOf(paddingSplit[1].replace("px", "")));
+          }
+        } else {
+          borderRadiusConfigPb.getBorderRadiusBuilder().setBorderValueType(ValueTypeEnum.SINGLE_VALUE);
+          if (entry.getValue().trim().contains("px")) {
+            borderRadiusConfigPb.getBorderRadiusBuilder().setValue(Double.valueOf(entry.getValue().trim().replace("px", "")));
+          } else if (entry.getValue().trim().contains("%")) {
+            borderRadiusConfigPb.getBorderRadiusBuilder().setValue(Double.valueOf(entry.getValue().trim().replace("%", "")));
+          }
+
+        }
+        configbuilder.setBorderConfig(borderRadiusConfigPb.build());
+        break;
       case "background-color":
         ColorPb.Builder colorBu = ColorPb.newBuilder();
         if (entry.getValue().trim().contains("#")) {
@@ -258,6 +344,19 @@ public class Helper {
           //
         }
         configbuilder.setColorConfig(colorBu.build());
+      case "display":
+      case "justify-content":
+      case "align-items":
+      case "text-align":
+        AxisAlignmentPb.Builder axisAlignment = AxisAlignmentPb.newBuilder();
+        if (entry.getValue().trim().contains("center")) {
+          axisAlignment.setMainAxisAlignment(AlignmentTypeEnum.ALIGN_CENTER);
+          axisAlignment.setCrossAxisAlignment(AlignmentTypeEnum.ALIGN_CENTER);
+        } else {
+          axisAlignment.setMainAxisAlignment(AlignmentTypeEnum.ALIGN_CENTER);
+          axisAlignment.setCrossAxisAlignment(AlignmentTypeEnum.ALIGN_STRETCH);
+        }
+        configbuilder.setAxisAlignment(axisAlignment.build());
         break;
       }
     }
@@ -294,4 +393,13 @@ public class Helper {
     return count;
   }
 
+  public FormLayoutTypeEnum getFormLayout(String attributes) {
+    Map<String, String> confgMap = getStyleMap(attributes);
+    String a = confgMap.get("flex-direction");
+    if (Objects.equals(a.trim(), "column")) {
+      return FormLayoutTypeEnum.FORM_LAYOUT_COLUMN;
+    } else {
+      return FormLayoutTypeEnum.UNKNOWN_FORM_LAYOUT_TYPE;
+    }
+  }
 }

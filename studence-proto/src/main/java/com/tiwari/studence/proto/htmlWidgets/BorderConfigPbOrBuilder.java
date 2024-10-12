@@ -75,4 +75,19 @@ public interface BorderConfigPbOrBuilder extends
    * @return The borderType.
    */
   com.tiwari.studence.proto.htmlWidgets.BorderTypeEnum getBorderType();
+
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.BorderRadiusPb borderRadius = 7;</code>
+   * @return Whether the borderRadius field is set.
+   */
+  boolean hasBorderRadius();
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.BorderRadiusPb borderRadius = 7;</code>
+   * @return The borderRadius.
+   */
+  com.tiwari.studence.proto.htmlWidgets.BorderRadiusPb getBorderRadius();
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.BorderRadiusPb borderRadius = 7;</code>
+   */
+  com.tiwari.studence.proto.htmlWidgets.BorderRadiusPbOrBuilder getBorderRadiusOrBuilder();
 }

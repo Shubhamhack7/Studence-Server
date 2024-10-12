@@ -103,7 +103,7 @@ public enum ColorTypeEnum
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tiwari.studence.proto.htmlWidgets.HtmlWidgets.getDescriptor().getEnumTypes().get(9);
+    return com.tiwari.studence.proto.htmlWidgets.HtmlWidgets.getDescriptor().getEnumTypes().get(13);
   }
 
   private static final ColorTypeEnum[] VALUES = values();

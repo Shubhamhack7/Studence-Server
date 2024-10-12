@@ -17,6 +17,7 @@ private static final long serialVersionUID = 0L;
   }
   private WidgetPb() {
     widgetType_ = 0;
+    widgetId_ = "";
   }
 
   @java.lang.Override
@@ -99,6 +100,45 @@ private static final long serialVersionUID = 0L;
     return config_ == null ? com.tiwari.studence.proto.htmlWidgets.ConfigPb.getDefaultInstance() : config_;
   }
 
+  public static final int WIDGETID_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object widgetId_ = "";
+  /**
+   * <code>string widgetId = 4;</code>
+   * @return The widgetId.
+   */
+  @java.lang.Override
+  public java.lang.String getWidgetId() {
+    java.lang.Object ref = widgetId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      widgetId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string widgetId = 4;</code>
+   * @return The bytes for widgetId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getWidgetIdBytes() {
+    java.lang.Object ref = widgetId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      widgetId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -122,6 +162,9 @@ private static final long serialVersionUID = 0L;
     if (config_ != null) {
       output.writeMessage(3, getConfig());
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(widgetId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, widgetId_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -142,6 +185,9 @@ private static final long serialVersionUID = 0L;
     if (config_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getConfig());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(widgetId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, widgetId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -166,6 +212,8 @@ private static final long serialVersionUID = 0L;
       if (!getConfig()
           .equals(other.getConfig())) return false;
     }
+    if (!getWidgetId()
+        .equals(other.getWidgetId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -185,6 +233,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CONFIG_FIELD_NUMBER;
       hash = (53 * hash) + getConfig().hashCode();
     }
+    hash = (37 * hash) + WIDGETID_FIELD_NUMBER;
+    hash = (53 * hash) + getWidgetId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -321,6 +371,7 @@ private static final long serialVersionUID = 0L;
         configBuilder_.dispose();
         configBuilder_ = null;
       }
+      widgetId_ = "";
       return this;
     }
 
@@ -364,6 +415,9 @@ private static final long serialVersionUID = 0L;
         result.config_ = configBuilder_ == null
             ? config_
             : configBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.widgetId_ = widgetId_;
       }
     }
 
@@ -420,6 +474,11 @@ private static final long serialVersionUID = 0L;
       if (other.hasConfig()) {
         mergeConfig(other.getConfig());
       }
+      if (!other.getWidgetId().isEmpty()) {
+        widgetId_ = other.widgetId_;
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -463,6 +522,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 26
+            case 34: {
+              widgetId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -682,6 +746,78 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       return configBuilder_;
+    }
+
+    private java.lang.Object widgetId_ = "";
+    /**
+     * <code>string widgetId = 4;</code>
+     * @return The widgetId.
+     */
+    public java.lang.String getWidgetId() {
+      java.lang.Object ref = widgetId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        widgetId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string widgetId = 4;</code>
+     * @return The bytes for widgetId.
+     */
+    public com.google.protobuf.ByteString
+        getWidgetIdBytes() {
+      java.lang.Object ref = widgetId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        widgetId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string widgetId = 4;</code>
+     * @param value The widgetId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setWidgetId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      widgetId_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string widgetId = 4;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearWidgetId() {
+      widgetId_ = getDefaultInstance().getWidgetId();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string widgetId = 4;</code>
+     * @param value The bytes for widgetId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setWidgetIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      widgetId_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

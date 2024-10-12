@@ -32,6 +32,42 @@ public enum AlignmentTypeEnum
    * <code>ALIGN_BOTTOM = 5;</code>
    */
   ALIGN_BOTTOM(5),
+  /**
+   * <code>ALIGN_HORIZONTAL = 6;</code>
+   */
+  ALIGN_HORIZONTAL(6),
+  /**
+   * <code>ALIGN_VERTICAL = 7;</code>
+   */
+  ALIGN_VERTICAL(7),
+  /**
+   * <code>ALIGN_START = 8;</code>
+   */
+  ALIGN_START(8),
+  /**
+   * <code>ALIGN_END = 9;</code>
+   */
+  ALIGN_END(9),
+  /**
+   * <code>ALIGN_SPACE_BETWEEN = 10;</code>
+   */
+  ALIGN_SPACE_BETWEEN(10),
+  /**
+   * <code>ALIGN_SPACE_AROUND = 11;</code>
+   */
+  ALIGN_SPACE_AROUND(11),
+  /**
+   * <code>ALIGN_STRETCH = 12;</code>
+   */
+  ALIGN_STRETCH(12),
+  /**
+   * <code>ALIGN_AXIS_MIN = 13;</code>
+   */
+  ALIGN_AXIS_MIN(13),
+  /**
+   * <code>ALIGN_AXIS_MAX = 14;</code>
+   */
+  ALIGN_AXIS_MAX(14),
   UNRECOGNIZED(-1),
   ;
 
@@ -59,6 +95,42 @@ public enum AlignmentTypeEnum
    * <code>ALIGN_BOTTOM = 5;</code>
    */
   public static final int ALIGN_BOTTOM_VALUE = 5;
+  /**
+   * <code>ALIGN_HORIZONTAL = 6;</code>
+   */
+  public static final int ALIGN_HORIZONTAL_VALUE = 6;
+  /**
+   * <code>ALIGN_VERTICAL = 7;</code>
+   */
+  public static final int ALIGN_VERTICAL_VALUE = 7;
+  /**
+   * <code>ALIGN_START = 8;</code>
+   */
+  public static final int ALIGN_START_VALUE = 8;
+  /**
+   * <code>ALIGN_END = 9;</code>
+   */
+  public static final int ALIGN_END_VALUE = 9;
+  /**
+   * <code>ALIGN_SPACE_BETWEEN = 10;</code>
+   */
+  public static final int ALIGN_SPACE_BETWEEN_VALUE = 10;
+  /**
+   * <code>ALIGN_SPACE_AROUND = 11;</code>
+   */
+  public static final int ALIGN_SPACE_AROUND_VALUE = 11;
+  /**
+   * <code>ALIGN_STRETCH = 12;</code>
+   */
+  public static final int ALIGN_STRETCH_VALUE = 12;
+  /**
+   * <code>ALIGN_AXIS_MIN = 13;</code>
+   */
+  public static final int ALIGN_AXIS_MIN_VALUE = 13;
+  /**
+   * <code>ALIGN_AXIS_MAX = 14;</code>
+   */
+  public static final int ALIGN_AXIS_MAX_VALUE = 14;
 
 
   public final int getNumber() {
@@ -91,6 +163,15 @@ public enum AlignmentTypeEnum
       case 3: return ALIGN_RIGHT;
       case 4: return ALIGN_TOP;
       case 5: return ALIGN_BOTTOM;
+      case 6: return ALIGN_HORIZONTAL;
+      case 7: return ALIGN_VERTICAL;
+      case 8: return ALIGN_START;
+      case 9: return ALIGN_END;
+      case 10: return ALIGN_SPACE_BETWEEN;
+      case 11: return ALIGN_SPACE_AROUND;
+      case 12: return ALIGN_STRETCH;
+      case 13: return ALIGN_AXIS_MIN;
+      case 14: return ALIGN_AXIS_MAX;
       default: return null;
     }
   }

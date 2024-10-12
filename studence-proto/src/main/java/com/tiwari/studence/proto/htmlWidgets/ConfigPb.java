@@ -348,6 +348,84 @@ private static final long serialVersionUID = 0L;
     return aTagConfig_ == null ? com.tiwari.studence.proto.htmlWidgets.ATagPb.getDefaultInstance() : aTagConfig_;
   }
 
+  public static final int RADIOBUTTONCONFIG_FIELD_NUMBER = 13;
+  private com.tiwari.studence.proto.htmlWidgets.RadioButtonPb radioButtonConfig_;
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.RadioButtonPb radioButtonConfig = 13;</code>
+   * @return Whether the radioButtonConfig field is set.
+   */
+  @java.lang.Override
+  public boolean hasRadioButtonConfig() {
+    return radioButtonConfig_ != null;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.RadioButtonPb radioButtonConfig = 13;</code>
+   * @return The radioButtonConfig.
+   */
+  @java.lang.Override
+  public com.tiwari.studence.proto.htmlWidgets.RadioButtonPb getRadioButtonConfig() {
+    return radioButtonConfig_ == null ? com.tiwari.studence.proto.htmlWidgets.RadioButtonPb.getDefaultInstance() : radioButtonConfig_;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.RadioButtonPb radioButtonConfig = 13;</code>
+   */
+  @java.lang.Override
+  public com.tiwari.studence.proto.htmlWidgets.RadioButtonPbOrBuilder getRadioButtonConfigOrBuilder() {
+    return radioButtonConfig_ == null ? com.tiwari.studence.proto.htmlWidgets.RadioButtonPb.getDefaultInstance() : radioButtonConfig_;
+  }
+
+  public static final int HEIGHTCONFIG_FIELD_NUMBER = 14;
+  private com.tiwari.studence.proto.htmlWidgets.HeightPb heightConfig_;
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.HeightPb heightConfig = 14;</code>
+   * @return Whether the heightConfig field is set.
+   */
+  @java.lang.Override
+  public boolean hasHeightConfig() {
+    return heightConfig_ != null;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.HeightPb heightConfig = 14;</code>
+   * @return The heightConfig.
+   */
+  @java.lang.Override
+  public com.tiwari.studence.proto.htmlWidgets.HeightPb getHeightConfig() {
+    return heightConfig_ == null ? com.tiwari.studence.proto.htmlWidgets.HeightPb.getDefaultInstance() : heightConfig_;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.HeightPb heightConfig = 14;</code>
+   */
+  @java.lang.Override
+  public com.tiwari.studence.proto.htmlWidgets.HeightPbOrBuilder getHeightConfigOrBuilder() {
+    return heightConfig_ == null ? com.tiwari.studence.proto.htmlWidgets.HeightPb.getDefaultInstance() : heightConfig_;
+  }
+
+  public static final int AXISALIGNMENT_FIELD_NUMBER = 15;
+  private com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPb axisAlignment_;
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPb axisAlignment = 15;</code>
+   * @return Whether the axisAlignment field is set.
+   */
+  @java.lang.Override
+  public boolean hasAxisAlignment() {
+    return axisAlignment_ != null;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPb axisAlignment = 15;</code>
+   * @return The axisAlignment.
+   */
+  @java.lang.Override
+  public com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPb getAxisAlignment() {
+    return axisAlignment_ == null ? com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPb.getDefaultInstance() : axisAlignment_;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPb axisAlignment = 15;</code>
+   */
+  @java.lang.Override
+  public com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPbOrBuilder getAxisAlignmentOrBuilder() {
+    return axisAlignment_ == null ? com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPb.getDefaultInstance() : axisAlignment_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -397,6 +475,15 @@ private static final long serialVersionUID = 0L;
     }
     if (aTagConfig_ != null) {
       output.writeMessage(12, getATagConfig());
+    }
+    if (radioButtonConfig_ != null) {
+      output.writeMessage(13, getRadioButtonConfig());
+    }
+    if (heightConfig_ != null) {
+      output.writeMessage(14, getHeightConfig());
+    }
+    if (axisAlignment_ != null) {
+      output.writeMessage(15, getAxisAlignment());
     }
     getUnknownFields().writeTo(output);
   }
@@ -454,6 +541,18 @@ private static final long serialVersionUID = 0L;
     if (aTagConfig_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(12, getATagConfig());
+    }
+    if (radioButtonConfig_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(13, getRadioButtonConfig());
+    }
+    if (heightConfig_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(14, getHeightConfig());
+    }
+    if (axisAlignment_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(15, getAxisAlignment());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -526,6 +625,21 @@ private static final long serialVersionUID = 0L;
       if (!getATagConfig()
           .equals(other.getATagConfig())) return false;
     }
+    if (hasRadioButtonConfig() != other.hasRadioButtonConfig()) return false;
+    if (hasRadioButtonConfig()) {
+      if (!getRadioButtonConfig()
+          .equals(other.getRadioButtonConfig())) return false;
+    }
+    if (hasHeightConfig() != other.hasHeightConfig()) return false;
+    if (hasHeightConfig()) {
+      if (!getHeightConfig()
+          .equals(other.getHeightConfig())) return false;
+    }
+    if (hasAxisAlignment() != other.hasAxisAlignment()) return false;
+    if (hasAxisAlignment()) {
+      if (!getAxisAlignment()
+          .equals(other.getAxisAlignment())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -582,6 +696,18 @@ private static final long serialVersionUID = 0L;
     if (hasATagConfig()) {
       hash = (37 * hash) + ATAGCONFIG_FIELD_NUMBER;
       hash = (53 * hash) + getATagConfig().hashCode();
+    }
+    if (hasRadioButtonConfig()) {
+      hash = (37 * hash) + RADIOBUTTONCONFIG_FIELD_NUMBER;
+      hash = (53 * hash) + getRadioButtonConfig().hashCode();
+    }
+    if (hasHeightConfig()) {
+      hash = (37 * hash) + HEIGHTCONFIG_FIELD_NUMBER;
+      hash = (53 * hash) + getHeightConfig().hashCode();
+    }
+    if (hasAxisAlignment()) {
+      hash = (37 * hash) + AXISALIGNMENT_FIELD_NUMBER;
+      hash = (53 * hash) + getAxisAlignment().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -768,6 +894,21 @@ private static final long serialVersionUID = 0L;
         aTagConfigBuilder_.dispose();
         aTagConfigBuilder_ = null;
       }
+      radioButtonConfig_ = null;
+      if (radioButtonConfigBuilder_ != null) {
+        radioButtonConfigBuilder_.dispose();
+        radioButtonConfigBuilder_ = null;
+      }
+      heightConfig_ = null;
+      if (heightConfigBuilder_ != null) {
+        heightConfigBuilder_.dispose();
+        heightConfigBuilder_ = null;
+      }
+      axisAlignment_ = null;
+      if (axisAlignmentBuilder_ != null) {
+        axisAlignmentBuilder_.dispose();
+        axisAlignmentBuilder_ = null;
+      }
       return this;
     }
 
@@ -859,6 +1000,21 @@ private static final long serialVersionUID = 0L;
             ? aTagConfig_
             : aTagConfigBuilder_.build();
       }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.radioButtonConfig_ = radioButtonConfigBuilder_ == null
+            ? radioButtonConfig_
+            : radioButtonConfigBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.heightConfig_ = heightConfigBuilder_ == null
+            ? heightConfig_
+            : heightConfigBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00004000) != 0)) {
+        result.axisAlignment_ = axisAlignmentBuilder_ == null
+            ? axisAlignment_
+            : axisAlignmentBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -940,6 +1096,15 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasATagConfig()) {
         mergeATagConfig(other.getATagConfig());
+      }
+      if (other.hasRadioButtonConfig()) {
+        mergeRadioButtonConfig(other.getRadioButtonConfig());
+      }
+      if (other.hasHeightConfig()) {
+        mergeHeightConfig(other.getHeightConfig());
+      }
+      if (other.hasAxisAlignment()) {
+        mergeAxisAlignment(other.getAxisAlignment());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1049,6 +1214,27 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000800;
               break;
             } // case 98
+            case 106: {
+              input.readMessage(
+                  getRadioButtonConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 106
+            case 114: {
+              input.readMessage(
+                  getHeightConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00002000;
+              break;
+            } // case 114
+            case 122: {
+              input.readMessage(
+                  getAxisAlignmentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00004000;
+              break;
+            } // case 122
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2426,6 +2612,363 @@ private static final long serialVersionUID = 0L;
         aTagConfig_ = null;
       }
       return aTagConfigBuilder_;
+    }
+
+    private com.tiwari.studence.proto.htmlWidgets.RadioButtonPb radioButtonConfig_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tiwari.studence.proto.htmlWidgets.RadioButtonPb, com.tiwari.studence.proto.htmlWidgets.RadioButtonPb.Builder, com.tiwari.studence.proto.htmlWidgets.RadioButtonPbOrBuilder> radioButtonConfigBuilder_;
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RadioButtonPb radioButtonConfig = 13;</code>
+     * @return Whether the radioButtonConfig field is set.
+     */
+    public boolean hasRadioButtonConfig() {
+      return ((bitField0_ & 0x00001000) != 0);
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RadioButtonPb radioButtonConfig = 13;</code>
+     * @return The radioButtonConfig.
+     */
+    public com.tiwari.studence.proto.htmlWidgets.RadioButtonPb getRadioButtonConfig() {
+      if (radioButtonConfigBuilder_ == null) {
+        return radioButtonConfig_ == null ? com.tiwari.studence.proto.htmlWidgets.RadioButtonPb.getDefaultInstance() : radioButtonConfig_;
+      } else {
+        return radioButtonConfigBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RadioButtonPb radioButtonConfig = 13;</code>
+     */
+    public Builder setRadioButtonConfig(com.tiwari.studence.proto.htmlWidgets.RadioButtonPb value) {
+      if (radioButtonConfigBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        radioButtonConfig_ = value;
+      } else {
+        radioButtonConfigBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RadioButtonPb radioButtonConfig = 13;</code>
+     */
+    public Builder setRadioButtonConfig(
+        com.tiwari.studence.proto.htmlWidgets.RadioButtonPb.Builder builderForValue) {
+      if (radioButtonConfigBuilder_ == null) {
+        radioButtonConfig_ = builderForValue.build();
+      } else {
+        radioButtonConfigBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RadioButtonPb radioButtonConfig = 13;</code>
+     */
+    public Builder mergeRadioButtonConfig(com.tiwari.studence.proto.htmlWidgets.RadioButtonPb value) {
+      if (radioButtonConfigBuilder_ == null) {
+        if (((bitField0_ & 0x00001000) != 0) &&
+          radioButtonConfig_ != null &&
+          radioButtonConfig_ != com.tiwari.studence.proto.htmlWidgets.RadioButtonPb.getDefaultInstance()) {
+          getRadioButtonConfigBuilder().mergeFrom(value);
+        } else {
+          radioButtonConfig_ = value;
+        }
+      } else {
+        radioButtonConfigBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RadioButtonPb radioButtonConfig = 13;</code>
+     */
+    public Builder clearRadioButtonConfig() {
+      bitField0_ = (bitField0_ & ~0x00001000);
+      radioButtonConfig_ = null;
+      if (radioButtonConfigBuilder_ != null) {
+        radioButtonConfigBuilder_.dispose();
+        radioButtonConfigBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RadioButtonPb radioButtonConfig = 13;</code>
+     */
+    public com.tiwari.studence.proto.htmlWidgets.RadioButtonPb.Builder getRadioButtonConfigBuilder() {
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return getRadioButtonConfigFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RadioButtonPb radioButtonConfig = 13;</code>
+     */
+    public com.tiwari.studence.proto.htmlWidgets.RadioButtonPbOrBuilder getRadioButtonConfigOrBuilder() {
+      if (radioButtonConfigBuilder_ != null) {
+        return radioButtonConfigBuilder_.getMessageOrBuilder();
+      } else {
+        return radioButtonConfig_ == null ?
+            com.tiwari.studence.proto.htmlWidgets.RadioButtonPb.getDefaultInstance() : radioButtonConfig_;
+      }
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RadioButtonPb radioButtonConfig = 13;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tiwari.studence.proto.htmlWidgets.RadioButtonPb, com.tiwari.studence.proto.htmlWidgets.RadioButtonPb.Builder, com.tiwari.studence.proto.htmlWidgets.RadioButtonPbOrBuilder> 
+        getRadioButtonConfigFieldBuilder() {
+      if (radioButtonConfigBuilder_ == null) {
+        radioButtonConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tiwari.studence.proto.htmlWidgets.RadioButtonPb, com.tiwari.studence.proto.htmlWidgets.RadioButtonPb.Builder, com.tiwari.studence.proto.htmlWidgets.RadioButtonPbOrBuilder>(
+                getRadioButtonConfig(),
+                getParentForChildren(),
+                isClean());
+        radioButtonConfig_ = null;
+      }
+      return radioButtonConfigBuilder_;
+    }
+
+    private com.tiwari.studence.proto.htmlWidgets.HeightPb heightConfig_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tiwari.studence.proto.htmlWidgets.HeightPb, com.tiwari.studence.proto.htmlWidgets.HeightPb.Builder, com.tiwari.studence.proto.htmlWidgets.HeightPbOrBuilder> heightConfigBuilder_;
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.HeightPb heightConfig = 14;</code>
+     * @return Whether the heightConfig field is set.
+     */
+    public boolean hasHeightConfig() {
+      return ((bitField0_ & 0x00002000) != 0);
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.HeightPb heightConfig = 14;</code>
+     * @return The heightConfig.
+     */
+    public com.tiwari.studence.proto.htmlWidgets.HeightPb getHeightConfig() {
+      if (heightConfigBuilder_ == null) {
+        return heightConfig_ == null ? com.tiwari.studence.proto.htmlWidgets.HeightPb.getDefaultInstance() : heightConfig_;
+      } else {
+        return heightConfigBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.HeightPb heightConfig = 14;</code>
+     */
+    public Builder setHeightConfig(com.tiwari.studence.proto.htmlWidgets.HeightPb value) {
+      if (heightConfigBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        heightConfig_ = value;
+      } else {
+        heightConfigBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.HeightPb heightConfig = 14;</code>
+     */
+    public Builder setHeightConfig(
+        com.tiwari.studence.proto.htmlWidgets.HeightPb.Builder builderForValue) {
+      if (heightConfigBuilder_ == null) {
+        heightConfig_ = builderForValue.build();
+      } else {
+        heightConfigBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.HeightPb heightConfig = 14;</code>
+     */
+    public Builder mergeHeightConfig(com.tiwari.studence.proto.htmlWidgets.HeightPb value) {
+      if (heightConfigBuilder_ == null) {
+        if (((bitField0_ & 0x00002000) != 0) &&
+          heightConfig_ != null &&
+          heightConfig_ != com.tiwari.studence.proto.htmlWidgets.HeightPb.getDefaultInstance()) {
+          getHeightConfigBuilder().mergeFrom(value);
+        } else {
+          heightConfig_ = value;
+        }
+      } else {
+        heightConfigBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.HeightPb heightConfig = 14;</code>
+     */
+    public Builder clearHeightConfig() {
+      bitField0_ = (bitField0_ & ~0x00002000);
+      heightConfig_ = null;
+      if (heightConfigBuilder_ != null) {
+        heightConfigBuilder_.dispose();
+        heightConfigBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.HeightPb heightConfig = 14;</code>
+     */
+    public com.tiwari.studence.proto.htmlWidgets.HeightPb.Builder getHeightConfigBuilder() {
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return getHeightConfigFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.HeightPb heightConfig = 14;</code>
+     */
+    public com.tiwari.studence.proto.htmlWidgets.HeightPbOrBuilder getHeightConfigOrBuilder() {
+      if (heightConfigBuilder_ != null) {
+        return heightConfigBuilder_.getMessageOrBuilder();
+      } else {
+        return heightConfig_ == null ?
+            com.tiwari.studence.proto.htmlWidgets.HeightPb.getDefaultInstance() : heightConfig_;
+      }
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.HeightPb heightConfig = 14;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tiwari.studence.proto.htmlWidgets.HeightPb, com.tiwari.studence.proto.htmlWidgets.HeightPb.Builder, com.tiwari.studence.proto.htmlWidgets.HeightPbOrBuilder> 
+        getHeightConfigFieldBuilder() {
+      if (heightConfigBuilder_ == null) {
+        heightConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tiwari.studence.proto.htmlWidgets.HeightPb, com.tiwari.studence.proto.htmlWidgets.HeightPb.Builder, com.tiwari.studence.proto.htmlWidgets.HeightPbOrBuilder>(
+                getHeightConfig(),
+                getParentForChildren(),
+                isClean());
+        heightConfig_ = null;
+      }
+      return heightConfigBuilder_;
+    }
+
+    private com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPb axisAlignment_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPb, com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPb.Builder, com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPbOrBuilder> axisAlignmentBuilder_;
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPb axisAlignment = 15;</code>
+     * @return Whether the axisAlignment field is set.
+     */
+    public boolean hasAxisAlignment() {
+      return ((bitField0_ & 0x00004000) != 0);
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPb axisAlignment = 15;</code>
+     * @return The axisAlignment.
+     */
+    public com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPb getAxisAlignment() {
+      if (axisAlignmentBuilder_ == null) {
+        return axisAlignment_ == null ? com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPb.getDefaultInstance() : axisAlignment_;
+      } else {
+        return axisAlignmentBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPb axisAlignment = 15;</code>
+     */
+    public Builder setAxisAlignment(com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPb value) {
+      if (axisAlignmentBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        axisAlignment_ = value;
+      } else {
+        axisAlignmentBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPb axisAlignment = 15;</code>
+     */
+    public Builder setAxisAlignment(
+        com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPb.Builder builderForValue) {
+      if (axisAlignmentBuilder_ == null) {
+        axisAlignment_ = builderForValue.build();
+      } else {
+        axisAlignmentBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPb axisAlignment = 15;</code>
+     */
+    public Builder mergeAxisAlignment(com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPb value) {
+      if (axisAlignmentBuilder_ == null) {
+        if (((bitField0_ & 0x00004000) != 0) &&
+          axisAlignment_ != null &&
+          axisAlignment_ != com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPb.getDefaultInstance()) {
+          getAxisAlignmentBuilder().mergeFrom(value);
+        } else {
+          axisAlignment_ = value;
+        }
+      } else {
+        axisAlignmentBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPb axisAlignment = 15;</code>
+     */
+    public Builder clearAxisAlignment() {
+      bitField0_ = (bitField0_ & ~0x00004000);
+      axisAlignment_ = null;
+      if (axisAlignmentBuilder_ != null) {
+        axisAlignmentBuilder_.dispose();
+        axisAlignmentBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPb axisAlignment = 15;</code>
+     */
+    public com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPb.Builder getAxisAlignmentBuilder() {
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return getAxisAlignmentFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPb axisAlignment = 15;</code>
+     */
+    public com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPbOrBuilder getAxisAlignmentOrBuilder() {
+      if (axisAlignmentBuilder_ != null) {
+        return axisAlignmentBuilder_.getMessageOrBuilder();
+      } else {
+        return axisAlignment_ == null ?
+            com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPb.getDefaultInstance() : axisAlignment_;
+      }
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPb axisAlignment = 15;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPb, com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPb.Builder, com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPbOrBuilder> 
+        getAxisAlignmentFieldBuilder() {
+      if (axisAlignmentBuilder_ == null) {
+        axisAlignmentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPb, com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPb.Builder, com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPbOrBuilder>(
+                getAxisAlignment(),
+                getParentForChildren(),
+                isClean());
+        axisAlignment_ = null;
+      }
+      return axisAlignmentBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

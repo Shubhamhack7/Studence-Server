@@ -17,8 +17,8 @@ private static final long serialVersionUID = 0L;
   }
   private ButtonPb() {
     buttonType_ = 0;
-    type_ = 0;
-    buttonName_ = "";
+    inputType_ = 0;
+    eventType_ = 0;
   }
 
   @java.lang.Override
@@ -64,61 +64,92 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tiwari.studence.proto.htmlWidgets.ButtonTypeEnum.UNRECOGNIZED : result;
   }
 
-  public static final int TYPE_FIELD_NUMBER = 2;
-  private int type_ = 0;
+  public static final int INPUTTYPE_FIELD_NUMBER = 2;
+  private int inputType_ = 0;
   /**
-   * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonTypeEnum type = 2;</code>
-   * @return The enum numeric value on the wire for type.
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonInputTypeEnum inputType = 2;</code>
+   * @return The enum numeric value on the wire for inputType.
    */
-  @java.lang.Override public int getTypeValue() {
-    return type_;
+  @java.lang.Override public int getInputTypeValue() {
+    return inputType_;
   }
   /**
-   * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonTypeEnum type = 2;</code>
-   * @return The type.
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonInputTypeEnum inputType = 2;</code>
+   * @return The inputType.
    */
-  @java.lang.Override public com.tiwari.studence.proto.htmlWidgets.ButtonTypeEnum getType() {
-    com.tiwari.studence.proto.htmlWidgets.ButtonTypeEnum result = com.tiwari.studence.proto.htmlWidgets.ButtonTypeEnum.forNumber(type_);
-    return result == null ? com.tiwari.studence.proto.htmlWidgets.ButtonTypeEnum.UNRECOGNIZED : result;
+  @java.lang.Override public com.tiwari.studence.proto.htmlWidgets.ButtonInputTypeEnum getInputType() {
+    com.tiwari.studence.proto.htmlWidgets.ButtonInputTypeEnum result = com.tiwari.studence.proto.htmlWidgets.ButtonInputTypeEnum.forNumber(inputType_);
+    return result == null ? com.tiwari.studence.proto.htmlWidgets.ButtonInputTypeEnum.UNRECOGNIZED : result;
   }
 
-  public static final int BUTTONNAME_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object buttonName_ = "";
+  public static final int EVENTTYPE_FIELD_NUMBER = 3;
+  private int eventType_ = 0;
   /**
-   * <code>string buttonName = 3;</code>
-   * @return The buttonName.
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonEventTypeEnum eventType = 3;</code>
+   * @return The enum numeric value on the wire for eventType.
    */
-  @java.lang.Override
-  public java.lang.String getButtonName() {
-    java.lang.Object ref = buttonName_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      buttonName_ = s;
-      return s;
-    }
+  @java.lang.Override public int getEventTypeValue() {
+    return eventType_;
   }
   /**
-   * <code>string buttonName = 3;</code>
-   * @return The bytes for buttonName.
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonEventTypeEnum eventType = 3;</code>
+   * @return The eventType.
+   */
+  @java.lang.Override public com.tiwari.studence.proto.htmlWidgets.ButtonEventTypeEnum getEventType() {
+    com.tiwari.studence.proto.htmlWidgets.ButtonEventTypeEnum result = com.tiwari.studence.proto.htmlWidgets.ButtonEventTypeEnum.forNumber(eventType_);
+    return result == null ? com.tiwari.studence.proto.htmlWidgets.ButtonEventTypeEnum.UNRECOGNIZED : result;
+  }
+
+  public static final int EVENTBUTTON_FIELD_NUMBER = 4;
+  private com.tiwari.studence.proto.htmlWidgets.ButtonEventPb eventButton_;
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonEventPb eventButton = 4;</code>
+   * @return Whether the eventButton field is set.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getButtonNameBytes() {
-    java.lang.Object ref = buttonName_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      buttonName_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  public boolean hasEventButton() {
+    return eventButton_ != null;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonEventPb eventButton = 4;</code>
+   * @return The eventButton.
+   */
+  @java.lang.Override
+  public com.tiwari.studence.proto.htmlWidgets.ButtonEventPb getEventButton() {
+    return eventButton_ == null ? com.tiwari.studence.proto.htmlWidgets.ButtonEventPb.getDefaultInstance() : eventButton_;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonEventPb eventButton = 4;</code>
+   */
+  @java.lang.Override
+  public com.tiwari.studence.proto.htmlWidgets.ButtonEventPbOrBuilder getEventButtonOrBuilder() {
+    return eventButton_ == null ? com.tiwari.studence.proto.htmlWidgets.ButtonEventPb.getDefaultInstance() : eventButton_;
+  }
+
+  public static final int INPUTBUTTON_FIELD_NUMBER = 5;
+  private com.tiwari.studence.proto.htmlWidgets.ButtonInputPb inputButton_;
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonInputPb inputButton = 5;</code>
+   * @return Whether the inputButton field is set.
+   */
+  @java.lang.Override
+  public boolean hasInputButton() {
+    return inputButton_ != null;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonInputPb inputButton = 5;</code>
+   * @return The inputButton.
+   */
+  @java.lang.Override
+  public com.tiwari.studence.proto.htmlWidgets.ButtonInputPb getInputButton() {
+    return inputButton_ == null ? com.tiwari.studence.proto.htmlWidgets.ButtonInputPb.getDefaultInstance() : inputButton_;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonInputPb inputButton = 5;</code>
+   */
+  @java.lang.Override
+  public com.tiwari.studence.proto.htmlWidgets.ButtonInputPbOrBuilder getInputButtonOrBuilder() {
+    return inputButton_ == null ? com.tiwari.studence.proto.htmlWidgets.ButtonInputPb.getDefaultInstance() : inputButton_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -138,11 +169,17 @@ private static final long serialVersionUID = 0L;
     if (buttonType_ != com.tiwari.studence.proto.htmlWidgets.ButtonTypeEnum.UNKNOWN_BUTTON_TYPE.getNumber()) {
       output.writeEnum(1, buttonType_);
     }
-    if (type_ != com.tiwari.studence.proto.htmlWidgets.ButtonTypeEnum.UNKNOWN_BUTTON_TYPE.getNumber()) {
-      output.writeEnum(2, type_);
+    if (inputType_ != com.tiwari.studence.proto.htmlWidgets.ButtonInputTypeEnum.UNKNOWN_INPUT_BUTTON_TYPE.getNumber()) {
+      output.writeEnum(2, inputType_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buttonName_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, buttonName_);
+    if (eventType_ != com.tiwari.studence.proto.htmlWidgets.ButtonEventTypeEnum.UNKNOWN_EVENT_BUTTON_TYPE.getNumber()) {
+      output.writeEnum(3, eventType_);
+    }
+    if (eventButton_ != null) {
+      output.writeMessage(4, getEventButton());
+    }
+    if (inputButton_ != null) {
+      output.writeMessage(5, getInputButton());
     }
     getUnknownFields().writeTo(output);
   }
@@ -157,12 +194,21 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(1, buttonType_);
     }
-    if (type_ != com.tiwari.studence.proto.htmlWidgets.ButtonTypeEnum.UNKNOWN_BUTTON_TYPE.getNumber()) {
+    if (inputType_ != com.tiwari.studence.proto.htmlWidgets.ButtonInputTypeEnum.UNKNOWN_INPUT_BUTTON_TYPE.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(2, type_);
+        .computeEnumSize(2, inputType_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buttonName_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, buttonName_);
+    if (eventType_ != com.tiwari.studence.proto.htmlWidgets.ButtonEventTypeEnum.UNKNOWN_EVENT_BUTTON_TYPE.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(3, eventType_);
+    }
+    if (eventButton_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, getEventButton());
+    }
+    if (inputButton_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, getInputButton());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -180,9 +226,18 @@ private static final long serialVersionUID = 0L;
     com.tiwari.studence.proto.htmlWidgets.ButtonPb other = (com.tiwari.studence.proto.htmlWidgets.ButtonPb) obj;
 
     if (buttonType_ != other.buttonType_) return false;
-    if (type_ != other.type_) return false;
-    if (!getButtonName()
-        .equals(other.getButtonName())) return false;
+    if (inputType_ != other.inputType_) return false;
+    if (eventType_ != other.eventType_) return false;
+    if (hasEventButton() != other.hasEventButton()) return false;
+    if (hasEventButton()) {
+      if (!getEventButton()
+          .equals(other.getEventButton())) return false;
+    }
+    if (hasInputButton() != other.hasInputButton()) return false;
+    if (hasInputButton()) {
+      if (!getInputButton()
+          .equals(other.getInputButton())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -196,10 +251,18 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + BUTTONTYPE_FIELD_NUMBER;
     hash = (53 * hash) + buttonType_;
-    hash = (37 * hash) + TYPE_FIELD_NUMBER;
-    hash = (53 * hash) + type_;
-    hash = (37 * hash) + BUTTONNAME_FIELD_NUMBER;
-    hash = (53 * hash) + getButtonName().hashCode();
+    hash = (37 * hash) + INPUTTYPE_FIELD_NUMBER;
+    hash = (53 * hash) + inputType_;
+    hash = (37 * hash) + EVENTTYPE_FIELD_NUMBER;
+    hash = (53 * hash) + eventType_;
+    if (hasEventButton()) {
+      hash = (37 * hash) + EVENTBUTTON_FIELD_NUMBER;
+      hash = (53 * hash) + getEventButton().hashCode();
+    }
+    if (hasInputButton()) {
+      hash = (37 * hash) + INPUTBUTTON_FIELD_NUMBER;
+      hash = (53 * hash) + getInputButton().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -330,8 +393,18 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       buttonType_ = 0;
-      type_ = 0;
-      buttonName_ = "";
+      inputType_ = 0;
+      eventType_ = 0;
+      eventButton_ = null;
+      if (eventButtonBuilder_ != null) {
+        eventButtonBuilder_.dispose();
+        eventButtonBuilder_ = null;
+      }
+      inputButton_ = null;
+      if (inputButtonBuilder_ != null) {
+        inputButtonBuilder_.dispose();
+        inputButtonBuilder_ = null;
+      }
       return this;
     }
 
@@ -369,10 +442,20 @@ private static final long serialVersionUID = 0L;
         result.buttonType_ = buttonType_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.type_ = type_;
+        result.inputType_ = inputType_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.buttonName_ = buttonName_;
+        result.eventType_ = eventType_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.eventButton_ = eventButtonBuilder_ == null
+            ? eventButton_
+            : eventButtonBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.inputButton_ = inputButtonBuilder_ == null
+            ? inputButton_
+            : inputButtonBuilder_.build();
       }
     }
 
@@ -423,13 +506,17 @@ private static final long serialVersionUID = 0L;
       if (other.buttonType_ != 0) {
         setButtonTypeValue(other.getButtonTypeValue());
       }
-      if (other.type_ != 0) {
-        setTypeValue(other.getTypeValue());
+      if (other.inputType_ != 0) {
+        setInputTypeValue(other.getInputTypeValue());
       }
-      if (!other.getButtonName().isEmpty()) {
-        buttonName_ = other.buttonName_;
-        bitField0_ |= 0x00000004;
-        onChanged();
+      if (other.eventType_ != 0) {
+        setEventTypeValue(other.getEventTypeValue());
+      }
+      if (other.hasEventButton()) {
+        mergeEventButton(other.getEventButton());
+      }
+      if (other.hasInputButton()) {
+        mergeInputButton(other.getInputButton());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -463,15 +550,29 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 8
             case 16: {
-              type_ = input.readEnum();
+              inputType_ = input.readEnum();
               bitField0_ |= 0x00000002;
               break;
             } // case 16
-            case 26: {
-              buttonName_ = input.readStringRequireUtf8();
+            case 24: {
+              eventType_ = input.readEnum();
               bitField0_ |= 0x00000004;
               break;
-            } // case 26
+            } // case 24
+            case 34: {
+              input.readMessage(
+                  getEventButtonFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              input.readMessage(
+                  getInputButtonFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -542,129 +643,348 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int type_ = 0;
+    private int inputType_ = 0;
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonTypeEnum type = 2;</code>
-     * @return The enum numeric value on the wire for type.
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonInputTypeEnum inputType = 2;</code>
+     * @return The enum numeric value on the wire for inputType.
      */
-    @java.lang.Override public int getTypeValue() {
-      return type_;
+    @java.lang.Override public int getInputTypeValue() {
+      return inputType_;
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonTypeEnum type = 2;</code>
-     * @param value The enum numeric value on the wire for type to set.
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonInputTypeEnum inputType = 2;</code>
+     * @param value The enum numeric value on the wire for inputType to set.
      * @return This builder for chaining.
      */
-    public Builder setTypeValue(int value) {
-      type_ = value;
+    public Builder setInputTypeValue(int value) {
+      inputType_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonTypeEnum type = 2;</code>
-     * @return The type.
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonInputTypeEnum inputType = 2;</code>
+     * @return The inputType.
      */
     @java.lang.Override
-    public com.tiwari.studence.proto.htmlWidgets.ButtonTypeEnum getType() {
-      com.tiwari.studence.proto.htmlWidgets.ButtonTypeEnum result = com.tiwari.studence.proto.htmlWidgets.ButtonTypeEnum.forNumber(type_);
-      return result == null ? com.tiwari.studence.proto.htmlWidgets.ButtonTypeEnum.UNRECOGNIZED : result;
+    public com.tiwari.studence.proto.htmlWidgets.ButtonInputTypeEnum getInputType() {
+      com.tiwari.studence.proto.htmlWidgets.ButtonInputTypeEnum result = com.tiwari.studence.proto.htmlWidgets.ButtonInputTypeEnum.forNumber(inputType_);
+      return result == null ? com.tiwari.studence.proto.htmlWidgets.ButtonInputTypeEnum.UNRECOGNIZED : result;
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonTypeEnum type = 2;</code>
-     * @param value The type to set.
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonInputTypeEnum inputType = 2;</code>
+     * @param value The inputType to set.
      * @return This builder for chaining.
      */
-    public Builder setType(com.tiwari.studence.proto.htmlWidgets.ButtonTypeEnum value) {
+    public Builder setInputType(com.tiwari.studence.proto.htmlWidgets.ButtonInputTypeEnum value) {
       if (value == null) {
         throw new NullPointerException();
       }
       bitField0_ |= 0x00000002;
-      type_ = value.getNumber();
+      inputType_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonTypeEnum type = 2;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonInputTypeEnum inputType = 2;</code>
      * @return This builder for chaining.
      */
-    public Builder clearType() {
+    public Builder clearInputType() {
       bitField0_ = (bitField0_ & ~0x00000002);
-      type_ = 0;
+      inputType_ = 0;
       onChanged();
       return this;
     }
 
-    private java.lang.Object buttonName_ = "";
+    private int eventType_ = 0;
     /**
-     * <code>string buttonName = 3;</code>
-     * @return The buttonName.
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonEventTypeEnum eventType = 3;</code>
+     * @return The enum numeric value on the wire for eventType.
      */
-    public java.lang.String getButtonName() {
-      java.lang.Object ref = buttonName_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        buttonName_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
+    @java.lang.Override public int getEventTypeValue() {
+      return eventType_;
     }
     /**
-     * <code>string buttonName = 3;</code>
-     * @return The bytes for buttonName.
-     */
-    public com.google.protobuf.ByteString
-        getButtonNameBytes() {
-      java.lang.Object ref = buttonName_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        buttonName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string buttonName = 3;</code>
-     * @param value The buttonName to set.
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonEventTypeEnum eventType = 3;</code>
+     * @param value The enum numeric value on the wire for eventType to set.
      * @return This builder for chaining.
      */
-    public Builder setButtonName(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      buttonName_ = value;
+    public Builder setEventTypeValue(int value) {
+      eventType_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>string buttonName = 3;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonEventTypeEnum eventType = 3;</code>
+     * @return The eventType.
+     */
+    @java.lang.Override
+    public com.tiwari.studence.proto.htmlWidgets.ButtonEventTypeEnum getEventType() {
+      com.tiwari.studence.proto.htmlWidgets.ButtonEventTypeEnum result = com.tiwari.studence.proto.htmlWidgets.ButtonEventTypeEnum.forNumber(eventType_);
+      return result == null ? com.tiwari.studence.proto.htmlWidgets.ButtonEventTypeEnum.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonEventTypeEnum eventType = 3;</code>
+     * @param value The eventType to set.
      * @return This builder for chaining.
      */
-    public Builder clearButtonName() {
-      buttonName_ = getDefaultInstance().getButtonName();
+    public Builder setEventType(com.tiwari.studence.proto.htmlWidgets.ButtonEventTypeEnum value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000004;
+      eventType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonEventTypeEnum eventType = 3;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearEventType() {
       bitField0_ = (bitField0_ & ~0x00000004);
+      eventType_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private com.tiwari.studence.proto.htmlWidgets.ButtonEventPb eventButton_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tiwari.studence.proto.htmlWidgets.ButtonEventPb, com.tiwari.studence.proto.htmlWidgets.ButtonEventPb.Builder, com.tiwari.studence.proto.htmlWidgets.ButtonEventPbOrBuilder> eventButtonBuilder_;
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonEventPb eventButton = 4;</code>
+     * @return Whether the eventButton field is set.
+     */
+    public boolean hasEventButton() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonEventPb eventButton = 4;</code>
+     * @return The eventButton.
+     */
+    public com.tiwari.studence.proto.htmlWidgets.ButtonEventPb getEventButton() {
+      if (eventButtonBuilder_ == null) {
+        return eventButton_ == null ? com.tiwari.studence.proto.htmlWidgets.ButtonEventPb.getDefaultInstance() : eventButton_;
+      } else {
+        return eventButtonBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonEventPb eventButton = 4;</code>
+     */
+    public Builder setEventButton(com.tiwari.studence.proto.htmlWidgets.ButtonEventPb value) {
+      if (eventButtonBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        eventButton_ = value;
+      } else {
+        eventButtonBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
-     * <code>string buttonName = 3;</code>
-     * @param value The bytes for buttonName to set.
-     * @return This builder for chaining.
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonEventPb eventButton = 4;</code>
      */
-    public Builder setButtonNameBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      buttonName_ = value;
-      bitField0_ |= 0x00000004;
+    public Builder setEventButton(
+        com.tiwari.studence.proto.htmlWidgets.ButtonEventPb.Builder builderForValue) {
+      if (eventButtonBuilder_ == null) {
+        eventButton_ = builderForValue.build();
+      } else {
+        eventButtonBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonEventPb eventButton = 4;</code>
+     */
+    public Builder mergeEventButton(com.tiwari.studence.proto.htmlWidgets.ButtonEventPb value) {
+      if (eventButtonBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) != 0) &&
+          eventButton_ != null &&
+          eventButton_ != com.tiwari.studence.proto.htmlWidgets.ButtonEventPb.getDefaultInstance()) {
+          getEventButtonBuilder().mergeFrom(value);
+        } else {
+          eventButton_ = value;
+        }
+      } else {
+        eventButtonBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonEventPb eventButton = 4;</code>
+     */
+    public Builder clearEventButton() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      eventButton_ = null;
+      if (eventButtonBuilder_ != null) {
+        eventButtonBuilder_.dispose();
+        eventButtonBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonEventPb eventButton = 4;</code>
+     */
+    public com.tiwari.studence.proto.htmlWidgets.ButtonEventPb.Builder getEventButtonBuilder() {
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return getEventButtonFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonEventPb eventButton = 4;</code>
+     */
+    public com.tiwari.studence.proto.htmlWidgets.ButtonEventPbOrBuilder getEventButtonOrBuilder() {
+      if (eventButtonBuilder_ != null) {
+        return eventButtonBuilder_.getMessageOrBuilder();
+      } else {
+        return eventButton_ == null ?
+            com.tiwari.studence.proto.htmlWidgets.ButtonEventPb.getDefaultInstance() : eventButton_;
+      }
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonEventPb eventButton = 4;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tiwari.studence.proto.htmlWidgets.ButtonEventPb, com.tiwari.studence.proto.htmlWidgets.ButtonEventPb.Builder, com.tiwari.studence.proto.htmlWidgets.ButtonEventPbOrBuilder> 
+        getEventButtonFieldBuilder() {
+      if (eventButtonBuilder_ == null) {
+        eventButtonBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tiwari.studence.proto.htmlWidgets.ButtonEventPb, com.tiwari.studence.proto.htmlWidgets.ButtonEventPb.Builder, com.tiwari.studence.proto.htmlWidgets.ButtonEventPbOrBuilder>(
+                getEventButton(),
+                getParentForChildren(),
+                isClean());
+        eventButton_ = null;
+      }
+      return eventButtonBuilder_;
+    }
+
+    private com.tiwari.studence.proto.htmlWidgets.ButtonInputPb inputButton_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tiwari.studence.proto.htmlWidgets.ButtonInputPb, com.tiwari.studence.proto.htmlWidgets.ButtonInputPb.Builder, com.tiwari.studence.proto.htmlWidgets.ButtonInputPbOrBuilder> inputButtonBuilder_;
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonInputPb inputButton = 5;</code>
+     * @return Whether the inputButton field is set.
+     */
+    public boolean hasInputButton() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonInputPb inputButton = 5;</code>
+     * @return The inputButton.
+     */
+    public com.tiwari.studence.proto.htmlWidgets.ButtonInputPb getInputButton() {
+      if (inputButtonBuilder_ == null) {
+        return inputButton_ == null ? com.tiwari.studence.proto.htmlWidgets.ButtonInputPb.getDefaultInstance() : inputButton_;
+      } else {
+        return inputButtonBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonInputPb inputButton = 5;</code>
+     */
+    public Builder setInputButton(com.tiwari.studence.proto.htmlWidgets.ButtonInputPb value) {
+      if (inputButtonBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        inputButton_ = value;
+      } else {
+        inputButtonBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonInputPb inputButton = 5;</code>
+     */
+    public Builder setInputButton(
+        com.tiwari.studence.proto.htmlWidgets.ButtonInputPb.Builder builderForValue) {
+      if (inputButtonBuilder_ == null) {
+        inputButton_ = builderForValue.build();
+      } else {
+        inputButtonBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonInputPb inputButton = 5;</code>
+     */
+    public Builder mergeInputButton(com.tiwari.studence.proto.htmlWidgets.ButtonInputPb value) {
+      if (inputButtonBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0) &&
+          inputButton_ != null &&
+          inputButton_ != com.tiwari.studence.proto.htmlWidgets.ButtonInputPb.getDefaultInstance()) {
+          getInputButtonBuilder().mergeFrom(value);
+        } else {
+          inputButton_ = value;
+        }
+      } else {
+        inputButtonBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonInputPb inputButton = 5;</code>
+     */
+    public Builder clearInputButton() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      inputButton_ = null;
+      if (inputButtonBuilder_ != null) {
+        inputButtonBuilder_.dispose();
+        inputButtonBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonInputPb inputButton = 5;</code>
+     */
+    public com.tiwari.studence.proto.htmlWidgets.ButtonInputPb.Builder getInputButtonBuilder() {
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return getInputButtonFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonInputPb inputButton = 5;</code>
+     */
+    public com.tiwari.studence.proto.htmlWidgets.ButtonInputPbOrBuilder getInputButtonOrBuilder() {
+      if (inputButtonBuilder_ != null) {
+        return inputButtonBuilder_.getMessageOrBuilder();
+      } else {
+        return inputButton_ == null ?
+            com.tiwari.studence.proto.htmlWidgets.ButtonInputPb.getDefaultInstance() : inputButton_;
+      }
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonInputPb inputButton = 5;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tiwari.studence.proto.htmlWidgets.ButtonInputPb, com.tiwari.studence.proto.htmlWidgets.ButtonInputPb.Builder, com.tiwari.studence.proto.htmlWidgets.ButtonInputPbOrBuilder> 
+        getInputButtonFieldBuilder() {
+      if (inputButtonBuilder_ == null) {
+        inputButtonBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tiwari.studence.proto.htmlWidgets.ButtonInputPb, com.tiwari.studence.proto.htmlWidgets.ButtonInputPb.Builder, com.tiwari.studence.proto.htmlWidgets.ButtonInputPbOrBuilder>(
+                getInputButton(),
+                getParentForChildren(),
+                isClean());
+        inputButton_ = null;
+      }
+      return inputButtonBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

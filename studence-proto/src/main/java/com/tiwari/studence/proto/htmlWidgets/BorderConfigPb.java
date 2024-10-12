@@ -163,6 +163,32 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tiwari.studence.proto.htmlWidgets.BorderTypeEnum.UNRECOGNIZED : result;
   }
 
+  public static final int BORDERRADIUS_FIELD_NUMBER = 7;
+  private com.tiwari.studence.proto.htmlWidgets.BorderRadiusPb borderRadius_;
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.BorderRadiusPb borderRadius = 7;</code>
+   * @return Whether the borderRadius field is set.
+   */
+  @java.lang.Override
+  public boolean hasBorderRadius() {
+    return borderRadius_ != null;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.BorderRadiusPb borderRadius = 7;</code>
+   * @return The borderRadius.
+   */
+  @java.lang.Override
+  public com.tiwari.studence.proto.htmlWidgets.BorderRadiusPb getBorderRadius() {
+    return borderRadius_ == null ? com.tiwari.studence.proto.htmlWidgets.BorderRadiusPb.getDefaultInstance() : borderRadius_;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.BorderRadiusPb borderRadius = 7;</code>
+   */
+  @java.lang.Override
+  public com.tiwari.studence.proto.htmlWidgets.BorderRadiusPbOrBuilder getBorderRadiusOrBuilder() {
+    return borderRadius_ == null ? com.tiwari.studence.proto.htmlWidgets.BorderRadiusPb.getDefaultInstance() : borderRadius_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -194,6 +220,9 @@ private static final long serialVersionUID = 0L;
     }
     if (borderType_ != com.tiwari.studence.proto.htmlWidgets.BorderTypeEnum.UNKNOWN_BORDER_TYPE.getNumber()) {
       output.writeEnum(6, borderType_);
+    }
+    if (borderRadius_ != null) {
+      output.writeMessage(7, getBorderRadius());
     }
     getUnknownFields().writeTo(output);
   }
@@ -228,6 +257,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(6, borderType_);
     }
+    if (borderRadius_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, getBorderRadius());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -259,6 +292,11 @@ private static final long serialVersionUID = 0L;
           .equals(other.getColor())) return false;
     }
     if (borderType_ != other.borderType_) return false;
+    if (hasBorderRadius() != other.hasBorderRadius()) return false;
+    if (hasBorderRadius()) {
+      if (!getBorderRadius()
+          .equals(other.getBorderRadius())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -287,6 +325,10 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + BORDERTYPE_FIELD_NUMBER;
     hash = (53 * hash) + borderType_;
+    if (hasBorderRadius()) {
+      hash = (37 * hash) + BORDERRADIUS_FIELD_NUMBER;
+      hash = (53 * hash) + getBorderRadius().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -430,6 +472,11 @@ private static final long serialVersionUID = 0L;
         colorBuilder_ = null;
       }
       borderType_ = 0;
+      borderRadius_ = null;
+      if (borderRadiusBuilder_ != null) {
+        borderRadiusBuilder_.dispose();
+        borderRadiusBuilder_ = null;
+      }
       return this;
     }
 
@@ -484,6 +531,11 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.borderType_ = borderType_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.borderRadius_ = borderRadiusBuilder_ == null
+            ? borderRadius_
+            : borderRadiusBuilder_.build();
       }
     }
 
@@ -549,6 +601,9 @@ private static final long serialVersionUID = 0L;
       if (other.borderType_ != 0) {
         setBorderTypeValue(other.getBorderTypeValue());
       }
+      if (other.hasBorderRadius()) {
+        mergeBorderRadius(other.getBorderRadius());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -609,6 +664,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 48
+            case 58: {
+              input.readMessage(
+                  getBorderRadiusFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1053,6 +1115,125 @@ private static final long serialVersionUID = 0L;
       borderType_ = 0;
       onChanged();
       return this;
+    }
+
+    private com.tiwari.studence.proto.htmlWidgets.BorderRadiusPb borderRadius_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tiwari.studence.proto.htmlWidgets.BorderRadiusPb, com.tiwari.studence.proto.htmlWidgets.BorderRadiusPb.Builder, com.tiwari.studence.proto.htmlWidgets.BorderRadiusPbOrBuilder> borderRadiusBuilder_;
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.BorderRadiusPb borderRadius = 7;</code>
+     * @return Whether the borderRadius field is set.
+     */
+    public boolean hasBorderRadius() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.BorderRadiusPb borderRadius = 7;</code>
+     * @return The borderRadius.
+     */
+    public com.tiwari.studence.proto.htmlWidgets.BorderRadiusPb getBorderRadius() {
+      if (borderRadiusBuilder_ == null) {
+        return borderRadius_ == null ? com.tiwari.studence.proto.htmlWidgets.BorderRadiusPb.getDefaultInstance() : borderRadius_;
+      } else {
+        return borderRadiusBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.BorderRadiusPb borderRadius = 7;</code>
+     */
+    public Builder setBorderRadius(com.tiwari.studence.proto.htmlWidgets.BorderRadiusPb value) {
+      if (borderRadiusBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        borderRadius_ = value;
+      } else {
+        borderRadiusBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.BorderRadiusPb borderRadius = 7;</code>
+     */
+    public Builder setBorderRadius(
+        com.tiwari.studence.proto.htmlWidgets.BorderRadiusPb.Builder builderForValue) {
+      if (borderRadiusBuilder_ == null) {
+        borderRadius_ = builderForValue.build();
+      } else {
+        borderRadiusBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.BorderRadiusPb borderRadius = 7;</code>
+     */
+    public Builder mergeBorderRadius(com.tiwari.studence.proto.htmlWidgets.BorderRadiusPb value) {
+      if (borderRadiusBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0) &&
+          borderRadius_ != null &&
+          borderRadius_ != com.tiwari.studence.proto.htmlWidgets.BorderRadiusPb.getDefaultInstance()) {
+          getBorderRadiusBuilder().mergeFrom(value);
+        } else {
+          borderRadius_ = value;
+        }
+      } else {
+        borderRadiusBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.BorderRadiusPb borderRadius = 7;</code>
+     */
+    public Builder clearBorderRadius() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      borderRadius_ = null;
+      if (borderRadiusBuilder_ != null) {
+        borderRadiusBuilder_.dispose();
+        borderRadiusBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.BorderRadiusPb borderRadius = 7;</code>
+     */
+    public com.tiwari.studence.proto.htmlWidgets.BorderRadiusPb.Builder getBorderRadiusBuilder() {
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return getBorderRadiusFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.BorderRadiusPb borderRadius = 7;</code>
+     */
+    public com.tiwari.studence.proto.htmlWidgets.BorderRadiusPbOrBuilder getBorderRadiusOrBuilder() {
+      if (borderRadiusBuilder_ != null) {
+        return borderRadiusBuilder_.getMessageOrBuilder();
+      } else {
+        return borderRadius_ == null ?
+            com.tiwari.studence.proto.htmlWidgets.BorderRadiusPb.getDefaultInstance() : borderRadius_;
+      }
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.BorderRadiusPb borderRadius = 7;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tiwari.studence.proto.htmlWidgets.BorderRadiusPb, com.tiwari.studence.proto.htmlWidgets.BorderRadiusPb.Builder, com.tiwari.studence.proto.htmlWidgets.BorderRadiusPbOrBuilder> 
+        getBorderRadiusFieldBuilder() {
+      if (borderRadiusBuilder_ == null) {
+        borderRadiusBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tiwari.studence.proto.htmlWidgets.BorderRadiusPb, com.tiwari.studence.proto.htmlWidgets.BorderRadiusPb.Builder, com.tiwari.studence.proto.htmlWidgets.BorderRadiusPbOrBuilder>(
+                getBorderRadius(),
+                getParentForChildren(),
+                isClean());
+        borderRadius_ = null;
+      }
+      return borderRadiusBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     mainAxisAlignment_ = 0;
     childrenWidget_ = java.util.Collections.emptyList();
     childContainer_ = java.util.Collections.emptyList();
+    layoutType_ = 0;
   }
 
   @java.lang.Override
@@ -202,6 +203,24 @@ private static final long serialVersionUID = 0L;
     return childContainer_.get(index);
   }
 
+  public static final int LAYOUTTYPE_FIELD_NUMBER = 8;
+  private int layoutType_ = 0;
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.FormLayoutTypeEnum layoutType = 8;</code>
+   * @return The enum numeric value on the wire for layoutType.
+   */
+  @java.lang.Override public int getLayoutTypeValue() {
+    return layoutType_;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.FormLayoutTypeEnum layoutType = 8;</code>
+   * @return The layoutType.
+   */
+  @java.lang.Override public com.tiwari.studence.proto.htmlWidgets.FormLayoutTypeEnum getLayoutType() {
+    com.tiwari.studence.proto.htmlWidgets.FormLayoutTypeEnum result = com.tiwari.studence.proto.htmlWidgets.FormLayoutTypeEnum.forNumber(layoutType_);
+    return result == null ? com.tiwari.studence.proto.htmlWidgets.FormLayoutTypeEnum.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -233,6 +252,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < childContainer_.size(); i++) {
       output.writeMessage(7, childContainer_.get(i));
+    }
+    if (layoutType_ != com.tiwari.studence.proto.htmlWidgets.FormLayoutTypeEnum.UNKNOWN_FORM_LAYOUT_TYPE.getNumber()) {
+      output.writeEnum(8, layoutType_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -267,6 +289,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, childContainer_.get(i));
     }
+    if (layoutType_ != com.tiwari.studence.proto.htmlWidgets.FormLayoutTypeEnum.UNKNOWN_FORM_LAYOUT_TYPE.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(8, layoutType_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -295,6 +321,7 @@ private static final long serialVersionUID = 0L;
         != other.getContainerPosition()) return false;
     if (!getChildContainerList()
         .equals(other.getChildContainerList())) return false;
+    if (layoutType_ != other.layoutType_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -324,6 +351,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CHILDCONTAINER_FIELD_NUMBER;
       hash = (53 * hash) + getChildContainerList().hashCode();
     }
+    hash = (37 * hash) + LAYOUTTYPE_FIELD_NUMBER;
+    hash = (53 * hash) + layoutType_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -475,6 +504,7 @@ private static final long serialVersionUID = 0L;
         childContainerBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000020);
+      layoutType_ = 0;
       return this;
     }
 
@@ -543,6 +573,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.containerPosition_ = containerPosition_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.layoutType_ = layoutType_;
       }
     }
 
@@ -654,6 +687,9 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (other.layoutType_ != 0) {
+        setLayoutTypeValue(other.getLayoutTypeValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -728,6 +764,11 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 58
+            case 64: {
+              layoutType_ = input.readEnum();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 64
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1480,6 +1521,59 @@ private static final long serialVersionUID = 0L;
         childContainer_ = null;
       }
       return childContainerBuilder_;
+    }
+
+    private int layoutType_ = 0;
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.FormLayoutTypeEnum layoutType = 8;</code>
+     * @return The enum numeric value on the wire for layoutType.
+     */
+    @java.lang.Override public int getLayoutTypeValue() {
+      return layoutType_;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.FormLayoutTypeEnum layoutType = 8;</code>
+     * @param value The enum numeric value on the wire for layoutType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLayoutTypeValue(int value) {
+      layoutType_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.FormLayoutTypeEnum layoutType = 8;</code>
+     * @return The layoutType.
+     */
+    @java.lang.Override
+    public com.tiwari.studence.proto.htmlWidgets.FormLayoutTypeEnum getLayoutType() {
+      com.tiwari.studence.proto.htmlWidgets.FormLayoutTypeEnum result = com.tiwari.studence.proto.htmlWidgets.FormLayoutTypeEnum.forNumber(layoutType_);
+      return result == null ? com.tiwari.studence.proto.htmlWidgets.FormLayoutTypeEnum.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.FormLayoutTypeEnum layoutType = 8;</code>
+     * @param value The layoutType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLayoutType(com.tiwari.studence.proto.htmlWidgets.FormLayoutTypeEnum value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000040;
+      layoutType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.FormLayoutTypeEnum layoutType = 8;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLayoutType() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      layoutType_ = 0;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

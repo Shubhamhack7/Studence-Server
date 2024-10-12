@@ -4,61 +4,37 @@
 package com.tiwari.studence.proto.htmlWidgets;
 
 /**
- * Protobuf enum {@code com.tiwari.studence.proto.htmlWidgets.ValueUnitTypeEnum}
+ * Protobuf enum {@code com.tiwari.studence.proto.htmlWidgets.ButtonInputTypeEnum}
  */
-public enum ValueUnitTypeEnum
+public enum ButtonInputTypeEnum
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
-   * <code>UNKNOWN_UNIT_TYPE = 0;</code>
+   * <code>UNKNOWN_INPUT_BUTTON_TYPE = 0;</code>
    */
-  UNKNOWN_UNIT_TYPE(0),
+  UNKNOWN_INPUT_BUTTON_TYPE(0),
   /**
-   * <code>PX = 1;</code>
+   * <code>SINGLE = 1;</code>
    */
-  PX(1),
+  SINGLE(1),
   /**
-   * <code>PERCENT = 2;</code>
+   * <code>MULTIPLE = 2;</code>
    */
-  PERCENT(2),
-  /**
-   * <code>AUTO = 3;</code>
-   */
-  AUTO(3),
-  /**
-   * <code>INFINITY = 4;</code>
-   */
-  INFINITY(4),
-  /**
-   * <code>VH = 5;</code>
-   */
-  VH(5),
+  MULTIPLE(2),
   UNRECOGNIZED(-1),
   ;
 
   /**
-   * <code>UNKNOWN_UNIT_TYPE = 0;</code>
+   * <code>UNKNOWN_INPUT_BUTTON_TYPE = 0;</code>
    */
-  public static final int UNKNOWN_UNIT_TYPE_VALUE = 0;
+  public static final int UNKNOWN_INPUT_BUTTON_TYPE_VALUE = 0;
   /**
-   * <code>PX = 1;</code>
+   * <code>SINGLE = 1;</code>
    */
-  public static final int PX_VALUE = 1;
+  public static final int SINGLE_VALUE = 1;
   /**
-   * <code>PERCENT = 2;</code>
+   * <code>MULTIPLE = 2;</code>
    */
-  public static final int PERCENT_VALUE = 2;
-  /**
-   * <code>AUTO = 3;</code>
-   */
-  public static final int AUTO_VALUE = 3;
-  /**
-   * <code>INFINITY = 4;</code>
-   */
-  public static final int INFINITY_VALUE = 4;
-  /**
-   * <code>VH = 5;</code>
-   */
-  public static final int VH_VALUE = 5;
+  public static final int MULTIPLE_VALUE = 2;
 
 
   public final int getNumber() {
@@ -75,7 +51,7 @@ public enum ValueUnitTypeEnum
    * @deprecated Use {@link #forNumber(int)} instead.
    */
   @java.lang.Deprecated
-  public static ValueUnitTypeEnum valueOf(int value) {
+  public static ButtonInputTypeEnum valueOf(int value) {
     return forNumber(value);
   }
 
@@ -83,27 +59,24 @@ public enum ValueUnitTypeEnum
    * @param value The numeric wire value of the corresponding enum entry.
    * @return The enum associated with the given numeric wire value.
    */
-  public static ValueUnitTypeEnum forNumber(int value) {
+  public static ButtonInputTypeEnum forNumber(int value) {
     switch (value) {
-      case 0: return UNKNOWN_UNIT_TYPE;
-      case 1: return PX;
-      case 2: return PERCENT;
-      case 3: return AUTO;
-      case 4: return INFINITY;
-      case 5: return VH;
+      case 0: return UNKNOWN_INPUT_BUTTON_TYPE;
+      case 1: return SINGLE;
+      case 2: return MULTIPLE;
       default: return null;
     }
   }
 
-  public static com.google.protobuf.Internal.EnumLiteMap<ValueUnitTypeEnum>
+  public static com.google.protobuf.Internal.EnumLiteMap<ButtonInputTypeEnum>
       internalGetValueMap() {
     return internalValueMap;
   }
   private static final com.google.protobuf.Internal.EnumLiteMap<
-      ValueUnitTypeEnum> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<ValueUnitTypeEnum>() {
-          public ValueUnitTypeEnum findValueByNumber(int number) {
-            return ValueUnitTypeEnum.forNumber(number);
+      ButtonInputTypeEnum> internalValueMap =
+        new com.google.protobuf.Internal.EnumLiteMap<ButtonInputTypeEnum>() {
+          public ButtonInputTypeEnum findValueByNumber(int number) {
+            return ButtonInputTypeEnum.forNumber(number);
           }
         };
 
@@ -121,12 +94,12 @@ public enum ValueUnitTypeEnum
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tiwari.studence.proto.htmlWidgets.HtmlWidgets.getDescriptor().getEnumTypes().get(12);
+    return com.tiwari.studence.proto.htmlWidgets.HtmlWidgets.getDescriptor().getEnumTypes().get(7);
   }
 
-  private static final ValueUnitTypeEnum[] VALUES = values();
+  private static final ButtonInputTypeEnum[] VALUES = values();
 
-  public static ValueUnitTypeEnum valueOf(
+  public static ButtonInputTypeEnum valueOf(
       com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
     if (desc.getType() != getDescriptor()) {
       throw new java.lang.IllegalArgumentException(
@@ -140,10 +113,10 @@ public enum ValueUnitTypeEnum
 
   private final int value;
 
-  private ValueUnitTypeEnum(int value) {
+  private ButtonInputTypeEnum(int value) {
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:com.tiwari.studence.proto.htmlWidgets.ValueUnitTypeEnum)
+  // @@protoc_insertion_point(enum_scope:com.tiwari.studence.proto.htmlWidgets.ButtonInputTypeEnum)
 }
 

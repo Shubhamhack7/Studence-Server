@@ -38,4 +38,16 @@ public interface WidgetPbOrBuilder extends
    * <code>.com.tiwari.studence.proto.htmlWidgets.ConfigPb config = 3;</code>
    */
   com.tiwari.studence.proto.htmlWidgets.ConfigPbOrBuilder getConfigOrBuilder();
+
+  /**
+   * <code>string widgetId = 4;</code>
+   * @return The widgetId.
+   */
+  java.lang.String getWidgetId();
+  /**
+   * <code>string widgetId = 4;</code>
+   * @return The bytes for widgetId.
+   */
+  com.google.protobuf.ByteString
+      getWidgetIdBytes();
 }

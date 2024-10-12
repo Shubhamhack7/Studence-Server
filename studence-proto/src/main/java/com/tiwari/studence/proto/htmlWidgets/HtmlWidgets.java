@@ -15,10 +15,85 @@ public final class HtmlWidgets {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_tiwari_studence_proto_htmlWidgets_UiPagePb_descriptor;
+    internal_static_com_tiwari_studence_proto_htmlWidgets_DirectionConfig_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_tiwari_studence_proto_htmlWidgets_UiPagePb_fieldAccessorTable;
+      internal_static_com_tiwari_studence_proto_htmlWidgets_DirectionConfig_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tiwari_studence_proto_htmlWidgets_MarginPb_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tiwari_studence_proto_htmlWidgets_MarginPb_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tiwari_studence_proto_htmlWidgets_WidthPb_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tiwari_studence_proto_htmlWidgets_WidthPb_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tiwari_studence_proto_htmlWidgets_HeightPb_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tiwari_studence_proto_htmlWidgets_HeightPb_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tiwari_studence_proto_htmlWidgets_PaddingPb_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tiwari_studence_proto_htmlWidgets_PaddingPb_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tiwari_studence_proto_htmlWidgets_BorderRadiusPb_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tiwari_studence_proto_htmlWidgets_BorderRadiusPb_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tiwari_studence_proto_htmlWidgets_RGBOPb_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tiwari_studence_proto_htmlWidgets_RGBOPb_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tiwari_studence_proto_htmlWidgets_ARGBPb_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tiwari_studence_proto_htmlWidgets_ARGBPb_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tiwari_studence_proto_htmlWidgets_ColorPb_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tiwari_studence_proto_htmlWidgets_ColorPb_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tiwari_studence_proto_htmlWidgets_BorderConfigPb_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tiwari_studence_proto_htmlWidgets_BorderConfigPb_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tiwari_studence_proto_htmlWidgets_ButtonEventPb_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tiwari_studence_proto_htmlWidgets_ButtonEventPb_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tiwari_studence_proto_htmlWidgets_ItemPb_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tiwari_studence_proto_htmlWidgets_ItemPb_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tiwari_studence_proto_htmlWidgets_ButtonInputPb_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tiwari_studence_proto_htmlWidgets_ButtonInputPb_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tiwari_studence_proto_htmlWidgets_ButtonPb_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tiwari_studence_proto_htmlWidgets_ButtonPb_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tiwari_studence_proto_htmlWidgets_ATagPb_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tiwari_studence_proto_htmlWidgets_ATagPb_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tiwari_studence_proto_htmlWidgets_RadioButtonPb_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tiwari_studence_proto_htmlWidgets_RadioButtonPb_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_tiwari_studence_proto_htmlWidgets_WidgetPb_descriptor;
   static final 
@@ -35,25 +110,10 @@ public final class HtmlWidgets {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_tiwari_studence_proto_htmlWidgets_HeadingConfigPb_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_tiwari_studence_proto_htmlWidgets_RGBOPb_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_tiwari_studence_proto_htmlWidgets_RGBOPb_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_tiwari_studence_proto_htmlWidgets_ARGBPb_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_tiwari_studence_proto_htmlWidgets_ARGBPb_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_tiwari_studence_proto_htmlWidgets_CheckboxPb_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_tiwari_studence_proto_htmlWidgets_CheckboxPb_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_tiwari_studence_proto_htmlWidgets_ColorPb_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_tiwari_studence_proto_htmlWidgets_ColorPb_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_tiwari_studence_proto_htmlWidgets_labelPb_descriptor;
   static final 
@@ -65,45 +125,20 @@ public final class HtmlWidgets {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_tiwari_studence_proto_htmlWidgets_InputBoxConfig_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_tiwari_studence_proto_htmlWidgets_BorderConfigPb_descriptor;
+    internal_static_com_tiwari_studence_proto_htmlWidgets_AxisAlignmentPb_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_tiwari_studence_proto_htmlWidgets_BorderConfigPb_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_tiwari_studence_proto_htmlWidgets_ButtonPb_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_tiwari_studence_proto_htmlWidgets_ButtonPb_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_tiwari_studence_proto_htmlWidgets_ATagPb_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_tiwari_studence_proto_htmlWidgets_ATagPb_fieldAccessorTable;
+      internal_static_com_tiwari_studence_proto_htmlWidgets_AxisAlignmentPb_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_tiwari_studence_proto_htmlWidgets_ConfigPb_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_tiwari_studence_proto_htmlWidgets_ConfigPb_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_tiwari_studence_proto_htmlWidgets_DirectionConfig_descriptor;
+    internal_static_com_tiwari_studence_proto_htmlWidgets_UiPagePb_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_tiwari_studence_proto_htmlWidgets_DirectionConfig_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_tiwari_studence_proto_htmlWidgets_MarginPb_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_tiwari_studence_proto_htmlWidgets_MarginPb_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_tiwari_studence_proto_htmlWidgets_WidthPb_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_tiwari_studence_proto_htmlWidgets_WidthPb_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_tiwari_studence_proto_htmlWidgets_PaddingPb_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_tiwari_studence_proto_htmlWidgets_PaddingPb_fieldAccessorTable;
+      internal_static_com_tiwari_studence_proto_htmlWidgets_UiPagePb_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -114,256 +149,413 @@ public final class HtmlWidgets {
   static {
     java.lang.String[] descriptorData = {
       "\n\021htmlWidgets.proto\022%com.tiwari.studence" +
-      ".proto.htmlWidgets\032\021dataTypesPb.proto\"\277\002" +
-      "\n\010UiPagePb\022\014\n\004tile\030\001 \001(\t\022O\n\rcontainerTyp" +
-      "e\030\002 \001(\01628.com.tiwari.studence.proto.html" +
-      "Widgets.ContainerTypeEnum\022C\n\npageConfig\030" +
-      "\003 \001(\0132/.com.tiwari.studence.proto.htmlWi" +
-      "dgets.ConfigPb\022M\n\021childrenContainer\030\004 \003(" +
-      "\01322.com.tiwari.studence.proto.htmlWidget" +
-      "s.ContainerPb\022@\n\007widgets\030\005 \003(\0132/.com.tiw" +
-      "ari.studence.proto.htmlWidgets.WidgetPb\"" +
-      "\257\001\n\010WidgetPb\022J\n\nwidgetType\030\001 \001(\01626.com.t" +
-      "iwari.studence.proto.htmlWidgets.Widgets" +
-      "TypeEnum\022\026\n\016widgetPosition\030\002 \001(\005\022?\n\006conf" +
-      "ig\030\003 \001(\0132/.com.tiwari.studence.proto.htm" +
-      "lWidgets.ConfigPb\"\244\003\n\013ContainerPb\022O\n\rcon" +
-      "tainerType\030\001 \001(\01628.com.tiwari.studence.p" +
-      "roto.htmlWidgets.ContainerTypeEnum\022S\n\021ma" +
-      "inAxisAlignment\030\002 \001(\01628.com.tiwari.stude" +
-      "nce.proto.htmlWidgets.AlignmentTypeEnum\022" +
-      "G\n\016childrenWidget\030\004 \003(\0132/.com.tiwari.stu" +
-      "dence.proto.htmlWidgets.WidgetPb\022?\n\006conf" +
-      "ig\030\005 \001(\0132/.com.tiwari.studence.proto.htm" +
-      "lWidgets.ConfigPb\022\031\n\021containerPosition\030\006" +
-      " \001(\005\022J\n\016childContainer\030\007 \003(\01322.com.tiwar" +
-      "i.studence.proto.htmlWidgets.ContainerPb" +
-      "\"\205\001\n\017HeadingConfigPb\022\020\n\010fontSize\030\001 \001(\005\022M" +
-      "\n\nfontWeight\030\002 \001(\01629.com.tiwari.studence" +
-      ".proto.htmlWidgets.FontWeightTypeEnum\022\021\n" +
-      "\tfontValue\030\003 \001(\t\"4\n\006RGBOPb\022\t\n\001r\030\001 \001(\005\022\t\n" +
-      "\001g\030\002 \001(\005\022\t\n\001b\030\003 \001(\005\022\t\n\001o\030\004 \001(\001\"4\n\006ARGBPb" +
-      "\022\t\n\001r\030\001 \001(\005\022\t\n\001g\030\002 \001(\005\022\t\n\001b\030\003 \001(\005\022\t\n\001o\030\004" +
-      " \001(\005\"g\n\nCheckboxPb\022C\n\tisChecked\030\001 \001(\01620." +
-      "com.tiwari.studence.proto.datatypes.Bool" +
-      "eanEnum\022\024\n\014checkboxName\030\002 \001(\t\"\260\003\n\007ColorP" +
-      "b\022G\n\tcolorType\030\001 \001(\01624.com.tiwari.studen" +
-      "ce.proto.htmlWidgets.ColorTypeEnum\022J\n\023rg" +
-      "boBackgroundColor\030\002 \001(\0132-.com.tiwari.stu" +
-      "dence.proto.htmlWidgets.RGBOPb\022J\n\023argbBa" +
-      "ckgroundColor\030\003 \001(\0132-.com.tiwari.studenc" +
-      "e.proto.htmlWidgets.ARGBPb\022\036\n\026hexCodeBac" +
-      "kgroundColor\030\004 \001(\t\022D\n\rrgboFontColor\030\005 \001(" +
-      "\0132-.com.tiwari.studence.proto.htmlWidget" +
-      "s.RGBOPb\022D\n\raegbFontColor\030\006 \001(\0132-.com.ti" +
-      "wari.studence.proto.htmlWidgets.ARGBPb\022\030" +
-      "\n\020hexCodefontColor\030\007 \001(\t\"\034\n\007labelPb\022\021\n\tl" +
-      "abelText\030\001 \001(\t\"\300\001\n\016InputBoxConfig\022E\n\004typ" +
-      "e\030\001 \001(\01627.com.tiwari.studence.proto.html" +
-      "Widgets.InputBoxTypeEnum\022\023\n\013placeHolder\030" +
-      "\002 \001(\t\022\014\n\004name\030\003 \001(\t\022D\n\nisRequired\030\004 \001(\0162" +
-      "0.com.tiwari.studence.proto.datatypes.Bo" +
-      "oleanEnum\"\220\003\n\016BorderConfigPb\022M\n\017borderVa" +
-      "lueType\030\001 \001(\01624.com.tiwari.studence.prot" +
-      "o.htmlWidgets.ValueTypeEnum\022F\n\004unit\030\002 \001(" +
-      "\01628.com.tiwari.studence.proto.htmlWidget" +
-      "s.ValueUnitTypeEnum\022\r\n\005value\030\003 \001(\001\022N\n\016mu" +
-      "ltipleValues\030\004 \001(\01326.com.tiwari.studence" +
-      ".proto.htmlWidgets.DirectionConfig\022=\n\005co" +
-      "lor\030\005 \001(\0132..com.tiwari.studence.proto.ht" +
-      "mlWidgets.ColorPb\022I\n\nborderType\030\006 \001(\01625." +
-      "com.tiwari.studence.proto.htmlWidgets.Bo" +
-      "rderTypeEnum\"\256\001\n\010ButtonPb\022I\n\nbuttonType\030" +
-      "\001 \001(\01625.com.tiwari.studence.proto.htmlWi" +
-      "dgets.ButtonTypeEnum\022C\n\004type\030\002 \001(\01625.com" +
-      ".tiwari.studence.proto.htmlWidgets.Butto" +
-      "nTypeEnum\022\022\n\nbuttonName\030\003 \001(\t\"%\n\006ATagPb\022" +
-      "\014\n\004href\030\001 \001(\t\022\r\n\005label\030\002 \001(\t\"\364\006\n\010ConfigP" +
-      "b\022A\n\007padding\030\001 \001(\01320.com.tiwari.studence" +
-      ".proto.htmlWidgets.PaddingPb\022M\n\rheadingC" +
-      "onfig\030\002 \001(\01326.com.tiwari.studence.proto." +
-      "htmlWidgets.HeadingConfigPb\022C\n\013colorConf" +
-      "ig\030\003 \001(\0132..com.tiwari.studence.proto.htm" +
-      "lWidgets.ColorPb\022O\n\ralignmentType\030\004 \001(\0162" +
-      "8.com.tiwari.studence.proto.htmlWidgets." +
-      "AlignmentTypeEnum\022C\n\013labelConfig\030\005 \001(\0132." +
-      ".com.tiwari.studence.proto.htmlWidgets.l" +
-      "abelPb\022M\n\016inputBoxConfig\030\006 \001(\01325.com.tiw" +
-      "ari.studence.proto.htmlWidgets.InputBoxC" +
-      "onfig\022E\n\014marginConfig\030\007 \001(\0132/.com.tiwari" +
-      ".studence.proto.htmlWidgets.MarginPb\022K\n\014" +
-      "borderConfig\030\010 \001(\01325.com.tiwari.studence" +
-      ".proto.htmlWidgets.BorderConfigPb\022C\n\013wid" +
-      "thConfig\030\t \001(\0132..com.tiwari.studence.pro" +
-      "to.htmlWidgets.WidthPb\022I\n\016checkboxConfig" +
-      "\030\n \001(\01321.com.tiwari.studence.proto.htmlW" +
-      "idgets.CheckboxPb\022E\n\014buttonConfig\030\013 \001(\0132" +
+      ".proto.htmlWidgets\032\021dataTypesPb.proto\"K\n" +
+      "\017DirectionConfig\022\013\n\003top\030\001 \001(\001\022\r\n\005right\030\002" +
+      " \001(\001\022\016\n\006bottom\030\003 \001(\001\022\014\n\004left\030\004 \001(\001\"\373\001\n\010M" +
+      "arginPb\022H\n\nmarginType\030\001 \001(\01624.com.tiwari" +
+      ".studence.proto.htmlWidgets.ValueTypeEnu" +
+      "m\022F\n\004unit\030\002 \001(\01628.com.tiwari.studence.pr" +
+      "oto.htmlWidgets.ValueUnitTypeEnum\022\r\n\005val" +
+      "ue\030\003 \001(\001\022N\n\016multipleValues\030\004 \001(\01326.com.t" +
+      "iwari.studence.proto.htmlWidgets.Directi" +
+      "onConfig\"\371\001\n\007WidthPb\022G\n\twidthType\030\001 \001(\0162" +
+      "4.com.tiwari.studence.proto.htmlWidgets." +
+      "ValueTypeEnum\022F\n\004unit\030\002 \001(\01628.com.tiwari" +
+      ".studence.proto.htmlWidgets.ValueUnitTyp" +
+      "eEnum\022\r\n\005value\030\003 \001(\001\022N\n\016multipleValues\030\004" +
+      " \001(\01326.com.tiwari.studence.proto.htmlWid" +
+      "gets.DirectionConfig\"\372\001\n\010HeightPb\022G\n\twid" +
+      "thType\030\001 \001(\01624.com.tiwari.studence.proto" +
+      ".htmlWidgets.ValueTypeEnum\022F\n\004unit\030\002 \001(\016" +
+      "28.com.tiwari.studence.proto.htmlWidgets" +
+      ".ValueUnitTypeEnum\022\r\n\005value\030\003 \001(\001\022N\n\016mul" +
+      "tipleValues\030\004 \001(\01326.com.tiwari.studence." +
+      "proto.htmlWidgets.DirectionConfig\"\375\001\n\tPa" +
+      "ddingPb\022I\n\013paddingType\030\001 \001(\01624.com.tiwar" +
+      "i.studence.proto.htmlWidgets.ValueTypeEn" +
+      "um\022F\n\004unit\030\002 \001(\01628.com.tiwari.studence.p" +
+      "roto.htmlWidgets.ValueUnitTypeEnum\022\r\n\005va" +
+      "lue\030\003 \001(\001\022N\n\016multipleValues\030\004 \001(\01326.com." +
+      "tiwari.studence.proto.htmlWidgets.Direct" +
+      "ionConfig\"\327\002\n\016BorderRadiusPb\022O\n\nradiusTy" +
+      "pe\030\001 \001(\0162;.com.tiwari.studence.proto.htm" +
+      "lWidgets.BorderRadiusTypeEnum\022M\n\017borderV" +
+      "alueType\030\002 \001(\01624.com.tiwari.studence.pro" +
+      "to.htmlWidgets.ValueTypeEnum\022F\n\004unit\030\003 \001" +
+      "(\01628.com.tiwari.studence.proto.htmlWidge" +
+      "ts.ValueUnitTypeEnum\022\r\n\005value\030\004 \001(\001\022N\n\016m" +
+      "ultipleValues\030\005 \001(\01326.com.tiwari.studenc" +
+      "e.proto.htmlWidgets.DirectionConfig\"4\n\006R" +
+      "GBOPb\022\t\n\001r\030\001 \001(\005\022\t\n\001g\030\002 \001(\005\022\t\n\001b\030\003 \001(\005\022\t" +
+      "\n\001o\030\004 \001(\001\"4\n\006ARGBPb\022\t\n\001r\030\001 \001(\005\022\t\n\001g\030\002 \001(" +
+      "\005\022\t\n\001b\030\003 \001(\005\022\t\n\001o\030\004 \001(\005\"\265\005\n\007ColorPb\022G\n\tc" +
+      "olorType\030\001 \001(\01624.com.tiwari.studence.pro" +
+      "to.htmlWidgets.ColorTypeEnum\022K\n\013colorInT" +
+      "ype\030\002 \001(\01626.com.tiwari.studence.proto.ht" +
+      "mlWidgets.ColorInTypeEnum\022J\n\023rgboBackgro" +
+      "undColor\030\003 \001(\0132-.com.tiwari.studence.pro" +
+      "to.htmlWidgets.RGBOPb\022J\n\023argbBackgroundC" +
+      "olor\030\004 \001(\0132-.com.tiwari.studence.proto.h" +
+      "tmlWidgets.ARGBPb\022\036\n\026hexCodeBackgroundCo" +
+      "lor\030\005 \001(\t\022D\n\rrgboFontColor\030\006 \001(\0132-.com.t" +
+      "iwari.studence.proto.htmlWidgets.RGBOPb\022" +
+      "D\n\raegbFontColor\030\007 \001(\0132-.com.tiwari.stud" +
+      "ence.proto.htmlWidgets.ARGBPb\022\030\n\020hexCode" +
+      "fontColor\030\010 \001(\t\022J\n\023rgboForegroundColor\030\t" +
+      " \001(\0132-.com.tiwari.studence.proto.htmlWid" +
+      "gets.RGBOPb\022J\n\023aegbForegroundColor\030\n \001(\013" +
+      "2-.com.tiwari.studence.proto.htmlWidgets" +
+      ".ARGBPb\022\036\n\026hexCodeForegroundColor\030\013 \001(\t\"" +
+      "\335\003\n\016BorderConfigPb\022M\n\017borderValueType\030\001 " +
+      "\001(\01624.com.tiwari.studence.proto.htmlWidg" +
+      "ets.ValueTypeEnum\022F\n\004unit\030\002 \001(\01628.com.ti" +
+      "wari.studence.proto.htmlWidgets.ValueUni" +
+      "tTypeEnum\022\r\n\005value\030\003 \001(\001\022N\n\016multipleValu" +
+      "es\030\004 \001(\01326.com.tiwari.studence.proto.htm" +
+      "lWidgets.DirectionConfig\022=\n\005color\030\005 \001(\0132" +
+      "..com.tiwari.studence.proto.htmlWidgets." +
+      "ColorPb\022I\n\nborderType\030\006 \001(\01625.com.tiwari" +
+      ".studence.proto.htmlWidgets.BorderTypeEn" +
+      "um\022K\n\014borderRadius\030\007 \001(\01325.com.tiwari.st" +
+      "udence.proto.htmlWidgets.BorderRadiusPb\"" +
+      "\317\003\n\rButtonEventPb\022G\n\017backgroundColor\030\001 \001" +
+      "(\0132..com.tiwari.studence.proto.htmlWidge" +
+      "ts.ColorPb\022A\n\ttextColor\030\002 \001(\0132..com.tiwa" +
+      "ri.studence.proto.htmlWidgets.ColorPb\022?\n" +
+      "\006height\030\003 \001(\0132/.com.tiwari.studence.prot" +
+      "o.htmlWidgets.HeightPb\022=\n\005width\030\004 \001(\0132.." +
+      "com.tiwari.studence.proto.htmlWidgets.Wi" +
+      "dthPb\022E\n\006border\030\005 \001(\01325.com.tiwari.stude" +
+      "nce.proto.htmlWidgets.BorderConfigPb\022\r\n\005" +
+      "label\030\006 \001(\t\022\023\n\013loadingText\030\007 \001(\t\022G\n\017fore" +
+      "groundColor\030\010 \001(\0132..com.tiwari.studence." +
+      "proto.htmlWidgets.ColorPb\"2\n\006ItemPb\022\023\n\013b" +
+      "uttonLabel\030\001 \001(\t\022\023\n\013buttonIndex\030\002 \001(\003\"\353\005" +
+      "\n\rButtonInputPb\022G\n\017backgroundColor\030\001 \001(\013" +
+      "2..com.tiwari.studence.proto.htmlWidgets" +
+      ".ColorPb\022A\n\ttextColor\030\002 \001(\0132..com.tiwari" +
+      ".studence.proto.htmlWidgets.ColorPb\022Q\n\031i" +
+      "sSelectedBackgroundColor\030\003 \001(\0132..com.tiw" +
+      "ari.studence.proto.htmlWidgets.ColorPb\022K" +
+      "\n\023isSelectedTextColor\030\004 \001(\0132..com.tiwari" +
+      ".studence.proto.htmlWidgets.ColorPb\022?\n\006h" +
+      "eight\030\005 \001(\0132/.com.tiwari.studence.proto." +
+      "htmlWidgets.HeightPb\022=\n\005width\030\006 \001(\0132..co" +
+      "m.tiwari.studence.proto.htmlWidgets.Widt" +
+      "hPb\022E\n\006border\030\007 \001(\01325.com.tiwari.studenc" +
+      "e.proto.htmlWidgets.BorderConfigPb\022G\n\017fo" +
+      "regroundColor\030\n \001(\0132..com.tiwari.studenc" +
+      "e.proto.htmlWidgets.ColorPb\022>\n\007buttons\030\013" +
+      " \003(\0132-.com.tiwari.studence.proto.htmlWid" +
+      "gets.ItemPb\022G\n\005align\030\014 \001(\01628.com.tiwari." +
+      "studence.proto.htmlWidgets.AlignmentType" +
+      "Enum\022\025\n\rbuttonSpacing\030\r \001(\001\"\211\003\n\010ButtonPb" +
+      "\022I\n\nbuttonType\030\001 \001(\01625.com.tiwari.studen" +
+      "ce.proto.htmlWidgets.ButtonTypeEnum\022M\n\ti" +
+      "nputType\030\002 \001(\0162:.com.tiwari.studence.pro" +
+      "to.htmlWidgets.ButtonInputTypeEnum\022M\n\tev" +
+      "entType\030\003 \001(\0162:.com.tiwari.studence.prot" +
+      "o.htmlWidgets.ButtonEventTypeEnum\022I\n\013eve" +
+      "ntButton\030\004 \001(\01324.com.tiwari.studence.pro" +
+      "to.htmlWidgets.ButtonEventPb\022I\n\013inputBut" +
+      "ton\030\005 \001(\01324.com.tiwari.studence.proto.ht" +
+      "mlWidgets.ButtonInputPb\"%\n\006ATagPb\022\014\n\004hre" +
+      "f\030\001 \001(\t\022\r\n\005label\030\002 \001(\t\"\353\005\n\rRadioButtonPb" +
+      "\022G\n\017backgroundColor\030\001 \001(\0132..com.tiwari.s" +
+      "tudence.proto.htmlWidgets.ColorPb\022A\n\ttex" +
+      "tColor\030\002 \001(\0132..com.tiwari.studence.proto" +
+      ".htmlWidgets.ColorPb\022Q\n\031isSelectedBackgr" +
+      "oundColor\030\003 \001(\0132..com.tiwari.studence.pr" +
+      "oto.htmlWidgets.ColorPb\022K\n\023isSelectedTex" +
+      "tColor\030\004 \001(\0132..com.tiwari.studence.proto" +
+      ".htmlWidgets.ColorPb\022?\n\006height\030\005 \001(\0132/.c" +
+      "om.tiwari.studence.proto.htmlWidgets.Hei" +
+      "ghtPb\022=\n\005width\030\006 \001(\0132..com.tiwari.studen" +
+      "ce.proto.htmlWidgets.WidthPb\022E\n\006border\030\007" +
+      " \001(\01325.com.tiwari.studence.proto.htmlWid" +
+      "gets.BorderConfigPb\022G\n\017foregroundColor\030\n" +
+      " \001(\0132..com.tiwari.studence.proto.htmlWid" +
+      "gets.ColorPb\022>\n\007buttons\030\013 \003(\0132-.com.tiwa" +
+      "ri.studence.proto.htmlWidgets.ItemPb\022G\n\005" +
+      "align\030\014 \001(\01628.com.tiwari.studence.proto." +
+      "htmlWidgets.AlignmentTypeEnum\022\025\n\rbuttonS" +
+      "pacing\030\r \001(\001\"\301\001\n\010WidgetPb\022J\n\nwidgetType\030" +
+      "\001 \001(\01626.com.tiwari.studence.proto.htmlWi" +
+      "dgets.WidgetsTypeEnum\022\026\n\016widgetPosition\030" +
+      "\002 \001(\005\022?\n\006config\030\003 \001(\0132/.com.tiwari.stude" +
+      "nce.proto.htmlWidgets.ConfigPb\022\020\n\010widget" +
+      "Id\030\004 \001(\t\"\363\003\n\013ContainerPb\022O\n\rcontainerTyp" +
+      "e\030\001 \001(\01628.com.tiwari.studence.proto.html" +
+      "Widgets.ContainerTypeEnum\022S\n\021mainAxisAli" +
+      "gnment\030\002 \001(\01628.com.tiwari.studence.proto" +
+      ".htmlWidgets.AlignmentTypeEnum\022G\n\016childr" +
+      "enWidget\030\004 \003(\0132/.com.tiwari.studence.pro" +
+      "to.htmlWidgets.WidgetPb\022?\n\006config\030\005 \001(\0132" +
       "/.com.tiwari.studence.proto.htmlWidgets." +
-      "ButtonPb\022A\n\naTagConfig\030\014 \001(\0132-.com.tiwar" +
-      "i.studence.proto.htmlWidgets.ATagPb\"K\n\017D" +
-      "irectionConfig\022\013\n\003top\030\001 \001(\001\022\r\n\005right\030\002 \001" +
-      "(\001\022\016\n\006bottom\030\003 \001(\001\022\014\n\004left\030\004 \001(\001\"\373\001\n\010Mar" +
-      "ginPb\022H\n\nmarginType\030\001 \001(\01624.com.tiwari.s" +
-      "tudence.proto.htmlWidgets.ValueTypeEnum\022" +
-      "F\n\004unit\030\002 \001(\01628.com.tiwari.studence.prot" +
-      "o.htmlWidgets.ValueUnitTypeEnum\022\r\n\005value" +
-      "\030\003 \001(\001\022N\n\016multipleValues\030\004 \001(\01326.com.tiw" +
-      "ari.studence.proto.htmlWidgets.Direction" +
-      "Config\"\371\001\n\007WidthPb\022G\n\twidthType\030\001 \001(\01624." +
-      "com.tiwari.studence.proto.htmlWidgets.Va" +
-      "lueTypeEnum\022F\n\004unit\030\002 \001(\01628.com.tiwari.s" +
-      "tudence.proto.htmlWidgets.ValueUnitTypeE" +
-      "num\022\r\n\005value\030\003 \001(\001\022N\n\016multipleValues\030\004 \001" +
-      "(\01326.com.tiwari.studence.proto.htmlWidge" +
-      "ts.DirectionConfig\"\375\001\n\tPaddingPb\022I\n\013padd" +
-      "ingType\030\001 \001(\01624.com.tiwari.studence.prot" +
-      "o.htmlWidgets.ValueTypeEnum\022F\n\004unit\030\002 \001(" +
-      "\01628.com.tiwari.studence.proto.htmlWidget" +
-      "s.ValueUnitTypeEnum\022\r\n\005value\030\003 \001(\001\022N\n\016mu" +
-      "ltipleValues\030\004 \001(\01326.com.tiwari.studence" +
-      ".proto.htmlWidgets.DirectionConfig*\273\001\n\017W" +
-      "idgetsTypeEnum\022\023\n\017UNKNOWN_WIDGETS\020\000\022\022\n\016T" +
-      "EXT_INPUT_BOX\020\001\022\033\n\027TEXT_INPUT_BOX_PASSWO" +
-      "RD\020\003\022\010\n\004TEXT\020\004\022\020\n\014TEXT_HEADING\020\005\022\t\n\005LABE" +
-      "L\020\006\022\014\n\010CHECKBOX\020\007\022\020\n\014INPUT_BUTTON\020\010\022\020\n\014E" +
-      "VENT_BUTTON\020\t\022\t\n\005A_TAG\020\n*M\n\022FontWeightTy" +
-      "peEnum\022\027\n\023UNKNOWN_WEIGHT_TYPE\020\000\022\n\n\006NORMA" +
-      "L\020\001\022\010\n\004BOLD\020\002\022\010\n\004W500\020\003*\177\n\021AlignmentType" +
-      "Enum\022\026\n\022UNKNOWN_ALIGN_TYPE\020\000\022\020\n\014ALIGN_CE" +
-      "NTER\020\001\022\016\n\nALIGN_LEFT\020\002\022\017\n\013ALIGN_RIGHT\020\003\022" +
-      "\r\n\tALIGN_TOP\020\004\022\020\n\014ALIGN_BOTTOM\020\005*\314\001\n\021Con" +
-      "tainerTypeEnum\022\032\n\026UNKNOWN_CONTAINER_TYPE" +
-      "\020\000\022\r\n\tCONTAINER\020\001\022\010\n\004FORM\020\002\022\007\n\003ROW\020\003\022\n\n\006" +
-      "COLUMN\020\004\022\t\n\005STACK\020\005\022\014\n\010EXTENDED\020\006\022\014\n\010FLE" +
-      "XIBLE\020\007\022\r\n\tSIZED_BOX\020\010\022\016\n\nFITTED_BOX\020\t\022\020" +
-      "\n\014OVERFLOW_BOX\020\n\022\n\n\006CENTER\020\013\022\t\n\005ALIGN\020\014*" +
-      "I\n\020InputBoxTypeEnum\022\026\n\022UNKNOWN_INPUT_TYP" +
-      "E\020\000\022\017\n\013NORMAL_TEXT\020\001\022\014\n\010PASSWORD\020\002*Q\n\016Bu" +
-      "ttonTypeEnum\022\027\n\023UNKNOWN_BUTTON_TYPE\020\000\022\t\n" +
-      "\005EVENT\020\001\022\t\n\005INPUT\020\002\022\020\n\014EVENT_SUBMIT\020\003*L\n" +
-      "\016BorderTypeEnum\022\027\n\023UNKNOWN_BORDER_TYPE\020\000" +
-      "\022\t\n\005SOLID\020\001\022\n\n\006DOTTED\020\002\022\n\n\006DASHED\020\003*_\n\rV" +
-      "alueTypeEnum\022\030\n\024UNKNOWN_PADDING_TYPE\020\000\022\020" +
-      "\n\014SINGLE_VALUE\020\001\022\022\n\016MULTIPLE_VALUE\020\002\022\016\n\n" +
-      "AUTO_VALUE\020\003*I\n\021ValueUnitTypeEnum\022\025\n\021UNK" +
-      "NOWN_UNIT_TYPE\020\000\022\006\n\002PX\020\001\022\013\n\007PERCENT\020\002\022\010\n" +
-      "\004AUTO\020\003*H\n\rColorTypeEnum\022\026\n\022UNKNOWN_COLO" +
-      "R_TYPE\020\000\022\013\n\007HEXCODE\020\001\022\010\n\004RGBO\020\002\022\010\n\004ARGB\020" +
-      "\003B\005P\001\240\001\001b\006proto3"
+      "ConfigPb\022\031\n\021containerPosition\030\006 \001(\005\022J\n\016c" +
+      "hildContainer\030\007 \003(\01322.com.tiwari.studenc" +
+      "e.proto.htmlWidgets.ContainerPb\022M\n\nlayou" +
+      "tType\030\010 \001(\01629.com.tiwari.studence.proto." +
+      "htmlWidgets.FormLayoutTypeEnum\"\205\001\n\017Headi" +
+      "ngConfigPb\022\020\n\010fontSize\030\001 \001(\005\022M\n\nfontWeig" +
+      "ht\030\002 \001(\01629.com.tiwari.studence.proto.htm" +
+      "lWidgets.FontWeightTypeEnum\022\021\n\tfontValue" +
+      "\030\003 \001(\t\"g\n\nCheckboxPb\022C\n\tisChecked\030\001 \001(\0162" +
+      "0.com.tiwari.studence.proto.datatypes.Bo" +
+      "oleanEnum\022\024\n\014checkboxName\030\002 \001(\t\"\034\n\007label" +
+      "Pb\022\021\n\tlabelText\030\001 \001(\t\"\300\001\n\016InputBoxConfig" +
+      "\022E\n\004type\030\001 \001(\01627.com.tiwari.studence.pro" +
+      "to.htmlWidgets.InputBoxTypeEnum\022\023\n\013place" +
+      "Holder\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022D\n\nisRequired" +
+      "\030\004 \001(\01620.com.tiwari.studence.proto.datat" +
+      "ypes.BooleanEnum\"\214\002\n\017AxisAlignmentPb\022S\n\021" +
+      "mainAxisAlignment\030\001 \001(\01628.com.tiwari.stu" +
+      "dence.proto.htmlWidgets.AlignmentTypeEnu" +
+      "m\022T\n\022crossAxisAlignment\030\002 \001(\01628.com.tiwa" +
+      "ri.studence.proto.htmlWidgets.AlignmentT" +
+      "ypeEnum\022N\n\014mainAxisSize\030\003 \001(\01628.com.tiwa" +
+      "ri.studence.proto.htmlWidgets.AlignmentT" +
+      "ypeEnum\"\333\010\n\010ConfigPb\022A\n\007padding\030\001 \001(\01320." +
+      "com.tiwari.studence.proto.htmlWidgets.Pa" +
+      "ddingPb\022M\n\rheadingConfig\030\002 \001(\01326.com.tiw" +
+      "ari.studence.proto.htmlWidgets.HeadingCo" +
+      "nfigPb\022C\n\013colorConfig\030\003 \001(\0132..com.tiwari" +
+      ".studence.proto.htmlWidgets.ColorPb\022O\n\ra" +
+      "lignmentType\030\004 \001(\01628.com.tiwari.studence" +
+      ".proto.htmlWidgets.AlignmentTypeEnum\022C\n\013" +
+      "labelConfig\030\005 \001(\0132..com.tiwari.studence." +
+      "proto.htmlWidgets.labelPb\022M\n\016inputBoxCon" +
+      "fig\030\006 \001(\01325.com.tiwari.studence.proto.ht" +
+      "mlWidgets.InputBoxConfig\022E\n\014marginConfig" +
+      "\030\007 \001(\0132/.com.tiwari.studence.proto.htmlW" +
+      "idgets.MarginPb\022K\n\014borderConfig\030\010 \001(\01325." +
+      "com.tiwari.studence.proto.htmlWidgets.Bo" +
+      "rderConfigPb\022C\n\013widthConfig\030\t \001(\0132..com." +
+      "tiwari.studence.proto.htmlWidgets.WidthP" +
+      "b\022I\n\016checkboxConfig\030\n \001(\01321.com.tiwari.s" +
+      "tudence.proto.htmlWidgets.CheckboxPb\022E\n\014" +
+      "buttonConfig\030\013 \001(\0132/.com.tiwari.studence" +
+      ".proto.htmlWidgets.ButtonPb\022A\n\naTagConfi" +
+      "g\030\014 \001(\0132-.com.tiwari.studence.proto.html" +
+      "Widgets.ATagPb\022O\n\021radioButtonConfig\030\r \001(" +
+      "\01324.com.tiwari.studence.proto.htmlWidget" +
+      "s.RadioButtonPb\022E\n\014heightConfig\030\016 \001(\0132/." +
+      "com.tiwari.studence.proto.htmlWidgets.He" +
+      "ightPb\022M\n\raxisAlignment\030\017 \001(\01326.com.tiwa" +
+      "ri.studence.proto.htmlWidgets.AxisAlignm" +
+      "entPb\"\277\002\n\010UiPagePb\022\014\n\004tile\030\001 \001(\t\022O\n\rcont" +
+      "ainerType\030\002 \001(\01628.com.tiwari.studence.pr" +
+      "oto.htmlWidgets.ContainerTypeEnum\022C\n\npag" +
+      "eConfig\030\003 \001(\0132/.com.tiwari.studence.prot" +
+      "o.htmlWidgets.ConfigPb\022M\n\021childrenContai" +
+      "ner\030\004 \003(\01322.com.tiwari.studence.proto.ht" +
+      "mlWidgets.ContainerPb\022@\n\007widgets\030\005 \003(\0132/" +
+      ".com.tiwari.studence.proto.htmlWidgets.W" +
+      "idgetPb*\347\001\n\017WidgetsTypeEnum\022\023\n\017UNKNOWN_W" +
+      "IDGETS\020\000\022\022\n\016TEXT_INPUT_BOX\020\001\022\033\n\027TEXT_INP" +
+      "UT_BOX_PASSWORD\020\003\022\010\n\004TEXT\020\004\022\020\n\014TEXT_HEAD" +
+      "ING\020\005\022\t\n\005LABEL\020\006\022\014\n\010CHECKBOX\020\007\022\020\n\014INPUT_" +
+      "BUTTON\020\010\022\020\n\014EVENT_BUTTON\020\t\022\t\n\005A_TAG\020\n\022\020\n" +
+      "\014RADIO_BUTTON\020\013\022\030\n\024TEXT_INPUT_BOX_EMAIL\020" +
+      "\014*M\n\022FontWeightTypeEnum\022\027\n\023UNKNOWN_WEIGH" +
+      "T_TYPE\020\000\022\n\n\006NORMAL\020\001\022\010\n\004BOLD\020\002\022\010\n\004W500\020\003" +
+      "*\265\002\n\021AlignmentTypeEnum\022\026\n\022UNKNOWN_ALIGN_" +
+      "TYPE\020\000\022\020\n\014ALIGN_CENTER\020\001\022\016\n\nALIGN_LEFT\020\002" +
+      "\022\017\n\013ALIGN_RIGHT\020\003\022\r\n\tALIGN_TOP\020\004\022\020\n\014ALIG" +
+      "N_BOTTOM\020\005\022\024\n\020ALIGN_HORIZONTAL\020\006\022\022\n\016ALIG" +
+      "N_VERTICAL\020\007\022\017\n\013ALIGN_START\020\010\022\r\n\tALIGN_E" +
+      "ND\020\t\022\027\n\023ALIGN_SPACE_BETWEEN\020\n\022\026\n\022ALIGN_S" +
+      "PACE_AROUND\020\013\022\021\n\rALIGN_STRETCH\020\014\022\022\n\016ALIG" +
+      "N_AXIS_MIN\020\r\022\022\n\016ALIGN_AXIS_MAX\020\016*t\n\017Colo" +
+      "rInTypeEnum\022\031\n\025UNKNOWN_COLOR_IN_TYPE\020\000\022\030" +
+      "\n\024COLOR_FOR_BACKGROUND\020\001\022\022\n\016COLOR_FOR_FO" +
+      "NT\020\002\022\030\n\024COLOR_FOR_FOREGROUND\020\003*\326\001\n\021Conta" +
+      "inerTypeEnum\022\032\n\026UNKNOWN_CONTAINER_TYPE\020\000" +
+      "\022\r\n\tCONTAINER\020\001\022\010\n\004FORM\020\002\022\007\n\003ROW\020\003\022\n\n\006CO" +
+      "LUMN\020\004\022\t\n\005STACK\020\005\022\014\n\010EXTENDED\020\006\022\014\n\010FLEXI" +
+      "BLE\020\007\022\r\n\tSIZED_BOX\020\010\022\016\n\nFITTED_BOX\020\t\022\020\n\014" +
+      "OVERFLOW_BOX\020\n\022\n\n\006CENTER\020\013\022\t\n\005ALIGN\020\014\022\010\n" +
+      "\004BODY\020\r*\224\001\n\024BorderRadiusTypeEnum\022\036\n\032UNKN" +
+      "OWN_BORDER_RADIUS_TYPE\020\000\022\021\n\rBORDER_RADIU" +
+      "S\020\001\022\025\n\021BORDER_RADIUS_ALL\020\002\022\026\n\022BORDER_RAD" +
+      "IUS_ONLY\020\003\022\032\n\026BORDER_RADIUS_CIRCULAR\020\004*I" +
+      "\n\020InputBoxTypeEnum\022\026\n\022UNKNOWN_INPUT_TYPE" +
+      "\020\000\022\017\n\013NORMAL_TEXT\020\001\022\014\n\010PASSWORD\020\002*N\n\023But" +
+      "tonInputTypeEnum\022\035\n\031UNKNOWN_INPUT_BUTTON" +
+      "_TYPE\020\000\022\n\n\006SINGLE\020\001\022\014\n\010MULTIPLE\020\002*t\n\023But" +
+      "tonEventTypeEnum\022\035\n\031UNKNOWN_EVENT_BUTTON" +
+      "_TYPE\020\000\022\020\n\014EVENT_SUBMIT\020\001\022\026\n\022EVENT_REQUE" +
+      "ST_CALL\020\002\022\024\n\020EVENT_NAVIGATION\020\003*R\n\016Butto" +
+      "nTypeEnum\022\027\n\023UNKNOWN_BUTTON_TYPE\020\000\022\t\n\005IN" +
+      "PUT\020\001\022\t\n\005EVENT\020\002\022\021\n\rTOGGLE_BUTTON\020\003*L\n\016B" +
+      "orderTypeEnum\022\027\n\023UNKNOWN_BORDER_TYPE\020\000\022\t" +
+      "\n\005SOLID\020\001\022\n\n\006DOTTED\020\002\022\n\n\006DASHED\020\003*_\n\rVal" +
+      "ueTypeEnum\022\030\n\024UNKNOWN_PADDING_TYPE\020\000\022\020\n\014" +
+      "SINGLE_VALUE\020\001\022\022\n\016MULTIPLE_VALUE\020\002\022\016\n\nAU" +
+      "TO_VALUE\020\003*_\n\021ValueUnitTypeEnum\022\025\n\021UNKNO" +
+      "WN_UNIT_TYPE\020\000\022\006\n\002PX\020\001\022\013\n\007PERCENT\020\002\022\010\n\004A" +
+      "UTO\020\003\022\014\n\010INFINITY\020\004\022\006\n\002VH\020\005*H\n\rColorType" +
+      "Enum\022\026\n\022UNKNOWN_COLOR_TYPE\020\000\022\013\n\007HEXCODE\020" +
+      "\001\022\010\n\004RGBO\020\002\022\010\n\004ARGB\020\003*_\n\022FormLayoutTypeE" +
+      "num\022\034\n\030UNKNOWN_FORM_LAYOUT_TYPE\020\000\022\023\n\017FOR" +
+      "M_LAYOUT_ROW\020\001\022\026\n\022FORM_LAYOUT_COLUMN\020\002B\005" +
+      "P\001\240\001\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.tiwari.studence.proto.datatypes.DataTypesPb.getDescriptor(),
         });
-    internal_static_com_tiwari_studence_proto_htmlWidgets_UiPagePb_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_com_tiwari_studence_proto_htmlWidgets_UiPagePb_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_tiwari_studence_proto_htmlWidgets_UiPagePb_descriptor,
-        new java.lang.String[] { "Tile", "ContainerType", "PageConfig", "ChildrenContainer", "Widgets", });
-    internal_static_com_tiwari_studence_proto_htmlWidgets_WidgetPb_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_com_tiwari_studence_proto_htmlWidgets_WidgetPb_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_tiwari_studence_proto_htmlWidgets_WidgetPb_descriptor,
-        new java.lang.String[] { "WidgetType", "WidgetPosition", "Config", });
-    internal_static_com_tiwari_studence_proto_htmlWidgets_ContainerPb_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_com_tiwari_studence_proto_htmlWidgets_ContainerPb_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_tiwari_studence_proto_htmlWidgets_ContainerPb_descriptor,
-        new java.lang.String[] { "ContainerType", "MainAxisAlignment", "ChildrenWidget", "Config", "ContainerPosition", "ChildContainer", });
-    internal_static_com_tiwari_studence_proto_htmlWidgets_HeadingConfigPb_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_com_tiwari_studence_proto_htmlWidgets_HeadingConfigPb_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_tiwari_studence_proto_htmlWidgets_HeadingConfigPb_descriptor,
-        new java.lang.String[] { "FontSize", "FontWeight", "FontValue", });
-    internal_static_com_tiwari_studence_proto_htmlWidgets_RGBOPb_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_com_tiwari_studence_proto_htmlWidgets_RGBOPb_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_tiwari_studence_proto_htmlWidgets_RGBOPb_descriptor,
-        new java.lang.String[] { "R", "G", "B", "O", });
-    internal_static_com_tiwari_studence_proto_htmlWidgets_ARGBPb_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_com_tiwari_studence_proto_htmlWidgets_ARGBPb_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_tiwari_studence_proto_htmlWidgets_ARGBPb_descriptor,
-        new java.lang.String[] { "R", "G", "B", "O", });
-    internal_static_com_tiwari_studence_proto_htmlWidgets_CheckboxPb_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_com_tiwari_studence_proto_htmlWidgets_CheckboxPb_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_tiwari_studence_proto_htmlWidgets_CheckboxPb_descriptor,
-        new java.lang.String[] { "IsChecked", "CheckboxName", });
-    internal_static_com_tiwari_studence_proto_htmlWidgets_ColorPb_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_com_tiwari_studence_proto_htmlWidgets_ColorPb_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_tiwari_studence_proto_htmlWidgets_ColorPb_descriptor,
-        new java.lang.String[] { "ColorType", "RgboBackgroundColor", "ArgbBackgroundColor", "HexCodeBackgroundColor", "RgboFontColor", "AegbFontColor", "HexCodefontColor", });
-    internal_static_com_tiwari_studence_proto_htmlWidgets_labelPb_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_com_tiwari_studence_proto_htmlWidgets_labelPb_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_tiwari_studence_proto_htmlWidgets_labelPb_descriptor,
-        new java.lang.String[] { "LabelText", });
-    internal_static_com_tiwari_studence_proto_htmlWidgets_InputBoxConfig_descriptor =
-      getDescriptor().getMessageTypes().get(9);
-    internal_static_com_tiwari_studence_proto_htmlWidgets_InputBoxConfig_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_tiwari_studence_proto_htmlWidgets_InputBoxConfig_descriptor,
-        new java.lang.String[] { "Type", "PlaceHolder", "Name", "IsRequired", });
-    internal_static_com_tiwari_studence_proto_htmlWidgets_BorderConfigPb_descriptor =
-      getDescriptor().getMessageTypes().get(10);
-    internal_static_com_tiwari_studence_proto_htmlWidgets_BorderConfigPb_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_tiwari_studence_proto_htmlWidgets_BorderConfigPb_descriptor,
-        new java.lang.String[] { "BorderValueType", "Unit", "Value", "MultipleValues", "Color", "BorderType", });
-    internal_static_com_tiwari_studence_proto_htmlWidgets_ButtonPb_descriptor =
-      getDescriptor().getMessageTypes().get(11);
-    internal_static_com_tiwari_studence_proto_htmlWidgets_ButtonPb_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_tiwari_studence_proto_htmlWidgets_ButtonPb_descriptor,
-        new java.lang.String[] { "ButtonType", "Type", "ButtonName", });
-    internal_static_com_tiwari_studence_proto_htmlWidgets_ATagPb_descriptor =
-      getDescriptor().getMessageTypes().get(12);
-    internal_static_com_tiwari_studence_proto_htmlWidgets_ATagPb_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_tiwari_studence_proto_htmlWidgets_ATagPb_descriptor,
-        new java.lang.String[] { "Href", "Label", });
-    internal_static_com_tiwari_studence_proto_htmlWidgets_ConfigPb_descriptor =
-      getDescriptor().getMessageTypes().get(13);
-    internal_static_com_tiwari_studence_proto_htmlWidgets_ConfigPb_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_tiwari_studence_proto_htmlWidgets_ConfigPb_descriptor,
-        new java.lang.String[] { "Padding", "HeadingConfig", "ColorConfig", "AlignmentType", "LabelConfig", "InputBoxConfig", "MarginConfig", "BorderConfig", "WidthConfig", "CheckboxConfig", "ButtonConfig", "ATagConfig", });
     internal_static_com_tiwari_studence_proto_htmlWidgets_DirectionConfig_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(0);
     internal_static_com_tiwari_studence_proto_htmlWidgets_DirectionConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tiwari_studence_proto_htmlWidgets_DirectionConfig_descriptor,
         new java.lang.String[] { "Top", "Right", "Bottom", "Left", });
     internal_static_com_tiwari_studence_proto_htmlWidgets_MarginPb_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(1);
     internal_static_com_tiwari_studence_proto_htmlWidgets_MarginPb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tiwari_studence_proto_htmlWidgets_MarginPb_descriptor,
         new java.lang.String[] { "MarginType", "Unit", "Value", "MultipleValues", });
     internal_static_com_tiwari_studence_proto_htmlWidgets_WidthPb_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_com_tiwari_studence_proto_htmlWidgets_WidthPb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tiwari_studence_proto_htmlWidgets_WidthPb_descriptor,
         new java.lang.String[] { "WidthType", "Unit", "Value", "MultipleValues", });
+    internal_static_com_tiwari_studence_proto_htmlWidgets_HeightPb_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_com_tiwari_studence_proto_htmlWidgets_HeightPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_htmlWidgets_HeightPb_descriptor,
+        new java.lang.String[] { "WidthType", "Unit", "Value", "MultipleValues", });
     internal_static_com_tiwari_studence_proto_htmlWidgets_PaddingPb_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_com_tiwari_studence_proto_htmlWidgets_PaddingPb_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tiwari_studence_proto_htmlWidgets_PaddingPb_descriptor,
         new java.lang.String[] { "PaddingType", "Unit", "Value", "MultipleValues", });
+    internal_static_com_tiwari_studence_proto_htmlWidgets_BorderRadiusPb_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_com_tiwari_studence_proto_htmlWidgets_BorderRadiusPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_htmlWidgets_BorderRadiusPb_descriptor,
+        new java.lang.String[] { "RadiusType", "BorderValueType", "Unit", "Value", "MultipleValues", });
+    internal_static_com_tiwari_studence_proto_htmlWidgets_RGBOPb_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_com_tiwari_studence_proto_htmlWidgets_RGBOPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_htmlWidgets_RGBOPb_descriptor,
+        new java.lang.String[] { "R", "G", "B", "O", });
+    internal_static_com_tiwari_studence_proto_htmlWidgets_ARGBPb_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_com_tiwari_studence_proto_htmlWidgets_ARGBPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_htmlWidgets_ARGBPb_descriptor,
+        new java.lang.String[] { "R", "G", "B", "O", });
+    internal_static_com_tiwari_studence_proto_htmlWidgets_ColorPb_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_com_tiwari_studence_proto_htmlWidgets_ColorPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_htmlWidgets_ColorPb_descriptor,
+        new java.lang.String[] { "ColorType", "ColorInType", "RgboBackgroundColor", "ArgbBackgroundColor", "HexCodeBackgroundColor", "RgboFontColor", "AegbFontColor", "HexCodefontColor", "RgboForegroundColor", "AegbForegroundColor", "HexCodeForegroundColor", });
+    internal_static_com_tiwari_studence_proto_htmlWidgets_BorderConfigPb_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_com_tiwari_studence_proto_htmlWidgets_BorderConfigPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_htmlWidgets_BorderConfigPb_descriptor,
+        new java.lang.String[] { "BorderValueType", "Unit", "Value", "MultipleValues", "Color", "BorderType", "BorderRadius", });
+    internal_static_com_tiwari_studence_proto_htmlWidgets_ButtonEventPb_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_com_tiwari_studence_proto_htmlWidgets_ButtonEventPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_htmlWidgets_ButtonEventPb_descriptor,
+        new java.lang.String[] { "BackgroundColor", "TextColor", "Height", "Width", "Border", "Label", "LoadingText", "ForegroundColor", });
+    internal_static_com_tiwari_studence_proto_htmlWidgets_ItemPb_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_com_tiwari_studence_proto_htmlWidgets_ItemPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_htmlWidgets_ItemPb_descriptor,
+        new java.lang.String[] { "ButtonLabel", "ButtonIndex", });
+    internal_static_com_tiwari_studence_proto_htmlWidgets_ButtonInputPb_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_com_tiwari_studence_proto_htmlWidgets_ButtonInputPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_htmlWidgets_ButtonInputPb_descriptor,
+        new java.lang.String[] { "BackgroundColor", "TextColor", "IsSelectedBackgroundColor", "IsSelectedTextColor", "Height", "Width", "Border", "ForegroundColor", "Buttons", "Align", "ButtonSpacing", });
+    internal_static_com_tiwari_studence_proto_htmlWidgets_ButtonPb_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_com_tiwari_studence_proto_htmlWidgets_ButtonPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_htmlWidgets_ButtonPb_descriptor,
+        new java.lang.String[] { "ButtonType", "InputType", "EventType", "EventButton", "InputButton", });
+    internal_static_com_tiwari_studence_proto_htmlWidgets_ATagPb_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_com_tiwari_studence_proto_htmlWidgets_ATagPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_htmlWidgets_ATagPb_descriptor,
+        new java.lang.String[] { "Href", "Label", });
+    internal_static_com_tiwari_studence_proto_htmlWidgets_RadioButtonPb_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_com_tiwari_studence_proto_htmlWidgets_RadioButtonPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_htmlWidgets_RadioButtonPb_descriptor,
+        new java.lang.String[] { "BackgroundColor", "TextColor", "IsSelectedBackgroundColor", "IsSelectedTextColor", "Height", "Width", "Border", "ForegroundColor", "Buttons", "Align", "ButtonSpacing", });
+    internal_static_com_tiwari_studence_proto_htmlWidgets_WidgetPb_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_com_tiwari_studence_proto_htmlWidgets_WidgetPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_htmlWidgets_WidgetPb_descriptor,
+        new java.lang.String[] { "WidgetType", "WidgetPosition", "Config", "WidgetId", });
+    internal_static_com_tiwari_studence_proto_htmlWidgets_ContainerPb_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_com_tiwari_studence_proto_htmlWidgets_ContainerPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_htmlWidgets_ContainerPb_descriptor,
+        new java.lang.String[] { "ContainerType", "MainAxisAlignment", "ChildrenWidget", "Config", "ContainerPosition", "ChildContainer", "LayoutType", });
+    internal_static_com_tiwari_studence_proto_htmlWidgets_HeadingConfigPb_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_com_tiwari_studence_proto_htmlWidgets_HeadingConfigPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_htmlWidgets_HeadingConfigPb_descriptor,
+        new java.lang.String[] { "FontSize", "FontWeight", "FontValue", });
+    internal_static_com_tiwari_studence_proto_htmlWidgets_CheckboxPb_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_com_tiwari_studence_proto_htmlWidgets_CheckboxPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_htmlWidgets_CheckboxPb_descriptor,
+        new java.lang.String[] { "IsChecked", "CheckboxName", });
+    internal_static_com_tiwari_studence_proto_htmlWidgets_labelPb_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_com_tiwari_studence_proto_htmlWidgets_labelPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_htmlWidgets_labelPb_descriptor,
+        new java.lang.String[] { "LabelText", });
+    internal_static_com_tiwari_studence_proto_htmlWidgets_InputBoxConfig_descriptor =
+      getDescriptor().getMessageTypes().get(21);
+    internal_static_com_tiwari_studence_proto_htmlWidgets_InputBoxConfig_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_htmlWidgets_InputBoxConfig_descriptor,
+        new java.lang.String[] { "Type", "PlaceHolder", "Name", "IsRequired", });
+    internal_static_com_tiwari_studence_proto_htmlWidgets_AxisAlignmentPb_descriptor =
+      getDescriptor().getMessageTypes().get(22);
+    internal_static_com_tiwari_studence_proto_htmlWidgets_AxisAlignmentPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_htmlWidgets_AxisAlignmentPb_descriptor,
+        new java.lang.String[] { "MainAxisAlignment", "CrossAxisAlignment", "MainAxisSize", });
+    internal_static_com_tiwari_studence_proto_htmlWidgets_ConfigPb_descriptor =
+      getDescriptor().getMessageTypes().get(23);
+    internal_static_com_tiwari_studence_proto_htmlWidgets_ConfigPb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_htmlWidgets_ConfigPb_descriptor,
+        new java.lang.String[] { "Padding", "HeadingConfig", "ColorConfig", "AlignmentType", "LabelConfig", "InputBoxConfig", "MarginConfig", "BorderConfig", "WidthConfig", "CheckboxConfig", "ButtonConfig", "ATagConfig", "RadioButtonConfig", "HeightConfig", "AxisAlignment", });
+    internal_static_com_tiwari_studence_proto_htmlWidgets_UiPagePb_descriptor =
+      getDescriptor().getMessageTypes().get(24);
+    internal_static_com_tiwari_studence_proto_htmlWidgets_UiPagePb_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tiwari_studence_proto_htmlWidgets_UiPagePb_descriptor,
+        new java.lang.String[] { "Tile", "ContainerType", "PageConfig", "ChildrenContainer", "Widgets", });
     com.tiwari.studence.proto.datatypes.DataTypesPb.getDescriptor();
   }
 

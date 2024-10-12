@@ -4,61 +4,53 @@
 package com.tiwari.studence.proto.htmlWidgets;
 
 /**
- * Protobuf enum {@code com.tiwari.studence.proto.htmlWidgets.ValueUnitTypeEnum}
+ * Protobuf enum {@code com.tiwari.studence.proto.htmlWidgets.BorderRadiusTypeEnum}
  */
-public enum ValueUnitTypeEnum
+public enum BorderRadiusTypeEnum
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
-   * <code>UNKNOWN_UNIT_TYPE = 0;</code>
+   * <code>UNKNOWN_BORDER_RADIUS_TYPE = 0;</code>
    */
-  UNKNOWN_UNIT_TYPE(0),
+  UNKNOWN_BORDER_RADIUS_TYPE(0),
   /**
-   * <code>PX = 1;</code>
+   * <code>BORDER_RADIUS = 1;</code>
    */
-  PX(1),
+  BORDER_RADIUS(1),
   /**
-   * <code>PERCENT = 2;</code>
+   * <code>BORDER_RADIUS_ALL = 2;</code>
    */
-  PERCENT(2),
+  BORDER_RADIUS_ALL(2),
   /**
-   * <code>AUTO = 3;</code>
+   * <code>BORDER_RADIUS_ONLY = 3;</code>
    */
-  AUTO(3),
+  BORDER_RADIUS_ONLY(3),
   /**
-   * <code>INFINITY = 4;</code>
+   * <code>BORDER_RADIUS_CIRCULAR = 4;</code>
    */
-  INFINITY(4),
-  /**
-   * <code>VH = 5;</code>
-   */
-  VH(5),
+  BORDER_RADIUS_CIRCULAR(4),
   UNRECOGNIZED(-1),
   ;
 
   /**
-   * <code>UNKNOWN_UNIT_TYPE = 0;</code>
+   * <code>UNKNOWN_BORDER_RADIUS_TYPE = 0;</code>
    */
-  public static final int UNKNOWN_UNIT_TYPE_VALUE = 0;
+  public static final int UNKNOWN_BORDER_RADIUS_TYPE_VALUE = 0;
   /**
-   * <code>PX = 1;</code>
+   * <code>BORDER_RADIUS = 1;</code>
    */
-  public static final int PX_VALUE = 1;
+  public static final int BORDER_RADIUS_VALUE = 1;
   /**
-   * <code>PERCENT = 2;</code>
+   * <code>BORDER_RADIUS_ALL = 2;</code>
    */
-  public static final int PERCENT_VALUE = 2;
+  public static final int BORDER_RADIUS_ALL_VALUE = 2;
   /**
-   * <code>AUTO = 3;</code>
+   * <code>BORDER_RADIUS_ONLY = 3;</code>
    */
-  public static final int AUTO_VALUE = 3;
+  public static final int BORDER_RADIUS_ONLY_VALUE = 3;
   /**
-   * <code>INFINITY = 4;</code>
+   * <code>BORDER_RADIUS_CIRCULAR = 4;</code>
    */
-  public static final int INFINITY_VALUE = 4;
-  /**
-   * <code>VH = 5;</code>
-   */
-  public static final int VH_VALUE = 5;
+  public static final int BORDER_RADIUS_CIRCULAR_VALUE = 4;
 
 
   public final int getNumber() {
@@ -75,7 +67,7 @@ public enum ValueUnitTypeEnum
    * @deprecated Use {@link #forNumber(int)} instead.
    */
   @java.lang.Deprecated
-  public static ValueUnitTypeEnum valueOf(int value) {
+  public static BorderRadiusTypeEnum valueOf(int value) {
     return forNumber(value);
   }
 
@@ -83,27 +75,26 @@ public enum ValueUnitTypeEnum
    * @param value The numeric wire value of the corresponding enum entry.
    * @return The enum associated with the given numeric wire value.
    */
-  public static ValueUnitTypeEnum forNumber(int value) {
+  public static BorderRadiusTypeEnum forNumber(int value) {
     switch (value) {
-      case 0: return UNKNOWN_UNIT_TYPE;
-      case 1: return PX;
-      case 2: return PERCENT;
-      case 3: return AUTO;
-      case 4: return INFINITY;
-      case 5: return VH;
+      case 0: return UNKNOWN_BORDER_RADIUS_TYPE;
+      case 1: return BORDER_RADIUS;
+      case 2: return BORDER_RADIUS_ALL;
+      case 3: return BORDER_RADIUS_ONLY;
+      case 4: return BORDER_RADIUS_CIRCULAR;
       default: return null;
     }
   }
 
-  public static com.google.protobuf.Internal.EnumLiteMap<ValueUnitTypeEnum>
+  public static com.google.protobuf.Internal.EnumLiteMap<BorderRadiusTypeEnum>
       internalGetValueMap() {
     return internalValueMap;
   }
   private static final com.google.protobuf.Internal.EnumLiteMap<
-      ValueUnitTypeEnum> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<ValueUnitTypeEnum>() {
-          public ValueUnitTypeEnum findValueByNumber(int number) {
-            return ValueUnitTypeEnum.forNumber(number);
+      BorderRadiusTypeEnum> internalValueMap =
+        new com.google.protobuf.Internal.EnumLiteMap<BorderRadiusTypeEnum>() {
+          public BorderRadiusTypeEnum findValueByNumber(int number) {
+            return BorderRadiusTypeEnum.forNumber(number);
           }
         };
 
@@ -121,12 +112,12 @@ public enum ValueUnitTypeEnum
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tiwari.studence.proto.htmlWidgets.HtmlWidgets.getDescriptor().getEnumTypes().get(12);
+    return com.tiwari.studence.proto.htmlWidgets.HtmlWidgets.getDescriptor().getEnumTypes().get(5);
   }
 
-  private static final ValueUnitTypeEnum[] VALUES = values();
+  private static final BorderRadiusTypeEnum[] VALUES = values();
 
-  public static ValueUnitTypeEnum valueOf(
+  public static BorderRadiusTypeEnum valueOf(
       com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
     if (desc.getType() != getDescriptor()) {
       throw new java.lang.IllegalArgumentException(
@@ -140,10 +131,10 @@ public enum ValueUnitTypeEnum
 
   private final int value;
 
-  private ValueUnitTypeEnum(int value) {
+  private BorderRadiusTypeEnum(int value) {
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:com.tiwari.studence.proto.htmlWidgets.ValueUnitTypeEnum)
+  // @@protoc_insertion_point(enum_scope:com.tiwari.studence.proto.htmlWidgets.BorderRadiusTypeEnum)
 }
 

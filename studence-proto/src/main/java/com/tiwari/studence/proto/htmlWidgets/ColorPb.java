@@ -17,8 +17,10 @@ private static final long serialVersionUID = 0L;
   }
   private ColorPb() {
     colorType_ = 0;
+    colorInType_ = 0;
     hexCodeBackgroundColor_ = "";
     hexCodefontColor_ = "";
+    hexCodeForegroundColor_ = "";
   }
 
   @java.lang.Override
@@ -64,10 +66,28 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tiwari.studence.proto.htmlWidgets.ColorTypeEnum.UNRECOGNIZED : result;
   }
 
-  public static final int RGBOBACKGROUNDCOLOR_FIELD_NUMBER = 2;
+  public static final int COLORINTYPE_FIELD_NUMBER = 2;
+  private int colorInType_ = 0;
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ColorInTypeEnum colorInType = 2;</code>
+   * @return The enum numeric value on the wire for colorInType.
+   */
+  @java.lang.Override public int getColorInTypeValue() {
+    return colorInType_;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ColorInTypeEnum colorInType = 2;</code>
+   * @return The colorInType.
+   */
+  @java.lang.Override public com.tiwari.studence.proto.htmlWidgets.ColorInTypeEnum getColorInType() {
+    com.tiwari.studence.proto.htmlWidgets.ColorInTypeEnum result = com.tiwari.studence.proto.htmlWidgets.ColorInTypeEnum.forNumber(colorInType_);
+    return result == null ? com.tiwari.studence.proto.htmlWidgets.ColorInTypeEnum.UNRECOGNIZED : result;
+  }
+
+  public static final int RGBOBACKGROUNDCOLOR_FIELD_NUMBER = 3;
   private com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboBackgroundColor_;
   /**
-   * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboBackgroundColor = 2;</code>
+   * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboBackgroundColor = 3;</code>
    * @return Whether the rgboBackgroundColor field is set.
    */
   @java.lang.Override
@@ -75,7 +95,7 @@ private static final long serialVersionUID = 0L;
     return rgboBackgroundColor_ != null;
   }
   /**
-   * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboBackgroundColor = 2;</code>
+   * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboBackgroundColor = 3;</code>
    * @return The rgboBackgroundColor.
    */
   @java.lang.Override
@@ -83,17 +103,17 @@ private static final long serialVersionUID = 0L;
     return rgboBackgroundColor_ == null ? com.tiwari.studence.proto.htmlWidgets.RGBOPb.getDefaultInstance() : rgboBackgroundColor_;
   }
   /**
-   * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboBackgroundColor = 2;</code>
+   * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboBackgroundColor = 3;</code>
    */
   @java.lang.Override
   public com.tiwari.studence.proto.htmlWidgets.RGBOPbOrBuilder getRgboBackgroundColorOrBuilder() {
     return rgboBackgroundColor_ == null ? com.tiwari.studence.proto.htmlWidgets.RGBOPb.getDefaultInstance() : rgboBackgroundColor_;
   }
 
-  public static final int ARGBBACKGROUNDCOLOR_FIELD_NUMBER = 3;
+  public static final int ARGBBACKGROUNDCOLOR_FIELD_NUMBER = 4;
   private com.tiwari.studence.proto.htmlWidgets.ARGBPb argbBackgroundColor_;
   /**
-   * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb argbBackgroundColor = 3;</code>
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb argbBackgroundColor = 4;</code>
    * @return Whether the argbBackgroundColor field is set.
    */
   @java.lang.Override
@@ -101,7 +121,7 @@ private static final long serialVersionUID = 0L;
     return argbBackgroundColor_ != null;
   }
   /**
-   * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb argbBackgroundColor = 3;</code>
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb argbBackgroundColor = 4;</code>
    * @return The argbBackgroundColor.
    */
   @java.lang.Override
@@ -109,18 +129,18 @@ private static final long serialVersionUID = 0L;
     return argbBackgroundColor_ == null ? com.tiwari.studence.proto.htmlWidgets.ARGBPb.getDefaultInstance() : argbBackgroundColor_;
   }
   /**
-   * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb argbBackgroundColor = 3;</code>
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb argbBackgroundColor = 4;</code>
    */
   @java.lang.Override
   public com.tiwari.studence.proto.htmlWidgets.ARGBPbOrBuilder getArgbBackgroundColorOrBuilder() {
     return argbBackgroundColor_ == null ? com.tiwari.studence.proto.htmlWidgets.ARGBPb.getDefaultInstance() : argbBackgroundColor_;
   }
 
-  public static final int HEXCODEBACKGROUNDCOLOR_FIELD_NUMBER = 4;
+  public static final int HEXCODEBACKGROUNDCOLOR_FIELD_NUMBER = 5;
   @SuppressWarnings("serial")
   private volatile java.lang.Object hexCodeBackgroundColor_ = "";
   /**
-   * <code>string hexCodeBackgroundColor = 4;</code>
+   * <code>string hexCodeBackgroundColor = 5;</code>
    * @return The hexCodeBackgroundColor.
    */
   @java.lang.Override
@@ -137,7 +157,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string hexCodeBackgroundColor = 4;</code>
+   * <code>string hexCodeBackgroundColor = 5;</code>
    * @return The bytes for hexCodeBackgroundColor.
    */
   @java.lang.Override
@@ -155,10 +175,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int RGBOFONTCOLOR_FIELD_NUMBER = 5;
+  public static final int RGBOFONTCOLOR_FIELD_NUMBER = 6;
   private com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboFontColor_;
   /**
-   * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboFontColor = 5;</code>
+   * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboFontColor = 6;</code>
    * @return Whether the rgboFontColor field is set.
    */
   @java.lang.Override
@@ -166,7 +186,7 @@ private static final long serialVersionUID = 0L;
     return rgboFontColor_ != null;
   }
   /**
-   * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboFontColor = 5;</code>
+   * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboFontColor = 6;</code>
    * @return The rgboFontColor.
    */
   @java.lang.Override
@@ -174,17 +194,17 @@ private static final long serialVersionUID = 0L;
     return rgboFontColor_ == null ? com.tiwari.studence.proto.htmlWidgets.RGBOPb.getDefaultInstance() : rgboFontColor_;
   }
   /**
-   * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboFontColor = 5;</code>
+   * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboFontColor = 6;</code>
    */
   @java.lang.Override
   public com.tiwari.studence.proto.htmlWidgets.RGBOPbOrBuilder getRgboFontColorOrBuilder() {
     return rgboFontColor_ == null ? com.tiwari.studence.proto.htmlWidgets.RGBOPb.getDefaultInstance() : rgboFontColor_;
   }
 
-  public static final int AEGBFONTCOLOR_FIELD_NUMBER = 6;
+  public static final int AEGBFONTCOLOR_FIELD_NUMBER = 7;
   private com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbFontColor_;
   /**
-   * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbFontColor = 6;</code>
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbFontColor = 7;</code>
    * @return Whether the aegbFontColor field is set.
    */
   @java.lang.Override
@@ -192,7 +212,7 @@ private static final long serialVersionUID = 0L;
     return aegbFontColor_ != null;
   }
   /**
-   * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbFontColor = 6;</code>
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbFontColor = 7;</code>
    * @return The aegbFontColor.
    */
   @java.lang.Override
@@ -200,18 +220,18 @@ private static final long serialVersionUID = 0L;
     return aegbFontColor_ == null ? com.tiwari.studence.proto.htmlWidgets.ARGBPb.getDefaultInstance() : aegbFontColor_;
   }
   /**
-   * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbFontColor = 6;</code>
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbFontColor = 7;</code>
    */
   @java.lang.Override
   public com.tiwari.studence.proto.htmlWidgets.ARGBPbOrBuilder getAegbFontColorOrBuilder() {
     return aegbFontColor_ == null ? com.tiwari.studence.proto.htmlWidgets.ARGBPb.getDefaultInstance() : aegbFontColor_;
   }
 
-  public static final int HEXCODEFONTCOLOR_FIELD_NUMBER = 7;
+  public static final int HEXCODEFONTCOLOR_FIELD_NUMBER = 8;
   @SuppressWarnings("serial")
   private volatile java.lang.Object hexCodefontColor_ = "";
   /**
-   * <code>string hexCodefontColor = 7;</code>
+   * <code>string hexCodefontColor = 8;</code>
    * @return The hexCodefontColor.
    */
   @java.lang.Override
@@ -228,7 +248,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string hexCodefontColor = 7;</code>
+   * <code>string hexCodefontColor = 8;</code>
    * @return The bytes for hexCodefontColor.
    */
   @java.lang.Override
@@ -240,6 +260,97 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
       hexCodefontColor_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int RGBOFOREGROUNDCOLOR_FIELD_NUMBER = 9;
+  private com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboForegroundColor_;
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboForegroundColor = 9;</code>
+   * @return Whether the rgboForegroundColor field is set.
+   */
+  @java.lang.Override
+  public boolean hasRgboForegroundColor() {
+    return rgboForegroundColor_ != null;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboForegroundColor = 9;</code>
+   * @return The rgboForegroundColor.
+   */
+  @java.lang.Override
+  public com.tiwari.studence.proto.htmlWidgets.RGBOPb getRgboForegroundColor() {
+    return rgboForegroundColor_ == null ? com.tiwari.studence.proto.htmlWidgets.RGBOPb.getDefaultInstance() : rgboForegroundColor_;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboForegroundColor = 9;</code>
+   */
+  @java.lang.Override
+  public com.tiwari.studence.proto.htmlWidgets.RGBOPbOrBuilder getRgboForegroundColorOrBuilder() {
+    return rgboForegroundColor_ == null ? com.tiwari.studence.proto.htmlWidgets.RGBOPb.getDefaultInstance() : rgboForegroundColor_;
+  }
+
+  public static final int AEGBFOREGROUNDCOLOR_FIELD_NUMBER = 10;
+  private com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbForegroundColor_;
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbForegroundColor = 10;</code>
+   * @return Whether the aegbForegroundColor field is set.
+   */
+  @java.lang.Override
+  public boolean hasAegbForegroundColor() {
+    return aegbForegroundColor_ != null;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbForegroundColor = 10;</code>
+   * @return The aegbForegroundColor.
+   */
+  @java.lang.Override
+  public com.tiwari.studence.proto.htmlWidgets.ARGBPb getAegbForegroundColor() {
+    return aegbForegroundColor_ == null ? com.tiwari.studence.proto.htmlWidgets.ARGBPb.getDefaultInstance() : aegbForegroundColor_;
+  }
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbForegroundColor = 10;</code>
+   */
+  @java.lang.Override
+  public com.tiwari.studence.proto.htmlWidgets.ARGBPbOrBuilder getAegbForegroundColorOrBuilder() {
+    return aegbForegroundColor_ == null ? com.tiwari.studence.proto.htmlWidgets.ARGBPb.getDefaultInstance() : aegbForegroundColor_;
+  }
+
+  public static final int HEXCODEFOREGROUNDCOLOR_FIELD_NUMBER = 11;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object hexCodeForegroundColor_ = "";
+  /**
+   * <code>string hexCodeForegroundColor = 11;</code>
+   * @return The hexCodeForegroundColor.
+   */
+  @java.lang.Override
+  public java.lang.String getHexCodeForegroundColor() {
+    java.lang.Object ref = hexCodeForegroundColor_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      hexCodeForegroundColor_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string hexCodeForegroundColor = 11;</code>
+   * @return The bytes for hexCodeForegroundColor.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getHexCodeForegroundColorBytes() {
+    java.lang.Object ref = hexCodeForegroundColor_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      hexCodeForegroundColor_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -263,23 +374,35 @@ private static final long serialVersionUID = 0L;
     if (colorType_ != com.tiwari.studence.proto.htmlWidgets.ColorTypeEnum.UNKNOWN_COLOR_TYPE.getNumber()) {
       output.writeEnum(1, colorType_);
     }
+    if (colorInType_ != com.tiwari.studence.proto.htmlWidgets.ColorInTypeEnum.UNKNOWN_COLOR_IN_TYPE.getNumber()) {
+      output.writeEnum(2, colorInType_);
+    }
     if (rgboBackgroundColor_ != null) {
-      output.writeMessage(2, getRgboBackgroundColor());
+      output.writeMessage(3, getRgboBackgroundColor());
     }
     if (argbBackgroundColor_ != null) {
-      output.writeMessage(3, getArgbBackgroundColor());
+      output.writeMessage(4, getArgbBackgroundColor());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hexCodeBackgroundColor_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, hexCodeBackgroundColor_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, hexCodeBackgroundColor_);
     }
     if (rgboFontColor_ != null) {
-      output.writeMessage(5, getRgboFontColor());
+      output.writeMessage(6, getRgboFontColor());
     }
     if (aegbFontColor_ != null) {
-      output.writeMessage(6, getAegbFontColor());
+      output.writeMessage(7, getAegbFontColor());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hexCodefontColor_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, hexCodefontColor_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, hexCodefontColor_);
+    }
+    if (rgboForegroundColor_ != null) {
+      output.writeMessage(9, getRgboForegroundColor());
+    }
+    if (aegbForegroundColor_ != null) {
+      output.writeMessage(10, getAegbForegroundColor());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hexCodeForegroundColor_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 11, hexCodeForegroundColor_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -294,27 +417,42 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(1, colorType_);
     }
+    if (colorInType_ != com.tiwari.studence.proto.htmlWidgets.ColorInTypeEnum.UNKNOWN_COLOR_IN_TYPE.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(2, colorInType_);
+    }
     if (rgboBackgroundColor_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, getRgboBackgroundColor());
+        .computeMessageSize(3, getRgboBackgroundColor());
     }
     if (argbBackgroundColor_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, getArgbBackgroundColor());
+        .computeMessageSize(4, getArgbBackgroundColor());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hexCodeBackgroundColor_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, hexCodeBackgroundColor_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, hexCodeBackgroundColor_);
     }
     if (rgboFontColor_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, getRgboFontColor());
+        .computeMessageSize(6, getRgboFontColor());
     }
     if (aegbFontColor_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6, getAegbFontColor());
+        .computeMessageSize(7, getAegbFontColor());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hexCodefontColor_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, hexCodefontColor_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, hexCodefontColor_);
+    }
+    if (rgboForegroundColor_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, getRgboForegroundColor());
+    }
+    if (aegbForegroundColor_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, getAegbForegroundColor());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hexCodeForegroundColor_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, hexCodeForegroundColor_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -332,6 +470,7 @@ private static final long serialVersionUID = 0L;
     com.tiwari.studence.proto.htmlWidgets.ColorPb other = (com.tiwari.studence.proto.htmlWidgets.ColorPb) obj;
 
     if (colorType_ != other.colorType_) return false;
+    if (colorInType_ != other.colorInType_) return false;
     if (hasRgboBackgroundColor() != other.hasRgboBackgroundColor()) return false;
     if (hasRgboBackgroundColor()) {
       if (!getRgboBackgroundColor()
@@ -356,6 +495,18 @@ private static final long serialVersionUID = 0L;
     }
     if (!getHexCodefontColor()
         .equals(other.getHexCodefontColor())) return false;
+    if (hasRgboForegroundColor() != other.hasRgboForegroundColor()) return false;
+    if (hasRgboForegroundColor()) {
+      if (!getRgboForegroundColor()
+          .equals(other.getRgboForegroundColor())) return false;
+    }
+    if (hasAegbForegroundColor() != other.hasAegbForegroundColor()) return false;
+    if (hasAegbForegroundColor()) {
+      if (!getAegbForegroundColor()
+          .equals(other.getAegbForegroundColor())) return false;
+    }
+    if (!getHexCodeForegroundColor()
+        .equals(other.getHexCodeForegroundColor())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -369,6 +520,8 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + COLORTYPE_FIELD_NUMBER;
     hash = (53 * hash) + colorType_;
+    hash = (37 * hash) + COLORINTYPE_FIELD_NUMBER;
+    hash = (53 * hash) + colorInType_;
     if (hasRgboBackgroundColor()) {
       hash = (37 * hash) + RGBOBACKGROUNDCOLOR_FIELD_NUMBER;
       hash = (53 * hash) + getRgboBackgroundColor().hashCode();
@@ -389,6 +542,16 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + HEXCODEFONTCOLOR_FIELD_NUMBER;
     hash = (53 * hash) + getHexCodefontColor().hashCode();
+    if (hasRgboForegroundColor()) {
+      hash = (37 * hash) + RGBOFOREGROUNDCOLOR_FIELD_NUMBER;
+      hash = (53 * hash) + getRgboForegroundColor().hashCode();
+    }
+    if (hasAegbForegroundColor()) {
+      hash = (37 * hash) + AEGBFOREGROUNDCOLOR_FIELD_NUMBER;
+      hash = (53 * hash) + getAegbForegroundColor().hashCode();
+    }
+    hash = (37 * hash) + HEXCODEFOREGROUNDCOLOR_FIELD_NUMBER;
+    hash = (53 * hash) + getHexCodeForegroundColor().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -519,6 +682,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       colorType_ = 0;
+      colorInType_ = 0;
       rgboBackgroundColor_ = null;
       if (rgboBackgroundColorBuilder_ != null) {
         rgboBackgroundColorBuilder_.dispose();
@@ -541,6 +705,17 @@ private static final long serialVersionUID = 0L;
         aegbFontColorBuilder_ = null;
       }
       hexCodefontColor_ = "";
+      rgboForegroundColor_ = null;
+      if (rgboForegroundColorBuilder_ != null) {
+        rgboForegroundColorBuilder_.dispose();
+        rgboForegroundColorBuilder_ = null;
+      }
+      aegbForegroundColor_ = null;
+      if (aegbForegroundColorBuilder_ != null) {
+        aegbForegroundColorBuilder_.dispose();
+        aegbForegroundColorBuilder_ = null;
+      }
+      hexCodeForegroundColor_ = "";
       return this;
     }
 
@@ -578,30 +753,46 @@ private static final long serialVersionUID = 0L;
         result.colorType_ = colorType_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.colorInType_ = colorInType_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.rgboBackgroundColor_ = rgboBackgroundColorBuilder_ == null
             ? rgboBackgroundColor_
             : rgboBackgroundColorBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.argbBackgroundColor_ = argbBackgroundColorBuilder_ == null
             ? argbBackgroundColor_
             : argbBackgroundColorBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.hexCodeBackgroundColor_ = hexCodeBackgroundColor_;
       }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000020) != 0)) {
         result.rgboFontColor_ = rgboFontColorBuilder_ == null
             ? rgboFontColor_
             : rgboFontColorBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000040) != 0)) {
         result.aegbFontColor_ = aegbFontColorBuilder_ == null
             ? aegbFontColor_
             : aegbFontColorBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
+      if (((from_bitField0_ & 0x00000080) != 0)) {
         result.hexCodefontColor_ = hexCodefontColor_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.rgboForegroundColor_ = rgboForegroundColorBuilder_ == null
+            ? rgboForegroundColor_
+            : rgboForegroundColorBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.aegbForegroundColor_ = aegbForegroundColorBuilder_ == null
+            ? aegbForegroundColor_
+            : aegbForegroundColorBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.hexCodeForegroundColor_ = hexCodeForegroundColor_;
       }
     }
 
@@ -652,6 +843,9 @@ private static final long serialVersionUID = 0L;
       if (other.colorType_ != 0) {
         setColorTypeValue(other.getColorTypeValue());
       }
+      if (other.colorInType_ != 0) {
+        setColorInTypeValue(other.getColorInTypeValue());
+      }
       if (other.hasRgboBackgroundColor()) {
         mergeRgboBackgroundColor(other.getRgboBackgroundColor());
       }
@@ -660,7 +854,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getHexCodeBackgroundColor().isEmpty()) {
         hexCodeBackgroundColor_ = other.hexCodeBackgroundColor_;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (other.hasRgboFontColor()) {
@@ -671,7 +865,18 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getHexCodefontColor().isEmpty()) {
         hexCodefontColor_ = other.hexCodefontColor_;
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
+      if (other.hasRgboForegroundColor()) {
+        mergeRgboForegroundColor(other.getRgboForegroundColor());
+      }
+      if (other.hasAegbForegroundColor()) {
+        mergeAegbForegroundColor(other.getAegbForegroundColor());
+      }
+      if (!other.getHexCodeForegroundColor().isEmpty()) {
+        hexCodeForegroundColor_ = other.hexCodeForegroundColor_;
+        bitField0_ |= 0x00000400;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -705,44 +910,68 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 8
-            case 18: {
-              input.readMessage(
-                  getRgboBackgroundColorFieldBuilder().getBuilder(),
-                  extensionRegistry);
+            case 16: {
+              colorInType_ = input.readEnum();
               bitField0_ |= 0x00000002;
               break;
-            } // case 18
+            } // case 16
             case 26: {
               input.readMessage(
-                  getArgbBackgroundColorFieldBuilder().getBuilder(),
+                  getRgboBackgroundColorFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 34: {
-              hexCodeBackgroundColor_ = input.readStringRequireUtf8();
+              input.readMessage(
+                  getArgbBackgroundColorFieldBuilder().getBuilder(),
+                  extensionRegistry);
               bitField0_ |= 0x00000008;
               break;
             } // case 34
             case 42: {
-              input.readMessage(
-                  getRgboFontColorFieldBuilder().getBuilder(),
-                  extensionRegistry);
+              hexCodeBackgroundColor_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000010;
               break;
             } // case 42
             case 50: {
               input.readMessage(
-                  getAegbFontColorFieldBuilder().getBuilder(),
+                  getRgboFontColorFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000020;
               break;
             } // case 50
             case 58: {
-              hexCodefontColor_ = input.readStringRequireUtf8();
+              input.readMessage(
+                  getAegbFontColorFieldBuilder().getBuilder(),
+                  extensionRegistry);
               bitField0_ |= 0x00000040;
               break;
             } // case 58
+            case 66: {
+              hexCodefontColor_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
+            case 74: {
+              input.readMessage(
+                  getRgboForegroundColorFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 74
+            case 82: {
+              input.readMessage(
+                  getAegbForegroundColorFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 82
+            case 90: {
+              hexCodeForegroundColor_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 90
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -813,18 +1042,71 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int colorInType_ = 0;
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ColorInTypeEnum colorInType = 2;</code>
+     * @return The enum numeric value on the wire for colorInType.
+     */
+    @java.lang.Override public int getColorInTypeValue() {
+      return colorInType_;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ColorInTypeEnum colorInType = 2;</code>
+     * @param value The enum numeric value on the wire for colorInType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setColorInTypeValue(int value) {
+      colorInType_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ColorInTypeEnum colorInType = 2;</code>
+     * @return The colorInType.
+     */
+    @java.lang.Override
+    public com.tiwari.studence.proto.htmlWidgets.ColorInTypeEnum getColorInType() {
+      com.tiwari.studence.proto.htmlWidgets.ColorInTypeEnum result = com.tiwari.studence.proto.htmlWidgets.ColorInTypeEnum.forNumber(colorInType_);
+      return result == null ? com.tiwari.studence.proto.htmlWidgets.ColorInTypeEnum.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ColorInTypeEnum colorInType = 2;</code>
+     * @param value The colorInType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setColorInType(com.tiwari.studence.proto.htmlWidgets.ColorInTypeEnum value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000002;
+      colorInType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ColorInTypeEnum colorInType = 2;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearColorInType() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      colorInType_ = 0;
+      onChanged();
+      return this;
+    }
+
     private com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboBackgroundColor_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tiwari.studence.proto.htmlWidgets.RGBOPb, com.tiwari.studence.proto.htmlWidgets.RGBOPb.Builder, com.tiwari.studence.proto.htmlWidgets.RGBOPbOrBuilder> rgboBackgroundColorBuilder_;
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboBackgroundColor = 2;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboBackgroundColor = 3;</code>
      * @return Whether the rgboBackgroundColor field is set.
      */
     public boolean hasRgboBackgroundColor() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboBackgroundColor = 2;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboBackgroundColor = 3;</code>
      * @return The rgboBackgroundColor.
      */
     public com.tiwari.studence.proto.htmlWidgets.RGBOPb getRgboBackgroundColor() {
@@ -835,7 +1117,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboBackgroundColor = 2;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboBackgroundColor = 3;</code>
      */
     public Builder setRgboBackgroundColor(com.tiwari.studence.proto.htmlWidgets.RGBOPb value) {
       if (rgboBackgroundColorBuilder_ == null) {
@@ -846,12 +1128,12 @@ private static final long serialVersionUID = 0L;
       } else {
         rgboBackgroundColorBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboBackgroundColor = 2;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboBackgroundColor = 3;</code>
      */
     public Builder setRgboBackgroundColor(
         com.tiwari.studence.proto.htmlWidgets.RGBOPb.Builder builderForValue) {
@@ -860,16 +1142,16 @@ private static final long serialVersionUID = 0L;
       } else {
         rgboBackgroundColorBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboBackgroundColor = 2;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboBackgroundColor = 3;</code>
      */
     public Builder mergeRgboBackgroundColor(com.tiwari.studence.proto.htmlWidgets.RGBOPb value) {
       if (rgboBackgroundColorBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
+        if (((bitField0_ & 0x00000004) != 0) &&
           rgboBackgroundColor_ != null &&
           rgboBackgroundColor_ != com.tiwari.studence.proto.htmlWidgets.RGBOPb.getDefaultInstance()) {
           getRgboBackgroundColorBuilder().mergeFrom(value);
@@ -879,15 +1161,15 @@ private static final long serialVersionUID = 0L;
       } else {
         rgboBackgroundColorBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboBackgroundColor = 2;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboBackgroundColor = 3;</code>
      */
     public Builder clearRgboBackgroundColor() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       rgboBackgroundColor_ = null;
       if (rgboBackgroundColorBuilder_ != null) {
         rgboBackgroundColorBuilder_.dispose();
@@ -897,15 +1179,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboBackgroundColor = 2;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboBackgroundColor = 3;</code>
      */
     public com.tiwari.studence.proto.htmlWidgets.RGBOPb.Builder getRgboBackgroundColorBuilder() {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return getRgboBackgroundColorFieldBuilder().getBuilder();
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboBackgroundColor = 2;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboBackgroundColor = 3;</code>
      */
     public com.tiwari.studence.proto.htmlWidgets.RGBOPbOrBuilder getRgboBackgroundColorOrBuilder() {
       if (rgboBackgroundColorBuilder_ != null) {
@@ -916,7 +1198,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboBackgroundColor = 2;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboBackgroundColor = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tiwari.studence.proto.htmlWidgets.RGBOPb, com.tiwari.studence.proto.htmlWidgets.RGBOPb.Builder, com.tiwari.studence.proto.htmlWidgets.RGBOPbOrBuilder> 
@@ -936,14 +1218,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tiwari.studence.proto.htmlWidgets.ARGBPb, com.tiwari.studence.proto.htmlWidgets.ARGBPb.Builder, com.tiwari.studence.proto.htmlWidgets.ARGBPbOrBuilder> argbBackgroundColorBuilder_;
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb argbBackgroundColor = 3;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb argbBackgroundColor = 4;</code>
      * @return Whether the argbBackgroundColor field is set.
      */
     public boolean hasArgbBackgroundColor() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb argbBackgroundColor = 3;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb argbBackgroundColor = 4;</code>
      * @return The argbBackgroundColor.
      */
     public com.tiwari.studence.proto.htmlWidgets.ARGBPb getArgbBackgroundColor() {
@@ -954,7 +1236,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb argbBackgroundColor = 3;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb argbBackgroundColor = 4;</code>
      */
     public Builder setArgbBackgroundColor(com.tiwari.studence.proto.htmlWidgets.ARGBPb value) {
       if (argbBackgroundColorBuilder_ == null) {
@@ -965,12 +1247,12 @@ private static final long serialVersionUID = 0L;
       } else {
         argbBackgroundColorBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb argbBackgroundColor = 3;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb argbBackgroundColor = 4;</code>
      */
     public Builder setArgbBackgroundColor(
         com.tiwari.studence.proto.htmlWidgets.ARGBPb.Builder builderForValue) {
@@ -979,16 +1261,16 @@ private static final long serialVersionUID = 0L;
       } else {
         argbBackgroundColorBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb argbBackgroundColor = 3;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb argbBackgroundColor = 4;</code>
      */
     public Builder mergeArgbBackgroundColor(com.tiwari.studence.proto.htmlWidgets.ARGBPb value) {
       if (argbBackgroundColorBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0) &&
+        if (((bitField0_ & 0x00000008) != 0) &&
           argbBackgroundColor_ != null &&
           argbBackgroundColor_ != com.tiwari.studence.proto.htmlWidgets.ARGBPb.getDefaultInstance()) {
           getArgbBackgroundColorBuilder().mergeFrom(value);
@@ -998,15 +1280,15 @@ private static final long serialVersionUID = 0L;
       } else {
         argbBackgroundColorBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb argbBackgroundColor = 3;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb argbBackgroundColor = 4;</code>
      */
     public Builder clearArgbBackgroundColor() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000008);
       argbBackgroundColor_ = null;
       if (argbBackgroundColorBuilder_ != null) {
         argbBackgroundColorBuilder_.dispose();
@@ -1016,15 +1298,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb argbBackgroundColor = 3;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb argbBackgroundColor = 4;</code>
      */
     public com.tiwari.studence.proto.htmlWidgets.ARGBPb.Builder getArgbBackgroundColorBuilder() {
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       onChanged();
       return getArgbBackgroundColorFieldBuilder().getBuilder();
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb argbBackgroundColor = 3;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb argbBackgroundColor = 4;</code>
      */
     public com.tiwari.studence.proto.htmlWidgets.ARGBPbOrBuilder getArgbBackgroundColorOrBuilder() {
       if (argbBackgroundColorBuilder_ != null) {
@@ -1035,7 +1317,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb argbBackgroundColor = 3;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb argbBackgroundColor = 4;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tiwari.studence.proto.htmlWidgets.ARGBPb, com.tiwari.studence.proto.htmlWidgets.ARGBPb.Builder, com.tiwari.studence.proto.htmlWidgets.ARGBPbOrBuilder> 
@@ -1053,7 +1335,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object hexCodeBackgroundColor_ = "";
     /**
-     * <code>string hexCodeBackgroundColor = 4;</code>
+     * <code>string hexCodeBackgroundColor = 5;</code>
      * @return The hexCodeBackgroundColor.
      */
     public java.lang.String getHexCodeBackgroundColor() {
@@ -1069,7 +1351,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string hexCodeBackgroundColor = 4;</code>
+     * <code>string hexCodeBackgroundColor = 5;</code>
      * @return The bytes for hexCodeBackgroundColor.
      */
     public com.google.protobuf.ByteString
@@ -1086,7 +1368,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string hexCodeBackgroundColor = 4;</code>
+     * <code>string hexCodeBackgroundColor = 5;</code>
      * @param value The hexCodeBackgroundColor to set.
      * @return This builder for chaining.
      */
@@ -1094,22 +1376,22 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       hexCodeBackgroundColor_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
     /**
-     * <code>string hexCodeBackgroundColor = 4;</code>
+     * <code>string hexCodeBackgroundColor = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearHexCodeBackgroundColor() {
       hexCodeBackgroundColor_ = getDefaultInstance().getHexCodeBackgroundColor();
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
     /**
-     * <code>string hexCodeBackgroundColor = 4;</code>
+     * <code>string hexCodeBackgroundColor = 5;</code>
      * @param value The bytes for hexCodeBackgroundColor to set.
      * @return This builder for chaining.
      */
@@ -1118,7 +1400,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       hexCodeBackgroundColor_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1127,14 +1409,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tiwari.studence.proto.htmlWidgets.RGBOPb, com.tiwari.studence.proto.htmlWidgets.RGBOPb.Builder, com.tiwari.studence.proto.htmlWidgets.RGBOPbOrBuilder> rgboFontColorBuilder_;
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboFontColor = 5;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboFontColor = 6;</code>
      * @return Whether the rgboFontColor field is set.
      */
     public boolean hasRgboFontColor() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboFontColor = 5;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboFontColor = 6;</code>
      * @return The rgboFontColor.
      */
     public com.tiwari.studence.proto.htmlWidgets.RGBOPb getRgboFontColor() {
@@ -1145,7 +1427,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboFontColor = 5;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboFontColor = 6;</code>
      */
     public Builder setRgboFontColor(com.tiwari.studence.proto.htmlWidgets.RGBOPb value) {
       if (rgboFontColorBuilder_ == null) {
@@ -1156,12 +1438,12 @@ private static final long serialVersionUID = 0L;
       } else {
         rgboFontColorBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboFontColor = 5;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboFontColor = 6;</code>
      */
     public Builder setRgboFontColor(
         com.tiwari.studence.proto.htmlWidgets.RGBOPb.Builder builderForValue) {
@@ -1170,16 +1452,16 @@ private static final long serialVersionUID = 0L;
       } else {
         rgboFontColorBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboFontColor = 5;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboFontColor = 6;</code>
      */
     public Builder mergeRgboFontColor(com.tiwari.studence.proto.htmlWidgets.RGBOPb value) {
       if (rgboFontColorBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0) &&
+        if (((bitField0_ & 0x00000020) != 0) &&
           rgboFontColor_ != null &&
           rgboFontColor_ != com.tiwari.studence.proto.htmlWidgets.RGBOPb.getDefaultInstance()) {
           getRgboFontColorBuilder().mergeFrom(value);
@@ -1189,15 +1471,15 @@ private static final long serialVersionUID = 0L;
       } else {
         rgboFontColorBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboFontColor = 5;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboFontColor = 6;</code>
      */
     public Builder clearRgboFontColor() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000020);
       rgboFontColor_ = null;
       if (rgboFontColorBuilder_ != null) {
         rgboFontColorBuilder_.dispose();
@@ -1207,15 +1489,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboFontColor = 5;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboFontColor = 6;</code>
      */
     public com.tiwari.studence.proto.htmlWidgets.RGBOPb.Builder getRgboFontColorBuilder() {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return getRgboFontColorFieldBuilder().getBuilder();
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboFontColor = 5;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboFontColor = 6;</code>
      */
     public com.tiwari.studence.proto.htmlWidgets.RGBOPbOrBuilder getRgboFontColorOrBuilder() {
       if (rgboFontColorBuilder_ != null) {
@@ -1226,7 +1508,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboFontColor = 5;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboFontColor = 6;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tiwari.studence.proto.htmlWidgets.RGBOPb, com.tiwari.studence.proto.htmlWidgets.RGBOPb.Builder, com.tiwari.studence.proto.htmlWidgets.RGBOPbOrBuilder> 
@@ -1246,14 +1528,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tiwari.studence.proto.htmlWidgets.ARGBPb, com.tiwari.studence.proto.htmlWidgets.ARGBPb.Builder, com.tiwari.studence.proto.htmlWidgets.ARGBPbOrBuilder> aegbFontColorBuilder_;
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbFontColor = 6;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbFontColor = 7;</code>
      * @return Whether the aegbFontColor field is set.
      */
     public boolean hasAegbFontColor() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbFontColor = 6;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbFontColor = 7;</code>
      * @return The aegbFontColor.
      */
     public com.tiwari.studence.proto.htmlWidgets.ARGBPb getAegbFontColor() {
@@ -1264,7 +1546,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbFontColor = 6;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbFontColor = 7;</code>
      */
     public Builder setAegbFontColor(com.tiwari.studence.proto.htmlWidgets.ARGBPb value) {
       if (aegbFontColorBuilder_ == null) {
@@ -1275,12 +1557,12 @@ private static final long serialVersionUID = 0L;
       } else {
         aegbFontColorBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbFontColor = 6;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbFontColor = 7;</code>
      */
     public Builder setAegbFontColor(
         com.tiwari.studence.proto.htmlWidgets.ARGBPb.Builder builderForValue) {
@@ -1289,16 +1571,16 @@ private static final long serialVersionUID = 0L;
       } else {
         aegbFontColorBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbFontColor = 6;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbFontColor = 7;</code>
      */
     public Builder mergeAegbFontColor(com.tiwari.studence.proto.htmlWidgets.ARGBPb value) {
       if (aegbFontColorBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0) &&
+        if (((bitField0_ & 0x00000040) != 0) &&
           aegbFontColor_ != null &&
           aegbFontColor_ != com.tiwari.studence.proto.htmlWidgets.ARGBPb.getDefaultInstance()) {
           getAegbFontColorBuilder().mergeFrom(value);
@@ -1308,15 +1590,15 @@ private static final long serialVersionUID = 0L;
       } else {
         aegbFontColorBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbFontColor = 6;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbFontColor = 7;</code>
      */
     public Builder clearAegbFontColor() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000040);
       aegbFontColor_ = null;
       if (aegbFontColorBuilder_ != null) {
         aegbFontColorBuilder_.dispose();
@@ -1326,15 +1608,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbFontColor = 6;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbFontColor = 7;</code>
      */
     public com.tiwari.studence.proto.htmlWidgets.ARGBPb.Builder getAegbFontColorBuilder() {
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return getAegbFontColorFieldBuilder().getBuilder();
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbFontColor = 6;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbFontColor = 7;</code>
      */
     public com.tiwari.studence.proto.htmlWidgets.ARGBPbOrBuilder getAegbFontColorOrBuilder() {
       if (aegbFontColorBuilder_ != null) {
@@ -1345,7 +1627,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbFontColor = 6;</code>
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbFontColor = 7;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tiwari.studence.proto.htmlWidgets.ARGBPb, com.tiwari.studence.proto.htmlWidgets.ARGBPb.Builder, com.tiwari.studence.proto.htmlWidgets.ARGBPbOrBuilder> 
@@ -1363,7 +1645,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object hexCodefontColor_ = "";
     /**
-     * <code>string hexCodefontColor = 7;</code>
+     * <code>string hexCodefontColor = 8;</code>
      * @return The hexCodefontColor.
      */
     public java.lang.String getHexCodefontColor() {
@@ -1379,7 +1661,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string hexCodefontColor = 7;</code>
+     * <code>string hexCodefontColor = 8;</code>
      * @return The bytes for hexCodefontColor.
      */
     public com.google.protobuf.ByteString
@@ -1396,7 +1678,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string hexCodefontColor = 7;</code>
+     * <code>string hexCodefontColor = 8;</code>
      * @param value The hexCodefontColor to set.
      * @return This builder for chaining.
      */
@@ -1404,22 +1686,22 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       hexCodefontColor_ = value;
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
     /**
-     * <code>string hexCodefontColor = 7;</code>
+     * <code>string hexCodefontColor = 8;</code>
      * @return This builder for chaining.
      */
     public Builder clearHexCodefontColor() {
       hexCodefontColor_ = getDefaultInstance().getHexCodefontColor();
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
     /**
-     * <code>string hexCodefontColor = 7;</code>
+     * <code>string hexCodefontColor = 8;</code>
      * @param value The bytes for hexCodefontColor to set.
      * @return This builder for chaining.
      */
@@ -1428,7 +1710,317 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       hexCodefontColor_ = value;
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+
+    private com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboForegroundColor_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tiwari.studence.proto.htmlWidgets.RGBOPb, com.tiwari.studence.proto.htmlWidgets.RGBOPb.Builder, com.tiwari.studence.proto.htmlWidgets.RGBOPbOrBuilder> rgboForegroundColorBuilder_;
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboForegroundColor = 9;</code>
+     * @return Whether the rgboForegroundColor field is set.
+     */
+    public boolean hasRgboForegroundColor() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboForegroundColor = 9;</code>
+     * @return The rgboForegroundColor.
+     */
+    public com.tiwari.studence.proto.htmlWidgets.RGBOPb getRgboForegroundColor() {
+      if (rgboForegroundColorBuilder_ == null) {
+        return rgboForegroundColor_ == null ? com.tiwari.studence.proto.htmlWidgets.RGBOPb.getDefaultInstance() : rgboForegroundColor_;
+      } else {
+        return rgboForegroundColorBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboForegroundColor = 9;</code>
+     */
+    public Builder setRgboForegroundColor(com.tiwari.studence.proto.htmlWidgets.RGBOPb value) {
+      if (rgboForegroundColorBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        rgboForegroundColor_ = value;
+      } else {
+        rgboForegroundColorBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboForegroundColor = 9;</code>
+     */
+    public Builder setRgboForegroundColor(
+        com.tiwari.studence.proto.htmlWidgets.RGBOPb.Builder builderForValue) {
+      if (rgboForegroundColorBuilder_ == null) {
+        rgboForegroundColor_ = builderForValue.build();
+      } else {
+        rgboForegroundColorBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboForegroundColor = 9;</code>
+     */
+    public Builder mergeRgboForegroundColor(com.tiwari.studence.proto.htmlWidgets.RGBOPb value) {
+      if (rgboForegroundColorBuilder_ == null) {
+        if (((bitField0_ & 0x00000100) != 0) &&
+          rgboForegroundColor_ != null &&
+          rgboForegroundColor_ != com.tiwari.studence.proto.htmlWidgets.RGBOPb.getDefaultInstance()) {
+          getRgboForegroundColorBuilder().mergeFrom(value);
+        } else {
+          rgboForegroundColor_ = value;
+        }
+      } else {
+        rgboForegroundColorBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboForegroundColor = 9;</code>
+     */
+    public Builder clearRgboForegroundColor() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      rgboForegroundColor_ = null;
+      if (rgboForegroundColorBuilder_ != null) {
+        rgboForegroundColorBuilder_.dispose();
+        rgboForegroundColorBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboForegroundColor = 9;</code>
+     */
+    public com.tiwari.studence.proto.htmlWidgets.RGBOPb.Builder getRgboForegroundColorBuilder() {
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return getRgboForegroundColorFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboForegroundColor = 9;</code>
+     */
+    public com.tiwari.studence.proto.htmlWidgets.RGBOPbOrBuilder getRgboForegroundColorOrBuilder() {
+      if (rgboForegroundColorBuilder_ != null) {
+        return rgboForegroundColorBuilder_.getMessageOrBuilder();
+      } else {
+        return rgboForegroundColor_ == null ?
+            com.tiwari.studence.proto.htmlWidgets.RGBOPb.getDefaultInstance() : rgboForegroundColor_;
+      }
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboForegroundColor = 9;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tiwari.studence.proto.htmlWidgets.RGBOPb, com.tiwari.studence.proto.htmlWidgets.RGBOPb.Builder, com.tiwari.studence.proto.htmlWidgets.RGBOPbOrBuilder> 
+        getRgboForegroundColorFieldBuilder() {
+      if (rgboForegroundColorBuilder_ == null) {
+        rgboForegroundColorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tiwari.studence.proto.htmlWidgets.RGBOPb, com.tiwari.studence.proto.htmlWidgets.RGBOPb.Builder, com.tiwari.studence.proto.htmlWidgets.RGBOPbOrBuilder>(
+                getRgboForegroundColor(),
+                getParentForChildren(),
+                isClean());
+        rgboForegroundColor_ = null;
+      }
+      return rgboForegroundColorBuilder_;
+    }
+
+    private com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbForegroundColor_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tiwari.studence.proto.htmlWidgets.ARGBPb, com.tiwari.studence.proto.htmlWidgets.ARGBPb.Builder, com.tiwari.studence.proto.htmlWidgets.ARGBPbOrBuilder> aegbForegroundColorBuilder_;
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbForegroundColor = 10;</code>
+     * @return Whether the aegbForegroundColor field is set.
+     */
+    public boolean hasAegbForegroundColor() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbForegroundColor = 10;</code>
+     * @return The aegbForegroundColor.
+     */
+    public com.tiwari.studence.proto.htmlWidgets.ARGBPb getAegbForegroundColor() {
+      if (aegbForegroundColorBuilder_ == null) {
+        return aegbForegroundColor_ == null ? com.tiwari.studence.proto.htmlWidgets.ARGBPb.getDefaultInstance() : aegbForegroundColor_;
+      } else {
+        return aegbForegroundColorBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbForegroundColor = 10;</code>
+     */
+    public Builder setAegbForegroundColor(com.tiwari.studence.proto.htmlWidgets.ARGBPb value) {
+      if (aegbForegroundColorBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        aegbForegroundColor_ = value;
+      } else {
+        aegbForegroundColorBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbForegroundColor = 10;</code>
+     */
+    public Builder setAegbForegroundColor(
+        com.tiwari.studence.proto.htmlWidgets.ARGBPb.Builder builderForValue) {
+      if (aegbForegroundColorBuilder_ == null) {
+        aegbForegroundColor_ = builderForValue.build();
+      } else {
+        aegbForegroundColorBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbForegroundColor = 10;</code>
+     */
+    public Builder mergeAegbForegroundColor(com.tiwari.studence.proto.htmlWidgets.ARGBPb value) {
+      if (aegbForegroundColorBuilder_ == null) {
+        if (((bitField0_ & 0x00000200) != 0) &&
+          aegbForegroundColor_ != null &&
+          aegbForegroundColor_ != com.tiwari.studence.proto.htmlWidgets.ARGBPb.getDefaultInstance()) {
+          getAegbForegroundColorBuilder().mergeFrom(value);
+        } else {
+          aegbForegroundColor_ = value;
+        }
+      } else {
+        aegbForegroundColorBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbForegroundColor = 10;</code>
+     */
+    public Builder clearAegbForegroundColor() {
+      bitField0_ = (bitField0_ & ~0x00000200);
+      aegbForegroundColor_ = null;
+      if (aegbForegroundColorBuilder_ != null) {
+        aegbForegroundColorBuilder_.dispose();
+        aegbForegroundColorBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbForegroundColor = 10;</code>
+     */
+    public com.tiwari.studence.proto.htmlWidgets.ARGBPb.Builder getAegbForegroundColorBuilder() {
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return getAegbForegroundColorFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbForegroundColor = 10;</code>
+     */
+    public com.tiwari.studence.proto.htmlWidgets.ARGBPbOrBuilder getAegbForegroundColorOrBuilder() {
+      if (aegbForegroundColorBuilder_ != null) {
+        return aegbForegroundColorBuilder_.getMessageOrBuilder();
+      } else {
+        return aegbForegroundColor_ == null ?
+            com.tiwari.studence.proto.htmlWidgets.ARGBPb.getDefaultInstance() : aegbForegroundColor_;
+      }
+    }
+    /**
+     * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbForegroundColor = 10;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tiwari.studence.proto.htmlWidgets.ARGBPb, com.tiwari.studence.proto.htmlWidgets.ARGBPb.Builder, com.tiwari.studence.proto.htmlWidgets.ARGBPbOrBuilder> 
+        getAegbForegroundColorFieldBuilder() {
+      if (aegbForegroundColorBuilder_ == null) {
+        aegbForegroundColorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tiwari.studence.proto.htmlWidgets.ARGBPb, com.tiwari.studence.proto.htmlWidgets.ARGBPb.Builder, com.tiwari.studence.proto.htmlWidgets.ARGBPbOrBuilder>(
+                getAegbForegroundColor(),
+                getParentForChildren(),
+                isClean());
+        aegbForegroundColor_ = null;
+      }
+      return aegbForegroundColorBuilder_;
+    }
+
+    private java.lang.Object hexCodeForegroundColor_ = "";
+    /**
+     * <code>string hexCodeForegroundColor = 11;</code>
+     * @return The hexCodeForegroundColor.
+     */
+    public java.lang.String getHexCodeForegroundColor() {
+      java.lang.Object ref = hexCodeForegroundColor_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        hexCodeForegroundColor_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string hexCodeForegroundColor = 11;</code>
+     * @return The bytes for hexCodeForegroundColor.
+     */
+    public com.google.protobuf.ByteString
+        getHexCodeForegroundColorBytes() {
+      java.lang.Object ref = hexCodeForegroundColor_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        hexCodeForegroundColor_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string hexCodeForegroundColor = 11;</code>
+     * @param value The hexCodeForegroundColor to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHexCodeForegroundColor(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      hexCodeForegroundColor_ = value;
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string hexCodeForegroundColor = 11;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHexCodeForegroundColor() {
+      hexCodeForegroundColor_ = getDefaultInstance().getHexCodeForegroundColor();
+      bitField0_ = (bitField0_ & ~0x00000400);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string hexCodeForegroundColor = 11;</code>
+     * @param value The bytes for hexCodeForegroundColor to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHexCodeForegroundColorBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      hexCodeForegroundColor_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }

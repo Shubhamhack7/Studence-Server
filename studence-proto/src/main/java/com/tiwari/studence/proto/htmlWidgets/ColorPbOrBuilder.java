@@ -19,86 +19,139 @@ public interface ColorPbOrBuilder extends
   com.tiwari.studence.proto.htmlWidgets.ColorTypeEnum getColorType();
 
   /**
-   * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboBackgroundColor = 2;</code>
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ColorInTypeEnum colorInType = 2;</code>
+   * @return The enum numeric value on the wire for colorInType.
+   */
+  int getColorInTypeValue();
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ColorInTypeEnum colorInType = 2;</code>
+   * @return The colorInType.
+   */
+  com.tiwari.studence.proto.htmlWidgets.ColorInTypeEnum getColorInType();
+
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboBackgroundColor = 3;</code>
    * @return Whether the rgboBackgroundColor field is set.
    */
   boolean hasRgboBackgroundColor();
   /**
-   * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboBackgroundColor = 2;</code>
+   * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboBackgroundColor = 3;</code>
    * @return The rgboBackgroundColor.
    */
   com.tiwari.studence.proto.htmlWidgets.RGBOPb getRgboBackgroundColor();
   /**
-   * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboBackgroundColor = 2;</code>
+   * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboBackgroundColor = 3;</code>
    */
   com.tiwari.studence.proto.htmlWidgets.RGBOPbOrBuilder getRgboBackgroundColorOrBuilder();
 
   /**
-   * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb argbBackgroundColor = 3;</code>
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb argbBackgroundColor = 4;</code>
    * @return Whether the argbBackgroundColor field is set.
    */
   boolean hasArgbBackgroundColor();
   /**
-   * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb argbBackgroundColor = 3;</code>
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb argbBackgroundColor = 4;</code>
    * @return The argbBackgroundColor.
    */
   com.tiwari.studence.proto.htmlWidgets.ARGBPb getArgbBackgroundColor();
   /**
-   * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb argbBackgroundColor = 3;</code>
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb argbBackgroundColor = 4;</code>
    */
   com.tiwari.studence.proto.htmlWidgets.ARGBPbOrBuilder getArgbBackgroundColorOrBuilder();
 
   /**
-   * <code>string hexCodeBackgroundColor = 4;</code>
+   * <code>string hexCodeBackgroundColor = 5;</code>
    * @return The hexCodeBackgroundColor.
    */
   java.lang.String getHexCodeBackgroundColor();
   /**
-   * <code>string hexCodeBackgroundColor = 4;</code>
+   * <code>string hexCodeBackgroundColor = 5;</code>
    * @return The bytes for hexCodeBackgroundColor.
    */
   com.google.protobuf.ByteString
       getHexCodeBackgroundColorBytes();
 
   /**
-   * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboFontColor = 5;</code>
+   * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboFontColor = 6;</code>
    * @return Whether the rgboFontColor field is set.
    */
   boolean hasRgboFontColor();
   /**
-   * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboFontColor = 5;</code>
+   * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboFontColor = 6;</code>
    * @return The rgboFontColor.
    */
   com.tiwari.studence.proto.htmlWidgets.RGBOPb getRgboFontColor();
   /**
-   * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboFontColor = 5;</code>
+   * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboFontColor = 6;</code>
    */
   com.tiwari.studence.proto.htmlWidgets.RGBOPbOrBuilder getRgboFontColorOrBuilder();
 
   /**
-   * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbFontColor = 6;</code>
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbFontColor = 7;</code>
    * @return Whether the aegbFontColor field is set.
    */
   boolean hasAegbFontColor();
   /**
-   * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbFontColor = 6;</code>
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbFontColor = 7;</code>
    * @return The aegbFontColor.
    */
   com.tiwari.studence.proto.htmlWidgets.ARGBPb getAegbFontColor();
   /**
-   * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbFontColor = 6;</code>
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbFontColor = 7;</code>
    */
   com.tiwari.studence.proto.htmlWidgets.ARGBPbOrBuilder getAegbFontColorOrBuilder();
 
   /**
-   * <code>string hexCodefontColor = 7;</code>
+   * <code>string hexCodefontColor = 8;</code>
    * @return The hexCodefontColor.
    */
   java.lang.String getHexCodefontColor();
   /**
-   * <code>string hexCodefontColor = 7;</code>
+   * <code>string hexCodefontColor = 8;</code>
    * @return The bytes for hexCodefontColor.
    */
   com.google.protobuf.ByteString
       getHexCodefontColorBytes();
+
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboForegroundColor = 9;</code>
+   * @return Whether the rgboForegroundColor field is set.
+   */
+  boolean hasRgboForegroundColor();
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboForegroundColor = 9;</code>
+   * @return The rgboForegroundColor.
+   */
+  com.tiwari.studence.proto.htmlWidgets.RGBOPb getRgboForegroundColor();
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.RGBOPb rgboForegroundColor = 9;</code>
+   */
+  com.tiwari.studence.proto.htmlWidgets.RGBOPbOrBuilder getRgboForegroundColorOrBuilder();
+
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbForegroundColor = 10;</code>
+   * @return Whether the aegbForegroundColor field is set.
+   */
+  boolean hasAegbForegroundColor();
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbForegroundColor = 10;</code>
+   * @return The aegbForegroundColor.
+   */
+  com.tiwari.studence.proto.htmlWidgets.ARGBPb getAegbForegroundColor();
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ARGBPb aegbForegroundColor = 10;</code>
+   */
+  com.tiwari.studence.proto.htmlWidgets.ARGBPbOrBuilder getAegbForegroundColorOrBuilder();
+
+  /**
+   * <code>string hexCodeForegroundColor = 11;</code>
+   * @return The hexCodeForegroundColor.
+   */
+  java.lang.String getHexCodeForegroundColor();
+  /**
+   * <code>string hexCodeForegroundColor = 11;</code>
+   * @return The bytes for hexCodeForegroundColor.
+   */
+  com.google.protobuf.ByteString
+      getHexCodeForegroundColorBytes();
 }

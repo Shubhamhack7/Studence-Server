@@ -182,4 +182,49 @@ public interface ConfigPbOrBuilder extends
    * <code>.com.tiwari.studence.proto.htmlWidgets.ATagPb aTagConfig = 12;</code>
    */
   com.tiwari.studence.proto.htmlWidgets.ATagPbOrBuilder getATagConfigOrBuilder();
+
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.RadioButtonPb radioButtonConfig = 13;</code>
+   * @return Whether the radioButtonConfig field is set.
+   */
+  boolean hasRadioButtonConfig();
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.RadioButtonPb radioButtonConfig = 13;</code>
+   * @return The radioButtonConfig.
+   */
+  com.tiwari.studence.proto.htmlWidgets.RadioButtonPb getRadioButtonConfig();
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.RadioButtonPb radioButtonConfig = 13;</code>
+   */
+  com.tiwari.studence.proto.htmlWidgets.RadioButtonPbOrBuilder getRadioButtonConfigOrBuilder();
+
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.HeightPb heightConfig = 14;</code>
+   * @return Whether the heightConfig field is set.
+   */
+  boolean hasHeightConfig();
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.HeightPb heightConfig = 14;</code>
+   * @return The heightConfig.
+   */
+  com.tiwari.studence.proto.htmlWidgets.HeightPb getHeightConfig();
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.HeightPb heightConfig = 14;</code>
+   */
+  com.tiwari.studence.proto.htmlWidgets.HeightPbOrBuilder getHeightConfigOrBuilder();
+
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPb axisAlignment = 15;</code>
+   * @return Whether the axisAlignment field is set.
+   */
+  boolean hasAxisAlignment();
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPb axisAlignment = 15;</code>
+   * @return The axisAlignment.
+   */
+  com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPb getAxisAlignment();
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPb axisAlignment = 15;</code>
+   */
+  com.tiwari.studence.proto.htmlWidgets.AxisAlignmentPbOrBuilder getAxisAlignmentOrBuilder();
 }

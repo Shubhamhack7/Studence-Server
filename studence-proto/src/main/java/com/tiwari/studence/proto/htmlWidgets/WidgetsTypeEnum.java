@@ -48,6 +48,14 @@ public enum WidgetsTypeEnum
    * <code>A_TAG = 10;</code>
    */
   A_TAG(10),
+  /**
+   * <code>RADIO_BUTTON = 11;</code>
+   */
+  RADIO_BUTTON(11),
+  /**
+   * <code>TEXT_INPUT_BOX_EMAIL = 12;</code>
+   */
+  TEXT_INPUT_BOX_EMAIL(12),
   UNRECOGNIZED(-1),
   ;
 
@@ -91,6 +99,14 @@ public enum WidgetsTypeEnum
    * <code>A_TAG = 10;</code>
    */
   public static final int A_TAG_VALUE = 10;
+  /**
+   * <code>RADIO_BUTTON = 11;</code>
+   */
+  public static final int RADIO_BUTTON_VALUE = 11;
+  /**
+   * <code>TEXT_INPUT_BOX_EMAIL = 12;</code>
+   */
+  public static final int TEXT_INPUT_BOX_EMAIL_VALUE = 12;
 
 
   public final int getNumber() {
@@ -127,6 +143,8 @@ public enum WidgetsTypeEnum
       case 8: return INPUT_BUTTON;
       case 9: return EVENT_BUTTON;
       case 10: return A_TAG;
+      case 11: return RADIO_BUTTON;
+      case 12: return TEXT_INPUT_BOX_EMAIL;
       default: return null;
     }
   }

@@ -20,6 +20,8 @@ enum WidgetsTypeEnum {
   INPUT_BUTTON =8;
   EVENT_BUTTON =9;
   A_TAG =10;
+  RADIO_BUTTON =11;
+  TEXT_INPUT_BOX_EMAIL =12;
 }
 
 enum FontWeightTypeEnum {
@@ -35,8 +37,24 @@ enum AlignmentTypeEnum {
     ALIGN_RIGHT=3;
     ALIGN_TOP=4;
     ALIGN_BOTTOM=5;
-
+    ALIGN_HORIZONTAL=6;
+    ALIGN_VERTICAL=7;
+    ALIGN_START =8;
+    ALIGN_END=9;
+    ALIGN_SPACE_BETWEEN=10;
+    ALIGN_SPACE_AROUND=11;
+    ALIGN_STRETCH=12;
+    ALIGN_AXIS_MIN=13;
+    ALIGN_AXIS_MAX=14;
 }
+
+enum ColorInTypeEnum {
+ UNKNOWN_COLOR_IN_TYPE=0;
+    COLOR_FOR_BACKGROUND=1;
+    COLOR_FOR_FONT=2;
+    COLOR_FOR_FOREGROUND =3;
+}
+
 
 enum ContainerTypeEnum {
     UNKNOWN_CONTAINER_TYPE=0;
@@ -52,7 +70,15 @@ enum ContainerTypeEnum {
     OVERFLOW_BOX=10;
     CENTER=11;
     ALIGN=12;
+    BODY=13;
 
+}
+enum BorderRadiusTypeEnum{
+  UNKNOWN_BORDER_RADIUS_TYPE=0;
+  BORDER_RADIUS=1;
+  BORDER_RADIUS_ALL=2;
+  BORDER_RADIUS_ONLY=3;
+  BORDER_RADIUS_CIRCULAR=4;
 }
 
 enum InputBoxTypeEnum {
@@ -61,12 +87,26 @@ enum InputBoxTypeEnum {
   PASSWORD=2;
 }
 
-enum ButtonTypeEnum {
- UNKNOWN_BUTTON_TYPE=0;
-  EVENT=1;
-  INPUT=2;
-  EVENT_SUBMIT =3;
+enum ButtonInputTypeEnum {
+ UNKNOWN_INPUT_BUTTON_TYPE=0;
+  SINGLE=1;
+  MULTIPLE=2;
 }
+
+enum ButtonEventTypeEnum {
+ UNKNOWN_EVENT_BUTTON_TYPE=0;
+  EVENT_SUBMIT=1;
+  EVENT_REQUEST_CALL=2;
+  EVENT_NAVIGATION=3;
+}
+
+enum ButtonTypeEnum {
+  UNKNOWN_BUTTON_TYPE = 0;
+  INPUT =1;
+  EVENT=2;
+  TOGGLE_BUTTON =3;
+}
+
 
 enum BorderTypeEnum {
 UNKNOWN_BORDER_TYPE = 0;
@@ -88,6 +128,8 @@ enum ValueUnitTypeEnum {
 PX=1;
 PERCENT = 2;
 AUTO = 3;
+INFINITY = 4;
+VH =5;
 }
 
 
@@ -98,143 +140,229 @@ RGBO=2;
 ARGB=3;
 }
 
-
-message UiPagePb{
-    string tile=1;
-    ContainerTypeEnum containerType =2;
-    ConfigPb pageConfig =3;
-    repeated ContainerPb childrenContainer = 4;
-    repeated WidgetPb widgets=5;
-}
-
-message WidgetPb {
-    WidgetsTypeEnum widgetType = 1;
-    int32 widgetPosition = 2;
-    ConfigPb config = 3;
-}
-
-
-message ContainerPb {
-      ContainerTypeEnum containerType = 1;
-      AlignmentTypeEnum mainAxisAlignment =2;
-      repeated  WidgetPb childrenWidget=4;
-      ConfigPb config = 5;
-      int32 containerPosition = 6;
-      repeated ContainerPb childContainer = 7;
-
-}
-
-
-message HeadingConfigPb {
-      int32 fontSize=1;
-      FontWeightTypeEnum fontWeight=2;
-      string fontValue = 3;
-}
-
-message RGBOPb {
-int32 r=1;
-int32 g=2;
-int32 b=3;
-double o=4;
-}
-
-message ARGBPb {
-int32 r=1;
-int32 g=2;
-int32 b=3;
-int32 o=4;
-}
-
-message CheckboxPb{
-    com.tiwari.studence.proto.datatypes.BooleanEnum isChecked = 1;
-    string checkboxName = 2;
-}
-
-message ColorPb {
-ColorTypeEnum colorType =1;
-RGBOPb rgboBackgroundColor = 2;
-ARGBPb argbBackgroundColor = 3;
-string hexCodeBackgroundColor =4;
-RGBOPb rgboFontColor = 5;
-ARGBPb aegbFontColor = 6;
-string hexCodefontColor = 7;
-}
-
-message labelPb {
-string labelText =1;
-}
-
-message InputBoxConfig{
-    InputBoxTypeEnum type =1;
-    string placeHolder = 2;
-    string name =3;
-    com.tiwari.studence.proto.datatypes.BooleanEnum isRequired = 4;
-}
-
-message BorderConfigPb {
-        ValueTypeEnum borderValueType =1;
-        ValueUnitTypeEnum unit =2;
-        double value= 3;
-        DirectionConfig multipleValues =4;
-        ColorPb color =5;
-        BorderTypeEnum borderType = 6;
-
-
-}
-
-message ButtonPb {
-    ButtonTypeEnum buttonType =1;
-    ButtonTypeEnum type = 2;
-    string buttonName =3;
-}
-
-message ATagPb {
-    string href =1;
-    string label =2;
-}
-
-message ConfigPb{
-    PaddingPb padding =1;
-    HeadingConfigPb headingConfig= 2;
-    ColorPb colorConfig = 3;
-    AlignmentTypeEnum alignmentType = 4;
-    labelPb labelConfig =5;
-    InputBoxConfig inputBoxConfig = 6;
-    MarginPb marginConfig =7;
-    BorderConfigPb borderConfig =8;
-    WidthPb widthConfig =9;
-    CheckboxPb checkboxConfig = 10;
-    ButtonPb buttonConfig =11;
-    ATagPb aTagConfig = 12;
+enum FormLayoutTypeEnum {
+UNKNOWN_FORM_LAYOUT_TYPE=0;
+FORM_LAYOUT_ROW=1;
+FORM_LAYOUT_COLUMN=2;
 }
 
 
 
 message DirectionConfig {
-    double top= 1;
-    double right= 2;
-    double bottom= 3;
-    double left= 4;
+  double top= 1;
+  double right= 2;
+  double bottom= 3;
+  double left= 4;
 }
 
 
 message MarginPb {
-    ValueTypeEnum marginType =1;
-    ValueUnitTypeEnum unit =2;
-    double value= 3;
-    DirectionConfig multipleValues =4;
+  ValueTypeEnum marginType =1;
+  ValueUnitTypeEnum unit =2;
+  double value= 3;
+  DirectionConfig multipleValues =4;
 }
 
 message WidthPb {
-    ValueTypeEnum widthType =1;
-    ValueUnitTypeEnum unit =2;
-    double value= 3;
-    DirectionConfig multipleValues =4;
+  ValueTypeEnum widthType =1;
+  ValueUnitTypeEnum unit =2;
+  double value= 3;
+  DirectionConfig multipleValues =4;
+}
+
+message HeightPb {
+  ValueTypeEnum widthType =1;
+  ValueUnitTypeEnum unit =2;
+  double value= 3;
+  DirectionConfig multipleValues =4;
 }
 
 message PaddingPb {
-    ValueTypeEnum paddingType =1;
-    ValueUnitTypeEnum unit =2;
-    double value= 3;
-    DirectionConfig multipleValues =4;
+  ValueTypeEnum paddingType =1;
+  ValueUnitTypeEnum unit =2;
+  double value= 3;
+  DirectionConfig multipleValues =4;
+}
+
+message BorderRadiusPb {
+  BorderRadiusTypeEnum radiusType =1;
+  ValueTypeEnum borderValueType =2;
+  ValueUnitTypeEnum unit =3;
+  double value= 4;
+  DirectionConfig multipleValues =5;
+}
+
+message RGBOPb {
+  int32 r=1;
+  int32 g=2;
+  int32 b=3;
+  double o=4;
+}
+
+message ARGBPb {
+  int32 r=1;
+  int32 g=2;
+  int32 b=3;
+  int32 o=4;
+}
+
+message ColorPb {
+  ColorTypeEnum colorType =1;
+  ColorInTypeEnum colorInType=2;
+  RGBOPb rgboBackgroundColor = 3;
+  ARGBPb argbBackgroundColor = 4;
+  string hexCodeBackgroundColor =5;
+  RGBOPb rgboFontColor = 6;
+  ARGBPb aegbFontColor = 7;
+  string hexCodefontColor = 8;
+  RGBOPb rgboForegroundColor = 9;
+  ARGBPb aegbForegroundColor = 10;
+  string hexCodeForegroundColor = 11;
+}
+
+
+message BorderConfigPb {
+  ValueTypeEnum borderValueType =1;
+  ValueUnitTypeEnum unit =2;
+  double value= 3;
+  DirectionConfig multipleValues =4;
+  ColorPb color =5;
+  BorderTypeEnum borderType = 6;
+  BorderRadiusPb borderRadius =7;
+}
+
+message ButtonEventPb {
+  ColorPb backgroundColor =1;
+  ColorPb textColor =2;
+  HeightPb height =3;
+  WidthPb width =4;
+  BorderConfigPb border=5;
+  string label =6;
+  string loadingText =7;
+  ColorPb foregroundColor =8;
+}
+
+message ItemPb {
+  string buttonLabel =1;
+  int64 buttonIndex =2;
+}
+
+message ButtonInputPb {
+  ColorPb backgroundColor = 1;
+  ColorPb textColor = 2;
+  ColorPb isSelectedBackgroundColor = 3;
+  ColorPb isSelectedTextColor = 4;
+  HeightPb height = 5;
+  WidthPb width = 6;
+  BorderConfigPb border = 7;
+  ColorPb foregroundColor = 10;
+  repeated ItemPb buttons = 11;
+  AlignmentTypeEnum align =12;
+  double buttonSpacing = 13;
+}
+
+message ButtonPb {
+  ButtonTypeEnum buttonType = 1;
+  ButtonInputTypeEnum inputType = 2;
+  ButtonEventTypeEnum eventType = 3;
+  ButtonEventPb eventButton = 4;
+  ButtonInputPb inputButton = 5;
+}
+
+message ATagPb {
+  string href = 1;
+  string label = 2;
+}
+
+message RadioButtonPb {
+  ColorPb backgroundColor = 1;
+  ColorPb textColor = 2;
+  ColorPb isSelectedBackgroundColor = 3;
+  ColorPb isSelectedTextColor = 4;
+  HeightPb height = 5;
+  WidthPb width = 6;
+  BorderConfigPb border = 7;
+  ColorPb foregroundColor = 10;
+  repeated ItemPb buttons = 11;
+  AlignmentTypeEnum align =12;
+  double buttonSpacing = 13;
+}
+
+
+
+message WidgetPb {
+  WidgetsTypeEnum widgetType = 1;
+  int32 widgetPosition = 2;
+  ConfigPb config = 3;
+  string widgetId = 4;
+}
+
+
+message ContainerPb {
+  ContainerTypeEnum containerType = 1;
+  AlignmentTypeEnum mainAxisAlignment = 2;
+  repeated  WidgetPb childrenWidget = 4;
+  ConfigPb config = 5;
+  int32 containerPosition = 6;
+  repeated ContainerPb childContainer = 7;
+  FormLayoutTypeEnum layoutType =8;
+
+}
+
+
+message HeadingConfigPb {
+  int32 fontSize = 1;
+  FontWeightTypeEnum fontWeight = 2;
+  string fontValue = 3;
+}
+
+
+
+message CheckboxPb{
+  com.tiwari.studence.proto.datatypes.BooleanEnum isChecked = 1;
+  string checkboxName = 2;
+}
+
+
+message labelPb {
+  string labelText = 1;
+}
+
+message InputBoxConfig{
+  InputBoxTypeEnum type = 1;
+  string placeHolder = 2;
+  string name = 3;
+  com.tiwari.studence.proto.datatypes.BooleanEnum isRequired = 4;
+}
+
+message AxisAlignmentPb{
+    AlignmentTypeEnum mainAxisAlignment=1;
+    AlignmentTypeEnum crossAxisAlignment=2;
+    AlignmentTypeEnum mainAxisSize=3;
+}
+
+message ConfigPb{
+  PaddingPb padding = 1;
+  HeadingConfigPb headingConfig = 2;
+  ColorPb colorConfig = 3;
+  AlignmentTypeEnum alignmentType = 4;
+  labelPb labelConfig = 5;
+  InputBoxConfig inputBoxConfig = 6;
+  MarginPb marginConfig = 7;
+  BorderConfigPb borderConfig = 8;
+  WidthPb widthConfig = 9;
+  CheckboxPb checkboxConfig = 10;
+  ButtonPb buttonConfig = 11;
+  ATagPb aTagConfig = 12;
+  RadioButtonPb radioButtonConfig =13;
+  HeightPb heightConfig = 14;
+  AxisAlignmentPb axisAlignment = 15;
+}
+
+message UiPagePb{
+  string tile = 1;
+  ContainerTypeEnum containerType = 2;
+  ConfigPb pageConfig = 3;
+  repeated ContainerPb childrenContainer = 4;
+  repeated WidgetPb widgets = 5;
 }

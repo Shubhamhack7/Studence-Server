@@ -19,25 +19,54 @@ public interface ButtonPbOrBuilder extends
   com.tiwari.studence.proto.htmlWidgets.ButtonTypeEnum getButtonType();
 
   /**
-   * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonTypeEnum type = 2;</code>
-   * @return The enum numeric value on the wire for type.
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonInputTypeEnum inputType = 2;</code>
+   * @return The enum numeric value on the wire for inputType.
    */
-  int getTypeValue();
+  int getInputTypeValue();
   /**
-   * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonTypeEnum type = 2;</code>
-   * @return The type.
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonInputTypeEnum inputType = 2;</code>
+   * @return The inputType.
    */
-  com.tiwari.studence.proto.htmlWidgets.ButtonTypeEnum getType();
+  com.tiwari.studence.proto.htmlWidgets.ButtonInputTypeEnum getInputType();
 
   /**
-   * <code>string buttonName = 3;</code>
-   * @return The buttonName.
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonEventTypeEnum eventType = 3;</code>
+   * @return The enum numeric value on the wire for eventType.
    */
-  java.lang.String getButtonName();
+  int getEventTypeValue();
   /**
-   * <code>string buttonName = 3;</code>
-   * @return The bytes for buttonName.
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonEventTypeEnum eventType = 3;</code>
+   * @return The eventType.
    */
-  com.google.protobuf.ByteString
-      getButtonNameBytes();
+  com.tiwari.studence.proto.htmlWidgets.ButtonEventTypeEnum getEventType();
+
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonEventPb eventButton = 4;</code>
+   * @return Whether the eventButton field is set.
+   */
+  boolean hasEventButton();
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonEventPb eventButton = 4;</code>
+   * @return The eventButton.
+   */
+  com.tiwari.studence.proto.htmlWidgets.ButtonEventPb getEventButton();
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonEventPb eventButton = 4;</code>
+   */
+  com.tiwari.studence.proto.htmlWidgets.ButtonEventPbOrBuilder getEventButtonOrBuilder();
+
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonInputPb inputButton = 5;</code>
+   * @return Whether the inputButton field is set.
+   */
+  boolean hasInputButton();
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonInputPb inputButton = 5;</code>
+   * @return The inputButton.
+   */
+  com.tiwari.studence.proto.htmlWidgets.ButtonInputPb getInputButton();
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.ButtonInputPb inputButton = 5;</code>
+   */
+  com.tiwari.studence.proto.htmlWidgets.ButtonInputPbOrBuilder getInputButtonOrBuilder();
 }

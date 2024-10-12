@@ -103,6 +103,15 @@ public class LoggedRuntimeException extends RuntimeException {
 		printError();
 	}
 
+  public LoggedRuntimeException(Throwable t, String[] objects) {
+    this.m_errorProto = null;
+    this.m_uiErrorString = objects[0];
+    this.m_args = Lists.newArrayList();
+    this.m_args.add(objects);
+    this.m_stackTrace = createStackTraceString(t);
+    printError();
+  }
+
 	public LoggedRuntimeException(String string, Object[] args) {
 		this.m_errorProto =null;
 		this.m_args = null;

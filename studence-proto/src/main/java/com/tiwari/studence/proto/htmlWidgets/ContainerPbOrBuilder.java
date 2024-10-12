@@ -97,4 +97,15 @@ public interface ContainerPbOrBuilder extends
    */
   com.tiwari.studence.proto.htmlWidgets.ContainerPbOrBuilder getChildContainerOrBuilder(
       int index);
+
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.FormLayoutTypeEnum layoutType = 8;</code>
+   * @return The enum numeric value on the wire for layoutType.
+   */
+  int getLayoutTypeValue();
+  /**
+   * <code>.com.tiwari.studence.proto.htmlWidgets.FormLayoutTypeEnum layoutType = 8;</code>
+   * @return The layoutType.
+   */
+  com.tiwari.studence.proto.htmlWidgets.FormLayoutTypeEnum getLayoutType();
 }

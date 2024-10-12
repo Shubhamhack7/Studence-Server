@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.protobuf.GeneratedMessageV3;
 import com.google.protobuf.util.JsonFormat;
 import com.tiwari.studence.uiParser.uiParser.HTMLDocReaderAndParser;
+import com.tiwari.studence.util.protobuf.ProtobufToJson;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -22,7 +23,7 @@ public class JSONToGenerateFile {
     String targetFolder = "/home/hacker/Project/Studence-Server/studence-uiParser/target";
 
     try {
-      String jsonString = JsonFormat.printer().includingDefaultValueFields().print(json);
+      String jsonString = ProtobufToJson.protobufToJsonString(json);
       ObjectMapper objectMapper = new ObjectMapper();
 
       // Convert JSON string to a Java object (Generic Object in this case)

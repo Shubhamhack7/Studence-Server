@@ -60,6 +60,10 @@ public enum ContainerTypeEnum
    * <code>ALIGN = 12;</code>
    */
   ALIGN(12),
+  /**
+   * <code>BODY = 13;</code>
+   */
+  BODY(13),
   UNRECOGNIZED(-1),
   ;
 
@@ -115,6 +119,10 @@ public enum ContainerTypeEnum
    * <code>ALIGN = 12;</code>
    */
   public static final int ALIGN_VALUE = 12;
+  /**
+   * <code>BODY = 13;</code>
+   */
+  public static final int BODY_VALUE = 13;
 
 
   public final int getNumber() {
@@ -154,6 +162,7 @@ public enum ContainerTypeEnum
       case 10: return OVERFLOW_BOX;
       case 11: return CENTER;
       case 12: return ALIGN;
+      case 13: return BODY;
       default: return null;
     }
   }
@@ -184,7 +193,7 @@ public enum ContainerTypeEnum
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tiwari.studence.proto.htmlWidgets.HtmlWidgets.getDescriptor().getEnumTypes().get(3);
+    return com.tiwari.studence.proto.htmlWidgets.HtmlWidgets.getDescriptor().getEnumTypes().get(4);
   }
 
   private static final ContainerTypeEnum[] VALUES = values();

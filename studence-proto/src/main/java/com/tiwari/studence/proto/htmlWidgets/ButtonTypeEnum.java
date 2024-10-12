@@ -13,17 +13,17 @@ public enum ButtonTypeEnum
    */
   UNKNOWN_BUTTON_TYPE(0),
   /**
-   * <code>EVENT = 1;</code>
+   * <code>INPUT = 1;</code>
    */
-  EVENT(1),
+  INPUT(1),
   /**
-   * <code>INPUT = 2;</code>
+   * <code>EVENT = 2;</code>
    */
-  INPUT(2),
+  EVENT(2),
   /**
-   * <code>EVENT_SUBMIT = 3;</code>
+   * <code>TOGGLE_BUTTON = 3;</code>
    */
-  EVENT_SUBMIT(3),
+  TOGGLE_BUTTON(3),
   UNRECOGNIZED(-1),
   ;
 
@@ -32,17 +32,17 @@ public enum ButtonTypeEnum
    */
   public static final int UNKNOWN_BUTTON_TYPE_VALUE = 0;
   /**
-   * <code>EVENT = 1;</code>
+   * <code>INPUT = 1;</code>
    */
-  public static final int EVENT_VALUE = 1;
+  public static final int INPUT_VALUE = 1;
   /**
-   * <code>INPUT = 2;</code>
+   * <code>EVENT = 2;</code>
    */
-  public static final int INPUT_VALUE = 2;
+  public static final int EVENT_VALUE = 2;
   /**
-   * <code>EVENT_SUBMIT = 3;</code>
+   * <code>TOGGLE_BUTTON = 3;</code>
    */
-  public static final int EVENT_SUBMIT_VALUE = 3;
+  public static final int TOGGLE_BUTTON_VALUE = 3;
 
 
   public final int getNumber() {
@@ -70,9 +70,9 @@ public enum ButtonTypeEnum
   public static ButtonTypeEnum forNumber(int value) {
     switch (value) {
       case 0: return UNKNOWN_BUTTON_TYPE;
-      case 1: return EVENT;
-      case 2: return INPUT;
-      case 3: return EVENT_SUBMIT;
+      case 1: return INPUT;
+      case 2: return EVENT;
+      case 3: return TOGGLE_BUTTON;
       default: return null;
     }
   }
@@ -103,7 +103,7 @@ public enum ButtonTypeEnum
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tiwari.studence.proto.htmlWidgets.HtmlWidgets.getDescriptor().getEnumTypes().get(5);
+    return com.tiwari.studence.proto.htmlWidgets.HtmlWidgets.getDescriptor().getEnumTypes().get(9);
   }
 
   private static final ButtonTypeEnum[] VALUES = values();

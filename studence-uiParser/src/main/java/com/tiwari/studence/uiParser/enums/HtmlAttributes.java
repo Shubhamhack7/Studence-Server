@@ -20,8 +20,12 @@ public enum HtmlAttributes {
   EVENT("event"),
   INPUT("input"),
   LABEL("label"),
+  HEIGHT("height"),
+  WIDTH("width"),
+  EMAIL("email"),
+  PHONE("phone"),
+  PHONE_AND_EMAIL("phone_and_email"),
   REQUIRED("required");
-
 
   private final String tag;
 
